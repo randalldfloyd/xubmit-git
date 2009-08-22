@@ -1,0 +1,4084 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group  -->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader relatedencoding="dublincore" audience="external" langencoding="iso639-2b"
+        scriptencoding="iso15924" repositoryencoding="iso15511" countryencoding="iso3166-1"
+        dateencoding="iso8601" findaidstatus="edited-full-draft">
+        <eadid identifier="InU-Li-VAA8688" countrycode="US" encodinganalog="identifier"
+            mainagencycode="InU-Li">InU-Li-VAA8688</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+            unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Guide to the Ralston, G. Mss., <date
+                        normal="1916/1949">1916-1949</date></titleproper>
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library Program</publisher>
+                <date encodinganalog="date" normal="2008" type="publication">©2008</date>
+            </publicationstmt>
+            <notestmt>
+                <note encodinganalog="type">
+                    <p>text</p>
+                </note>
+
+                <note encodinganalog="format">
+                    <p>text/xml</p>
+                </note>
+                <note encodinganalog="format">
+                    <p>text/html</p>
+                </note>
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+
+                    <p><date normal="2008">© 2008</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>
+                <!--description of how the finding aid was created, for example: -->
+                Machine-readable finding aid derived by copying and pasting from HTML
+                inventory.<lb/>[date of source: <date normal="2003" type="source">2003</date>
+                <lb/>Finding aid encoded by Valerie Higgins, Library/Archives, Indiana University,
+                    <date normal="2008-10-21">October 21, 2008</date>
+            </creation>
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2008-10-21"/>
+                <item/>
+            </change>
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc level="collection" audience="external" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository encodinganalog="852" label="Repository:">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname source="lcnaf" encodinganalog="100">Ralston, Glenn</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Ralston, G. Mss.</unittitle>
+            <unitdate normal="1916/1949" type="inclusive" encodinganalog="245$f">1916-1949</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2184</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>770 items</extent>
+
+                <!-- if both linear feet and number of items included, repeat extent-->
+            </physdesc>
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng" encodinganalog="546">English</language></langmaterial>
+            <abstract encodinganalog="520" label="Abstract">The Ralston, G. mss., 1916-1949,
+                consists primarily of lantern slides collected by Glenn Ralston.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+            <p>Glenn Ralston was an artist from Indiana who spent most of his professional life in
+                New York City. During the 1970s and 1980s he was associated with the historic
+                Astoria Studios. Ralston was also co-founder and trustee emeritus of the American
+                Museum of the Moving Image.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Motion pictures; II.
+                Advertisements; III. Miscellaneous.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Ralston, G. mss., 1916-1949, consists primarily of lantern slides collected by
+                Glenn Ralston. Most of these slides were produced to be used in movie theatres to
+                announce coming attractions and to advertise various products and services. A few
+                informational slides are included, such as <emph render="doublequote">Silence,</emph>
+                <emph render="doublequote">Children of Europe Need Your Help,</emph>
+                <emph render="doublequote">Let Us Stand By President Wilson,</emph> and several
+                offer song lyrics. In addition, there are 63 lantern slides pertaining to
+                homeopathy. A sheet music cover and its copper printing plate for an unknown piece
+                from the film <emph render="italic">The Emperor Waltz</emph> starring Bing Crosby
+                and Joan Fontaine complete the collection. </p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Controlled Access Terms</head>
+            <subject encodinganalog="650" source="lcsh">Lantern slides --Specimens.</subject>
+            <subject encodinganalog="650" source="lcsh">Advertising --United States.</subject>
+            <subject encodinganalog="650" source="lcsh">Advertising --Motion pictures.</subject>
+            <subject encodinganalog="650" source="lcsh">Homeopathy.</subject>
+            <subject encodinganalog="650" source="lcsh">Popular music.</subject>
+        </controlaccess>
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Gift. 2002, 2003</p>
+            </acqinfo>
+
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+                <p>Prior arrangements are not necessary before coming to the Library; however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Ralston, G. Mss., Lilly Library, Indiana University, Bloomington,
+                    Indiana.</p>
+            </prefercite>
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 level="series">
+                <did>
+                    <!-- optional -->
+                    <container type="Box" label="Box">1</container>
+                    <unittitle>Motion Pictures</unittitle>
+                </did>
+                <scopecontent>
+                    <p>One slide for each title, unless otherwise indicated.</p>
+                </scopecontent>
+                <c02 level="file">
+                    <did>
+                        <unittitle>3 Jumps Ahead, <unitdate normal="1923"
+                        >1923</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>7th Heaven, <unitdate normal="1927">1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Ace of Cactus Range, <unitdate normal="1924"
+                        >1924</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Actress, <unitdate normal="1928">1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Adam and Evil, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Adventurer, <unitdate normal="1928"
+                        >1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Adventures of Don Juan, <unitdate normal="1949"
+                            >1949</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Adventures of Texas Jack, <unitdate normal="1934"
+                            >1934</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>After the Bawl</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Alias Julius Caesar, <unitdate normal="1922"
+                        >1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Alias Mary Flynn, <unitdate normal="1925"
+                        >1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>All Around Frying Pan, <unitdate normal="1925"
+                        >1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>All Washed Up</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>All Wet, <unitdate normal="1922">1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Almost a Lady, <unitdate normal="1926"
+                        >1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>America, <unitdate normal="1924">1924</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Any Night, <unitdate normal="1922">1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Anything Once, <unitdate normal="1917"
+                        >1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Appearance of Evil, <unitdate normal="1918"
+                        >1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Ashes of Desire, <unitdate normal="1918"
+                        >1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>At the Stage Door, <unitdate normal="1921"
+                        >1921</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Auction Block, <unitdate normal="1926"
+                        >1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Avalanche, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Baby Mine, <unitdate normal="1928">1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Bachelor Bait, <unitdate normal="1934"
+                        >1934</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Battling Butler, <unitdate normal="1926"
+                        >1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Becky, <unitdate normal="1927">1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Behold My Wife, <unitdate normal="1920">1920</unitdate></unittitle>
+                        <physdesc>- 2</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Belle of New York, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Better Wife, <unitdate normal="1918"
+                        >1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Beverly of Graustark, <unitdate normal="1926"
+                        >1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Beware of Bachelors, <unitdate normal="1928"
+                        >1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Beyond London's Lights, <unitdate normal="1928"
+                        >1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Beyond Price, <unitdate normal="1921">1921</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Big Broadcast of 1936, <unitdate normal="1936"
+                            >1936</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Big Pal, <unitdate normal="1925">1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Big Parade, <unitdate normal="1925"
+                        >1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Bigger than Barnum's, <unitdate normal="1926"
+                        >1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Billions, <unitdate normal="1920">1920</unitdate></unittitle>
+                        <physdesc>- 2</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Bishop Murder Case, <unitdate normal="1930"
+                        >1930</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Bitter Apples, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Black Bird, <unitdate normal="1926"
+                        >1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Black Cyclone, <unitdate normal="1925"
+                        >1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Black Pirate, <unitdate normal="1926"
+                        >1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Blarney, <unitdate normal="1926">1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Blazes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Block Signal, <unitdate normal="1926"
+                        >1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Blood Will Tell, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Blue Streak, <unitdate normal="1926"
+                        >1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Body and Soul, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Bonded Woman, <unitdate normal="1922"
+                        >1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Borrowed Plumage, <unitdate normal="1917"
+                        >1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Boss Camp of 4, <unitdate normal="1922"
+                        >1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">2</container>
+                        <unittitle>Boston Blackie, <unitdate normal="1923"
+                        >1923</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Boy Rider, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Boys Will Be Boys, <unitdate normal="1921"
+                        >1921</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Brass Knuckles, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Breed of The Sea, <unitdate normal="1926"
+                        >1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Bringing Up Father, <unitdate normal="1928"
+                        >1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Broadcasting, <unitdate normal="1924">1924</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Broken Melody, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Bugler of Algiers, <unitdate normal="1916"
+                        >1916</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Bumping into Broadway, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Bungalow Bungle, <unitdate normal="1915"
+                        >1915</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Burden of Proof, <unitdate normal="1918"
+                        >1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Burglar Proof, <unitdate normal="1920"
+                        >1920</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Burning Sands, <unitdate normal="1922"
+                        >1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Bush Leaguer, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Buttons, <unitdate normal="1927">1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Cannibals of the South Seas, <unitdate normal="1912"
+                            >1912</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Captain Kidd's Kids, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Careless Age, <unitdate normal="1929"
+                        >1929</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Carolyn of the Corners, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Caught in the Rapids</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Charleston in Six Lessons</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Charm School, <unitdate normal="1921"
+                        >1921</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Cheater, <unitdate normal="1920">1920</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Chicken a la King, <unitdate normal="1928"
+                        >1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Chinatown Squad, <unitdate normal="1935"
+                        >1935</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Cinderella's Twin, <unitdate normal="1920"
+                        >1920</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Circus Rookies, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Clancy's Kosher Wedding, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Coast Guard, <unitdate normal="1939">1939</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Cock Eyed World, <unitdate normal="1929"
+                        >1929</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Cocoanuts, <unitdate normal="1929"
+                        >1929</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Cohens and Kellys, <unitdate normal="1926"
+                        >1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Combat, <unitdate normal="1926">1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Come Through, <unitdate normal="1917">1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Common Property, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Coney Island, <unitdate normal="1928">1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Cossacks, <unitdate normal="1928">1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Cost, <unitdate normal="1920">1920</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The County Chairman, <unitdate normal="1934"
+                        >1934</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Covered Wagon, <unitdate normal="1923"
+                        >1923</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Coward, <unitdate normal="1927">1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Crackerjack, <unitdate normal="1925"
+                        >1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Cradle of Courage, <unitdate normal="1920">1920</unitdate></unittitle>
+                        <physdesc>- 2</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Crooks Can't Win, <unitdate normal="1928"
+                        >1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Cry Wolf, <unitdate normal="1947">1947</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Cupid's RoundUp</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Cyclone Rider, <unitdate normal="1924"
+                        >1924</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Daddy's GoneAHunting, <unitdate normal="1925"
+                        >1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Dancer's Peril, <unitdate normal="1917"
+                        >1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Danger Lights, <unitdate normal="1930"
+                        >1930</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Dangerous Age, <unitdate normal="1923"
+                        >1923</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Dangerous Flirt, <unitdate normal="1924"
+                        >1924</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="Box">3</container>
+                        <unittitle>Dante's Inferno, <unitdate normal="1924"
+                        >1924</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>A Daughter of the Gods, <unitdate normal="1916"
+                        >1916</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Daughter's Strange Inheritance, <unitdate normal="1915"
+                            >1915</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Dawn Patrol, <unitdate normal="1938"
+                        >1938</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Death Flies East, <unitdate normal="1935"
+                        >1935</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The DemiBride, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Desperate Hero, <unitdate normal="1920"
+                        >1920</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Detectives, <unitdate normal="1928">1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Deuce of Spades, <unitdate normal="1922"
+                        >1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Devil's Circus, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Devil's Island, <unitdate normal="1926"
+                        >1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Devil's Partner</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Devotion, <unitdate normal="1946">1946</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Docks of New York, <unitdate normal="1928"
+                        >1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Doctor and the Woman, <unitdate normal="1918"
+                        >1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Dog Justice, <unitdate normal="1928">1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>A Dog of the Regiment, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>A Dog's Life, <unitdate normal="1918">1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Don Quixote, <unitdate normal="1915">1915</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Don't Marry, <unitdate normal="1928">1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Don't Slip</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Dr. Christian Meets the Women, <unitdate normal="1940"
+                            >1940</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Dub, <unitdate normal="1919">1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Dust Be My Destiny, <unitdate normal="1939"
+                        >1939</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Early Bird, <unitdate normal="1925"
+                        >1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Earthbound, <unitdate normal="1920">1920</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>East Side West Side, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Easy to Wed, <unitdate normal="1946">1946</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Eleventh Commandment, <unitdate normal="1918"
+                        >1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Empty Hands, <unitdate normal="1924">1924</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Enchanted Hill, <unitdate normal="1926"
+                        >1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Eternal Magdalene, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Ethel Clayton, <unitdate normal="1917"
+                        >1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Eve's Lover, <unitdate normal="1925">1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Exit Quietly</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Eyes of the World, <unitdate normal="1917"
+                        >1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Eyes of Youth, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Face on the Barroom Floor</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The False Alarm, <unitdate normal="1926"
+                        >1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The False Faces, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Fangs of the Wild, <unitdate normal="1928"
+                        >1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Far Call, <unitdate normal="1929">1929</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Fatal Photo, <unitdate normal="1923"
+                        >1923</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Fatty in Coney Island, <unitdate normal="1917"
+                        >1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Fighting Blade, <unitdate normal="1923"
+                        >1923</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Fighting Lover, <unitdate normal="1921"
+                        >1921</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Fighting with Kit Carson, <unitdate normal="1933"
+                        >1933</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>FindersKeepers, <unitdate normal="1921"
+                        >1921</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Finger of Justice, <unitdate normal="1918"
+                        >1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Fire Brigade, <unitdate normal="1926"
+                        >1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Five Fifteen, <unitdate normal="1923"
+                        >1923</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Flame of Life, <unitdate normal="1923"
+                        >1923</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Flaming Fury, <unitdate normal="1926">1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Flesh &amp; Blood, <unitdate normal="1922">1922</unitdate></unittitle>
+                        <physdesc>- 3</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Flower of Night, <unitdate normal="1925"
+                        >1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Fog, <unitdate normal="1923">1923</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>A Fool There Was, <unitdate normal="1922"
+                        >1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">4</container>
+                        <unittitle>Fools and Riches, <unitdate normal="1923"
+                        >1923</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Footlights and Shadows, <unitdate normal="1920"
+                        >1920</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Forbidden City, <unitdate normal="1918"
+                        >1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Forgotten Woman, <unitdate normal="1921"
+                        >1921</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Four Horsemen of the Apocalypse, <unitdate normal="1921"
+                            >1921</unitdate></unittitle>
+                        <physdesc>- 2</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>From Headquarters, <unitdate normal="1915"
+                        >1915</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Gallant Blade, <unitdate normal="1948"
+                        >1948</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Gamblers, <unitdate normal="1919">1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Gay Lord Quex, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Gay Retreat, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Gentlemen Prefer Blondes, <unitdate normal="1928"
+                        >1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Ghost in the Garret, <unitdate normal="1921"
+                        >1921</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Gigolo, <unitdate normal="1926">1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Girl from Chicago, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>A Girl of the Timber Claims, <unitdate normal="1917"
+                            >1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Glorious Betsy, <unitdate normal="1928"
+                        >1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The GoGetters</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Gold Heels, <unitdate normal="1924">1924</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Good Time Charley, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Grand Old Girl, <unitdate normal="1935"
+                        >1935</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Gray Towers Mystery, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Great Alone, <unitdate normal="1922"
+                        >1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Green Dolphin Street, <unitdate normal="1947"
+                        >1947</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Green Years, <unitdate normal="1946"
+                        >1946</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The HalfBreed, <unitdate normal="1916"
+                        >1916</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Hard to Get, <unitdate normal="1929">1929</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Hat, Coat and Glove, <unitdate normal="1934"
+                        >1934</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Hazards of Helen</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>He Did and He Didn't</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Heart of Wetona, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Hearts of the World, <unitdate normal="1918"
+                        >1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Heaven on Earth, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Helen of Troy, N.Y.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Hell's Border, <unitdate normal="1922"
+                        >1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Hell's Oasis, <unitdate normal="1920">1920</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Her Country's Call, <unitdate normal="1917"
+                        >1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Her Kingdom of Dreams, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Her Lucky Night, <unitdate normal="1945"
+                        >1945</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Her Silent Sacrifice, <unitdate normal="1917"
+                        >1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Her Sister from Paris, <unitdate normal="1925"
+                        >1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Hey Rube, <unitdate normal="1928">1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Hickville to Broadway, <unitdate normal="1921"
+                        >1921</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>High and Dizzy, <unitdate normal="1920"
+                        >1920</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>High Finance, <unitdate normal="1917">1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>His Secretary, <unitdate normal="1925"
+                        >1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>His Wild Oats, <unitdate normal="1916"
+                        >1916</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Home, <unitdate normal="1916">1916</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Honor Bound, <unitdate normal="1920">1920</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Honor System, <unitdate normal="1917"
+                        >1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Hook and Ladder No. 9, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>HoopLa, <unitdate normal="1919">1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Hostage, <unitdate normal="1917">1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Hot Water, <unitdate normal="1924">1924</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Hottentot, <unitdate normal="1922"
+                        >1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Housewife, <unitdate normal="1934">1934</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>How's About It, <unitdate normal="1943"
+                        >1943</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Human Collateral, <unitdate normal="1920"
+                        >1920</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Humming Bird, <unitdate normal="1924"
+                        >1924</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>I Am The Man, <unitdate normal="1924">1924</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">5</container>
+                        <unittitle>I Want My Man, <unitdate normal="1925"
+                        >1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Idol Dancer, <unitdate normal="1920"
+                        >1920</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>If You Believe It, It's So, <unitdate normal="1922"
+                            >1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>I'm Goin to Plant Myself in My Old Plantation Home</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Impossible Mrs. Bellew, <unitdate normal="1922"
+                            >1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>In Bad, <unitdate normal="1918">1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>In the Hollow of Her Hand, <unitdate normal="1918"
+                            >1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Indestructible Wife, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Innocents of Paris, <unitdate normal="1929"
+                        >1929</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Invisible Bond, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Invisible Fear, <unitdate normal="1921">1921</unitdate></unittitle>
+                        <physdesc>- 2</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Irene, <unitdate normal="1926">1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Isle of Retribution, <unitdate normal="1926"
+                        >1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Jake the Plumber, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Jaws of Steel, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Jinx, <unitdate normal="1919">1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Johnny Doughboy, <unitdate normal="1942"
+                        >1942</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Judgment House, <unitdate normal="1917"
+                        >1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Just Pals, <unitdate normal="1920">1920</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Keys of the Righteous, <unitdate normal="1918"
+                            >1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>King Kelly of the U. S. A., <unitdate normal="1934"
+                            >1934</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Kings Creek Law, <unitdate normal="1923"
+                        >1923</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Kismet, <unitdate normal="1944">1944</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Kosher Kitty Kelly, <unitdate normal="1926">1926</unitdate></unittitle>
+                        <physdesc>- 2</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Ladies Must Dress, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>A Lady in Love, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Lady of the Dugout, <unitdate normal="1918"
+                        >1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>A Lady's Name, <unitdate normal="1918"
+                        >1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Lamb and the Lion, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Laugh with Larry</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Law for Tombstone, <unitdate normal="1937"
+                        >1937</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Law of Snow Country, <unitdate normal="1926"
+                        >1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Legionnaires in Paris, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Lend Me Your Husband, <unitdate normal="1924"
+                        >1924</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Let Freedom Ring, <unitdate normal="1939"
+                        >1939</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Life of our Saviour</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Life with Father, <unitdate normal="1947"
+                        >1947</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Little Accident, <unitdate normal="1939"
+                        >1939</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Little Church Around the Corner, <unitdate normal="1923"
+                            >1923</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Live Wire, <unitdate normal="1925">1925</unitdate></unittitle>
+                        <physdesc>- 2</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Lone Wolf Returns, <unitdate normal="1926">1926</unitdate></unittitle>
+                        <physdesc>- 2</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Long Riders</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Look Out Below</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Look Who's Laughing, <unitdate normal="1941"
+                        >1941</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Lost Planet, <unitdate normal="1953"
+                        >1953</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Lotus Eater, <unitdate normal="1921"
+                        >1921</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Love's Law, <unitdate normal="1917">1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Loves of Letty, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Luck, <unitdate normal="1923">1923</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Lucky Partners, <unitdate normal="1940"
+                        >1940</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Lucretia Lombard, <unitdate normal="1923"
+                        >1923</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Mademoiselle from Armentieres, <unitdate normal="1926"
+                            >1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Magnificent Brute, <unitdate normal="1936"
+                        >1936</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Man Between, <unitdate normal="1923"
+                        >1923</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>A Man from Nowhere, <unitdate normal="1920"
+                        >1920</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">6</container>
+                        <unittitle>Man of the Forest, <unitdate normal="1926"
+                        >1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Man on the Box, <unitdate normal="1925"
+                        >1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Mark of the Frog, <unitdate normal="1928"
+                        >1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Market of Vain Desire, <unitdate normal="1916"
+                        >1916</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Marquis Preferred, <unitdate normal="1929"
+                        >1929</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Marriage in Transit, <unitdate normal="1925"
+                        >1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Married in Hollywood, <unitdate normal="1929"
+                        >1929</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Mary's Ankle, <unitdate normal="1920">1920</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Master Mind, <unitdate normal="1920"
+                        >1920</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>McFadden's Flats, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Merry Go Round, <unitdate normal="1922"
+                        >1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Message of Emile Coue</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Midnight Express, <unitdate normal="1924"
+                        >1924</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Midnight Patrol, <unitdate normal="1918"
+                        >1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>A Midnight Romance, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Midnight Taxi, <unitdate normal="1928"
+                        >1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Miss Brewster's Millions, <unitdate normal="1926"
+                        >1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Miss Jackie of the Army, <unitdate normal="1917"
+                        >1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>M'Liss, <unitdate normal="1936">1936</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Model from Montmartre, <unitdate normal="1926"
+                            >1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Mohican's Daughter, <unitdate normal="1922"
+                        >1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Molly Entangled, <unitdate normal="1917"
+                        >1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Money! Money! Money!, <unitdate normal="1923"
+                        >1923</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Moonlight Follies, <unitdate normal="1921"
+                        >1921</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Moonshine, <unitdate normal="1917">1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Mother's Boy, <unitdate normal="1929">1929</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Mountain Music</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Music for Millions, <unitdate normal="1944"
+                        >1944</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Mutt and Jeff in Chinatown</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>My Lady of Whims, <unitdate normal="1925"
+                        >1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Mysterious Dr. Fu Manchu, <unitdate normal="1929"
+                            >1929</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Mysterious Miss Terry, <unitdate normal="1917"
+                            >1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Mystery Squadron, <unitdate normal="1933"
+                        >1933</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Napoleon, <unitdate normal="1927">1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Narrow Trail, <unitdate normal="1917"
+                        >1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Natural Law, <unitdate normal="1917"
+                        >1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Naughty, Naughty, <unitdate normal="1918"
+                        >1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Neal of the Navy, <unitdate normal="1915"
+                        >1915</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The New Moon, <unitdate normal="1919">1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The News Parade, <unitdate normal="1928"
+                        >1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>A Night in Honolulu</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>A Noise in Newboro, <unitdate normal="1923"
+                        >1923</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Not for Publication, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Notoriety, <unitdate normal="1922">1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Nut Farm, <unitdate normal="1935">1935</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Old Clothes, <unitdate normal="1925">1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>An Old Fashioned Boy</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Old Homestead, <unitdate normal="1922"
+                        >1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Omar the Tentmaker, <unitdate normal="1922"
+                        >1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>On the Go, <unitdate normal="1925">1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>On the High Seas, <unitdate normal="1922"
+                        >1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>One Man in a Million, <unitdate normal="1921">1921</unitdate></unittitle>
+                        <physdesc>- 2</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>One Round Hogan, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The One Woman, <unitdate normal="1918"
+                        >1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">7</container>
+                        <unittitle>The Orphan, <unitdate normal="1920">1920</unitdate></unittitle>
+                        <physdesc>- 2</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Our Alley, <unitdate normal="1923">1923</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Paddy the Next Best Thing, <unitdate normal="1923"
+                            >1923</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Pardon Me, <unitdate normal="1922">1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Paris, <unitdate normal="1929">1929</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Parson of Panamint, <unitdate normal="1916"
+                        >1916</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Partners Three, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Pay Day, <unitdate normal="1922">1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Pay Me, <unitdate normal="1917">1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Pearl of the Army, <unitdate normal="1916">1916</unitdate></unittitle>
+                        <physdesc>- 2</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Phantom Express, <unitdate normal="1925"
+                        >1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Play Girl, <unitdate normal="1928"
+                        >1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Playing the Game, <unitdate normal="1918"
+                        >1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Poor but Honest, <unitdate normal="1915"
+                        >1915</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>A Poor Fish, <unitdate normal="1933">1933</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Poor Men's Wives, <unitdate normal="1923"
+                        >1923</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Pop Tuttle's Clever Catch</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Price Mark, <unitdate normal="1917"
+                        >1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Price of a Good Time, <unitdate normal="1917"
+                        >1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Price of Innocence, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Price of Silence, <unitdate normal="1916"
+                        >1916</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Primal Law, <unitdate normal="1921"
+                        >1921</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Prince of Pep, <unitdate normal="1925"
+                        >1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>A Prince There Was, <unitdate normal="1922"
+                        >1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Princess of New York, <unitdate normal="1921"
+                        >1921</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Prisoners of the Storm, <unitdate normal="1926"
+                        >1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>A Private Scandal, <unitdate normal="1921"
+                        >1921</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Publicity Madness, <unitdate normal="1927">1927</unitdate></unittitle>
+                        <physdesc>- 2</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Quality Street, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Quick Action, <unitdate normal="1921">1921</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>R.S.V.P., <unitdate normal="1921">1921</unitdate></unittitle>
+                        <physdesc>- 2</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Racing Romeo, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Rah! Rah! Rexie!</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Ranger of the North, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Rebecca of Sunnybrook Farm, <unitdate normal="1917"
+                            >1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Received Payment, <unitdate normal="1922"
+                        >1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Reckless Romance, <unitdate normal="1924"
+                        >1924</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>A Reckless Romeo, <unitdate normal="1917"
+                        >1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Reclaimed, <unitdate normal="1919">1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Recoil, <unitdate normal="1921">1921</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Recreation of Brian Kent, <unitdate normal="1925"
+                            >1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Red Mill, <unitdate normal="1927">1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Red Riders of Canada, <unitdate normal="1928"
+                        >1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Reggie Mixes In, <unitdate normal="1916"
+                        >1916</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Remedy for Riches, <unitdate normal="1940"
+                        >1940</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Remember, <unitdate normal="1926">1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Renegade Trail, <unitdate normal="1939"
+                        >1939</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>A Reno Divorce, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Restless Sex, <unitdate normal="1920"
+                        >1920</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Ride the Pink Horse, <unitdate normal="1947"
+                        >1947</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Riders of the Dark, <unitdate normal="1928"
+                        >1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Riders of the Purple Sage, <unitdate normal="1931"
+                            >1931</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Rinty of the Desert, <unitdate normal="1928"
+                        >1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Road through the Dark, <unitdate normal="1918"
+                            >1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Robin Hood, <unitdate normal="1922">1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Romance and Arabella, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Romance Land, <unitdate normal="1923">1923</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Romance of Rio Grande, <unitdate normal="1929"
+                        >1929</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Romance of Tarzan, <unitdate normal="1918"
+                        >1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Romola, <unitdate normal="1924">1924</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Rookies, <unitdate normal="1927">1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>RoseMarie, <unitdate normal="1928">1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Rough Sailing</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">8</container>
+                        <unittitle>The Royal Bed, <unitdate normal="1931"
+                        >1931</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Safety Curtain, <unitdate normal="1918"
+                        >1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Sailor Made Man, <unitdate normal="1921"
+                        >1921</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Sandy, <unitdate normal="1926">1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Sawmill, <unitdate normal="1922">1922;</unitdate>double
+                            billed with: I Do</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Sealed Hearts, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Secret Kingdom, <unitdate normal="1916"
+                        >1916</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Serenade, <unitdate normal="1921">1921</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Seven Days, <unitdate normal="1925">1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Shackles of Gold, <unitdate normal="1922"
+                        >1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Shadow of a Doubt, <unitdate normal="1943"
+                        >1943</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Shadow of Rosalie Byrnes, <unitdate normal="1920"
+                            >1920</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Shadows, <unitdate normal="1922">1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Shadows of the Past, <unitdate normal="1914"
+                        >1914</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Shadows of the Tiger</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Shamrock and the Rose, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Shanghaied, <unitdate normal="1927">1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>She Couldn't Take It, <unitdate normal="1935"
+                        >1935</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Shirley Kaye, <unitdate normal="1917">1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Shoulder Arms, <unitdate normal="1918"
+                        >1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Silent Accuser, <unitdate normal="1924"
+                        >1924</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Silent Call, <unitdate normal="1921"
+                        >1921</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Silent Man, <unitdate normal="1917"
+                        >1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Silk Legs, <unitdate normal="1927">1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Silver Wings, <unitdate normal="1922">1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Silvery Valley, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Singed, <unitdate normal="1927">1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Sins of the Mothers, <unitdate normal="1915"
+                        >1915</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Sister Against Sister, <unitdate normal="1917"
+                        >1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>A Six Shootin' Romance, <unitdate normal="1926"
+                        >1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Slave Market, <unitdate normal="1917"
+                        >1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Slide Kelly Slide, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Slightly Used, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Slippy McGee, <unitdate normal="1923">1923</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Smart Set, <unitdate normal="1928"
+                        >1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Smilin' Jim, <unitdate normal="1922">1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Smilin' Through, <unitdate normal="1932"
+                        >1932</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Snail, <unitdate normal="1918">1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Snow White and the Seven Dwarfs, <unitdate normal="1937"
+                            >1937</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Snowed In, <unitdate normal="1926">1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>A Social Error, <unitdate normal="1922"
+                        >1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Something in the Wind, <unitdate normal="1947"
+                        >1947</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Son of the Sheik, <unitdate normal="1926"
+                        >1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Son of the Wolf, <unitdate normal="1922"
+                        >1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Sorrell and Son, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Soul Mates, <unitdate normal="1925">1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>South Sea Rose, <unitdate normal="1929"
+                        >1929</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">9</container>
+                        <unittitle>Sowing the Wind, <unitdate normal="1921"
+                        >1921</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Spark Divine, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Spite Bride, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Splendid Road, <unitdate normal="1925"
+                        >1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Sporting Life, <unitdate normal="1925"
+                        >1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Spotlight, Sadie, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Spring Fever, <unitdate normal="1927">1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Spring is Here, <unitdate normal="1930"
+                        >1930</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>A Stage Romance, <unitdate normal="1922"
+                        >1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Stand By for Action, <unitdate normal="1943"
+                        >1943</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Stepping Out, <unitdate normal="1919">1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Storm, <unitdate normal="1938">1938</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Straight From the Farm</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Strange Case of Dr. Jekyll and Mr. Hyde, <unitdate
+                                normal="1920">1920</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Studio Girl, <unitdate normal="1918"
+                        >1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Surging Seas, <unitdate normal="1924">1924</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Sweet Rosie O'Grady, <unitdate normal="1926"
+                        >1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Sweethearts and Wives, <unitdate normal="1930"
+                        >1930</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Sweetie, <unitdate normal="1923">1923</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>A Tale of Two Worlds, <unitdate normal="1921"
+                        >1921</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Tempered Steel, <unitdate normal="1918"
+                        >1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Temptation, <unitdate normal="1923">1923</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Ten Nights in a Barroom</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Terrible People, <unitdate normal="1929"
+                        >1929</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Texas Jack, <unitdate normal="1935">1935</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>That's That, <unitdate normal="1928">1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Their Day of Rest</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>There's Always Tomorrow, <unitdate normal="1934"
+                        >1934</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>They Just Had to Get Married, <unitdate normal="1933"
+                            >1933</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>A Thief in the Dark, <unitdate normal="1928"
+                        >1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Thin Ice, <unitdate normal="1919">1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>This Love of Ours, <unitdate normal="1945"
+                        >1945</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>This Man's Navy, <unitdate normal="1945"
+                        >1945</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Thunderbolt, <unitdate normal="1929">1929</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Thunderbolt, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Tiger's Trail, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Timid Terror, <unitdate normal="1926"
+                        >1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Tin Hats, <unitdate normal="1926">1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>To a Finish, <unitdate normal="1926">1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Todd of the Times, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Tolls of the Sea, <unitdate normal="1922"
+                        >1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Tom Sawyer, <unitdate normal="1917">1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Tough Luck, <unitdate normal="1921">1921</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Trail of the Octopus, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Transient Lady, <unitdate normal="1935"
+                        >1935</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Triumph of an Emperor</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Tucker's Top Hand, <unitdate normal="1924"
+                        >1924</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Twelve Miles Out, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Two Girls Wanted, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Two Minutes To Go, <unitdate normal="1921"
+                        >1921</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Under False Colors, <unitdate normal="1917"
+                        >1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Under the Black Eagle, <unitdate normal="1928"
+                        >1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Understudy, <unitdate normal="1922"
+                        >1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Unholy Three, <unitdate normal="1925"
+                        >1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Unknown, <unitdate normal="1921">1921</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Unsuspected, <unitdate normal="1947"
+                        >1947</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Up in the Air</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">10</container>
+                        <unittitle>The Vamp, <unitdate normal="1918">1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Vampire Ambrose, <unitdate normal="1916"
+                        >1916</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Vanishing American, <unitdate normal="1925"
+                        >1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Vanishing Trails, <unitdate normal="1920"
+                        >1920</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Very Confidential, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>A Village Sleuth, <unitdate normal="1920"
+                        >1920</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>A Virgin Paradise, <unitdate normal="1921">1921</unitdate></unittitle>
+                        <physdesc>- 2</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Virginian, <unitdate normal="1929"
+                        >1929</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Virtuous Wives, <unitdate normal="1918"
+                        >1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Walls of Jericho, <unitdate normal="1948"
+                        >1948</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Waning Sex, <unitdate normal="1926"
+                        >1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>War Paint, <unitdate normal="1926">1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Watch Your Wife, <unitdate normal="1926"
+                        >1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Way Down East, <unitdate normal="1920"
+                        >1920</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Wedding Present, <unitdate normal="1936"
+                        >1936</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Welcome Danger, <unitdate normal="1929"
+                        >1929</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Welcome Granger...The Pacemakers</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>We're in the Navy Now, <unitdate normal="1926"
+                        >1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>West is West, <unitdate normal="1920">1920</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>West of The Alamo</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>West of the Pecos, <unitdate normal="1935"
+                        >1935</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Westbound Mail, <unitdate normal="1937"
+                        >1937</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Western Fate, <unitdate normal="1924">1924</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>What an Eye, <unitdate normal="1924">1924</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>What Every Girl Should Know, <unitdate normal="1927"
+                            >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>What Every Woman Wants, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>What Love Will Do, <unitdate normal="1921"
+                        >1921</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>What's Your Hurry?, <unitdate normal="1920"
+                        >1920</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Wheel of Life, <unitdate normal="1929"
+                        >1929</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>When a Dog Loves, <unitdate normal="1927"
+                        >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>When a Man Loves, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>When a Man's a Man, <unitdate normal="1935"
+                        >1935</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>When the Door Opened, <unitdate normal="1925"
+                        >1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>When You're in Love, <unitdate normal="1937"
+                        >1937</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Where Lights are Low, <unitdate normal="1921"
+                        >1921</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Where Men Are Men, <unitdate normal="1921"
+                        >1921</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Where the North Begins, <unitdate normal="1923"
+                        >1923</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Why Girls Leave Home</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Why Smith Left Home, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Wild West, <unitdate normal="1925">1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Without Compromise, <unitdate normal="1922"
+                        >1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Wizard, <unitdate normal="1927">1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Wolf Dog, <unitdate normal="1933">1933</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Wolf Fangs, <unitdate normal="1927">1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Wolf Lowry, <unitdate normal="1917">1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Wolf, <unitdate normal="1919">1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Wolves of the Rail, <unitdate normal="1918"
+                        >1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Woman Game, <unitdate normal="1920"
+                        >1920</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Woman God Sent, <unitdate normal="1920"
+                        >1920</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Woman in White, <unitdate normal="1917"
+                        >1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Woman Wise, <unitdate normal="1928">1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The World for Sale, <unitdate normal="1918"
+                        >1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The World to Live in, <unitdate normal="1919"
+                        >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">11</container>
+                        <unittitle>Yankee Doodle Jr., <unitdate normal="1920"
+                        >1920</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Yellow Fingers, <unitdate normal="1926">1926</unitdate></unittitle>
+                        <physdesc>- 2</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Yosemite Trail, <unitdate normal="1922"
+                        >1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>The Young Painter, <unitdate normal="1922"
+                        >1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Youth's Endearing Charm, <unitdate normal="1916"
+                        >1916</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Zaza, <unitdate normal="1923">1923</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did>
+                    <unittitle>Advertisements</unittitle>
+                </did>
+                <scopecontent>
+                    <p>One slide each, unless otherwise indicated</p>
+                </scopecontent>
+                <c02 level="subseries">
+                    <did>
+                        <unittitle>Automotive</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Firestone tires, Clyde Harvey &amp; Son, Hillsdale, N.
+                            Y.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Metz <emph render="doublequote">22</emph> Roadster
+                            </unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="subseries">
+                    <did>
+                        <unittitle>Banking &amp; Finance</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Hartford Savings Bank and Trust Company</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>J.D. Westlake, law office (realty)</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Victory Liberty Loan</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="subseries">
+                    <did>
+                        <unittitle>Clothing &amp; Tailoring</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Adler Collegian shaped-to-the-form suit, Houlton Grange
+                            Store</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Balmacaan, Wear the Swagger</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Bon Marche Fashions</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Ed Brown [tailoring]</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Ed Brown [tailoring] Custom Service</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Everfast Fabrics</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Hart Schaffner &amp; Marx (clothing)</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Strauss Brothers Master Tailors</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="subseries">
+                    <did>
+                        <unittitle>Cosmetics</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Flash hand cleaner</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Hotpoint Boudoir Set (Electric Iron and Curling-tongs
+                            Heater)</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Jonteel cold cream</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="subseries">
+                    <did>
+                        <unittitle>Electronics &amp; Appliances</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>C.W. Nunamaker's Big Radio Store, Absopure Frigerator </unittitle>
+                            <physdesc>-2</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>C.W. Nunamaker's Big Radio Store, <emph render="doublequote"
+                                    >Are you shackled by wash day? Buy our washer</emph></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>C.W. Nunamaker's Big Radio Store, electric washer</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>C.W. Nunamaker's Big Radio Store, radio repair </unittitle>
+                            <physdesc>-3</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>C.W. Nunamaker's Big Radio Store, Sparton Radio </unittitle>
+                            <physdesc>-3</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>C.W. Nunamaker's Big Radio Store, <emph render="doublequote"
+                                    >Wishing you all a Happy New Year</emph></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Crane automatic water systems</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Majestic Range, Kelly Hardware</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Nesco Oil Cook Stoves</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Radiola III</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Sterno canned heat and cooking devices, Charles Vallee drug
+                                store, Westbrook, ME.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Thor 32 Electric Washer</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="subseries">
+                    <did>
+                        <unittitle>Entertainment</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Bay State Circuit Races, Sturbridge, Mass.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Dance at the Spider Palace</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Kodaks and Supplies, Norman A. Burke, 34 South Broadway,
+                                NYACK, N.Y.</unittitle>
+                            <physdesc>- 3</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Sheet music: Some day you'll want me back. Maybe I won't want
+                                you.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Sheet music: The Story of Two Floral Wreaths</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>South Bend Anti-Back-Lash Reel</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="subseries">
+                    <did>
+                        <container type="Box" label="Box">12</container>
+                        <unittitle>Food &amp; Drink </unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Apollo Chocolates</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Brecht Chocolates</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Delicious drinks, Meixsell's Drugstore</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Quaker Oats</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Schrafft's chocolate covered bars</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Wrigley's Spearmint: Steadies the Nerves</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="subseries">
+                    <did>
+                        <unittitle>Home Improvement &amp; Hardware </unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Acme Quality house paints, John H. Kelly Winamac,
+                            Ind.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Acme Quality Paints, home decorating book, John H. Kelly,
+                                Winamac Ind.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Alfred Peats <emph render="doublequote">Prize</emph> Wall
+                                Papers</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Chi-Namel Graining System, for sale by John H.
+                            Kelley</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Clarence Lysdahl bathroom porcelain</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Door mats &amp; scrapers, J.C. Curtis hardware
+                            store</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Dustbane, the Sanitary Sweeping Compound, Putman Hdw.
+                            Co.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Eveready flashlight</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>F.I. Webster Company: Better tools make better
+                            workman</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>F.I. Webster Company: Seeds that bring the glories of
+                                Spring-time to your own garden</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Gilbert &amp; Bennett Pearl Wire Cloth</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Pearl wire cloth</unittitle>
+                            <physdesc>-2</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Pittsburgh Perfect Fencing</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Sargent floor and furniture enamel</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Standard modern bathroom</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Tirro Insulates, V. L. Robertson, Druggist</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Upson Processed Board, John Watson &amp; Co., Houlton,
+                                Me.</unittitle>
+                            <physdesc>-2</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Vitralite enamel, for sale by John H. Kelly</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Yale door check, John Schubert, 19 New Main St.</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="subseries">
+                    <did>
+                        <unittitle>Shoes</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Boardman Shoe</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Dorothy Dodd Shoes</unittitle>
+                            <physdesc>-2</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Stanley's Walk-Over Boot Shop</unittitle>
+                            <physdesc>-6</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Walk Over Shoes</unittitle>
+                            <physdesc>-7</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Walk Over Shoes, Wellington Cross Co.</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="subseries">
+                    <did>
+                        <unittitle>Miscellaneous</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Heywood-Wakefield Sulky, Dunn Furniture Co.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Western Union Telegram</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did>
+                    <container type="Box" label="Box">13</container>
+                    <unittitle>Miscellaneous</unittitle>
+                </did>
+                <scopecontent>
+                    <p>One slide each, unless otherwise indicated. </p>
+                </scopecontent>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Children of Europe Need Your Help!; matinee fundraiser for the
+                            Owensboro Redd [sic] Cross</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Coming attractions, Vod-a-Vil Movies</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Coming To-morrow</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Coming: Sousa and his band</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Excelsior Moving Picture Company</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>First National Pictures film festival</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Graphoscope Service Co. (film projection)</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Gus Hill's Minstrels &amp; George Evans'
+                        Minstrels</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Harmony Eight Jazz Band</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>McDonald &amp; Moran Song Girl Revue, at the
+                        Bleich</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Make Your Dollars Work for You...Invest</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Music is now one of the Big Features at this theater</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Night in Japan...given by the Colonial Bells (Inc.)...Music by
+                            Kirk's...</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Paramount-Artcraft Pictures</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Pictures changed Mon., Wed., Fri.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Queensboro Athletic Club, Wills-Madden boxing match, film
+                            projection of</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Select Pictures, Alice Brady (actress)</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <emph render="doublequote">Silence</emph>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Song-hit slide: <emph render="doublequote">Bet-ter trade your
+                                pret-ty / cas-tles up in the air...</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Song-hit slide: <emph render="doublequote">Days and night full of
+                                daz-zling sights / You may see them yet be
+                        blind...</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Song-hit slide: <emph render="doublequote">Good friends I have
+                                ga-lore / But I want some-thing more...</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Song-hit slide: <emph render="doublequote">I will close my book
+                                of dreams / And seal it with a kiss...</emph>
+                        </unittitle>
+                        <physdesc>-2</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Song-hit slide: <emph render="doublequote">If I can't have you /
+                                All my love to share...</emph></unittitle>
+                        <physdesc>-2</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Song-hit slide: <emph render="doublequote">If I can't have you /
+                                if you can't have me...</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Song-hit slide: <emph render="doublequote">I'll keep lov-ing you
+                                / No one else will do...</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Song-hit slide: <emph render="doublequote">Look-ing from a
+                                dis-tance / all the world seems gay...</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Song-hit slide: <emph render="doublequote">Love is all that
+                                mat-ters / You'll find out some day...</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Song-hit slide: <emph render="doublequote">Nev-er let il-lu-sion
+                                / car-ry you a-way...</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Song-hit slide: <emph render="doublequote">The world has much to
+                                give / The lit-tle while we live...</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Spanuth's original vod-a-vil movies</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Triangle Films, Douglas Fairbanks</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Vaudeville, Felix Herman &amp; Co., at the Bleich</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>We Cordially Invite Ladies &amp; Children to Attend This
+                            Theatre</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Woodrow Wilson: Let us stand by President Wilson</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Woodrow Wilson: Listen to your President</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>[drawing of black woman and boy in baseball uniform]</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>[outdoor scene with man and woman]</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>[pilgrims at Plymouth Rock?]</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>[Times Square?]</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Slides pertaining to homeopathy</unittitle>
+                        <physdesc>-12</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">14</container>
+                        <unittitle>Slides pertaining to homeopathy, continued</unittitle>
+                        <physdesc>-51</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">15</container>
+                        <unittitle><emph render="italic">The Emperor Waltz</emph> copper printing plate</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">16</container>
+                        <unittitle><emph render="italic">The Emperor Waltz</emph> sheet music cover</unittitle>
+                    </did>
+                </c02>
+                
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
