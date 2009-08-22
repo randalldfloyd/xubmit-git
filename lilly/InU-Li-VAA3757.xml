@@ -95,8 +95,31 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
          <bioghist encodinganalog="545">
             <head>Biographical Note</head>
             <p>Founded in 1978, North American Catalan Society membership includes scholars from the United States and Canada interested in all aspects of Catalan culture and studies. </p>
-         </bioghist>
-      <!-- required; 'descgrp' element replaces admininfo element in 2002 DTD --><descgrp>
+         </bioghist><!--optional --><!-- element organization deprecated in DTD version 2002; @encodinganalog may be used to differentiate between 351 subfield a (organization) and subfield b (arrangement). -->
+      <arrangement encodinganalog="351$x">
+         <head>Arrangement/Organization</head>
+         <p>The collection is organized into the following series: I. Presidential; II. Colloquia; III. Topics; IV. Printed materials.</p>
+      </arrangement>
+      <!-- required for collection level; optional for lower levels --><scopecontent encodinganalog="520$a$b">
+         <head>Scope and Content Note</head>
+         <p>Consists of the correspondence, papers, etc. of the North American Catalan Society. They are a part of the Josep Roca-Pons Archives of the North American Catalan Society. The archives were established at the 8th NACS Colloquium held in 1995 in Bloomington, Indiana. At present the papers are almost exclusively the files of former President Patricia J. Boehne, a professor at Eastern College in Pennsylvania. Also present is a file of former president Curt Wittlin from the University of Saskatchewan in Saskatoon, Canada, and several newspapers from various countries containing obituary notices of Josep Roca-Pons in 2000.</p>
+      </scopecontent>
+      <!-- recommended; this information would be included for marc amc record --><!-- should include all personal and corporate names, and subject headings --><controlaccess>
+         <head>Controlled Access Terms</head>
+         <persname encodinganalog="600$a" source="lcnaf" role="subject">Boehne, Patricia J. --Correspondence.</persname>
+         <persname encodinganalog="600$a" source="lcnaf" role="subject">Wittlin, Curt J. --Correspondence.</persname>
+         <persname encodinganalog="600$a" source="lcnaf" role="subject">Roca-Pons, Josep.</persname>
+         <corpname encodinganalog="610$a" source="lcnaf" role="subject">North American Catalan Society.</corpname>
+         <subject encodinganalog="650$a" source="lcsh">Art, Catalan.</subject>
+         <subject encodinganalog="650$a" source="lcsh">Catalan literature.</subject>
+         <geogname encodinganalog="651$a" source="lcsh">Catalonia (Spain) --Civilization.</geogname>
+         <controlaccess>
+            <head/>
+            <persname encodinganalog="700$a" source="lcnaf">Boehne, Patricia J.</persname>
+            <persname encodinganalog="700$a" source="lcnaf">Wittlin, Curt J.</persname>
+         </controlaccess>
+      </controlaccess><!-- required; 'descgrp' element replaces admininfo element in 2002 DTD -->
+      <descgrp>
          <head>Administrative Information</head>
          <acqinfo encodinganalog="541">
             <head>Acquisition Information</head>
@@ -116,29 +139,6 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
 		  Indiana.</p>
          </prefercite>
       </descgrp>
-      <!-- required for collection level; optional for lower levels --><scopecontent encodinganalog="520$a$b">
-         <head>Scope and Content Note</head>
-         <p>Consists of the correspondence, papers, etc. of the North American Catalan Society. They are a part of the Josep Roca-Pons Archives of the North American Catalan Society. The archives were established at the 8th NACS Colloquium held in 1995 in Bloomington, Indiana. At present the papers are almost exclusively the files of former President Patricia J. Boehne, a professor at Eastern College in Pennsylvania. Also present is a file of former president Curt Wittlin from the University of Saskatchewan in Saskatoon, Canada, and several newspapers from various countries containing obituary notices of Josep Roca-Pons in 2000.</p>
-      </scopecontent>
-      <!--optional --><!-- element organization deprecated in DTD version 2002; @encodinganalog may be used to differentiate between 351 subfield a (organization) and subfield b (arrangement). --><arrangement encodinganalog="351$x">
-         <head>Arrangement/Organization</head>
-         <p>The collection is organized into the following series: I. Presidential; II. Colloquia; III. Topics; IV. Printed materials.</p>
-      </arrangement>
-      <!-- recommended; this information would be included for marc amc record --><!-- should include all personal and corporate names, and subject headings --><controlaccess>
-         <head>Controlled Access Terms</head>
-         <persname encodinganalog="600$a" source="lcnaf" role="subject">Boehne, Patricia J. --Correspondence.</persname>
-         <persname encodinganalog="600$a" source="lcnaf" role="subject">Wittlin, Curt J. --Correspondence.</persname>
-         <persname encodinganalog="600$a" source="lcnaf" role="subject">Roca-Pons, Josep.</persname>
-         <corpname encodinganalog="610$a" source="lcnaf" role="subject">North American Catalan Society.</corpname>
-         <subject encodinganalog="650$a" source="lcsh">Art, Catalan.</subject>
-         <subject encodinganalog="650$a" source="lcsh">Catalan literature.</subject>
-         <geogname encodinganalog="651$a" source="lcsh">Catalonia (Spain) --Civilization.</geogname>
-         <controlaccess>
-            <head/>
-            <persname encodinganalog="700$a" source="lcnaf">Boehne, Patricia J.</persname>
-            <persname encodinganalog="700$a" source="lcnaf">Wittlin, Curt J.</persname>
-         </controlaccess>
-      </controlaccess>
       <dsc type="combined"><!-- unittitle is the only required element within component --><!-- possible values for @level include: class, collection, file, fonds, item, otherlevel, recordgrp, series, subfonds, subgrp, subseries --><c01 level="series">
             <did>
                <unittitle>Presidential</unittitle>
