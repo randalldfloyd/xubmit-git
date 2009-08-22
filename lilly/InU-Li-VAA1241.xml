@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Lilly Library, Indiana University, EAD template, 2003-02-21  --><!DOCTYPE ead
-  PUBLIC "-//Society of American Archivists//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN" "ead.dtd">
-<ead><!-- value of @findaidstatus should be 'originaldraft', 'inprogressdraft', 'editinprogress', or 'editedfulldraft' --><eadheader audience="internal" langencoding="iso639-2b" scriptencoding="iso15924"
-              repositoryencoding="iso15511"
-              countryencoding="iso3166-1"
-              dateencoding="iso8601"
-              findaidstatus="originaldraft"><!-- replace [uniqueid] with collection LMC number --><eadid encodinganalog="identifier" identifier="InU-Li-VAA1241" countrycode="US"
+<!-- Indiana University EAD template draft: 2003-Jan-2, 
+   revised 2004-09-15 JLR; 
+   revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group  -->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd"><!-- value of @findaidstatus should be 'originaldraft', 'inprogressdraft', 'editinprogress', or 'editedfulldraft' -->
+   <eadheader audience="internal" langencoding="iso639-2b" scriptencoding="iso15924"
+      repositoryencoding="iso15511"
+      countryencoding="iso3166-1"
+      dateencoding="iso8601"
+      findaidstatus="originaldraft"><!-- replace [uniqueid] with collection LMC number --><eadid encodinganalog="identifier" identifier="InU-Li-VAA1241" countrycode="US"
              mainagencycode="InU-Li">InU-Li-VAA1241</eadid>
       <filedesc><!-- This is a description of the electronic finding aid, not the original finding aid or the collection --><!-- Make title "xxxx mss., yyyy-yyyy"--><!--Make subtitle "Papers, yyyy-yyyy, of [person] at the Lilly Library, Indiana University, Bloomington, Indiana--><titlestmt>
-            <titleproper>Boxer mss., </titleproper>
+            <titleproper encodinganalog="title">Boxer mss., </titleproper>
             <subtitle>Papers and Correspondence, <date normal="1923/1975" era="ce" calendar="gregorian">1923-1975</date>, of
                     Charles Ralph Boxer at the Lilly Library, Indiana University, Bloomington,
                     Indiana</subtitle>
-            <author>Electronic finding aid encoded by Magia Ghetu</author>
+            <author encodinganalog="creator">Electronic finding aid encoded by Magia Ghetu</author>
          </titlestmt>
          <publicationstmt>
-            <publisher>Indiana University Digital Library Program</publisher>
-            <date normal="2003" type="publication" era="ce" calendar="gregorian">© 2003</date>
+            <publisher encodinganalog="publisher">Indiana University Digital Library Program</publisher>
+            <date encodinganalog="date" normal="2003" type="publication" era="ce" calendar="gregorian">© 2003</date>
          </publicationstmt>
       </filedesc>
       <profiledesc>
@@ -24,7 +28,7 @@
                 <!--description of how the finding aid was created, for example: XML finding aid derived from
 [paper by means of scanning and OCR] [OCR file edited for typographical errors before encoding]
 [typescript by rekeying] [word processing program and version number]
-[<extref href="" linktype="simple" title="" actuate="onrequest" show="new">HTML collection description</extref>]. -->
+[<extref href="" title="" actuate="onrequest" show="new">HTML collection description</extref>]. -->
                 <lb/>Finding aid encoded by Magia Ghetu, Lilly Library, Indiana University, <date normal="2003-05-20" era="ce" calendar="gregorian">May 20, 2003</date>
             </creation>
          <!-- iso three-digit 639-2 value for @langcode can be found at http://www.loc.gov/standards/iso639-2/langcodes.html --><langusage>Description is in <language encodinganalog="language" langcode="eng" scriptcode="Latn">English.</language>
@@ -40,15 +44,15 @@
             <item>Encoded finding aid completed.</item>
          </change>
          <change>
-            <date era="ce" calendar="gregorian">July 14, 2003</date>
+            <date normal="2003-07-14" era="ce" calendar="gregorian">July 14, 2003</date>
             <item>Controlled access terms added.</item>
          </change>
          <change>
-            <date era="ce" calendar="gregorian">July 15, 2003</date>
+            <date normal="2003-07-15" era="ce" calendar="gregorian">July 15, 2003</date>
             <item>Took out extra space in &lt;title&gt;.</item>
          </change>
          <change>
-            <date era="ce" calendar="gregorian">July 31, 2003</date>
+            <date normal="2003-07-31" era="ce" calendar="gregorian">July 31, 2003</date>
             <item>Minor changes made to abstract and scope note per Saundra's request.</item>
          </change>
          <change>
@@ -76,7 +80,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
    </frontmatter>
    <archdesc level="collection" audience="external" type="inventory" relatedencoding="marc"><!-- @type value may alternatively be 'bulk' --><!-- use the label attribute for these elements to determine what label is displayed --><did>
          <head>Summary Information</head>
-         <repository encodinganalog="850$a" label="Repository">
+         <repository encodinganalog="852" label="Repository" id="lilly">
                 <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
                 <address>
                <addressline>Lilly Library</addressline>
@@ -96,26 +100,31 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
          <unitdate normal="1923/1975" type="inclusive" encodinganalog="245$f" era="ce"
                    calendar="gregorian">1923-1975</unitdate>
          <unitid encodinganalog="099" countrycode="US" repositorycode="US-InU-Li"
-                 label="Collection no">LMC 2381</unitid>
+                 label="Collection No.">LMC 2381</unitid>
          <physdesc encodinganalog="300$a$f" label="Extent">
                 <extent>ca. 3,500 items (incl. 147 photographs and negatives) items</extent>
                 <!-- if both linear feet and number of items included, separate by lb tag -->
             </physdesc>
-         <langmaterial label="Language">Materials are in <language langcode="eng" encodinganalog="008/35-37">English</language>and <language langcode="por" encodinganalog="008/35-37">Portuguese</language>
+         <langmaterial label="Language" encodinganalog="546">Materials are in <language langcode="eng" encodinganalog="008/35-37">English</language>and <language langcode="por" encodinganalog="008/35-37">Portuguese</language>
             </langmaterial>
          <abstract encodinganalog="520$a" label="Abstract">Papers of Charles Ralph Boxer,
                 1904-2000, colonial historian, include drafts of many of his books and articles,
                 reviews, lecture notes, miscellaneous teaching materials and miscellaneous
                 biographical materials.</abstract>
       </did>
-      <!-- required; 'descgrp' element replaces admininfo element in 2002 DTD --><descgrp>
-         <head>Administrative Information</head>
          <accessrestrict encodinganalog="506$a">
             <head>Access Restrictions</head>
             <p>This collection is open for research.</p>
             <p>One file closed to researchers. This file is marked Restricted in the finding
                     aid. </p>
          </accessrestrict>
+         <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+            <p>Historian and professor of history at University of London, Yale University, and
+                    Indiana University. </p>
+         </bioghist>
+      <!-- required; 'descgrp' element replaces admininfo element in 2002 DTD --><descgrp>
+         <head>Administrative Information</head>
          <acqinfo encodinganalog="541">
             <head>Acquisition Information</head>
             <p>Gift. 1980.</p>
@@ -132,11 +141,6 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
             <head>Preferred Citation</head>
             <p>[Item], Boxer mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
          </prefercite>
-         <bioghist encodinganalog="545">
-            <head>Biographical Note</head>
-            <p>Historian and professor of history at University of London, Yale University, and
-                    Indiana University. </p>
-         </bioghist>
       </descgrp>
       <!-- required for collection level; optional for lower levels --><scopecontent encodinganalog="520$a$b">
          <head>Scope and Content Note</head>
@@ -1114,9 +1118,9 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">9</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">The Action between Pater and Oquendo, 12
+                                <title render="doublequote">The Action between Pater and Oquendo, 12
                                     September 1631.</title>
-                                <title render="italic" linktype="simple">Mariner's Mirror</title> 45, no. 3 <unitdate normal="1959-07" era="ce" calendar="gregorian">(July 1959)</unitdate>: 179-199.</unittitle>
+                                <title render="italic">Mariner's Mirror</title> 45, no. 3 <unitdate normal="1959-07" era="ce" calendar="gregorian">(July 1959)</unitdate>: 179-199.</unittitle>
                      <note>
                         <p>Notes, offprint.</p>
                      </note>
@@ -1126,10 +1130,10 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">10</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">Admiral de Ruyter through English Eyes,
-                                    1607-1676.</title> A revision of <title render="doublequote" linktype="simple">De
+                                <title render="doublequote">Admiral de Ruyter through English Eyes,
+                                    1607-1676.</title> A revision of <title render="doublequote">De
                                     Ruyter through English Eyes.</title>
-                                <title render="italic" linktype="simple">Britain and Holland, the Official Organ of
+                                <title render="italic">Britain and Holland, the Official Organ of
                                     the Anglo-Netherlands Society</title> 9, no. 2, p. 59-64.</unittitle>
                      <note>
                         <p>Unpublished? Draft.</p>
@@ -1140,7 +1144,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">11</container>
                      <unittitle>
-                                <title render="italic" linktype="simple">Andre Furtado de Mendonca, 1558-1610.</title>
+                                <title render="italic">Andre Furtado de Mendonca, 1558-1610.</title>
                             </unittitle>
                      <note>
                         <p>Unpublished? Notes.</p>
@@ -1150,7 +1154,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <container type="folder" label="Folder">12</container>
-                     <unittitle>[With Bernard Philippe Groslier] <title render="italic" linktype="simple">Angkor et le Cambodge au XVIe Siecle d'Apres les Sources
+                     <unittitle>[With Bernard Philippe Groslier] <title render="italic">Angkor et le Cambodge au XVIe Siecle d'Apres les Sources
                                     Portugais et Espagnoles</title> avec la collaboration de C. R.
                                 Boxer. Paris: Presses Universitaires de France, <unitdate normal="1958" era="ce" calendar="gregorian">1958.</unitdate> (Annales du Musee Guimet,
                                 Bibliotheque d'etudes, tome 63.)</unittitle>
@@ -1163,7 +1167,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">13-15</container>
                      <unittitle>
-                                <title render="italic" linktype="simple">The Anglo-Dutch Wars of the 17th century,
+                                <title render="italic">The Anglo-Dutch Wars of the 17th century,
                                     1652-1674.</title> London, <unitdate normal="1974" era="ce" calendar="gregorian">1974</unitdate>(i.e. 1975) (for the National Maritime Museum).</unittitle>
                      <note>
                         <p>Notes, drafts, clippings, illustrations, proofs.</p>
@@ -1175,9 +1179,9 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">16</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">Antonio Bocarro and the 'Livro do Estado
+                                <title render="doublequote">Antonio Bocarro and the 'Livro do Estado
                                     da India Oriental': A bio-bibliographical note.</title>
-                                <title render="italic" linktype="simple">Garcia de Orta, revista da Junta das Missoes
+                                <title render="italic">Garcia de Orta, revista da Junta das Missoes
                                     Geograficas e de Investigacoes do Ultramar</title> Lisbon,
                                 Numero especial <unitdate normal="1956" era="ce" calendar="gregorian">(1956)</unitdate>: 203-219.</unittitle>
                      <note>
@@ -1189,7 +1193,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">17</container>
                      <unittitle>
-                                <title render="italic" linktype="simple">Begin ende Voortgangh.</title> Introduction
+                                <title render="italic">Begin ende Voortgangh.</title> Introduction
                                 by CRB.</unittitle>
                      <note>
                         <p>Notes, off-print, publisher's announcements, etc.</p>
@@ -1200,9 +1204,9 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">18</container>
                      <unittitle>
-                                <title render="italic" linktype="simple">Brazil at the Dawn of the 18th
-                                Century.</title> Translation of Joao Antonio Andreoni's <title render="italic" linktype="simple">Cultura e opulencia do Brasil.</title>
-                                Unpublished <unitdate era="ce" calendar="gregorian">1964. </unitdate>
+                                <title render="italic">Brazil at the Dawn of the 18th
+                                Century.</title> Translation of Joao Antonio Andreoni's <title render="italic">Cultura e opulencia do Brasil.</title>
+                                Unpublished <unitdate era="ce" calendar="gregorian" normal="1964">1964.</unitdate>
                             </unittitle>
                      <note>
                         <p>Translation and mimeo of illustrations.</p>
@@ -1212,9 +1216,9 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">Brazilian Gold and British Traders in
+                                <title render="doublequote">Brazilian Gold and British Traders in
                                     the First Half of the Eighteenth Century.</title> Reprinted from
-                                    <title render="italic" linktype="simple">The Hispanic American Historical
+                                    <title render="italic">The Hispanic American Historical
                                 Review</title> 49, no. 3 <unitdate normal="1969-08" era="ce" calendar="gregorian">(August
                                 1969).</unitdate>
                             </unittitle>
@@ -1224,11 +1228,11 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">19</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">Camoes and Couto: Two Comrades in Arms
-                                    and in Letters.</title> Later translated and published as <title render="doublequote" linktype="simple">Camoes e Diogo do Couto: irmaos em armas e
+                                <title render="doublequote">Camoes and Couto: Two Comrades in Arms
+                                    and in Letters.</title> Later translated and published as <title render="doublequote">Camoes e Diogo do Couto: irmaos em armas e
                                     nas letras.</title>
-                                <title render="italic" linktype="simple">Occidente</title> Lisbon, Numero especial
-                                    <unitdate era="ce" calendar="gregorian">(Nov. 1972)</unitdate>: 25-37.</unittitle>
+                                <title render="italic">Occidente</title> Lisbon, Numero especial
+                                    <unitdate era="ce" calendar="gregorian" normal="1972-11">(Nov. 1972)</unitdate>: 25-37.</unittitle>
                      <note>
                         <p>Notes, draft, printed material.</p>
                      </note>
@@ -1238,9 +1242,9 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">20</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">Carreira da India (Ships, men, cargoes,
+                                <title render="doublequote">Carreira da India (Ships, men, cargoes,
                                     voyages).</title>
-                                <title render="italic" linktype="simple">O Centro de Estudio Historicos Ultramarinos e
+                                <title render="italic">O Centro de Estudio Historicos Ultramarinos e
                                     as Comemoracoes Henriquinas.</title> Lisbon, p. 33-82.</unittitle>
                      <note>
                         <p>Background materials, notes, draft.</p>
@@ -1251,7 +1255,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">21-27</container>
                      <unittitle>
-                                <title render="italic" linktype="simple">The Church Militant and Iberian Expansion,
+                                <title render="italic">The Church Militant and Iberian Expansion,
                                     1440-1770.</title> Baltimore &amp; London: The Johns Hopkins
                                 University Press, <unitdate normal="1978" era="ce" calendar="gregorian">1978.</unitdate>
                             </unittitle>
@@ -1264,9 +1268,9 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">28</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">The Commercial Letter-book of a
+                                <title render="doublequote">The Commercial Letter-book of a
                                     Luso-Brazilian Merchant, 1646-1654.</title>
-                                <title render="italic" linktype="simple">Boletin de Estudios Latinoamericanos y del
+                                <title render="italic">Boletin de Estudios Latinoamericanos y del
                                     Caribe</title> Amsterdam, no. 18 <unitdate normal="1975-06" era="ce" calendar="gregorian">(June 1975).</unitdate>
                             </unittitle>
                   </did>
@@ -1275,7 +1279,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">29</container>
                      <unittitle>
-                                <title render="italic" linktype="simple">De Ruyter en de Englese oorlogen in de Gouden
+                                <title render="italic">De Ruyter en de Englese oorlogen in de Gouden
                                     Eeuw.</title> Bossum: De Boer Maritiem, <unitdate normal="1976" era="ce" calendar="gregorian">1976.</unitdate>
                             </unittitle>
                      <note>
@@ -1287,8 +1291,8 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">30</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">Dom Jorge de Meneses Baroche and the
-                                    Battle of Mullenyawa, 1560.</title> In <title render="italic" linktype="simple">Mare Luso-Indicum</title> III (Societe d'Histoire de l'Orient,
+                                <title render="doublequote">Dom Jorge de Meneses Baroche and the
+                                    Battle of Mullenyawa, 1560.</title> In <title render="italic">Mare Luso-Indicum</title> III (Societe d'Histoire de l'Orient,
                                 Paris, <unitdate normal="1976" era="ce" calendar="gregorian">1976</unitdate>), p. 85-97.</unittitle>
                      <note>
                         <p>Notes.</p>
@@ -1299,7 +1303,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">31-32</container>
                      <unittitle>
-                                <title render="italic" linktype="simple">The Dutch Seaborne Empire, 1600-1800.</title>
+                                <title render="italic">The Dutch Seaborne Empire, 1600-1800.</title>
                                 London: Hutchinson, <unitdate normal="1965" era="ce" calendar="gregorian">1965.</unitdate>
                             </unittitle>
                      <note>
@@ -1311,8 +1315,8 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">33</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">European Missionaries and Chinese
-                                    Clergy, 1658-1800.</title> In M. N. Pearson, et al. <title render="italic" linktype="simple">The Age of Partnership, Essays in honour of
+                                <title render="doublequote">European Missionaries and Chinese
+                                    Clergy, 1658-1800.</title> In M. N. Pearson, et al. <title render="italic">The Age of Partnership, Essays in honour of
                                     Holden Furber</title> Hawaii: University of Hawaii, <unitdate normal="1979" era="ce" calendar="gregorian">1979.</unitdate>
                             </unittitle>
                      <note>
@@ -1324,9 +1328,9 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">34</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">Faith and Empire: The Cross and the
+                                <title render="doublequote">Faith and Empire: The Cross and the
                                     Crown in Portuguese Expansion, 15th-18th Centuries.</title>
-                                <title render="italic" linktype="simple">Terrae Incognitae</title> 8, Amsterdam,
+                                <title render="italic">Terrae Incognitae</title> 8, Amsterdam,
                                     <unitdate normal="1976" era="ce" calendar="gregorian">(1976)</unitdate>: 73-89.</unittitle>
                      <note>
                         <p>Draft.</p>
@@ -1337,9 +1341,9 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">35</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">For Love of Gain. The Voyages of the
+                                <title render="doublequote">For Love of Gain. The Voyages of the
                                     Dutch East-Indiamen.</title>
-                                <title render="italic" linktype="simple">Hemisphere, An Asian-Australian
+                                <title render="italic">Hemisphere, An Asian-Australian
                                 Magazine</title> Woden, A. C. T., 23, no. 3 <unitdate normal="1979-05/1979-06" era="ce" calendar="gregorian">(May/June 1979)</unitdate>: 130-137.</unittitle>
                      <note>
                         <p>Draft.</p>
@@ -1350,7 +1354,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">36-37</container>
                      <unittitle>
-                                <title render="italic" linktype="simple">Francisco Vieira de Figueiredo: a Portuguese
+                                <title render="italic">Francisco Vieira de Figueiredo: a Portuguese
                                     Merchant-adventurer in South East Asia, 1624-1667.</title> The
                                 Hague: M. Nijhoff, <unitdate normal="1967" era="ce" calendar="gregorian">1967.</unitdate>
                             </unittitle>
@@ -1363,9 +1367,9 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">38</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">Friar Juan Pobre of Zamora and his Lost
+                                <title render="doublequote">Friar Juan Pobre of Zamora and his Lost
                                     and Found 'Ystoria' of 1598-1603.</title>
-                                <title render="italic" linktype="simple">Indiana University Bookman</title>
+                                <title render="italic">Indiana University Bookman</title>
                                 Bloomington Indiana, no. 10 <unitdate normal="1969-11" era="ce" calendar="gregorian">(Nov.
                                 1969)</unitdate>: 24-26.</unittitle>
                      <note>
@@ -1377,7 +1381,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">39-40</container>
                      <unittitle>
-                                <title render="italic" linktype="simple">The Golden Age of Brazil, 1695-1750: Growing
+                                <title render="italic">The Golden Age of Brazil, 1695-1750: Growing
                                     Pains of a Colonial Society.</title> Berkeley and Los Angeles:
                                 University of California Press, <unitdate normal="1962" era="ce" calendar="gregorian">1962.</unitdate>
                             </unittitle>
@@ -1391,7 +1395,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                      <container type="box" label="Box">3</container>
                      <container type="folder" label="Folder">1-3</container>
                      <unittitle>
-                                <title render="italic" linktype="simple">The Great Ship from Amacon: Annals of Macao
+                                <title render="italic">The Great Ship from Amacon: Annals of Macao
                                     and the old Japan Trade, 1555-1648.</title> Lisbon: Centro de
                                 Estudos Historicos Ultramarinos, <unitdate normal="1959" era="ce" calendar="gregorian">1959.</unitdate>
                             </unittitle>
@@ -1404,7 +1408,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">4-10</container>
                      <unittitle>
-                                <title render="italic" linktype="simple">Jan Compagnie in Oorlog en Vrede, Beknopt
+                                <title render="italic">Jan Compagnie in Oorlog en Vrede, Beknopt
                                     Geshiedenis van de VOC.</title> Bossum: De Boer Maritiem,
                                     <unitdate normal="1977" era="ce" calendar="gregorian">1977.</unitdate>
                             </unittitle>
@@ -1417,7 +1421,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">11-13</container>
                      <unittitle>
-                                <title render="italic" linktype="simple">Jan Compagnie in War and Peace,
+                                <title render="italic">Jan Compagnie in War and Peace,
                                 1602-1799.</title> Hong Kong: Heineman Asia, <unitdate normal="1979" era="ce" calendar="gregorian">1979.</unitdate>
                             </unittitle>
                   </did>
@@ -1426,9 +1430,9 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">14</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">Jorge d'Albuquerque Coelho: A
+                                <title render="doublequote">Jorge d'Albuquerque Coelho: A
                                     Luso-Brazilian hero of the sea.</title>
-                                <title render="italic" linktype="simple">Luso-Brazilian Review</title> 6, no. 1
+                                <title render="italic">Luso-Brazilian Review</title> 6, no. 1
                                     <unitdate normal="1969-06" era="ce" calendar="gregorian">(June 1969)</unitdate>: 3-17.</unittitle>
                      <note>
                         <p>Notes, background materials, photos and negatives, draft.</p>
@@ -1439,8 +1443,8 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">15</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">Lord Tyrawly in Lisbon, 1726-41.</title>
-                                <title render="italic" linktype="simple">History Today</title> 20, no. 11 <unitdate normal="1970-11" era="ce" calendar="gregorian">(Nov. 1970)</unitdate>: 791-798.</unittitle>
+                                <title render="doublequote">Lord Tyrawly in Lisbon, 1726-41.</title>
+                                <title render="italic">History Today</title> 20, no. 11 <unitdate normal="1970-11" era="ce" calendar="gregorian">(Nov. 1970)</unitdate>: 791-798.</unittitle>
                      <note>
                         <p>Notes, background materials, photo, draft.</p>
                      </note>
@@ -1450,7 +1454,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">16-17</container>
                      <unittitle>
-                                <title render="italic" linktype="simple">Mary and Misogyny: Women in Iberian Expansion
+                                <title render="italic">Mary and Misogyny: Women in Iberian Expansion
                                     Overseas, 1415-1815. Some facts, fancies and
                                 personalities.</title> London: Duckworth, <unitdate normal="1975" era="ce" calendar="gregorian">1975.</unitdate>
                             </unittitle>
@@ -1463,9 +1467,9 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">18</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">Miguel Roxo de Brito's Voyage to the
+                                <title render="doublequote">Miguel Roxo de Brito's Voyage to the
                                     Raja Ampat, 1581-1582.</title> (with Pierre-Yves Manguin).
-                                    <title render="italic" linktype="simple">Archipel</title> 18, Numero special.
+                                    <title render="italic">Archipel</title> 18, Numero special.
                                 Paris, <unitdate normal="1979" era="ce" calendar="gregorian">(1979)</unitdate>: 175-94.</unittitle>
                      <note>
                         <p>Notes, background materials, draft.</p>
@@ -1476,9 +1480,9 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">19</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">Missionaries and merchants of Macao,
+                                <title render="doublequote">Missionaries and merchants of Macao,
                                     1557-1687.</title>
-                                <title render="italic" linktype="simple">Actas do III Coloquio Internacional de
+                                <title render="italic">Actas do III Coloquio Internacional de
                                     Estudos Luso-Brasileiros, Lisboa, 1957.</title> Lisbon, Vol. II,
                                     <unitdate normal="1960" era="ce" calendar="gregorian">1960</unitdate>: 210-224.</unittitle>
                      <note>
@@ -1490,10 +1494,10 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">20</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">A Note on Portuguese Reactions to the
+                                <title render="doublequote">A Note on Portuguese Reactions to the
                                     Revival of the Red Sea Spice Trade and the Rise of Atjeh,
                                     1540-1600</title>
-                                <title render="italic" linktype="simple">Journal of Southeast Asian History</title>
+                                <title render="italic">Journal of Southeast Asian History</title>
                                 10, no. 3 <unitdate normal="1969-12" era="ce" calendar="gregorian">(Dec. 1969)</unitdate>:
                                 415-428.</unittitle>
                      <note>
@@ -1505,10 +1509,10 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">21</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">A Note on the Interaction of Portuguese
+                                <title render="doublequote">A Note on the Interaction of Portuguese
                                     and Chinese Medicine in Macao and Peking (16th-18th
                                 centuries).</title> In John Z. Bowers and Elizabeth Purcell, eds.,
-                                    <title render="italic" linktype="simple">Medicine and Society in China.</title>
+                                    <title render="italic">Medicine and Society in China.</title>
                                 New York: Josiah Macy, Jr. Foundation, <unitdate normal="1974" era="ce" calendar="gregorian">1974.</unitdate>
                             </unittitle>
                      <note>
@@ -1520,9 +1524,9 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">22</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">Un Panfleto Raro Acerca dos Abusos da
+                                <title render="doublequote">Un Panfleto Raro Acerca dos Abusos da
                                     Escravidao Negro no Brasil (1764).</title> Reimpreso e comentado
-                                por C. R. B., <title render="italic" linktype="simple">Anais do Congreso Comemorativo
+                                por C. R. B., <title render="italic">Anais do Congreso Comemorativo
                                     do Bicentenario da Transferancia da Sede do Governo para o Rio
                                     de Janeiro, 1963.</title> Rio de Janeiro, Vol. III, p. 171-186.</unittitle>
                      <note>
@@ -1534,10 +1538,10 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">23</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">The Papers of Martin de Bertendona. A
+                                <title render="doublequote">The Papers of Martin de Bertendona. A
                                     Basque Admiral of Spain's Golden Age, 1586-1604.</title>
-                                <title render="italic" linktype="simple">Indiana University Bookman</title> no. 10
-                                    <unitdate era="ce" calendar="gregorian">(Nov. 1969)</unitdate>: 24-46.</unittitle>
+                                <title render="italic">Indiana University Bookman</title> no. 10
+                                    <unitdate era="ce" calendar="gregorian" normal="1969-11">(Nov. 1969)</unitdate>: 24-46.</unittitle>
                      <note>
                         <p>Drafts.</p>
                      </note>
@@ -1547,8 +1551,8 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">24</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">Piet Heyn and the Silver-Fleet.</title>
-                                <title render="italic" linktype="simple">History Today</title> 13, no. 6 <unitdate normal="1963-06" era="ce" calendar="gregorian">(June 1963)</unitdate>: 398-406.</unittitle>
+                                <title render="doublequote">Piet Heyn and the Silver-Fleet.</title>
+                                <title render="italic">History Today</title> 13, no. 6 <unitdate normal="1963-06" era="ce" calendar="gregorian">(June 1963)</unitdate>: 398-406.</unittitle>
                      <note>
                         <p>Draft.</p>
                      </note>
@@ -1558,9 +1562,9 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">25</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">Plata es Sangre: Sidelights on the Drain
+                                <title render="doublequote">Plata es Sangre: Sidelights on the Drain
                                     of Spanish-American Silver to the Far East, 1550-1700.</title>
-                                <title render="italic" linktype="simple">Philippine Studies</title> 18, no. 3
+                                <title render="italic">Philippine Studies</title> 18, no. 3
                                     <unitdate normal="1970-07" era="ce" calendar="gregorian">(July 1970)</unitdate>: 457-478.</unittitle>
                      <note>
                         <p>Notes, background materials, draft.</p>
@@ -1571,7 +1575,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">26</container>
                      <unittitle>
-                                <title render="italic" linktype="simple">Portugal's Roots in Africa,
+                                <title render="italic">Portugal's Roots in Africa,
                                 1415-1800.</title> Unpublished? <unitdate normal="1970/1980" era="ce" calendar="gregorian">1974?</unitdate>
                             </unittitle>
                      <note>
@@ -1583,9 +1587,9 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">27</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">Portuguese and Spanish Projects for the
+                                <title render="doublequote">Portuguese and Spanish Projects for the
                                     Conquest of Southeast Asia, 1580-1600.</title>
-                                <title render="italic" linktype="simple">Journal of Asian History</title> 3, no. 2
+                                <title render="italic">Journal of Asian History</title> 3, no. 2
                                     <unitdate normal="1968" era="ce" calendar="gregorian">(1968)</unitdate>: 118-136.</unittitle>
                      <note>
                         <p>Notes, draft.</p>
@@ -1596,9 +1600,9 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">28</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">A Portuguese Document of 1670 Concerning
+                                <title render="doublequote">A Portuguese Document of 1670 Concerning
                                     Kwaja Minaz.</title>
-                                <title render="italic" linktype="simple">Indica</title> 13, <unitdate normal="1976" era="ce" calendar="gregorian">(1976)</unitdate>: 83-92.</unittitle>
+                                <title render="italic">Indica</title> 13, <unitdate normal="1976" era="ce" calendar="gregorian">(1976)</unitdate>: 83-92.</unittitle>
                      <note>
                         <p>Photostat of draft.</p>
                      </note>
@@ -1608,7 +1612,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">29-31</container>
                      <unittitle>
-                                <title render="italic" linktype="simple">Portuguese Seaborne Empire,
+                                <title render="italic">Portuguese Seaborne Empire,
                                 1415-1825.</title> London: Hutchinson, <unitdate normal="1969" era="ce" calendar="gregorian">1969.</unitdate>
                             </unittitle>
                      <note>
@@ -1621,11 +1625,11 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">32-33</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">The Principal Ports of Call in the
+                                <title render="doublequote">The Principal Ports of Call in the
                                     Carreira da India.</title>
-                                <title render="italic" linktype="simple">Luso-Brazilian Review</title> 3, no. 1
+                                <title render="italic">Luso-Brazilian Review</title> 3, no. 1
                                     <unitdate normal="1972-06" era="ce" calendar="gregorian">(June 1972) </unitdate>and in the
-                                    <title render="italic" linktype="simple">Recueils de la Societe Jean Bodin pour
+                                    <title render="italic">Recueils de la Societe Jean Bodin pour
                                     l'Histoire Comparative des Institutions</title> Tome 33,
                                 Brussells, 1972.</unittitle>
                      <note>
@@ -1637,9 +1641,9 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">34</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">The Problem of the Native Clergy in the
+                                <title render="doublequote">The Problem of the Native Clergy in the
                                     Portuguese and Spanish Empires from the Sixteenth to the
-                                    Eighteenth Centuries.</title> In Geoffrey J. Cuming, ed., <title render="italic" linktype="simple">Studies in Church History</title> Vol. VI,
+                                    Eighteenth Centuries.</title> In Geoffrey J. Cuming, ed., <title render="italic">Studies in Church History</title> Vol. VI,
                                 London: Cambridge University Press, <unitdate normal="1970" era="ce" calendar="gregorian">1970.</unitdate>
                             </unittitle>
                      <note>
@@ -1651,9 +1655,9 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">35</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">The Problem of the Native Clergy in
+                                <title render="doublequote">The Problem of the Native Clergy in
                                     Portuguese India, 1518-1787.</title>
-                                <title render="italic" linktype="simple">History Today</title> 17, no. 11 <unitdate normal="1967-11" era="ce" calendar="gregorian">(Nov. 1967)</unitdate>: 72-180.</unittitle>
+                                <title render="italic">History Today</title> 17, no. 11 <unitdate normal="1967-11" era="ce" calendar="gregorian">(Nov. 1967)</unitdate>: 72-180.</unittitle>
                      <note>
                         <p>Draft.</p>
                      </note>
@@ -1663,9 +1667,9 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">36</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">A Question of Contraband: The Old
+                                <title render="doublequote">A Question of Contraband: The Old
                                     Colonial Trade.</title>
-                                <title render="italic" linktype="simple">History Today</title> 22, no. 3 <unitdate normal="1972-03" era="ce" calendar="gregorian">(Mar. 1972)</unitdate>: 294-313.</unittitle>
+                                <title render="italic">History Today</title> 22, no. 3 <unitdate normal="1972-03" era="ce" calendar="gregorian">(Mar. 1972)</unitdate>: 294-313.</unittitle>
                      <note>
                         <p>Draft and photo.</p>
                      </note>
@@ -1674,7 +1678,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                                <title render="italic" linktype="simple">Race Relations in the Portuguese Colonial
+                                <title render="italic">Race Relations in the Portuguese Colonial
                                     Empire, 1415-1825.</title> London: Oxford University Press,
                                     <unitdate normal="1963" era="ce" calendar="gregorian">1963.</unitdate>
                             </unittitle>
@@ -1697,10 +1701,10 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">2</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">A Rare Luso-Brazilian Medical Treatise
+                                <title render="doublequote">A Rare Luso-Brazilian Medical Treatise
                                     and its Authur: Luis Gomes Ferreira and his 'Erario Mineral' of
                                     1735 and 1775.</title>
-                                <title render="italic" linktype="simple">Indiana University Bookman</title> no. 10
+                                <title render="italic">Indiana University Bookman</title> no. 10
                                     <unitdate normal="1969-11" era="ce" calendar="gregorian">(Nov. 1969).</unitdate>
                             </unittitle>
                      <note>
@@ -1712,10 +1716,10 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">3</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">Uma Raridade Bibliografica sobre Fernao
+                                <title render="doublequote">Uma Raridade Bibliografica sobre Fernao
                                     Cron.</title>
-                                <title render="italic" linktype="simple">Boletim Internacional de Bibliografia
-                                    Luso-Brasileira</title> 12, no. 2 <unitdate normal="1971-04/1971-06" era="ce" calendar="gregorian">(Apr.-June 1971)</unitdate>: 323-364.</unittitle>
+                                <title render="italic">Boletim Internacional de Bibliografia
+                                    Luso-Brasileira</title> 12, no. 2 <unitdate type="inclusive" normal="1971-04/1971-06" era="ce" calendar="gregorian">(Apr.-June 1971)</unitdate>: 323-364.</unittitle>
                      <note>
                         <p>Background materials, drafts.</p>
                      </note>
@@ -1725,9 +1729,9 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">4</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">The Sailing Orders for the Manila
+                                <title render="doublequote">The Sailing Orders for the Manila
                                     Galleons of 1635-1936.</title>
-                                <title render="italic" linktype="simple">Terrae Incognitae</title> 4 <unitdate normal="1972" era="ce" calendar="gregorian">(1972)</unitdate>: 7-17.</unittitle>
+                                <title render="italic">Terrae Incognitae</title> 4 <unitdate normal="1972" era="ce" calendar="gregorian">(1972)</unitdate>: 7-17.</unittitle>
                      <note>
                         <p>Drafts and notes.</p>
                      </note>
@@ -1737,9 +1741,9 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">5</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">A Sino-French Medical Manuscript of
+                                <title render="doublequote">A Sino-French Medical Manuscript of
                                     1730.</title>
-                                <title render="italic" linktype="simple">Indiana University Bookman</title> no. 11
+                                <title render="italic">Indiana University Bookman</title> no. 11
                                     <unitdate normal="1973-11" era="ce" calendar="gregorian">(Nov. 1973)</unitdate>: 5-11.</unittitle>
                      <note>
                         <p>Draft.</p>
@@ -1750,9 +1754,9 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">6</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">Some Aspects of Spanish Historical
+                                <title render="doublequote">Some Aspects of Spanish Historical
                                     Writing on the Philippines.</title> In D. G. E. Hall, ed.,
-                                    <title render="italic" linktype="simple">Historians of South East Asia.</title>
+                                    <title render="italic">Historians of South East Asia.</title>
                                 London: Oxford University Press, <unitdate normal="1961" era="ce" calendar="gregorian">1961</unitdate>: 200-212.</unittitle>
                      <note>
                         <p>Notes.</p>
@@ -1762,9 +1766,9 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">Some Considerations on Portuguese
+                                <title render="doublequote">Some Considerations on Portuguese
                                     Colonial Historiography.</title>
-                                <title render="italic" linktype="simple">Proceedings of the (First) International
+                                <title render="italic">Proceedings of the (First) International
                                     Colloquium on Luso-Brazilian Studies, Washington, D.C.,
                                 1950.</title> Nashville: Vanderbilt University, p.
                             169-180.</unittitle>
@@ -1774,7 +1778,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">7</container>
                      <unittitle>
-                                <title render="italic" linktype="simple">Some Portuguese Attitudes to the Tamuls of
+                                <title render="italic">Some Portuguese Attitudes to the Tamuls of
                                     Sri Lanka, 1550-1658.</title>
                             </unittitle>
                      <note>
@@ -1786,9 +1790,9 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">8</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">Some Reflections on the Historiography
+                                <title render="doublequote">Some Reflections on the Historiography
                                     of Colonial Brazil, 1950-1970.</title> In Dauril Alden, ed.,
-                                    <title render="italic" linktype="simple">Colonial Roots of Modern Brazil.</title>
+                                    <title render="italic">Colonial Roots of Modern Brazil.</title>
                                 Berkeley: University of California Press, <unitdate normal="1973" era="ce" calendar="gregorian">1973.</unitdate>
                             </unittitle>
                      <note>
@@ -1800,11 +1804,11 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">9</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">Some Remarks on the Social and
+                                <title render="doublequote">Some Remarks on the Social and
                                     Professional Status of Physicians and Surgeons in the Iberian
                                     World, 16-18th Centuries.</title>
-                                <title render="italic" linktype="simple">Jornal de Sociedade das Ciencias Medicas de
-                                    Lisboa</title> 138, no. 4-5 <unitdate normal="1974-04/1974-05" era="ce" calendar="gregorian">(Apr. - May 1974).</unitdate>
+                                <title render="italic">Jornal de Sociedade das Ciencias Medicas de
+                                    Lisboa</title> 138, no. 4-5 <unitdate type="inclusive" normal="1974-04/1974-05" era="ce" calendar="gregorian">(Apr. - May 1974).</unitdate>
                             </unittitle>
                      <note>
                         <p>Draft.</p>
@@ -1815,9 +1819,9 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">10</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">Some Second Thoughts on the Third
+                                <title render="doublequote">Some Second Thoughts on the Third
                                     Anglo-Dutch War, 1672-1674.</title>
-                                <title render="italic" linktype="simple">Transactions of the Royal Historical
+                                <title render="italic">Transactions of the Royal Historical
                                 Society.</title> 5th series, 19 <unitdate normal="1969" era="ce" calendar="gregorian">(1969).</unitdate>
                             </unittitle>
                      <note>
@@ -1829,8 +1833,8 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">11</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">A Spanish Description of the Chams in
-                                    1595.</title> In <title render="italic" linktype="simple">Readings on Asian
+                                <title render="doublequote">A Spanish Description of the Chams in
+                                    1595.</title> In <title render="italic">Readings on Asian
                                 Topics</title> ..., Lund, <unitdate normal="1970" era="ce" calendar="gregorian">1970.</unitdate>
                             </unittitle>
                      <note>
@@ -1842,9 +1846,9 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">12</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">The Spaniards in Cambodia, 1595-1599.</title>
-                                <title render="italic" linktype="simple">History Today</title> 21, no. 4
-                                    <unitdate era="ce" calendar="gregorian">(Apr. 1971)</unitdate>: 280-287.</unittitle>
+                                <title render="doublequote">The Spaniards in Cambodia, 1595-1599.</title>
+                                <title render="italic">History Today</title> 21, no. 4
+                                    <unitdate era="ce" calendar="gregorian" normal="1971-04">(Apr. 1971)</unitdate>: 280-287.</unittitle>
                      <note>
                         <p>Drafts.</p>
                      </note>
@@ -1854,9 +1858,9 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">13-14</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">A Tentative Checklist of Indo-Portuguese
+                                <title render="doublequote">A Tentative Checklist of Indo-Portuguese
                                     Imprints, 1556-1674.</title>
-                                <title render="italic" linktype="simple">Boletim do Instituto Vasco da Gama.</title>
+                                <title render="italic">Boletim do Instituto Vasco da Gama.</title>
                                 Bastora, Gos, no. 73, 1956. Reprinted, with corrections, in
                                     <unitdate normal="1975" era="ce" calendar="gregorian">1975.</unitdate>
                             </unittitle>
@@ -1869,9 +1873,9 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">15</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">Three Unpublished Jesuit Letters on the
+                                <title render="doublequote">Three Unpublished Jesuit Letters on the
                                     Philippine and Mariana Missions, 1681-1689.</title>
-                                <title render="italic" linktype="simple">Philippine Studies</title> 10, no. 3
+                                <title render="italic">Philippine Studies</title> 10, no. 3
                                     <unitdate normal="1962-07" era="ce" calendar="gregorian">(July 1962)</unitdate>: 434-442.</unittitle>
                      <note>
                         <p>Draft, illustration.</p>
@@ -1882,7 +1886,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">16</container>
                      <unittitle>
-                                <title render="italic" linktype="simple">The Tragic History of the Sea, 1589-1622:
+                                <title render="italic">The Tragic History of the Sea, 1589-1622:
                                     Narratives of the Shipwrecks of the Portuguese East India-men
                                     Sao Thome (1589), Santo Alberto (1593), Sao Joao Baptista
                                     (1622), and the Journey of the Survivors in South East
@@ -1898,9 +1902,9 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">17</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">Two Jesuit Letters on the Mariana
+                                <title render="doublequote">Two Jesuit Letters on the Mariana
                                     Mission, written to the Duchess of Aveiro (1675 and 1689).</title>
-                                <title render="italic" linktype="simple">Philippine Studies</title> 26 <unitdate normal="1978" era="ce" calendar="gregorian">(1978)</unitdate>: 35-50.</unittitle>
+                                <title render="italic">Philippine Studies</title> 26 <unitdate normal="1978" era="ce" calendar="gregorian">(1978)</unitdate>: 35-50.</unittitle>
                      <note>
                         <p>Drafts, off-print.</p>
                      </note>
@@ -1910,7 +1914,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">18</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">The V.O.C. in the Far East.</title>
+                                <title render="doublequote">The V.O.C. in the Far East.</title>
                             </unittitle>
                      <note>
                         <p>Unpublished? Draft.</p>
@@ -1921,7 +1925,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">19</container>
                      <unittitle>
-                                <title render="doublequote" linktype="simple">The Western Rim of Christendom and
+                                <title render="doublequote">The Western Rim of Christendom and
                                     Iberian Expansion.</title>
                             </unittitle>
                      <note>
