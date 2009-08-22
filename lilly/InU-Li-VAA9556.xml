@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group  -->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader relatedencoding="dublincore" audience="external" langencoding="iso639-2b"
+        scriptencoding="iso15924" repositoryencoding="iso15511" countryencoding="iso3166-1"
+        dateencoding="iso8601" findaidstatus="edited-full-draft">
+        <eadid encodinganalog="identifier"
+            identifier="InU-Li-VAA9556" countrycode="US"
+            mainagencycode="InU-Li">InU-Li-VAA9556</eadid>
+            <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+            <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+        
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Pease mss., <date normal="1891/1908">1891-1908</date></titleproper>
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library Program</publisher>
+                <date encodinganalog="date" normal="2009" type="publication">© 2009</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2009">© 2009</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>
+                <!--description of how the finding aid was created, for example: -->
+
+                Machine-readable finding aid derived from HTML inventory through cutting and pasting. <lb/>[date of source: <date
+                    normal="2009-02-24" type="source">February 24, 2009</date>
+                <lb/>Finding aid encoded by Valerie Higgins, Library/Archives, Indiana University, <date
+                    normal="2009-03-26">March 26, 2009</date>
+            </creation>
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2009-03-26"/>
+                <item/>
+            </change>
+        </revisiondesc>
+    </eadheader>
+
+   
+    <archdesc level="collection" audience="external" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository:">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address><lb/> 
+                <extref xlink:href="http://www.indiana.edu/~liblilly">http://www.indiana.edu/~liblilly</extref>
+
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname source="lcnaf" encodinganalog="100">Bullen, Frank Thomas</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Pease mss.</unittitle>
+            <unitdate normal="1891/1908" type="inclusive" encodinganalog="245$f">1891-1908</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2538</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>27 items</extent>
+
+                <!-- if both linear feet and number of items included, repeat extent-->
+            </physdesc>
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng" encodinganalog="546">English</language></langmaterial>
+            <abstract encodinganalog="520" label="Abstract">The Pease mss., 1891–1908, consists primarily of letters from author Frank Thomas Bullen, 1857–1915, to the editor of <title render="italic">The Morning Mercury</title>, New Bedford, Massachusetts, Zephaniah Walter Pease, 1861– . It also includes letters from Percy Sutherland Bullen and A.P. Watt.</abstract>
+        </did>
+  
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+  
+        
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+            <p>Zephaniah Walter Pease, 1861–, was the editor of <title render="italic">The Morning Mercury</title> in New Bedford, Massachusetts and corresponded with author Frank Thomas Bullen, 1857–1915; Frank Bullen's cousin and U.S. foreign correspondent with the <emph render="italic">London Daily Telegraph</emph>, Percy Sutherland Bullen; and English literary agent A.P. Watt.</p>
+
+        </bioghist>
+        
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Correspondence; II. Writings; III. Photographs.</p>
+        </arrangement>
+        
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Pease mss., 1891–1908, consists primarily of letters from author Frank Thomas Bullen, 1857–1915, to the editor of <title render="italic">The Morning Mercury</title>, New Bedford, Massachusetts, Zephaniah Walter Pease, 1861–. Many of the letters discuss works of Bullen's that are about to be published or the reception that his works are receiving both in terms of critiques and sales. He also writes about his family, his ill health, and his unfavorable views regarding the rudeness of Americans, especially of the upper classes.</p>
+            <p>Other correspondents in the collection are Percy Sutherland Bullen (Frank Bullen's cousin and U.S. foreign correspondent with the <title render="italic">London Daily Telegraph</title>), and English literary agent A.P. Watt. The first letter in the file, however, is written to Pease by an apparent hometown friend living and working in London in 1891. Bullen’s first letter to Pease is in 1899.</p>
+            <p>The collection also contains an untitled manuscript signed by Frank T. Bullen regarding <emph render="doublequote">…the approaching centenary of the New Bedford Mercury…,</emph> a newspaper clipping titled <emph render="doublequote">Cape Pigeons and Whalebirds: Superstitions Connected With Them By Sailors…</emph> written by Bullen; a magazine article about Bullen by Charles Middleton; a pamphlet <title render="doublequote">Fifty Years on The Morning Mercury: New Bedford, Mass: 1880–1930: A Reminiscence</title> by Pease; and three photographs.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Controlled Access Terms</head>
+
+            <persname encodinganalog="600" source="lcnaf">Pease, Zeph. W. (Zephaniah Walter), b. 1861 --Correspondence.</persname>
+            <persname encodinganalog="600" source="lcnaf">Bullen, Frank Thomas, 1857-1915 --Correspondence.</persname>
+            <corpname encodinganalog="610" source="lcnaf">Morning Mercury (New Bedford, Mass.)</corpname>
+            <subject encodinganalog="650" source="lcsh">Authors, English --Correspondence.</subject>
+            <subject encodinganalog="650" source="lcsh">Newspaper editors --Massachusetts --Correspondence.</subject>
+            
+            <controlaccess>
+                <head>Additional Access Terms</head>
+                <persname encodinganalog="700" source="lcnaf">Bullen, Frank Thomas, 1857-1915.</persname>
+                <persname encodinganalog="700" source="lcnaf">Bullen, Percy Sutherland.</persname>
+                <persname encodinganalog="700" source="lcnaf">Watt, A. P. (Alexander Pollock), 1834-1914.</persname>
+            </controlaccess>
+
+        </controlaccess>
+        
+        <descgrp>
+            <head>Administrative Information</head>
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired. 2006</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Pease mss., Lilly Library, Indiana University, Bloomington,
+                    Indiana.</p>
+            </prefercite>
+        </descgrp>
+        
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 level="series">
+                <did>
+                    <!-- optional -->
+                    <container type="Box" label="Box">1</container>
+                    <unittitle>Correspondence, <unitdate normal="1891/1908" type="inclusive">1891–1908</unitdate></unittitle><physdesc>(3 folders)</physdesc>
+                </did>
+                <scopecontent><p> Includes Percy Sutherland Bullen letter to Pease, May 27, 1908 and A.P. Watt letter to Bullen, June 18, 1908, which is enclosed in Bullen to Pease, June 19, 1908.</p></scopecontent>
+                <arrangement><head>Arrangement</head><p>Arranged chronologically.</p></arrangement>
+            </c01>
+            <c01 level="series">
+                <did><unittitle>Writings</unittitle><physdesc>(4 folders)</physdesc></did>
+                <arrangement><head>Arrangement</head><p>Arranged alphabetically by author.</p></arrangement>
+                <c02 level="file">
+                    <did><unittitle>Bullen, Frank T. <emph render="doublequote">It is with no ordinary interest and pleasure that I hear of the approaching centenary of the New Bedford Mercury…</emph> [opening lines] A.D.S.</unittitle><physdesc>(4 pp.)</physdesc></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Bullen, Frank T. <emph render="doublequote">Cape Pigeons and Whalebirds: Superstitions Connected With Them By Sailors.</emph> – clipping from the New York <emph render="italic">Evening Post</emph>. <unitdate normal="1904-06-11">June 11, 1904.</unitdate></unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Middleton, Charles. <emph render="doublequote">Mr. Frank T. Bullen. The Author of 'With Christ at Sea'</emph> tear sheets from <emph render="italic">Sunday Magazine</emph>, pp. 738–746.</unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Pease, Zephaniah W. <title render="italic">Fifty Years on The Morning Mercury New Bedford Mass. 1880–1930: A Reminiscence</title>. Reprint from <title render="italic">The Morning Mercury</title>, <unitdate normal="1930-09-15">September 15, 1930</unitdate>. New Bedford Mass: Reynolds Publishing, <unitdate normal="1930">[1930?]</unitdate></unittitle><physdesc>(24 pp.)</physdesc></did>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did><unittitle>Photographs</unittitle></did>
+                <c02 level="file">
+                    <did><unittitle>Bullen family photograph, inscribed <emph render="doublequote">To Mr. and Mrs. Z.W. Pease with the kindest regards and affection of the F.T. Bullen family.</emph> <unitdate normal="1891/1908" type="inclusive">Undated</unitdate></unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Bullen seated with book in hand. Inscribed: <emph render="doublequote">To Z.W. Pease. with F.T. Bullen’s love.</emph> <unitdate normal="1887">1887</unitdate></unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Unidentified portrait of a young woman: <emph render="doublequote">Sunshine</emph> Copyright Charles Taber &amp; Co. New Bedford, Mass. <unitdate normal="1883">1883.</unitdate>Accompanied by a photographic clipping of Bullen with inscription <emph render="doublequote">Yours very truly F.T. Bullen</emph> that was removed at some point from the verso of photograph</unittitle></did>
+                </c02>
+            </c01>
+            
+        </dsc>
+    </archdesc>
+</ead>

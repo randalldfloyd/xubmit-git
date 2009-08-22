@@ -1,0 +1,2074 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader relatedencoding="dublincore" audience="external" langencoding="iso639-2b"
+        scriptencoding="iso15924" repositoryencoding="iso15511" countryencoding="iso3166-1"
+        dateencoding="iso8601" findaidstatus="edited-full-draft">
+        <eadid encodinganalog="identifier"
+            identifier="InU-Li-VAA9637" countrycode="US"
+            mainagencycode="InU-Li">InU-Li-VAA9637</eadid>
+            <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+            <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+        
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Kinnell mss., <date normal="1936/1980">1936-1980</date></titleproper>
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library Program</publisher>
+                <date encodinganalog="date" normal="2009" type="publication">© 2009</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2009">© 2009</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>
+                <!--description of how the finding aid was created, for example: -->
+
+                Machine-readable finding aid derived from HTML inventory through copying and pasting. <lb/>[date of source: <date
+                    normal="1980" type="source">1980</date>
+                <lb/>Finding aid encoded by Valerie Higgins, Library/Archives, Indiana University, <date
+                    normal="2009-04-14">April 14, 2009</date>
+            </creation>
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2009-04-14"/>
+                <item>Encoded finding aid.</item>
+            </change>
+        </revisiondesc>
+    </eadheader>
+
+   
+    <archdesc level="collection" audience="external" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository encodinganalog="852" label="Repository:" id="lilly">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address><lb/> 
+                <extref xlink:href="http://www.indiana.edu/~liblilly">http://www.indiana.edu/~liblilly</extref>
+
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname source="lcnaf" encodinganalog="100">Kinnell, Galway, 1927-</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Kinnell mss</unittitle>
+            <unitdate normal="1936/1980" type="inclusive" encodinganalog="245$f">1936-1980</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1678</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>ca. 16,500 items</extent>
+
+                <!-- if both linear feet and number of items included, repeat extent-->
+            </physdesc>
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng" encodinganalog="546">English</language></langmaterial>
+            <abstract encodinganalog="520" label="Abstract">Consists of the correspondence, writings and other papers of poet and professor Galway Kinnell, 1927- .</abstract>
+        </did>
+  
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+  
+        
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+            <p>Galway Kinnell, born in 1927, was a poet and professor. Kinnell was born in Providence, Rhode Island, received his BA from Princeton University and his MA from the University of Rochester in New York. His teaching career began at Alfred University in New York where he taught English. Since then he has held professorships at universities literally throughout the world, from Columbia University to the University of Grenoble in France and from the University of Iran, Teheran to the University of Hawaii in Honolulu. He has been a visiting professor or poet at such distinguished universities and colleges as Sarah Lawrence, Queens College of CUNY, Brandeis University, Skidmore College and the University of California, Irvine. He was visiting writer at Macquarie University in Sydney, Australia and resident writer at Deya Institute, Mallorca, Spain. In addition to his teaching duties, Kinnell has traveled extensively giving poetry readings.</p>               
+                <p>Kinnell's poetry began appearing in poetry magazines and anthologies in 1953. In 1960 his first volume of poetry, <title render="italic">What a Kingdom It Was</title>, was published. By 1980 ten books of his poetry had been published. Although most prolific as a poet, Kinnell's other published works include: a novel, <title render="italic">Black Light</title>; a children's book, <title render="italic">How the Alligator Missed Breakfast</title>; illustrations for a book of poetry by Pati Hill; and translations of such writers as Yvan Goll, Rene Hardy, and Francois Villon.</p>
+                <p>The quality of his work over the years has brought to Kinnell many awards and prizes, such as the Ingram Merrill Foundation award, an Amy Lowell traveling fellowship, the London Translation Prize, and the Shelley Prize from the Poetry Society of America. Not least among these is the 1983 Pulitzer Prize for Poetry for his work <title render="italic">Selected Poems</title>.</p>
+        </bioghist>
+        
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Correspondence; II. Illustrations by Kinnell; III. Writings by Kinnell; IV. Writings by Others; V. Memorabilia; VI. Miscellaneous. An index of titles is located at the end of the collection.</p>
+        </arrangement>
+        
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Kinnell mss., 1936-1980, consists of the correspondence, writings and other papers of poet and professor Galway Kinnell, 1927- . Among his papers are many drafts of the poems found in his volume <title render="italic">Selected Poems</title>, for which he won the 1983 Pulitzer Prize for Poetry. In general, the correspondence concerns Kinnell's teaching and poetry readings. Through the exchange of writings, advice and criticism was sought among peers, and this relationship with his colleagues is also reflected in the letters.</p>
+            <p>The collection includes countless drafts and worksheets of his writings as well as page proofs, galleys, book production material and printed reviews of his published works. There is also a large section of writings by other poets and authors.</p>
+            <p>Present also are writings from Kinnell's childhood years, as well as class notes, papers, and lecture material covering his academic career.</p>
+            <p>The collection concludes with a miscellaneous section which contains, among other items, material concerning his activities with both the civil rights movement and anti-war protests of the 1960's and early 70's.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Controlled Access Terms</head>
+
+            <persname encodinganalog="600" source="lcnaf">Kinnell, Galway, 1927- --Correspondence.</persname>
+            <persname encodinganalog="600" source="lcnaf">Hall, Donald, 1928- --Correspondence.</persname>
+            <persname encodinganalog="600" source="lcnaf">Kinnell, Galway, 1927- --Criticism and interpretation.</persname>
+            <subject encodinganalog="650" source="lcsh">Authors, American --20th century --Correspondence.</subject>
+            <subject encodinganalog="650" source="lcsh">Poetry, American --20th century.</subject>
+            
+            <controlaccess>
+                <head>Additional Access Terms</head>
+                <persname encodinganalog="700" source="lcnaf">Bell, Charles G. (Charles Greenleaf), 1916-</persname>
+                <persname encodinganalog="700" source="lcnaf">Crosby, Anne Buchanan, 1929-</persname>
+                <persname encodinganalog="700" source="lcnaf">Hall, Donald, 1928-</persname>
+            </controlaccess>
+
+        </controlaccess>
+
+        
+        <descgrp>
+            <head>Administrative Information</head>
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Purchase; 1980.</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Kinnell mss., Lilly Library, Indiana University, Bloomington,
+                    Indiana.</p>
+            </prefercite>
+
+        </descgrp>
+        
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 level="series">
+                <did>
+                    <container type="Box" label="Box">1</container><unittitle>Correspondence</unittitle>
+                </did>
+                <scopecontent><p> Correspondents include: 
+                <list>
+                    <item><persname>Ai</persname></item>
+                    <item><persname>Charles Greenleaf Bell</persname></item>
+                    <item><persname>Stephen Berg</persname></item>
+                    <item><persname>Nell Walden Blaine</persname></item>
+                    <item><persname>Robert Bly</persname></item>
+                    <item><persname>Yves Bonnefoy</persname></item>
+                    <item><persname>Daniel Joseph Boorstin</persname></item>
+                    <item><persname>Henry Braun</persname></item>
+                    <item><persname>David G. Brooks</persname></item>
+                    <item><persname>Gwendolyn Brooks</persname></item>
+                    <item><persname>Paul Carroll</persname></item>
+                    <item><persname>Hayden Carruth</persname></item>
+                    <item><persname>Jane Cooper</persname></item>
+                    <item><persname>Nicholas Crome</persname></item>
+                    <item><persname>Anne (Buchanan) Crosby</persname></item>
+                    <item><persname>Jacques de Spelberch</persname></item>
+                    <item><persname>Babette Deutsch</persname></item>
+                    <item><persname>William DeVoti</persname></item>
+                    <item><persname>James Dickey</persname></item>
+                    <item><persname>Stephen Dunning</persname></item>
+                    <item><persname>Richard Eberhart</persname></item>
+                    <item><persname>William Oliver Everson</persname></item>
+                    <item><persname>Charles Munro Fishman</persname></item>
+                    <item><persname>Kimon Friar</persname></item>
+                    <item><persname>Robert Frost</persname></item>
+                    <item><persname>Jonathan Galassi</persname></item>
+                    <item><persname>Isabella Stewart Gardner</persname></item>
+                    <item><persname>Allen Ginsberg</persname></item>
+                    <item><persname>Robert Haskell Glauber</persname></item>
+                    <item><persname>Claire Goll</persname></item>
+                    <item><persname>Yvonne Hagen</persname></item>
+                    <item><persname>Donald Hall</persname></item>
+                    <item><persname>Oakley Maxwell Hall</persname></item>
+                    <item><persname>Pauline Hanson</persname></item>
+                    <item><persname>Pati Hill</persname></item>
+                    <item><persname>Bert Gerald Hornback</persname></item>
+                    <item><persname>Ted Hughes</persname></item>
+                    <item><persname>Rolfe Humphries</persname></item>
+                    <item><persname>David Ignatow</persname></item>
+                    <item><persname>Erica Jong</persname></item>
+                    <item><persname>Carolyn Kizer</persname></item>
+                    <item><persname>Etheridge Knight</persname></item>
+                    <item><persname>Elizabeth Kray</persname></item>
+                    <item><persname>Stanley Jasspon Kunitz</persname></item>
+                    <item><persname>David Kuhn</persname></item>
+                    <item><persname>James Laughlin</persname></item>
+                    <item><persname>Denise Levertov</persname></item>
+                    <item><persname>Philip Levine</persname></item>
+                    <item><persname>John Logan</persname></item>
+                    <item><persname>William Stanley Merwin</persname></item>
+                    <item><persname>Robert Mezey</persname></item>
+                    <item><persname>Frederick Morgan</persname></item>
+                    <item><persname>Howard Moss</persname></item>
+                    <item><persname>Howard Nemerov</persname></item>
+                    <item><persname>Joyce Carol Oates</persname></item>
+                    <item><persname>Geraldine Page</persname></item>
+                    <item><persname>Allen Planz</persname></item>
+                    <item><persname>Arabel J. Porter</persname></item>
+                    <item><persname>Alfred A. Poulin</persname></item>
+                    <item><persname>Henry Rago</persname></item>
+                    <item><persname>David Ray</persname></item>
+                    <item><persname>Adrienne Cecile Rich</persname></item>
+                    <item><persname>Macha Louis Rosenthal</persname></item>
+                    <item><persname>Ned Rorem</persname></item>
+                    <item><persname>Buffy Sainte Marie</persname></item>
+                    <item><persname>Jacqueline Sunier-Ollier</persname></item>
+                    <item><persname>Karl Jay Shapiro</persname></item>
+                    <item><persname>William De Witt Snodgrass</persname></item>
+                    <item><persname>Lester Alan Standiford</persname></item>
+                    <item><persname>George Starbuck</persname></item>
+                    <item><persname>Marion Kingston Stocking</persname></item>
+                    <item><persname>Mark Strand</persname></item>
+                    <item><persname>Travis L. Summersgill</persname></item>
+                    <item><persname>John Tagliabue</persname></item>
+                    <item><persname>Virginia Wade</persname></item>
+                    <item><persname>David Wagoner</persname></item>
+                    <item><persname>Chad Walsh</persname></item>
+                    <item><persname>Galen Williams</persname></item>
+                    <item><persname>Jonathan Chamberlain Williams</persname></item>
+                    <item><persname>William Carlos Williams</persname></item>
+                    <item><persname>James Arlington Wright</persname></item>
+                    <item><persname>Paul Zweig</persname></item>
+                </list>
+                </p></scopecontent>
+                <c02 level="file">
+                    <did><unittitle>Chronological files, <unitdate normal="1943/1972" type="inclusive">1943-1972</unitdate></unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><container type="Box" label="Box">2</container><unittitle>Chronological files, <unitdate normal="1973/1979" type="inclusive">1973-1979</unitdate></unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><container type="Box" label="Box">3</container><unittitle>Alphabetical files, A - K</unittitle></did>
+                    <c03 level="file"><did><unittitle>Ai</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Bell, Charles Greenleaf</unittitle><physdesc>(4 folders)</physdesc></did></c03>
+                    <c03 level="file"><did><unittitle>Blaine, Nell Walden</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Bly, Robert</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Bonnefoy, Yves</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Carruth, Hayden</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Cooper, Jane</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Crosby, Anne (Buchanan)</unittitle><physdesc>(3 folders)</physdesc></did></c03>
+                    <c03 level="file"><did><unittitle>Gardner, Isabella Stewart</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Goll, Claire</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Hall, Donald</unittitle><physdesc>(2 folders)</physdesc></did></c03>
+                    <c03 level="file"><did><unittitle>Hall, Oakley Maxwell</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Humphries, Rolfe</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Kinnell, Galway. To Elizabeth (Mills) Kinnell</unittitle><physdesc>(3 folders)</physdesc></did></c03>
+                    <c03 level="file"><did><unittitle>Kinnell, Ine,s (Delgado de Torres)</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Knight, Etheridge</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Kuhn, David</unittitle></did></c03>
+                </c02>
+                <c02 level="file">
+                    <did><container type="Box" label="Box">4</container><unittitle>Alphabetical files, L - Z</unittitle></did>
+                    <c03 level="file"><did><unittitle>Levertov, Denise</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Levine, Philip</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Logan, John</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Merwin, William Stanley</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Mezey, Robert</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Rago, Henry</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Ray, David</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Rich, Adrienne Cecile</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Salkind, Berte de</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Zeiders, Virginia</unittitle></did></c03>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did><unittitle>Illustrations by Kinnell</unittitle></did>
+                <c02 level="file">
+                    <did><container type="Folder" label="Folder">11</container><unittitle>The snow rabbit, poems by Pati Hill (Boston: Houghton Mifflin Company, <unitdate normal="1962">1962</unitdate></unittitle><physdesc>(drafts of poems, 20 block prints)</physdesc></did>
+                </c02> 
+            </c01>
+            <c01 level="series">
+                <did><unittitle>Writings by Kinnell</unittitle></did>
+                <c02 level="subseries">
+                    <did><unittitle>Poetry</unittitle></did>
+                    <c03 level="file">
+                        <did><unittitle>Individual Poems</unittitle></did>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">12-40</container><unittitle>Alphabetical by Title</unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">41</container><unittitle>Printed</unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">42-44</container><unittitle>Untitled</unittitle></did>
+                        </c04>
+                    </c03>
+                    <c03 level="file">
+                        <did><container type="Box" label="Box">5</container><unittitle>Collections of Poems</unittitle></did>
+                        <scopecontent><p> Includes worksheets and drafts of the individual poems, drafts of the book,
+                        book production materials, page proofs, galleys, and printed reviews.</p></scopecontent>
+                        <arrangement><head>Arrangement</head><p>Arranged alphabetically by title.</p></arrangement>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">1</container><unittitle>Anthology</unittitle><physdesc>(21 items - unpublished)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">2-5</container><unittitle>The Avenue bearing the initial of Christ into the New World: poems 1946-1964 (Boston: Houghton Mifflin, <unitdate normal="1974">1974)</unitdate></unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">6-30</container><unittitle>Body rags (Boston: Houghton Mifflin, <unitdate normal="1968">1968)</unitdate></unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Box" label="Box">6</container><container type="Folder" label="Folder">1-9</container><unittitle>Body rags (cont'd)</unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">10-32</container><unittitle>Book of nightmares (Boston: Houghton Mifflin, <unitdate normal="1971">1971)</unitdate></unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Box" label="Box">7</container><container type="Folder" label="Folder">1-34</container><unittitle>Book of nightmares (cont'd)</unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">35-74</container><unittitle>Dust of the earth (unpublished, majority of poems were included in: What a kingdom it was)</unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container label="Box" type="Box">8</container><container type="Folder" label="Folder">1-21</container><unittitle>Dust of the earth (cont'd)</unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">22-33</container><unittitle>First poems, 1946-1954 (Mt. Horeb, Wisconsin: Perishable Press, <unitdate normal="1970">1970)</unitdate></unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">34-66</container><unittitle>Flower herding on Mount Monadnock (Boston: Houghton Mifflin, <unitdate normal="1964">1964)</unitdate></unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">67-70</container><unittitle>Mortal acts, mortal words (Boston: Houghton Mifflin, <unitdate normal="1980">1980)</unitdate></unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container label="Box" type="Box">9</container><container type="Folder" label="Folder">1-40</container><unittitle>Mortal acts, mortal words (cont'd)</unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Box" label="Box">10</container><container type="Folder" label="Folder">1-9</container><unittitle>Mortal acts, mortal words (cont'd)</unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">20</container><unittitle>Poems of Galway Kinnell, reading of <unitdate normal="1957-05-09">9 May 1957</unitdate>(Paris?)</unittitle><physdesc>(4 mimeograph copies)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">21</container><unittitle>Poems of night (London: Rapp &amp; Carroll, <unitdate normal="1968">1968)</unitdate></unittitle></did><scopecontent><p>The poems in this book were selected from: What a kingdom it was and Flower herding on Mount Monadnock; several are revised. Reviews only.</p></scopecontent>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">22</container><unittitle>Some Black Mountain memories, <unitdate normal="1947">1947</unitdate>(unpublished)</unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">23-51</container><unittitle>What a kingdom it was (Boston: Houghton Mifflin, <unitdate normal="1960">1960)</unitdate></unittitle></did><note><p>(see also: Dust of the earth)</p></note>
+                        </c04>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Translations</unittitle></did>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">52-58</container><unittitle>Bonnefoy, Yves. On the motion and immobility of Douve (Athens, Ohio: Ohio University Press, <unitdate normal="1968">1968)</unitdate></unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Box" label="Box">11</container><container type="Folder" label="Folder">1-21</container><unittitle>Bonnefoy, Yves. On the motion... (cont'd)</unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">22-37</container><unittitle>Goll, Yvan. Lackawanna elegy (Fremont, Michigan: Sumac Press, <unitdate normal="1970">1970)</unitdate></unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Box" label="Box">12-14</container><container type="Folder" label="Folder">4</container><unittitle>Villon, Francois. The poems of Francois Villon (New York: The New American Library, <unitdate normal="1965">1965)</unitdate>(Boston: Houghton Mifflin, <unitdate normal="1977">1977)</unitdate></unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">5-6</container><unittitle>French poems</unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">7</container><unittitle>Italian poems</unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">8</container><unittitle>Persian poems</unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">9</container><unittitle>Portuguese poems</unittitle></did>
+                        </c04>
+                    </c03>
+                </c02>
+                <c02 level="subseries">
+                    <did><unittitle>Prose</unittitle></did>
+                    <c03 level="file">
+                        <did><unittitle>Books</unittitle></did>
+                        <scopecontent><p> Includes worksheets and drafts of the book, book production materials,
+                            page proofs, and galleys.</p></scopecontent>
+                        <arrangement><head>Arrangement</head><p>Arranged alphabetically by title.</p></arrangement>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">10-21</container><unittitle>Black light (Boston: Houghton Mifflin, <unitdate normal="1966">1966)</unitdate></unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Box" label="Box">15</container><container type="Folder" label="Folder">1-10</container><unittitle>Black light (cont'd)</unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">11-12</container><unittitle>Death of yesterday (first novel - unpublished)</unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">13</container><unittitle>How the alligator missed breakfast (Boston: Houghton Mifflin, <unitdate normal="1982">1982)</unitdate></unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">14-15</container><unittitle>The Poetics of the physical world (Fort Collins, Colorado: Colorado State University, <unitdate normal="1969">1969)</unitdate></unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>Walking down the stairs: Selections from interviews (Ann Arbor, Mich.: The University of Michigan Press, <unitdate normal="1978">1978)</unitdate></unittitle></did>
+                            <c05 level="file">
+                                <did><unittitle>Typescripts and/or photocopies of interviews by</unittitle></did>
+                                <c06 level="file">
+                                    <did><container type="Folder" label="Folder">16</container><unittitle>Bakken, Dick (pub. in Salted Feathers, <unitdate normal="1967-08-10">10 Aug. 1967)</unitdate></unittitle></did>
+                                </c06>
+                                <c06 level="file">
+                                    <did><container type="Folder" label="Folder">17</container><unittitle>Brooks, David and Don Bredes <unitdate normal="1978-12">(Dec. 1978)</unitdate></unittitle></did>
+                                </c06>
+                                <c06 level="file">
+                                    <did><container type="Folder" label="Folder">18</container><unittitle>Brooks, David, et al.</unittitle></did>
+                                </c06>
+                                <c06 level="file">
+                                    <did><container type="Folder" label="Folder">19</container><unittitle>Chisholm, Scott (<unitdate normal="1972-02-19">Feb. 19, 1972,</unitdate>New York) </unittitle></did>
+                                </c06>
+                                <c06 level="file">
+                                    <did><container type="Folder" label="Folder">20</container><unittitle>Crocker, Jack (<unitdate normal="1976-11-02">Nov. 2, l976,</unitdate>Lubbock, Texas)</unittitle></did>
+                                </c06>
+                                <c06 level="file">
+                                    <did><container type="Folder" label="Folder">21</container><unittitle>Edwards, Margaret (<unitdate normal="1976-08-27">Aug. 27, l976,</unitdate>Sheffield, Vermont)</unittitle></did>
+                                </c06>
+                                <c06 level="file">
+                                    <did><container type="Folder" label="Folder">22</container><unittitle>Fortunato, Mary Jane (Spring, 1971) (pub. in New York Quarterly, Autumn, <unitdate normal="1971">1971)</unitdate></unittitle></did>
+                                </c06>
+                                <c06 level="file">
+                                    <did><container type="Folder" label="Folder">23</container><unittitle>Goldbarth, Albert and Virginia Gilbert (<unitdate normal="1970-11">Nov. 1970,</unitdate>Iowa City) (pub. in Crazy Horse 6, <unitdate normal="1971">1971)</unitdate></unittitle></did>
+                                </c06>
+                                <c06 level="file">
+                                    <did><container type="Folder" label="Folder">24</container><unittitle>Heyen, William and Gregory Fitz Gerald (<unitdate normal="1969-10">Oct., 1969,</unitdate>Brockport, New York) (pub. in Iowa Review, Spring <unitdate normal="1970">1970)</unitdate></unittitle></did>
+                                </c06>
+                                <c06 level="file">
+                                    <did><container type="Folder" label="Folder">25</container><unittitle>Jacobs, Lucky (pub. in Penny Dredful, <unitdate normal="1975-04-29">Apr. 29, 1975)</unitdate></unittitle></did>
+                                </c06>
+                                <c06 level="file">
+                                    <did><container type="Folder" label="Folder">26</container><unittitle>McCullough, Ken (<unitdate normal="1976-02-08">Feb. 8, 1976,</unitdate>Columbia, South Carolina)</unittitle></did>
+                                </c06>
+                                <c06 level="file">
+                                    <did><container type="Folder" label="Folder">27</container><unittitle>McKenzie, James J. (<unitdate normal="1972">1972,</unitdate>Grand Forks, North Dakota) (pub. in Salmagundi, Spring-Summer, <unitdate normal="1973">1973)</unitdate></unittitle></did>
+                                </c06>
+                                <c06 level="file">
+                                    <did><container type="Folder" label="Folder">28-29</container><unittitle>Pariser and Achziger (<unitdate normal="1966-10-02">Oct. 3, 1966,</unitdate>Portland, Oregon) (pub. in Reed College Quest)</unittitle></did>
+                                </c06>
+                                <c06 level="file">
+                                    <did><container type="Folder" label="Folder">30</container><unittitle>Plumly, Stanley (<unitdate normal="1972-05-15">May 15, 1972,</unitdate>Athens, Ohio) (pub. in Ohio Review, Fall, <unitdate normal="1972">1972)</unitdate></unittitle></did>
+                                </c06>
+                                <c06 level="file">
+                                    <did><container type="Folder" label="Folder">31</container><unittitle>Poulin, Alfred A. and Stan Sanvel Rubin (<unitdate normal="1971-11">Nov., 1971,</unitdate>Brockport, New York) (recorded on videotape for Writer's Forum program of SUNY)</unittitle></did>
+                                </c06>
+                                <c06 level="file">
+                                    <did><container type="Folder" label="Folder">32</container><unittitle>University of Vermont students (<unitdate normal="1974-01-22">Jan. 22, 1974,</unitdate>Burlington, Vermont) (pub. in The News and the Weather, Spring <unitdate normal="1974">1974)</unitdate></unittitle></did>
+                                </c06>
+                                <c06 level="file">
+                                    <did><container type="Folder" label="Folder">33-35</container><unittitle>Interviewers and origin of interviews unknown</unittitle></did>
+                                </c06>
+                            </c05>
+                            <c05 level="file">
+                                <did><container type="Box" label="Box">16</container><container type="Folder" label="Folder">1</container><unittitle>Worksheets for book</unittitle></did>
+                            </c05>
+                            <c05 level="file">
+                                <did><container type="Folder" label="Folder">2</container><unittitle>Preface - drafts and worksheets</unittitle></did>
+                            </c05>
+                            <c05 level="file">
+                                <did><container type="Folder" label="Folder">3-10</container><unittitle>Drafts of book</unittitle></did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Essays</unittitle></did>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">11</container><unittitle>Criticism</unittitle></did>
+                            <c05 level="file"><did><unittitle>Eden two-way, by Chad Walsh, The scarecrow Christ, by Elder Olson, Birthdays from the ocean, by Isabella Gardner</unittitle><physdesc>(carbon, 7p.)</physdesc></did></c05>
+                            <c05 level="file"><did><unittitle>Meditations in an emergency, by Frank O'Hara, The hawk in the rain, by Ted Hughes, The imagined country, by Audrey McGaffin, Time without number, by Daniel Berrigan</unittitle><physdesc>(carbon, 7p.)</physdesc></did></c05>
+                            <c05 level="file"><did><unittitle>New England harvest, by Donald C. Babcock, Songs for a new America, by Charles G. Bell</unittitle><physdesc>(carbon, 5p.)</physdesc></did></c05>
+                            <c05 level="file">
+                                <did><unittitle>A note on Ezra Pound and what happened to modern poetry</unittitle><physdesc>(typescript, 6p.)</physdesc></did>
+                            </c05>
+                            <c05 level="file"><did><unittitle>A poet of re-attachment (re: Songs for a new America)</unittitle><physdesc>(printed - 2 copies, 3p.)</physdesc></did></c05>
+                            <c05 level="file"><did><unittitle>A poet of the new avant-garde (re: Songs for a new America)</unittitle><physdesc>(carbon, 4p.)</physdesc></did></c05>
+                            <c05 level="file"><did><unittitle>Song(sic) for a new America, by Charles G. Bell</unittitle><physdesc>(carbon, 6p.)</physdesc></did></c05>
+                            <c05 level="file"><did><unittitle>Songs for a new America, by Charles G. Bell... [first line]</unittitle><physdesc>(carbon, 4p.)</physdesc></did></c05> 
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">12</container><unittitle>Political</unittitle></did>
+                            <c05 level="file"><did><unittitle>Ball game: World Federalists against Reinhold. Second inning: Casey at the bat</unittitle><physdesc>(typescript, 2p.)</physdesc></did></c05>
+                            <c05 level="file"><did><unittitle>A foreign policy toward peace. Alfred, N.Y.</unittitle><physdesc>(one type-script, one carbon, 12p. each)</physdesc></did></c05>
+                            <c05 level="file"><did><unittitle>Gentlemen: Having received long replies from both of you, R.S. and R.H.,... [first line]</unittitle><physdesc>(carbon, 4p.)</physdesc></did></c05>
+                            <c05 level="file"><did><unittitle>In an article called "Streaks of dawn in the night"... [first line]</unittitle><physdesc>(carbon, 4p.)</physdesc></did></c05>
+                            <c05 level="file"><did><unittitle>One world - or ?</unittitle><physdesc>(typescript, 1Op.)</physdesc></did></c05>
+                            <c05 level="file"><did><unittitle>Should the atom bomb be used? January 15, 1951</unittitle><physdesc>(typescript, 3p.)</physdesc></did></c05>
+                            <c05 level="file"><did><unittitle>The world scene - UWF</unittitle><physdesc>(typescript, 2p.)</physdesc></did></c05>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">13</container><unittitle>Miscellaneous</unittitle></did>
+                            <c05 level="file"><did><unittitle>Carlyle on the lee shore <unitdate normal="1949-09-20">9/20/49</unitdate></unittitle><physdesc>(typescript, 9p.)</physdesc></did></c05>
+                            <c05 level="file"><did><unittitle>Essay on happiness. Princeton, l/46</unittitle><physdesc>(holograph, 6p.)</physdesc></did></c05>
+                            <c05 level="file"><did><unittitle>Letter from Teheran</unittitle><physdesc>(2 incomplete typescripts, 3p. each)</physdesc></did></c05>
+                            <c05 level="file"><did><unittitle>Only meaning is truly interesting...</unittitle><physdesc>(2 carbons, 11p. &amp; 4p.)</physdesc></did></c05>
+                            <c05 level="file"><did><unittitle>Pensees</unittitle><physdesc>(typescripts - 2 variants, 1p. each)</physdesc></did></c05>
+                            <c05 level="file"><did><unittitle>To find how much goodness there is in people</unittitle><physdesc>(holograph, 1p.)</physdesc></did></c05>
+                            <c05 level="file"><did><unittitle>Ultimate victory</unittitle><physdesc>(typescript, 1p.)</physdesc></did></c05>
+                            <c05 level="file">
+                                <did><container type="Folder" label="Folder">14</container><unittitle>Personality, poetry and death (worksheets)</unittitle></did>
+                            </c05>
+                            <c05 level="file">
+                                <did><container type="Folder" label="Folder">15</container><unittitle>Untitled</unittitle><physdesc>(14 items)</physdesc></did>
+                            </c05>
+                            <c05 level="file">
+                                <did><container type="Folder" label="Folder">16</container><unittitle>Miscellaneous notes</unittitle></did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Lectures and Speeches</unittitle></did>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">17</container><unittitle>American Academy of Arts and Letters acceptance speech, <unitdate normal="1975-05-21">May 21, 1975</unitdate></unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">18</container><unittitle>Music of poetry</unittitle><physdesc>(lecture - 6 drafts)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">19</container><unittitle>Poetry and modern consciousness: Walt Whitman (lecture)</unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">20</container><unittitle>Six lectures on poetry and consciousness</unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">21</container><unittitle>The suicide of poets (lecture)</unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">22</container><unittitle>What is <emph render="doublequote">nude</emph> in poetry? (lecture)</unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">23-25</container><unittitle>Untitled</unittitle><physdesc>(9 lectures)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Box" label="Box">17</container><container type="Folder" label="Folder">3</container><unittitle>The beautiful cave</unittitle><physdesc>(typescript and carbon, 12p. each)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>Between summer and desire</unittitle><physdesc>(typescript, 10p.)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>A bunting watch</unittitle><physdesc>(typescript, 3p.)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>The counting house</unittitle><physdesc>(holograph, 2p.)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>Courage <unitdate normal="1967-10-06">(10/6/47)</unitdate></unittitle><physdesc>(typescript, 9p.)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">4</container><unittitle>Daybreak <unitdate normal="1946-08">(8/46)</unitdate></unittitle><physdesc>(typescript, 3p.)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>Don't fence me in</unittitle><physdesc>(typescript, 1p.)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>Early morning (Pawtucket, <unitdate normal="1945-06">6/45)</unitdate></unittitle><physdesc>(2 typescripts, 1p. each)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>Un ecrivain</unittitle><physdesc>(typescript, 3p.)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>Ferry boats and other strange things</unittitle><physdesc>(holograph, 10p.)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>Friend, don't throw my dirt away</unittitle><physdesc>(typescript, 4p.)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>Have a drink and sober up</unittitle><physdesc>(holograph, 2p.)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>Hello she said</unittitle><physdesc>(typescript and carbon, 1p. each)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>King of t[he trade]</unittitle><physdesc>(carbon, 13p.)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>The multiplying strings</unittitle><physdesc>(typescript and carbon, 9p. each)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>My name is in her skin</unittitle><physdesc>(holograph and typescript, 6p. &amp; 3p.)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">5</container><unittitle>O yellow hair</unittitle><physdesc>(typescript, 17p.)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>Of all things</unittitle><physdesc>(holograph, 2p.)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>On the shore of the wide world</unittitle><physdesc>(typescript, 7p.)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>The permanence of love</unittitle><physdesc>(typescript, 10p.)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>The place for tigers</unittitle><physdesc>(carbon, 1p.)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>Reunion</unittitle><physdesc>(holograph, 4p.)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>The sidewalk</unittitle><physdesc>(typescript, 2p.)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>A star in the valley</unittitle><physdesc>(typescript and carbon, 12p. each)</physdesc></did>
+                        </c04>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Short Stories</unittitle></did>
+                        <c04 level="file">
+                            <did><unittitle>This is the story of a man and woman</unittitle><physdesc>(holograph, 2p.)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>The true order of going</unittitle><physdesc>(typescript and carbon, 22p. each)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>Walking on a road</unittitle><physdesc>(typescript, 1p.)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>What the drunk boy said</unittitle><physdesc>(typescript, 5p.)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>Wherever snow falls</unittitle><physdesc>(typescript, 2p.)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">6-7</container><unittitle>Untitled</unittitle><physdesc>(27 items)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">8</container><unittitle>Untitled</unittitle><physdesc>(6 outlines)</physdesc></did>
+                        </c04>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Travel Journals</unittitle></did>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">13</container><unittitle><unitdate normal="1947-01-18/1948-01-28" type="inclusive">1947, Jan. 18-1948, Jan. 28.</unitdate><emph render="doublequote">I am, and there is none beside me: Thoughts of the twenty-first year</emph> Princeton, N.J.</unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">14</container><unittitle><unitdate normal="1955-07-05/1956-07-08" type="inclusive">1955, July 5-1956, July 8.</unitdate><emph render="doublequote">Paris and France, Fall to Spring, 1955-56</emph></unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">15</container><unittitle><unitdate normal="1956-07-15/1956-09-23" type="inclusive">1956, July 15-Sept. 23.</unitdate><emph render="doublequote">Italy and southern France, Summer, 1956</emph></unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">16</container><unittitle><unitdate normal="1956-10-31/1957-05-18" type="inclusive">1956, Oct. 31-1957, May 18.</unitdate><emph render="doublequote">Grenoble, Winter, 1956-57</emph></unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Folder" label="Folder">17</container><unittitle><unitdate normal="1957-05-20/1957-07-27" type="inclusive">1957, May 2O-July 27.</unitdate><emph render="doublequote">The Middle East, Spring, 1957</emph></unittitle></did>
+                        </c04>
+                    </c03>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did><unittitle>Writings by Others</unittitle></did>
+                <c02 level="subseries">
+                    <did><unittitle>Essays and theses on Kinnell and his writings</unittitle></did>
+                    <arrangement><p>Arranged alphabetically by author</p></arrangement>
+                    <c03 level="file">
+                        <did><container type="Folder" label="Folder">18</container><unittitle>Barshop, Debra. Combustione alle opre d'Alberto Burri e Galway Kinnell: La poetica di materia. <unitdate normal="1976-03">3/76</unitdate></unittitle><physdesc>(photocopy, l4p.)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><container type="Folder" label="Folder">19</container><unittitle>Boer, Byron. Toward a writhing of lights: The poetry of Galway Kinnell. <unitdate normal="1967-01/1967-06" type="inclusive">Spring 1967</unitdate></unittitle><physdesc>(photocopy, 35p.)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><container type="Folder" label="Folder">20</container><unittitle>Brooks, David G. The poetry of Galway Kinnell. Hons. thesis: <unitdate normal="1974">1974</unitdate></unittitle><physdesc>(bound carbon, 65p.)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><container type="Folder" label="Folder">21</container><unittitle>Garsson, Jane</unittitle></did>
+                        <c04 level="file">
+                            <did><unittitle>Love and death in The book of night- mares--a few things to notice in two parts. <unitdate normal="1973-10-25">10/25/73</unitdate></unittitle><physdesc>(mimeograph)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>On Galway Kinnell, The book of nightmares <unitdate normal="1973-12-05">12/5/73</unitdate></unittitle><physdesc>(mimeograph, 5lp.)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>Untitled</unittitle><physdesc>(mimeograph, 10p.)</physdesc></did>
+                        </c04> 
+                    </c03>
+                    <c03 level="file">
+                        <did><container type="Folder" label="Folder">22</container><unittitle>Geller, Maryann. A frantic look into my notes for Book of nightmares</unittitle><physdesc>(photocopy, 18p.)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><container type="Folder" label="Folder">23</container><unittitle>Higgins, Dick. Some reflections on Galway Kinnell's <title render="doublequote">Three poems</title></unittitle><physdesc>(carbon, 18p.)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><container type="Folder" label="Folder">24</container><unittitle>Hilberry, Conrad Arthur. The structure of Galway Kinnell's Book of nightmares. Carbon and photocopy of printed version pub. in Field, <unitdate normal="1975-01/1975-06" type="inclusive">Spring 1975</unitdate></unittitle><physdesc>(17p. &amp; 19p.)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><container type="Folder" label="Folder">25</container><unittitle>Keane, Patrick Joseph. Rondure's dark-flowering road: A comparative study of informing vision and recurrent imagery in Galway Kinnell's The book of nightmares. <unitdate normal="1973">1973</unitdate></unittitle><physdesc>(photocopy, 73p.)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><container type="Folder" label="Folder">26</container><unittitle>Lishan, Stuart D. The rain ringing off river: Poems and a study of mythopoeia in the poetry of Galway Kinnell and others. <unitdate normal="1977-05">5/77</unitdate>(thesis: Reed College)</unittitle><physdesc>(bound photocopy, 148p.)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><container type="Folder" label="Folder">27</container><unittitle>Marcello, Leo Luke. Galway Kinnell: Adamic poet and deep imagist. <unitdate normal="1976-05">5/76</unitdate>(diss.: LSU and Agricultural and Mechanical College)</unittitle><physdesc>(bound photocopy, 190p.)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><container type="Folder" label="Folder">28</container><unittitle>Miller, Steven. Man and the natural spirit. <unitdate normal="1965-02-15">2/15/65</unitdate></unittitle><physdesc>(typescript, 14p.)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><container type="Folder" label="Folder">29</container><unittitle>Morris, Marcia. Poetry report: Galway Kinnell. <unitdate normal="1972-05-11">5/11/72</unitdate></unittitle><physdesc>(holograph, 3p.)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><container type="Folder" label="Folder">30</container><unittitle>Neely, Linda Gail. The essence of Galway Kinnell: Tenderness toward existence, abstract</unittitle><physdesc>(typescript, 101p.)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><container type="Folder" label="Folder">31</container><unittitle>Quackenbush, Jan. The Book of nightmares: The wages of dying is love. <unitdate normal="1972/1973" type="inclusive">1972-1973</unitdate></unittitle><physdesc>(photocopy, 28p.)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><container type="Folder" label="Folder">32</container><unittitle>Rouslin, Carol. The reluctant pedestrian</unittitle><physdesc>(mimeograph, 9p.)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><container type="Folder" label="Folder">33</container><unittitle>Taylor, Andrew McDonald. The poetry of Galway Kinnell</unittitle><physdesc>(carbon, 21p.)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><container type="Folder" label="Folder">34</container><unittitle>Thompson, William E. Synergy in the poetry of Galway Kinnell</unittitle><physdesc>(photocopy, 24p.)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><container type="Folder" label="Folder">35</container><unittitle>Woodward, Sandra. The poetry of Galway Kinnell, 1960-1971</unittitle><physdesc>(photocopy, 11p.)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><container type="Folder" label="Folder">36</container><unittitle>Unknown. Galway Kinnell: Everything that may abide the fire was made to go through the fire</unittitle><physdesc>(photocopy, 12p.)</physdesc></did>
+                    </c03>
+                </c02>
+                <c02 level="subseries">
+                    <did><unittitle>Prose and Poetry</unittitle></did>
+                    <scopecontent><p> This series includes drafts and copies of poetry and prose by authors other than Kinnell.</p></scopecontent>
+                    <arrangement><head>Arrangement</head><p>Arranged alphabetically by author</p></arrangement>
+                    <c03 level="file"><did><unittitle>Ai. 122 poems, collection of poems (untitled)</unittitle><physdesc>(3 folders)</physdesc></did></c03>
+                    <c03 level="file"><did><unittitle>Ajay, Stephen. 2 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Ammons, Archie Randolph. 19 poems, 1 prose</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Anderson, Jon. 1 poem</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Arensberg, Walter Conrad. 1 poem</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Atwood, Margaret Eleanor. 5 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Bakken, Dick. 11 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Beecher, John. <emph render="doublequote">Their blood cries out</emph> (prose and poetry - photocopy)</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Bell, Charles Greenleaf</unittitle><physdesc>(21 folders)</physdesc></did>
+                        <c04 level="file">
+                            <did><unittitle>Poetry - individual poems</unittitle><physdesc>(163 items)</physdesc></did>
+                            <arrangement><p>Arranged alphabetically</p></arrangement>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>Poetry - collections</unittitle></did>
+                            <c05 level="file">
+                                <did><unittitle>Alarm, retreat, transcendal return; a recurrent cycle of poems</unittitle></did>
+                            </c05>
+                            <c05 level="file">
+                                <did><unittitle>Delta return: five groups of five poems, forming a symbolic homecoming</unittitle></did>
+                            </c05>
+                            <c05 level="file">
+                                <did><unittitle>The number of my loves</unittitle><physdesc>(5 drafts)</physdesc></did>
+                            </c05>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>Poetry - translations</unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>Prose - non-fiction</unittitle><physdesc>(18 items)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>Prose - fiction</unittitle><physdesc>(5 items)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>Prose - books</unittitle></did>
+                            <c05 level="file">
+                                <did><unittitle>Again from the dead</unittitle></did>
+                            </c05>
+                            <c05 level="file">
+                                <did><unittitle>The half gods</unittitle></did>
+                            </c05>
+                            <c05 level="file">
+                                <did><unittitle>The old life</unittitle><physdesc>(2 copies)</physdesc></did>
+                            </c05>
+                            <c05 level="file">
+                                <did><unittitle>Third kingdom</unittitle><physdesc>(incomplete)</physdesc></did>
+                            </c05>
+                            <c05 level="file">
+                                <did><unittitle>Turning and turning in the widening gyre</unittitle><physdesc>(galley)</physdesc></did>
+                            </c05>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>Prose - journal</unittitle><physdesc>(carbon and mimeograph)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>Prose - printed</unittitle><physdesc>(6 items)</physdesc></did>
+                        </c04>
+                    </c03>
+                    <c03 level="file"><did><unittitle>Berge, Carol. 8 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Berssenbrugge, Mei-mei. 50 poems, collection of poems: Random possession</unittitle><physdesc>(2 copies, 2 folders)</physdesc></did></c03>
+                    <c03 level="file"><did><unittitle>Bishop, Elizabeth. 3 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Bly, Robert. 5 poems, 1 prose</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Bodenheim, Maxwell. 1 poem</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Booth, Martin. 1 poem</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Borgese, Giuseppe Antonio. 12 poems, 1 collection of poems (untitled)</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Boyd, Shylah. 4 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Braun, Henry. 9 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Brock, Vandall Kline. Collection of poems: The Nazi poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Brooks, David. 1 poem</unittitle></did></c03>
+                    
+                    <c03 level="file"><did><container type="Box" label="Box">19</container><unittitle>Cappello, Rosemary. 6 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Carroll, Paul. 1 poem</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Carruth, Hayden. 1 poem: The sleeping beauty, or the phenomenology of winter, collection of poems: Vermont, and other states of mind...</unittitle><physdesc>(2 folders)</physdesc></did></c03>
+                    <c03 level="file"><did><unittitle>Carter, Jared. 7 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Clipman, William. 4 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Cooper, Jane. 5 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Cumberland, David. 20 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Dana, Robert. Partial collection of poems (untitled)</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Dasgupta, Mary Ann. 3 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>DeVoti, William. 12 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Douskey, Franz. 2 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Eberhart, Richard. 1 poem</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Fishman, Charles Munro. 5 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Forche, Carolyn. 9 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Fox, Siv Cedering. 24 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Gallagher, Tess. 1 poem</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Ginsberg, Allen. 1 poem</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Goldensohn, Barry. Collection of poems (untitled)</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Goll, Yvan. Collection of poems: Elegie de Lackawanna</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Goren, Judith. 9 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Hall, Donald. 27 poems; Kicking the Leaves (collection of poems); Goatfoot, Milktongue, Twinbird (article)</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Hanson, Pauline. 3 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Harper, Michael Steven. 3 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Harrison, James. 5 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Herschberger, Ruth. 6 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Hilberry, Conrad Arthur. 1 poem</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Hill, Nellie. 3 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Hill, Pati. 13 prose</unittitle></did><note><p>(See also: Box 4, folder 11)</p></note></c03>
+                    <c03 level="file"><did><unittitle>Hochman, Sandra Sue. 1 poem</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Hoffman, Daniel Gerard. Collection of poems: Some poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Horovitz, Michael. 1 poem</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Humphries, Rolfe. 1 poem</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Keane, Patrick Joseph. 2 poems, 1 prose</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Keys, Kerry Shaun. 14 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Knight, Etheridge. 3 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Koerte, Mary Norbert. 1 poem</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Kuhn, David. 4 poems</unittitle></did></c03>
+                    
+                    <c03 level="file"><did><container type="Box" label="Box">20</container><unittitle>La Follette, Melvin Walker. 3 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Lallo, Mary Judith. 6 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Layton, Irving Peter. 3 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Lerner, Gerda (Kronstein). 4 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Levine, Philip. 4 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Linthicum, John. 4 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Lissauer, Frank Paul Gunther. 14 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Logan, John. 7O poems</unittitle><physdesc>(2 folders)</physdesc></did></c03>
+                    <c03 level="file"><did><unittitle>Lopes, Michael. 1 poem</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Martin, Philip John Talbot. 2 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Masterson, Dan. 1 poem</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Mazzaro, Jerome. 4 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Montandon, Henri. 1 poem</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Noll, Lou Barker. 2 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Orlen, Steve. 2 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Peters, Robert Louis. 1 poem</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Planz, Allen. 6 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Poulin, Alfred A. Collection of poems: In advent: Poems, 1961-1971</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Rago, Henry. 1 poem</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Rankin, Jennifer. 5 poems, collection of poems: From the mud hut</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Ratch, Jerry. 1 poem</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Rich, Adrienne Cecile. 5 poems, 1 prose</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Rips, Geoffrey. 12 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Roecker, William A. 3 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Rudman, Mark. 2 collections of poems: In the neighboring cell and The Sentence</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Saleh, Dennis. Collection of poems: Psychologies</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Schnackenberg, Gjertrud. 3 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Schultz, Philip. 11 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Scott, Herbert. 1 poem</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Setterlind, Bo. 2 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Sherwin, Judith Johnson. Collection of poems: How the dead count</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Shinder, Jason Scott. 18 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Shoemaker, Lynn Henry. 1 poem</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Skelton, Robin. 4 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Snyder, Gary. 1 poem</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Spear, Roberta. 1 poem, collection of poems: Wild pearls</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Standiford, Lester Alan. 9 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Sward, Robert. 8 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Swenson, May. 1 poem</unittitle></did></c03>
+                    
+                    <c03 level="file"><did><container type="Box" label="Box">21</container><unittitle>Tagliabue, John. 3 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Weston, Susan (Brown). 2 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>White, Eric Walter. 1 poem</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Williams, Richard Lippincott. 28 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Winner, Robert. 15 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Wright, James Arlington. 1 poem</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Wright, Jay. 7 poems</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Zu-Bolton, Ahmos. 1 poem</unittitle></did></c03>
+                    <c03 level="file"><did><unittitle>Zweig, Paul. 2 poems</unittitle></did></c03>
+                </c02>
+                <c02 level="subseries">
+                    <did><container type="Box" label="Box">11</container><unittitle>Miscellaneous</unittitle></did>
+                    <c03 level="file">
+                        <did><container type="Folder" label="Folder">15-16</container><unittitle>Prison poets - Wallkill, <unitdate normal="1975">1975</unitdate></unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><container type="Folder" label="Folder">17-21</container><unittitle>Translations: Ghazals, Italian, Japanese, Macedonian, Russian</unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><container type="Folder" label="Folder">22-29</container><unittitle>Authors unknown</unittitle></did>
+                        <arrangement><p>Arranged alphabetically by title of work.</p></arrangement>
+                    </c03>
+                    <c03 level="file">
+                        <did><container type="Folder" label="Folder">30</container><unittitle>Printed</unittitle></did>
+                    </c03>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did><container type="Box" label="Box">21</container><unittitle>Memorabilia</unittitle></did>
+                <c02 level="file">
+                    <did><container type="Folder" label="Folder">31</container><unittitle>Biographical information</unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><container type="Folder" label="Folder">32-33</container><unittitle>Juvenalia, <unitdate normal="1936/1943" type="inclusive">1936-1943</unitdate></unittitle></did>
+                    <scopecontent><p> Includes notebooks (4) and writings</p></scopecontent>
+                </c02>
+                <c02 level="file">
+                    <did><container type="Folder" label="Folder">34-35</container><unittitle>Wilbraham Academy, <unitdate normal="1943/1944" type="inclusive">1943-1944</unitdate></unittitle></did>
+                    <scopecontent><p> Includes The Atlas and class papers</p></scopecontent>
+                </c02>
+                <c02 level="file">
+                    <did><container type="Folder" label="Folder">36-42</container><unittitle>Princeton University, 1945-1948</unittitle></did>
+                    <scopecontent><p> Includes class notes, class papers, class syllabi, examinations, and hand-outs</p></scopecontent>
+                </c02>
+                <c02 level="file">
+                    <did><container type="Box" label="Box">22</container><container type="Folder" label="Folder">1-4</container><unittitle>Princeton University (cont'd)</unittitle></did>
+                    <scopecontent><p> Includes official register, schedule of available space for recruit activities, thesis: Spring of youth, and a transcript</p></scopecontent>
+                </c02>
+                <c02 level="file">
+                    <did><container type="Folder" label="Folder">5</container><unittitle>University of Rochester, <unitdate normal="1948/1949" type="inclusive">1948-1949</unitdate>The Genesee</unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><container type="Folder" label="Folder">6-10</container><unittitle>Alfred University, <unitdate normal="1949/1951" type="inclusive">1949-1951</unitdate></unittitle></did>
+                    <scopecontent><p> Includes class notes, class syllabi and examinations, and lectures</p></scopecontent>
+                </c02>
+                <c02 level="file">
+                    <did><container type="Folder" label="Folder">11-14</container><unittitle>Chicago Basic Program, <unitdate normal="1952/1955" type="inclusive">1952-1955</unitdate></unittitle></did>
+                    <scopecontent><p> Includes director's reports and scholarship announcement, lectures, reading lists and handouts, and printed material</p></scopecontent>
+                </c02>
+                <c02 level="file">
+                    <did><container type="Folder" label="Folder">15-16</container><unittitle>University of Grenoble, <unitdate normal="1955/1957" type="inclusive">1955-1957</unitdate></unittitle></did>
+                    <scopecontent><p> Includes course material on Walt Whitman and lectures</p></scopecontent>
+                </c02>
+                <c02 level="file">
+                    <did><container type="Folder" label="Folder">17</container><unittitle>New York University, <unitdate normal="1957/1959" type="inclusive">1957-1959</unitdate></unittitle></did>
+                    <scopecontent><p> Includes core curriculum report; associate in arts degree program brochure</p></scopecontent>
+                </c02>
+                <c02 level="file">
+                    <did><container type="Folder" label="Folder">18</container><unittitle>S.S. Zuiderkruis, <unitdate normal="1958-06/1958-08" type="inclusive">Summer 1958</unitdate></unittitle></did>
+                    <scopecontent><p> Includes lectures notes, etc.</p></scopecontent>
+                </c02>
+                <c02 level="file">
+                    <did><container type="Folder" label="Folder">19</container><unittitle>American Academy and Institute of Arts and Letters, <unitdate normal="1980">1980:</unitdate>recognition award</unittitle></did>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did><unittitle>Miscellaneous</unittitle></did>
+                <c02 level="file">
+                    <did><container type="Folder" label="Folder">20-22</container><unittitle>Anti-war materials</unittitle></did>
+                    <scopecontent><p> Includes writings (Kinnell, et al.), program notes and lists of speakers at readings, and printed materials</p></scopecontent>
+                </c02>
+                <c02 level="file">
+                    <did><container type="Folder" label="Folder">23</container><unittitle>Book and periodical publication announcements</unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><container type="Folder" label="Folder">24</container><unittitle>Civil rights materials</unittitle></did>
+                    <scopecontent><p> Includes newspaper and magazine clippings, bulletins, etc.</p></scopecontent>
+                </c02>
+                <c02 level="file">
+                    <did><container type="Folder" label="Folder">25</container><unittitle>Contracts</unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><container type="Folder" label="Folder">26</container><unittitle>Information on awards, grants, fellowships (mostly printed)</unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><container type="Folder" label="Folder">27</container><unittitle>Lists of names and addresses</unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><container type="Folder" label="Folder">28</container><unittitle>Newspaper clippings</unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><container type="Folder" label="Folder">29</container><unittitle>Photographs</unittitle><physdesc>(10)</physdesc></did>
+                </c02>
+                <c02 level="file">
+                    <did><container type="Folder" label="Folder">30</container><unittitle>Poems by Kinnell set to music: <emph render="doublequote">Full moon,</emph> music by Barbara Harr; <emph render="doublequote">Spindrift,</emph> music by Anthony Strilko; <emph render="doublequote">How many nights,</emph> music by Vally Weigl</unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><container type="Folder" label="Folder">31</container><unittitle>Readings and workshops</unittitle></did>
+                    <scopecontent><p> Announcements and schedules</p></scopecontent>
+                </c02>
+                <c02 level="file">
+                    <did><container type="Folder" label="Folder">32</container><unittitle>Receipts, bills, invoices, etc.</unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><container type="Folder" label="Folder">33</container><unittitle>Miscellany</unittitle></did>
+                </c02>
+            </c01>
+            <c01 level="otherlevel" otherlevel="Index">
+                <did><unittitle>Index of Titles</unittitle></did>
+                <note>
+                    <list>
+                        <item><emph render="bold">A</emph></item>
+<item><emph render="bold">Abbas, buddhist of altitudes </emph>(see: Koisimi buddhist of altitudes)</item>
+<item><emph render="bold">Across the Brown River </emph>(Box 10, f.23, 47-5O)</item>
+<item><emph render="bold">Across the northwest country </emph>(Box 4, f.12)</item>
+<item><emph render="bold">Across the valley of third rails </emph>(Box 4, f.12)</item>
+<item><emph render="bold">Afloat </emph>(see: Lost loves)</item>
+<item><emph render="bold">After blossom-time </emph>(Box 4, f.12)</item>
+<item><emph render="bold">After hours </emph>(Box 4, f.12)</item>
+<item><emph render="bold">After lovemaking we hear footsteps </emph>(see: After making love we hear footsteps)</item>
+<item><emph render="bold">After making love we hear footsteps </emph>(Box 8, f.67; Box 10, f.1-17)</item>
+<item><emph render="bold">After the death of my father </emph>(Box 4, f.12)</item>
+<item><emph render="bold">After the fever </emph>(Box 4, f.12)</item>
+<item><emph render="bold">After virginity is a night </emph>(Box 4, f.12)</item>
+<item><emph render="bold">Again the porcupine </emph>(see: The porcupine)</item>
+<item><emph render="bold">Ah moon </emph>(see: The old man)</item>
+<item><emph render="bold">Alewives pool </emph>(Box 10, f.24, 47-50)</item>
+<item><emph render="bold">All who have gone down </emph>(Box 4, f.12)</item>
+<item><emph render="bold">Alluvial Tuscany </emph>(Box 4, f.12)</item>
+<item><emph render="bold">Almeria </emph>(Box 6, f.20)</item>
+<item><emph render="bold">The almond tree </emph>(see: The white room)</item>
+<item><emph render="bold">An American flower </emph>(Box 7, f.35; Box 8, f.19-21)</item>
+<item><emph render="bold">Angling, a day </emph>(Box 8, f.68; Box 10, f.1-17)</item>
+<item><emph render="bold">Angling, the very rich hours </emph>(see: Angling, a day)</item>
+<item><emph render="bold">Another night in the ruins </emph>(Box 5, f.6; Box 6, f.3-8)</item>
+<item><emph render="bold">The Anse Galet Valley </emph>(see: In the Anse Galet Valley)</item>
+<item><emph render="bold">The apple </emph>(Box 8, f.69; Box 10, f.1-17)</item>
+<item><emph render="bold">The apple tree </emph>(Box 8, f.70; Box 10, f.1-17)</item>
+<item><emph render="bold">apple worm </emph>(see: The apple tree)</item>
+<item><emph render="bold">Arrival in Vienna </emph>(Box 4, f.12)</item>
+<item><emph render="bold">Ars poetica </emph>(see: A trick of mirrors)</item>
+<item><emph render="bold">As for love </emph>(Box 4, f.12)</item>
+<item><emph render="bold">The Asheville Highway </emph>(Box 10, f.22)</item>
+<item><emph render="bold">At Black Mountain College on the shore of Lake Eden </emph>(Box 10, f.22)</item>
+<item><emph render="bold">At dusk by Les Invalides </emph>(see: Les Invalides)</item>
+<item><emph render="bold">At night on the cove </emph>(see: On the shore at night)</item>
+<item><emph render="bold">At the poetry shelf </emph>(see: Poetry shelf)</item>
+<item><emph render="bold">At the reading of a poet's will </emph>(Box 8, f.19, 20; Box 10, f.25)</item>
+<item><emph render="bold">At the summer solstice </emph>(Box 4, f.12)</item>
+<item><emph render="bold">At the window </emph>(see: Lost loves)</item>
+<item><emph render="bold">Auspicious twilight </emph>(see: Another night in the ruins)</item>
+<item><emph render="bold">Aux captifs, aux vaincus </emph>(see: You who survive)</item>
+<item><emph render="bold">Available dwellings </emph>(see: Room of return)</item>
+<item><emph render="bold">Avenue bearing the initial of Christ into the New World </emph>(Box 10, f.26-29, 47-50)</item>
+<item><emph render="bold">Avenue bearing the initial of Christ into the New World </emph>(French) </item>
+<item><emph render="bold">Avenue C </emph>(see: Avenue bearing the initial of Christ into the New World)</item>
+<item><emph render="bold">Awakening </emph>(see: Fall)</item>
+<item><emph render="bold">B</emph></item>
+<item><emph render="bold">La bagare`de </emph>(Box 5, f.7; Box 6, f.3-8)</item>
+<item><emph render="bold">The Babylonian flood </emph>(Box 7, f.36; Box 8, f.20)</item>
+<item><emph render="bold">The Barton Falls </emph>(see: The falls)</item>
+<item><emph render="bold">The Barton River Falls </emph>(see: The falls)</item>
+<item><emph render="bold">The bean's gestures </emph>(Box 4, f.14)</item>
+<item><emph render="bold">The bear </emph>(Box 5, f.8; Box 6, f.3-8)</item>
+<item><emph render="bold">Bear Creek </emph>(see: A trip to the Rockies)</item>
+<item><emph render="bold">The beautiful </emph>(Box 4, f.14)</item>
+<item><emph render="bold">Bed of night </emph>(see: Old arrivals)</item>
+<item><emph render="bold">The bee </emph>(Box 7, f.37; Box 8, f.19 ,21)</item>
+<item><emph render="bold">Beethoven </emph>(Box 4, f.14)</item>
+<item><emph render="bold">Before fire crossed the world </emph>(see: The fly)</item>
+<item><emph render="bold">The beginning </emph>(Box 7, f.38; Box 8, f.19)</item>
+<item><emph render="bold">Birch </emph>(Box 4, f.14)</item>
+<item><emph render="bold">Bird comes back </emph>(Box 8, f.34, 58-65)</item>
+<item><emph render="bold">A bird wheel from the sky </emph>(Box 4, f.14)</item>
+<item><emph render="bold">Birds </emph>(Box 4, f.14)</item>
+<item><emph render="bold">Black gull </emph>(see: Under the Williamsburg Bridge)</item>
+<item><emph render="bold">Black hills </emph>(see: Almeria)</item>
+<item><emph render="bold">Black stones </emph>(see: Almeria)</item>
+<item><emph render="bold">Blackberry eating </emph>(Box 9, f.1; Box 10, f.1-17)</item>
+<item><emph render="bold">Blackberry eating in late September </emph>(see: Blackberry eating)</item>
+<item><emph render="bold">The blind and the deaf </emph>(see: Rehearsal)</item>
+<item><emph render="bold">The blind man </emph>(Box 4, f.14; also a copy appended to: Twilight)</item>
+<item><emph render="bold">The blind pig </emph>(Box 4, f.14)</item>
+<item><emph render="bold">A blossom </emph>(Box 4, f.14)</item>
+<item><emph render="bold">The bookstore </emph>(see: Poetry shelf)</item>
+<item><emph render="bold">The boss </emph>(see: The fly)</item>
+<item><emph render="bold">Braemar </emph>(Box 4, f.14)</item>
+<item><emph render="bold">A branch </emph>(see: Old arrivals)</item>
+<item><emph render="bold">A break in the clouds </emph>(Box 4, f.14)</item>
+<item><emph render="bold">Breathing of silence </emph>(see: Cells breathe in the emptiness)</item>
+<item><emph render="bold">A brief and possibly inadequate defence of whoremaster man </emph>(Box 4, f.14)</item>
+<item><emph render="bold">The bright clouds </emph>(see: In the Anse Galet Valley)</item>
+<item><emph render="bold">Bringing back the mail </emph>(see: Getting the mail)</item>
+<item><emph render="bold">Broken image </emph>(Box 4, f.14)</item>
+<item><emph render="bold">Brooklyn ferry, ferry rider </emph>(see: Old arrivals)</item>
+<item><emph render="bold">Brother of my heart </emph>(Box 9, f.2; Box 10, f.1-17; also a copy appended to Kinnell to Etheridge Knight, n.d.)</item>
+<item><emph render="bold">Buffalo camp </emph>(Box 4, f.14)</item>
+<item><emph render="bold">The bum </emph>(see: One who used to beat his way)</item>
+<item><emph render="bold">A bum walks at midnight </emph>(see: One who used to beat his way)</item>
+<item><emph render="bold">Burial drought </emph>(Box 4, f.14)</item>
+<item><emph render="bold">The burn </emph>(Box 5, f.9; Box 6, f.3-8; verso of Ruth Slonim to Kinnell, Nov. 15, 1965)</item>
+<item><emph render="bold">Burning </emph>(Box 8, f.19, 21; Box 10, f.30, 47-50)</item>
+<item><emph render="bold">Burning the elm </emph>(Box 4, f.14)</item>
+<item><emph render="bold">The butt of one's own cigaret </emph>(see: Fragments from a free thinker)</item>
+<item><emph render="bold">The buzz on the walk </emph>(see: The fly)</item>
+<item><emph render="bold">By a mountain pond </emph>(see: Lost loves)</item>
+<item><emph render="bold">By the battle monument </emph>(Box 4, f.14; also a copy on verso of Buffalo camp)</item>
+<item><emph render="bold">By the Pacific </emph>(see: The milk bottle)</item>
+<item><emph render="bold">C</emph></item>
+<item><emph render="bold">Calcutta </emph>(see: Doppelga"nger)</item>
+<item><emph render="bold">Calcutta visits </emph>(Box 8, f.35, 58-65)</item>
+<item><emph render="bold">The call across the valley of not knowing </emph>(Box 6, f.10, 21-32; Box 7, f.1-31)</item>
+<item><emph render="bold">Canary </emph>(see: Two symbols)</item>
+<item><emph render="bold">Carpet weaving </emph>(Box 4, f.15)</item>
+<item><emph render="bold">The cathedral of the skull </emph>(see: Freedom, New Hampshire)</item>
+<item><emph render="bold">The cavedwellers </emph>(Box 4, f.15)</item>
+<item><emph render="bold">Cells breathe and click in the emptiness </emph>(see: Cells breathe in the emptiness)</item>
+<item><emph render="bold">The cells breathe and click in the silence </emph>(see: Cells breathe in the emptiness)</item>
+<item><emph render="bold">Cells breathe in the emptiness </emph>(Box 8, f.36, 58-65)</item>
+<item><emph render="bold">Ceremony of Kho </emph>(see: Kyoto prints)</item>
+<item><emph render="bold">Chicago </emph>(Box 7, f.39; Box 8, f.20, 21)</item>
+<item><emph render="bold">Chicago storm </emph>(Box 4, f.15)</item>
+<item><emph render="bold">A Chicago view </emph>(see: From a Chicago window)</item>
+<item><emph render="bold">The children </emph>(Box 4, f.l5)</item>
+<item><emph render="bold">Children of Kane </emph>(see: Old arrivals)</item>
+<item><emph render="bold">A Chinese house of three stories </emph>(see: Riddle)</item>
+<item><emph render="bold">The choir </emph>(Box 9, f.3; Box 10, f.1-17)</item>
+<item><emph render="bold">Citheron </emph>(Box 4, f.15)</item>
+<item><emph render="bold">City sidewalks </emph>(Box 4, f.15)</item>
+<item><emph render="bold">The clouds </emph>(see: In the Anse Galet Valley)</item>
+<item><emph render="bold">A cocktail party </emph>(Box 4, f.15)</item>
+<item><emph render="bold">The coiling sky </emph>(Box 10, f.22)</item>
+<item><emph render="bold">The comfort of darkness </emph>(Box 8, f.22, 29, 32, 33)</item>
+<item><emph render="bold">Coming back from the mail box </emph>(see: Getting the mail)</item>
+<item><emph render="bold">Coming back with the mail </emph>(see: Getting the mail)</item>
+<item><emph render="bold">The coming of darkness </emph>(see: Nightfall of the real)</item>
+<item><emph render="bold">The coming of night </emph>(see: Nightfall of the real)</item>
+<item><emph render="bold">Communication from the hotel </emph>(Box 4, f.15)</item>
+<item><emph render="bold">Composed on a Greyhound bus, Route l </emph>(Box 4, f.15)</item>
+<item><emph render="bold">Coney Island </emph>(Box 4, f.15)</item>
+<item><emph render="bold">Conversation at tea </emph>(Box 8, f.23, 28-33)</item>
+<item><emph render="bold">Conversation at twenty </emph>(see: Conversation at tea)</item>
+<item><emph render="bold">Cooks </emph>(Box 4, f.15)</item>
+<item><emph render="bold">Corps de gloire </emph>(see: Nightfall of the real)</item>
+<item><emph render="bold">Corpus Christi </emph>(see: In the Anse Galet Valley)</item>
+<item><emph render="bold">The correspondence school instructor of poetry resigns </emph>(see: The correspondence school instructor says goodbye to his poetry students)</item>
+<item><emph render="bold">The correspondence school instructor of poetry says farewell </emph>(see: The correspondence school instructor says goodbye to his poetry students)</item>
+<item><emph render="bold">The correspondence school instructor says farewell </emph>(see: The correspondence school instructor says goodbye to his poetry students)</item>
+<item><emph render="bold">The correspondence school instructor says goodbye to his poetry students </emph>(Box 5, f.10; Box 6, f.3-8)</item>
+<item><emph render="bold">The country auction </emph>(Box 6, f.22)</item>
+<item><emph render="bold">Country churchyard, two hundred years later </emph>(Box 4, f.15)</item>
+<item><emph render="bold">Country doctor </emph>(Box 7, f.40; Box 8, f.20)</item>
+<item><emph render="bold">The cow of nothingness </emph>(see: Another night in the ruins)</item>
+<item><emph render="bold">Crawling over black stones </emph>(see: Almeria)</item>
+<item><emph render="bold">Creased harbor of our arrivals </emph>(see: Old arrivals)</item>
+<item><emph render="bold">Crying </emph>(Box 9, f.4; Box 10, f.1-17)</item>
+<item><emph render="bold">Crying only a little bit is no use </emph>(see: Crying)</item>
+<item><emph render="bold">Cthonian voice </emph>(see: Lost loves)</item>
+<item><emph render="bold">The cupboard </emph>(Box 4, f.15)</item>
+<item><emph render="bold">D</emph></item>
+<item><emph render="bold">Dance </emph>(Box 4, f.34 - appended to: The student)</item>
+<item><emph render="bold">Darling </emph>(Box 4, f.16)</item>
+<item><emph render="bold">David </emph>(Box 4, f.16)</item>
+<item><emph render="bold">Dawn </emph>(see: Daybreak)</item>
+<item><emph render="bold">Dawn among starfishes </emph>(see: Daybreak)</item>
+<item><emph render="bold">Dawn in mud </emph>(see: Daybreak)</item>
+<item><emph render="bold">A day of sun </emph>(Box 4, f.16)</item>
+<item><emph render="bold">A day's walk on the dunes </emph>(Box 7, f.41; Box 8, f.20)</item>
+<item><emph render="bold">Daybreak </emph>(Box 4, f.16 - appended to: David; Box 9, f.5; Box 10, f.1-17)</item>
+<item><emph render="bold">Dead shall be raised incorruptible </emph>(Box 6, f.11, 21-32; Box 7, f.1-31)</item>
+<item><emph render="bold">The dead shoes </emph>(see: The shoes of wandering)</item>
+<item><emph render="bold">Dear stranger by the blue Juniata </emph>(see: Dear stranger extant in memory by the blue Juniata)</item>
+<item><emph render="bold">Dear stranger extant in memory by the blue Juniata </emph>(Box 6, f.12, 21-32; Box 7, f.1-31)</item>
+<item><emph render="bold">Death of a scientist </emph>(see: Scientific funeral)</item>
+<item><emph render="bold">Death of a sister </emph>(Box 7, f.42; Box 8, f.19-21)</item>
+<item><emph render="bold">Death of the hen </emph>(see: The hen flower)</item>
+<item><emph render="bold">Definition of love </emph>(Box 4, f.16)</item>
+<item><emph render="bold">Denver </emph>(see: Pike's Peak)</item>
+<item><emph render="bold">Departure </emph>(Box 4, f.16)</item>
+<item><emph render="bold">Departures </emph>(see: Lost loves)</item>
+<item><emph render="bold">Derelict </emph>(see: One who used to beat his way)</item>
+<item><emph render="bold">The desert dawn </emph>(Box 4, f.16)</item>
+<item><emph render="bold">Desire </emph>(Box 6, f.22)</item>
+<item><emph render="bold">Destinations </emph>(see: In the bamboo hut)</item>
+<item><emph render="bold">Destinies </emph>(see: In the bamboo hut)</item>
+<item><emph render="bold">Detroit Island </emph>(Box 7, f.43; Box 8, f.19, 20)</item>
+<item><emph render="bold">A dialogue of our time </emph>(Box 4, f.16)</item>
+<item><emph render="bold">Dinner with a hobo, Spring, 1944 </emph>(see: Memory of Wilmington)</item>
+<item><emph render="bold">Dinnertime </emph>(see: Nightfall of the real)</item>
+<item><emph render="bold">A distinction and formulation </emph>(Box 4, f.16)</item>
+<item><emph render="bold">Doppelga"nger </emph>(Box 8, f.37, 58-65)</item>
+<item><emph render="bold">Double jeopardy </emph>(Box 4, f.16)</item>
+<item><emph render="bold">Dream </emph>(Box 7, f.44; Box 8, f.20)</item>
+<item><emph render="bold">Dreams </emph>(see: Lost loves)</item>
+<item><emph render="bold">The dream of Yahweh </emph>(Box 4, f.16)</item>
+<item><emph render="bold">Driftwood under wind </emph>(see: Spindrift)</item>
+<item><emph render="bold">Driving all night in the rain </emph>(Box 4, f.16)</item>
+<item><emph render="bold">Driving south </emph>(Box 4, f.l6)</item>
+<item><emph render="bold">The drunk </emph>(see: One who used to beat his way)</item>
+<item><emph render="bold">The dry cleaning store </emph>(see: The homecoming of Emma Lazarus)</item>
+<item><emph render="bold">The dust </emph>(Box 4, f.16)</item>
+<item><emph render="bold">Dwellings </emph>(see: Room of return)</item>
+<item><emph render="bold">E</emph></item>
+<item><emph render="bold">Earth-lung </emph>(Box 4, f.17)</item>
+<item><emph render="bold">East 63rd Street </emph>(see: The cavedwellers)</item>
+<item><emph render="bold">Easter </emph>(Box 8, f.19, 21; Box 10, f.31, 47-50)</item>
+<item><emph render="bold">Eating blackberries </emph>(see: Blackberry eating)</item>
+<item><emph render="bold">Elegy </emph>(Box 4, f.17)</item>
+<item><emph render="bold">Emigrants </emph>(Box 7, f.45; Box 8, f.19-21)</item>
+<item><emph render="bold">Empire room </emph>(Box 4, f.17)</item>
+<item><emph render="bold">End of summer </emph>(see: The fly)</item>
+<item><emph render="bold">The end of the trail </emph>(Box 4, f.32 - appended to: The soldier- hobo)</item>
+<item><emph render="bold">England has no need of you John Milton </emph>(Box 4, f.17)</item>
+<item><emph render="bold">An English lady's dream </emph>(see: Knight on a white horse)</item>
+<item><emph render="bold">Epilogue to De Rerum Natura </emph>(Box 4, f.17)</item>
+<item><emph render="bold">European sonnets </emph>(Box 4, f.17)</item>
+<item><emph render="bold">Evening of the hurricane </emph>(Box 4, f.17)</item>
+<item><emph render="bold">An evening walk </emph>(Box 7, f.46; Box 8, f.19-21)</item>
+<item><emph render="bold">Everything </emph>(see: Another night in the ruins)</item>
+<item><emph render="bold">Everything that is </emph>(Box 4, f.17)</item>
+<item><emph render="bold">Evolution </emph>(Box 4, f.17)</item>
+<item><emph render="bold">An expatriot's constitutional </emph>(Box 4, f.17)</item>
+<item><emph render="bold">F</emph></item>
+<item><emph render="bold">F. Scott Fitzgerald </emph>(Box 4, f.18)</item>
+<item><emph render="bold">Face in the darkness </emph>(see: Poems of night)</item>
+<item><emph render="bold">Face looking down from the barred window </emph>(see: Sixth Avenue in the rain)</item>
+<item><emph render="bold">Fall </emph>(Box 4, f.18)</item>
+<item><emph render="bold">Fall and spring </emph>(Box 7, f.47; Box 8, f.19, 20, 29)</item>
+<item><emph render="bold">The falls </emph>(Box 5, f.11; Box 6, f.3-8)</item>
+<item><emph render="bold">The farewell of the correspondence school instructor </emph>(see: The correspondence school instructor says goodbye to his poetry students)</item>
+<item><emph render="bold">The farmhouse </emph>(see: In the farmhouse)</item>
+<item><emph render="bold">Farm picture </emph>(Box 4, f.18)</item>
+<item><emph render="bold">The fat woman in the Trinity churchyard </emph>(see: Hunger unto death)</item>
+<item><emph render="bold">The feast </emph>(Box 8, f.20, 24, 28-33)</item>
+<item><emph render="bold">The feet </emph>(see: The vestige of the wing)</item>
+<item><emph render="bold">The feet of Magdalene </emph>(see: Mary Magdalene)</item>
+<item><emph render="bold">Fergus falling </emph>(Box 9, f.6; Box 10, f.1-17)</item>
+<item><emph render="bold">Ferry </emph>(see: Old arrivals)</item>
+<item><emph render="bold">Ferry-rider </emph>(see: Old arrivals)</item>
+<item><emph render="bold">52 Oswald Street </emph>(Box 9, f.7; Box 10, f.1-17)</item>
+<item><emph render="bold">Figures in New York harbor </emph>(see: The homecoming of Emma Lazarus)</item>
+<item><emph render="bold">Figures in the rose garden </emph>(see: Testament of the thief)</item>
+<item><emph render="bold">Figures out of time </emph>(Box 4, f.18)</item>
+<item><emph render="bold">Fire </emph>(see: Fire and stone)</item>
+<item><emph render="bold">Fire and stone </emph>(Box 6, f.23)</item>
+<item><emph render="bold">The fire makers </emph>(Box 4, f.18)</item>
+<item><emph render="bold">A first communion </emph>(Box 8, f.19-21; Box 10, f.20, 32, 47-50)</item>
+<item><emph render="bold">First fruits </emph>(Box 4, f.18)</item>
+<item><emph render="bold">The first poem </emph>(see: Under the Maud Moon)</item>
+<item><emph render="bold">First snow </emph>(see: Winter's first snow)</item>
+<item><emph render="bold">First song </emph>(Box 8, f.19-21; Box 10, f.33, 47-50)</item>
+<item><emph render="bold">Fish dinner </emph>(see: Nightfall of the real)</item>
+<item><emph render="bold">Fisher </emph>(Box 4, f.18)</item>
+<item><emph render="bold">Fisherman </emph>(Box 9, f.8; Box 10, f.1-17)</item>
+<item><emph render="bold">Five black bones </emph>(see: Five man's bones)</item>
+<item><emph render="bold">Five bones </emph>(see: Five man's bones)</item>
+<item><emph render="bold">Five poems </emph>(see: Another night in the ruins)</item>
+<item><emph render="bold">A flat contradiction </emph>(see: England has no need of you John Milton)</item>
+<item><emph render="bold">Flock at sunset over the valley of rivers </emph>(Box 4, f.19)</item>
+<item><emph render="bold">The flood </emph>(Box 4, f.19)</item>
+<item><emph render="bold">The flowers of Galilee </emph>(see: Frost, 1950)</item>
+<item><emph render="bold">The fly </emph>(Box 5, f.12; Box 6, f.3-8)</item>
+<item><emph render="bold">Fly child </emph>(Box 4, f.19)</item>
+<item><emph render="bold">Flying home </emph>(Box 9, f.9; Box 10, f.1-17)</item>
+<item><emph render="bold">The foot </emph>(see: The vestige of the wing)</item>
+<item><emph render="bold">For a child who wakens at night </emph>(see: Little sleep's-head sprouting hair in the moonlight)</item>
+<item><emph render="bold">For a flyer forced down in the Pacific </emph>(Box 4, f.14 - appended to: The blind man; Box 4, f.36 - appended to: Twilight)</item>
+<item><emph render="bold">For a village burial </emph>(Box 4, f.19)</item>
+<item><emph render="bold">For Denise Levertov </emph>(Box 8, f.58, 60)</item>
+<item><emph render="bold">For Etheridge Knight </emph>(see: Brother of my heart)</item>
+<item><emph render="bold">For Hart Crane </emph>(see: Two poems for dead poets)</item>
+<item><emph render="bold">For her birthday </emph>(Box 4, f.34 - appended to: The sunlight)</item>
+<item><emph render="bold">For Inger </emph>(Box 4, f.19)</item>
+<item><emph render="bold">For Robert Frost </emph>(Box 8, f.38, 58-65)</item>
+<item><emph render="bold">For the goddess of romanticism </emph>(see: The goddess of romanticism)</item>
+<item><emph render="bold">For the hundredth birthday of Robert Frost </emph>(see: For Robert Frost)</item>
+<item><emph render="bold">For the last judgement </emph>(see: Primer for the last judgement)</item>
+<item><emph render="bold">For the lost generation </emph>(Box 8, f.20, 21; Box 10, f.20, 34, 47-50)</item>
+<item><emph render="bold">For William Carlos Williams </emph>(Box 8, f.20, 21; Box 10, f.20, 35, 47-50)</item>
+<item><emph render="bold">For William Shakespeare </emph>(see: Two poems for dead poets)</item>
+<item><emph render="bold">Forbidden pictures of nudes </emph>(Box 4, f.19)</item>
+<item><emph render="bold">Forms of absence </emph>(see: Another night in the ruins)</item>
+<item><emph render="bold">Forms of wind </emph>(see: Another night in the ruins)</item>
+<item><emph render="bold">Fossils </emph>(Box 5, f.13; Box 6, f.3-8)</item>
+<item><emph render="bold">Four stories </emph>(Box 4, f.19)</item>
+<item><emph render="bold">Four winds in one heart </emph>(Box 4, f.19)</item>
+<item><emph render="bold">A fragment </emph>(Box 4, f.19)</item>
+<item><emph render="bold">Fragmentary tinder </emph>(Box 4, f.19)</item>
+<item><emph render="bold">Fragments </emph>(Box 4, f.19)</item>
+<item><emph render="bold">Fragments (for Natasha)</emph>(Box 4, f.19)</item>
+<item><emph render="bold">Fragments from a free thinker </emph>(Box 4, f.19)</item>
+<item><emph render="bold">Freedom, New Hampshire </emph>(Box 10, f.36-38, 47-50)</item>
+<item><emph render="bold">Freedom, New Hampshire </emph>(in French) (Box 4, f.19)</item>
+<item><emph render="bold">The frog pond </emph>(see: Vapor trail reflected in the frog pond)</item>
+<item><emph render="bold">From a Chicago window </emph>(Box 4, f.19)</item>
+<item><emph render="bold">From a classroom wall </emph>(Box 4, f.19)</item>
+<item><emph render="bold">From the house on the cliff over the harbor </emph>(see: Nightfall of the real)</item>
+<item><emph render="bold">From the Michigan Bridge </emph>(Box 8, f.19, 20)</item>
+<item><emph render="bold">From the window: twilight </emph>(Box 4, f.14 - appended to: The blind man)</item>
+<item><emph render="bold">From this window </emph>(Box 4, f.19)</item>
+<item><emph render="bold">Frost: 1950 </emph>(Box 4, f.19; Box 4, f.28 - appended to: On the young of the Enicospilus purgatus who feed on the intestines of caterpillars)</item>
+<item><emph render="bold">Frozen crust </emph>(see: Going home by last light)</item>
+<item><emph render="bold">The frugal tablecloth </emph>(see: Nightfall of the real)</item>
+<item><emph render="bold">Fugitive pieces </emph>(Box 4, f.19)</item>
+<item><emph render="bold">Full circle </emph>(Box 4, f.19)</item>
+<item><emph render="bold">Full moon </emph>(Box 7, f.48; Box 8, f.19; Box 22, f.30)</item>
+<item><emph render="bold">G</emph></item>
+<item><emph render="bold">The gallows </emph>(Box 8, f.25, 29, 32, 33)</item>
+<item><emph render="bold">Game </emph>(Box 7, f.49; Box 8, f.19)</item>
+<item><emph render="bold">The garden </emph>(see: Testament of the thief)</item>
+<item><emph render="bold">A garret, room, and house </emph>(see: Room of return)</item>
+<item><emph render="bold">Geometry lesson </emph>(Box 7, f.50; Box 8, f.19-21)</item>
+<item><emph render="bold">A germ in the crevice of a urinal </emph>(Box 4, f.20)</item>
+<item><emph render="bold">Gestures </emph>(see: Gestures of love)</item>
+<item><emph render="bold">Gestures of love </emph>(Box 4, f.20)</item>
+<item><emph render="bold">Getting the mail </emph>(Box 5, f.14; Box 6, f.3-8)</item>
+<item><emph render="bold">Girl on rocks </emph>(see: Lost loves)</item>
+<item><emph render="bold">The glade at dusk </emph>(see: In the glade at dusk)</item>
+<item><emph render="bold">Glints of green </emph>(see: Lost loves)</item>
+<item><emph render="bold">Glitter of dust </emph>(see: The dust)</item>
+<item><emph render="bold">The glow </emph>(Box 4, f.20)</item>
+<item><emph render="bold">The goddess of romanticism </emph>(Box 4, f.20)</item>
+<item><emph render="bold">Going for the mail </emph>(see: Getting the mail)</item>
+<item><emph render="bold">Going home by last light </emph>(Box 5, f.15; Box 6, f.3-8)</item>
+<item><emph render="bold">Going through the market on my way home by last light </emph>(see: Going home by last light)</item>
+<item><emph render="bold">The good father </emph>(Box 4, f.20)</item>
+<item><emph render="bold">Goodbye </emph>(Box 9, f.10; Box 10, f.1-17)</item>
+<item><emph render="bold">Goodbyes </emph>(Box 4, f.20)</item>
+<item><emph render="bold">Gothic slide </emph>(Box 8, f.20, 21; Box 10, f.39, 47-50)</item>
+<item><emph render="bold">Grass </emph>(see: Freedom, New Hampshire)</item>
+<item><emph render="bold">Graveyard </emph>(Box 4, f.20)</item>
+<item><emph render="bold">Great old days </emph>(Box 4, f.20)</item>
+<item><emph render="bold">Green elegy </emph>(see: Freedom, New Hampshire)</item>
+<item><emph render="bold">Green: for a brother </emph>(see: Freedom, New Hampshire)</item>
+<item><emph render="bold">Green: for my brother, 1925-1957 </emph>(see: Freedom, New Hampshire)</item>
+<item><emph render="bold">Green place </emph>(see: Freedom, New Hampshire)</item>
+<item><emph render="bold">Green place for a brother </emph>(see: Freedom, New Hampshire)</item>
+<item><emph render="bold">The green world </emph>(see: Freedom, New Hampshire)</item>
+<item><emph render="bold">The grey heron </emph>(Box 9, f.11; Box 10, f.1-17)</item>
+<item><emph render="bold">Gripe-guts </emph>(Box 7, f.51; Box 8, f.19)</item>
+<item><emph render="bold">Guillaume de Lorris finds the rose </emph>(see: Old arrivals)</item>
+<item><emph render="bold">A gull's destination </emph>(see: Old arrivals)</item>
+<item><emph render="bold">H</emph></item>
+<item><emph render="bold">The halcyon lover </emph>(Box 4, f.21)</item>
+<item><emph render="bold">Half sleep </emph>(see: The fly)</item>
+<item><emph render="bold">The hanged thief </emph>(see: Testament of the thief)</item>
+<item><emph render="bold">The hanging heart </emph>(Box 10, f.22)</item>
+<item><emph render="bold">Happiness </emph>(see: The milk bottle)</item>
+<item><emph render="bold">Harbor </emph>(see: Old arrivals)</item>
+<item><emph render="bold">Harbor darkness </emph>(see: Old arrivals)</item>
+<item><emph render="bold">Harbor hymn </emph>(see: Old arrivals)</item>
+<item><emph render="bold">Hardscrabble Mountain </emph>(see: On Hardscrabble Mountain)</item>
+<item><emph render="bold">Harmony </emph>(Box 4, f.21)</item>
+<item><emph render="bold">Having a drink in a train </emph>(Box 4, f.21)</item>
+<item><emph render="bold">He arrives </emph>(Box 4, f.21)</item>
+<item><emph render="bold">The hen </emph>(see: The hen flower)</item>
+<item><emph render="bold">The hen flower </emph>(Box 6, f.13, 21-32; Box 7, f.1-31)</item>
+<item><emph render="bold">Her face in the darkness </emph>(see: Poems of night)</item>
+<item><emph render="bold">Her first son </emph>(Box 7, f.52; Box 8, f.20)</item>
+<item><emph render="bold">Here &amp; now </emph>(see: Lost loves)</item>
+<item><emph render="bold">The heretic tyrant of Forli </emph>(Box 7, f.53; Box 8, f.20, 21)</item>
+<item><emph render="bold">High noon on LaSalle Street </emph>(see: Noon on LaSalle Street)</item>
+<item><emph render="bold">A history lesson </emph>(Box 4, f.21)</item>
+<item><emph render="bold">Holm oak </emph>(Box 4, f.21)</item>
+<item><emph render="bold">The holy kiln </emph>(Box 4, f.21)</item>
+<item><emph render="bold">The holy land </emph>(see: Last hiding places of snow)</item>
+<item><emph render="bold">Homecoming of Emma Lazarus </emph>(Box 8, f.39, 58-65)</item>
+<item><emph render="bold">The homeward trail </emph>(Box 4, f.32 - appended to: The soldier-hobo)</item>
+<item><emph render="bold">Hotel </emph>(see: Hotel room)</item>
+<item><emph render="bold">Hotel commercial </emph>(see: Hotel room)</item>
+<item><emph render="bold">Hotel de commerce </emph>(see: Hotel room)</item>
+<item><emph render="bold">Hotel of lost light </emph>(see: In the hotel of lost light)</item>
+<item><emph render="bold">Hotel room </emph>(Box 6, f.20)</item>
+<item><emph render="bold">A hotel room in a strange city </emph>(see: Hotel room)</item>
+<item><emph render="bold">Hotel room somewhere </emph>(see: Hotel room)</item>
+<item><emph render="bold">Hour of the lamp </emph>(see: Nightfall of the real)</item>
+<item><emph render="bold">House on the cliff </emph>(see: Nightfall of the real)</item>
+<item><emph render="bold">How many nights </emph>(Box 5, f.16; Box 6, f.3-8; Box 22, f.30)</item>
+<item><emph render="bold">Hunger unto death </emph>(Box 8, f.40, 58-65)</item>
+<item><emph render="bold">I</emph></item>
+<item><emph render="bold">I lie in fields of summer </emph>(see: In fields of summer)</item>
+<item><emph render="bold">I married a vision, did you? </emph>(Box 4, f.22)</item>
+<item><emph render="bold">I put a stone to my ear </emph>(see: Lost loves)</item>
+<item><emph render="bold">I visit the Isaiah Bar </emph>(see: Doppelga"nger)</item>
+<item><emph render="bold">I wake from drunken sleep </emph>(see: Testament of the thief)</item>
+<item><emph render="bold">In a ditch </emph>(Box 4, f.22)</item>
+<item><emph render="bold">In a forest in Vermont </emph>(see: Vapor trail reflected in the frog pond)</item>
+<item><emph render="bold">In a hotel room </emph>(see: Hotel room)</item>
+<item><emph render="bold">In a hotel room in a strange city </emph>(see: Hotel room)</item>
+<item><emph render="bold">In a hotel room in a strange town </emph>(see: Hotel room)</item>
+<item><emph render="bold">In a television house </emph>(Box 4, f.22)</item>
+<item><emph render="bold">In a tree </emph>(see: Going home by last light)</item>
+<item><emph render="bold">In fields of summer </emph>(Box 8, f.41, 58-65)</item>
+<item><emph render="bold">In late fall </emph>(see: Vapor trail reflected in the frog pond)</item>
+<item><emph render="bold">In one of the bays of the Pont Neuf at nightfall </emph>(see: Pont Neuf at nightfall)</item>
+<item><emph render="bold">In praise of the goddess of romanticism </emph>(see: The goddess of romanticism)</item>
+<item><emph render="bold">In the Anse Galet Valley </emph>(Box 5, f.17; Box 6, f.3-8)</item>
+<item><emph render="bold">In the bamboo hut </emph>(Box 9, f.12; Box 10, f.1-17)</item>
+<item><emph render="bold">In the bookstore </emph>(see: Poetry shelf)</item>
+<item><emph render="bold">In the dusk by Les Invalides </emph>(see: Les Invalides)</item>
+<item><emph render="bold">In the dust by Les Invalides </emph>(see: Les Invalides)</item>
+<item><emph render="bold">In the farmhouse </emph>(Box 5, f.18; Box 6, f.3-8)</item>
+<item><emph render="bold">In the glade at dusk </emph>(Box 7, f.54; Box 8, f.19-21, 29, 32, 33)</item>
+<item><emph render="bold">In the hills </emph>(Box 4, f.22)</item>
+<item><emph render="bold">In the hills behind Anse Galet </emph>(see: In the Anse Galet Valley)</item>
+<item><emph render="bold">In the hospital </emph>(see: Lost loves)</item>
+<item><emph render="bold">In the hotel of lost light </emph>(Box 6, f.14, 21-32; Box 7, f.1-31)</item>
+<item><emph render="bold">In the house of happiness </emph>(see: There are things I tell no one but a poem)</item>
+<item><emph render="bold">In the Persian garden </emph>(see: Testament of the thief)</item>
+<item><emph render="bold">In the police station </emph>(Box 4, f.22)</item>
+<item><emph render="bold">In the temple </emph>(Box 4, f.22)</item>
+<item><emph render="bold">In this bamboo hut </emph>(see: In the bamboo hut)</item>
+<item><emph render="bold">In time of war </emph>(Box 4, f.22)</item>
+<item><emph render="bold">Incorruptible </emph>(see: And the dead shall be raised incorruptible)</item>
+<item><emph render="bold">Indian bread </emph>(Box 7, f.55; Box 8, f.19, 20, 28-33)</item>
+<item><emph render="bold">Indian summer </emph>(Box 7, f.56; Box 8, f.19-21)</item>
+<item><emph render="bold">The Indiana dunes </emph>(Box 4, f.22)</item>
+<item><emph render="bold">The indifferent </emph>(Box 4, f.22)</item>
+<item><emph render="bold">Infidel in the city </emph>(Box 4, f.22)</item>
+<item><emph render="bold">Inscribed on the fly-leaf of Petrarch </emph>(Box 4, f.22)</item>
+<item><emph render="bold">The instant </emph>(see: Another night in the ruins)</item>
+<item><emph render="bold">Into the rain forest </emph>(Box 6, f.22)</item>
+<item><emph render="bold">Into the Sierra Nevadas </emph>(Box 4, f.22)</item>
+<item><emph render="bold">Les Invalides </emph>(Box 9, f.13; Box 10, f.1-17)</item>
+<item><emph render="bold">Island of night </emph>(Box 7, f.57; Box 8, f.19-21, 29, 32, 33; Box 4, f.35 - appended to: To a disheartened poet)</item>
+<item><emph render="bold">J</emph></item>
+<item><emph render="bold">The Jewess </emph>(Box 7, f.58; Box 8, f.20, 21; Box 10, f.20; Box 4, f.35 - appended to: To N.R.)</item>
+<item><emph render="bold">The joining of waters </emph>(Box 7, f.59; Box 8, f.20)</item>
+<item><emph render="bold">Joseph </emph>(Box 4, f.23)</item>
+<item><emph render="bold">K</emph></item>
+<item><emph render="bold">Killing of hen </emph>(see: The hen flower)</item>
+<item><emph render="bold">Kissing the toad </emph>(Box 9, f.14; Box 10, f.1-17)</item>
+<item><emph render="bold">Kitchen </emph>(Box 4, f.23)</item>
+<item><emph render="bold">Knight on a white horse </emph>(Box 4, f.23)</item>
+<item><emph render="bold">Koisimi buddhist of altitudes </emph>(Box 8, f.42, 58-65)</item>
+<item><emph render="bold">Koisimi doomed buddhist of altitudes </emph>(see: Koisimi, buddhist of altitudes)</item>
+<item><emph render="bold">Kyoto </emph>(see: Kyoto prints)</item>
+<item><emph render="bold">Kyoto prints </emph>(Box 8, f.43, 58-65)</item>
+<item><emph render="bold">Kyrie eleison </emph>(Box 4, f.23)</item>
+<item><emph render="bold">L</emph></item>
+<item><emph render="bold">Lake Shore, Chicago </emph>(Box 4, f.24)</item>
+<item><emph render="bold">Lament for the porcupine </emph>(see: The porcupine)</item>
+<item><emph render="bold">Lament in praise of the porcupine </emph>(see: The porcupine)</item>
+<item><emph render="bold">Land of the poem </emph>(see: The poem)</item>
+<item><emph render="bold">Last day together </emph>(Box 4, f.24)</item>
+<item><emph render="bold">The last day by the sea </emph>(see: To the sea: A hymn written on the last day by her shore)</item>
+<item><emph render="bold">Last grace </emph>(see: There are things I tell no one but a poem)</item>
+<item><emph render="bold">Last hiding places of snow </emph>(Box 9, f.15-17; Box 10, f.1-17)</item>
+<item><emph render="bold">The last horse </emph>(see: The last horse in the Washington Street Market)</item>
+<item><emph render="bold">The last horse in the Washington Street Market </emph>(Box 4, f.24)</item>
+<item><emph render="bold">The last match </emph>(see: On the tennis court at night)</item>
+<item><emph render="bold">The last mourner </emph>(Box 4, f.24)</item>
+<item><emph render="bold">The last river </emph>(Box 5, f.19-21; Box 6, f.3-8)</item>
+<item><emph render="bold">Last rooms </emph>(see: Room of return)</item>
+<item><emph render="bold">The last singing </emph>(see: Last songs)</item>
+<item><emph render="bold">Last songs </emph>(Box 5, f.22; Box 6, f.3-8)</item>
+<item><emph render="bold">Last spring </emph>(Box 8, f.44, 58-65)</item>
+<item><emph render="bold">Last tarot </emph>(Box 4, f.24)</item>
+<item><emph render="bold">Last tennis match of the year </emph>(see: On the tennis court at night)</item>
+<item><emph render="bold">The last time together </emph>(see: Last day together)</item>
+<item><emph render="bold">The last will of Christian Maw </emph>(see: Dead shall be raised incorruptible)</item>
+<item><emph render="bold">Last will of the thief </emph>(see: Testament of the thief)</item>
+<item><emph render="bold">Lastness </emph>(Box 6, f.15, 21-32; Box 7, f.1-31)</item>
+<item><emph render="bold">Late-winter gulls </emph>(Box 7, f.60; Box 8, f.21)</item>
+<item><emph render="bold">Lava </emph>(Box 9, f.18; Box 10, f.1-17)</item>
+<item><emph render="bold">Leafs </emph>(see: Lost loves)</item>
+<item><emph render="bold">The leaping falls </emph>(Box 4, f.24)</item>
+<item><emph render="bold">Leaping mantas </emph>(see: Mantas)</item>
+<item><emph render="bold">Learning to walk </emph>(see: Last spring)</item>
+<item><emph render="bold">The lecturer </emph>(Box 4, f.24)</item>
+<item><emph render="bold">The lecturer: A (melo)dramatic monologue </emph>(see: The lecturer)</item>
+<item><emph render="bold">Leta </emph>(Box 4, f.24)</item>
+<item><emph render="bold">Letter </emph>(see: Getting the mail)</item>
+<item><emph render="bold">Life's amateurs, we </emph>(Box 4, f.24)</item>
+<item><emph render="bold">A light </emph>(Box 4, f.24)</item>
+<item><emph render="bold">Lights at the shore of the sea </emph>(see: Spindrift)</item>
+<item><emph render="bold">Lilacs </emph>(Box 8, f.19, 20; Box 10, f.40, 47-50)</item>
+<item><emph render="bold">Lines composed a few miles above Nassau Tavern </emph>(Box 4, f.24)</item>
+<item><emph render="bold">Literary cocktail </emph>(Box 4, f.24)</item>
+<item><emph render="bold">Literary cocktail party in Paris </emph>(see: Literary cocktail)</item>
+<item><emph render="bold">The littered beach </emph>(see: Spindrift)</item>
+<item><emph render="bold">Little boy </emph>(Box 4, f.24)</item>
+<item><emph render="bold">Little children and the future </emph>(see: Two set out on their journey)</item>
+<item><emph render="bold">Little children's prayer </emph>(see: Two set out on their journey)</item>
+<item><emph render="bold">Little sleep's-head sprouting hair in the moonlight </emph>(Box 6, f.16, 21-32; Box 7, f.1-31)</item>
+<item><emph render="bold">A live branch </emph>(see: Old arrivals)</item>
+<item><emph render="bold">Lizard Island </emph>(see: Daybreak)</item>
+<item><emph render="bold">Lizard Island </emph>(see: The grey heron)</item>
+<item><emph render="bold">Looking at your face </emph>(Box 9, f.19; Box 10, f.1-17)</item>
+<item><emph render="bold">Lost loves </emph>(Box 5, f.23; Box 6, f.3-8)</item>
+<item><emph render="bold">The lost rooms </emph>(see: Room of returns)</item>
+<item><emph render="bold">Love through two seasons </emph>(see: Two seasons)</item>
+<item><emph render="bold">Loves </emph>(see: Lost loves)</item>
+<item><emph render="bold">Love-tree </emph>(Box 4, f.24; Box 4, f.12 - appended to: After blossom-time)</item>
+<item><emph render="bold">Lunch hour </emph>(see: Hunger unto death)</item>
+<item><emph render="bold">M</emph></item>
+<item><emph render="bold">The machine age </emph>(Box 4, f.25)</item>
+<item><emph render="bold">The mail </emph>(see: Getting the mail)</item>
+<item><emph render="bold">The mailbox </emph>(see: Getting the mail)</item>
+<item><emph render="bold">A man </emph>(see: One who used to beat his way)</item>
+<item><emph render="bold">Mango </emph>(Box 5, f.24; Box 6, f.3-8)</item>
+<item><emph render="bold">Mangoes </emph>(see: Mango)</item>
+<item><emph render="bold">Manner of walking </emph>(see: Last spring)</item>
+<item><emph render="bold">Man's bones </emph>(Box 4, f.25)</item>
+<item><emph render="bold">Mantas </emph>(Box 4, f.25)</item>
+<item><emph render="bold">Many loves </emph>(see: Lost loves)</item>
+<item><emph render="bold">The marriage of body and soul </emph>(Box 4, f.25)</item>
+<item><emph render="bold">Mary Magdalene </emph>(Box 4, f.25)</item>
+<item><emph render="bold">The mason </emph>(Box 6, f.22)</item>
+<item><emph render="bold">The material paradise </emph>(see: Testament of the thief)</item>
+<item><emph render="bold">Matin </emph>(see: The burn)</item>
+<item><emph render="bold">Maud and Fergus join Ine,s and me in our bed </emph>(see: After making love we hear footsteps)</item>
+<item><emph render="bold">Maxwell Street </emph>(Box 7, f.61; Box 8, f.21)</item>
+<item><emph render="bold">Meditation among the tombs </emph>(Box 8, f.26, 28-33)</item>
+<item><emph render="bold">Meditation in a coffin </emph>(Box 4, f.25)</item>
+<item><emph render="bold">Meditation in the tombs </emph>(see: Meditation among the tombs)</item>
+<item><emph render="bold">Melting </emph>(see: Snowman)</item>
+<item><emph render="bold">Memories of the child wife </emph>(Box 4, f.25)</item>
+<item><emph render="bold">Memory </emph>(Box 4, f.25)</item>
+<item><emph render="bold">Memory of March, 1944 </emph>(see: Memory of Wilmington)</item>
+<item><emph render="bold">Memory of Wilmington </emph>(Box 9, f.20; Box 10, f.1-17)</item>
+<item><emph render="bold">Middle of my journey </emph>(see: Middle of the way)</item>
+<item><emph render="bold">Middle of the way </emph>(Box 8, f.45, 58-65)</item>
+<item><emph render="bold">The Milesian school </emph>(Box 4, f.25)</item>
+<item><emph render="bold">Milk bottle </emph>(Box 9, f.21; Box 10, f.1-17)</item>
+<item><emph render="bold">The mill </emph>(appended to: The desert dawn)</item>
+<item><emph render="bold">Minters </emph>(Box 4, f.25)</item>
+<item><emph render="bold">Mitchigamie </emph>(Box 7, f.62; Box 8, f.20)</item>
+<item><emph render="bold">Modern love </emph>(Box 4, f.26; see also: The apple)</item>
+<item><emph render="bold">Morning </emph>(Box 4, f.26)</item>
+<item><emph render="bold">Mother of schoolchildren </emph>(Box 4, f.26)</item>
+<item><emph render="bold">Mount Rainier </emph>(see: Mount Rainier at sunset)</item>
+<item><emph render="bold">Mount Rainier at sunset </emph>(Box 4, f.26)</item>
+<item><emph render="bold">Mount St. Helena </emph>(Box 4, f.26)</item>
+<item><emph render="bold">Mountain pond </emph>(see: Lost loves)</item>
+<item><emph render="bold">Mountain sleep </emph>(see: On Hardscrabble Mountain)</item>
+<item><emph render="bold">The mouth of Kilchis River </emph>(see: The burn)</item>
+<item><emph render="bold">oving water </emph>(see: Under the Williamsburg Bridge)</item>
+<item><emph render="bold">Music </emph>(see: Music for the world)</item>
+<item><emph render="bold">The music box </emph>(see: The apple)</item>
+<item><emph render="bold">Music for the world </emph>(Box 4, f.26)</item>
+<item><emph render="bold">Music of grace </emph>(see: There are things I tell no one but a poem)</item>
+<item><emph render="bold">My house over the harbor </emph>(see: Nightfall of the real)</item>
+<item><emph render="bold">My pilgrimage </emph>(appended to : A brief and possibly inadequate defence of whoremaster man)</item>
+<item><emph render="bold">My scallop shell </emph>(Box 4, f.26)</item>
+<item><emph render="bold">My soul is a wild stream </emph>(Box 10, f.22)</item>
+<item><emph render="bold">Mystic river </emph>(see: The last river)</item>
+<item><emph render="bold">N</emph></item>
+<item><emph render="bold">Names </emph>(see: Lost loves)</item>
+<item><emph render="bold">La nappe frugal </emph>(see: Nightfall of the real)</item>
+<item><emph render="bold">Nature worship </emph>(appended to: The twilight of the image)</item>
+<item><emph render="bold">Near Barbizon </emph>(Box 10, f.20)</item>
+<item><emph render="bold">New boy </emph>(Box 7, f.63; Box 8, f.19, 20)</item>
+<item><emph render="bold">The new year </emph>(see: Another night in the ruins)</item>
+<item><emph render="bold">The new year passes </emph>(see: Another night in the ruins)</item>
+<item><emph render="bold">The night </emph>(see: The stilltime)</item>
+<item><emph render="bold">Night beach </emph>(see: On the shore at night)</item>
+<item><emph render="bold">Night in the forest </emph>(Box 5, f.25; Box 6, f.3-8)</item>
+<item><emph render="bold">Night in the ruined farm? </emph>(see: Another night in the ruins)</item>
+<item><emph render="bold">A night in the ruins </emph>(see: Another night in the ruins)</item>
+<item><emph render="bold">Night on the cove </emph>(see: On the shore at night)</item>
+<item><emph render="bold">The nightmare </emph>(see: Little sleep's-head sprouting hair in the moonlight)</item>
+<item><emph render="bold">Nightmare of a child </emph>(see: Little sleep's-head sprouting hair in the moonlight)</item>
+<item><emph render="bold">Night song </emph>(Box 8, f. 27, 29, 32, 33)</item>
+<item><emph render="bold">Nightfall of the real </emph>(Box 8, f.46, 58-65) 1950 (Box 4, f.27)</item>
+<item><emph render="bold">No smoking in the south stacks </emph>(see: Fragments from a free thinker)</item>
+<item><emph render="bold">Noon on LaSalle Street </emph>(Box 7, f.64; Box 8, f.19, 21)</item>
+<item><emph render="bold">North train </emph>(Box 4, f.27)</item>
+<item><emph render="bold">The northern crown over the dunes </emph>(Box 4, f.27)</item>
+<item><emph render="bold">Norway </emph>(see: Last day together)</item>
+<item><emph render="bold">Notation </emph>(Box 7, f.65; Box 8, f.19)</item>
+<item><emph render="bold">Notes of an insomniac </emph>(Box 4, f.27)</item>
+<item><emph render="bold">November 5, 1952 </emph>(Box 4, f.27)</item>
+<item><emph render="bold">O</emph></item>
+<item><emph render="bold">O' lost! </emph>(Box 4, f.28)</item>
+<item><emph render="bold">Oak </emph>(Box 4, f.28; see also: Oaktree)</item>
+<item><emph render="bold">Oaktree </emph>(Box 4, f.28)</item>
+<item><emph render="bold">Ocean sunset </emph>(Box 4, f.28)</item>
+<item><emph render="bold">October by the sea: The last evening </emph>(Box 7, f.66; Box 8, f.19, 20)</item>
+<item><emph render="bold">The October sea </emph>(see: October by the sea: The last evening)</item>
+<item><emph render="bold">Ode on freedom </emph>(Box 4, f.28)</item>
+<item><emph render="bold">An ode to joy or sorrow </emph>(Box 4, f.28)</item>
+<item><emph render="bold">Oh, any stone on the earth </emph>(see: Lost loves)</item>
+<item><emph render="bold">Old arrivals </emph>(Box 8, f.47, 58-65)</item>
+<item><emph render="bold">An old manifesto </emph>(Box 4, f.28)</item>
+<item><emph render="bold">An old man's fish dinner </emph>(see: Nightfall of the real)</item>
+<item><emph render="bold">Old men in Naso's variety store </emph>(see: The homecoming of Emma Lazarus)</item>
+<item><emph render="bold">The old moon </emph>(Box 7, f.67; Box 8, f.29, 32, 33)</item>
+<item><emph render="bold">The old opium smoker </emph>(Box 4, f.28)</item>
+<item><emph render="bold">Olive drifted from Andalusia </emph>(see: Tree from Andalusia)</item>
+<item><emph render="bold">On a blind horse </emph>(Box 4, f.28)</item>
+<item><emph render="bold">On a dead child </emph>(Box 7, f.68; Box 8, f.19, 20)</item>
+<item><emph render="bold">On a dog and his master </emph>(see: Fragments from a free thinker)</item>
+<item><emph render="bold">On ashes </emph>(see: Lost loves)</item>
+<item><emph render="bold">On cliffs over the harbor </emph>(see: Nightfall of the real)</item>
+<item><emph render="bold">On frozen fields </emph>(Box 8, f.48, 58-65)</item>
+<item><emph render="bold">On Hardscrabble Mountain </emph>(Box 8, f.49, 58-65)</item>
+<item><emph render="bold">On having been handed a book called "Forbidden pictures of nudes" </emph>(see: Forbidden pictures of nudes)</item>
+<item><emph render="bold">On having read Yeats' "A vision" </emph>(Box 4, f.28)</item>
+<item><emph render="bold">On hearing Eric Kahler read from Rilke </emph>(Box 10, f.22)</item>
+<item><emph render="bold">On Mount Washington </emph>(see: Pack Monadnock)</item>
+<item><emph render="bold">On Pike's Peak after a day spent in Denver </emph>(see: Pike's Peak)</item>
+<item><emph render="bold">On remembering lost loves </emph>(see: Lost loves)</item>
+<item><emph render="bold">On revisiting 30 Patton Hall </emph>(Box 4, f.28)</item>
+<item><emph render="bold">On the clifftop </emph>(Box 4, f.28)</item>
+<item><emph render="bold">On the death of a nephew </emph>(see: On a dead child)</item>
+<item><emph render="bold">On the frozen field </emph>(see: On frozen fields)</item>
+<item><emph render="bold">On the mountain </emph>(Box 4, f.28)</item>
+<item><emph render="bold">On the Pont Neuf at nightfall </emph>(see: Pont Neuf at nightfall)</item>
+<item><emph render="bold">On the shore at night </emph>(Box 6, f.20)</item>
+<item><emph render="bold">On the side of mountains </emph>(Box 4, f.28)</item>
+<item><emph render="bold">On the subject of my poems </emph>(see: The poem)</item>
+<item><emph render="bold">On the tennis court at night </emph>(Box 9, f.22; Box 10, f.1-17; on verso of Richard Howard to Kinnell, Nov. 21, 1977)</item>
+<item><emph render="bold">On the young of the Enicospilus purgatus who feed on the intestines of caterpillars </emph>(Box 4, f.28)</item>
+<item><emph render="bold">Once in special </emph>(Box 4, f.28)</item>
+<item><emph render="bold">One more river </emph>(see: The last river)</item>
+<item><emph render="bold">One who used to beat his way </emph>(Box 5, f.26; Box 6, f.3-8)</item>
+<item><emph render="bold">The only mourner </emph>(see: The last mourner)</item>
+<item><emph render="bold">The opium master </emph>(see: Testament of the thief)</item>
+<item><emph render="bold">Our lady </emph>(see: Old arrivals)</item>
+<item><emph render="bold">Our trip to the Camargue </emph>(Box 6, f.20)</item>
+<item><emph render="bold">Our white house, small, yet peaceful </emph>(see: Nightfall of the real)</item>
+<item><emph render="bold">Out of the book of spells </emph>(see: The grey heron)</item>
+<item><emph render="bold">Overnight </emph>(Box 4, f.28)</item>
+<item><emph render="bold">P</emph></item>
+<item><emph render="bold">Pack Monadnock </emph>(Box 4, f.29)</item>
+<item><emph render="bold">Park meeting </emph>(see: Mother of schoolchildren)</item>
+<item><emph render="bold">A passing bird </emph>(see: Another night in the ruins)</item>
+<item><emph render="bold">Passing dwellings </emph>(see: Room of return)</item>
+<item><emph render="bold">Passing the market on my way home </emph>(see: Going home by last light)</item>
+<item><emph render="bold">Passing through the market on my way home </emph>(see: Going home by last light)</item>
+<item><emph render="bold">Passion </emph>(Box 7, f.69; Box 8, f.19-21, 28-33)</item>
+<item><emph render="bold">Pastoral green place </emph>(see: Freedom, New Hampshire)</item>
+<item><emph render="bold">The path </emph>(see: Getting the mail)</item>
+<item><emph render="bold">The path among the stones </emph>(Box 6, f.17, 21-32; Box 7, 1-31)</item>
+<item><emph render="bold">The path to the mailbox </emph>(see: Getting the mail)</item>
+<item><emph render="bold">The path toward the high valley </emph>(see: Under the Maud Moon)</item>
+<item><emph render="bold">Pebble in the sand </emph>(Box 4, f.29)</item>
+<item><emph render="bold">Persia </emph>(see: Testament of the thief)</item>
+<item><emph render="bold">Persian poem </emph>(Box 4, f.29)</item>
+<item><emph render="bold">Persian sunset </emph>(Box 4, f.29)</item>
+<item><emph render="bold">Persian testament </emph>(see: Testament of the thief)</item>
+<item><emph render="bold">The physical world </emph>(see: Lost loves)</item>
+<item><emph render="bold">Picnic </emph>(Box 4, f.29)</item>
+<item><emph render="bold">Pigeons over Hoboken </emph>(see: Avenue bearing the initial of Christ into the New World)</item>
+<item><emph render="bold">Pike's Peak </emph>(Box 4, f.29)</item>
+<item><emph render="bold">Pilgrim </emph>(see: Testament of the thief)</item>
+<item><emph render="bold">The planted garden </emph>(Box 4, f.29)</item>
+<item><emph render="bold">A platform over the body of the world </emph>(Box 4, f.29)</item>
+<item><emph render="bold">Poem </emph>(see: Another night in the ruins)</item>
+<item><emph render="bold">The poem </emph>(Box 4, f.29; Box 5, f.27, 28; Box 6, f.3-8; see also: Poetry shelf; see also: You who survive)</item>
+<item><emph render="bold">The poem as compulsive naming </emph>(Box 4, f.29)</item>
+<item><emph render="bold">Poem of man's most hidden hungering for death </emph>(Box 4, f.29)</item>
+<item><emph render="bold">Poem of Negro boys I swam with in the Mississippi nine years ago </emph>(see: Poem of Negro boys I swam with in the Mississippi seven years ago)</item>
+<item><emph render="bold">Poem of Negro boys I swam with in the Mississippi seven years ago </emph>(Box 4, f.29)</item>
+<item><emph render="bold">Poem of night </emph>(see: Poems of night)</item>
+<item><emph render="bold">Poems of love and loss </emph>(Box 4, f.29)</item>
+<item><emph render="bold">Poems of night </emph>(Box 8, f.50, 58-65)</item>
+<item><emph render="bold">Poem ten </emph>(see: Lastness)</item>
+<item><emph render="bold">The poet speaks to a young girl who would become his mistress </emph>(Box 10, f.22)</item>
+<item><emph render="bold">The poet watches sunset from a window </emph>(Box 4, f.29)</item>
+<item><emph render="bold">The poetry shelf </emph>(Box 4, f.30)</item>
+<item><emph render="bold">The poetry shelf in the bookstore </emph>(see: The poetry shelf)</item>
+<item><emph render="bold">The poets </emph>(Box 4, f.29)</item>
+<item><emph render="bold">Poll </emph>(Box 6, f.20)</item>
+<item><emph render="bold">Pont Neuf at nightfall </emph>(Box 9, f.23; Box 10, f.1-17)</item>
+<item><emph render="bold">The pool </emph>(Box 4, f.29; see also: The milk bottle)</item>
+<item><emph render="bold">A poor one </emph>(see: One who used to beat his way)</item>
+<item><emph render="bold">A poor one </emph>(see: The fire makers)</item>
+<item><emph render="bold">A poor stone </emph>(see: Lost loves)</item>
+<item><emph render="bold">The porcupine </emph>(Box 5, f.29, 30; Box 6, f.3-8)</item>
+<item><emph render="bold">Postcards to posterity </emph>(see: In the hotel of lost light)</item>
+<item><emph render="bold">Prairie hill </emph>(Box 7, f.70; Box 8, f.19, 20)</item>
+<item><emph render="bold">Prayer for little children </emph>(see: Two set out on their journey)</item>
+<item><emph render="bold">Prayer for two little children </emph>(see: Two set out on their journey)</item>
+<item><emph render="bold">Prayer on behalf of little children </emph>(see: Two set out on their journey)</item>
+<item><emph render="bold">Prayer, watch on the rim of the west </emph>(Box 4, f.29)</item>
+<item><emph render="bold">The preface to the Book of Nightmares </emph>(see: Under the Maud moon)</item>
+<item><emph render="bold">Prelude: story of my shame </emph>(Box 4, f.29)</item>
+<item><emph render="bold">Pretension </emph>(Box 4, f.29)</item>
+<item><emph render="bold">Primer for the last judgment </emph>(Box 7, f.71; Box 8, f.20, 21, 29, 32, 33)</item>
+<item><emph render="bold">Princeton </emph>(Box 4, f.29)</item>
+<item><emph render="bold">A problem </emph>(Box 4, f.29)</item>
+<item><emph render="bold">Promised land </emph>(Box 7, f.72; Box 8, f.19)</item>
+<item><emph render="bold">Promontory moon </emph>(Box 4, f.29)</item>
+<item><emph render="bold">Q</emph></item>
+<item><emph render="bold">A question of spring </emph>(Box 4, f.31; Box 4, f.34 - appended to: A storm-thought on the dunes)</item>
+<item><emph render="bold"></emph></item>
+<item><emph render="bold">R</emph></item>
+<item><emph render="bold">Raccoon </emph>(Box 4, f.31; Box 4, f.12 - appended to: After blossom-time)</item>
+<item><emph render="bold">Rain </emph>(Box 4, f.31)</item>
+<item><emph render="bold">Rainbow </emph>(Box 9, f.24-26; Box 10, f.1-17)</item>
+<item><emph render="bold">Rainbow-colored stone </emph>(see: Lost loves)</item>
+<item><emph render="bold">Rat song </emph>(see: To the rats)</item>
+<item><emph render="bold">The red rocks </emph>(see: A trip to the Rockies)</item>
+<item><emph render="bold">Reflections in goldenrod </emph>(see: Ruins under the stars)</item>
+<item><emph render="bold">Rehearsal </emph>(Box 7, f.73; Box 8, f.20)</item>
+<item><emph render="bold">Remember the lovers </emph>(see: Rehearsal)</item>
+<item><emph render="bold">Reply </emph>(Box 4, f.31)</item>
+<item><emph render="bold">The return of a brother </emph>(see: Storm in the hayfield, 1865)</item>
+<item><emph render="bold">Return of a brother, 1865 </emph>(see: Storm in the hayfield, 1865)</item>
+<item><emph render="bold">Riddle </emph>(Box 4, f.31)</item>
+<item><emph render="bold">The riderless white horse </emph>(Box 4, f.31)</item>
+<item><emph render="bold">A river </emph>(see: Under the Williamsburg Bridge)</item>
+<item><emph render="bold">The river that is east </emph>(Box 8, f. 58, 60)</item>
+<item><emph render="bold">Road from my house </emph>(see: Getting the mail)</item>
+<item><emph render="bold">Room by the Hudson </emph>(see: Room of return)</item>
+<item><emph render="bold">Room of return </emph>(Box 8, f.51, 58-65)</item>
+<item><emph render="bold">Room over the Hudson </emph>(see: Room of return)</item>
+<item><emph render="bold">Rooms </emph>(see: Hotel room)</item>
+<item><emph render="bold">Rooms </emph>(see: Room of return)</item>
+<item><emph render="bold">The rose garden </emph>(see: Testament of the thief)</item>
+<item><emph render="bold">The ruins </emph>(see: The tramp)</item>
+<item><emph render="bold">Ruins under the stars </emph>(Box 8, f.52, 58-65)</item>
+<item><emph render="bold">Runaway </emph>(Box 7, f.74; Box 8, f.20)</item>
+<item><emph render="bold">S</emph></item>
+<item><emph render="bold">A sad story </emph>(Box 4, f.32)</item>
+<item><emph render="bold">Sadness of brothers </emph>(Box 9, f.27-29; Box 20, f.1-17)</item>
+<item><emph render="bold">The Sagaponack beach </emph>(see: Tree from Andalusia)</item>
+<item><emph render="bold">Saint Francis and the sow </emph>(Box 9, f.30; Box 10, f.1-17; enclosed in The New Yorker to Kinnell, Mar. 21, 1979)</item>
+<item><emph render="bold">Saint of the taverns </emph>(see: In the hotel of lost light)</item>
+<item><emph render="bold">The Salvation Army Store shoes </emph>(see: The shoes of wandering)</item>
+<item><emph render="bold">Sanspotato </emph>(Box 8, f.1, 20)</item>
+<item><emph render="bold">Sayings out of the darkness </emph>(Box 4, f.32)</item>
+<item><emph render="bold">Schizoid in Paris </emph>(see: Last spring)</item>
+<item><emph render="bold">School </emph>(Box 4, f.32)</item>
+<item><emph render="bold">The schoolhouse </emph>(Box 10, f.20, 40, 47-50)</item>
+<item><emph render="bold">Schoolhouse in autumn </emph>(see: The schoolhouse)</item>
+<item><emph render="bold">Schoolteacher </emph>(Box 4, f.32)</item>
+<item><emph render="bold">Scientific funeral </emph>(Box 4, f.32)</item>
+<item><emph render="bold">Scraps from the free thinker </emph>(see: Fragments from a free thinker)</item>
+<item><emph render="bold">The scuff scuff of soles </emph>(see: One who used to beat his way)</item>
+<item><emph render="bold">Sea town </emph>(see: Nightfall of the real)</item>
+<item><emph render="bold">Sea wind </emph>(see: Spindrift)</item>
+<item><emph render="bold">Seascape west </emph>(see: Seascapes west and east)</item>
+<item><emph render="bold">Seascapes west and east </emph>(Box 4, f.32)</item>
+<item><emph render="bold">Season of moult </emph>(Box 4, f.32)</item>
+<item><emph render="bold">Second summer </emph>(Box 8, f.20)</item>
+<item><emph render="bold">The seed </emph>(Box 8, f.2, 19)</item>
+<item><emph render="bold">The Seekonk border </emph>(Box 4, f.32)</item>
+<item><emph render="bold">The self-correcting folly </emph>(see: A distinction and formulation)</item>
+<item><emph render="bold">The self-corrective folly </emph>(see: A distinction and formulation)</item>
+<item><emph render="bold">Semplice </emph>(see: Spicatto)</item>
+<item><emph render="bold">Setting out </emph>(Box 4, f.32)</item>
+<item><emph render="bold">Seven streams of Nevis </emph>(Box 10, f.20, 41, 47-50)</item>
+<item><emph render="bold">Shadows </emph>(Box 4, f.32)</item>
+<item><emph render="bold">The shapeless hills </emph>(Box 10, f.22)</item>
+<item><emph render="bold">She has been gone </emph>(see: In the bamboo hut)</item>
+<item><emph render="bold">A shell </emph>(Box 4, f.32)</item>
+<item><emph render="bold">The shine of ruin </emph>(see: Ruins under the stars)</item>
+<item><emph render="bold">The shine of ruins </emph>(see: Ruins under the stars)</item>
+<item><emph render="bold">Shining on ruins </emph>(see: Ruins under the stars)</item>
+<item><emph render="bold">The shoes </emph>(see: The shoes of wandering)</item>
+<item><emph render="bold">The shoes of the nightmare </emph>(see: The shoes of wandering)</item>
+<item><emph render="bold">The shoes of wandering </emph>(Box 6, f.18, 21-32; Box 7, f.1-31)</item>
+<item><emph render="bold">Shore of night </emph>(see: On the shore at night)</item>
+<item><emph render="bold">The shores of light </emph>(Box 4, f.32)</item>
+<item><emph render="bold">A shot deer </emph>(Box 4, f.32)</item>
+<item><emph render="bold">The siege of the Pentagon </emph>(Box 6, f.20)</item>
+<item><emph render="bold">A sign </emph>(see: Sixth Avenue in the rain)</item>
+<item><emph render="bold">The sign of Crates </emph>(Box 4, f.32)</item>
+<item><emph render="bold">The silence </emph>(see: Cells breathe in the emptiness)</item>
+<item><emph render="bold">A silent day </emph>(see: Cells breathe in the emptiness)</item>
+<item><emph render="bold">Singer of lower Manhattan </emph>(see: One who used to beat his way)</item>
+<item><emph render="bold">Sixth Avenue in the rain </emph>(Box 4, f.32)</item>
+<item><emph render="bold">Skeiners of the wind </emph>(Box 4, f.32)</item>
+<item><emph render="bold">The slides </emph>(Box 4, f.32)</item>
+<item><emph render="bold">Sloucher of lower Manhattan </emph>(see: One who used to beat his way)</item>
+<item><emph render="bold">Smoke </emph>(Box 4, f.32)</item>
+<item><emph render="bold">Snow man </emph>(see: Snowman)</item>
+<item><emph render="bold">Snowman </emph>(Box 4, f.33)</item>
+<item><emph render="bold">The social life </emph>(Box 4, f.32)</item>
+<item><emph render="bold">The soldier-hobo </emph>(Box 4, f.32)</item>
+<item><emph render="bold">Solitude </emph>(see: Dear stranger extant in memory by the blue Juniata)</item>
+<item><emph render="bold">Songs </emph>(see: Last songs)</item>
+<item><emph render="bold">Songs to Diotima </emph>(Box 4, f.32)</item>
+<item><emph render="bold">Sonnet </emph>(Box 4, f.32; see also: My scallop shell)</item>
+<item><emph render="bold">Sonnet on the egoist </emph>(Box 4, f.32)</item>
+<item><emph render="bold">Sonnet sequence: To Katherine </emph>(Box 4, f.32)</item>
+<item><emph render="bold">Sonnet sequence: To Mimi </emph>(Box 4, f.32)</item>
+<item><emph render="bold">Sonnet II </emph>(Box 4, f.32)</item>
+<item><emph render="bold">Southern bones </emph>(see: Man's bones)</item>
+<item><emph render="bold">The sorrow of youth </emph>(Box 4, f.32)</item>
+<item><emph render="bold">The sound of the wind </emph>(see: Another night in the ruins)</item>
+<item><emph render="bold">Le souper qui suivit le dernier </emph>(see: Supper after last)</item>
+<item><emph render="bold">Speech and the dead silence </emph>(see: Cells breathe in the emptiness)</item>
+<item><emph render="bold">Speedboat </emph>(Box 4, f.32)</item>
+<item><emph render="bold">Spicatto </emph>(Box 4, f.32)</item>
+<item><emph render="bold">Spindrift </emph>(Box 8, f.53, 58-65; Box 22, f.30)</item>
+<item><emph render="bold">Spindrift of the sea </emph>(see: Spindrift)</item>
+<item><emph render="bold">Spring beauty </emph>(Box 4, f.15 - on verso of: The cavedwellers; Box 8, f.3, 19-21)</item>
+<item><emph render="bold">Spring oak </emph>(Box 8, f.4, 19-21, 28-33; see also: Two symbols)</item>
+<item><emph render="bold">Springtime in Paris </emph>(see: Last spring)</item>
+<item><emph render="bold">Standing by the Barton River Falls </emph>(see: The falls)</item>
+<item><emph render="bold">Stars shining on ruins </emph>(see: Testament of the thief)</item>
+<item><emph render="bold">The statue of Hans Christian Anderson </emph>(Box 4, f.34)</item>
+<item><emph render="bold">The steps of the poorhouse </emph>(see: Testament of the thief)</item>
+<item><emph render="bold">Still-life </emph>(Box 8, f.5, 20; Box 8, f.19, 20 - appended to: Lilacs)</item>
+<item><emph render="bold">The still time </emph>(Box 9, f.31-32; Box 10, f.1-17)</item>
+<item><emph render="bold">Stockyards </emph>(Box 4, f.34)</item>
+<item><emph render="bold">A stone </emph>(Box 4, f.34; see also: Lost loves)</item>
+<item><emph render="bold">The stones </emph>(Box 6, f.22)</item>
+<item><emph render="bold">Stop and go </emph>(see: Riddle)</item>
+<item><emph render="bold">Storm in the hayfield, 1865 </emph>(Box 8, f.6, 19-21)</item>
+<item><emph render="bold">A storm-thought on the dunes </emph>(Box 4, f.34)</item>
+<item><emph render="bold">Street dream </emph>(Box 4, f.34)</item>
+<item><emph render="bold">Street fires </emph>(see: The firemakers)</item>
+<item><emph render="bold">Street scene </emph>(Box 4, f.34)</item>
+<item><emph render="bold">Strike! </emph>(Box 4, f.34)</item>
+<item><emph render="bold">The student </emph>(Box 4, f.34)</item>
+<item><emph render="bold">Suburban train </emph>(see: Surburban (sic) train)</item>
+<item><emph render="bold">The subway station late at night </emph>(see: Across the valley of third rails)</item>
+<item><emph render="bold">Summer sky from the dunes </emph>(Box 4, f.34)</item>
+<item><emph render="bold">A summer[?] storm, 1865 </emph>(see: Storm in the hayfield, 1865)</item>
+<item><emph render="bold">Sunday in the square </emph>(Box 8, f.7, 19-20) The sunlight (Box 4, f.34)</item>
+<item><emph render="bold">Sunset </emph>(see: Testament of the thief)</item>
+<item><emph render="bold">Sunset at Timberline </emph>(Box 8, f.28-33)</item>
+<item><emph render="bold">Sunwhirl </emph>(see: Mantas)</item>
+<item><emph render="bold">Supper after last </emph>(Box 10, f.42, 47-50)</item>
+<item><emph render="bold">Supper after last (French) </emph>(Box 4, f.34)</item>
+<item><emph render="bold">Surburban (sic) train </emph>(Box 4, f.34)</item>
+<item><emph render="bold">Surrounded by nights </emph>(see: Middle of the way)</item>
+<item><emph render="bold">Surrounded by nights on my thirty-eighth birthday </emph>(see: Middle of the way)</item>
+<item><emph render="bold">Symbols I </emph>(see: Two symbols)</item>
+<item><emph render="bold">Symbols II </emph>(see: Two symbols)</item>
+<item><emph render="bold">T</emph></item>
+<item><emph render="bold">Tales from the hollow men </emph>(Box 4, f.35)</item>
+<item><emph render="bold">The ten bones of this life </emph>(see: Man's bones)</item>
+<item><emph render="bold">The ten mile river </emph>(Box 4, f.35)</item>
+<item><emph render="bold">The tenth poem </emph>(see: Lastness)</item>
+<item><emph render="bold">The tenth poem, which is the last </emph>(see: Lastness)</item>
+<item><emph render="bold">Testament </emph>(Box 8, f.20)</item>
+<item><emph render="bold">Testament of the thief </emph>(Box 6, f.1, 3-8)</item>
+<item><emph render="bold">There are things I tell no one but a poem </emph>(Box 9, f.33-37; Box 10, f.1-17)</item>
+<item><emph render="bold">There are things I tell to no one but to the poem </emph>(see: There are things I tell no one but a poem)</item>
+<item><emph render="bold">The thief </emph>(see: Testament of the thief)</item>
+<item><emph render="bold">The thief's last groans </emph>(see: Testament of the thief)</item>
+<item><emph render="bold">The thief's testament </emph>(see: Testament of the thief)</item>
+<item><emph render="bold">Things I tell to no one but the poem </emph>(see: There are things I tell no one but a poem)</item>
+<item><emph render="bold">39th birthday, New Year's Eve </emph>(see: Another night in the ruins)</item>
+<item><emph render="bold">This is my letter to my countrymen </emph>(Box 4, f.35)</item>
+<item><emph render="bold">This rude coarse nursing bed </emph>(Box 4, f.35)</item>
+<item><emph render="bold">Through the torn curtain sunlight strikes the Koozeh </emph>(Box 4, f.35)</item>
+<item><emph render="bold">Three dwellings </emph>(see: Room of return)</item>
+<item><emph render="bold">The threshold </emph>(see: The beautiful)</item>
+<item><emph render="bold">The Tillamook burn </emph>(see: The burn)</item>
+<item><emph render="bold">Tillamook burn again </emph>(see: The burn)</item>
+<item><emph render="bold">Tillamook burn in flower </emph>(see: The burn)</item>
+<item><emph render="bold">Tillamook burn thirteen years later </emph>(see: The burn)</item>
+<item><emph render="bold">Tillamook journal </emph>(Box 8, f.54, 58-65; Box 10, f.20)</item>
+<item><emph render="bold">The time of war </emph>(see: Vapor trail reflected in the frog pond)</item>
+<item><emph render="bold">To a child in Calcutta </emph>(Box 8, f.55, 58-65)</item>
+<item><emph render="bold">To a disheartened poet </emph>(Box 4, f.35; Box 4, f.36 - appended to: Twilight)</item>
+<item><emph render="bold">To a poet of disturbing politics </emph>(Box 4, f.35)</item>
+<item><emph render="bold">To a thin-wristed woman </emph>(Box 4, f.35)</item>
+<item><emph render="bold">To an unknown Japanese painter </emph>(Box 4, f.16 - appended to: David)</item>
+<item><emph render="bold">To Anne with an E </emph>(Box 4, f.35)</item>
+<item><emph render="bold">To be alone </emph>(see: Hotel room)</item>
+<item><emph render="bold">To Christ our Lord </emph>(Box 8, f.19-21; Box 10, f.43, 47-50)</item>
+<item><emph render="bold">To fire or not to fire the retro-rocket </emph>(Box 4, f.35)</item>
+<item><emph render="bold">To have </emph>(Box 4, f.35)</item>
+<item><emph render="bold">To Keats </emph>(Box 4, f.35)</item>
+<item><emph render="bold">To Koisimi doomed buddhist of altitudes </emph>(see: Koisimi, buddhist of altitudes)</item>
+<item><emph render="bold">To live is glorious </emph>(see: Another night in the ruins)</item>
+<item><emph render="bold">To Luther </emph>(Box 8, f.8, 20)</item>
+<item><emph render="bold">To Martin Luther </emph>(see: To Luther)</item>
+<item><emph render="bold">To N -- </emph>(see: To N.R.)</item>
+<item><emph render="bold">To N.R. </emph>(Box 4, f.35)</item>
+<item><emph render="bold">To New York harbor </emph>(see: Old arrivals)</item>
+<item><emph render="bold">To one walking at morning on the beach </emph>(Box 4, f.35)</item>
+<item><emph render="bold">To one who announces in anger that he will burn his poems </emph>(see: To one who has written for the 7th time that he will burn his poems)</item>
+<item><emph render="bold">To one who has written for the 7th time that he will burn his poems </emph>(Box 4, f.35)</item>
+<item><emph render="bold">To one who wishes to die </emph>(see: Wait)</item>
+<item><emph render="bold">To some woman who claims she dreamed about me after reading my poems </emph>(Box 4, f.35)</item>
+<item><emph render="bold">To the rats </emph>(Box 6, f.24)</item>
+<item><emph render="bold">To the sea: A hymn written on the last day by her shore </emph>(Box 4, f.35)</item>
+<item><emph render="bold">To walk through time </emph>(see: Last spring)</item>
+<item><emph render="bold">To William Carlos Williams </emph>(see: For William Carlos Williams)</item>
+<item><emph render="bold">The toad </emph>(see: Kissing the toad)</item>
+<item><emph render="bold">A toast to Tu Fu </emph>(Box 8, f.20, 21; Box 10, f.44, 47-50)</item>
+<item><emph render="bold">Today we are dropping napalm </emph>(Box 22, f.2O)</item>
+<item><emph render="bold">Today we dropped napalm </emph>(see: Today we are dropping napalm)</item>
+<item><emph render="bold">Told by seafarers </emph>(Box 8, f.9, 21, 29, 32, 33; Box 10, f.20)</item>
+<item><emph render="bold">Tonight from your sleep </emph>(Box 4, f.36)</item>
+<item><emph render="bold">Touch </emph>(Box 4, f.36)</item>
+<item><emph render="bold">Toward morning, walking through Les Halles </emph>(see: Going home by last light)</item>
+<item><emph render="bold">Towards Chock Full O' Nuts </emph>(see: Hunger unto death)</item>
+<item><emph render="bold">The trail </emph>(see: Getting the mail)</item>
+<item><emph render="bold">Trailer-truck at night </emph>(Box 4, f.36)</item>
+<item><emph render="bold">Train </emph>(Box 4, f.36)</item>
+<item><emph render="bold">The tramp </emph>(Box 4, f.36)</item>
+<item><emph render="bold">The tramp master </emph>(see: The tramp master of 19th century England)</item>
+<item><emph render="bold">The tramp master of 19th century England </emph>(Box 4, f.36)</item>
+<item><emph render="bold">Transcendental Christmas </emph>(Box 4, f.36)</item>
+<item><emph render="bold">Traveling to Greybeard </emph>(Box 10, f.22)</item>
+<item><emph render="bold">Traveller on the road </emph>(Box 4, f.36; see also: Travelling on the road)</item>
+<item><emph render="bold">Tree </emph>(see: Lost loves)</item>
+<item><emph render="bold">A tree drifted from Andalusia </emph>(see: Tree from Andalusia)</item>
+<item><emph render="bold">Tree from Andalusia </emph>(Box 8, f.56, 58-65)</item>
+<item><emph render="bold">Tree of paradise </emph>(see: Testament of the thief)</item>
+<item><emph render="bold">The tree of the world's end </emph>(see: The tree of paradise)</item>
+<item><emph render="bold">Trial for fire </emph>(Box 8, f.10, 21)</item>
+<item><emph render="bold">The trial of Lazarus </emph>(see: The homecoming of Emma Lazarus)</item>
+<item><emph render="bold">A trick of mirrors </emph>(Box 4, f.36)</item>
+<item><emph render="bold">Trinity Church graveyard </emph>(see: Hunger unto death)</item>
+<item><emph render="bold">Trinity graveyard </emph>(see: Hunger unto death)</item>
+<item><emph render="bold">Trip south </emph>(see: Driving south)</item>
+<item><emph render="bold">Trip to the Camargue </emph>(see: Our trip to the Camargue)</item>
+<item><emph render="bold">A trip to the Rockies </emph>(Box 4, f.37)</item>
+<item><emph render="bold">Tristan </emph>(Box 4, f.36)</item>
+<item><emph render="bold">The tune </emph>(see: The fly)</item>
+<item><emph render="bold">Turkeyland Cove </emph>(see: On the shore at night)</item>
+<item><emph render="bold">Twilight </emph>(Box 4, f.36)</item>
+<item><emph render="bold">The twilight of the image </emph>(Box 4, f.36)</item>
+<item><emph render="bold">Two cautions for Africa </emph>(see: Game)</item>
+<item><emph render="bold">Two children set out on their journey </emph>(see: Two set out on their journey)</item>
+<item><emph render="bold">Two little children </emph>(see: Two set out on their journey)</item>
+<item><emph render="bold">Two little children think about the future </emph>(see: Two set out on their journey)</item>
+<item><emph render="bold">Two little children's song of innocence </emph>(see: Two set out on their journey)</item>
+<item><emph render="bold">Two poems for dead poets </emph>(Box 4, f.36)</item>
+<item><emph render="bold">Two scenes: Bear Creek and the red rocks </emph>(see: A trip to the Rockies)</item>
+<item><emph render="bold">Two seasons </emph>(Box 8, f.11, 20, 28-33)</item>
+<item><emph render="bold">Two set out on their journey </emph>(Box 9, f.38, 39; Box 10, f.1-17)</item>
+<item><emph render="bold">Two small children's prayer </emph>(see: Two set out on their journey)</item>
+<item><emph render="bold">Two sonnets from Wisconsin </emph>(Box 4, f.36)</item>
+<item><emph render="bold">Two symbols </emph>(Box 4, f.36)</item>
+<item><emph render="bold">U</emph></item>
+<item><emph render="bold">Under a full moon </emph>(Box 4, f.38)</item>
+<item><emph render="bold">Under a tree in April </emph>(see: Going home by last light)</item>
+<item><emph render="bold">Under the arbor vitae </emph>(see: Fall)</item>
+<item><emph render="bold">Under the Maud moon </emph>(Box 6, f.19, 21-32; Box 7, f.1-31)</item>
+<item><emph render="bold">Under the rainbow </emph>(see: The rainbow)</item>
+<item><emph render="bold">Under the stone tower </emph>(Box 4, f.38)</item>
+<item><emph render="bold">Under the Williamsburg Bridge </emph>(Box 8, f.57-65)</item>
+<item><emph render="bold">Usage hugs everything </emph>(see: Old arrivals)</item>
+<item><emph render="bold">V</emph></item>
+<item><emph render="bold">Vacation </emph>(Box 4, f.38)</item>
+<item><emph render="bold">Vagabond verse </emph>(Box 4, f.38)</item>
+<item><emph render="bold">The valley of illusions </emph>(Box 4, f.38)</item>
+<item><emph render="bold">Vapor trail reflected in the frog pond </emph>(Box 6, f.2-8; Box 22, f.20)</item>
+<item><emph render="bold">The vestige of the wing </emph>(Box 6, f.20, 22)</item>
+<item><emph render="bold">Via Dolorosa </emph>(see: Avenue bearing the initial of Christ into the New World)</item>
+<item><emph render="bold">Vipers </emph>(see: Almeria)</item>
+<item><emph render="bold">Virginia </emph>(see: Dear stranger extant in memory by the blue Juniata)</item>
+<item><emph render="bold">A vision of sorrow </emph>(Box 4, f.38)</item>
+<item><emph render="bold">A voice </emph>(see: Lost loves)</item>
+<item><emph render="bold">W</emph></item>
+<item><emph render="bold">Wafer </emph>(see: In the Anse Galet Valley)</item>
+<item><emph render="bold">Wait </emph>(Box 9, f.40; Box 10, f.1-17; enclosed in The New Yorker to Kinnell, July 10, 1978)</item>
+<item><emph render="bold">Waiting on a suburban train on a platform over the body of the world </emph>(Box 4, f.39)</item>
+<item><emph render="bold">Waking at night in the forest </emph>(see: Night in the forest)</item>
+<item><emph render="bold">A walk in Highland Park </emph>(Box 8, f.12, 19-21, 32, 33)</item>
+<item><emph render="bold">A walk in the country </emph>(Box 8, f.13, 19-21, 28-33; Box 4, f.35 - appended to: To N.R.)</item>
+<item><emph render="bold">A walk on the dunes </emph>(see: A day's walk on the dunes)</item>
+<item><emph render="bold">Walking for the mail </emph>(see: Getting the mail)</item>
+<item><emph render="bold">Walking out alone in dead of winter </emph>(Box 8, f.28-33)</item>
+<item><emph render="bold">Walking through Les Halles by first light </emph>(see: Going home by last light)</item>
+<item><emph render="bold">Walking through the Clichy Market at sunset </emph>(see: Going home by last light)</item>
+<item><emph render="bold">The wanderer </emph>(see: Old arrivals)</item>
+<item><emph render="bold">Wandering toward the high valley </emph>(see: Lastness)</item>
+<item><emph render="bold">Wash </emph>(see: In the bamboo hut)</item>
+<item><emph render="bold">Washerwomen </emph>(see: In the bamboo hut)</item>
+<item><emph render="bold">The watch </emph>(Box 8, f.14, 20; Box 4, f.36 - appended to: Twilight)</item>
+<item><emph render="bold">Watch on the rim of the west </emph>(see: Prayer, watch on the rim of the west)</item>
+<item><emph render="bold">Watching the clouds at night </emph>(see: In the Anse Galet Valley)</item>
+<item><emph render="bold">The waves of sky </emph>(Box 4, f.39)</item>
+<item><emph render="bold">Weasel remains in goldenrod </emph>(see: In fields of summer)</item>
+<item><emph render="bold">The web </emph>(Box 4, f.39)</item>
+<item><emph render="bold">The weeping winterberry </emph>(Box 4, f.39)</item>
+<item><emph render="bold">Westport </emph>(Box 8, f.19-21; Box 10, f.45, 47-50)</item>
+<item><emph render="bold">What a voice </emph>(see: Lost loves)</item>
+<item><emph render="bold">What are they singing, the last birds </emph>(see: Last songs)</item>
+<item><emph render="bold">What are they singing, the strange birds </emph>(see: Last songs)</item>
+<item><emph render="bold">When Fergus cries </emph>(see: After making love we hear footsteps)</item>
+<item><emph render="bold">When he cries </emph>(see: After making love we hear footsteps)</item>
+<item><emph render="bold">When I had third degree burns on both feet and the car broke down two miles from home on a rainy night </emph>(Box 4, f.39)</item>
+<item><emph render="bold">When it snowed in the Bois </emph>(see: Snowman)</item>
+<item><emph render="bold">When Pele loved Kamapua'a </emph>(see: Kissing the toad)</item>
+<item><emph render="bold">When the bird came back </emph>(see: A bird comes back)</item>
+<item><emph render="bold">When the goddess loved the pig </emph>(see: Kissing the toad)</item>
+<item><emph render="bold">When you cry cry a lot </emph>(see: Crying)</item>
+<item><emph render="bold">Where the bodies break </emph>(Box 4, f. 39)</item>
+<item><emph render="bold">White house on the cliff </emph>(see: Nightfall of the real)</item>
+<item><emph render="bold">White house on the cliff across from Bonifacio </emph>(see: Nightfall of the real)</item>
+<item><emph render="bold">The white room </emph>(Box 4, f.39)</item>
+<item><emph render="bold">A white sail </emph>(Box 4, f.39)</item>
+<item><emph render="bold">Whoring after gods </emph>(see: Avenue bearing the initial of Christ into the New World)</item>
+<item><emph render="bold">The wicks </emph>(Box 8, f.15, 20)</item>
+<item><emph render="bold">Widow </emph>(Box 4, f.39)</item>
+<item><emph render="bold">Wild deer </emph>(Box 4, f.39)</item>
+<item><emph render="bold">Wilmington, Delaware </emph>(see: Memory of Wilmington)</item>
+<item><emph render="bold">The winds of paradise </emph>(see: Testament of the thief)</item>
+<item><emph render="bold">Wings that do not fly </emph>(see: The hen flower)</item>
+<item><emph render="bold">A wino </emph>(see: One who used to beat his way)</item>
+<item><emph render="bold">A wino in New York </emph>(see: One who used to beat his way)</item>
+<item><emph render="bold">Winter </emph>(see: Last spring)</item>
+<item><emph render="bold">A winter evening, Chicago </emph>(Box 4, f.39)</item>
+<item><emph render="bold">A winter light </emph>(Box 4, f.39)</item>
+<item><emph render="bold">A winter scene </emph>(Box 8, f.16, 20)</item>
+<item><emph render="bold">A winter sky </emph>(Box 8, f.19, 21, 29, 32, 33)</item>
+<item><emph render="bold">Winter sun </emph>(Box 4, f.39)</item>
+<item><emph render="bold">Winter tree </emph>(see: How many nights)</item>
+<item><emph render="bold">Winter's first snow </emph>(Box 8, f.17, 20)</item>
+<item><emph render="bold">The wise, the young </emph>(Box 4, f.39)</item>
+<item><emph render="bold">Witchery of water </emph>(see: The tramp)</item>
+<item><emph render="bold">With mirrors </emph>(see: A trick of mirrors)</item>
+<item><emph render="bold">The wolves </emph>(Box 8, f.21; Box 10, f.46-50)</item>
+<item><emph render="bold">Words for music </emph>(Box 4, f.39)</item>
+<item><emph render="bold">The world </emph>(see: Lost loves)</item>
+<item><emph render="bold">A world government meeting </emph>(Box 4, f.39)</item>
+<item><emph render="bold">A wreath of thorn </emph>(Box 4, f.39)</item>
+<item><emph render="bold">Written after the death of my father </emph>(see: After the death of my father)</item>
+<item><emph render="bold">Y</emph></item>
+<item><emph render="bold">Yankee west </emph>(Box 8, f.18, 19)</item>
+<item><emph render="bold">The year of our burning </emph>(see: Dead shall be raised incorruptible)</item>
+<item><emph render="bold">Yesterday from my fever </emph>(see: After the fever)</item>
+<item><emph render="bold">Yet life </emph>(Box 4, f.40)</item>
+<item><emph render="bold">Your face </emph>(see: Looking at your face)</item>
+<item><emph render="bold">You who survive </emph>(Box 4, f.40; Box 6, f.23; Box 4, f.12 - appended to: All who have gone down)</item>
+
+                    </list>
+                </note>
+            </c01>
+            
+            
+            <!-- 
+            -->
+        </dsc>
+    </archdesc>
+</ead>

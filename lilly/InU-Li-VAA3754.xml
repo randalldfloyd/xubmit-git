@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Lilly Library, Indiana University, EAD template, 2003-02-21; updated DOCTYPE, Feb. 14, 2006, RKL --><!DOCTYPE ead
-  PUBLIC "-//Society of American Archivists//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN" "ead.dtd">
-<ead><!-- value of @findaidstatus should be 'originaldraft', 'inprogressdraft', 'editinprogress', or 'editedfulldraft' --><eadheader audience="internal" langencoding="iso639-2b" scriptencoding="iso15924"
+<!-- Lilly Library, Indiana University, EAD template, 2003-02-21; updated DOCTYPE, Feb. 14, 2006, RKL -->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+   <!-- value of @findaidstatus should be 'originaldraft', 'inprogressdraft', 'editinprogress', or 'editedfulldraft' --><eadheader audience="internal" langencoding="iso639-2b" scriptencoding="iso15924"
               repositoryencoding="iso15511"
               countryencoding="iso3166-1"
               dateencoding="iso8601"
-              findaidstatus="originaldraft"><!-- replace [uniqueid] with collection LMC number --><eadid identifier="InU-Li-VAA3754" countrycode="US" mainagencycode="InU-Li">InU-Li-VAA3754</eadid>
+              findaidstatus="originaldraft"><!-- replace [uniqueid] with collection LMC number --><eadid encodinganalog="identifier" identifier="InU-Li-VAA3754" countrycode="US" mainagencycode="InU-Li">InU-Li-VAA3754</eadid>
       <filedesc><!-- This is a description of the electronic finding aid, not the original finding aid or the collection --><!-- Make title "xxxx mss., yyyy-yyyy"--><!--Make subtitle "Papers, yyyy-yyyy, of [person] at the Lilly Library, Indiana University, Bloomington, Indiana--><titlestmt>
-            <titleproper>Poetry mss.,</titleproper>
+            <titleproper encodinganalog="title">Poetry mss.,</titleproper>
             <subtitle>Papers, 
 			 <date normal="1954/2002" era="ce" calendar="gregorian">1954-2002</date>, of <emph render="italic">Poetry</emph> at the Lilly
 			 Library, Indiana University, Bloomington, Indiana</subtitle>
-            <author>Electronic finding aid encoded by Donald C. Force</author>
+            <author encodinganalog="creator">Electronic finding aid encoded by Donald C. Force</author>
          </titlestmt>
          <publicationstmt>
-            <publisher>Lilly Library, Indiana University, Bloomington,
-			 Indiana</publisher>
-            <date normal="2006" type="publication" era="ce" calendar="gregorian">© 2006</date>
+            <publisher encodinganalog="publisher">Indiana University Digital Library Program</publisher>
+            <date encodinganalog="date" normal="2006" type="publication" era="ce" calendar="gregorian">© 2006</date>
          </publicationstmt>
       </filedesc>
       <profiledesc>
@@ -24,7 +25,7 @@
 		  pasting.<!--description of how the finding aid was created, for example: XML finding aid derived from
 [paper by means of scanning and OCR] [OCR file edited for typographical errors before encoding]
 [typescript by rekeying] [word processing program and version number]
-[<extref href="" linktype="simple" title="" actuate="onrequest" show="new">HTML collection description</extref>]. -->
+[<extref href="" title="" actuate="onrequest" show="new">HTML collection description</extref>]. -->
 		  <lb/>[date of source: <lb/>Finding aid encoded by Donald C. Force, Lilly
 		  Library, Indiana University, 
 		  <date normal="2006-09-13" era="ce" calendar="gregorian">September 13, 2006</date> 
@@ -57,18 +58,18 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
    </frontmatter>
    <archdesc level="collection" audience="external" type="inventory" relatedencoding="marc"><!-- @type value may alternatively be 'bulk' --><!-- use the label attribute for these elements to determine what label is displayed --><did>
          <head>Summary Information</head>
-         <repository encodinganalog="850$a" label="Repository"> 
+         <repository encodinganalog="852" label="Repository" id="lilly"> 
 		          <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana
 			 University, Bloomington)</corpname> 
 		          <address>
-               <addressline>Lilly Library</addressline>
                <addressline>Indiana University</addressline>
                <addressline>1200 E. Seventh St.</addressline>
                <addressline>Bloomington, IN 47405-5500</addressline>
                <addressline>Phone: 812-855-2452</addressline>
                <addressline>Fax: 812-855-3143</addressline>
                <addressline>Email: liblilly@indiana.edu</addressline>
-            </address> 
+		          </address><lb/> 
+            <extref xlink:href="http://www.indiana.edu/~liblilly">http://www.indiana.edu/~liblilly</extref> 
          </repository>
          <origination label="Creator"> 
 		          <corpname source="lcnaf" encodinganalog="110$a">Modern Poetry Association</corpname>
@@ -77,23 +78,59 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
          <unitdate normal="1954/2002" type="inclusive" encodinganalog="245$f" era="ce"
                    calendar="gregorian">1954-2002</unitdate>
          <unitid encodinganalog="099" countrycode="US" repositorycode="US-InU-Li"
-                 label="Collection no">LMC 2405</unitid>
+                 label="Collection No.">LMC 2405</unitid>
          <physdesc encodinganalog="300$a$f" label="Extent">
             <extent>250,000
 		  items</extent>
             <!-- if both linear feet and number of items included, separate by lb tag -->
 		</physdesc>
-         <langmaterial label="Language">Materials are in
+         <langmaterial label="Language" encodinganalog="546">Materials are in
 		<language langcode="eng" encodinganalog="008/35-37">English.</language>
          </langmaterial>
          <abstract encodinganalog="520$a" label="Abstract">Consists primarily of the correspondence, individual issue make-ups and proofs of <emph render="italic">Poetry</emph> (formerly called <emph render="italic">Poetry: A Magazine of Verse</emph>) published in Chicago, Illinois.</abstract>
       </did>
-      <!-- required; 'descgrp' element replaces admininfo element in 2002 DTD --><descgrp>
-         <head>Administrative Information</head>
          <accessrestrict encodinganalog="506$a">
             <head>Access Restrictions</head>
             <p>This collection is open for research.</p>
          </accessrestrict>
+         <bioghist encodinganalog="545">
+            <head>Administrative History</head>
+            <p>The official owner and publisher of the magazine is the Modern Poetry Association.  Editors of the magazine include poet Karl Jay Shapiro (1913-2000) in 1954-1955; poet Henry Rago (1915-1969) from October 1955 until Fall 1968;  Canadian poet Daryl Hine from 1968-1977.  Poet and translator John Frederick Nims (1913-1999) served as editor immediately following Hine through 1983 and Joseph Parisi, succeeding Nims in 1983, served through Spring 2003.  The files of Poetry magazine from its founding in 1912 through 1960 are located at the University of Chicago Library’s Department of special Collections.  The records of Poetry held by The Lilly Library, Indiana University, date for the most part from 1962 and the library continues to acquire the journal's correspondence and publication files on a yearly basis. </p>
+         </bioghist><!--optional --><!-- element organization deprecated in DTD version 2002; @encodinganalog may be used to differentiate between 351 subfield a (organization) and subfield b (arrangement). -->
+      <arrangement encodinganalog="351$x">
+         <head>Arrangement/Organization</head>
+         <p>The collection is organized into the following series:  I. Correspondence; II. Business and Financial; III. Writings.</p>
+      </arrangement>
+      <!-- required for collection level; optional for lower levels --><scopecontent encodinganalog="520$a$b">
+         <head>Scope and Content Note</head>
+         <p>The correspondence comprises the letters sent to <title render="italic">Poetry</title> and replies thereto by Henry Rago and by others who have been members of the editorial staff or the official Board:  Wallace Fowlie, Donald Gallup, Hugh Kenner, J. Patrick Lannan, Helen Lothrop, Karl Jay Shapiro, Julie McLauchlin, Donald H. Merwin, Robert Mueller, John Frederick Nims, Ann Peyton, Maryanne Schaefer, Joseph Wiley, and Elizabeth (Van Valkenberg) Wright.  Occasionally  poems sent in by a writer have been retained in the correspondence.  Those letters marked with an "x" and initialed "HR" indicate that the poem was rejected by Henry Rago for inclusion in <title render="italic">Poetry</title> and was returned to the writer.</p>
+         <p>The Business and Financial series includes "Rate Books" wherein the amounts paid to the authors for their works are noted.</p>
+         <p>The Writings series consists of the manuscripts of poems, galleys, page proofs, and author proofs of the monthly issues of <title render="italic">Poetry</title> for the years 1962-2002.  Included is the printer's manuscript of the poems of seventeen poets, whose works appeared in the fiftieth anniversary issue of October-November, 1962: Conrad Aiken, John Berryman, Louise Bogan, John Ciardi, James Vincent Cunningham, Robert Graves, Randall Jarrell, Stanley Kunitz, Hugh MacDiarmid, William Charles Franklyn Plomer, Kathleen Raine, Henry Rago, Muriel Rukeyser, Karl Jay Shapiro, Stephen Spender, Vernon Watkins, and William Carlos Williams.  Printed materials consist of a scrapbook of poetry clippings assembled by Daniel B. Rumpf of Topeka, Kansas.</p>
+      </scopecontent>
+      <!-- recommended; this information would be included for marc amc record --><!-- should include all personal and corporate names, and subject headings --><controlaccess>
+         <head>Controlled Access Terms</head>
+         <corpname encodinganalog="610$a" source="lcnaf" role="subject">Modern Poetry Association.</corpname>
+         <title encodinganalog="630$a" source="lcsh">Poetry.</title>
+         <subject encodinganalog="650$a" source="lcsh">American poetry --Periodicals.</subject>
+         <subject encodinganalog="650$a" source="lcsh">Editors --United States --Correspondence.</subject>
+         <subject encodinganalog="650$a" source="lcsh">Literature publishing --Illinois --Chicago.</subject>
+         <subject encodinganalog="650$a" source="lcsh">Poets, American --American.</subject>
+         <controlaccess>
+            <head/>
+            <persname encodinganalog="700$a" source="lcnaf">Hine, Daryl.</persname>
+            <persname encodinganalog="700$a" source="lcnaf">Nims, John Frederick, 1913-</persname>
+            <persname encodinganalog="700$a" source="lcnaf">Parisi, Joseph, 1944-</persname>
+            <persname encodinganalog="700$a" source="lcnaf">Rago, Henry, 1915-1969.</persname>
+            <persname encodinganalog="700$a" source="lcnaf">Shapiro, Karl Jay, 1913-</persname>
+            <title encodinganalog="730$a" source="lcnaf">Poetry.</title>
+         </controlaccess>
+      </controlaccess>
+      <relatedmaterial encodinganalog="544 1">
+         <head>Related Material</head>
+         <p>For more related information, see Rago mss., Rago mss. II, and Rago mss. III.</p>
+      </relatedmaterial><!-- required; 'descgrp' element replaces admininfo element in 2002 DTD -->
+      <descgrp>
+         <head>Administrative Information</head>
          <acqinfo encodinganalog="541">
             <head>Acquisition Information</head>
             <p>Purchase.  1962- </p>
@@ -111,43 +148,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
             <p>[Item], Poetry mss., Lilly Library, Indiana University, Bloomington,
 		  Indiana.</p>
          </prefercite>
-         <bioghist encodinganalog="545">
-            <head>Administrative History</head>
-            <p>The official owner and publisher of the magazine is the Modern Poetry Association.  Editors of the magazine include poet Karl Jay Shapiro (1913-2000) in 1954-1955; poet Henry Rago (1915-1969) from October 1955 until Fall 1968;  Canadian poet Daryl Hine from 1968-1977.  Poet and translator John Frederick Nims (1913-1999) served as editor immediately following Hine through 1983 and Joseph Parisi, succeeding Nims in 1983, served through Spring 2003.  The files of Poetry magazine from its founding in 1912 through 1960 are located at the University of Chicago Library’s Department of special Collections.  The records of Poetry held by The Lilly Library, Indiana University, date for the most part from 1962 and the library continues to acquire the journal's correspondence and publication files on a yearly basis. </p>
-         </bioghist>
       </descgrp>
-      <!-- required for collection level; optional for lower levels --><scopecontent encodinganalog="520$a$b">
-         <head>Scope and Content Note</head>
-         <p>The correspondence comprises the letters sent to <title render="italic" linktype="simple">Poetry</title> and replies thereto by Henry Rago and by others who have been members of the editorial staff or the official Board:  Wallace Fowlie, Donald Gallup, Hugh Kenner, J. Patrick Lannan, Helen Lothrop, Karl Jay Shapiro, Julie McLauchlin, Donald H. Merwin, Robert Mueller, John Frederick Nims, Ann Peyton, Maryanne Schaefer, Joseph Wiley, and Elizabeth (Van Valkenberg) Wright.  Occasionally  poems sent in by a writer have been retained in the correspondence.  Those letters marked with an "x" and initialed "HR" indicate that the poem was rejected by Henry Rago for inclusion in <title render="italic" linktype="simple">Poetry</title> and was returned to the writer.</p>
-         <p>The Business and Financial series includes "Rate Books" wherein the amounts paid to the authors for their works are noted.</p>
-         <p>The Writings series consists of the manuscripts of poems, galleys, page proofs, and author proofs of the monthly issues of <title render="italic" linktype="simple">Poetry</title> for the years 1962-2002.  Included is the printer's manuscript of the poems of seventeen poets, whose works appeared in the fiftieth anniversary issue of October-November, 1962: Conrad Aiken, John Berryman, Louise Bogan, John Ciardi, James Vincent Cunningham, Robert Graves, Randall Jarrell, Stanley Kunitz, Hugh MacDiarmid, William Charles Franklyn Plomer, Kathleen Raine, Henry Rago, Muriel Rukeyser, Karl Jay Shapiro, Stephen Spender, Vernon Watkins, and William Carlos Williams.  Printed materials consist of a scrapbook of poetry clippings assembled by Daniel B. Rumpf of Topeka, Kansas.</p>
-      </scopecontent>
-      <!--optional --><!-- element organization deprecated in DTD version 2002; @encodinganalog may be used to differentiate between 351 subfield a (organization) and subfield b (arrangement). --><arrangement encodinganalog="351$x">
-         <head>Arrangement/Organization</head>
-         <p>The collection is organized into the following series:  I. Correspondence; II. Business and Financial; III. Writings.</p>
-      </arrangement>
-      <!-- recommended; this information would be included for marc amc record --><!-- should include all personal and corporate names, and subject headings --><controlaccess>
-         <head>Controlled Access Terms</head>
-         <corpname encodinganalog="610$a" source="lcnaf" role="subject">Modern Poetry Association.</corpname>
-         <title encodinganalog="630$a" source="lcsh" linktype="simple">Poetry.</title>
-         <subject encodinganalog="650$a" source="lcsh">American poetry --Periodicals.</subject>
-         <subject encodinganalog="650$a" source="lcsh">Editors --United States --Correspondence.</subject>
-         <subject encodinganalog="650$a" source="lcsh">Literature publishing --Illinois --Chicago.</subject>
-         <subject encodinganalog="650$a" source="lcsh">Poets, American --American.</subject>
-         <controlaccess>
-            <head/>
-            <persname encodinganalog="700$a" source="lcnaf">Hine, Daryl.</persname>
-            <persname encodinganalog="700$a" source="lcnaf">Nims, John Frederick, 1913-</persname>
-            <persname encodinganalog="700$a" source="lcnaf">Parisi, Joseph, 1944-</persname>
-            <persname encodinganalog="700$a" source="lcnaf">Rago, Henry, 1915-1969.</persname>
-            <persname encodinganalog="700$a" source="lcnaf">Shapiro, Karl Jay, 1913-</persname>
-            <title encodinganalog="730$a" source="lcnaf" linktype="simple">Poetry.</title>
-         </controlaccess>
-      </controlaccess>
-      <relatedmaterial encodinganalog="544">
-         <head>Related Material</head>
-         <p>For more related information, see Rago mss., Rago mss. II, and Rago mss. III.</p>
-      </relatedmaterial>
       <dsc type="combined"><!-- unittitle is the only required element within component --><!-- possible values for @level include: class, collection, file, fonds, item, otherlevel, recordgrp, series, subfonds, subgrp, subseries --><c01 level="series">
             <did>
                <unittitle>Correspondence</unittitle>
@@ -164,14 +165,14 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
             </c02>
             <c02 level="file">
                <did>
-                  <unittitle>Poetry prizes, <unitdate normal="1974/1989" era="ce" calendar="gregorian">1974-1989</unitdate>
+                  <unittitle>Poetry prizes, <unitdate normal="1974/1989" era="ce" calendar="gregorian" type="inclusive">1974-1989</unitdate>
                   </unittitle>
                   <physdesc>(16 folders)</physdesc>
                </did>
             </c02>
             <c02 level="file">
                <did>
-                  <unittitle>Hine, Daryl, <unitdate normal="1968/1975" era="ce" calendar="gregorian">1968-1975</unitdate>
+                  <unittitle>Hine, Daryl, <unitdate normal="1968/1975" era="ce" calendar="gregorian" type="inclusive">1968-1975</unitdate>
                   </unittitle>
                   <physdesc>(6 folders).</physdesc>
                   <note>
@@ -6152,7 +6153,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">1</container>
                   <unittitle>
-                     <title render="doublequote" linktype="simple">"Rate Books," </title>
+                     <title render="doublequote">"Rate Books," </title>
                      <unitdate type="inclusive" normal="1963-01/1975-04" era="ce" calendar="gregorian">1963, Jan.-1975, Apr.</unitdate>
                   </unittitle>
                </did>
@@ -6161,7 +6162,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">2</container>
                   <unittitle>
-                     <title render="doublequote" linktype="simple">"Rate Books," </title>
+                     <title render="doublequote">"Rate Books," </title>
                      <unitdate type="inclusive" normal="1967-05/1978-04" era="ce" calendar="gregorian">1975, May -1978, Apr.</unitdate>
                   </unittitle>
                   <physdesc>(36 volumes)</physdesc>
@@ -6286,7 +6287,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
             <c02 level="file">
                <did>
                   <container type="box" label="Box">2</container>
-                  <unittitle>Printer's manuscript, <unitdate normal="1962-10/1962-11" era="ce" calendar="gregorian">Oct.-Nov. 1962</unitdate>
+                  <unittitle>Printer's manuscript, <unitdate normal="1962-10/1962-11" era="ce" calendar="gregorian" type="inclusive">Oct.-Nov. 1962</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6300,7 +6301,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">63</container>
                   <unittitle>
-                     <unitdate normal="1962-01/1962-06" era="ce" calendar="gregorian">1962, Jan.-June</unitdate>
+                     <unitdate normal="1962-01/1962-06" era="ce" calendar="gregorian" type="inclusive">1962, Jan.-June</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6308,7 +6309,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">64</container>
                   <unittitle>
-                     <unitdate normal="1962-06/1962-11" era="ce" calendar="gregorian">1962, June-Oct./Nov.</unitdate>
+                     <unitdate normal="1962-06/1962-11" era="ce" calendar="gregorian" type="inclusive">1962, June-Oct./Nov.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6324,7 +6325,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">66</container>
                   <unittitle>
-                     <unitdate normal="1963-05/1963-11" era="ce" calendar="gregorian">1963, May-Oct/Nov.</unitdate>
+                     <unitdate normal="1963-05/1963-11" era="ce" calendar="gregorian" type="inclusive">1963, May-Oct/Nov.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6340,7 +6341,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">68</container>
                   <unittitle>
-                     <unitdate normal="1964-04/1964-09" era="ce" calendar="gregorian">1964, Apr.-Sept.</unitdate>
+                     <unitdate normal="1964-04/1964-09" era="ce" calendar="gregorian" type="inclusive">1964, Apr.-Sept.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6356,7 +6357,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">70</container>
                   <unittitle>
-                     <unitdate normal="1965-02/1965-07" era="ce" calendar="gregorian">1965, Feb.-July</unitdate>
+                     <unitdate normal="1965-02/1965-07" era="ce" calendar="gregorian" type="inclusive">1965, Feb.-July</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6364,7 +6365,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">71</container>
                   <unittitle>
-                     <unitdate normal="1965-08/1965-12" era="ce" calendar="gregorian">1965, Aug.-Dec.</unitdate>
+                     <unitdate normal="1965-08/1965-12" era="ce" calendar="gregorian" type="inclusive">1965, Aug.-Dec.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6372,7 +6373,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">72</container>
                   <unittitle>
-                     <unitdate normal="1966-01/1966-06" era="ce" calendar="gregorian">1966, Jan.-June</unitdate>
+                     <unitdate normal="1966-01/1966-06" era="ce" calendar="gregorian" type="inclusive">1966, Jan.-June</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6380,7 +6381,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">73</container>
                   <unittitle>
-                     <unitdate normal="1966-07/1966-11" era="ce" calendar="gregorian">1966, July-Nov.</unitdate>
+                     <unitdate normal="1966-07/1966-11" era="ce" calendar="gregorian" type="inclusive">1966, July-Nov.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6396,7 +6397,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">75</container>
                   <unittitle>
-                     <unitdate normal="1967-05/1967-09" era="ce" calendar="gregorian">1967, May-Sept.</unitdate>
+                     <unitdate normal="1967-05/1967-09" era="ce" calendar="gregorian" type="inclusive">1967, May-Sept.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6412,7 +6413,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">77</container>
                   <unittitle>
-                     <unitdate normal="1968-05/1968-09" era="ce" calendar="gregorian">1968, May-Sept.</unitdate>
+                     <unitdate normal="1968-05/1968-09" era="ce" calendar="gregorian" type="inclusive">1968, May-Sept.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6428,7 +6429,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">79</container>
                   <unittitle>
-                     <unitdate normal="1969-01/1969-07" era="ce" calendar="gregorian">1969, Jan.-July</unitdate>
+                     <unitdate normal="1969-01/1969-07" era="ce" calendar="gregorian" type="inclusive">1969, Jan.-July</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6436,7 +6437,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">80</container>
                   <unittitle>
-                     <unitdate normal="1969-07/1969-12" era="ce" calendar="gregorian">1969, July-Dec.</unitdate>
+                     <unitdate normal="1969-07/1969-12" era="ce" calendar="gregorian" type="inclusive">1969, July-Dec.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6452,7 +6453,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">82</container>
                   <unittitle>
-                     <unitdate normal="1970-06/1970-11" era="ce" calendar="gregorian">1970, June-Nov.</unitdate>
+                     <unitdate normal="1970-06/1970-11" era="ce" calendar="gregorian" type="inclusive">1970, June-Nov.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6468,7 +6469,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">84</container>
                   <unittitle>
-                     <unitdate normal="1971-03/1971-06" era="ce" calendar="gregorian">1971, Mar.-June</unitdate>
+                     <unitdate normal="1971-03/1971-06" era="ce" calendar="gregorian" type="inclusive">1971, Mar.-June</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6476,7 +6477,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">85</container>
                   <unittitle>
-                     <unitdate normal="1971-07/1971-12" era="ce" calendar="gregorian">1971, July-Dec.</unitdate>
+                     <unitdate normal="1971-07/1971-12" era="ce" calendar="gregorian" type="inclusive">1971, July-Dec.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6484,7 +6485,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">86</container>
                   <unittitle>
-                     <unitdate normal="1972-01/1972-06" era="ce" calendar="gregorian">1972, Jan.-June</unitdate>
+                     <unitdate normal="1972-01/1972-06" era="ce" calendar="gregorian" type="inclusive">1972, Jan.-June</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6492,7 +6493,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">87</container>
                   <unittitle>
-                     <unitdate normal="1972-07/1972-12" era="ce" calendar="gregorian">1972, July-Dec.</unitdate>
+                     <unitdate normal="1972-07/1972-12" era="ce" calendar="gregorian" type="inclusive">1972, July-Dec.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6500,7 +6501,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">88</container>
                   <unittitle>
-                     <unitdate normal="1973-01/1973-06" era="ce" calendar="gregorian">1973, Jan.-June</unitdate>
+                     <unitdate normal="1973-01/1973-06" era="ce" calendar="gregorian" type="inclusive">1973, Jan.-June</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6508,7 +6509,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">89</container>
                   <unittitle>
-                     <unitdate normal="1973-07/1973-12" era="ce" calendar="gregorian">1973, July-Dec.</unitdate>
+                     <unitdate normal="1973-07/1973-12" era="ce" calendar="gregorian" type="inclusive">1973, July-Dec.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6516,7 +6517,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">90</container>
                   <unittitle>
-                     <unitdate normal="1974-01/1974-10" era="ce" calendar="gregorian">1974, Jan.-Oct.</unitdate>
+                     <unitdate normal="1974-01/1974-10" era="ce" calendar="gregorian" type="inclusive">1974, Jan.-Oct.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6532,7 +6533,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">92</container>
                   <unittitle>
-                     <unitdate normal="1975-06/1975-12" era="ce" calendar="gregorian">1975, June-Dec.</unitdate>
+                     <unitdate normal="1975-06/1975-12" era="ce" calendar="gregorian" type="inclusive">1975, June-Dec.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6540,7 +6541,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">93</container>
                   <unittitle>
-                     <unitdate normal="1976-01/1976-07" era="ce" calendar="gregorian">1976, Jan.-July</unitdate>
+                     <unitdate normal="1976-01/1976-07" era="ce" calendar="gregorian" type="inclusive">1976, Jan.-July</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6556,7 +6557,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">95</container>
                   <unittitle>
-                     <unitdate normal="1976-02/1976-08" era="ce" calendar="gregorian">1977, Feb.-Aug.</unitdate>
+                     <unitdate normal="1976-02/1976-08" era="ce" calendar="gregorian" type="inclusive">1977, Feb.-Aug.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6572,7 +6573,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">97</container>
                   <unittitle>
-                     <unitdate normal="1978-02/1978-07" era="ce" calendar="gregorian">1978, Feb.-July</unitdate>
+                     <unitdate normal="1978-02/1978-07" era="ce" calendar="gregorian" type="inclusive">1978, Feb.-July</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6580,7 +6581,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">98</container>
                   <unittitle>
-                     <unitdate normal="1978-07/1978-12" era="ce" calendar="gregorian">1978, July-Dec.</unitdate>
+                     <unitdate normal="1978-07/1978-12" era="ce" calendar="gregorian" type="inclusive">1978, July-Dec.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6588,7 +6589,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">99</container>
                   <unittitle>
-                     <unitdate normal="1979-01/1979-07" era="ce" calendar="gregorian">1979, Jan.-July</unitdate>
+                     <unitdate normal="1979-01/1979-07" era="ce" calendar="gregorian" type="inclusive">1979, Jan.-July</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6596,7 +6597,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">100</container>
                   <unittitle>
-                     <unitdate normal="1979-08/1979-12" era="ce" calendar="gregorian">1979, Aug.-Dec.</unitdate>
+                     <unitdate normal="1979-08/1979-12" era="ce" calendar="gregorian" type="inclusive">1979, Aug.-Dec.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6604,7 +6605,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">101</container>
                   <unittitle>
-                     <unitdate normal="1980-01/1980-05" era="ce" calendar="gregorian">1980, Jan.-May</unitdate>
+                     <unitdate normal="1980-01/1980-05" era="ce" calendar="gregorian" type="inclusive">1980, Jan.-May</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6612,7 +6613,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">102</container>
                   <unittitle>
-                     <unitdate normal="1980-06/1980-11" era="ce" calendar="gregorian">1980, June-Nov.</unitdate>
+                     <unitdate normal="1980-06/1980-11" era="ce" calendar="gregorian" type="inclusive">1980, June-Nov.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6628,7 +6629,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">104</container>
                   <unittitle>
-                     <unitdate normal="1981-06/1981-11" era="ce" calendar="gregorian">1981, June-Nov.</unitdate>
+                     <unitdate normal="1981-06/1981-11" era="ce" calendar="gregorian" type="inclusive">1981, June-Nov.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6644,7 +6645,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">106</container>
                   <unittitle>
-                     <unitdate normal="1981-06/1982-12" era="ce" calendar="gregorian">1982, June-Dec.</unitdate>
+                     <unitdate normal="1981-06/1982-12" era="ce" calendar="gregorian" type="inclusive">1982, June-Dec.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6660,7 +6661,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">108</container>
                   <unittitle>
-                     <unitdate normal="1983-07/1983-11" era="ce" calendar="gregorian">1983, July-Nov.</unitdate>
+                     <unitdate normal="1983-07/1983-11" era="ce" calendar="gregorian" type="inclusive">1983, July-Nov.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6676,7 +6677,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">110</container>
                   <unittitle>
-                     <unitdate normal="1984-05/1984-08" era="ce" calendar="gregorian">1984, May -Aug.</unitdate>
+                     <unitdate normal="1984-05/1984-08" era="ce" calendar="gregorian" type="inclusive">1984, May -Aug.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6692,7 +6693,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">112</container>
                   <unittitle>
-                     <unitdate normal="1985-02/1985-06" era="ce" calendar="gregorian">1985, Feb.-June</unitdate>
+                     <unitdate normal="1985-02/1985-06" era="ce" calendar="gregorian" type="inclusive">1985, Feb.-June</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6700,7 +6701,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">113</container>
                   <unittitle>
-                     <unitdate normal="1985-06/1985-10" era="ce" calendar="gregorian">1985, June-Oct.</unitdate>
+                     <unitdate normal="1985-06/1985-10" era="ce" calendar="gregorian" type="inclusive">1985, June-Oct.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6708,8 +6709,8 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">114</container>
                   <unittitle>
-                     <unitdate normal="1985-10/1985-12" era="ce" calendar="gregorian">1985, Oct.-Dec.,</unitdate> and <unitdate normal="1978" era="ce" calendar="gregorian">1978, </unitdate>
-                     <title linktype="simple">The Poetry Anthology</title>
+                     <unitdate normal="1985-10/1985-12" era="ce" calendar="gregorian" type="inclusive">1985, Oct.-Dec.,</unitdate> and <unitdate normal="1978" era="ce" calendar="gregorian">1978, </unitdate>
+                     <title>The Poetry Anthology</title>
                   </unittitle>
                </did>
             </c02>
@@ -6725,7 +6726,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">116</container>
                   <unittitle>
-                     <unitdate normal="1986-02/1986-05" era="ce" calendar="gregorian">1986, Feb.-May</unitdate>
+                     <unitdate normal="1986-02/1986-05" era="ce" calendar="gregorian" type="inclusive">1986, Feb.-May</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6733,7 +6734,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">117</container>
                   <unittitle>
-                     <unitdate normal="1986-05/1986-07" era="ce" calendar="gregorian">1986, May-July</unitdate>
+                     <unitdate normal="1986-05/1986-07" era="ce" calendar="gregorian" type="inclusive">1986, May-July</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6741,7 +6742,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">118</container>
                   <unittitle>
-                     <unitdate normal="1986-08/1986-10" era="ce" calendar="gregorian">1986, Aug.-Oct.</unitdate>
+                     <unitdate normal="1986-08/1986-10" era="ce" calendar="gregorian" type="inclusive">1986, Aug.-Oct.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6757,7 +6758,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">120</container>
                   <unittitle>
-                     <unitdate normal="1987-02/1987-04" era="ce" calendar="gregorian">1987, Feb.-Apr.</unitdate>
+                     <unitdate normal="1987-02/1987-04" era="ce" calendar="gregorian" type="inclusive">1987, Feb.-Apr.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6765,7 +6766,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">121</container>
                   <unittitle>
-                     <unitdate normal="1987-04/1987-07" era="ce" calendar="gregorian">1987, Apr.-July</unitdate>
+                     <unitdate normal="1987-04/1987-07" era="ce" calendar="gregorian" type="inclusive">1987, Apr.-July</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6773,7 +6774,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">122</container>
                   <unittitle>
-                     <unitdate normal="1987-07/1987-09" era="ce" calendar="gregorian">1987, July -Sept.</unitdate>
+                     <unitdate normal="1987-07/1987-09" era="ce" calendar="gregorian" type="inclusive">1987, July -Sept.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6789,7 +6790,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">124</container>
                   <unittitle>
-                     <unitdate normal="1987-10/1987-12" era="ce" calendar="gregorian">1987, Oct./Nov.-Dec.</unitdate>
+                     <unitdate normal="1987-10/1987-12" era="ce" calendar="gregorian" type="inclusive">1987, Oct./Nov.-Dec.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6797,7 +6798,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">125</container>
                   <unittitle>
-                     <unitdate normal="1988-01/1988-04" era="ce" calendar="gregorian">1988, Jan.-Apr.</unitdate>
+                     <unitdate normal="1988-01/1988-04" era="ce" calendar="gregorian" type="inclusive">1988, Jan.-Apr.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6805,7 +6806,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">126</container>
                   <unittitle>
-                     <unitdate normal="1988-04/1988-07" era="ce" calendar="gregorian">1988, Apr.-July</unitdate>
+                     <unitdate normal="1988-04/1988-07" era="ce" calendar="gregorian" type="inclusive">1988, Apr.-July</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6813,7 +6814,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">127</container>
                   <unittitle>
-                     <unitdate normal="1988-07/1988-09" era="ce" calendar="gregorian">1988, July-Sept.</unitdate>
+                     <unitdate normal="1988-07/1988-09" era="ce" calendar="gregorian" type="inclusive">1988, July-Sept.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6821,7 +6822,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">128</container>
                   <unittitle>
-                     <unitdate normal="1988-10/1988-12" era="ce" calendar="gregorian">1988, Oct.-Dec.</unitdate>
+                     <unitdate normal="1988-10/1988-12" era="ce" calendar="gregorian" type="inclusive">1988, Oct.-Dec.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6829,7 +6830,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">129</container>
                   <unittitle>
-                     <unitdate normal="1989-01/1989-04" era="ce" calendar="gregorian">1989, Jan.-May</unitdate>
+                     <unitdate normal="1989-01/1989-04" era="ce" calendar="gregorian" type="inclusive">1989, Jan.-May</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6837,7 +6838,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">130</container>
                   <unittitle>
-                     <unitdate normal="1989-05/1989-08" era="ce" calendar="gregorian">1989, May-Aug.</unitdate>
+                     <unitdate normal="1989-05/1989-08" era="ce" calendar="gregorian" type="inclusive">1989, May-Aug.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6845,7 +6846,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">131</container>
                   <unittitle>
-                     <unitdate normal="1989-08/1989-11" era="ce" calendar="gregorian">1989, Aug.-Oct./Nov.</unitdate>
+                     <unitdate normal="1989-08/1989-11" era="ce" calendar="gregorian" type="inclusive">1989, Aug.-Oct./Nov.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6861,7 +6862,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">133</container>
                   <unittitle>
-                     <unitdate normal="1990-02/1990-04" era="ce" calendar="gregorian">1990, Feb.-Apr.</unitdate>
+                     <unitdate normal="1990-02/1990-04" era="ce" calendar="gregorian" type="inclusive">1990, Feb.-Apr.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6869,7 +6870,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">134</container>
                   <unittitle>
-                     <unitdate normal="1990-05/1990-08" era="ce" calendar="gregorian">1990, May-Aug.</unitdate>
+                     <unitdate normal="1990-05/1990-08" era="ce" calendar="gregorian" type="inclusive">1990, May-Aug.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6877,7 +6878,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">135</container>
                   <unittitle>
-                     <unitdate normal="1990-08/1990-11" era="ce" calendar="gregorian">1990, Aug.-Nov.</unitdate>
+                     <unitdate normal="1990-08/1990-11" era="ce" calendar="gregorian" type="inclusive">1990, Aug.-Nov.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6893,7 +6894,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">137</container>
                   <unittitle>
-                     <unitdate normal="1991-04/1991-09" era="ce" calendar="gregorian">1991, Apr.-Sept.</unitdate>
+                     <unitdate normal="1991-04/1991-09" era="ce" calendar="gregorian" type="inclusive">1991, Apr.-Sept.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6909,7 +6910,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">139</container>
                   <unittitle>
-                     <unitdate normal="1992-02/1992-06" era="ce" calendar="gregorian">1992, Feb.-June</unitdate>
+                     <unitdate normal="1992-02/1992-06" era="ce" calendar="gregorian" type="inclusive">1992, Feb.-June</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6917,7 +6918,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">140</container>
                   <unittitle>
-                     <unitdate normal="1992-06/1992-10" era="ce" calendar="gregorian">1992, June-Oct.</unitdate>
+                     <unitdate normal="1992-06/1992-10" era="ce" calendar="gregorian" type="inclusive">1992, June-Oct.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6933,7 +6934,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">142</container>
                   <unittitle>
-                     <unitdate normal="1993-03/1993-06" era="ce" calendar="gregorian">1993, Mar.-June</unitdate>
+                     <unitdate normal="1993-03/1993-06" era="ce" calendar="gregorian" type="inclusive">1993, Mar.-June</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6941,7 +6942,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">143</container>
                   <unittitle>
-                     <unitdate normal="1993-06/1993-11" era="ce" calendar="gregorian">1993, July-Nov.</unitdate>
+                     <unitdate normal="1993-06/1993-11" era="ce" calendar="gregorian" type="inclusive">1993, July-Nov.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6949,7 +6950,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">144</container>
                   <unittitle>
-                     <unitdate normal="1993-12/1994-04" era="ce" calendar="gregorian">1993, Dec.-1994, Apr.</unitdate>
+                     <unitdate normal="1993-12/1994-04" era="ce" calendar="gregorian" type="inclusive">1993, Dec.-1994, Apr.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6957,7 +6958,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">145</container>
                   <unittitle>
-                     <unitdate normal="1994-04/1994-10" era="ce" calendar="gregorian">1994, Apr.-Oct.</unitdate>
+                     <unitdate normal="1994-04/1994-10" era="ce" calendar="gregorian" type="inclusive">1994, Apr.-Oct.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6973,7 +6974,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">147</container>
                   <unittitle>
-                     <unitdate normal="1995-05/1995-12" era="ce" calendar="gregorian">1995, May-Dec.</unitdate>
+                     <unitdate normal="1995-05/1995-12" era="ce" calendar="gregorian" type="inclusive">1995, May-Dec.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6981,7 +6982,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">148</container>
                   <unittitle>
-                     <unitdate normal="1996-01/1996-08" era="ce" calendar="gregorian">1996, Jan.-Aug.</unitdate>
+                     <unitdate normal="1996-01/1996-08" era="ce" calendar="gregorian" type="inclusive">1996, Jan.-Aug.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -6997,7 +6998,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">150</container>
                   <unittitle>
-                     <unitdate normal="1997-04/1997-09" era="ce" calendar="gregorian">1997, Apr.-Sept.</unitdate>
+                     <unitdate normal="1997-04/1997-09" era="ce" calendar="gregorian" type="inclusive">1997, Apr.-Sept.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -7021,7 +7022,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">153</container>
                   <unittitle>
-                     <unitdate normal="1998-08/1998-12" era="ce" calendar="gregorian">1998, Aug.-Dec.</unitdate>
+                     <unitdate normal="1998-08/1998-12" era="ce" calendar="gregorian" type="inclusive">1998, Aug.-Dec.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -7029,7 +7030,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">154</container>
                   <unittitle>
-                     <unitdate normal="1999-01/1999-07" era="ce" calendar="gregorian">1999, Jan.-July</unitdate>
+                     <unitdate normal="1999-01/1999-07" era="ce" calendar="gregorian" type="inclusive">1999, Jan.-July</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -7037,7 +7038,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">155</container>
                   <unittitle>
-                     <unitdate normal="1999-07/1999-12" era="ce" calendar="gregorian">1999, July-Dec.</unitdate>
+                     <unitdate normal="1999-07/1999-12" era="ce" calendar="gregorian" type="inclusive">1999, July-Dec.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -7045,7 +7046,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">156</container>
                   <unittitle>
-                     <unitdate normal="2000-01/2000-06" era="ce" calendar="gregorian">2000, Jan.-June</unitdate>
+                     <unitdate normal="2000-01/2000-06" era="ce" calendar="gregorian" type="inclusive">2000, Jan.-June</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -7053,7 +7054,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">157</container>
                   <unittitle>
-                     <unitdate normal="2000-06/2000-12" era="ce" calendar="gregorian">2000, July-Dec.</unitdate>
+                     <unitdate normal="2000-06/2000-12" era="ce" calendar="gregorian" type="inclusive">2000, July-Dec.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -7061,7 +7062,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">158</container>
                   <unittitle>
-                     <unitdate normal="2001-11/2001-06" era="ce" calendar="gregorian">2001, Jan.-June</unitdate>
+                     <unitdate normal="2001-11/2001-06" era="ce" calendar="gregorian" type="inclusive">2001, Jan.-June</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -7069,7 +7070,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">159</container>
                   <unittitle>
-                     <unitdate normal="2001-07/2001-12" era="ce" calendar="gregorian">2001, July -Dec.</unitdate>
+                     <unitdate normal="2001-07/2001-12" era="ce" calendar="gregorian" type="inclusive">2001, July -Dec.</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -7077,7 +7078,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">46</container>
                   <unittitle>
-                     <unitdate normal="2002-01/2002-07" era="ce" calendar="gregorian">2002, Jan.-July</unitdate>
+                     <unitdate normal="2002-01/2002-07" era="ce" calendar="gregorian" type="inclusive">2002, Jan.-July</unitdate>
                   </unittitle>
                </did>
             </c02>
@@ -7085,7 +7086,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="box" label="Box">47</container>
                   <unittitle>
-                     <unitdate normal="2002-07/2002-12" era="ce" calendar="gregorian">2002, July-Dec.</unitdate>
+                     <unitdate normal="2002-07/2002-12" era="ce" calendar="gregorian" type="inclusive">2002, July-Dec.</unitdate>
                   </unittitle>
                </did>
             </c02>

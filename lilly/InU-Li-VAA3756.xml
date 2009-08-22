@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Lilly Library, Indiana University, EAD template, 2003-02-21; updated DOCTYPE, Feb. 14, 2006, RKL --><!DOCTYPE ead
-  PUBLIC "-//Society of American Archivists//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN" "ead.dtd">
-<ead><!-- value of @findaidstatus should be 'originaldraft', 'inprogressdraft', 'editinprogress', or 'editedfulldraft' --><eadheader audience="internal" langencoding="iso639-2b" scriptencoding="iso15924"
+<!-- Lilly Library, Indiana University, EAD template, 2003-02-21; updated DOCTYPE, Feb. 14, 2006, RKL -->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+   <!-- value of @findaidstatus should be 'originaldraft', 'inprogressdraft', 'editinprogress', or 'editedfulldraft' --><eadheader audience="internal" langencoding="iso639-2b" scriptencoding="iso15924"
               repositoryencoding="iso15511"
               countryencoding="iso3166-1"
               dateencoding="iso8601"
-              findaidstatus="originaldraft"><!-- replace [uniqueid] with collection LMC number --><eadid identifier="InU-Li-VAA3756" countrycode="US" mainagencycode="InU-Li">InU-Li-VAA3756</eadid>
+              findaidstatus="originaldraft"><!-- replace [uniqueid] with collection LMC number --><eadid encodinganalog="identifier" identifier="InU-Li-VAA3756" countrycode="US" mainagencycode="InU-Li">InU-Li-VAA3756</eadid>
       <filedesc><!-- This is a description of the electronic finding aid, not the original finding aid or the collection --><!-- Make title "xxxx mss., yyyy-yyyy"--><!--Make subtitle "Papers, yyyy-yyyy, of [person] at the Lilly Library, Indiana University, Bloomington, Indiana--><titlestmt>
-            <titleproper>Bellos mss.,</titleproper>
+            <titleproper encodinganalog="title">Bellos mss.,</titleproper>
             <subtitle>Papers, 
 		  	<date normal="1985/2005" era="ce" calendar="gregorian">1985-2005</date>, of David Bellos at the Lilly
 			 Library, Indiana University, Bloomington, Indiana</subtitle>
-            <author>Electronic finding aid encoded by Donal C. Force.</author>
+            <author encodinganalog="creator">Electronic finding aid encoded by Donal C. Force.</author>
          </titlestmt>
          <publicationstmt>
-            <publisher>Lilly Library, Indiana University, Bloomington,
-			 Indiana</publisher>
-            <date normal="2006" type="publication" era="ce" calendar="gregorian">© 2006</date>
+            <publisher encodinganalog="publisher">Indiana University Digital Library Program</publisher>
+            <date encodinganalog="date" normal="2006" type="publication" era="ce" calendar="gregorian">© 2006</date>
          </publicationstmt>
       </filedesc>
       <profiledesc>
@@ -24,7 +25,7 @@
 		  pasting.<!--description of how the finding aid was created, for example: XML finding aid derived from
 [paper by means of scanning and OCR] [OCR file edited for typographical errors before encoding]
 [typescript by rekeying] [word processing program and version number]
-[<extref href="" linktype="simple" title="" actuate="onrequest" show="new">HTML collection description</extref>]. -->
+[<extref href="" title="" actuate="onrequest" show="new">HTML collection description</extref>]. -->
 		  <lb/>[date of source: <lb/>Finding aid encoded by Donald C. Force, Lilly
 		  Library, Indiana University, 
 		  <date normal="2006-09-06" era="ce" calendar="gregorian">September 6, 2006</date> 
@@ -56,18 +57,18 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
    </frontmatter>
    <archdesc level="collection" audience="external" type="inventory" relatedencoding="marc"><!-- @type value may alternatively be 'bulk' --><!-- use the label attribute for these elements to determine what label is displayed --><did>
          <head>Summary Information</head>
-         <repository encodinganalog="850$a" label="Repository"> 
+         <repository encodinganalog="852" label="Repository" id="lilly"> 
 		          <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana
 			 University, Bloomington)</corpname> 
 		          <address>
-               <addressline>Lilly Library</addressline>
                <addressline>Indiana University</addressline>
                <addressline>1200 E. Seventh St.</addressline>
                <addressline>Bloomington, IN 47405-5500</addressline>
                <addressline>Phone: 812-855-2452</addressline>
                <addressline>Fax: 812-855-3143</addressline>
                <addressline>Email: liblilly@indiana.edu</addressline>
-            </address> 
+		          </address><lb/> 
+            <extref xlink:href="http://www.indiana.edu/~liblilly">http://www.indiana.edu/~liblilly</extref> 
          </repository>
          <origination label="Creator"> 
 		          <persname source="lcnaf" encodinganalog="100$a$d">Bellos, David</persname>
@@ -76,22 +77,50 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
          <unitdate normal="1985/2005" type="inclusive" encodinganalog="245$f" era="ce"
                    calendar="gregorian">1985-2005</unitdate>
          <unitid encodinganalog="099" countrycode="US" repositorycode="US-InU-Li"
-                 label="Collection no">LMC 2517</unitid>
+                 label="Collection No.">LMC 2517</unitid>
          <physdesc encodinganalog="300$a$f" label="Extent"> 
             <extent>5500 items</extent>
             <!-- if both linear feet and number of items included, separate by lb tag -->
 		</physdesc>
-         <langmaterial label="Language">Materials are in
+         <langmaterial label="Language" encodinganalog="546">Materials are in
 		<language langcode="eng" encodinganalog="008/35-37">English</language> and <language langcode="fre">French.</language>
          </langmaterial>
          <abstract encodinganalog="520$a" label="Abstract">Consists of correspondence, notes, manuscript drafts, research files and clippings relating to translations and writings of literary translator and writer David Bellos.</abstract>
       </did>
-      <!-- required; 'descgrp' element replaces admininfo element in 2002 DTD --><descgrp>
-         <head>Administrative Information</head>
          <accessrestrict encodinganalog="506$a">
             <head>Access Restrictions</head>
             <p>This collection is open for research.</p>
          </accessrestrict>
+         <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+            <p>David Bellos (1945- ), writer, translator, and professor of French was born in England and educated at Oxford.  He is particularly well-known for his translations of the French novelist and short-story writer Georges Perec. In 1988, he  was awarded the IBM France translation prize for his translation of <title render="italic">Perec's Life: A User's Manual</title> and the Prix de Goncourt de la Biographie in 1994 for his biography <title render="italic">Georges Perec: A Life in Words</title>.  Bellos, who is presently a professor of French at Princeton University, has written or translated numerous works in English and French on nineteenth- and twentieth-century French literature.</p>
+         </bioghist><!--optional --><!-- element organization deprecated in DTD version 2002; @encodinganalog may be used to differentiate between 351 subfield a (organization) and subfield b (arrangement). -->
+      <arrangement encodinganalog="351$x">
+         <head>Arrangement/Organization</head>
+         <p>The collection is organized into the following series: I. Georges Perec; II. Translations of other authors; and, III. Miscellaneous.</p>
+      </arrangement>
+      <!-- required for collection level; optional for lower levels --><scopecontent encodinganalog="520$a$b">
+         <head>Scope and Content Note</head>
+         <p>Consists of correspondence, notes, manuscript drafts, research files and clippings relating to translations and writings of literary translator and writer David Bellos. The majority of this collection (Series I) relates to his translations and biography of Perec. Series II consists of translations by Bellos of other authors. Present in this file are drafts and proofs of his translations of Ismail Kadare's <title render="italic">The Great Wall</title> and <title render="italic">The Successor</title>, as well as notes for an early draft of <title render="italic">Seeking Whom He May Devour</title> by Fred Vargas. Series III consists of articles and reviews written by Bellos, chiefly for <title render="italic">The New York Review of Books</title>, and clippings of reviews of various books written by Bellos.</p>
+      </scopecontent>
+      <!-- recommended; this information would be included for marc amc record --><!-- should include all personal and corporate names, and subject headings --><controlaccess>
+         <head>Controlled Access Terms</head>
+         <persname encodinganalog="600$a" source="lcnaf" role="subject">Bellos, David --Correspondence.</persname>
+         <persname encodinganalog="600$a" source="lcnaf" role="subject">Perec, Georges, 1936-1982 --Correspondence.</persname>
+         <persname encodinganalog="600$a" source="lcnaf" role="subject">Perec, Georges, 1936-1982 --Translations into English.</persname>
+         <subject encodinganalog="650$a" source="lcsh">French literature --Translations into English.</subject>
+         <subject encodinganalog="650$a" source="lcsh">Biography as a literary form.</subject>
+         <controlaccess>
+            <head/>
+            <persname encodinganalog="700$a" source="lcnaf">Perec, Georges, 1936-1982.</persname>
+            <persname encodinganalog="700$a" source="lcnaf">Bellos, David. Georges Perec.</persname>
+            <persname encodinganalog="700$a" source="lcnaf">Kadare, Ismail. Grande muraille. English</persname>
+            <persname encodinganalog="700$a" source="lcnaf">Kadare, Ismail. Pasardhësi. English</persname>
+            <persname encodinganalog="700$a" source="lcnaf">Vargas, Fred. Homme à l'envers. English</persname>
+         </controlaccess>
+      </controlaccess><!-- required; 'descgrp' element replaces admininfo element in 2002 DTD -->
+      <descgrp>
+         <head>Administrative Information</head>
          <acqinfo encodinganalog="541">
             <head>Acquisition Information</head>
             <p>Gift. 2004, 2006</p>
@@ -108,35 +137,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
             <head>Preferred Citation</head>
             <p>[Item], Bellos mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
          </prefercite>
-         <bioghist encodinganalog="545">
-            <head>Biographical Note</head>
-            <p>David Bellos (1945- ), writer, translator, and professor of French was born in England and educated at Oxford.  He is particularly well-known for his translations of the French novelist and short-story writer Georges Perec. In 1988, he  was awarded the IBM France translation prize for his translation of <title render="italic" linktype="simple">Perec's Life: A User's Manual</title> and the Prix de Goncourt de la Biographie in 1994 for his biography <title render="italic" linktype="simple">Georges Perec: A Life in Words</title>.  Bellos, who is presently a professor of French at Princeton University, has written or translated numerous works in English and French on nineteenth- and twentieth-century French literature.</p>
-         </bioghist>
       </descgrp>
-      <!-- required for collection level; optional for lower levels --><scopecontent encodinganalog="520$a$b">
-         <head>Scope and Content Note</head>
-         <p>Consists of correspondence, notes, manuscript drafts, research files and clippings relating to translations and writings of literary translator and writer David Bellos. The majority of this collection (Series I) relates to his translations and biography of Perec. Series II consists of translations by Bellos of other authors. Present in this file are drafts and proofs of his translations of Ismail Kadare's <title render="italic" linktype="simple">The Great Wall</title> and <title render="italic" linktype="simple">The Successor</title>, as well as notes for an early draft of <title render="italic" linktype="simple">Seeking Whom He May Devour</title> by Fred Vargas. Series III consists of articles and reviews written by Bellos, chiefly for <title render="italic" linktype="simple">The New York Review of Books</title>, and clippings of reviews of various books written by Bellos.</p>
-      </scopecontent>
-      <!--optional --><!-- element organization deprecated in DTD version 2002; @encodinganalog may be used to differentiate between 351 subfield a (organization) and subfield b (arrangement). --><arrangement encodinganalog="351$x">
-         <head>Arrangement/Organization</head>
-         <p>The collection is organized into the following series: I. Georges Perec; II. Translations of other authors; and, III. Miscellaneous.</p>
-      </arrangement>
-      <!-- recommended; this information would be included for marc amc record --><!-- should include all personal and corporate names, and subject headings --><controlaccess>
-         <head>Controlled Access Terms</head>
-         <persname encodinganalog="600$a" source="lcnaf" role="subject">Bellos, David --Correspondence.</persname>
-         <persname encodinganalog="600$a" source="lcnaf" role="subject">Perec, Georges, 1936-1982 --Correspondence.</persname>
-         <persname encodinganalog="600$a" source="lcnaf" role="subject">Perec, Georges, 1936-1982 --Translations into English.</persname>
-         <subject encodinganalog="650$a" source="lcsh">French literature --Translations into English.</subject>
-         <subject encodinganalog="650$a" source="lcsh">Biography as a literary form.</subject>
-         <controlaccess>
-            <head/>
-            <persname encodinganalog="700$a" source="lcnaf">Perec, Georges, 1936-1982.</persname>
-            <persname encodinganalog="700$a" source="lcnaf">Bellos, David. Georges Perec.</persname>
-            <persname encodinganalog="700$a" source="lcnaf">Kadare, Ismail. Grande muraille. English</persname>
-            <persname encodinganalog="700$a" source="lcnaf">Kadare, Ismail. Pasardhësi. English</persname>
-            <persname encodinganalog="700$a" source="lcnaf">Vargas, Fred. Homme à l'envers. English</persname>
-         </controlaccess>
-      </controlaccess>
       <dsc type="combined"><!-- unittitle is the only required element within component --><!-- possible values for @level include: class, collection, file, fonds, item, otherlevel, recordgrp, series, subfonds, subgrp, subseries --><c01 level="series">
             <did>
                <unittitle>Georges Perec</unittitle>
@@ -144,7 +145,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
             <c02 level="subseries">
                <did>
                   <unittitle>
-                     <title render="italic" linktype="simple">Georges Perec: A Life in Words</title>
+                     <title render="italic">Georges Perec: A Life in Words</title>
                   </unittitle>
                </did>
                <c03 level="file">
@@ -427,7 +428,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   </c04>
                   <c04 level="file">
                      <did>
-                        <unittitle>Gotlieb in G. Lenne. <title render="doublequote" linktype="simple">Je me souviens du cinema</title>
+                        <unittitle>Gotlieb in G. Lenne. <title render="doublequote">Je me souviens du cinema</title>
                         </unittitle>
                      </did>
                   </c04>
@@ -871,7 +872,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="box" label="Box">2</container>
                      <container type="folder" label="Folder">1-24</container>
-                     <unittitle>Notes and reports on research trips for <title render="italic" linktype="simple">Georges Perec: A Life in Words</title>, <unitdate type="inclusive" normal="1988-01/1990-03" era="ce" calendar="gregorian">January 1988-March 1990.</unitdate>
+                     <unittitle>Notes and reports on research trips for <title render="italic">Georges Perec: A Life in Words</title>, <unitdate type="inclusive" normal="1988-01/1990-03" era="ce" calendar="gregorian">January 1988-March 1990.</unitdate>
                      </unittitle>
                      <note>
                         <p>Arranged by location or topic</p>
@@ -955,7 +956,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="box" label="Box">3</container>
                      <container type="folder" label="Folder">1-6</container>
-                     <unittitle>Notes and notebooks for <title render="italic" linktype="simple">Georges Perec: A Life in Words</title>
+                     <unittitle>Notes and notebooks for <title render="italic">Georges Perec: A Life in Words</title>
                      </unittitle>
                   </did>
                </c03>
@@ -968,7 +969,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <container type="folder" label="Folder">8-12</container>
-                     <unittitle>Correspondence with publishers, etc., <unitdate type="inclusive" normal="1988/1993" era="ce" calendar="gregorian"> 1988-1993, </unitdate> about <title render="italic" linktype="simple">Georges Perec: A Life in Words</title>
+                     <unittitle>Correspondence with publishers, etc., <unitdate type="inclusive" normal="1988/1993" era="ce" calendar="gregorian"> 1988-1993, </unitdate> about <title render="italic">Georges Perec: A Life in Words</title>
                      </unittitle>
                   </did>
                </c03>
@@ -985,7 +986,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">14</container>
                      <unittitle>
-                        <title render="italic" linktype="simple">Georges Perec: A Life in Words.</title>
+                        <title render="italic">Georges Perec: A Life in Words.</title>
                      </unittitle>
                      <note>
                         <p>Early draft</p>
@@ -996,7 +997,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">15-17</container>
                      <unittitle>
-                        <title render="italic" linktype="simple">Georges Perec: A Life in Words.</title>
+                        <title render="italic">Georges Perec: A Life in Words.</title>
                      </unittitle>
                      <note>
                         <p>Corrected proofs</p>
@@ -1008,7 +1009,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                      <container type="box" label="Box">4</container>
                      <container type="folder" label="Folder">1-2</container>
                      <unittitle>
-                        <title render="italic" linktype="simple">Georges Perec: A Life in Words.</title>
+                        <title render="italic">Georges Perec: A Life in Words.</title>
                      </unittitle>
                      <note>
                         <p>Corrected proofs</p>
@@ -1069,7 +1070,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <container type="folder" label="Folder">14</container>
-                     <unittitle>Binet, Catherine. <title render="doublequote" linktype="simple">La commande: ou project d’un voyage à W</title>
+                     <unittitle>Binet, Catherine. <title render="doublequote">La commande: ou project d’un voyage à W</title>
                      </unittitle>
                      <note>
                         <p>(photocopy)</p>
@@ -1079,7 +1080,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <container type="folder" label="Folder">15</container>
-                     <unittitle>Binet, Catherine. <title render="doublequote" linktype="simple">Vous sovenez-vous de Gaspard Winckler?</title>
+                     <unittitle>Binet, Catherine. <title render="doublequote">Vous sovenez-vous de Gaspard Winckler?</title>
                      </unittitle>
                      <note>
                         <p>Film script about Georges Perec</p>
@@ -1090,7 +1091,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <container type="folder" label="Folder">16</container>
-                     <unittitle>Binet, Catherine.  Correspondence and interview notes with Bellos; <title render="doublequote" linktype="simple">Film sur Georges Perec:  Part I: <emph render="italic">Te souviens-tu de Gaspard Winckler?</emph> Part II:  <emph render="italic">Vous sovenez-vous de Gaspard Winckler?</emph>
+                     <unittitle>Binet, Catherine.  Correspondence and interview notes with Bellos; <title render="doublequote">Film sur Georges Perec:  Part I: <emph render="italic">Te souviens-tu de Gaspard Winckler?</emph> Part II:  <emph render="italic">Vous sovenez-vous de Gaspard Winckler?</emph>
                         </title>
                      </unittitle>
                   </did>
@@ -1132,7 +1133,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                      <container type="box" label="Box">5</container>
                      <container type="folder" label="Folder">1-2</container>
                      <unittitle>
-                        <title render="italic" linktype="simple">Georges Perec: A Life in Words.</title> Reviews</unittitle>
+                        <title render="italic">Georges Perec: A Life in Words.</title> Reviews</unittitle>
                   </did>
                </c03>
             </c02>
@@ -1189,10 +1190,10 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">16-24</container>
                      <unittitle>
-                        <title render="doublequote" linktype="simple">53 Jours.</title>
+                        <title render="doublequote">53 Jours.</title>
                      </unittitle>
                      <note>
-                        <p>Photocopies of the manuscript and typescript drafts from Harry Mathews's copy of Perec’s unfinished novel; Bellos's transcriptions and editing in preparation for the translation published as <title render="italic" linktype="simple">53 Days</title> (UK <unitdate normal="1992" era="ce" calendar="gregorian">1992</unitdate>, US <unitdate normal="2002" era="ce" calendar="gregorian">2002</unitdate>).</p>
+                        <p>Photocopies of the manuscript and typescript drafts from Harry Mathews's copy of Perec’s unfinished novel; Bellos's transcriptions and editing in preparation for the translation published as <title render="italic">53 Days</title> (UK <unitdate normal="1992" era="ce" calendar="gregorian">1992</unitdate>, US <unitdate normal="2002" era="ce" calendar="gregorian">2002</unitdate>).</p>
                      </note>
                   </did>
                </c03>
@@ -1206,7 +1207,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                      <did>
                         <container type="folder" label="Folder">25</container>
                         <unittitle>
-                           <title render="doublequote" linktype="simple">L'Abominable Pardessus.</title>
+                           <title render="doublequote">L'Abominable Pardessus.</title>
                         </unittitle>
                         <note>
                            <p>Film by Georges Franju, adaptation and dialogues by Georges Perec</p>
@@ -1217,14 +1218,14 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                      <did>
                         <container type="folder" label="Folder">26</container>
                         <unittitle>
-                           <title render="doublequote" linktype="simple">Alfred et Marie.</title>Un film de Gérard Zingg, scénario et dialogues de Georges Perec</unittitle>
+                           <title render="doublequote">Alfred et Marie.</title>Un film de Gérard Zingg, scénario et dialogues de Georges Perec</unittitle>
                      </did>
                   </c04>
                   <c04 level="file">
                      <did>
                         <container type="folder" label="Folder">27</container>
                         <unittitle>
-                           <title render="doublequote" linktype="simple">L'Attentat de Sarajevo</title>
+                           <title render="doublequote">L'Attentat de Sarajevo</title>
                         </unittitle>
                         <note>
                            <p>(incomplete)</p>
@@ -1235,7 +1236,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                      <did>
                         <container type="folder" label="Folder">28</container>
                         <unittitle>
-                           <title render="doublequote" linktype="simple">La bande magnétique.</title>
+                           <title render="doublequote">La bande magnétique.</title>
                         </unittitle>
                         <note>
                            <p>Film treatment</p>
@@ -1246,7 +1247,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                      <did>
                         <container type="folder" label="Folder">29</container>
                         <unittitle>
-                           <title render="doublequote" linktype="simple">Le Bonheur.</title>
+                           <title render="doublequote">Le Bonheur.</title>
                         </unittitle>
                         <note>
                            <p>Unpublished article by Perec on the film by A. Varda</p>
@@ -1257,7 +1258,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                      <did>
                         <container type="folder" label="Folder">30</container>
                         <unittitle>
-                           <title render="italic" linktype="simple">Les choses</title>
+                           <title render="italic">Les choses</title>
                         </unittitle>
                      </did>
                   </c04>
@@ -1265,10 +1266,10 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                      <did>
                         <container type="folder" label="Folder">31</container>
                         <unittitle>
-                           <title render="doublequote" linktype="simple">Les choses.</title>
+                           <title render="doublequote">Les choses.</title>
                         </unittitle>
                         <note>
-                           <p>Script for the movie adaptation of Perec’s book and <title render="italic" linktype="simple">Les choses</title>, screenplay, adaptation and dialogues by Raymond Bellour, Jean Maillaud, and Georges Perec</p>
+                           <p>Script for the movie adaptation of Perec’s book and <title render="italic">Les choses</title>, screenplay, adaptation and dialogues by Raymond Bellour, Jean Maillaud, and Georges Perec</p>
                         </note>
                      </did>
                   </c04>
@@ -1276,7 +1277,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                      <did>
                         <container type="folder" label="Folder">32</container>
                         <unittitle>
-                           <title linktype="simple">Le condottière</title>
+                           <title>Le condottière</title>
                         </unittitle>
                      </did>
                   </c04>
@@ -1284,14 +1285,14 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                      <did>
                         <container type="folder" label="Folder">33</container>
                         <unittitle>
-                           <title render="doublequote" linktype="simple">Ellis Island Revisted: Chronicles of vagrancy and hope,</title> translated by Harry Mathews</unittitle>
+                           <title render="doublequote">Ellis Island Revisted: Chronicles of vagrancy and hope,</title> translated by Harry Mathews</unittitle>
                      </did>
                   </c04>
                   <c04 level="file">
                      <did>
                         <container type="folder" label="Folder">34-36</container>
                         <unittitle>
-                           <title render="doublequote" linktype="simple">Les Extraordinaires aventures de Monsieur Eveready.</title>
+                           <title render="doublequote">Les Extraordinaires aventures de Monsieur Eveready.</title>
                         </unittitle>
                         <note>
                            <p>Unpublished script for radio serial</p>
@@ -1303,7 +1304,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                         <container type="box" label="Box">6</container>
                         <container type="folder" label="Folder">1</container>
                         <unittitle>
-                           <title render="doublequote" linktype="simple">Les Extraordinaires aventures de Monsieur Eveready</title>
+                           <title render="doublequote">Les Extraordinaires aventures de Monsieur Eveready</title>
                         </unittitle>
                      </did>
                   </c04>
@@ -1311,7 +1312,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                      <did>
                         <container type="folder" label="Folder">2</container>
                         <unittitle>
-                           <title render="doublequote" linktype="simple">Le fou</title>
+                           <title render="doublequote">Le fou</title>
                         </unittitle>
                      </did>
                   </c04>
@@ -1319,7 +1320,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                      <did>
                         <container type="folder" label="Folder">3</container>
                         <unittitle>
-                           <title render="doublequote" linktype="simple">Georges Perec L’amateur d’art</title>
+                           <title render="doublequote">Georges Perec L’amateur d’art</title>
                         </unittitle>
                      </did>
                   </c04>
@@ -1363,7 +1364,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                      <did>
                         <container type="folder" label="Folder">11</container>
                         <unittitle>
-                           <title render="doublequote" linktype="simple">Les Lieux d’une ruse/About my analysis</title>
+                           <title render="doublequote">Les Lieux d’une ruse/About my analysis</title>
                         </unittitle>
                      </did>
                   </c04>
@@ -1371,7 +1372,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                      <did>
                         <container type="folder" label="Folder">12</container>
                         <unittitle>
-                           <title render="italic" linktype="simple">Life: A User's manual</title>, correspondence, <unitdate normal="1985" era="ce" calendar="gregorian">1985</unitdate>
+                           <title render="italic">Life: A User's manual</title>, correspondence, <unitdate normal="1985" era="ce" calendar="gregorian">1985</unitdate>
                         </unittitle>
                      </did>
                   </c04>
@@ -1396,10 +1397,10 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <c04 level="file">
                      <did>
                         <container type="folder" label="Folder">17</container>
-                        <unittitle>Notes for films: <title render="doublequote" linktype="simple">Le club,</title> 
-                           <title render="doublequote" linktype="simple">Le prince Michel,</title> 
-                           <title render="doublequote" linktype="simple">La couronne de Saint Mathias,</title> 
-                           <title render="doublequote" linktype="simple">La coronne de fer</title>
+                        <unittitle>Notes for films: <title render="doublequote">Le club,</title> 
+                           <title render="doublequote">Le prince Michel,</title> 
+                           <title render="doublequote">La couronne de Saint Mathias,</title> 
+                           <title render="doublequote">La coronne de fer</title>
                         </unittitle>
                      </did>
                   </c04>
@@ -1452,7 +1453,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                      <did>
                         <container type="folder" label="Folder">24</container>
                         <unittitle>
-                           <title render="doublequote" linktype="simple">The Story of a Painting,</title> translated by Bellos</unittitle>
+                           <title render="doublequote">The Story of a Painting,</title> translated by Bellos</unittitle>
                      </did>
                   </c04>
                   <c04 level="file">
@@ -1487,7 +1488,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                      <did>
                         <container type="folder" label="Folder">33</container>
                         <unittitle>
-                           <title render="doublequote" linktype="simple">Wucherungen.</title>
+                           <title render="doublequote">Wucherungen.</title>
                         </unittitle>
                         <note>
                            <p>German radio script</p>
@@ -1610,7 +1611,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   </c04>
                   <c04 level="file">
                      <did>
-                        <unittitle>Alain Guerin, <title render="doublequote" linktype="simple">Le bon depart.</title>
+                        <unittitle>Alain Guerin, <title render="doublequote">Le bon depart.</title>
                         </unittitle>
                         <note>
                            <p>Notes</p>
@@ -1619,13 +1620,13 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   </c04>
                   <c04 level="file">
                      <did>
-                        <unittitle>Hamon/Rotman, <title render="doublequote" linktype="simple">Génération, les anées de Rêve</title>
+                        <unittitle>Hamon/Rotman, <title render="doublequote">Génération, les anées de Rêve</title>
                         </unittitle>
                      </did>
                   </c04>
                   <c04 level="file">
                      <did>
-                        <unittitle>E.A.J. Honigmann article on autobiography, <title render="italic" linktype="simple">New York Review</title>, <unitdate normal="1989-12-07" era="ce" calendar="gregorian">Dec. 7, 1989</unitdate>
+                        <unittitle>E.A.J. Honigmann article on autobiography, <title render="italic">New York Review</title>, <unitdate normal="1989-12-07" era="ce" calendar="gregorian">Dec. 7, 1989</unitdate>
 					                   </unittitle>
                      </did>
                   </c04>
@@ -1654,7 +1655,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   </c04>
                   <c04 level="file">
                      <did>
-                        <unittitle>Milan Kundera. <title render="italic" linktype="simple">TLS</title> review, <unitdate normal="1988-06-24" era="ce" calendar="gregorian">June 24, 1988</unitdate>
+                        <unittitle>Milan Kundera. <title render="italic">TLS</title> review, <unitdate normal="1988-06-24" era="ce" calendar="gregorian">June 24, 1988</unitdate>
                         </unittitle>
                      </did>
                   </c04>
@@ -1725,7 +1726,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">28</container>
                      <unittitle>
-                        <title render="italic" linktype="simple">The Great Wall.</title>
+                        <title render="italic">The Great Wall.</title>
                      </unittitle>
                      <note>
                         <p>First draft of translation; printout; copy-edited galleys (two sets)</p>
@@ -1736,7 +1737,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">29</container>
                      <unittitle>
-                        <title render="italic" linktype="simple">The Successor.</title>
+                        <title render="italic">The Successor.</title>
                      </unittitle>
                      <note>
                         <p>First draft of translation</p>
@@ -1747,7 +1748,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">30</container>
                      <unittitle>
-                        <title render="italic" linktype="simple">The Successor.</title>
+                        <title render="italic">The Successor.</title>
                      </unittitle>
                      <note>
                         <p>Late draft with some corrections by Bellos in pencil</p>
@@ -1758,7 +1759,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">31</container>
                      <unittitle>
-                        <title render="italic" linktype="simple">The Successor.</title>
+                        <title render="italic">The Successor.</title>
                      </unittitle>
                      <note>
                         <p>Bellos’s responses to copy-editor; corrected galleys</p>
@@ -1780,7 +1781,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">33</container>
                      <unittitle>
-                        <title render="italic" linktype="simple">Seeking Whom He May Devour.</title>
+                        <title render="italic">Seeking Whom He May Devour.</title>
                      </unittitle>
                      <note>
                         <p>Bellos's notes</p>
@@ -1791,7 +1792,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="folder" label="Folder">34</container>
                      <unittitle>
-                        <title render="italic" linktype="simple">Seeking Whom He May Devour.</title>
+                        <title render="italic">Seeking Whom He May Devour.</title>
                      </unittitle>
                      <note>
                         <p>First version of translation, heavily corrected</p>
@@ -1807,7 +1808,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
             <c02 level="file">
                <did>
                   <container type="folder" label="Folder">36</container>
-                  <unittitle>Miscellaneous articles, etc. written by Bellos for <title render="italic" linktype="simple">The New York Review of Books</title>
+                  <unittitle>Miscellaneous articles, etc. written by Bellos for <title render="italic">The New York Review of Books</title>
                   </unittitle>
                </did>
             </c02>

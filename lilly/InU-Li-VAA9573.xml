@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group  -->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader relatedencoding="dublincore" audience="external" langencoding="iso639-2b"
+        scriptencoding="iso15924" repositoryencoding="iso15511" countryencoding="iso3166-1"
+        dateencoding="iso8601" findaidstatus="edited-full-draft">
+        <eadid encodinganalog="identifier"
+            identifier="InU-Li-VAA9573" countrycode="US"
+            mainagencycode="InU-Li">InU-Li-VAA9573</eadid>
+            <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+            <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+        
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Detmold mss., <date normal="1874/1882">1874-1882</date></titleproper>
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library Program</publisher>
+                <date encodinganalog="date" normal="2009" type="publication">© 2009</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2009">© 2009</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>
+                <!--description of how the finding aid was created, for example: -->
+
+                Machine-readable finding aid derived from HTML finding aid by cutting and pasting. <lb/>[date of source: <date
+                    normal="2007-02-02" type="source">February 2, 2007</date>
+                <lb/>Finding aid encoded by Valerie Higgins, Library/Archives, Indiana University, <date
+                    normal="2009-03-31">March 31, 2009</date>
+            </creation>
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2009-03-31"/>
+                <item>Encoded finding aid.</item>
+            </change>
+        </revisiondesc>
+    </eadheader>
+
+   
+    <archdesc level="collection" audience="external" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository:">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address><lb/> 
+                <extref xlink:href="http://www.indiana.edu/~liblilly">http://www.indiana.edu/~liblilly</extref>
+
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname source="lcnaf" encodinganalog="100">Detmold, Christian Edward, 1810-1887.</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Detmold mss.</unittitle>
+            <unitdate normal="1874/1882" type="inclusive" encodinganalog="245$f">1874-1882</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1308</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>6 items.</extent>
+
+                <!-- if both linear feet and number of items included, repeat extent-->
+            </physdesc>
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng" encodinganalog="546">English</language> and <language encodinganalog="546" langcode="fre">French.</language></langmaterial>
+            <abstract encodinganalog="520" label="Abstract">The Detmold mss., 1874-1882, consists of the papers of Christian Edward Detmold, 1810-1887, a civil engineer born in Hanover, Germany.</abstract>
+        </did>
+  
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+  
+        
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+            <p>Christian Edward Detmold, 1810-1887, was a civil engineer born in Hanover, Germany. After an extensive career in the United States in railroads, iron manufacturing, foundation work on Fort Sumter, and work with the Crystal Palace of New York City in 1853, he spent much time in Europe for his health. While there he engaged in the writings of this collection. </p>
+
+        </bioghist>
+        
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into one series: Writings and Translations.</p>
+        </arrangement>
+        
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Detmold mss., 1874-1882, consists of the papers of Christian Edward Detmold, 1810-1887, a civil engineer born in Hanover, Germany. The papers are his translation from the Italian of the historical, political, and diplomatic writings of Niccolo Machiavelli (published in 4 volumes by J.R. Osgood of Boston in 1882), four miscellaneous pieces in French and English, and Un Disappointment Heureux (fiction).</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Controlled Access Terms</head>
+            <genreform encodinganalog="655" source="lcsh">Translations --19th century.</genreform>
+            <controlaccess>
+                <head>Additional Access Terms</head>
+                <persname encodinganalog="700" source="lcnaf">Machiavelli, Niccolò, 1469-1527.</persname>
+                <persname encodinganalog="700" source="lcnaf">Machiavelli, Niccolò, 1469-1527. Discorsi la prima decca di Tito Livio. English.</persname>
+                <persname encodinganalog="700" source="lcnaf">Machiavelli, Niccolò, 1469-1527. Il principe. English.</persname>
+            </controlaccess>
+        </controlaccess>
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Gift. 1984</p>
+            </acqinfo>
+            
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Detmold mss., Lilly Library, Indiana University, Bloomington,
+                    Indiana.</p>
+            </prefercite>
+
+        </descgrp>
+        
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 level="series">
+                <did>
+                    <!-- optional -->
+                    <container type="Box" label="Box">1</container>
+                    <unittitle>Writings and Translations, <unitdate normal="1874/1882" type="inclusive">1874-1882</unitdate></unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <unittitle>1. <unitdate normal="1874/1882" type="inclusive">1874-1882.</unitdate>The Historical, Political, and Diplomatic Writings of Niccolo Machiavelli. A.D.S.</unittitle><physdesc>(1066 pp.)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>2. <unitdate normal="1877-02-06">1877, Feb. 6.</unitdate>Ceux qu'ils sont le plus attachés à la doctrine...[first line] A.D.</unittitle><physdesc>(2 pp.)</physdesc></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>3. <unitdate normal="1877-02-10/1877-02-11" type="inclusive">1877, Feb. 10/11.</unitdate>Translation of a dispatch from Mr. Harris (Lord Malmesbury) to the Earl of Suffolk, St. Petersburg, 31 July 1778. Paris. A.Ds.</unittitle><physdesc>(2 drafts, 3 pp. and 4 pp.)</physdesc></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>4. <unitdate normal="1877-04-21">1877, Apr. 21.</unitdate>Un disappointment heureux. Paris. A.D.</unittitle><physdesc>(46 pp.)</physdesc></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>5. <unitdate normal="1874/1882" type="inclusive">Undated.</unitdate>Gallician Stories. Lieutenant Halofernes. A.D.</unittitle><physdesc>(2 pp.)</physdesc></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>6. <unitdate normal="1874/1882" type="inclusive">Undated.</unitdate>Rien de plus interessant que le livres/Nothing more interesting than books... A.Ds.</unittitle><physdesc>(2 drafts, 2 pp. each)</physdesc></did>
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>

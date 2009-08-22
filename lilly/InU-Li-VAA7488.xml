@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group  -->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader relatedencoding="dublincore" audience="external" langencoding="iso639-2b"
+        scriptencoding="iso15924" repositoryencoding="iso15511" countryencoding="iso3166-1"
+        dateencoding="iso8601" findaidstatus="edited-full-draft">
+        <eadid encodinganalog="identifier"
+            identifier="InU-Li-VAA7488" countrycode="US"
+            mainagencycode="InU-Li">InU-Li-VAA7488</eadid>
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper>Bradley, M. mss., </titleproper>
+                <subtitle>Papers, <date normal="1929/2002">ca. 1929-2002, </date>of Morton Clark Bradley 
+                    at the Lilly Library, Indiana University, Bloomington, Indiana</subtitle>
+                <author encodinganalog="creator">Electronic finding aid encoded by Maya Lerman. </author>
+            </titlestmt>
+            <publicationstmt>
+                <publisher encodinganalog="publisher">Indiana University Digital Library Program</publisher>
+                <date encodinganalog="date" normal="2008" type="publication">© 2008</date>
+            </publicationstmt>
+            <notestmt>
+                     <note encodinganalog="rights">
+                    <p><date normal="2008">© 2008</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>
+                <!--description of how the finding aid was created, for example: -->
+                XML finding aid derived from HTML version through cutting and pasting. 
+                <lb />Finding aid encoded by Maya Lerman, Lilly Library, Indiana University, <date
+                    normal="2008-02-26">February 26, 2008</date>
+            </creation>
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                >English.</language></langusage>
+        </profiledesc>
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2008-02-26">February 26, 2008</date>
+                <item>Finding aid encoded. </item>
+            </change>
+        </revisiondesc>
+    </eadheader>
+   
+    <archdesc level="collection" audience="external" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository encodinganalog="852" label="Repository:" id="lilly">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address><lb/> 
+                <extref xlink:href="http://www.indiana.edu/~liblilly">http://www.indiana.edu/~liblilly</extref>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname source="lcnaf" encodinganalog="100">Bradley, Morton C. 1912- </persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Papers, <unitdate type="inclusive" normal="1925/2002" encodinganalog="245$f" era="ce"
+                calendar="gregorian">ca. 1929-2002</unitdate>
+            </unittitle>
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection number">LMC 3009</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>ca. 825 items</extent>
+                <!-- if both linear feet and number of items included, repeat extent-->
+            </physdesc>
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng" encodinganalog="546">English</language></langmaterial>
+            <abstract encodinganalog="520" label="Abstract">Consists of the papers of sculptor, art restorer, 
+                Morton Clark Bradley, 1912-2004.</abstract>
+        </did> 
+        
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+            <p>Morton Clark Bradley was born in Arlington, Massachusetts in 1912. He attended Arlington High School and 
+                went on to Harvard University where he graduated with a degree in fine arts in 1933. After graduation he won a 
+                scholarship to study piano in Europe. He was an accomplished pianist and a respected artist noted for his metal 
+                sculptures. Once the head conservator at Harvard's Fogg Art Museum, Bradley was recognized as the premier 
+                American art restorer in the 1940s and 1950s. He was a published author and his 1950 
+                <emph render="italic">The Treatment of Paintings</emph> is today considered an historic reference work. He 
+                also published <emph render="italic">The New Testament in Cadenced Form</emph> in which he changed the 
+                structure of the Gospels into a more easily readable form.
+                     </p>
+        </bioghist>
+        
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Art; II. Writings; III. Memorabilia; IV. Financial. </p>
+        </arrangement>
+        
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+            <head>Scope and Content Note</head>
+            <p>Consists of the papers, art and memorabilia of sculptor, art restorer, 
+                Morton Clark Bradley, 1912-2004. The Art series includes information about Bradley's personal art collection; 
+                sketches, color charts and other papers concerning Bradley's own works of art; files concerning his work as a 
+                restorer of paintings and other artwork. Includes also several diaries from the 1940s and 
+                materials relating to Bradley's education. Insurance papers, real estate appraisals, receipts and tax papers. 
+                </p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Controlled Access Terms</head>
+            <persname encodinganalog="100" source="lcnaf">Bradley, Morton C. (Morton Clark), 1912- </persname>
+             <subject encodinganalog="650" source="lcsh">Art--Conservation and restoration. </subject>
+                </controlaccess>
+        
+        <descgrp>
+            <head>Administrative Information</head>
+            <accessrestrict encodinganalog="506">
+                <head>Access Restrictions</head>
+                <p>This collection is open for research. </p>
+            </accessrestrict>
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p> Gift. 2007</p>
+            </acqinfo>
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <prefercite encodinganalog="524$a">
+                <head>Preferred Citation</head>
+                <p>[Item] Bradley, M. mss., Lilly Library, Indiana University, Bloomington, Indiana. </p>
+            </prefercite>
+           
+          
+        </descgrp>
+        
+        <dsc type="combined">
+            <c01 level="series">
+                <did>
+                    <unittitle>I. Art </unittitle>
+                </did><arrangement><p>Arranged alphabetically by subject following the correspondence. 
+                    For the most part subject headings were assigned by Bradley. One folder per subject unless 
+                    otherwise indicated.           
+                </p></arrangement>
+                <!-- optional -->
+               <c02 level="file">
+                    <did>
+                        <container type="box" label="Box">1</container>
+                        <unittitle>Correspondence, <unitdate normal="1947/2002">1947-2002</unitdate>
+                        </unittitle><physdesc>(2 folders)</physdesc>
+                        </did>
+               </c02>
+                <c02 level="otherlevel"><did><unittitle>Collection. Materials concerning Bradley's private art collection: </unittitle></did>
+                
+                    <c03 level="file"><did><unittitle>Appraisals</unittitle></did>
+                    </c03>
+                    
+                    <c03 level="file"><did><unittitle>Deeds of gift</unittitle></did>
+                    </c03>
+                    
+                    <c03 level="file"><did><unittitle>Exhibitions</unittitle></did>
+                    </c03>
+                    
+                    <c03 level="file"><did><unittitle>Photographic reproductions</unittitle></did>
+                    </c03>
+                    
+                    <c03 level="file"><did><unittitle>Miscellaneous. Mostly lists and descriptions of various art works</unittitle></did>
+                    </c03>
+                
+                </c02>
+              
+              <c02 level="file"><did><unittitle>Color charts</unittitle></did>
+                </c02>
+                    
+                    <c02 level="file"><did><unittitle>Color harmonies and stripes</unittitle></did>
+                    </c02>     
+                
+                    <c02 level="file"><did><unittitle>Color harmonies 2</unittitle></did>
+                    </c02>
+                
+                    <c02 level="file"><did><unittitle>[Color harmonies?] "Series D"</unittitle></did>
+                    </c02>
+                
+                    <c02 level="file"><did><unittitle>"Family of 3 sets of 3 domes"</unittitle></did>
+                    </c02>
+                
+                <c02 level="file"><did><unittitle>Human form. Heads: calculations of individual features</unittitle>
+                <physdesc>(3 folders)</physdesc></did>
+                </c02>
+                
+                <c02 level="file"><did><unittitle>Human form. Heads: sketches of full faces, profiles, individual features</unittitle>
+                <physdesc>(7 folders)</physdesc></did>
+                </c02>
+                
+                <c02 level="file"><did><unittitle>Human form. Heads: photographs of children</unittitle></did>
+                </c02>
+                
+                <c02 level="file"><did><unittitle>Human form. Figure: sketches of various body parts</unittitle></did>
+                </c02>
+                
+                <c02 level="file"><did><unittitle>Linear pattern 1 - 4.</unittitle>
+                    <physdesc>Sketches <extent>(5 folders)</extent></physdesc></did>
+                </c02>
+                
+                <c02 level="file"><did><container type="box" label="Box">2</container>
+                    <unittitle>Linear pattern 5 - 10.</unittitle><physdesc>Sketches <extent>(7 folders)</extent></physdesc></did>
+                </c02>
+                
+                <c02 level="file"><did><unittitle>Printing experiment.</unittitle><physdesc>Sketches and notes</physdesc></did>
+                </c02>
+                
+                <c02 level="file"><did><unittitle>Reproductions of artwork.</unittitle>
+                    <physdesc>8x10 glossy photographs, transparencies and slides <extent>(4 folders)</extent></physdesc></did>
+                </c02>
+                
+                <c02 level="file"><did><unittitle>Research.</unittitle><physdesc>Notes, photocopies of articles, photographic 
+                    reproductions and clippings concerning various artists and paintings <extent>(4 folders)</extent></physdesc></did>
+                </c02>
+                
+                <c02 level="otherlevel"><did><unittitle>Restoration. Materials concerning Bradley's work </unittitle></did>
+                    
+              <c03 level="file"><did><unittitle>The International Institute for Conservation of Historic and Artistic Works.</unittitle>
+                  <physdesc>List of members, <date normal="1965">1965 and</date><date normal="1973"></date> 1973</physdesc></did>
+              </c03>
+                    
+                    <c03 level="file"><did><unittitle>Ledger. <unitdate type="inclusive" normal="1950/1959">1950-1959</unitdate></unittitle></did>
+                    </c03>
+                    
+                    <c03 level="file"><did><unittitle>Materials.</unittitle><physdesc>Various weights of paper and cloth 
+                        used for restoration</physdesc></did>
+                    </c03>
+                    
+                    <c03 level="file"><did><unittitle>Notes</unittitle><physdesc><extent>(3 folders)</extent></physdesc></did>
+                    </c03>
+                    
+                    <c03 level="file"><did><unittitle>Outlines of techniques</unittitle></did>
+                    </c03>
+                    
+                    <c03 level="file"><did><unittitle>Research projects</unittitle></did>
+                    </c03>
+                    
+                    <c03 level="file"><did><unittitle>Transfer of canvas paintings.</unittitle>
+                        <physdesc>Letter and article from conservator James Roth, sketches, photographic reproductions</physdesc></did>
+                    </c03>
+                    
+                    <c03 level="file"><did><unittitle>Miscellaneous printed articles, etc.</unittitle></did>
+                    </c03>
+                    
+                </c02>
+                
+                <c02 level="file"><did><unittitle>Rosenblum, [Louis].</unittitle>
+                    <physdesc>"Obsolete" Drawings, calculations, printed materials, etc.</physdesc></did>
+                </c02>
+                
+                <c02 level="otherlevel"><did><container type="box" label="Box">3</container><unittitle>Scrapbooks:</unittitle></did>
+                    
+                    <c03 level="file"><did><unittitle>The Development of the Locomotive</unittitle></did>
+                    </c03>
+                    
+                    <c03 level="file"><did><unittitle>[Rubens]</unittitle></did>
+                    </c03>
+                    
+                    <c03 level="file"><did><unittitle>Style 2-4, pp. 1-275</unittitle>
+                        <physdesc><extent>(3 folders)</extent></physdesc></did>
+                    </c03>
+                    
+                    <c03 level="file"><did><unittitle>Time--It's Measurement</unittitle></did>
+                    </c03>
+                    
+                    <c03 level="file"><did><unittitle>Water Transportation</unittitle></did>
+                    </c03>
+                    
+                    <c03 level="file"><did><unittitle>untitled.</unittitle>
+                        <physdesc>Miscellaneous reproductions of artworks</physdesc></did>
+                    </c03>
+                                        
+                </c02>
+                
+                <c02 level="file"><did><unittitle>Sketch blocks.</unittitle>
+                    <physdesc>Pads of blank sketch paper <extent>(3 folders)</extent></physdesc></did>
+                </c02>
+                
+                <c02 level="file"><did><unittitle>Yin Yang jewelry.</unittitle>
+                    <physdesc>Materials concerning applying for trademark of Bradley's design of Yin Yang jewelry</physdesc></did>
+                </c02>
+                
+                <c02 level="file"><did><unittitle>Miscellaneous notes and index cards</unittitle>
+                    <physdesc><extent>(2 folders)</extent></physdesc></did>
+                </c02>
+                
+                <c02 level="file"><did><unittitle>Miscellaneous printed items</unittitle></did>
+                </c02>
+                
+                <c02 level="file"><did><container type="box" label="Box">9</container>
+                    <unittitle>"Plexiglas™ Glazing Colors"</unittitle></did>
+                </c02>
+                
+                <c02 level="file"><did><unittitle>"Nickerson Color Fan"</unittitle></did>
+                </c02></c01>
+                
+                <c01 level="series"><did><unittitle>II. Writings </unittitle></did>
+                    <arrangement><p>Writings by Bradley, are followed by writings by others.</p></arrangement>
+                    
+                    <c02 level="subseries"><did><unittitle>Writings by Bradley.</unittitle></did>
+                       <scopecontent><p> Includes notes, typescripts, and related materials for articles and books.</p>
+                           <arrangement><p> Arranged alphabetically by title or subject of work. </p></arrangement></scopecontent>
+                       
+                     <c03 level="file"><did><container type="box" label="Box">3</container><unittitle>Analysis of the representation of space in medieval painting</unittitle></did>
+                        </c03>
+                       
+                        <c03 level="file"><did><unittitle>Anthropometric technic and instruction</unittitle></did>
+                        </c03>
+                        
+                        <c03 level="file"><did><unittitle>Bach chorales - analysis</unittitle></did>
+                        </c03>
+                        
+                        <c03 level="file"><did><unittitle>Cadence</unittitle></did>
+                        </c03>
+                        
+                        <c03 level="file"><did><unittitle>Elements and principles of visual art - introduction</unittitle></did>
+                        </c03>
+                        
+                        <c03 level="file"><did><unittitle>Elements of music</unittitle><physdesc>
+                            <extent>(3 folders)</extent></physdesc></did>
+                        </c03>
+                        
+                        <c03 level="file"><did><container type="box" label="Box">4</container><unittitle>Elements of music, cont. </unittitle><physdesc>
+                            <extent>(3 folders)</extent></physdesc></did>
+                        </c03>
+                       
+                        <c03 level="file"><did><unittitle>Melody - theory </unittitle></did>
+                        </c03>
+                       
+                        <c03 level="otherlevel"><did><unittitle>A method of language study:</unittitle></did>
+                            
+                            <c04 level="file"><did><unittitle>Outline</unittitle></did>
+                            </c04>
+                            
+                            <c04 level="file"><did><unittitle>Greek</unittitle><physdesc><extent>(2 folders)</extent></physdesc></did>
+                            </c04>
+                            
+                            <c04 level="file"><did><unittitle>Italian</unittitle><physdesc>(3 folders)<extent></extent></physdesc></did>
+                            </c04>
+                            
+                            <c04 level="file"><did><unittitle>Portuguese</unittitle><physdesc><extent>(4 folders)</extent></physdesc></did>
+                            </c04>
+                            
+                            <c04 level="file"><did><unittitle>Spanish</unittitle><physdesc><extent>(4 folders)</extent></physdesc></did>
+                            </c04>
+                            
+                            <c04 level="file"><did><unittitle>Language exercises</unittitle><physdesc><extent>(4 folders)</extent></physdesc></did>
+                            </c04>
+                            
+                            </c03>
+                        
+                        <c03 level="otherlevel"><did><container type="box" label="Box">5</container>
+                            <unittitle>A method of language study (cont.):</unittitle></did>
+                        
+                            <c04 level="file"><did><unittitle>Language exercises</unittitle></did>
+                        </c04>
+                            
+                            <c04 level="file"><did><unittitle>Word lists, translated into various languages</unittitle>
+                                <physdesc><extent>(4 folders)</extent></physdesc></did>
+                            </c04>    
+                        
+                        </c03>
+                        
+                        <c03 level="file"><did><unittitle>The modes of projection and their use in painting</unittitle></did>
+                        </c03>
+                        
+                        <c03 level="file"><did><unittitle>"A New Form for Prose"</unittitle></did>
+                        </c03>
+                        
+                        <c03 level="file"><did><unittitle><title render="italic">The New Testament in Cadenced Form</title>
+                        </unittitle><physdesc><extent>(3 folders)</extent></physdesc></did>
+                        </c03>
+                        
+                        <c03 level="file"><did><unittitle>A Newer Form for Prose</unittitle></did>
+                        </c03>
+                        
+                        <c03 level="file"><did><unittitle>The Old Testament in Cadenced Form: Genesis through Deuteronomy</unittitle>
+                        <physdesc><extent>(7 folders)</extent></physdesc></did>
+                        </c03>
+                        
+                        <c03 level="file"><did><unittitle>Principles of Education</unittitle></did>
+                        </c03>
+                        
+                        <c03 level="file"><did><unittitle>Proposal for a new cultural magazine</unittitle></did>
+                        </c03>
+                        
+                        <c03 level="file"><did><unittitle>The rhythm of phrases</unittitle></did>
+                        </c03>
+                        
+                        <c03 level="file"><did><unittitle>Sentence structure and sentence form</unittitle></did>
+                        </c03>
+                        
+                        <c03 level="file"><did><unittitle>A study of color relations in painting</unittitle>
+                            <physdesc><extent>(6 folders)</extent></physdesc></did>
+                        </c03>
+                        
+                        <c03 level="file"><did><container type="box" label="Box">6</container>
+                            <unittitle>A study of drawing and painting</unittitle></did>
+                        </c03>
+                        
+                        <c03 level="file"><did><unittitle>A theory of style and its application to the study of drawing</unittitle></did>
+                        </c03>
+                        
+                        <c03 level="file"><did><unittitle><title render="italic">The Treatment of Pictures</title>
+                        </unittitle><physdesc><extent>(4 folders)</extent></physdesc></did>
+                        </c03>
+                        
+                        <c03 level="file"><did><unittitle>Triads in music</unittitle></did>
+                        </c03>
+                        
+                        <c03 level="file"><did><unittitle>Works of art</unittitle></did>
+                        </c03>
+                        
+                        <c03 level="file"><did><unittitle>Miscellaneous notes on art, music and language</unittitle>
+                            <physdesc>(4 folders)</physdesc></did>
+                        </c03>
+                        
+                    </c02>
+                    
+                    <c02 level="subseries"><did><unittitle>Writings by Others. </unittitle></did>
+                        <arrangement><p> Arranged alphabetically by author</p></arrangement>
+                    
+                        <c03 level="file"><did><unittitle>Jones, Elizabeth H. The Solubility of Aged Varnish Coatings on Paintings</unittitle></did>
+                    </c03>
+                        
+                        <c03 level="file"><did><unittitle>Kranz, Stewart D. A Study of Equal Color Intervals. 
+                            Honors thesis, Harvard University <unitdate normal="1949">[1949]</unitdate></unittitle></did>
+                        </c03>
+                        
+                        <c03 level="file"><did><unittitle>[E.M.] Tile Ceiling Patterns. 
+                            <unitdate normal="1962-01-24">Jan. 24, 1962</unitdate></unittitle></did>
+                        </c03>                      
+                        
+                  </c02>
+                </c01>
+                    
+            <c01 level="series"><did><unittitle>III. Memorabilia </unittitle></did>
+                <arrangement><p> Arranged alphabetically by topic after the Biographical file.</p></arrangement>
+              
+                <c02 level="file"><did><container type="box" label="Box">6</container>
+                    <unittitle>Biographical</unittitle></did>
+            </c02>
+                
+                <c02 level="file"><did><unittitle>Appraisal and related materials concerning print collection offered to 
+                    Arlington Public Library by Winfield Robbins</unittitle></did>
+            </c02>
+                
+                <c02 level="file"><did><unittitle>Arlington Allied War Relief. Ledger, <unitdate 
+                    type="inclusive" normal="1944-06/1947-01">June 1944 - Jan. 1947</unitdate></unittitle></did>
+                </c02>
+                
+                <c02 level="file"><did><unittitle>Diaries: <unitdate type="inclusive" 
+                    normal="1946/1949">1946-1949</unitdate></unittitle><physdesc><extent>(4 volumes)</extent></physdesc></did>
+                </c02>
+                
+                <c02 level="file"><did><unittitle>Education. Arlington High School.</unittitle>
+                    <physdesc>Mathematics and language notebook; yearbook, <date 
+                        normal="1929">1929</date>; graduation program, <date normal="1929">1929</date></physdesc></did>
+                </c02>
+                
+                <c02 level="file"><did><unittitle>Education. Harvard University.</unittitle>
+                    <physdesc>Art classes - notes <extent>(7 folders)</extent></physdesc></did>
+                </c02>
+                
+                <c02 level="file"><did><container type="box" label="Box">7</container>
+                    <unittitle>Education. Harvard University (cont.).</unittitle>
+                    <physdesc>Art classes - notes; art thesis: "The Development of Landscape in Prints: A Study of General 
+                        Tendencies," <date normal="1932-05-28">May 28, 1932</date>; music classes - notes; 
+                        psychology class - notes; Edward R. Bacon Art Scholarship; miscellaneous materials <extent>(12 folders)</extent></physdesc></did>
+                </c02>
+                
+                <c02 level="file"><did><unittitle>Education. Miscellaneous. </unittitle>
+                    <physdesc>Includes proposals and plan of study; correspondence, including an offer of an instructorship 
+                        position at Cornell University, <date normal="1938-01-19">Jan. 19, 1938</date> and a rejection letter for a 
+                        Guggenheim fellowship, <date normal="1941-03-09">Mar. 9, 1941</date></physdesc></did>
+                </c02>
+                
+                <c02 level="file"><did><unittitle>Printed.</unittitle><physdesc>Articles about Bradley</physdesc></did>
+                </c02>
+                
+                <c02 level="file"><did><unittitle>Miscellaneous (see also: Box 8)</unittitle></did>
+                </c02>
+            </c01>
+            
+            <c01 level="series"><did>
+                <unittitle>IV. Financial</unittitle></did>
+                
+                <c02 level="file">
+                    <did><container type="box" label="Box">7</container><unittitle>Insurance. </unittitle>
+                <physdesc>Policies covering commercial property and liability, fine arts stock in trade, 
+                    general liability, and home owners <extent>(4 folders)</extent></physdesc></did></c02>
+                
+                <c02 level="file"><did><unittitle>Real estate.</unittitle>
+                    <physdesc>Appraisals, mostly 1990s</physdesc></did>
+                </c02>
+                
+                <c02 level="file"><did><unittitle>Receipts.</unittitle><physdesc>Mostly receipts for Bradley's private art collection 
+                    and materials purchased for restoration projects <extent>(3 folders)</extent></physdesc></did>
+                </c02>
+                
+                <c02 level="file"><did><unittitle>Tax returns, <unitdate type="inclusive" 
+                    normal="1966/2000">1966-2000</unitdate></unittitle><physdesc><extent>(14 folders)</extent></physdesc></did>
+                </c02>
+                
+                <c02 level="file"><did><container type="box" label="Box">8</container><unittitle>Oversize ledger, <unitdate type="inclusive" 
+                    normal="1989/1993">1989-1993</unitdate></unittitle></did>
+                </c02>
+                
+                
+            </c01>
+            
+            
+                
+                
+                
+                             
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                            
+                
+           
+        </dsc>
+    </archdesc>
+</ead>

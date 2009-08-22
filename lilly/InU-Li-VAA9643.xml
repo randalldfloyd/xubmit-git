@@ -1,0 +1,1267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader relatedencoding="dublincore" audience="external" langencoding="iso639-2b"
+        scriptencoding="iso15924" repositoryencoding="iso15511" countryencoding="iso3166-1"
+        dateencoding="iso8601" findaidstatus="edited-full-draft">
+        <eadid encodinganalog="identifier" identifier="InU-Li-VAA9643" countrycode="US"
+            mainagencycode="InU-Li">InU-Li-VAA9643</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Laves mss., <date
+                        normal="1924/1980">1924-1980</date></titleproper>
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2009" type="publication">© 2009</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2009">© 2009</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>
+                <!--description of how the finding aid was created, for example: -->
+                Machine-readable finding aid derived from HTML finding aid by copying and pasting.
+                <lb/>[date of source: <date normal="2008-02-21" type="source">February 21,
+                    2008</date>
+                <lb/>Finding aid encoded by Valerie Higgins, Library/Archives, Indiana University,
+                    <date normal="2009-04-16">April 16, 2009</date>
+            </creation>
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2009-04-16"/>
+                <item>Encoded finding aid.</item>
+            </change>
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc level="collection" audience="external" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository encodinganalog="852" label="Repository:" id="lilly">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address>  
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address><lb/> 
+                <extref xlink:href="http://www.indiana.edu/~liblilly">http://www.indiana.edu/~liblilly</extref>
+
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname source="lcnaf" encodinganalog="100">Laves, Walter H. C. 1902-</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Laves mss.</unittitle>
+            <unitdate normal="1924/1980" type="inclusive" encodinganalog="245$f"
+                >1924-1980</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 3006</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>9,401 items</extent>
+
+                <!-- if both linear feet and number of items included, repeat extent-->
+            </physdesc>
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng" encodinganalog="546">English</language></langmaterial>
+            <abstract encodinganalog="520" label="Abstract">Consists of
+                the papers of Indiana University professor Walter Herman Carl Laves,
+                1902-1983.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+            <p>Walter Herman Carl Laves, 1902-1983, was an Indiana University professor. A native of
+                Chicago, he received his degrees from the University of Chicago and held positions
+                first at Hamilton College and then at the University of Chicago before coming to
+                Indiana University. He served as chairman of the Department of Political Science
+                from 1954 to 1966, was honored as the first holder of the Wendell L. Willkie
+                Professorship in Political Science, and retired from the University in 1972.</p>
+            <p>In the interval between his positions at Chicago and Indiana, during World War II and
+                later, Laves had a career in public service. He served successively in the Office of
+                Coordinator of Inter-American Affairs, the Office of Civilian Defense, and from 1943
+                to 1947, in the Bureau of the Budget as consultant in international affairs. He was
+                present at the founding conferences of the United Nations and United Nations
+                Educational, Scientific and Cultural Organization and served in advisory capacity to
+                the American delegation at the initial session of the United Nations in London. From
+                1947 to 1950 Laves was the Deputy Director General of UNESCO in Paris. Subsequently,
+                he was twice a member of the United States delegation to the UNESCO general
+                conference and chairman of the U.S. National Commission for UNESCO.</p>
+            <p>He was the co-author with Charles Alexander Thomson of UNESCO: Purpose, Progress and
+                Prospects which in 1958 won an Indiana Author's Day citation. He also authored
+                Cultural Relations and U.S. Foreign Policy, published in 1963, in addition to many
+                articles for journals.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Biographical; II.
+                Correspondence; III. Diaries; IV. Financial; V. Indiana University; VI. Photographs;
+                VII. Subjects; VIII. Writings; IX. Printed; X. Memorabilia.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Laves mss., 1924-1980, consists of the papers of Indiana University professor
+                Walter Herman Carl Laves, 1902-1983. The collection includes biographical material,
+                correspondence, diaries, financial materials, materials related to Indiana
+                University, photographs, subject files, writings, printed materials, and
+                memorabilia.</p>
+            <p>The Subjects series contain materials related to his many activities and interests,
+                such as community development, the Office of Civil Defense, his many trips abroad,
+                and various meetings and conferences.</p>
+            <p>Printed materials include tear sheets and reprints of his publications in various
+                journals, clippings related to Laves' activities. Also present are publications by
+                his father, Kurt Laves, 1866-1944, professor of astronomy at the University of
+                Chicago.</p>
+            <p>Memorabilia consists mostly of award certificates and citations. There are also
+                insignia and medals awarded to Laves from the government of Thailand. Completing
+                this section is a Thai temple rubbing depicting a scene from the Ramakien
+                legend.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Controlled Access Terms</head>
+
+            <persname encodinganalog="600" source="lcnaf">Laves, Walter H. C. (Walter Herman Carl),
+                1902-</persname>
+            <corpname encodinganalog="610" source="lcnaf">Indiana University. Dept. of Political
+                Science.</corpname>
+            <corpname encodinganalog="610" source="lcnaf">Indiana University --Faculty
+                --Archives.</corpname>
+            <subject encodinganalog="650" source="lcsh">Political
+                scientists--Indiana--Bloomington--Correspondence.</subject>
+            <subject encodinganalog="650" source="lcsh">Political science--Study and teaching
+                (Higher)--United States.</subject>
+
+        </controlaccess>
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Gift. 1982</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Laves mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 level="series">
+                <did>
+                    <container type="Box" label="Box">1</container>
+                    <unittitle>Biographical</unittitle>
+                    <physdesc>(4 folders)</physdesc>
+                </did>
+                <scopecontent>
+                    <p> Includes address book and passports.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="series">
+                <did>
+                    <unittitle>Correspondence</unittitle>
+                </did>
+                <scopecontent>
+                    <p> Additional correspondence may be found throughout the collection. Consult the
+                        Manuscripts Index in the Library for dates of letters of individual
+                        correspondents.</p>
+                </scopecontent>
+                <arrangement><head>Arrangement</head>
+                    <p>Arranged chronologically.</p>
+                </arrangement>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1924-05-18/1947" type="inclusive">1924, May 28 -
+                                1947</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">2</container>
+                        <unittitle>
+                            <unitdate normal="1948/1952-08" type="inclusive">1948 - 1952,
+                                Aug.</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">3</container>
+                        <unittitle>
+                            <unitdate normal="1952-09/1955" type="inclusive">1952, Sept. -
+                                1955</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">4</container>
+                        <unittitle>
+                            <unitdate normal="1956/1969-06" type="inclusive">1956 - 1969,
+                                June</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">5</container>
+                        <unittitle>
+                            <unitdate normal="1969-07/1977" type="inclusive">1969, July - 1977
+                            </unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did>
+                    <unittitle>Diaries</unittitle>
+                </did>
+                <scopecontent>
+                    <p> Both loose leaf and bound. Includes aide memoirs and memoranda.</p>
+                </scopecontent>
+                <arrangement>
+                    <head>Arrangement</head>
+                    <p>Arranged chronologically.</p>
+                </arrangement>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1936/1942" type="inclusive">1936 - 1942</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">6</container>
+                        <unittitle>
+                            <unitdate normal="1942/1947" type="inclusive">1942 (cont.) -
+                                1947</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">7</container>
+                        <unittitle>
+                            <unitdate normal="1947/1953" type="inclusive">1947 (cont.) -
+                                1953</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">8</container>
+                        <unittitle>
+                            <unitdate normal="1954/1976" type="inclusive">1954 - 1976</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did>
+                    <unittitle>Financial</unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Grant: United Nations Assistance in Political
+                            Development</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Finances, <unitdate normal="1963/1967" type="inclusive"
+                                    >1963-1967</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Proposal drafts, <unitdate normal="1963/1965"
+                                    type="inclusive">1963-1965</unitdate></unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Report to Carnegie, <unitdate normal="1965-07-01">July 1,
+                                    1965</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Receipts, <unitdate normal="1947/1950" type="inclusive"
+                                >1947-1950,</unitdate><unitdate normal="1956/1957" type="inclusive"
+                                >1956-1957.</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p> Mostly from hotels and restaurants</p>
+                    </scopecontent>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did>
+                    <container type="Box" label="Box">9</container>
+                    <unittitle>Indiana University</unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Government Department</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Correspondence (inter-departmental), <unitdate
+                                    normal="1964/1966" type="inclusive"
+                                >1964-1966</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Class materials for G 417, <unitdate normal="1969"
+                                    >1969</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Class materials for G 623 (International Organization),
+                                    <unitdate normal="1965/1966" type="inclusive"
+                                >1965/66</unitdate></unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Class notes for G 669, <unitdate normal="1968"
+                                    >1968</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Development, <unitdate normal="1956/1966" type="inclusive"
+                                    >1956-1966</unitdate></unittitle>
+                            <physdesc>(3 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Executive Committee Minutes, <unitdate normal="1964/1966"
+                                    type="inclusive">1964-1966</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Faculty, <unitdate normal="1961/1966" type="inclusive"
+                                    >1961-1966</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Notes, <unitdate normal="1963/1966" type="inclusive"
+                                    >1963-1966</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>International Relations Research Center. <unitdate normal="1962"
+                                >1962</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>John Watson Foster Project, <unitdate normal="1924/1980"
+                                type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Latin American Studies</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Mini-University lecture, <unitdate normal="1976-06-25">June 25,
+                                1976.</unitdate>Notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Non-Western Areas in Indiana Undergraduate Education: Bloomington
+                            Conference, <unitdate normal="1958-09-18/1958-09-20" type="inclusive"
+                                >Sept. 18-20, 1958</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Social Studies Development Center, <unitdate normal="1968"
+                                >1968</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Sub-Committee on Governmental Contracts, <unitdate
+                                normal="1960-05-16">May 16, 1960</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did>
+                    <unittitle>Photographs</unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Huxley, Julian Sorell, <unitdate normal="1948"
+                            >1948</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Laves, Ruth (Wilson), <unitdate normal="1924/1980"
+                                type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Laves, Walter Herman Carl, <unitdate normal="1943/1973"
+                                type="inclusive">1943-1973.</unitdate></unittitle>
+                    </did>
+                    <scopecontent>
+                        <p> Includes group photographs.</p>
+                    </scopecontent>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Thailand, <unitdate normal="1955">1955.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Thailand, <unitdate normal="1964">1964.</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p> Includes album, additional loose photographs and clippings.</p>
+                    </scopecontent>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>UN Exhibit, <unitdate normal="1943">1943</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did>
+                    <container type="Box" label="Box">9</container>
+                    <unittitle>Subjects</unittitle>
+                </did>
+                <arrangement>
+                    <p>Subject headings were assigned by Laves and are arranged alphabetically.</p>
+                </arrangement>
+                <c02 level="file">
+                    <did>
+                        <unittitle>African Trip, <unitdate normal="1966/1967" type="inclusive"
+                                >1966-1967</unitdate></unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Itinerary and Personal expenses</unittitle>
+                            <physdesc>(2 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Summary and Activities</unittitle>
+                            <physdesc>(3 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Conclusions</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Afghanistan</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Egypt</unittitle>
+                            <physdesc>(2 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Ethiopia</unittitle>
+                            <physdesc>(3 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">10</container>
+                            <unittitle>Ethiopia (cont.)</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Ghana</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Iran</unittitle>
+                            <physdesc>(2 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Israel</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Ivory Coast</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Kenya</unittitle>
+                            <physdesc>(3 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Lebanon</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Libya</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Nigeria</unittitle>
+                            <physdesc>(2 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Senegal</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Sudan</unittitle>
+                            <physdesc>(2 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Tanzania</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Tunisia</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Uganda</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>American Council on Education Conference, <unitdate normal="1965"
+                                >1965</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>American Society for Public Administration, <unitdate
+                                normal="1963/1967" type="inclusive">1963-1967</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Asian Trip, <unitdate normal="1959">1959</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Community Development</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Analysis of potential contribution of community development
+                                to political development. Draft, <unitdate normal="1924/1980"
+                                    type="inclusive">undated</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Community Development Research model, <unitdate normal="1969"
+                                    >1969</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Cooperative, <unitdate normal="1966/1967" type="inclusive"
+                                    >1966-1967</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>The Development of the Colonial Small Community, <unitdate
+                                    normal="1953">1953</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Forward Look in Community Development, <unitdate
+                                    normal="1965/1966" type="inclusive"
+                                >1965-1966</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Horn, Donna. Two papers on Community Development, <unitdate
+                                    normal="1965/1966" type="inclusive"
+                                >1965-1966</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>International Development Center, <unitdate
+                                    normal="1964/1965" type="inclusive"
+                                >1964-1965</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Materials, <unitdate normal="1956/1966" type="inclusive"
+                                    >1956-1966</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Valsan, E.H. Two papers on Community Development, <unitdate
+                                    normal="1963">1963</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Training for Basic Democracy in Pakistan, <unitdate
+                                    normal="1960">1960</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Dag Hammarskjold Conference, Denver</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">11</container>
+                        <unittitle>Dag Hammarskjold Conference, Denver (cont.)</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Division of Inter-American Activities in the United States,
+                                <unitdate normal="1942">1942</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Exchange of professional, scholarly and scientific persons.
+                            Princeton Conference, <unitdate normal="1954-12-02/1954-12-04"
+                                type="inclusive">Dec. 2-4, 1954</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Food and Agriculture Organization. Interviews, <unitdate
+                                normal="1963/1964" type="inclusive">1963-1964;</unitdate>notes,
+                                <unitdate normal="1966/1967" type="inclusive"
+                            >1966-1967</unitdate></unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Government Organization for Foreign Relations (State Department),
+                                <unitdate normal="1944/1946" type="inclusive"
+                            >1944-1946</unitdate></unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Human Rights, <unitdate normal="1967/1968" type="inclusive"
+                                >1967-1968</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>India, <unitdate normal="1957">1957,</unitdate><unitdate
+                                normal="1966">1966</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>International Development, <unitdate normal="1975/1980"
+                                type="inclusive">1975-1980</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>International Development Seminar, Honolulu, <unitdate
+                                normal="1965-08-09/1965-09-03" type="inclusive">Aug. 9-Sept. 3,
+                                1965</unitdate></unittitle>
+                        <physdesc>(9 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did><container type="Box" label="Box">12</container><unittitle>International Development Seminar, Honolulu, <unitdate normal="1965-08-09/1965-09-03" type="inclusive">Aug. 9-Sept. 3, 1965</unitdate></unittitle><physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>International Education Program, <unitdate normal="1965">1965</unitdate></unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>International Labor Organization</unittitle></did>
+                    <c03 level="file">
+                        <did><unittitle>Geneva, <unitdate normal="1967">1967</unitdate></unittitle><physdesc>(2 folders)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Africa, <unitdate normal="1966">1966</unitdate></unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Interviews, <unitdate normal="1963">1963</unitdate></unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Inventory, <unitdate normal="1966">1966</unitdate></unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Working Party Reports, <unitdate normal="1964/1966" type="inclusive">1964-1966</unitdate></unittitle></did>
+                    </c03>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>International Political Science Association, Brussels Conference, <unitdate normal="1967-09-18/1967-09-23" type="inclusive">Sept. 18-23, 1967</unitdate></unittitle><physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>International Studies Association, <unitdate normal="1971/1975" type="inclusive">1971-1975</unitdate></unittitle><physdesc>(4 folders)</physdesc></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Interregional Expert Meeting on Social Welfare Organization and Administration, Geneva, <unitdate normal="1967-08-07/1967-08-18" type="inclusive">Aug. 7-18, 1967</unitdate></unittitle><physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Interviews in relation to project, <unitdate normal="1963/1965" type="inclusive">1963-1965</unitdate></unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Kabul University, <unitdate normal="1972/1973" type="inclusive">1972-1973</unitdate></unittitle><physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Korean Trip, <unitdate normal="1968">1968</unitdate></unittitle><physdesc>(4 folders)</physdesc></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Lagos Conference, <unitdate normal="1971">1971</unitdate></unittitle><physdesc>(4 folders)</physdesc></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Land Reform, <unitdate normal="1965/1968" type="inclusive">1965-1968</unitdate></unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Land Reform by Shaedal, <unitdate normal="1965/1969" type="inclusive">1965-1969</unitdate></unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><container type="Box" label="Box">13</container><unittitle>League of Nations Association. Mid-West Office, 1936-1939 (4 folders)</unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>London, 1963</unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Malaysia, 1964-1966</unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Moscow/Kiev, 1973 (3 folders)</unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Murphy Report (American Legion), 1955-1956 (2 folders)</unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Mutual and Cultural Exchange Act of 1961 (Fulbright Act), 1960-1961</unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>National Association for Foreign Students Affairs, 1973</unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Office of Civilian Defense</unittitle></did>
+                    <c03 level="file">
+                        <did><unittitle><unitdate normal="1942/1943" type="inclusive">1942-1943.</unitdate>General</unittitle><physdesc>(2 folders)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Office of War Information, <unitdate normal="1943">1943</unitdate></unittitle><physdesc>(3 folders)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Victory Speakers Directors Meeting, <unitdate normal="1943-03-12/1943-03-13" type="inclusive">Mar. 12-13, 1943</unitdate></unittitle></did>
+                    </c03>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Office of Coordinator of Inter-American Affairs, <unitdate normal="1941/1942" type="inclusive">1941-1942</unitdate></unittitle><physdesc>(4 folders)</physdesc></did>
+                </c02>
+                <c02 level="file">
+                    <did><container type="Box" label="Box">14</container><unittitle>Pakistan trip, <unitdate normal="1953">1953</unitdate></unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Pakistan, <unitdate normal="1964/1966" type="inclusive">1964-1966</unitdate></unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Paris, <unitdate normal="1963">1963</unitdate></unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Personnel potential, <unitdate normal="1952">1952</unitdate></unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Philippines trip, <unitdate normal="1953">1953</unitdate></unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Philippines, <unitdate normal="1965/1966" type="inclusive">1965-1966</unitdate></unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Political and Economic Development Literature, <unitdate normal="1962">1962</unitdate></unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Political Conditions in LDCs, <unitdate normal="1975/1976" type="inclusive">1975-1976</unitdate></unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Political Development, various papers by Fraser, Haviland and Morse, <unitdate normal="1966">1966</unitdate></unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Political Development Assistance by UN organizations, <unitdate normal="1964/1972" type="inclusive">1964-1972</unitdate></unittitle><physdesc>(4 folders)</physdesc></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Rangoon Conference, <unitdate normal="1954-03-15/1954-03-30" type="inclusive">Mar. 15-30, 1954</unitdate></unittitle><physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Rome, <unitdate normal="1967">1967</unitdate></unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Sweden, <unitdate normal="1949">1949</unitdate></unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Thailand</unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle></unittitle></did>
+                    <c03 level="file">
+                        <did><unittitle>Thammasat University, <unitdate normal="1955/1959" type="inclusive">1955-1959,</unitdate><unitdate normal="1963/1964" type="inclusive">1963-1964</unitdate></unittitle><physdesc>(3 folders)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Miscellaneous, <unitdate normal="1966/1968" type="inclusive">1966-1968</unitdate></unittitle></did>
+                    </c03>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>United Nations Research Institute on Social Development, Geneva, <unitdate normal="1964/1966" type="inclusive">1964-1966</unitdate></unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>United Nations Inventory and Direct Assistance, <unitdate normal="1966">1966</unitdate></unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>UNESCO, <unitdate normal="1946/1977" type="inclusive">1946-1977</unitdate></unittitle><physdesc>(7 folders)</physdesc></did>
+                </c02>
+                <c02 level="file">
+                    <did><container type="Box" label="Box">15</container><unittitle>UNESCO, <unitdate normal="1946/1977" type="inclusive">1946-1977</unitdate>(cont.)</unittitle><physdesc>(7 folders)</physdesc></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>UNESCO Experts, <unitdate normal="1951/1970" type="inclusive">1951-1970</unitdate></unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>UNESCO Institute for Education, <unitdate normal="1955">1955</unitdate></unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>U.S. Advisory Commission on Education Exchange. 45th Meeting, <unitdate normal="1960">1960;</unitdate>46th Meeting, <unitdate normal="1960">1960;</unitdate>48th Meeting, <unitdate normal="1961">1961</unitdate></unittitle><physdesc>(3 folders)</physdesc></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>U.S. Relations to International Organization, <unitdate normal="1944/1945" type="inclusive">1944-1945</unitdate></unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>University of Michigan. Suggestions for Vandenberg Foreign Policy Center, <unitdate normal="1951">1951</unitdate></unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Washington, <unitdate normal="1966">1966</unitdate></unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>World Bank, <unitdate normal="1965">1965</unitdate></unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>World Health Organization, <unitdate normal="1963/1964" type="inclusive">1963-1964</unitdate></unittitle></did>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did><unittitle>Writings</unittitle></did>
+                <arrangement><p>Arranged into the following subseries: Writings by Laves, Speeches by Laves, and Writings by Others.</p></arrangement>
+                <note><p>Additional writings by Laves and others may be found in the series Printed.</p></note>
+                <c02 level="subseries">
+                    <did><unittitle>Writings by Laves</unittitle></did>
+                    <scopecontent><p> Research and drafts of chapters for a book on international administration and cooperation completes this section.</p></scopecontent>
+                    <arrangement><head>Arrangement</head><p>Arranged alphabetically by title.</p></arrangement>
+                    <c03 level="file">
+                        <did><unittitle>14 Questions and Answers about UNESCO, <unitdate normal="1954">1954</unitdate></unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Civil and Political Rights in the Context of Development Assistance, a paper prepared for the International Conference on Human Rights, <unitdate normal="1968">1968</unitdate></unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Community Development and the development of capacity for self-government--the role of the United Nations, <unitdate normal="1966">1966</unitdate></unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Give Joe Doakes a Chance. <unitdate normal="1945">1945</unitdate></unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Impact of ECA [Economic Cooperative Administration], <unitdate normal="1951">1951</unitdate></unittitle><physdesc>(2 folders)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>International Administration. <unitdate normal="1953">1953</unitdate></unittitle><physdesc>(2 folders)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>The Organization and Conduct of United States Foreign Service. <unitdate normal="1946">1946</unitdate></unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Problems of Administration of the <emph render="doublequote">Foreign Service Act of 1946.</emph> <unitdate normal="1946">1946</unitdate></unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>The Reorganization of the Department of State. <unitdate normal="1946">1946</unitdate></unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Report of the West Indies - South America Administrative Survey Group, submitted <unitdate normal="1945-05-26">May 26, 1945.</unitdate></unittitle><physdesc>(2 folders)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>The United Nations: Reorganizing the World's Governmental Institutions, <unitdate normal="1945">1945</unitdate></unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>United Nations Educational, Scientific and Cultural Organization, <unitdate normal="1971">1971.</unitdate>For <title render="italic">The Encyclopedia of Education</title></unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>The United Nations Educational Scientific and Cultural Organization. <emph render="doublequote">Statement prepared at the request of Mrs. Dana C. Backus for use as a forward for an issue of 'United Nations News for Women Broadcasters' a monthly radio clip-sheet,</emph> <unitdate normal="1953">1953</unitdate></unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>UNESCO: Center of Cultural Diplomacy, <unitdate normal="1959">1959.</unitdate>Chapter XX of Diplomacy in a Changing World, edited by Stephen D. Kertesz and M.A. Fitzsimmons (Notre Dame, IN: University of Notre Dame Press, 1959). Page proofs</unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>UNESCO: Purpose, Progress, Prospects (with Charles A. Thomson), <unitdate normal="1957">1957.</unitdate>Page proofs</unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>The United States German Claims Settlement, <unitdate normal="1925/1926" type="inclusive">1925/26</unitdate></unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Were in the UNO now, <unitdate normal="1945">1945</unitdate></unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Miscellaneous writings by Laves</unittitle></did>
+                        <c04 level="file">
+                            <did><unittitle>Reviews of books by other writers, <unitdate normal="1958/1965" type="inclusive">1958-1965</unitdate></unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>Notes on WHO, <unitdate normal="1948">1948</unitdate></unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>Writing projects. <unitdate normal="1924/1980" type="inclusive">Undated</unitdate>notes</unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>Untitled. re: ...some major problems of governmental organization to be faced by the United States after the war..., <unitdate normal="1946">1946</unitdate></unittitle></did>
+                        </c04>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>International administration and cooperation book</unittitle></did>
+                        <c04 level="file">
+                            <did><container type="Box" label="Box">16</container><unittitle>Research</unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Box" label="Box">17</container><unittitle>Research (cont.)</unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Box" label="Box">18</container><unittitle>Research (cont.)</unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Box" label="Box">19</container><unittitle>Research (cont.)</unittitle><physdesc>(5 folders)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Box" label="Box">20</container><unittitle>Research (cont.)</unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><unittitle>Drafts of chapters</unittitle><physdesc>(36 folders)</physdesc></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Box" label="Box">21</container><unittitle>Drafts of chapters (cont.)</unittitle></did>
+                        </c04>
+                        <c04 level="file">
+                            <did><container type="Box" label="Box">22</container><unittitle>Drafts of chapters (cont.)</unittitle><physdesc>(23 folders)</physdesc></did>
+                        </c04>
+                    </c03>
+                </c02>
+                <c02 level="subseries">
+                    <did><unittitle>Speeches</unittitle></did>
+                    <scopecontent><p> Includes press releases, radio interviews, and hearings in Congress.</p></scopecontent>
+                    <arrangement><head>Arrangement</head><p>Arranged chronologically.</p></arrangement>
+                    <note><p>A detailed list of the speeches is available in the Lilly Library.</p></note>
+                    <c03 level="file">
+                        <did><unittitle><unitdate normal="1936/1966" type="inclusive">1936-1966</unitdate></unittitle><physdesc>(16 folders)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><container type="Box" label="Box">23</container><unittitle><unitdate normal="1967/1968" type="inclusive">1967-1968</unitdate></unittitle><physdesc>(2 folders)</physdesc></did>
+                    </c03>
+                </c02>
+                <c02 level="subseries">
+                    <did><unittitle>Writings by Others</unittitle></did>
+                    <arrangement><p>Arranged alphabetically by author.</p></arrangement>
+                    <c03 level="file">
+                        <did><unittitle>LePawsky, Albert Agenda for International Training. <unitdate normal="1962">1962</unitdate>(proof)</unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Lindesmith, Gertrude W. The Individual Needs and Adjustments of The Participant Graduate Student. <unitdate normal="1967">1967</unitdate></unittitle><physdesc>(2 folders)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Schaffner, Joseph Halle, et al. Report (summary) of the Africa-Middle East Survey Group on the Administrative Level of the Foreign Service. Copy D. <unitdate normal="1945">1945</unitdate></unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Silvert, Karl and Frank Bonilla. Education and the social meaning of Development. <unitdate normal="1961">1961</unitdate></unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Van Vorys, Karl. [Pakistan] <unitdate normal="1961">1961</unitdate></unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Warfield, Ethelbert, et al. Report of the European Administrative Survey Group. Copy D. <unitdate normal="1945">1945</unitdate></unittitle></did>
+                    </c03>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did><unittitle>Printed</unittitle></did>
+                <arrangement><p>Arranged by materials written by or relating to Laves (writings, Congressional hearing testimonies, and programs and announcements for his speeches and lectures), miscellaneous reprints and articles by other writers, including writings by Laves' father Kurt Laves, and clippings.</p></arrangement>
+                <c02 level="file">
+                    <did><unittitle>Laves, Walter Herman Carl</unittitle></did>
+                    <c03 level="file">
+                        <did><unittitle>Writings, <unitdate normal="1926/1952" type="inclusive">1926-1952.</unitdate></unittitle><physdesc>(14 folders)</physdesc></did>
+                        <scopecontent><p> Contains mostly journals and reprints from journals.</p></scopecontent>
+                    </c03>
+                    <c03 level="file">
+                        <did><container type="Box" label="Box">24</container><unittitle>Writings, <unitdate normal="1953/1975" type="inclusive">1953-1975</unitdate></unittitle><physdesc>(14 folders)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Congressional hearing testimonies, <unitdate normal="1942/1957" type="inclusive">1942-1957</unitdate></unittitle><physdesc>(4 folders)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><container type="Box" label="Box">25</container><unittitle>Congressional hearing testimonies, <unitdate normal="1958/1961" type="inclusive">1958-1961</unitdate></unittitle><physdesc>(2 folders)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Programs and announcements for speeches and lectures by WHCL</unittitle><physdesc>(2 folders)</physdesc></did>
+                    </c03>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Writings by Others</unittitle></did>
+                    <c03 level="file">
+                        <did><unittitle>Laves, Kurt. Various papers, mostly relating to astronomy and memorial service programs</unittitle><physdesc>(3 folders)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Pocket-sized copies: Covenant of the League of Nations, <unitdate normal="1930">ca. 1930</unitdate>and Charter of the United Nations and Statute of the International Court of Justice, <unitdate normal="1924/1980" type="inclusive">undated</unitdate></unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Miscellaneous writers, <unitdate normal="1937/1964" type="inclusive">1937-1964</unitdate></unittitle><physdesc>(11 folders)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><container type="Box" label="Box">26</container><unittitle>Miscellaneous writers, <unitdate normal="1965/1976" type="inclusive">1965-1976</unitdate></unittitle><physdesc>(4 folders)</physdesc></did>
+                    </c03>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Clippings concerning Laves</unittitle></did>
+                    <c03 level="file">
+                        <did><unittitle><unitdate normal="1936/1974" type="inclusive">1936-1974</unitdate></unittitle><physdesc>(7 folders)</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><unitdate normal="1937/1938" type="inclusive">1937-1938.</unitdate>Scrapbook</unittitle></did>
+                    </c03>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Clippings concerning miscellaneous topics, <unitdate normal="1931/1971" type="inclusive">1931-1971</unitdate></unittitle><physdesc>(4 folders)</physdesc></did>
+                </c02>   
+            </c01>
+            <c01 level="series">
+                <did><unittitle>Memorabilia</unittitle></did>
+                <c02 level="file">
+                    <did><unittitle>Realia</unittitle></did>
+                    <c03 level="file">
+                        <did><unittitle>Thailand. Order of the Crown insignia. In blue velvet case</unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Thailand. Order of the White Elephant insignia. In red velvet case</unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Thailand. Two hand-made, replica Thai swords. ca. 7 inches in length. In light-blue and gold box.</unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle>Unidentified pin with crossed machetes</unittitle></did>
+                    </c03>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Awards, citations, etc.</unittitle></did>
+                    <arrangement><p>Arranged chronologically.</p></arrangement>
+                    <c03 level="file">
+                        <did><unittitle><unitdate normal="1952-11-12">1952, Nov. 12.</unitdate>Department of State. Appointment as U.S. representative and vice chairman of delegation, 7th Session of General Conference of UNESCO, Paris</unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><unitdate normal="1958-04-20">1958, Apr. 20.</unitdate>Indiana University Writers Conference Award for work on World Affairs by Indiana author: UNESCO: Purpose, Progress, Prospects, by Laves and Charles A. Thomas</unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><unitdate normal="1964-10-08">1964, Oct. 8.</unitdate>Indiana University sends felicitations...conveyed by Walter Laves to Thammasat University in Thailand</unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><unitdate normal="1964-10-08">1964, Oct. 8.</unitdate>Order of the Crown. Conferred by the King of Thailand. In English and Thai</unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><unitdate normal="1964-10-17">1964, Oct. 17.</unitdate>The President of the United States. Appointment as alternate representative to the 13th Session of UNESCO. Signed by Lyndon Johnson and Dean Rusk</unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><unitdate normal="1968-03-11">1968, Mar. 11.</unitdate>Order of the White Elephant. Conferred by the King of Thailand. In English and Thai. Accompanied by instructions for wearing the insignia</unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><unitdate normal="1970-06-19">1970, June 19.</unitdate>Indiana University, Century-And-A-Half Club</unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><unitdate normal="1971-07-06">1971, July 6.</unitdate>Department of State. Appointment as member of the U.S. Commission for UNESCO. Signed by William P. Rogers</unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><unitdate normal="1972-05-02">1972, May 2.</unitdate> Indiana University. Recognition of 18 years of service upon retirement from teaching</unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><unitdate normal="1972-05-13">1972, May 13.</unitdate>Indiana University. Membership in the Emeritus Club</unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><unitdate normal="1973-06">1973, June.</unitdate>University of Chicago, Emeritus Club. 50th anniversary of graduation</unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><unitdate normal="1973-11-17">1973, Nov. 17.</unitdate>U.S. National Commission for UNESCO. In appreciation as vice-chairman</unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><unitdate normal="1974-03-20">1974, Mar. 20.</unitdate>International Society for Educational, Cultural, and Scientific Interchanges. First annual award</unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><unitdate normal="1974-05-17">1974, May 17.</unitdate>International Studies Association. In appreciation for support in Take-The-Pledge Campaign</unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><unitdate normal="1975-06-20">1975, June 20.</unitdate>Indiana University, Mini-University. In appreciation for having taught courses</unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><unitdate normal="1975-06-25">1975, June 25.</unitdate>Indiana University, Mini-University. In appreciation for having taught courses</unittitle></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><unitdate normal="1924/1980" type="inclusive">Undated.</unitdate> Encyclopedia Britannica. Welcomes Laves as one of its contributors</unittitle></did>
+                    </c03>
+                </c02>
+                <c02 level="file">
+                    <did><unittitle>Miscellaneous</unittitle></did>
+                </c02>
+                <c02 level="file">
+                    <did><container type="Folder">Folio</container><unittitle>Dag Hammarskjold. Black and white stylized print by Olav S. Matheisen. <unitdate normal="1961">ca 1961.</unitdate></unittitle><physdesc>(4 copies)</physdesc></did>
+                </c02>
+                <c02 level="file">
+                    <did><container type="Box" label="Box">28</container><container type="Folder">Folio</container><unittitle>Temple rubbing from Thailand. Black on rice paper</unittitle></did>
+                </c02>
+                
+            </c01>
+            
+            <!--
+            -->
+        </dsc>
+    </archdesc>
+</ead>

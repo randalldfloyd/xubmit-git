@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Lilly Library, Indiana University, EAD template, 2003-02-21; updated DOCTYPE, Feb. 14, 2006, RKL --><!DOCTYPE ead
-  PUBLIC "-//Society of American Archivists//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN" "ead.dtd">
-<ead><!-- value of @findaidstatus should be 'originaldraft', 'inprogressdraft', 'editinprogress', or 'editedfulldraft' --><eadheader audience="internal" langencoding="iso639-2b" scriptencoding="iso15924"
+<!-- Lilly Library, Indiana University, EAD template, 2003-02-21; updated DOCTYPE, Feb. 14, 2006, RKL -->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+   <!-- value of @findaidstatus should be 'originaldraft', 'inprogressdraft', 'editinprogress', or 'editedfulldraft' --><eadheader audience="internal" langencoding="iso639-2b" scriptencoding="iso15924"
               repositoryencoding="iso15511"
               countryencoding="iso3166-1"
               dateencoding="iso8601"
@@ -24,7 +26,7 @@
          <creation>XML finding aid derived from HTML version through cutting and pasting.<!--description of how the finding aid was created, for example: XML finding aid derived from
 [paper by means of scanning and OCR] [OCR file edited for typographical errors before encoding]
 [typescript by rekeying] [word processing program and version number]
-[<extref href="" linktype="simple" title="" actuate="onrequest" show="new">HTML collection description</extref>]. -->
+[<extref href="" title="" actuate="onrequest" show="new">HTML collection description</extref>]. -->
 				<lb/>[date of source: <lb/>Finding aid encoded by Donald C. Force, Lilly Library,
 				Indiana University, <date normal="2007-03-08" era="ce" calendar="gregorian">March 8, 2007</date>
 			      </creation>
@@ -57,17 +59,17 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
    </frontmatter>
    <archdesc level="collection" audience="external" type="inventory" relatedencoding="marc"><!-- @type value may alternatively be 'bulk' --><!-- use the label attribute for these elements to determine what label is displayed --><did>
          <head>Summary Information</head>
-         <repository encodinganalog="852" label="Repository">
+         <repository encodinganalog="852" label="Repository" id="lilly">
 				        <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
 				        <address>
-               <addressline>Lilly Library</addressline>
                <addressline>Indiana University</addressline>
                <addressline>1200 E. Seventh St.</addressline>
                <addressline>Bloomington, IN 47405-5500</addressline>
                <addressline>Phone: 812-855-2452</addressline>
                <addressline>Fax: 812-855-3143</addressline>
                <addressline>Email: liblilly@indiana.edu</addressline>
-            </address>
+				        </address><lb/> 
+            <extref xlink:href="http://www.indiana.edu/~liblilly">http://www.indiana.edu/~liblilly</extref>
 			      </repository>
          <origination label="Creator">
 				<!-- If an organization, change to persname to "corpname" and encodinganalog="110$a" -->
@@ -77,22 +79,78 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
          <unitdate normal="1968/1995" type="inclusive" encodinganalog="245$f" era="ce"
                    calendar="gregorian">1968-1995</unitdate>
          <unitid encodinganalog="099" countrycode="US" repositorycode="US-InU-Li"
-                 label="Collection no">LMC 3001</unitid>
+                 label="Collection No.">LMC 3001</unitid>
          <physdesc encodinganalog="300$a$f" label="Extent">
 				        <extent>ca. 350 items</extent>
 				        <!-- if both linear feet and number of items included, separate by lb tag -->
 			</physdesc>
-         <langmaterial label="Language">Materials are in <language langcode="eng" encodinganalog="008/35-37">English.</language>
+         <langmaterial label="Language" encodinganalog="546">Materials are in <language langcode="eng" encodinganalog="008/35-37">English.</language>
          </langmaterial>
          <abstract encodinganalog="520$a" label="Abstract">Consists primarily of the
 				correspondence and writings of author Don Pendleton.</abstract>
       </did>
-      <!-- required; 'descgrp' element replaces admininfo element in 2002 DTD --><descgrp>
-         <head>Administrative Information</head>
          <accessrestrict encodinganalog="506$a">
             <head>Access Restrictions</head>
             <p>This collection is open for research.</p>
          </accessrestrict>
+         <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+            <p>Following service in the Navy during and after World War II, Pendleton had
+					various positions in the engineering field before turning to writing as a
+					full-time occupation. He wrote mystery and crime fiction, science-fiction,
+					suspense, short stories, non-fiction, and poetry. He published more than 125
+					books over his long career and his works have been translated into more than
+					twenty-five languages. He is best known for the character Mack Bolan, featured
+					in his <title render="italic">Executioner</title> series. He produced 38 titles
+					in the series between 1969 and 1980, all published by Pinnacle Books. He
+					subsequently produced two other, shorter series, <title render="italic">Joe
+					Copp</title> (private eye) published by Donald I. Fine Inc., and <title render="italic">Ashton Ford</title> (psychic detective) published by Warner
+					Books. Prior to the first <title render="italic">Executioner</title> volume, he
+					published six novels under the pseudonym Stephan Gregory, with the main
+					character being Stewart Mann. He also wrote one fiction and three non-fiction
+					works with his wife Linda Pendleton. <title render="italic">To Dance with
+					Angels</title>, non-fiction, appeared in 1990; the other three were published
+					posthumously.</p>
+         </bioghist>
+      <odd>
+         <head/>
+         <p>Additional information about Don Pendelton may be located at: <extref xlink:href="http://www.donpendleton.com/">The Official Website of Don
+				Pendleton.</extref>
+         </p>
+      </odd><!--optional --><!-- element organization deprecated in DTD version 2002; @encodinganalog may be used to differentiate between 351 subfield a (organization) and subfield b (arrangement). -->
+      <arrangement encodinganalog="351$x">
+         <head>Arrangement/Organization</head>
+         <p>The collection is organized into the following series: I. Writings; II.
+				Correspondence; III. Miscellaneous.</p>
+      </arrangement>
+      <!-- required for collection level; optional for lower levels --><scopecontent encodinganalog="520$a$b">
+         <head>Scope and Content Note</head>
+         <p>Consists primarily of the correspondence and writings of author Don Pendleton. The
+				writings include the series: <title render="italic">Executioner</title>, #1-38;
+				Ashton Ford; and Joe Copp. These are followed by other book-length writings, shorter
+				writings and finally writings co-authored with Linda Pendleton.</p>
+         <p>The correspondence relates primarily to the publication or transmittal of manuscripts
+				of the <emph render="italic">Executioner</emph> series. Later correspondence
+				includes files with publishers Donald Fine and Maurice Girodias, the Scott Meredith
+				Literary Agency, and writers Mickey Spillane and Colin Wilson.</p>
+         <p>A miscellaneous section includes interviews with Pendleton, speeches by him,
+				photographs, and legal files relating to breach of a publication agreement with
+				Harlequin.</p>
+      </scopecontent>
+      <!-- recommended; this information would be included for marc amc record --><!-- should include all personal and corporate names, and subject headings --><controlaccess>
+         <head>Controlled Access Terms</head>
+         <persname encodinganalog="600$a" source="lcnaf" role="subject">Pendleton, Don --Correspondence.</persname>
+         <persname encodinganalog="600$a" source="lcnaf" role="subject">Pendleton, Don. Executioner.</persname>
+         <subject encodinganalog="650$a" source="lcsh">Ford, Ashton (Fictitious character) --Fiction.</subject>
+         <subject encodinganalog="650$a" source="lcsh">Copp, Joseph (Fictitious character) --Fiction.</subject>
+         <controlaccess>
+            <head/>
+            <persname encodinganalog="700$a" source="lcnaf">Pendleton, Linda.</persname>
+            <persname encodinganalog="700$a" source="lcnaf">Pendleton, Don. Executioner.</persname>
+         </controlaccess>
+      </controlaccess><!-- required; 'descgrp' element replaces admininfo element in 2002 DTD -->
+      <descgrp>
+         <head>Administrative Information</head>
          <acqinfo encodinganalog="541">
             <head>Acquisition Information</head>
             <p>Deposit. 1978; Gift. 2006</p>
@@ -110,63 +168,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
             <p>[Item], Pendleton mss., Lilly Library, Indiana University, Bloomington,
 				Indiana.</p>
          </prefercite>
-         <bioghist encodinganalog="545">
-            <head>Biographical Note</head>
-            <p>Following service in the Navy during and after World War II, Pendleton had
-					various positions in the engineering field before turning to writing as a
-					full-time occupation. He wrote mystery and crime fiction, science-fiction,
-					suspense, short stories, non-fiction, and poetry. He published more than 125
-					books over his long career and his works have been translated into more than
-					twenty-five languages. He is best known for the character Mack Bolan, featured
-					in his <title render="italic" linktype="simple">Executioner</title> series. He produced 38 titles
-					in the series between 1969 and 1980, all published by Pinnacle Books. He
-					subsequently produced two other, shorter series, <title render="italic" linktype="simple">Joe
-					Copp</title> (private eye) published by Donald I. Fine Inc., and <title render="italic" linktype="simple">Ashton Ford</title> (psychic detective) published by Warner
-					Books. Prior to the first <title render="italic" linktype="simple">Executioner</title> volume, he
-					published six novels under the pseudonym Stephan Gregory, with the main
-					character being Stewart Mann. He also wrote one fiction and three non-fiction
-					works with his wife Linda Pendleton. <title render="italic" linktype="simple">To Dance with
-					Angels</title>, non-fiction, appeared in 1990; the other three were published
-					posthumously.</p>
-         </bioghist>
       </descgrp>
-      <odd>
-         <head/>
-         <p>Additional information about Don Pendelton may be located at: <extref href="http://www.donpendleton.com/" linktype="simple">The Official Website of Don
-				Pendleton.</extref>
-         </p>
-      </odd>
-      <!-- required for collection level; optional for lower levels --><scopecontent encodinganalog="520$a$b">
-         <head>Scope and Content Note</head>
-         <p>Consists primarily of the correspondence and writings of author Don Pendleton. The
-				writings include the series: <title render="italic" linktype="simple">Executioner</title>, #1-38;
-				Ashton Ford; and Joe Copp. These are followed by other book-length writings, shorter
-				writings and finally writings co-authored with Linda Pendleton.</p>
-         <p>The correspondence relates primarily to the publication or transmittal of manuscripts
-				of the <emph render="italic">Executioner</emph> series. Later correspondence
-				includes files with publishers Donald Fine and Maurice Girodias, the Scott Meredith
-				Literary Agency, and writers Mickey Spillane and Colin Wilson.</p>
-         <p>A miscellaneous section includes interviews with Pendleton, speeches by him,
-				photographs, and legal files relating to breach of a publication agreement with
-				Harlequin.</p>
-      </scopecontent>
-      <!--optional --><!-- element organization deprecated in DTD version 2002; @encodinganalog may be used to differentiate between 351 subfield a (organization) and subfield b (arrangement). --><arrangement encodinganalog="351$x">
-         <head>Arrangement/Organization</head>
-         <p>The collection is organized into the following series: I. Writings; II.
-				Correspondence; III. Miscellaneous.</p>
-      </arrangement>
-      <!-- recommended; this information would be included for marc amc record --><!-- should include all personal and corporate names, and subject headings --><controlaccess>
-         <head>Controlled Access Terms</head>
-         <persname encodinganalog="600$a" source="lcnaf" role="subject">Pendleton, Don --Correspondence.</persname>
-         <persname encodinganalog="600$a" source="lcnaf" role="subject">Pendleton, Don. Executioner.</persname>
-         <subject encodinganalog="650$a" source="lcsh">Ford, Ashton (Fictitious character) --Fiction.</subject>
-         <subject encodinganalog="650$a" source="lcsh">Copp, Joseph (Fictitious character) --Fiction.</subject>
-         <controlaccess>
-            <head/>
-            <persname encodinganalog="700$a" source="lcnaf">Pendleton, Linda.</persname>
-            <persname encodinganalog="700$a" source="lcnaf">Pendleton, Don. Executioner.</persname>
-         </controlaccess>
-      </controlaccess>
       <dsc type="combined"><!-- unittitle is the only required element within component --><!-- possible values for @level include: class, collection, file, fonds, item, otherlevel, recordgrp, series, subfonds, subgrp, subseries --><c01 level="series">
             <did>
                <unittitle>Writings</unittitle>
@@ -193,7 +195,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">War Against the Mafia</title> (#1)</unittitle>
+                        <title render="italic">War Against the Mafia</title> (#1)</unittitle>
                      <note>
                         <p>Drafts; printer's manuscript; new introduction for special
 									re-issue, 1976.</p>
@@ -203,7 +205,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Death Squad</title> (#2)</unittitle>
+                        <title render="italic">Death Squad</title> (#2)</unittitle>
                      <note>
                         <p>Drafts; printer's manuscript.</p>
                      </note>
@@ -212,7 +214,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Battle Mask</title> (#3)</unittitle>
+                        <title render="italic">Battle Mask</title> (#3)</unittitle>
                      <note>
                         <p>Drafts; printer's manuscript.</p>
                      </note>
@@ -221,7 +223,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Miami Massacre</title> (#4)</unittitle>
+                        <title render="italic">Miami Massacre</title> (#4)</unittitle>
                      <note>
                         <p>Drafts; printer's manuscript.</p>
                      </note>
@@ -230,7 +232,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Continental Contract</title> (#5)</unittitle>
+                        <title render="italic">Continental Contract</title> (#5)</unittitle>
                      <note>
                         <p>Printer's manuscript.</p>
                      </note>
@@ -239,7 +241,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Assault in Soho</title> (#6)</unittitle>
+                        <title render="italic">Assault in Soho</title> (#6)</unittitle>
                      <note>
                         <p>Printer's manuscript.</p>
                      </note>
@@ -248,7 +250,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Nightmare in New York</title> (#7)</unittitle>
+                        <title render="italic">Nightmare in New York</title> (#7)</unittitle>
                      <note>
                         <p>Printer's manuscript.</p>
                      </note>
@@ -257,7 +259,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Chicago Wipeout</title> (#8)</unittitle>
+                        <title render="italic">Chicago Wipeout</title> (#8)</unittitle>
                      <note>
                         <p>Printer's manuscript.</p>
                      </note>
@@ -266,7 +268,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Vegas Vendetta</title> (#9)</unittitle>
+                        <title render="italic">Vegas Vendetta</title> (#9)</unittitle>
                      <note>
                         <p>Printer's manuscript.</p>
                      </note>
@@ -275,7 +277,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Caribbean Kill</title> (#10)</unittitle>
+                        <title render="italic">Caribbean Kill</title> (#10)</unittitle>
                      <note>
                         <p>Printer's manuscript.</p>
                      </note>
@@ -284,7 +286,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">California Hit</title> (#11)</unittitle>
+                        <title render="italic">California Hit</title> (#11)</unittitle>
                      <note>
                         <p>Printer's manuscript.</p>
                      </note>
@@ -293,7 +295,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Boston Blitz</title> (#12)</unittitle>
+                        <title render="italic">Boston Blitz</title> (#12)</unittitle>
                      <note>
                         <p>Printer's manuscript.</p>
                      </note>
@@ -302,7 +304,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Washington IOU</title> (#13)</unittitle>
+                        <title render="italic">Washington IOU</title> (#13)</unittitle>
                      <note>
                         <p>Synopsis; story outline and background; printer's manuscript.</p>
                      </note>
@@ -311,7 +313,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">San Diego Siege</title> (#14)</unittitle>
+                        <title render="italic">San Diego Siege</title> (#14)</unittitle>
                      <note>
                         <p>Drafts; printer's manuscript.</p>
                      </note>
@@ -321,7 +323,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="box" label="Box">2</container>
                      <unittitle>
-                        <title render="italic" linktype="simple">Panic in Philly</title> (#15)</unittitle>
+                        <title render="italic">Panic in Philly</title> (#15)</unittitle>
                      <note>
                         <p>Drafts; printer's manuscript.</p>
                      </note>
@@ -330,7 +332,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Jersey Guns</title> (#16, actually
+                        <title render="italic">Jersey Guns</title> (#16, actually
 								published as #17)</unittitle>
                      <note>
                         <p>Drafts; printer's manuscript; galleys.</p>
@@ -340,7 +342,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Texas Storm</title> (#18)</unittitle>
+                        <title render="italic">Texas Storm</title> (#18)</unittitle>
                      <note>
                         <p>Drafts; printer's manuscript; galleys.</p>
                      </note>
@@ -349,7 +351,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Detroit Death Watch</title> (#19)</unittitle>
+                        <title render="italic">Detroit Death Watch</title> (#19)</unittitle>
                      <note>
                         <p>Drafts; printer's manuscript; galleys.</p>
                      </note>
@@ -358,7 +360,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">New Orleans Knockout</title> (#20)</unittitle>
+                        <title render="italic">New Orleans Knockout</title> (#20)</unittitle>
                      <note>
                         <p>Drafts; printer's manuscript; galleys.</p>
                      </note>
@@ -367,7 +369,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Firebase Seattle</title> (#21)</unittitle>
+                        <title render="italic">Firebase Seattle</title> (#21)</unittitle>
                      <note>
                         <p>Drafts; printer's manuscript; galleys.</p>
                      </note>
@@ -376,7 +378,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Hawaiian Hellground</title> (#22)</unittitle>
+                        <title render="italic">Hawaiian Hellground</title> (#22)</unittitle>
                      <note>
                         <p>Worksheets.</p>
                      </note>
@@ -386,7 +388,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="box" label="Box">3</container>
                      <unittitle>
-                        <title render="italic" linktype="simple">Hawaiian Hellground</title> (#22)</unittitle>
+                        <title render="italic">Hawaiian Hellground</title> (#22)</unittitle>
                      <note>
                         <p>Complete draft; printer's manuscript.</p>
                      </note>
@@ -395,7 +397,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">St. Louis Showdown</title> (#23)</unittitle>
+                        <title render="italic">St. Louis Showdown</title> (#23)</unittitle>
                      <note>
                         <p>Drafts; printer's manuscript; galleys.</p>
                      </note>
@@ -404,7 +406,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Canadian Crisis</title> (#24)</unittitle>
+                        <title render="italic">Canadian Crisis</title> (#24)</unittitle>
                      <note>
                         <p>Drafts; printer's manuscript; galleys.</p>
                      </note>
@@ -413,7 +415,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Colorado Kill-Zone</title> (#25)</unittitle>
+                        <title render="italic">Colorado Kill-Zone</title> (#25)</unittitle>
                      <note>
                         <p>Drafts; printer's manuscript; galleys.</p>
                      </note>
@@ -422,7 +424,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Acapulco Rampage</title> (#26)</unittitle>
+                        <title render="italic">Acapulco Rampage</title> (#26)</unittitle>
                      <note>
                         <p>Printer's manuscript; galleys.</p>
                      </note>
@@ -431,7 +433,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Dixie Convoy</title> (#27)</unittitle>
+                        <title render="italic">Dixie Convoy</title> (#27)</unittitle>
                      <note>
                         <p>Drafts; printer's manuscript.</p>
                      </note>
@@ -441,7 +443,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="box" label="Box">4</container>
                      <unittitle>
-                        <title render="italic" linktype="simple">Savage Fire</title> (#28)</unittitle>
+                        <title render="italic">Savage Fire</title> (#28)</unittitle>
                      <note>
                         <p>Draft; galleys.</p>
                      </note>
@@ -450,7 +452,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">The Executioner's War Book</title>
+                        <title render="italic">The Executioner's War Book</title>
 								(published between #'s 28 and 29)</unittitle>
                      <note>
                         <p>Drafts; printer's manuscript; galleys; graphics, etc.</p>
@@ -460,7 +462,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Command Strike</title> (#29)</unittitle>
+                        <title render="italic">Command Strike</title> (#29)</unittitle>
                      <note>
                         <p>Drafts; printer's manuscript; galleys.</p>
                      </note>
@@ -469,7 +471,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Cleveland Pipeline</title> (#30)</unittitle>
+                        <title render="italic">Cleveland Pipeline</title> (#30)</unittitle>
                      <note>
                         <p>Draft manuscript; galleys.</p>
                      </note>
@@ -478,7 +480,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Arizona Ambush</title> (#31)</unittitle>
+                        <title render="italic">Arizona Ambush</title> (#31)</unittitle>
                      <note>
                         <p>Printer's manuscript; galleys.</p>
                      </note>
@@ -487,7 +489,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Tennessee Smash</title> (#32)</unittitle>
+                        <title render="italic">Tennessee Smash</title> (#32)</unittitle>
                      <note>
                         <p>Drafts; printer's manuscript; galleys.</p>
                      </note>
@@ -496,7 +498,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Monday's Mob</title> (#33)</unittitle>
+                        <title render="italic">Monday's Mob</title> (#33)</unittitle>
                      <note>
                         <p>Drafts.</p>
                      </note>
@@ -506,7 +508,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="box" label="Box">5</container>
                      <unittitle>
-                        <title render="italic" linktype="simple">Monday's Mob</title> (#33)</unittitle>
+                        <title render="italic">Monday's Mob</title> (#33)</unittitle>
                      <note>
                         <p>Complete manuscript; printer's manuscript.</p>
                      </note>
@@ -515,7 +517,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Terrible Tuesday</title> (#34)</unittitle>
+                        <title render="italic">Terrible Tuesday</title> (#34)</unittitle>
                      <note>
                         <p>Drafts; manuscript; printer's manuscript.</p>
                      </note>
@@ -524,7 +526,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Wednesday's Wrath</title> (#35)</unittitle>
+                        <title render="italic">Wednesday's Wrath</title> (#35)</unittitle>
                      <note>
                         <p>Drafts; final manuscript; printer's manuscript.</p>
                      </note>
@@ -533,7 +535,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Thermal Thursday</title> (#36)</unittitle>
+                        <title render="italic">Thermal Thursday</title> (#36)</unittitle>
                      <note>
                         <p>Draft; final manuscript.</p>
                      </note>
@@ -542,7 +544,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Friday Feast</title> (#37)</unittitle>
+                        <title render="italic">Friday Feast</title> (#37)</unittitle>
                      <note>
                         <p>Draft; final manuscript.</p>
                      </note>
@@ -551,7 +553,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Satan's Sabbath</title> (#38)</unittitle>
+                        <title render="italic">Satan's Sabbath</title> (#38)</unittitle>
                      <note>
                         <p>Drafts; final manuscript; galleys.</p>
                      </note>
@@ -560,7 +562,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-								                <title render="doublequote" linktype="simple">Willing to Kill,</title>
+								                <title render="doublequote">Willing to Kill,</title>
 								                <unitdate normal="1977" era="ce" calendar="gregorian">1977</unitdate>
 							              </unittitle>
                      <note>
@@ -592,42 +594,42 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-								                <title render="italic" linktype="simple">Ashes to Ashes</title>
+								                <title render="italic">Ashes to Ashes</title>
 							              </unittitle>
                   </did>
                </c03>
                <c03 level="file">
                   <did>
                      <unittitle>
-								                <title render="italic" linktype="simple">Eye to Eye</title>
+								                <title render="italic">Eye to Eye</title>
 							              </unittitle>
                   </did>
                </c03>
                <c03 level="file">
                   <did>
                      <unittitle>
-								                <title render="italic" linktype="simple">Mind to Mind</title>
+								                <title render="italic">Mind to Mind</title>
 							              </unittitle>
                   </did>
                </c03>
                <c03 level="file">
                   <did>
                      <unittitle>
-								                <title render="italic" linktype="simple">Life to Life</title>
+								                <title render="italic">Life to Life</title>
 							              </unittitle>
                   </did>
                </c03>
                <c03 level="file">
                   <did>
                      <unittitle>
-								                <title render="italic" linktype="simple">Heart to Heart</title>
+								                <title render="italic">Heart to Heart</title>
 							              </unittitle>
                   </did>
                </c03>
                <c03 level="file">
                   <did>
                      <unittitle>
-								                <title render="italic" linktype="simple">Time to Time</title>
+								                <title render="italic">Time to Time</title>
 							              </unittitle>
                   </did>
                </c03>
@@ -645,7 +647,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-								                <title render="italic" linktype="simple">Copp for Hire</title>
+								                <title render="italic">Copp for Hire</title>
 							              </unittitle>
                      <note>
                         <p>Draft.</p>
@@ -656,7 +658,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="box" label="Box">7</container>
                      <unittitle>
-								                <title render="italic" linktype="simple">Copp for Hire</title>
+								                <title render="italic">Copp for Hire</title>
 							              </unittitle>
                      <note>
                         <p>Final manuscript.</p>
@@ -666,35 +668,35 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-								                <title render="italic" linktype="simple">Copp on Fire</title>
+								                <title render="italic">Copp on Fire</title>
 							              </unittitle>
                   </did>
                </c03>
                <c03 level="file">
                   <did>
                      <unittitle>
-								                <title render="italic" linktype="simple">Copp in Deep</title>
+								                <title render="italic">Copp in Deep</title>
 							              </unittitle>
                   </did>
                </c03>
                <c03 level="file">
                   <did>
                      <unittitle>
-								                <title render="italic" linktype="simple">Copp in the Dark</title>
+								                <title render="italic">Copp in the Dark</title>
 							              </unittitle>
                   </did>
                </c03>
                <c03 level="file">
                   <did>
                      <unittitle>
-								                <title render="italic" linktype="simple">Copp on Ice</title>
+								                <title render="italic">Copp on Ice</title>
 							              </unittitle>
                   </did>
                </c03>
                <c03 level="file">
                   <did>
                      <unittitle>
-								                <title render="italic" linktype="simple">Copp in Shock</title>
+								                <title render="italic">Copp in Shock</title>
 							              </unittitle>
                   </did>
                </c03>
@@ -718,7 +720,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-								                <title linktype="simple">The Adulteress</title>
+								                <title>The Adulteress</title>
 							              </unittitle>
                      <note>
                         <p>A Stephan Gregory work.</p>
@@ -728,14 +730,14 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title linktype="simple">Black Tomorrow</title>, <unitdate normal="1994" era="ce" calendar="gregorian">1994</unitdate>
+                        <title>Black Tomorrow</title>, <unitdate normal="1994" era="ce" calendar="gregorian">1994</unitdate>
                      </unittitle>
                   </did>
                </c03>
                <c03 level="file">
                   <did>
                      <unittitle>
-								                <title linktype="simple">Cataclysm</title>
+								                <title>Cataclysm</title>
 							              </unittitle>
                   </did>
                </c03>
@@ -743,24 +745,14 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="box" label="Box">8</container>
                      <unittitle>
-								                <title linktype="simple">Day of the Panther</title>
+								                <title>Day of the Panther</title>
 							              </unittitle>
                   </did>
                </c03>
                <c03 level="file">
                   <did>
                      <unittitle>
-								                <title linktype="simple">Don’t Call me Madam</title>
-							              </unittitle>
-                     <note>
-                        <p>A Stephan Gregory work.</p>
-                     </note>
-                  </did>
-               </c03>
-               <c03 level="file">
-                  <did>
-                     <unittitle>
-								                <title linktype="simple">ESP &amp; the Sex Mystique</title>
+								                <title>Don’t Call me Madam</title>
 							              </unittitle>
                      <note>
                         <p>A Stephan Gregory work.</p>
@@ -770,7 +762,17 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-								                <title linktype="simple">The Godmakers</title>
+								                <title>ESP &amp; the Sex Mystique</title>
+							              </unittitle>
+                     <note>
+                        <p>A Stephan Gregory work.</p>
+                     </note>
+                  </did>
+               </c03>
+               <c03 level="file">
+                  <did>
+                     <unittitle>
+								                <title>The Godmakers</title>
 							              </unittitle>
                      <note>
                         <p>A Dan Britain work.</p>
@@ -780,42 +782,42 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-								                <title linktype="simple">The Guns of Terra 10</title>
+								                <title>The Guns of Terra 10</title>
 							              </unittitle>
                   </did>
                </c03>
                <c03 level="file">
                   <did>
                      <unittitle>
-								                <title linktype="simple">The Hot One</title>
+								                <title>The Hot One</title>
 							              </unittitle>
                   </did>
                </c03>
                <c03 level="file">
                   <did>
                      <unittitle>
-								                <title linktype="simple">The Huntress</title>
+								                <title>The Huntress</title>
 							              </unittitle>
                   </did>
                </c03>
                <c03 level="file">
                   <did>
                      <unittitle>
-								                <title linktype="simple">1989: Population Doomsday</title>
+								                <title>1989: Population Doomsday</title>
 							              </unittitle>
                   </did>
                </c03>
                <c03 level="file">
                   <did>
                      <unittitle>
-								                <title linktype="simple">The Olympians</title>
+								                <title>The Olympians</title>
 							              </unittitle>
                   </did>
                </c03>
                <c03 level="file">
                   <did>
                      <unittitle>
-								                <title linktype="simple">A Search for Meaning – 2 stages</title>
+								                <title>A Search for Meaning – 2 stages</title>
 							              </unittitle>
                      <note>
                         <p>Originally titled "The Search."</p>
@@ -825,7 +827,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-								                <title linktype="simple">Sex Goddess</title>
+								                <title>Sex Goddess</title>
 							              </unittitle>
                      <note>
                         <p>A Stephan Gregory work.</p>
@@ -835,7 +837,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-								                <title linktype="simple">A Time to Embrace</title>
+								                <title>A Time to Embrace</title>
 							              </unittitle>
                      <note>
                         <p>A Stephan Gregory work.</p>
@@ -857,7 +859,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="box" label="Box">9</container>
                      <unittitle>
-                        <title linktype="simple">The Big Shootout at the UA Corral: A Hogs
+                        <title>The Big Shootout at the UA Corral: A Hogs
 								Epic</title>, <unitdate normal="1969" era="ce" calendar="gregorian">1969</unitdate>
                      </unittitle>
                      <physdesc>(12 p.)</physdesc>
@@ -870,7 +872,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title linktype="simple">The Trouble with Sex</title> [article?], <unitdate normal="1993" era="ce" calendar="gregorian">1993</unitdate>
+                        <title>The Trouble with Sex</title> [article?], <unitdate normal="1993" era="ce" calendar="gregorian">1993</unitdate>
                      </unittitle>
                      <physdesc>(4 p.)</physdesc>
                   </did>
@@ -889,7 +891,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-								                <title linktype="simple">The Metaphysics of the Novel</title>
+								                <title>The Metaphysics of the Novel</title>
 							              </unittitle>
                      <note>
                         <p>Two variant print-outs.</p>
@@ -899,17 +901,17 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-								                <title linktype="simple">One Dark and Stormy Night</title>
+								                <title>One Dark and Stormy Night</title>
 							              </unittitle>
                      <note>
-                        <p>Also published as <title render="italic" linktype="simple">Roulette</title>.</p>
+                        <p>Also published as <title render="italic">Roulette</title>.</p>
                      </note>
                   </did>
                </c03>
                <c03 level="file">
                   <did>
                      <unittitle>
-								                <title linktype="simple">To Dance with Angels</title>
+								                <title>To Dance with Angels</title>
 							              </unittitle>
                      <note>
                         <p>Draft and final copy.</p>
@@ -919,7 +921,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-								                <title linktype="simple">Whispers of the Soul</title>
+								                <title>Whispers of the Soul</title>
 							              </unittitle>
                      <note>
                         <p>Draft and final copy.</p>
@@ -1044,7 +1046,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                      </unittitle>
                      <physdesc>(T(carbon)D. 3 p.)</physdesc>
                      <note>
-                        <p>Includes correspondence; photocopy of published form – <title render="italic" linktype="simple">Marvel Preview</title>, #2.</p>
+                        <p>Includes correspondence; photocopy of published form – <title render="italic">Marvel Preview</title>, #2.</p>
                      </note>
                   </did>
                </c03>
