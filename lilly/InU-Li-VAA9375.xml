@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group  -->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader relatedencoding="dublincore" audience="external" langencoding="iso639-2b"
+        scriptencoding="iso15924" repositoryencoding="iso15511" countryencoding="iso3166-1"
+        dateencoding="iso8601" findaidstatus="edited-full-draft">
+        <eadid encodinganalog="identifier" identifier="InU-Li-VAA9375" countrycode="US"
+            mainagencycode="InU-Li">InU-Li-VAA9375</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Guide to the Bridson mss., <date normal="1934/1980"
+                    >1934-1980</date></titleproper>
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library Program</publisher>
+                <date encodinganalog="date" normal="2009" type="publication">© 2009</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2009">© 2009</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>
+                <!--description of how the finding aid was created, for example: -->
+                Machine-readable finding aid derived from online inventory through cutting and
+                pasting.<lb/>[date of source: <date normal="2007-02-02" type="source">February 2,
+                    2007</date>
+                <lb/>Finding aid encoded by Valerie Higgins, Library/Archives, Indiana University,
+                    <date normal="2009-02-12">February 12, 2009</date>
+            </creation>
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2009-02-12"/>
+                <item/>
+            </change>
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc level="collection" audience="external" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository encodinganalog="852" label="Repository:">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname source="lcnaf" encodinganalog="100">Bridson, D. G. 1910-</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Bridson mss.</unittitle>
+            <unitdate normal="1934/1980" type="inclusive" encodinganalog="245$f"
+                >1934-1980</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1848</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>657 items</extent>
+
+                <!-- if both linear feet and number of items included, repeat extent-->
+            </physdesc>
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng" encodinganalog="546">English</language></langmaterial>
+            <abstract encodinganalog="520" label="Abstract">The Bridson mss., 1934-1980, consists of
+                correspondence and writings of Douglas Geoffrey Bridson, 1910-1980, producer and
+                author.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+            <p>Douglas Geoffrey Bridson, 1910-1980, began his career in 1933 as a free-lance radio writer and joined the British
+                Broadcasting Corporation in 1935 as Feature Programmes Assistant in the North
+                Region. He then moved to London in 1941 to become Overseas Features Editor,
+                Assistant Head of Features following the War, and Programme Editor for Arts,
+                Sciences, and Documentaries (Sound), from 1964-1967. In this latter position,
+                Bridson was referred to as <emph render="doublequote">the cultural boss of the
+                    BBC.</emph> D.G. Bridson retired from the BBC in May 1969, after more than 35
+                years and 800 broadcasts that carried his name.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection has been organized into the following series: I. Correspondence; II.
+                Writings; III. Miscellaneous; IV. Diaries; V. Press Clippings. </p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Bridson mss., 1934-1980, consists of correspondence and writings of Douglas
+                Geoffrey Bridson, producer and author. The correspondents in the
+                collection are chiefly writers whom Bridson recorded for broadcast during his
+                career. Writings include original radio scripts by D.G. Bridson, Norman Cameron,
+                T.S. Eliot, Langston Hughes, Wyndham Lewis, Ezra Pound, and Kenneth Rexroth, as well
+                as Bridson's manuscript for his autobiography <title render="italic">Prospero and
+                    Ariel: The Rise and Fall of Radio</title> (London: Victor Gollancz, 1971). A
+                group of 186 <emph render="doublequote">Listener reports</emph> (later called:
+                Audience research reports) for programs written or produced by Bridson, 1944-1969, a
+                typescript chronological list of all Bridson's productions, Bridson's daily desk
+                diaries, 1950-1980, and five scrapbook volumes of press clippings, 1934-1972,
+                complete the collection.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Controlled Access Terms</head>
+            <persname encodinganalog="600" source="lcnaf">Bridson, D. G. (Douglas G.),
+                1910-</persname>
+            <persname encodinganalog="600" source="lcnaf">Bridson, D. G. (Douglas G.), 1910-
+                --Correspondence.</persname>
+            <corpname encodinganalog="610" source="lcnaf">British Broadcasting
+                Corporation.</corpname>
+            <persname encodinganalog="600" source="lcnaf">Beckett, Samuel, 1906-1989.</persname>
+            <subject encodinganalog="650" source="lcsh">Dead Sea scrolls.</subject>
+            <subject encodinganalog="650" source="lcsh">Radio producers and directors --Great
+                Britain --Correspondence.</subject>
+            <subject encodinganalog="650" source="lcsh">Radio plays.</subject>
+            <controlaccess>
+                <head>Additional Access Terms</head>
+                <persname encodinganalog="700" source="lcnaf">Bridson, D. G. (Douglas G.), 1910-
+                    Prospero and Ariel.</persname>
+                <persname encodinganalog="700" source="lcnaf">Aiken, Conrad, 1889-1973.</persname>
+                <persname encodinganalog="700" source="lcnaf">Cameron, Norman, 1896-</persname>
+                <persname encodinganalog="700" source="lcnaf">Eliot, T. S. (Thomas Stearns),
+                    1888-1965.</persname>
+                <persname encodinganalog="700" source="lcnaf">Hughes, Langston,
+                    1902-1967.</persname>
+                <persname encodinganalog="700" source="lcnaf">Lewis, Wyndham, 1882-1957.</persname>
+                <persname encodinganalog="700" source="lcnaf">MacDiarmid, Hugh,
+                    1892-1978.</persname>
+                <persname encodinganalog="700" source="lcnaf">Pound, Ezra, 1885-1972.</persname>
+                <persname encodinganalog="700" source="lcnaf">Rexroth, Kenneth,
+                    1905-1982.</persname>
+                <corpname encodinganalog="710" source="lcnaf">British Broadcasting
+                    Corporation.</corpname>
+            </controlaccess>
+        </controlaccess>
+
+        <!-- optional, if applicable -->
+        <relatedmaterial encodinganalog="544 1">
+            <head>Related Material</head>
+            <p>Bridson mss. II; also located at the Lilly Library, Indiana University, Bloomington,
+                Indiana.</p>
+        </relatedmaterial>
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired. 1977, 1981, 1988</p>
+            </acqinfo>
+
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Bridson mss., Lilly Library, Indiana University, Bloomington,
+                    Indiana.</p>
+            </prefercite>
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 level="series">
+                <did>
+                    <!-- optional -->
+                    <container type="Box" label="Box">1</container>
+                    <!-- add type="bulk" or type="inclusive" to unitdate if appropriate -->
+                    <unittitle>Correspondence</unittitle>
+                </did>
+                <arrangement>
+                    <p>Arranged in chronological order, followed by the four individual files and
+                        correspondence notes.</p>
+                </arrangement>
+                <!-- optional -->
+                <scopecontent>
+                    <p>Consult the Manuscripts Index in the Lilly Library for dates of letters of
+                        individual correspondents. Bridson provided a brief description of his
+                        relationship with each correspondent. These typed notes have been gathered
+                        into a single file and placed at the end of the correspondence series.
+                        Correspondents include:</p>
+                </scopecontent>
+                <note>
+                    <list>
+                        <item>
+                            <persname>Conrad Potter Aiken,</persname>
+                        </item>
+                        <item>
+                            <persname>Mary (Hoover) Aiken,</persname>
+                        </item>
+                        <item>
+                            <persname>Wystan Hugh Auden,</persname>
+                        </item>
+                        <item>
+                            <persname>Michael Ayrton,</persname>
+                        </item>
+                        <item>
+                            <persname>Joseph Bard,</persname>
+                        </item>
+                        <item>
+                            <persname>Agnes Bedford,</persname>
+                        </item>
+                        <item>
+                            <persname>Douglas Geoffrey Bridson,</persname>
+                        </item>
+                        <item>
+                            <persname>Christine Brooke-Rose,</persname>
+                        </item>
+                        <item>
+                            <persname>Basil Bunting,</persname>
+                        </item>
+                        <item>
+                            <persname>Norman Cameron,</persname>
+                        </item>
+                        <item>
+                            <persname>Norman Lewis Corwin,</persname>
+                        </item>
+                        <item>
+                            <persname>Edward Estlin Cummings,</persname>
+                        </item>
+                        <item>
+                            <persname>Nancy Clara Cunard,</persname>
+                        </item>
+                        <item>
+                            <persname>Lawrence George Durrell,</persname>
+                        </item>
+                        <item>
+                            <persname>Clifford Dyment,</persname>
+                        </item>
+                        <item>
+                            <persname>Thomas Stearns Eliot,</persname>
+                        </item>
+                        <item>
+                            <persname>Refik Erduran,</persname>
+                        </item>
+                        <item>
+                            <persname>Lawrence Ferlinghetti,</persname>
+                        </item>
+                        <item>
+                            <persname>Roberto Gerhard,</persname>
+                        </item>
+                        <item>
+                            <persname>Louis Golding,</persname>
+                        </item>
+                        <item>
+                            <persname>Robert Graves,</persname>
+                        </item>
+                        <item>
+                            <persname>Walter Greenwood,</persname>
+                        </item>
+                        <item>
+                            <persname>Christopher Murray Grieve,</persname>
+                        </item>
+                        <item>
+                            <persname>Donald Hall,</persname>
+                        </item>
+                        <item>
+                            <persname>Gerald William Lankester Harding,</persname>
+                        </item>
+                        <item>
+                            <persname>Christopher Hibbert,</persname>
+                        </item>
+                        <item>
+                            <persname>James Hilton,</persname>
+                        </item>
+                        <item>
+                            <persname>Langston Hughes,</persname>
+                        </item>
+                        <item>
+                            <persname>Emyr Owen Humphreys,</persname>
+                        </item>
+                        <item>
+                            <persname>Laura (Riding) Jackson,</persname>
+                        </item>
+                        <item>
+                            <persname>Gwyn Jones,</persname>
+                        </item>
+                        <item>
+                            <persname>Milton Allen Kaplan,</persname>
+                        </item>
+                        <item>
+                            <persname>Hugh Kenner,</persname>
+                        </item>
+                        <item>
+                            <persname>James Laughlin,</persname>
+                        </item>
+                        <item>
+                            <persname>Anne (Hoskyns) Lewis,</persname>
+                        </item>
+                        <item>
+                            <persname>Wyndham Lewis,</persname>
+                        </item>
+                        <item>
+                            <persname>Alan Lomax,</persname>
+                        </item>
+                        <item>
+                            <persname>Archibald MacLeish,</persname>
+                        </item>
+                        <item>
+                            <persname>Herbert Marshall,</persname>
+                        </item>
+                        <item>
+                            <persname>Sheri Martinelli,</persname>
+                        </item>
+                        <item>
+                            <persname>Harry Monroe Meacham,</persname>
+                        </item>
+                        <item>
+                            <persname>Walter Michel,</persname>
+                        </item>
+                        <item>
+                            <persname>Henry Miller,</persname>
+                        </item>
+                        <item>
+                            <persname>Arch Oboler,</persname>
+                        </item>
+                        <item>
+                            <persname>Brigit (Morrison-Scott) Patmore,</persname>
+                        </item>
+                        <item>
+                            <persname>Hugh Gordon Porteus,</persname>
+                        </item>
+                        <item>
+                            <persname>Dorothy (Shakespear) Pound,</persname>
+                        </item>
+                        <item>
+                            <persname>Ezra Loomis Pound,</persname>
+                        </item>
+                        <item>
+                            <persname>Omar Shakespear Pound,</persname>
+                        </item>
+                        <item>
+                            <persname>James Bennett Pritchard,</persname>
+                        </item>
+                        <item>
+                            <persname>Mary de Rachewiltz,</persname>
+                        </item>
+                        <item>
+                            <persname>Walter de Rachewiltz,</persname>
+                        </item>
+                        <item>
+                            <persname>Kenneth Rexroth,</persname>
+                        </item>
+                        <item>
+                            <persname>Ivor Armstrong Richards,</persname>
+                        </item>
+                        <item>
+                            <persname>Olga Rudge,</persname>
+                        </item>
+                        <item>
+                            <persname>John Strugnell,</persname>
+                        </item>
+                        <item>
+                            <persname>John Lincoln Sweeney,</persname>
+                        </item>
+                        <item>
+                            <persname>Roland de Vaux,</persname>
+                        </item>
+                        <item>
+                            <persname>Robert Penn Warren,</persname>
+                        </item>
+                        <item>
+                            <persname> John Hall Wheelock,</persname>
+                        </item>
+                        <item>
+                            <persname>William Carlos Williams,</persname>
+                        </item>
+                        <item>
+                            <persname>Sir Donald Wolfit,</persname>
+                        </item>
+                        <item>
+                            <persname>Louis Zukofsky</persname>
+                        </item>
+                    </list>
+                </note>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1943/1974" type="inclusive">1943-1974</unitdate>
+                        </unittitle>
+                        <physdesc>(9 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Aiken, Conrad and Mary</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Eliot, T.S.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Grieve, Christopher Murray</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Pound, Ezra</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Correspondence notes</unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did>
+                    <unittitle>Writings</unittitle>
+                </did>
+                <arrangement>
+                    <p>Arranged in alphabetical order by title.</p>
+                </arrangement>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <title>Aaron's Fallout Shelter.</title>
+                            <unitdate normal="1962">1962</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <title>The Christmas Child.</title>
+                            <unitdate normal="1948">1948</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <title>The Great Trek.</title>
+                            <unitdate normal="1947">1947</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <title>Life and Death of Rowley.</title>
+                            <unitdate normal="1969">1969</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <title>Ye Are Many - They Are Few.</title>
+                            <unitdate normal="1969">1969</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <title>Prospero and Ariel.</title> 1st draft 
+                        </unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <title>Prospero and Ariel.</title> Final ms.
+                        </unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            Cameron, Norman. <title>The Grand Testament.</title>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            Eliot, T.S. <title>The Wasteland.</title>
+                            <unitdate normal="1938">1938</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            Hughes, Langston. <title>The Man Who Went to War.</title>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            James, Henry. <title>Covering End.</title>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            Lewis, Wyndham. <title>The Human Age - Monstre Gai.</title>
+                        </unittitle><physdesc>(galleys)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            Lewis, Wyndham. <title>The Human Age - Malign Fiesta.</title>
+                        </unittitle><physdesc>(galleys)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            Lewis, Wyndham. <title>The Human Age,</title> 
+                            <unitdate normal="1955">1955</unitdate>
+                        </unittitle><physdesc>(typescript)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            Pound, Ezra. <title>Four Steps. </title>
+                            <unitdate normal="1958">1958</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            Pound, Ezra. <title>Letters to a Friend.</title>
+                            <unitdate normal="1955">1955</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            Rexroth, Kenneth. <title>The Beat Generation.</title>
+                            <unitdate normal="1966">1966</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            Stendahl. <title>The Red and the Black</title>
+                        </unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did>
+                    <unittitle>Miscellaneous</unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Listener reports. <unitdate normal="1944/1949" type="inclusive"
+                                >1944-1949</unitdate></unittitle>
+                        <physdesc>(5 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>List of productions by Bridson.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>[In Memoriam] <unitdate normal="1980/1981" type="inclusive"
+                                >1980-1981</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did>
+                    <container type="Box" label="Box">2</container>
+                    <unittitle>Diaries</unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1950/1980" type="inclusive">1950-1980</unitdate>
+                        </unittitle>
+                        <physdesc>(31 volumes)</physdesc>
+                    </did>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did>
+                    <unittitle>Press Clippings</unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Oversize">1</container>
+                        <unittitle>
+                            <unitdate normal="1934/1950" type="inclusive">1934-1950</unitdate>
+                        </unittitle>
+                        <physdesc>(3 scrapbooks)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Oversize">2</container>
+                        <unittitle>
+                            <unitdate normal="1951/1972" type="inclusive">1951-1972</unitdate>
+                        </unittitle>
+                        <physdesc>(2 scrapbooks)</physdesc>
+                    </did>
+                </c02>
+            </c01>
+
+        </dsc>
+    </archdesc>
+</ead>

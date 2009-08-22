@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Lilly Library, Indiana University, EAD template, 2003-02-21  --><!DOCTYPE ead
-  PUBLIC "-//Society of American Archivists//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN" "ead.dtd">
-<ead><!-- value of @findaidstatus should be 'originaldraft', 'inprogressdraft', 'editinprogress', or 'editedfulldraft' --><eadheader audience="internal" langencoding="iso639-2b" scriptencoding="iso15924"
+<!-- Lilly Library, Indiana University, EAD template, 2003-02-21  -->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+   <!-- value of @findaidstatus should be 'originaldraft', 'inprogressdraft', 'editinprogress', or 'editedfulldraft' --><eadheader audience="internal" langencoding="iso639-2b" scriptencoding="iso15924"
               repositoryencoding="iso15511"
               countryencoding="iso3166-1"
               dateencoding="iso8601"
-              findaidstatus="originaldraft"><!-- replace [uniqueid] with collection LMC number --><eadid identifier="InU-Li-VAA1296" countrycode="US" mainagencycode="InU-Li">InU-Li-VAA1296</eadid>
+              findaidstatus="originaldraft"><!-- replace [uniqueid] with collection LMC number --><eadid encodinganalog="identifier" identifier="InU-Li-VAA1296" countrycode="US" mainagencycode="InU-Li">InU-Li-VAA1296</eadid>
       <filedesc><!-- This is a description of the electronic finding aid, not the original finding aid or the collection --><!-- Make title "xxxx mss., yyyy-yyyy"--><!--Make subtitle "Papers, yyyy-yyyy, of [person] at the Lilly Library, Indiana University, Bloomington, Indiana--><titlestmt>
-            <titleproper>Strawn mss.,</titleproper>
+            <titleproper encodinganalog="title">Strawn mss.,</titleproper>
             <subtitle>Papers, 
 			 <date normal="1959/1998" era="ce" calendar="gregorian">1959-1998.</date>, of Richard R. Strawn at
 			 the Lilly Library, Indiana University, Bloomington, Indiana</subtitle>
-            <author>Electronic finding aid encoded by Beth Benda.</author>
+            <author encodinganalog="creator">Electronic finding aid encoded by Beth Benda.</author>
          </titlestmt>
          <publicationstmt>
-            <publisher>Lilly Library, Indiana University, Bloomington, Indiana
-			 </publisher>
-            <date normal="2003" type="publication" era="ce" calendar="gregorian">© 2003</date>
+            <publisher encodinganalog="publisher">Indiana University Digital Library Program</publisher>
+            <date encodinganalog="date" normal="2003" type="publication" era="ce" calendar="gregorian">© 2003</date>
          </publicationstmt>
       </filedesc>
       <profiledesc>
@@ -24,7 +25,7 @@
 		  pasting.<!--description of how the finding aid was created, for example: XML finding aid derived from
 [paper by means of scanning and OCR] [OCR file edited for typographical errors before encoding]
 [typescript by rekeying] [word processing program and version number]
-[<extref href="" linktype="simple" title="" actuate="onrequest" show="new">HTML collection description</extref>]. -->
+[<extref href="" title="" actuate="onrequest" show="new">HTML collection description</extref>]. -->
 		  <lb/>[date of source: <lb/>Finding aid encoded by Beth Benda, Lilly
 		  Library, Indiana University, 
 		  <date normal="2003-11-24" era="ce" calendar="gregorian">November 24, 2003</date> 
@@ -69,7 +70,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
    </frontmatter>
    <archdesc level="collection" audience="external" type="inventory" relatedencoding="marc"><!-- @type value may alternatively be 'bulk' --><!-- use the label attribute for these elements to determine what label is displayed --><did>
          <head>Summary Information</head>
-         <repository encodinganalog="850$a" label="Repository"> 
+         <repository encodinganalog="852" label="Repository" id="lilly"> 
 		          <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana
 			 University, Bloomington)</corpname> 
 		          <address>
@@ -90,13 +91,13 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
          <unitdate normal="1959/1998" type="inclusive" encodinganalog="245$f" era="ce"
                    calendar="gregorian">1959-1998</unitdate>
          <unitid encodinganalog="099" countrycode="US" repositorycode="US-InU-Li"
-                 label="Collection no">LMC 1997</unitid>
+                 label="Collection No.">LMC 1997</unitid>
          <physdesc encodinganalog="300$a$f" label="Extent"> 
             <extent>ca. 750
 		  items</extent>
             <!-- if both linear feet and number of items included, separate by lb tag -->
 		</physdesc>
-         <langmaterial label="Language">Materials are in
+         <langmaterial label="Language" encodinganalog="546">Materials are in
 		<language langcode="eng" encodinganalog="008/35-37">English and French.</language>
          </langmaterial>
          <abstract encodinganalog="520$a" label="Abstract">Consists of
@@ -110,12 +111,16 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
 		  Malipiero, Mozart, Orrego-Salas, Rameau, and Ravel are also
 		  included.</abstract>
       </did>
-      <!-- required; 'descgrp' element replaces admininfo element in 2002 DTD --><descgrp>
-         <head>Administrative Information</head>
          <accessrestrict encodinganalog="506$a">
             <head>Access Restrictions</head>
             <p>This collection is open for research.</p>
          </accessrestrict>
+         <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+            <p>Professor at Wabash College, Crawfordsville, Indiana. </p>
+         </bioghist>
+      <!-- required; 'descgrp' element replaces admininfo element in 2002 DTD --><descgrp>
+         <head>Administrative Information</head>
          <acqinfo encodinganalog="541">
             <head>Acquisition Information</head>
             <p>Gift. 2003</p>
@@ -133,10 +138,6 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
             <p>[Item], Strawn mss., Lilly Library, Indiana University, Bloomington,
 		  Indiana.</p>
          </prefercite>
-         <bioghist encodinganalog="545">
-            <head>Biographical Note</head>
-            <p>Professor at Wabash College, Crawfordsville, Indiana. </p>
-         </bioghist>
       </descgrp>
       <!-- required for collection level; optional for lower levels --><scopecontent encodinganalog="520$a$b">
          <head>Scope and Content Note</head>
@@ -145,13 +146,13 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
 		  Francis Ponge. Most of the opera translations were made for or under commission
 		  of the Indiana University School of Music Opera Theatre. Among the operas are
 		  Debussy's 
-		<title render="italic" linktype="simple">Pelléas and Mélisande</title> (1977), Gluck's 
-		<title render="italic" linktype="simple">Orpheus and Eurydice</title> (1992), Gounod's 
-		<title render="italic" linktype="simple">Faust, </title> 
-		          <title render="italic" linktype="simple">Manon</title> by Massenet (1980), Mussorgsky's 
-		<title render="italic" linktype="simple">Boris Gudunov</title> (1978), and
+		<title render="italic">Pelléas and Mélisande</title> (1977), Gluck's 
+		<title render="italic">Orpheus and Eurydice</title> (1992), Gounod's 
+		<title render="italic">Faust, </title> 
+		          <title render="italic">Manon</title> by Massenet (1980), Mussorgsky's 
+		<title render="italic">Boris Gudunov</title> (1978), and
 		Rimsky-Korsakov's 
-		<title render="italic" linktype="simple">Night Before Christmas</title> (1979).
+		<title render="italic">Night Before Christmas</title> (1979).
 		Translations of operas by Malipiero, Mozart, Orrego-Salas, Rameau, and Ravel
 		are also included.</p>
       </scopecontent>
@@ -205,7 +206,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
             <c02 level="file">
                <did>
                   <unittitle>Debussy, 
-				  <title render="italic" linktype="simple">Pelléas and Mélisande.</title>
+				  <title render="italic">Pelléas and Mélisande.</title>
 				              </unittitle>
                   <note>
                      <p>Trial work made in 1977, but not performed by Indiana
@@ -237,7 +238,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
             <c02 level="file">
                <did>
                   <unittitle>Gluck, 
-				  <title render="italic" linktype="simple">Orpheus and Eurydice. </title>
+				  <title render="italic">Orpheus and Eurydice. </title>
                   </unittitle>
                   <note>
                      <p>Commissioned by Indiana University, performed in 1992.</p>
@@ -268,7 +269,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
             <c02 level="file">
                <did>
                   <unittitle>Gounod, 
-				  <title render="italic" linktype="simple">Faust. </title>
+				  <title render="italic">Faust. </title>
                   </unittitle>
                   <note>
                      <p>Commissioned by Indiana University, but not performed.</p>
@@ -299,7 +300,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
             <c02 level="file">
                <did>
                   <unittitle>Malipiero, 
-				  <title render="italic" linktype="simple">Capricci di Callot. </title> 
+				  <title render="italic">Capricci di Callot. </title> 
 				                 <unitdate type="inclusive" normal="1976" era="ce" calendar="gregorian">1976</unitdate>
                   </unittitle>
                </did>
@@ -324,7 +325,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
             <c02 level="file">
                <did>
                   <unittitle>Massanet, 
-				  <title render="italic" linktype="simple">Manon. </title>
+				  <title render="italic">Manon. </title>
                   </unittitle>
                   <note>
                      <p>Commissioned by Indiana University, performed in 1980.</p>
@@ -362,7 +363,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
             <c02 level="file">
                <did>
                   <unittitle>Mozart, 
-				  <title render="italic" linktype="simple">La Finta Giardiniera. </title>
+				  <title render="italic">La Finta Giardiniera. </title>
                   </unittitle>
                   <note>
                      <p>Commissioned by Indiana University, performed in Bloomington
@@ -394,7 +395,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
             <c02 level="file">
                <did>
                   <unittitle>Mussorgsky, 
-				  <title render="italic" linktype="simple">Boris Gudunov.</title> 
+				  <title render="italic">Boris Gudunov.</title> 
                   </unittitle>
                   <note>
                      <p>Sample made for Ross Allen and Bryan Balkwill of Indiana
@@ -412,7 +413,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
             <c02 level="file">
                <did>
                   <unittitle>Orrego-Salas, 
-				  <title render="italic" linktype="simple">El Rey pobre.</title> 
+				  <title render="italic">El Rey pobre.</title> 
                   </unittitle>
                   <note>
                      <p>Commissioned by Indiana University, performed in 1990.</p>
@@ -443,7 +444,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
             <c02 level="file">
                <did>
                   <unittitle>Rameau, 
-				  <title render="italic" linktype="simple">Castor &amp; Pollus.</title> Act II,
+				  <title render="italic">Castor &amp; Pollus.</title> Act II,
 				  scenes 1-4. </unittitle>
                   <note>
                      <p>Made for Indiana University Opera Directors’ Workshop, Oct.
@@ -461,7 +462,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
             <c02 level="file">
                <did>
                   <unittitle>Rameau, 
-				  <title render="italic" linktype="simple">Dardenes</title>
+				  <title render="italic">Dardenes</title>
                   </unittitle>
                </did>
                <c03 level="file">
@@ -475,7 +476,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
             <c02 level="file">
                <did>
                   <unittitle>Ravel, 
-				  <title render="italic" linktype="simple">L’Enfant et les sortilèges.</title>
+				  <title render="italic">L’Enfant et les sortilèges.</title>
 				              </unittitle>
                   <note>
                      <p>Commissioned by Indiana University, performed in 1984.</p>
@@ -508,7 +509,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
             <c02 level="file">
                <did>
                   <unittitle>Ravel, 
-				  <title render="italic" linktype="simple">L’Heure espagnole.</title> 
+				  <title render="italic">L’Heure espagnole.</title> 
                   </unittitle>
                   <note>
                      <p>Commissioned by Indiana University, performed with L’Enfant et
@@ -554,7 +555,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
             <c02 level="file">
                <did>
                   <unittitle>Rimsky-Korsakov, 
-				  <title render="italic" linktype="simple">Night Before Christmas.</title>
+				  <title render="italic">Night Before Christmas.</title>
 				              </unittitle>
                   <note>
                      <p>Commissioned by Indiana University, performed in 1979.
@@ -619,7 +620,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <container type="box" label="Box">2</container>
                   <container type="folder" label="Folder">13</container>
                   <unittitle>Ponge, 
-				  <title render="italic" linktype="simple">Le Parti pris des choses.</title>
+				  <title render="italic">Le Parti pris des choses.</title>
 				              </unittitle>
                   <note>
                      <p>Photocopy of original French publication; "Siding with

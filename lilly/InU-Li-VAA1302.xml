@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Lilly Library, Indiana University, EAD template, 2003-02-21  --><!DOCTYPE ead
-  PUBLIC "-//Society of American Archivists//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN" "ead.dtd">
-<ead><!-- value of @findaidstatus should be 'originaldraft', 'inprogressdraft', 'editinprogress', or 'editedfulldraft' --><eadheader audience="internal" langencoding="iso639-2b" scriptencoding="iso15924"
+<!-- Lilly Library, Indiana University, EAD template, 2003-02-21  -->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+   <!-- value of @findaidstatus should be 'originaldraft', 'inprogressdraft', 'editinprogress', or 'editedfulldraft' --><eadheader audience="internal" langencoding="iso639-2b" scriptencoding="iso15924"
               repositoryencoding="iso15511"
               countryencoding="iso3166-1"
               dateencoding="iso8601"
@@ -24,7 +26,7 @@
          <creation>XML finding aid derived from HTML version through cutting and pasting. <!--description of how the finding aid was created, for example: XML finding aid derived from
 [paper by means of scanning and OCR] [OCR file edited for typographical errors before encoding]
 [typescript by rekeying] [word processing program and version number]
-[<extref href="" linktype="simple" title="" actuate="onrequest" show="new">HTML collection description</extref>]. -->
+[<extref href="" title="" actuate="onrequest" show="new">HTML collection description</extref>]. -->
 				<lb/>[date of source: <lb/>Finding aid encoded by Beth Benda, Lilly Library, Indiana
 				University, <date normal="2003-11-24" era="ce" calendar="gregorian">November 24, 2003</date>
 			      </creation>
@@ -70,7 +72,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
    </frontmatter>
    <archdesc level="collection" audience="external" type="inventory" relatedencoding="marc"><!-- @type value may alternatively be 'bulk' --><!-- use the label attribute for these elements to determine what label is displayed --><did>
          <head>Summary Information</head>
-         <repository encodinganalog="852" label="Repository">
+         <repository encodinganalog="852" label="Repository" id="lilly">
 				        <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
 				        <address>
                <addressline>Lilly Library</addressline>
@@ -90,7 +92,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
          <unitdate normal="1915/1975" type="inclusive" encodinganalog="245$f" era="ce"
                    calendar="gregorian">1915-1975</unitdate>
          <unitid encodinganalog="099" countrycode="US" repositorycode="US-InU-Li"
-                 label="Collection no">LMC 2283</unitid>
+                 label="Collection No.">LMC 2283</unitid>
          <physdesc encodinganalog="300$a$f" label="Extent">
 				        <extent>ca. 3825 items</extent>
 				        <!-- if both linear feet and number of items included, separate by lb tag -->
@@ -100,12 +102,36 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
          <abstract encodinganalog="520$a" label="Abstract">Consists of the papers of Paul
 				Weatherwax, 1888-1976, botanist.</abstract>
       </did>
-      <!-- required; 'descgrp' element replaces admininfo element in 2002 DTD --><descgrp>
-         <head>Administrative Information</head>
          <accessrestrict encodinganalog="506$a">
             <head>Access Restrictions</head>
             <p>This collection is open for research.</p>
          </accessrestrict>
+         <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+            <p>A native of Worthington, Indiana, Weatherwax attended both Wabash College and
+					DePauw University in 1909 and 1910 respectively, but received his A.B., magna
+					cum laude, from Indiana University in 1914. He then continued in graduate work
+					at I.U., receiving the A.M. in 1915 and PhD. in 1918. Weatherwax first joined
+					the I.U. faculty as an instructor while doing graduate work, moved to the
+					University of Georgia as an associate professor after completing his degree, and
+					returned to Indiana University in 1921 where he stayed until retirement in 1959.
+					He remained a very active Professor Emeritus on the Bloomington campus until his
+					death in 1976.</p>
+            <p>Weatherwax authored several books, including <title render="italic">The Story of
+						the Maize Plant </title>(1923), <title render="italic">Elementary
+					Botany</title> (1942), and <title render="italic">Indian Corn in Old
+					America</title> (1954), as well as numerous articles for both scientific and
+					historical publications. He was also the author of the I.U. walking guide called
+						<title render="italic">The Woodland Campus of Indiana University</title>
+					(1966). Weatherwax's major areas of research were the morphology of grasses, and
+					the morphology, origin and history of the Indian corn plant. Among the many
+					awards and kudos he received were the Waterman fellowship, 1925-1930, and a
+					traveling Guggenheim fellowship, 1944-1945. Prior to retirement Dr. Weatherwax
+					headed the teaching group of Indiana University faculty in Bangkok, Thailand, on
+					a Science Education contract with that country, 1957-1959.</p>
+         </bioghist>
+      <!-- required; 'descgrp' element replaces admininfo element in 2002 DTD --><descgrp>
+         <head>Administrative Information</head>
          <acqinfo encodinganalog="541">
             <head>Acquisition Information</head>
             <p>Gift. 1977</p>
@@ -123,30 +149,6 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
             <p>[Item], Weatherwax mss., Lilly Library, Indiana University, Bloomington,
 				Indiana.</p>
          </prefercite>
-         <bioghist encodinganalog="545">
-            <head>Biographical Note</head>
-            <p>A native of Worthington, Indiana, Weatherwax attended both Wabash College and
-					DePauw University in 1909 and 1910 respectively, but received his A.B., magna
-					cum laude, from Indiana University in 1914. He then continued in graduate work
-					at I.U., receiving the A.M. in 1915 and PhD. in 1918. Weatherwax first joined
-					the I.U. faculty as an instructor while doing graduate work, moved to the
-					University of Georgia as an associate professor after completing his degree, and
-					returned to Indiana University in 1921 where he stayed until retirement in 1959.
-					He remained a very active Professor Emeritus on the Bloomington campus until his
-					death in 1976.</p>
-            <p>Weatherwax authored several books, including <title render="italic" linktype="simple">The Story of
-						the Maize Plant </title>(1923), <title render="italic" linktype="simple">Elementary
-					Botany</title> (1942), and <title render="italic" linktype="simple">Indian Corn in Old
-					America</title> (1954), as well as numerous articles for both scientific and
-					historical publications. He was also the author of the I.U. walking guide called
-						<title render="italic" linktype="simple">The Woodland Campus of Indiana University</title>
-					(1966). Weatherwax's major areas of research were the morphology of grasses, and
-					the morphology, origin and history of the Indian corn plant. Among the many
-					awards and kudos he received were the Waterman fellowship, 1925-1930, and a
-					traveling Guggenheim fellowship, 1944-1945. Prior to retirement Dr. Weatherwax
-					headed the teaching group of Indiana University faculty in Bangkok, Thailand, on
-					a Science Education contract with that country, 1957-1959.</p>
-         </bioghist>
       </descgrp>
       <!-- required for collection level; optional for lower levels --><scopecontent encodinganalog="520$a$b">
          <head>Scope and Content Note</head>
@@ -385,7 +387,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="box" label="Box">1</container>
                      <container type="folder" label="Folder">1</container>
-                     <unittitle>A. <unitdate normal="1930/1969" era="ce" calendar="gregorian">
+                     <unittitle>A. <unitdate normal="1930/1969" era="ce" calendar="gregorian" type="inclusive">
 							1930-1969.</unitdate>
                      </unittitle>
                   </did>
@@ -1031,7 +1033,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="box" label="Box">2</container>
                      <container type="folder" label="Folder">16</container>
-                     <unittitle>Funk Brothers - <title render="doublequote" linktype="simple">The Great Story
+                     <unittitle>Funk Brothers - <title render="doublequote">The Great Story
 									of Corn.</title>
 								                <unitdate type="inclusive" normal="1952/1961" era="ce" calendar="gregorian">1953-1961. </unitdate>
 							              </unittitle>
@@ -1376,7 +1378,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="box" label="Box">3</container>
                      <container type="folder" label="Folder">1</container>
-                     <unittitle>K. <unitdate normal="1941/1961" era="ce" calendar="gregorian">1941-1961.</unitdate>
+                     <unittitle>K. <unitdate normal="1941/1961" era="ce" calendar="gregorian" type="inclusive">1941-1961.</unitdate>
                      </unittitle>
                   </did>
                </c03>
@@ -2256,7 +2258,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <container type="box" label="Box">5</container>
                   <container type="folder" label="Folder">1-9</container>
                   <unittitle>
-							              <title render="italic" linktype="simple">Botany</title> [textbook]. 3rd edition.
+							              <title render="italic">Botany</title> [textbook]. 3rd edition.
 							Philadelphia, W.B. Saunders, <unitdate type="inclusive" normal="1956" era="ce" calendar="gregorian">1956. </unitdate>
                   </unittitle>
                   <physdesc>Illustrations, photographs, drawings, etc. used in the above text
@@ -2273,7 +2275,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
             <c02 level="file">
                <did>
                   <container type="folder" label="Folder">11</container>
-                  <unittitle>Charles C. Deam biography. <title render="doublequote" linktype="simple">Deamiana</title> - contributed by W.A. Daily.</unittitle>
+                  <unittitle>Charles C. Deam biography. <title render="doublequote">Deamiana</title> - contributed by W.A. Daily.</unittitle>
                   <physdesc>Typescript, ditto, and carbon.</physdesc>
                   <note>
                      <p>Contains correspondence of Charles Deam, <date normal="1933-11-26/1953-12-08" type="inclusive" era="ce" calendar="gregorian">Nov. 26, 1933 —
@@ -2331,7 +2333,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <did>
                   <container type="folder" label="Folder">25-32</container>
                   <unittitle>
-							              <title render="italic" linktype="simple">The morphology of grasses.</title>
+							              <title render="italic">The morphology of grasses.</title>
 						            </unittitle>
                   <physdesc>Draft pages for unfinished book.</physdesc>
                </did>
@@ -2343,7 +2345,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Grasses.</title> Various articles on
+                        <title render="italic">Grasses.</title> Various articles on
 								Morphology and Phylogeny, translated from the German, Paul
 								Weatherwax, 1929.</unittitle>
                      <physdesc>T.D. 206p. Bound.</physdesc>
@@ -2352,7 +2354,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                <c03 level="file">
                   <did>
                      <unittitle>
-                        <title render="italic" linktype="simple">Grasses.</title> Articles on
+                        <title render="italic">Grasses.</title> Articles on
 								Morphology and Taxonomy, translated from French and German, Paul
 								Weatherwax, 1936.</unittitle>
                      <physdesc>T.D. 210p. Bound.</physdesc>

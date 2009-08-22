@@ -1,0 +1,1639 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group  -->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader relatedencoding="dublincore" audience="external" langencoding="iso639-2b"
+        scriptencoding="iso15924" repositoryencoding="iso15511" countryencoding="iso3166-1"
+        dateencoding="iso8601" findaidstatus="edited-full-draft">
+        <eadid encodinganalog="identifier" identifier="InU-Li-VAA9351" countrycode="US"
+            mainagencycode="InU-Li">InU-Li-VAA9351</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Guide to the Columbia Conserve Co. mss., <date normal="1903/1953"
+                        >1903-1953</date></titleproper>
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library Program</publisher>
+                <date encodinganalog="date" normal="2009" type="publication">© 2009</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2009">© 2009</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>
+                <!--description of how the finding aid was created, for example: -->
+                Machine-readable finding aid derived from description and inventory through copying
+                and pasting<lb/>[date of source: <date normal="2009" type="source">2009</date>
+                <lb/>Finding aid encoded by Valerie Higgins, Library/Archives, Indiana University,
+                    <date normal="2009-02-05">February 5, 2009</date>
+            </creation>
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2009-02-05"/>
+                <item/>
+            </change>
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc level="collection" audience="external" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository encodinganalog="852" label="Repository:">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <corpname source="lcnaf" encodinganalog="110">Columbia Conserve Company (Indianapolis, Ind.)</corpname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Columbia Conserve Co. mss.</unittitle>
+            <unitdate normal="1903/1953" type="inclusive" encodinganalog="245$f"
+                >1903-1953</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2244</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>56,321 items</extent>
+
+                <!-- if both linear feet and number of items included, repeat extent-->
+            </physdesc>
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng" encodinganalog="546">English</language></langmaterial>
+            <abstract encodinganalog="520" label="Abstract">The Columbia Conserve Co. mss.,
+                1903-1953, consists of the papers of the Columbia Conserve Company, a cannery in
+                Indianapolis, Indiana. </abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+            <p>In 1903 Charles Hutchins Hapgood, a successful plow manufacturer, bought the
+                controlling interest in the Mullen, Blackledge Company. His three sons, William
+                Powers, Hutchins, and Norman, became stockholders. William, who had had nine years
+                experience with Franklin MacVeagh's Wholesale Grocery in Chicago, first as assistant
+                shipping clerk and later as head of the manufacturing department, assumed the
+                managerial responsibilities of the company.</p>
+            <p>After losing the original investment, the company was reorganized in 1910 and moved
+                to Lebanon, Indiana. Two years later the company moved back to Indianapolis locating
+                on Churchman Avenue. Following the death of Charles H. Hapgood in 1917, the company
+                adopted a program of workers' management and ownership operating through a workers'
+                council. In 1932 following the employment of Powers Hapgood, John Brophy, Daniel
+                Donovan, and Leo F. Tearney, labor troubles developed and culminated in the
+                dismissal of the last three named leaders. A committee of four composed of Jerome
+                Davis, Paul Howard Douglas, Sherwood Eddy, and James Myers was then appointed by the
+                Council and Board of Directors to investigate the difficulties and submit a plan of
+                settlement. On September 1, 1942, the employees struck for higher wages and the
+                following year Marion County superior judge Hezzie B. Pike, dissolved the trust and
+                ordered the stock distributed individually to all who had worked at Columbia for at
+                least six months since January 1, 1925. From 1943 to 1953 the company again was back
+                in the hands of the Hapgoods. In 1953 the plant was sold to John Sexton and Company,
+                Chicago, which took possession on May 1. At that time the formulas were purchased by
+                Venice Maid Company, Vineland, New Jersey.</p>
+            <p>Among long-term employees of the company were C. Estella Franz, a member of the
+                Mullen, Blackledge Company, who joined the Columbia Conserve Company staff in 1903
+                heading the order department and Howard Herner, a member of the shipping department,
+                who was engaged as bookkeeper in 1918, a few years later assumed the duties of
+                treasurer of the company.</p>
+            <p>For fifty years the company manufactured twenty-seven varieties of condensed soup,
+                twenty-one varieties of Ready-to-Serve soup, and other fancy products such as
+                catsup, boned chicken, salad sprouts, and brown gravy with beef, which were sold
+                under buyers' labels.</p>
+            <p>In addition to the material found in the collection, information on the company
+                appears in Devere Allen's <emph render="italic">Adventurous Americans</emph>... (New
+                York, [c.1932]), pp. 217-32; William P. Hapgood's <emph render="doublequote">The
+                    High Adventure of a Cannery,</emph>
+                <emph render="italic">Survey,</emph> LXVIII:655-58, 682, Sept. 1, 1922; John Bartlow
+                Martin's <emph render="italic">Indiana: An Interpretation</emph> (New York, 1947),
+                pp. 159-73; and Elfrieda Lang, <emph render="doublequote">The Columbia Conserve
+                    Company Papers,</emph>
+                <emph render="italic">The Indiana University Bookman</emph>, November 1957, pp.
+                18-23. Another account of the company is by Russell Edward Vance, <emph
+                    render="doublequote">An Unsuccessful Experiment in Industrial Democracy: The
+                    Columbia Conserve Company,</emph> Ph.D. dissertation, Department of History,
+                Indiana University, Bloomington, Indiana, 1956. (D40 .V222)</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Correspondence; II.
+                Business.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Columbia Conserve Co. mss., 1903-1953, consists of the papers of the Columbia
+                Conserve Company, a cannery in Indianapolis, Indiana. Included are correspondence
+                and papers related to business.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Controlled Access Terms</head>
+            <corpname encodinganalog="610" source="lcnaf">Columbia Conserve Company (Indianapolis, Ind.)</corpname>
+            <subject encodinganalog="650" source="lcsh">Canned foods industry --Indiana.</subject>
+        </controlaccess>
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 1953, 1955</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Columbia Conserve Co. mss., Lilly Library, Indiana University,
+                    Bloomington, Indiana.</p>
+            </prefercite>
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 level="series">
+                <did>
+                    <!-- optional -->
+                    <container type="Box" label="Box">1</container>
+                    <!-- add type="bulk" or type="inclusive" to unitdate if appropriate -->
+                    <unittitle>Correspondence</unittitle>
+                </did>
+                <arrangement>
+                    <p>Arranged chronologically by year and alphabetically within the year.</p>
+                </arrangement>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1911/1946" type="inclusive">1911 -
+                                1946</unitdate>Bi</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">2</container>
+                        <unittitle><unitdate normal="1946">1946</unitdate>Bu-S</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">3</container>
+                        <unittitle>
+                            <unitdate normal="1946/1947" type="inclusive">1946 T - 1947 M</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">4</container>
+                        <unittitle>
+                            <unitdate normal="1947/1948" type="inclusive">1947 N - 1948 L</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">5</container>
+                        <unittitle>
+                            <unitdate normal="1948/1951" type="inclusive">1948 M - 1951 B</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">6</container>
+                        <unittitle>
+                            <unitdate normal="1951/1953" type="inclusive">1951 C - 1953 P</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">7</container>
+                        <unittitle><unitdate normal="1953">1953</unitdate>Q-Z</unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did>
+                    <unittitle>Business</unittitle>
+                </did>
+                <arrangement>
+                    <p>Arranged alphabetically by subject, followed by large bound and disbound
+                        volumes and oversized materials. Large volumes are arranged alphabetically
+                        after the general ledgers.</p>
+                </arrangement>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Accountant’s report, <unitdate normal="1917"
+                            >1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Agreements to sell common stock, <unitdate normal="1922"
+                                >1922,</unitdate><unitdate normal="1952">1952</unitdate></unittitle>
+                        <physdesc>(6 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Articles of Incorporation</unittitle>
+                    </did>
+                    <note>
+                        <p>(see also: Box 75)</p>
+                    </note>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Auditor’s reports, <unitdate type="inclusive" normal="1919/1953"
+                                >1919-1953</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Balance sheets, <unitdate type="inclusive" normal="1916/1918"
+                                >1916-1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Brokers, list of names</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Brokerage statements, <unitdate type="inclusive"
+                                normal="1940/1948">1940-1948</unitdate></unittitle>
+                        <physdesc>(9 folders)</physdesc>
+                    </did>
+                    <arrangement>
+                        <p>Alphabetically arranged within each year.</p>
+                    </arrangement>
+
+
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">8</container>
+                        <unittitle>Brokerage statements, <unitdate normal="1949"
+                            >1949</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Common stock certificates, <unitdate type="inclusive"
+                                normal="1944/1953">1944-1953</unitdate></unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Common stock proxies, <unitdate normal="1953"
+                            >1953</unitdate></unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Common stockholders, list of names, <unitdate normal="1953"
+                                >1953</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Company experience unemployment compensation plans, <unitdate
+                                normal="1928">1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Corporation reports</unittitle>
+                    </did>
+                    <note>
+                        <p>(see also: Box 75)</p>
+                    </note>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Customers, list of names, <unitdate normal="1953"
+                            >1953</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Employees’ earnings sheets, <unitdate type="inclusive"
+                                normal="1947/1950">1947-1950</unitdate></unittitle>
+                        <physdesc>(8 folders)</physdesc>
+                    </did>
+
+
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">9</container>
+                        <unittitle>Employees’ earnings sheets, <unitdate type="inclusive"
+                                normal="1951/1952">1951-1952</unitdate></unittitle>
+                        <physdesc>(1 volume)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Employees’ earnings sheets, <unitdate type="inclusive"
+                                normal="1952/1954">1952-1954</unitdate></unittitle>
+                        <physdesc>(1 folder)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>An Experiment in Industrial Democracy, by William P.
+                            Hapgood.</unittitle>
+                        <physdesc>Typescript, 68 pp.</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Form letters to brokers, <unitdate type="inclusive"
+                                normal="1941/1946">1941-1946</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Form letters to customers, <unitdate type="inclusive"
+                                normal="1933/1953 ">1933-1953 </unitdate></unittitle>
+                        <physdesc>(9 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Form letters to salesman, <unitdate type="inclusive"
+                                normal="1933/1945">1933-1945</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Form letters and reports to stockholders, <unitdate
+                                type="inclusive" normal="1943-07-19/1953-07-10">1943, July 19 –
+                                1953, July 10</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Invoices, <unitdate type="inclusive" normal="1947-01/1948-07"
+                                >1947-1948, Jan.- July,</unitdate>A-F</unittitle>
+                        <physdesc>(14 folders)</physdesc>
+                    </did>
+
+
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">10</container>
+                        <unittitle>Invoices, <unitdate type="inclusive" normal="1948-01/1948-07"
+                                >1948, Jan.-July,</unitdate>G-Z –<unitdate normal="1948-08/1948-12"
+                                type="inclusive">1948, Aug.-Dec.,</unitdate>A-Z</unittitle>
+                        <physdesc>(17 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Labels, <unitdate type="inclusive" normal="1946/1953"
+                                >1946-1953</unitdate></unittitle>
+                        <physdesc>(13 envelopes)</physdesc>
+                    </did>
+
+
+
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">11</container>
+                        <unittitle>Loading tallies, <unitdate type="inclusive" normal="1946/1953"
+                                >1946 - 1953</unitdate></unittitle>
+                        <physdesc>(11 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Minutes:</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Annual meetings: <unitdate normal="1917">1917</unitdate>(3
+                                copies), <unitdate normal="1919">1919</unitdate><unitdate
+                                    normal="1923">1923,</unitdate><unitdate normal="1924"
+                                    >1924,</unitdate><unitdate normal="1927/1929" type="inclusive"
+                                    >1927-1929</unitdate></unittitle>
+                            <physdesc>(6 volumes, 3 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Board of Directors: <unitdate type="inclusive"
+                                    normal="1903/1940">1903-1940</unitdate></unittitle>
+                            <physdesc>(1 volume, 2 folders) </physdesc>
+                        </did>
+                    </c03>
+
+
+
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">12</container>
+                            <unittitle>Board of Directors: <unitdate type="inclusive"
+                                    normal="1941/1942">1941-1942,</unitdate><unitdate normal="1953"
+                                    >1953</unitdate></unittitle>
+                            <physdesc>(3 volumes)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Council: <unitdate type="inclusive" normal="1920/1930-11-24"
+                                    >1920-1930, Nov. 24 </unitdate></unittitle>
+                            <physdesc>(10 volumes)</physdesc>
+                        </did>
+                    </c03>
+
+
+
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">13</container>
+                            <unittitle>Council: <unitdate type="inclusive" normal="1930-12-01/1933"
+                                    >1930, Dec. 1 - 1933;</unitdate><unitdate normal="1936-06">1936,
+                                    June</unitdate></unittitle>
+                            <physdesc>(5 volumes, 4 folders)</physdesc>
+                        </did>
+                    </c03>
+
+
+
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">14</container>
+                            <unittitle>Council: <unitdate type="inclusive" normal="1936-07/1939-07"
+                                    >1936, July - 1939, July</unitdate></unittitle>
+                            <physdesc>(6 volumes)</physdesc>
+                        </did>
+                    </c03>
+
+
+
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">15</container>
+                            <unittitle>Council: <unitdate type="inclusive" normal="1940/1942"
+                                    >1940-1942</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Council meetings and Stockholders’ Reports, <unitdate
+                                    type="inclusive" normal="1933/1944"
+                                >1933-1944</unitdate></unittitle>
+                            <physdesc>(3 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Executive: <unitdate normal="1933">1933,</unitdate><unitdate
+                                    normal="1934-05/1943" type="inclusive">1934, May -
+                                    1943</unitdate></unittitle>
+                            <physdesc>(12 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Human Relations Council: <unitdate type="inclusive"
+                                    normal="1928/1929">1928-1929</unitdate></unittitle>
+                            <physdesc>(1 volume)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Stockholders: <unitdate type="inclusive"
+                                    normal="1903-05/1940-07">1903, May - 1940,
+                                    July;</unitdate><unitdate normal="1920-01-06">1920, Jan.
+                                    6;</unitdate><unitdate normal="1927-07-09">1927, July
+                                    9;</unitdate><unitdate normal="1939-07-21">1939, July
+                                    21;</unitdate><unitdate normal="1941-07/1954-03"
+                                    type="inclusive">1941, July-1954, Mar.</unitdate></unittitle>
+                            <physdesc>(1 volume, 4 folders)</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Photographs</unittitle>
+                    </did>
+
+
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">16</container>
+                        <unittitle>Preferred Stockholders, loose pages, <unitdate type="inclusive"
+                                normal="1919/1953">1919-1953</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Preferred Stockholder certificates, <unitdate type="inclusive"
+                                normal="1929/1951">1929-1951</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Price lists, <unitdate type="inclusive" normal="1930/1951"
+                                >1930-1951</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Printed</unittitle>
+                    </did>
+                    <note>
+                        <p>(see also: Box 75)</p>
+                    </note>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>By CCC. Advertisements; <emph render="doublequote">A Business
+                                    Without a Boss</emph>; <emph render="doublequote">An Experiment
+                                    in Workers Ownership and Participation in Management of The
+                                    Columbia Conserve Co. of Indianapolis, Indiana</emph>; <emph
+                                    render="doublequote">Ready To Serve Soups</emph>; <emph
+                                    render="doublequote">Summary of important factors in the
+                                    progress of The Columbia Conserve Company…</emph>
+                                <unitdate normal="1938">1938,</unitdate><unitdate normal="1939"
+                                    >1939,</unitdate><unitdate normal="1941"
+                                >1941</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>About CCC. Mostly clippings</unittitle>
+                            <physdesc>(2 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Bushey, Morea &amp; Wright, <unitdate type="inclusive"
+                                    normal="1946/1953">1946-1953</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Canners Exchange Subscribers, Quarterly List of, <unitdate
+                                    type="inclusive" normal="1946/1948 ">1946-1948
+                                </unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Canners’ Market Report, <unitdate type="inclusive"
+                                    normal="1946/1948">1946-1948,</unitdate><unitdate normal="1950"
+                                    >1950</unitdate></unittitle>
+                            <physdesc>(2 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Canning, miscellaneous</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Catsup and Tomato Juice packers Association</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Clover Farm Stores, Corporation, <unitdate type="inclusive"
+                                    normal="1942/1953">1942-1953</unitdate></unittitle>
+                            <physdesc>(5 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Commonwealth College Fortnightly, <unitdate type="inclusive"
+                                    normal="1937/1938">1937-1938;</unitdate>Commoner, <unitdate
+                                    normal="1940">1940</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Consumers’ Cooperation, <unitdate type="inclusive"
+                                    normal="1937/1939">1937-1939</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Continental Can Co.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Co-op News, <unitdate type="inclusive" normal="1937/1941"
+                                    >1937-1941</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Co-operative Productive Review, <unitdate normal="1935"
+                                    >1935,</unitdate><unitdate normal="1937/1938" type="inclusive"
+                                    >1937-1938,</unitdate><unitdate normal="1947"
+                                >1947</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Co-operatives, miscellaneous</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Employment, miscellaneous</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>The Facts in Food Distribution, <unitdate normal="1933 "
+                                    >1933 </unitdate></unittitle>
+                        </did>
+                    </c03>
+
+
+
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">17</container>
+                            <unittitle>Indiana Canners Association, Inc., <unitdate
+                                    type="inclusive" normal="1935/1953"
+                                >1935-1953</unitdate></unittitle>
+                            <physdesc>(10 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Kimberly-Clark Corp.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Myers Spalti Mfg. Co.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>National Canners Association</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>National Meat Canners Association</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Plee-Zing, Inc.<unitdate type="inclusive" normal="1942/1953"
+                                    >1942-1953</unitdate></unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Red &amp; White</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>United Cannery, Agricultural, Packing and Allied Workers of
+                                America reports</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>United States government publications on canning</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>The Voluntary Chains, <unitdate normal="1931"
+                                    >1931</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>The Voluntary Chains, An Evolution in Distribution,
+                                    <unitdate normal="1931">1931</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Voluntary Grocery Chains, Directory, <unitdate normal="1932"
+                                    >1932,</unitdate><unitdate normal="1934"
+                                >1934</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Weekly Digest, <unitdate type="inclusive" normal="1946/1948"
+                                    >1946-1948,</unitdate><unitdate normal="1950"
+                                >1950</unitdate></unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Miscellaneous publications and clippings</unittitle>
+                            <physdesc>(2 folders)</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle></unittitle>
+                    </did>
+
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">18</container>
+                        <unittitle>Production</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Carrots, <unitdate type="inclusive" normal="1934/1942"
+                                    >1934-1942</unitdate></unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Comparative sales data, <unitdate type="inclusive"
+                                    normal="1939/1943 ">1939-1943 </unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Daily, <unitdate type="inclusive" normal="1929"
+                                    >1929,</unitdate><unitdate normal="1931/1941" type="inclusive"
+                                    >1931-1941</unitdate></unittitle>
+                            <physdesc>(1 volume, 11 envelopes. 1 folder)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Formulas</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Material costs, <unitdate type="inclusive"
+                                    normal="1941/1942">1941-1942</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Monthly analysis, <unitdate type="inclusive"
+                                    normal="1936/1937">1936-1937,</unitdate><unitdate normal="1943"
+                                    >1943</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Non-tomato, <unitdate type="inclusive" normal="1938/1939"
+                                    >1938-1939,</unitdate><unitdate normal="1943/1945"
+                                    type="inclusive">1943-1945</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Report of orders to Executive Committee, <unitdate
+                                    type="inclusive" normal="1936/1942"
+                                >1936-1942</unitdate></unittitle>
+                            <physdesc>(3 envelopes)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Tomato, <unitdate type="inclusive" normal="1930/1931"
+                                    >1930-1931,</unitdate><unitdate normal="1933/1945"
+                                    type="inclusive">1933-1945</unitdate></unittitle>
+                            <physdesc>(13 folders, 5 envelopes)</physdesc>
+                        </did>
+                    </c03>
+
+
+
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">19</container>
+                            <unittitle>Tomato Farms, <unitdate normal="1944"
+                                >1944</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Weekly schedules, <unitdate type="inclusive" normal="1933"
+                                    >1933,</unitdate><unitdate normal="1939/1941" type="inclusive"
+                                    >1939-1941,</unitdate><unitdate normal="1943/1944"
+                                    type="inclusive">1943-1944</unitdate></unittitle>
+                            <physdesc>(4 envelopes)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Yearly schedules, <unitdate type="inclusive"
+                                    normal="1934/1936">1934-1936,</unitdate><unitdate normal="1946"
+                                    >1946</unitdate><unitdate normal="1947"
+                                >1947</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Miscellaneous</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Publicity articles obtained by Inter Ocean Syndicate, <unitdate
+                                normal="1930-07-29">July 29, 1930</unitdate>and <unitdate
+                                normal="1930-08-13">August 13, 1930</unitdate></unittitle>
+                        <physdesc>(2 volumes)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Revenue and expense statement, <unitdate normal="1921"
+                                >1921</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Sales journal, <unitdate type="inclusive"
+                                normal="1946-01-09/1953-04-30">1946, Jan. 9 – 1953, Apr.
+                                30</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Sales report, <unitdate type="inclusive" normal="1927/1939"
+                                >1927-1939</unitdate></unittitle>
+                        <physdesc>(7 folders)</physdesc>
+                    </did>
+
+
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">20</container>
+                        <unittitle>Sales report, <unitdate type="inclusive" normal="1940/1949"
+                                >1940-1949</unitdate></unittitle>
+                        <physdesc>(8 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Sales report, Clover Farm Stores Corp., <unitdate
+                                type="inclusive" normal="1946/1953">1946-1953</unitdate></unittitle>
+                        <physdesc>(8 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Sales representatives, <unitdate type="inclusive"
+                                normal="1946/1952">1946-1952</unitdate></unittitle>
+                        <physdesc>(6 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Scrapbook, <unitdate type="inclusive" normal="1930/1932"
+                                >1930-1932</unitdate></unittitle>
+                        <physdesc>(5 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Shipping sheets, <unitdate type="inclusive" normal="1945"
+                                >1945</unitdate>A-S</unittitle>
+                        <physdesc>(17 folders)</physdesc>
+                    </did>
+
+
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">21</container>
+                        <unittitle>Shipping sheets, <unitdate type="inclusive" normal="1945/1946"
+                                >1945 T - 1946 S</unitdate></unittitle>
+                    </did>
+
+
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">22</container>
+                        <unittitle>Shipping sheets, <unitdate type="inclusive" normal="1946/1949"
+                                >1946 T - 1949 Z</unitdate></unittitle>
+                    </did>
+
+
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">23</container>
+                        <unittitle>Shipping sheets, <unitdate type="inclusive" normal="1950/1951"
+                                >1950 A - 1951 K</unitdate></unittitle>
+                    </did>
+
+
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">24</container>
+                        <unittitle>Shipping sheets, <unitdate type="inclusive" normal="1951/1953"
+                                >1951 L - 1953 Z</unitdate></unittitle>
+                    </did>
+
+
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">25</container>
+                        <unittitle>Shipping sheets, John Sexton &amp; Co., <unitdate
+                                type="inclusive" normal="1950/1952">1950-1952</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Stabilizing employment and income, by E.S. Cowdrick</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Stockholders ledger, <unitdate type="inclusive"
+                                normal="1926/1953">1926-1953</unitdate></unittitle>
+                    </did>
+
+
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">26</container>
+                        <unittitle>Tax returns, federal, <unitdate type="inclusive"
+                                normal="1933/1953">1933-1953</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Tax returns, state and local, <unitdate normal="1933"
+                                >1933,</unitdate><unitdate normal="1946/1953" type="inclusive"
+                                >1946-1953</unitdate></unittitle>
+                        <physdesc>(5 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Tax returns</unittitle>
+                    </did>
+                    <note>
+                        <p>(see also:Box 75)</p>
+                    </note>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="doublequote">Your Job Today Broadcast</emph> script featuring CCC.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Miscellaneous – Council, trustees, and executive committee,
+                                <unitdate type="inclusive" normal="1938/1946"
+                            >1938-1946</unitdate></unittitle>
+                        <physdesc>(5 folders)</physdesc>
+                    </did>
+
+
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>General ledgers</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1910/1919">1910-1919,</unitdate>
+                                <unitdate normal="1931/1934" type="inclusive">1931-1934</unitdate>
+                            </unittitle>
+                            <physdesc>(1 folder, 2 volumes)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">27</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1920/1931">1920-1931</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">28</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1935/1943 ">1935-1943 </unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">29</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1935/1953">1935-1953</unitdate>
+                            </unittitle>
+                            <physdesc>(4 volumes)</physdesc>
+                        </did>
+                    </c03>
+
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">30</container>
+                        <unittitle>Combined Journal, Cash and Daily Financial Statement</unittitle>
+                    </did>
+                    <note>
+                        <p>(see also:Box 75)</p>
+                    </note>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1917-04/1917-12">1917,
+                                    Apr.-Dec.</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">31</container>
+                            <unittitle>
+                                <unitdate normal="1918">1918</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">32</container>
+                            <unittitle>
+                                <unitdate normal="1919">1919</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">33</container>
+                            <unittitle>
+                                <unitdate normal="1920">1920</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">34</container>
+                            <unittitle>
+                                <unitdate normal="1921">1921</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">35</container>
+                            <unittitle>
+                                <unitdate normal="1922">1922</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">36</container>
+                            <unittitle>
+                                <unitdate normal="1923">1923</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">37</container>
+                            <unittitle>
+                                <unitdate normal="1924">1924</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">38</container>
+                            <unittitle>
+                                <unitdate normal="1925">1925</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">39</container>
+                            <unittitle>
+                                <unitdate normal="1926">1926</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">40</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1927-01/1927-06">1927, Jan. -
+                                    June</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">41</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1927-07/1928-06">1927, July -
+                                    1928, June</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">42</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1928-07/1929-06">1928, July -
+                                    1929, June</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">43</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1929-07/1930-06">1929, July -
+                                    1930, June</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">44</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1930-07/1931-06">1930, July -
+                                    1931, June</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">45</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1931-07/1932-06">1931, July -
+                                    1932, June</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">46</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1932-07/1933-06">1932, July -
+                                    1933, June</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">47</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1933-07/1934-06">1933, July -
+                                    1934, June</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">48</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1934-07/1935-06">1934, July -
+                                    1935, June</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">49</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1935-07/1936-06">1935, July -
+                                    1936, June</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">50</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1936-07/1937-06">1936, July -
+                                    1937, June</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">51</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1937-07/1938-06">1937, July -
+                                    1938, June</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">52</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1938-07/1939-06">1938, July -
+                                    1939, June</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">53</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1939-07/1940-06">1939, July -
+                                    1940, June</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">54</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1940-07/1941-06">1940, July -
+                                    1941, June</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">55</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1941-07/1942-06">1941, July -
+                                    1942, June</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">56</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1942-07/1944-06">1942, July -
+                                    1944, June</unitdate>
+                            </unittitle>
+                            <physdesc>(2 volumes)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">57</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1944-07/1946-06">1944, July -
+                                    1946, June</unitdate>
+                            </unittitle>
+                            <physdesc>(2 volumes)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">58</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1946-07/1948-06">1946, July -
+                                    1948, June</unitdate>
+                            </unittitle>
+                            <physdesc>(2 volumes)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">59</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1948-07/1950-06">1948, July -
+                                    1950, June</unitdate>
+                            </unittitle>
+                            <physdesc>(2 volumes)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">60</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1950-07/1952-06">1950, July -
+                                    1952, June</unitdate>
+                            </unittitle>
+                            <physdesc>(2 volumes)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">61</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1952-07/1954-06">1952, July -
+                                    1954, June</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">62</container>
+                        <unittitle>Common Stock Certificate Books</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1903-05-01/1920-12-20">1903, May
+                                    1-1920, Dec. 20;</unitdate>
+                                <unitdate normal="1922-04-21/1943-08-05" type="inclusive">1922, Apr.
+                                    21-1943, Aug. 5</unitdate>
+                            </unittitle>
+                            <physdesc>(2 volumes)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">63</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1943-08-05/1943-04-25">1943, Aug.
+                                    5-1933, Apr. 25</unitdate>
+                            </unittitle>
+                            <physdesc>(2 volumes)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">64</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1933-06-20/1933-08-03">1933, June
+                                    20-Aug. 3;</unitdate>
+                                <unitdate normal="1944-08-22/1953-02-09" type="inclusive"/>
+                            </unittitle>
+                            <physdesc>(2 volumes)</physdesc>
+                        </did>
+                    </c03>
+
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">65</container>
+                        <unittitle>Payroll summaries</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1947-04-24/1951-12-26">1947, Apr.
+                                    24-1951, Dec. 26</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">66</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1952-01-02/1953-06-24">1952, Jan.
+                                    2-1953, June 24</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">67</container>
+                        <unittitle>Preferred Stock Certificate Books</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1925-03-04/1929-02-19">1925, Mar.
+                                    4-1929, Feb. 19</unitdate>
+                            </unittitle>
+                            <physdesc>(2 volumes)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">68</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1929-02-22/1941-12-18">1929, Feb.
+                                    22-1941, Dec. 18</unitdate>
+                            </unittitle>
+                            <physdesc>(2 volumes)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">69</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1930-08-20/1943-07-15">1930, Aug.
+                                    20-1943, July 15</unitdate>
+                            </unittitle>
+                            <physdesc>(2 volumes)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">70</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1944-06-13/1953-01-10">1944, June
+                                    13-1953, Jan. 10</unitdate>
+                            </unittitle>
+                            <physdesc>(2 volumes)</physdesc>
+                        </did>
+                    </c03>
+
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">71</container>
+                        <unittitle>Registers</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Invoice. <unitdate type="inclusive" normal="1923-07/1942-06"
+                                    >1923, July-1942, June</unitdate></unittitle>
+                            <physdesc>(2 volumes)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">72</container>
+                            <unittitle>Invoice. <unitdate type="inclusive" normal="1942-07/1953-04"
+                                    >1942, July - 1953, Apr.;</unitdate>Distribution. <unitdate
+                                    normal="1940/1949" type="inclusive"
+                                >1940-1949</unitdate></unittitle>
+                            <physdesc>(3 volumes, 1 folder)</physdesc>
+                        </did>
+                    </c03>
+
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">73</container>
+                        <unittitle>Social Security Payroll Record</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1937-01-07/1946-06-27">1937, Jan.
+                                    7-1946, June 27</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">74</container>
+                            <unittitle>
+                                <unitdate type="inclusive" normal="1946-07-04/1947-04-17">1946, July
+                                    4-1947, Apr. 17</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+
+
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box"> 75 Oversize</container>
+                        <unittitle>Articles of Incorporation. <unitdate normal="1910"
+                                >1910,</unitdate><unitdate normal="1912">1912,</unitdate><unitdate
+                                normal="1917">1917,</unitdate><unitdate normal="1925"
+                                >1925,</unitdate><unitdate normal="1928">1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Combined Journal, Cash and Daily Financial Statement. <unitdate
+                                type="inclusive" normal="1917-01/1917-03">1917,
+                            Jan.-Mar.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Corporation Reports. <unitdate type="inclusive" normal="1921"
+                                >1921,</unitdate><unitdate normal="1922">1922,</unitdate><unitdate
+                                normal="1924/1953" type="inclusive">1924-1953</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Printed</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Midland Cooperator, <unitdate normal="1939-02">Feb. 1939
+                                </unitdate></unittitle>
+                            <physdesc>(2 issues)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>The Co-operative Builder, <unitdate type="inclusive"
+                                    normal="1936/1939">1936-1939</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Tax Returns, corporation income and excess-profits. <unitdate
+                                type="inclusive" normal="1930/1951">1930-1951</unitdate></unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+
+        </dsc>
+    </archdesc>
+</ead>

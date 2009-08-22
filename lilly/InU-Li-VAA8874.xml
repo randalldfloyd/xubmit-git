@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group  -->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader relatedencoding="dublincore" audience="external" langencoding="iso639-2b"
+        scriptencoding="iso15924" repositoryencoding="iso15511" countryencoding="iso3166-1"
+        dateencoding="iso8601" findaidstatus="edited-full-draft">
+        <eadid encodinganalog="identifier" identifier="InU-Li-VAA8874" countrycode="US"
+            mainagencycode="InU-Li">InU-Li-VAA8874</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Guide to the Benns mss., <date
+                        normal="1914/1996">1914-1996</date></titleproper>
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library Program</publisher>
+                <date encodinganalog="date" normal="2008" type="publication">© 2008</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2008">© 2008</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>
+                <!--description of how the finding aid was created, for example: -->
+                Machine-readable finding aid derived from HTML inventory through cutting and
+                pasting.<lb/>[date of source: <date normal="2007-01-08" type="source">January 8,
+                    2007</date>
+                <lb/>Finding aid encoded by Valerie Higgins, Library/Archives, Indiana University,
+                    <date normal="2008-12-10">December 10, 2008</date>
+            </creation>
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2008-12-10"/>
+                <item/>
+            </change>
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc level="collection" audience="external" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository encodinganalog="852" label="Repository:">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname source="lcnaf" encodinganalog="100">Sturgeon, Kate, 1916-1997</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Benns mss.</unittitle>
+            <unitdate normal="1914/1996" type="inclusive" encodinganalog="245$f"
+                >1914-1996</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1083</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>ca. 700 items</extent>
+
+                <!-- if both linear feet and number of items included, repeat extent-->
+            </physdesc>
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng" encodinganalog="546">English</language></langmaterial>
+            <abstract encodinganalog="520" label="Abstract">The Benns mss., 1914-1996, consists of
+                the correspondence and papers of the F. Lee Benns family, and particularly of Kate
+                Lee (Benns) Robinson Sturgeon, 1916-1997.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+            <p>Frank Lee Benns was professor of history at Indiana University from 1920-1945; his
+                papers are in the Indiana University Archives. Kate Lee was the only child of the
+                Benns's. She was schooled in Bloomington, graduated from Indiana University in the
+                late 1930s, and married Keith Bates Robinson, a newspaper publisher in Rensselaer,
+                Indiana. They had one child, Schuyler Lee Robinson, b. 1941, who died of
+                complications from Hodgkin's disease in 1973. Following her husband's death in 1989,
+                Kate returned to Bloomington and subsequently married widower, Robert Sturgeon,
+                professor emeritus of Economics at IU. She died in Bloomington in 1997.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Correspondence; II.
+                Photographs; III. Financial; IV. Miscellaneous.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Benns mss., 1914-1996, consists of the correspondence and papers of the F. Lee
+                Benns family, and particularly of Kate Lee (Benns) Robinson Sturgeon, 1916-1997. The
+                collection is primarily correspondence of Kate with her parents and of her son,
+                Schuyler, with both his parents and grandparents, particularly while he was an
+                undergraduate and one semester law school student at Indiana University. Also
+                included are financial papers and photographs.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Controlled Access Terms</head>
+
+            <persname encodinganalog="600" source="lcnaf">Benns, Frank Lee, 1889-</persname>
+            <persname encodinganalog="600" source="lcnaf">Sturgeon, Kate, 1916-1997.</persname>
+            <persname encodinganalog="600" source="lcnaf">Robinson, Schuyler Lee,
+                1941-1973.</persname>
+            <famname encodinganalog="600" source="lcnaf">Benn family.</famname>
+            <corpname encodinganalog="610" source="lcnaf">Indiana University.</corpname>
+        </controlaccess>
+
+        <!-- optional, if applicable -->
+        <relatedmaterial encodinganalog="544 1">
+            <head>Related Material</head>
+            <p>Frank Lee Benns Papers; located at the Indiana University Office of University
+                Archives and Records Management, Bloomington, Indiana.</p>
+        </relatedmaterial>
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Gift, Kate Lee Sturgeon. 1995.</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Benns mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 level="series">
+                <did>
+                    <!-- optional -->
+                    <container type="Box" label="Box">1</container>
+                    <unittitle>Correspondence</unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 1: <unitdate normal="1914/1940" type="inclusive"
+                                >1914-1940</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 2: <unitdate normal="1941/1949" type="inclusive"
+                                >1941-1949</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 3: <unitdate normal="1950">1950</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 4: <unitdate normal="1951/1957" type="inclusive"
+                                >1951-1957</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 5: <unitdate normal="1958">1958</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 6: <unitdate normal="1959">1959</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 7: <unitdate normal="1960">1960</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 8: <unitdate normal="1961-01/1961-06" type="inclusive"
+                                >1961, Jan.-June</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 9: <unitdate normal="1961-07/1961-12" type="inclusive"
+                                >1961, July-Dec.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 10: <unitdate normal="1962">1962</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 11: <unitdate normal="1963/1964" type="inclusive"
+                                >1963-1964</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 12: <unitdate normal="1965-01/1965-03" type="inclusive"
+                                >1965, Jan.-Mar.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 13: <unitdate normal="1965-04">1965,
+                            Apr.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 14: <unitdate normal="1965-05">1965,
+                            May</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 15: <unitdate normal="1965-06/1965-12" type="inclusive"
+                                >1965, June-Dec.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 16: <unitdate normal="1966/1969" type="inclusive"
+                                >1966-1969</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 17: <unitdate normal="1970/1979" type="inclusive"
+                                >1970-1979</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 18: <unitdate normal="1980/1995" type="inclusive"
+                                >1980-1995</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 19: <unitdate normal="1914/1996" type="inclusive"
+                                >Undated</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did>
+                    <unittitle>Photographs</unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 20: Althouse, Frances Lathrop </unittitle>
+                        <physdesc>(1 photograph)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 21: Benns, F. Lee </unittitle>
+                        <physdesc>(9 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 22: Benns, George W. </unittitle>
+                        <physdesc>(1 photograph)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 23: Benns, Jessie Coon w/aunt or grandmother </unittitle>
+                        <physdesc>(1 photograph)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 24: Buildings </unittitle>
+                        <physdesc>(16 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 25: Coon, Alice Lathrop </unittitle>
+                        <physdesc>(11 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 26: Coon, Talcott and Eunice (Bergen) and Jane Coon (2nd
+                            wife) </unittitle>
+                        <physdesc>(7 photographs, includes tintypes)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 27: Lathrop, Abner </unittitle>
+                        <physdesc>(1 photograph)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 28: Lee, Harlow W. and Sylvia Thurston Lee and Henry W.
+                            Lee </unittitle>
+                        <physdesc>(1 tintype)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 29: Robinson, Max </unittitle>
+                        <physdesc>(2 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 30: Robinson, Schuyler Lee </unittitle>
+                        <physdesc>(2 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 31: Robison, Thomas H. and Frances (Rockwell) Robinson </unittitle>
+                        <physdesc>(1 photograph)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 32: Sturgeon, Kate Lee (Benns) Robinson </unittitle>
+                        <physdesc>(2 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 33: Unidentified Persons 1 </unittitle>
+                        <physdesc>(33 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 34: Unidentified Persons 2 </unittitle>
+                        <physdesc>(19 photographs, includes tintypes &amp;
+                            silhouettes)</physdesc>
+                    </did>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did>
+                    <unittitle>Financial</unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 35: Benns, F. Lee. Intangibles Tax Forms, <unitdate
+                                normal="1940/1969" type="inclusive"
+                            >1940's-1960's</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 36: Benns, F. Lee. Papers &amp; transactions,
+                                <unitdate normal="1915/1918" type="inclusive"
+                            >1915-1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 37: Sturgeon, Kate. Papers, <unitdate normal="1926/1995"
+                                type="inclusive">1926-1995</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 38: Miscellaneous, <unitdate normal="1928/1996"
+                                type="inclusive">1928-1996</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did>
+                    <container type="Box" label="Box">2</container>
+                    <unittitle>Miscellaneous</unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 1: Includes date books, Arabic currency, &amp;
+                            facsimile of Ulster County Gazette</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 2: Biographical. Includes obituaries &amp;
+                            genealogical records</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 3: Autobiographical writings</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 4: Medical</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 5: Religion. Includes prints of church architecture,
+                            church bulletins, standards of church elders</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 6: St. Joseph's College. Papers</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 7: Benns, F. Lee and Jessie Coon. Academics and
+                            certificates</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 8: Benns, F. Lee. Copyright papers, <unitdate
+                                normal="1974">1974</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 9: Benns, F. Lee. Legal Papers, <unitdate
+                                normal="1924/1970" type="inclusive">1924-1970</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 10: Robinson, Keith. Academics. Includes diploma from
+                            Indiana University, <unitdate normal="1938">1938</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folders 11-14: Robinson, Keith. European Tour, <unitdate
+                                normal="1950">1950.</unitdate> Includes scrapbook materials,
+                            newspaper clippings, maps and magazine clippings</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 15: Robinson, Schuyler. Academics and certificates.
+                            Includes birth certificates, student essays, scholarship
+                            recognition</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 16: Robinson, Schuyler. Papers and correspondence
+                            concerning his death and memorial fund</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 17: Sturgeon, Kate. Academics. Includes report cards from
+                            elementary school through I.U. and student essays</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 18: Sturgeon, Kate. Arts. <unitdate normal="1957/1996"
+                                type="inclusive">1957-1996.</unitdate> Includes a 45rpm recording
+                            and Bloomington HS literary journal</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 19: Sturgeon, Kate. Artwork. Contains two watercolor
+                            journals</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 20: Sturgeon, Kate. Organizations, <unitdate
+                                normal="1958/1975" type="inclusive">1958-1975.</unitdate> Includes
+                            Christian Children's Fund &amp; Mothers of Beta Theta Pi</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Sturgeon, Kate. Travel, <unitdate normal="1962/1963"
+                                type="inclusive">1962-1963</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+
+        </dsc>
+    </archdesc>
+</ead>

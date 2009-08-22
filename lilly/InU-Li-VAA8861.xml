@@ -1,0 +1,1226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group  -->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader relatedencoding="dublincore" audience="external" langencoding="iso639-2b"
+        scriptencoding="iso15924" repositoryencoding="iso15511" countryencoding="iso3166-1"
+        dateencoding="iso8601" findaidstatus="edited-full-draft">
+        <eadid encodinganalog="identifier" identifier="InU-Li-VAA8861" countrycode="US"
+            mainagencycode="InU-Li">InU-Li-VAA8861</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Guide to the Curle mss. IV, <date
+                        normal="1901/1968">1901-1968</date></titleproper>
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library Program</publisher>
+                <date encodinganalog="date" normal="2008" type="publication">© 2008</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2008">© 2008</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>
+                <!--description of how the finding aid was created, for example: -->
+                Machine-readable finding aid derived from HTML inventory through cutting and
+                pasting.<lb/>date of source: <date normal="2007-01-31" type="source">January 31,
+                    2007</date>
+                <lb/>Finding aid encoded by Valerie Higgins, Library/Archives, Indiana University,
+                    <date normal="2008-12-03">December 3, 2008</date>
+            </creation>
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2008-12-03"/>
+                <item/>
+            </change>
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc level="collection" audience="external" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository encodinganalog="852" label="Repository:">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname source="lcnaf" encodinganalog="100">Curle, Richard, 1883-1968</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Curle mss. IV</unittitle>
+            <unitdate normal="1901/1968" type="inclusive" encodinganalog="245$f"
+                >1901-1968</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1845</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>ca. 7200 items</extent>
+
+                <!-- if both linear feet and number of items included, repeat extent-->
+            </physdesc>
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng" encodinganalog="546">English</language></langmaterial>
+            <abstract encodinganalog="520" label="Abstract">The Curle mss. IV, 1901-1968, consists
+                of the papers of author, traveler and bibliophile Richard Curle, 1883-1968.
+            </abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+            <p>In his early career Richard Curle, 1883-1968, wrote leaders for such newspapers as
+                the <emph render="italic">Pretoria News</emph> (South Africa), <emph render="italic"
+                    >The Rangoon Times</emph> (Burma), and <emph render="italic">The Daily
+                    Mail</emph> (London). He also wrote articles for other newspapers and magazines,
+                short stories, and books of fiction and non-fiction. In 1912 Curle was introduced to
+                Joseph Conrad and, as a consequence of their long-standing friendship, much of
+                Curle's writings and correspondence with colleagues and friends reflects his
+                considerable knowledge of Conrad and his works.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Correspondence; II.
+                Diaries; III. Writings; IV. Miscellaneous; V. Photographs; VI. Printed.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Curle mss. IV, 1901-1968, consists of the papers of author, traveler and
+                bibliophile Richard Curle, 1883-1968.</p>
+            <p>Along with letters from other correspondents, there are also many letters from his son Adam who was raised by
+                Curle's ex-wife Cordelia Fisher Curle after their divorce in 1922. </p>
+            <p>The writings include short stories and novels; introductions to books on Conrad,
+                Thomas Hardy and other subjects; and other non-fiction works reflecting Curle's
+                interest in such subjects as natural history, traveling, and book collecting. The
+                collection also contains his diaries dating from 1942-1968 and photographs of
+                himself, family and friends. The miscellaneous section contains personal papers,
+                such as financial, medical and divorce documents, as well as materials pertaining to
+                friends and family including Joseph Conrad, James Stevens-Cox, Cicely Veronica
+                Wedgwood and his brother, James Herbert Curle. Printed materials include an
+                extensive file of clippings of his leaders from the above mentioned newspapers and
+                others, several magazines containing articles by him, clippings of reviews of his
+                books, and articles about him. </p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Controlled Access Terms</head>
+
+            <persname encodinganalog="600" source="lcnaf">Curle, Richard, 1883-1968.</persname>
+            <persname encodinganalog="600" source="lcnaf">Conrad, Joseph, 1857-1924.</persname>
+            <persname encodinganalog="600" source="lcnaf">Curle, Adam.</persname>
+            <subject encodinganalog="650" source="lcsh">Authors, English --Correspondence</subject>
+
+            <controlaccess>
+                <head>Additional Access Terms</head>
+                <persname encodinganalog="700" source="lcnaf">Allen, Jerry, 1911-</persname>
+                <persname encodinganalog="700" source="lcnaf">Baines, Jocelyn.</persname>
+                <persname encodinganalog="700" source="lcnaf">Curle, Adam.</persname>
+                <persname encodinganalog="700" source="lcnaf">Clifford, Hugh Charles, Sir,
+                    1866-1941.</persname>
+                <persname encodinganalog="700" source="lcnaf">Clemens, Cyril, 1902-</persname>
+                <persname encodinganalog="700" source="lcnaf">Conrad, Borys, 1898-1978.</persname>
+                <persname encodinganalog="700" source="lcnaf">Conrad, John, 1906-1982.</persname>
+                <persname encodinganalog="700" source="lcnaf">Conrad, Joseph, 1857-1924.</persname>
+                <persname encodinganalog="700" source="lcnaf">Crankshaw, Edward.</persname>
+                <persname encodinganalog="700" source="lcnaf">Cunninghame Graham, R. B. (Robert
+                    Bontine), 1852-1936.</persname>
+                <persname encodinganalog="700" source="lcnaf">Forman, Maurice Buxton.</persname>
+                <persname encodinganalog="700" source="lcnaf">Garnett, David, 1892-1981.</persname>
+                <persname encodinganalog="700" source="lcnaf">Garnett, Edward, 1868-1937.</persname>
+                <persname encodinganalog="700" source="lcnaf">Johnson, Fred Bates.</persname>
+                <persname encodinganalog="700" source="lcnaf">Price, G. Ward (George Ward),
+                1886.</persname>
+                <persname encodinganalog="700" source="lcnaf">Savory, Theodore Horace, 1896-</persname>
+                <persname encodinganalog="700" source="lcnaf">Shively, George, 1893-</persname>
+                <persname encodinganalog="700" source="lcnaf">Stevens-Cox, James.</persname>
+                <persname encodinganalog="700" source="lcnaf">Walpole, Hugh, Sir, 1884-1941.</persname>
+                <persname encodinganalog="700" source="lcnaf">Watts, Cedric Thomas.</persname>
+                <persname encodinganalog="700" source="lcnaf">Wedgewood, C. V. (Cicely Veronica), 1910-1997.</persname>
+                <persname encodinganalog="700" source="lcnaf">Wise, Thomas James, 1859-1937.</persname>
+                
+            </controlaccess>
+
+        </controlaccess>
+
+        <!-- optional, if applicable -->
+        <relatedmaterial encodinganalog="544 1">
+            <head>Related Material</head>
+            <p>Curle mss.; also located at the Lilly Library, Indiana University, Bloomington,
+                Indiana.</p>
+            <p>Curle mss. II; also located at the Lilly Library, Indiana University, Bloomington,
+                Indiana.</p>
+            <p>Curle mss. III; also located at the Lilly Library, Indiana University, Bloomington,
+                Indiana.</p>
+        </relatedmaterial>
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Purchase, 1996.</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Curle mss. IV, Lilly Library, Indiana University, Bloomington,
+                    Indiana.</p>
+            </prefercite>
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 level="series">
+                <did>
+                    <container type="Box" label="Box">1</container>
+                    <unittitle>Correspondence</unittitle>
+                </did>
+                <c02 level="subseries">
+                    <did>
+                        <unittitle>Colleagues and friends</unittitle>
+                    </did>
+                    <arrangement>
+                        <p>Arranged in chronological order.</p>
+                    </arrangement>
+                    <scopecontent>
+                        <p>Consult Manuscripts Index in the Lilly Library for dates of letters of individual
+                            correspondents.</p>
+                    </scopecontent>
+                    <note>
+                        <list>
+                            <item>Jerry Allen, </item>
+                            <item>Helen Maria Madox (Rossetti) Angeli, </item>
+                            <item>Jocelyn Baines, </item>
+                            <item>Sir Hugh Charles Clifford, </item>
+                            <item>Cyril Clemens, Borys Conrad, </item>
+                            <item>John Conrad, </item>
+                            <item>Joseph Conrad, </item>
+                            <item>Edward Crankshaw, </item>
+                            <item>Robert Bontine Cunninghame Graham, </item>
+                            <item>Arthur Ellis, </item>
+                            <item>Lenox Fane, </item>
+                            <item>Maurice Buxton Forman, </item>
+                            <item>David Garnett, </item>
+                            <item>Edward Garnett, </item>
+                            <item>Fred Bates Johnson,</item>
+                            <item>George Ward Price, </item>
+                            <item>Harold Ford Rossetti, </item>
+                            <item>Theodore Horace Savory, </item>
+                            <item>George Jenks Shively, </item>
+                            <item>Jordan Herbert Stabler, </item>
+                            <item>James Stevens-Cox, </item>
+                            <item>Alexander Cockburn Townsend, </item>
+                            <item>Sir Hugh Seymour Walpole, </item>
+                            <item>Cedric Thomas Watts, </item>
+                            <item>Cicely Veronica Wedgwood, </item>
+                            <item>John HamiltonWedgwood, </item>
+                            <item>Sir Ralph Lewis Wedgwood, </item>
+                            <item>Pieter Wenning, </item>
+                            <item>Carroll Atwood Wilson,</item>
+                            <item>Thomas James Wise</item>
+                        </list>
+                    </note>
+
+                    <c03 level="file">
+                        <did>
+                            <unittitle>
+                                <unitdate normal="1901/1951" type="inclusive">1901-1951</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">2</container>
+                            <unittitle>
+                                <unitdate normal="1952/1967" type="inclusive">1952-1967</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">3</container>
+                            <unittitle>
+                                <unitdate normal="1901/1968">undated</unitdate>
+                            </unittitle>
+                            <physdesc>(9 folders)</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="subseries">
+                    <did>
+                        <unittitle>Adam Curle</unittitle>
+                    </did>
+                    <arrangement>
+                        <p>Arranged in chronological order.</p>
+                    </arrangement>
+                    <scopecontent>
+                        <p>The letters from Adam to his father Richard number 537 and are not
+                            indexed. Also includes: several letters from Richard to Adam (consult
+                            the Manuscripts Index in the Lilly Library for individual dates); letters from Adam's first
+                            wife Pamela (Hobson) Curle to Richard, dated <date normal="1940-04-29"
+                                >Apr. 29, 1940;</date>
+                            <date normal="1942-06-07">June 7, 1942</date> and <date
+                                normal="1947-01-25">Jan. 25, 1947;</date> 44 letters from Adam's
+                            second wife Anne (Edie) Curle to Richard dating between 1958 and 1967
+                            which are not indexed; and a carbon and copy of one letter from Richard
+                            to Anne, dated <date normal="1961-11-30">Nov. 30, 1961.</date></p>
+                    </scopecontent>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>
+                                <unitdate normal="1924/1967" type="inclusive">1924-1967</unitdate>
+                            </unittitle>
+                            <physdesc>(15 folders)</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did>
+                    <unittitle>Diaries</unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <unittitle>27 pocket diaries, dating from <unitdate normal="1942/1968"
+                                type="inclusive">1942 to 1968.</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did>
+                    <container type="Box" label="Box">4</container>
+                    <unittitle>Writings</unittitle>
+                </did>
+                <arrangement>
+                    <p>Arranged in alphabetical order by title.</p>
+                </arrangement>
+                <scopecontent>
+                    <p>Mostly undated. Where known, <emph render="doublequote">unpublished</emph> is
+                        indicated.</p>
+                </scopecontent>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 1: <title render="doublequote">American Etiquette Fifty
+                                Years Ago.</title> Typescript. 9p. Unpublished.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 2: <title render="doublequote">The Bibliographies of
+                                Orders in the Revised Edition of IMMS's <emph render="italic">A
+                                    General Textbook on Entomology</emph>: Some Criticisms and
+                                Suggestions.</title> Reprint from <emph render="italic">The
+                                Entomologist's Gazette</emph>, Vol. 10, No. 3. [6p.] 2 copies, plus
+                            notice of election of Curle to the Royal Entomological Society of
+                            London, <unitdate normal="1947-11-06">Nov. 6,
+                            1947.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 3: <title render="doublequote">The Books of the Ray
+                                Society.</title> Typescript and carbon. 3p. each.
+                            Unpublished.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 4: <title render="doublequote">The Cat, A Short
+                                Story.</title> Radio script. Mimeo with corrections. 9p. Broadcast
+                                <unitdate normal="1948-08-19">Aug. 19, 1948.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 5: <title render="doublequote">Conrad and the Younger
+                                Generation.</title> 10p. Reprint from <emph render="italic">The
+                                Nineteenth Century,</emph>
+                            <unitdate normal="1929-12">Dec. 1929.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 6: <title render="doublequote">Conrad and
+                                'Victory'.</title> 9p. [stamped 8 Sept. 1915] Proof from <emph
+                                render="italic">Fortnightly Review.</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 7: <title render="doublequote">Conrad's Village Unveils
+                                Porch as Memorial.</title> Typescript. 3p. Published in <emph
+                                render="italic">New York Herald-Tribune,</emph>
+                            <unitdate normal="1927-11-13">Nov. 13, 1927.</unitdate> Includes
+                            photograph of Canon Ashton-Gwatkin, rector of Bishopsbourne and chairman
+                            of the memorial committee, Curle and others at the memorial, <unitdate
+                                normal="1927-10">October 1927.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 8: <title render="italic">Corruption.</title> Proof of
+                            novel. <unitdate normal="1933">1933.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 9: <title render="doublequote">Criticism and
+                                Creation.</title> Typescript and carbon. 9p. each.
+                            Unpublished.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 10: <emph render="doublequote">Cunninghame Graham,</emph>
+                            talk by Richard Curle. Mimeo script with revisions. 5p.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 11: <title render="doublequote">Dostoevsky.</title>
+                            Typescript. 7p. Unpublished.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 12-19: <title render="italic">Echo of Voices.</title> All
+                            holograph. Includes: Deep Down. 45p.; General Service. 68p. <unitdate
+                                normal="1914-06-18">June 18, 1914;</unitdate> His Kingdom. 31p.
+                                <unitdate normal="1914-11-11">Nov. 11, 1914;</unitdate> Midnight. 2
+                            versions. 26p. each. One titled: The Stranger and dated <unitdate
+                                normal="1914-05-18">May 18, 1914;</unitdate> Monsieur Clavel. 31p.
+                                <unitdate normal="1914-03-30">Mar. 30, 1914;</unitdate> Nineteen.
+                            66p.; The Two Dependents. 96p. "Fin. <unitdate normal="1915-10-23"
+                                >23/10/15,</unitdate> rev. fin. <unitdate normal="1915-12-10"
+                                >10/12/15</unitdate> &amp; <unitdate normal="1916-01-02"
+                                >2/1/16";</unitdate> The Would-be Friends. 57p. <unitdate
+                                normal="1914">May? 7, 1914</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 21: <title render="doublequote">Emil's Innovation,</title>
+                            written and read by Richard Curle, for radio program Tuesday Story.
+                            Broadcast <unitdate normal="1948-11-16">Nov. 16, 1948.</unitdate> Mimeo
+                            with corrections. 16p. </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 22: <title render="doublequote">The Foreign Newspapers of
+                                New York.</title> Typescript. 2p. </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 23: <title render="doublequote">Introduction [to a book on
+                                Robert Garnett].</title> Typescript. 5p. Unpublished.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 24: <title render="doublequote">Introduction to Nigel
+                                Maxwell's Conrad dictionary.</title> Typescript. 4p.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 25: <title render="doublequote">Introduction [to Conrad's
+                                    <emph render="italic">Nostromo</emph>].</title> Proof for
+                            memorial edition published in <unitdate normal="1925"
+                            >1925.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 26: <title render="doublequote">Introduction [to Vol. I of
+                                T.J. Wise's Ashley Catalogue, 1922 or 1927?].</title>
+                            Tearsheet.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 27: [Introductions to various works on Thomas Hardy],
+                            including: <emph render="italic">The Hardy Series.</emph> 4p.; <emph
+                                render="italic">The Homes of Thomas Hardy,</emph> by Evelyn L.
+                            Evans. 2p.; <emph render="italic">Hardyana.</emph> 2p.; <emph
+                                render="italic">Young Mr. Thomas Hardy,</emph> by May O'Rourke. 2p.
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 28: <title render="doublequote">The Isle of Sark.</title>
+                            Two typescripts, two carbons. 2p. each. Unpublished.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 29: Joseph Conrad. Tearsheets mounted on scrapbook sheets.
+                            Published in <emph render="italic">Rhythm,</emph>
+                            <unitdate normal="1912-11">Nov. 1912.</unitdate> Includes two clippings
+                            of works by Curle mounted on the versos: 1) untitled, published in <emph
+                                render="italic">The Onlooker,</emph>
+                            <unitdate normal="1912-08-17">Aug. 17, 1912,</unitdate> and 2) <title
+                                render="doublequote">The Art of Joseph Conrad,</title> published in
+                                <emph render="italic">Everyman,</emph>
+                            <unitdate normal="1912-11-22">Nov. 22, 1912.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 30: <title render="doublequote">Joseph Conrad: A
+                                Play.</title> Typescript and carbon. 9p. each.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 31: <title render="doublequote">Joseph Conrad As I
+                                Remember Him.</title> Carbon typescript. 13p. </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 32-38: <title render="italic">Life is a Dream.</title> All
+                            holograph. Includes: Blanca Palillos. 72p. Finished <unitdate
+                                normal="1913-01-10">10/1/13,</unitdate> revision <unitdate
+                                normal="1913-01-10">10/1/13;</unitdate> Going home. 40p. Finished
+                            [early?] draft <unitdate normal="1912-09-03">3/9/12;</unitdate> The
+                            look-out. 15p.; A memory. 18p.; Old Hoskyns. 20p.; A remittance man.
+                            46p. <unitdate normal="1913-05-28">28/5/13;</unitdate> The velvet suit.
+                            14p.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 39: <title render="doublequote">Links in the
+                                Chain.</title> Carbon typescript. 10p.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 40: <title render="doublequote">Men of the 16th
+                                Century.</title> Typescript. 3p. </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 41: <title render="doublequote">Monsters of the
+                                Past.</title> Carbon typescript. 7p. </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 42: <title render="doublequote">My Conrad
+                                Collection.</title> Tearsheet from The Mermaid, <unitdate
+                                normal="1926-10">Oct. 1926.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 43: <title render="doublequote">My Impressions of the
+                                Conrad Centenary Celebrations.</title> Two carbons. 3p. each. Three
+                            reprints.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 44: <title render="doublequote">My Youth in
+                                Scotland.</title> Carbon typescript. 4p. <emph render="doublequote"
+                                >This [was for] a radio talk</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 45: <title render="doublequote">The New Life.</title>
+                            Carbon typescript. 11p.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 46: <title render="doublequote">Panama Fifty Years
+                                Ago.</title> Typescript and carbon. 6p. each.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 47: <title render="doublequote">The Personality of Joseph
+                                Conrad.</title> Tearsheets. <unitdate normal="1925-01">Jan.
+                                1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 48: <title render="doublequote">The Ray Society.</title>
+                            Typescript. 7p. Unpublished.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 49: <title render="doublequote">The Ray Society: A
+                                Bibliographical History.</title> Draft holograph and typescript
+                            pages.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 50: <title render="doublequote">Richard Curle: A List of
+                                His Books, Pamphlets and Introductions.</title> Draft holograph and
+                            typescript pages, galleys, clipping. </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 51: Robert Browning and Julia Wedgwood. Typescripts of
+                            some letters, notes, and lists of expenses </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 52: <title render="doublequote">Romance of
+                                Contrast.</title> Proof of article.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 53: Stories I. Unpublished stories. All typescripts or
+                            carbon typescripts. Proposed title: <title render="italic">Strange
+                                Things in Hand: Tales of the Macabre and the
+                            Unusual.</title></unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">Who Guards the Custodians?</title></unittitle><physdesc>5 p.</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">Guests of the House,</title></unittitle><physdesc>8 p.</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">Enigma</title> (Verso of page three: <title render="doublequote">The Courage of Women</title>),</unittitle><physdesc>3 p.</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">Mrs. Froy,</title></unittitle><physdesc>6 p.</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">Heart of My Heart,</title></unittitle><physdesc>2 copies. 3 p. and 4 p.</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">The Other Doctor,</title></unittitle><physdesc>2 p.</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">The Best-Laid Schemes,</title></unittitle><physdesc>5 p.</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">Behind the Mask,</title></unittitle><physdesc>9 p.</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">Links in the Chain,</title></unittitle><physdesc>10 p.</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">Emblems of Nullity,</title></unittitle><physdesc>10 p.</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">The Suppressed Edition,</title></unittitle><physdesc>6 p.</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">The New Life,</title></unittitle><physdesc>11 p.</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">The Cat,</title></unittitle><physdesc>5 p.</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">The Way Things Happen,</title></unittitle><physdesc>22 p.</physdesc></did>
+                    </c03>
+                    
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 54: Stories II. Unpublished stories. All typescripts or
+                            carbon typescripts.</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">Behind the Mask,</title></unittitle><physdesc>9 p.</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">The Best-Laid Schemes,</title></unittitle><physdesc>5 p.</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">The Cat,</title></unittitle><physdesc>5 p.</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">A Comedy of a Day,</title></unittitle><physdesc>27 p.</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">The Count,</title></unittitle><physdesc>13 p.</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">Emblems of Nullity,</title></unittitle><physdesc>10 p.</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">Emil's Innovation,</title></unittitle><physdesc> 2 copies. 6 p. each</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">Enigma,</title></unittitle><physdesc>2 p.</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">Guests of the House,</title></unittitle><physdesc>8 p.</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">Heart of My Heart,</title></unittitle><physdesc>3 p.</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">Mrs. Froy,</title></unittitle><physdesc>6 p.</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">The Other Doctor,</title></unittitle><physdesc>2 p.</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">The Suppressed Edition,</title></unittitle><physdesc>6 p.</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">Two Methods of Using Eggs,</title></unittitle><physdesc>6 p.</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">The Way Things Happen,</title></unittitle><physdesc>22 p.</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">The Wedding Present,</title></unittitle><physdesc>16 p.</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">What Lived in the Wood?</title></unittitle><physdesc>5 p.</physdesc></did>
+                    </c03>
+                    <c03 level="file">
+                        <did><unittitle><title render="doublequote">Who Guards the Custodians?</title></unittitle><physdesc>5 p.</physdesc></did>
+                    </c03>
+                    
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 55: <title render="doublequote">The Strange Life of
+                                Dostoevsky.</title> Typescript. 6p.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 56: <title render="doublequote">Walter Fish.</title>
+                            Carbon typescript. 2p.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 57-59: <title render="doublequote">Wanderings.</title>
+                            Holograph.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 60: <title render="doublequote">Warsaw Under
+                                Communism.</title> Typescript. 7p.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 61: <title render="doublequote">Watching Geese With
+                                Hudson,</title> talk by Richard Curle. Mimeo script. Broadcast
+                                <unitdate normal="1944-10-29">29 October 1944,</unitdate> B.B.C.
+                            Home Service.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 62: <title render="doublequote">What Lived in the
+                                Wood?,</title> written and read by Richard Curle, Stories from
+                            Studio Five. Corrected mimeo script. Broadcast <unitdate
+                                normal="1949-12-05">5 December 1949.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 63: <title render="doublequote">What Not to Read.</title>
+                            1p. <emph render="doublequote">Published but not in this final form in
+                                Stevens-Cox's <emph render="italic">Literary
+                                Repository</emph></emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 64: <title render="doublequote">Where!, Why!, When!, or
+                                the Hectic Hours of a Dorset Day.</title> Printed. 1p. <unitdate
+                                normal="1963">1963.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 65: Untitled writings and fragments</unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did>
+                    <unittitle>Miscellaneous</unittitle>
+                </did>
+                <arrangement>
+                    <p>Arranged alphabetically by subject after Curle, Richard.</p>
+                </arrangement>
+                <c02 level="subseries">
+                    <did>
+                        <unittitle>Curle, Richard</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 66: Book contracts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">5</container>
+                            <unittitle>folder 1: Financial papers, such as: bank statements,
+                                correspondence concerning his will, estate, and
+                                investments</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 2: Lists of Curle's Library</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 3: Marriage certificate and divorce papers</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 4: Medical papers, such as: discharge papers from
+                                Anti-Aircraft Corps, Royal Naval Air Service due to illness;
+                                affidavits from doctors concerning fitness to travel, visa for
+                                travel to Brazil.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 5: Miscellany</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="subseries">
+                    <did>
+                        <unittitle>Clemens, Cyril</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 6: Pamphlets and reprints with dedications by Clemens
+                                to Curle, including seven issues of the <emph render="italic">Mark
+                                    Twain Journal</emph> and a reprint of <emph render="italic"
+                                    >Father Prout and the Brownings</emph> by Clemens.</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="subseries">
+                    <did>
+                        <unittitle>Conrad, Joseph</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 7: A pen and ink drawing by Conrad, agreement with RKO
+                                Radio Pictures, Inc. for the film rights to <emph render="italic"
+                                    >Heart of Darkness,</emph> comments by Curle on his various
+                                works on Conrad, articles by writers other than Curle about Conrad,
+                                copies of correspondence concerning or to Conrad</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 8-9: Materials concerning the Conrad Centenary held in
+                                Warsaw, Poland in <unitdate normal="1957"
+                                >1957.</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 10: Writings by others about Conrad</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 11: Clippings about Conrad</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="subseries">
+                    <did>
+                        <unittitle>Cunninghame Graham, Robert Bontine</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 12: Transcripts of his letters to Curle.</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="subseries">
+                    <did>
+                        <unittitle>Curle, James Herbert</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 13-14: Copy of will, correspondence between Richard
+                                and lawyers concerning estate, two holograph fragments from his book
+                                    <emph render="italic">This World of Ours,</emph>
+                                clippings</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="subseries">
+                    <did>
+                        <unittitle>Stevens-Cox, John</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 15: Two pamphlets edited by JSC <emph render="italic"
+                                    >News from Canada,</emph> 1628, introduction by C.V. Wedgwood
+                                (Dorset: Toucan Press, <unitdate normal="1964">1964)</unitdate> and
+                                    <emph render="italic">The wigmaker's art in the 18th
+                                    century</emph> (London: Hairdressers' Registration Council,
+                                    <unitdate normal="1965">1965);</unitdate> six issues of <emph
+                                    render="italic">The Registered Hairdresser,</emph>
+                                <unitdate normal="1960/1962" type="inclusive">1960-1962</unitdate>
+                                with a review by Curle of <emph render="italic">The art of the
+                                    wigmaker</emph> by JSC in No. 8, <unitdate normal="1962-01"
+                                    >January 1962,</unitdate> plus a typescript of a fragment of
+                                this article.</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="subseries">
+                    <did>
+                        <unittitle>Wedgwood, C.V.</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 16: Program and addresses for Encaenia at Oxford
+                                University, <unitdate normal="1965-06-23">23 June 1965</unitdate> at
+                                which Wedgwood was given an honorary degree, invitations to
+                                functions connected with Encaenia and clipping marking that
+                                occasion.</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="subseries">
+                    <did>
+                        <unittitle>Wise, T.J.</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 17: Notes by Curle mostly concerning his
+                                correspondence with Wise; two catalogs: <emph render="italic">Wise
+                                    After the Event: A Catalog of Books, Pamphlets, Manuscripts and
+                                    Letters Relating to Thomas James Wise Displayed in an Exhibition
+                                    in Manchester Central Library, September 1964, edited by G.E.
+                                    Haslam</emph> (Manchester: Libraries Committee, <unitdate
+                                    normal="1964">1964)</unitdate> and <emph render="italic"
+                                    >Catalogue of the Celebrated Collection Formed by Sir Maurice
+                                    Pariser, of Manchester, of the Notorious Nineteenth Century
+                                    Pamphlets and Other Important Wiseiana Manuscript and
+                                    Printed</emph> (London: Sotheby &amp; Co., <unitdate
+                                    normal="1967">1967).</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="subseries">
+                    <did>
+                        <unittitle>Miscellany</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 18-19: Includes a pencil drawing possibly of Curle by
+                                an unknown artist.</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did>
+                    <unittitle>Photographs</unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <unittitle>folder 20-23: Contains 97 photographs. There are 22 of Curle. The
+                            remaining photographs are of family, friends and a few buildings. There
+                            are inscribed portraits from Jessie Conrad, John Conrad, and C.V.
+                            Wedgwood. Most are unidentified.</unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did>
+                    <unittitle>Printed</unittitle>
+                </did>
+                <c02 level="subseries">
+                    <did>
+                        <unittitle>Articles By Curle.</unittitle>
+                    </did>
+                    <scopecontent>
+                        <p>Mostly clippings from the following newspapers:</p>
+                    </scopecontent>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 24: <emph render="italic">American and Commonwealth
+                                    Visitor.</emph>
+                                <unitdate normal="1946-04/1954-09" type="inclusive">Apr. 1946 - Sept.
+                                    1954.</unitdate> Articles about stamp collecting</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 25: <emph render="italic">Bpeme.</emph>
+                                Czechoslovakian newspaper which ran in serial form Curle's <title
+                                    render="italic">Who goes home,</title>
+                                <unitdate normal="1935">1935.</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 26-29: <emph render="italic">Daily Mail.</emph>
+                                <unitdate normal="1922/1928" type="inclusive">1922-1928.</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 30: <emph render="italic">Daily Mail.</emph>
+                                <unitdate normal="1932/1934" type="inclusive">1932-1934.</unitdate> Under pseudonym
+                                John Blunt.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">6</container>
+                            <unittitle>folder 1: <emph render="italic">Time and Tide.</emph>
+                                <unitdate normal="1944/1956" type="inclusive">1944-1956.</unitdate>
+                                Book review.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 2: <emph render="italic">Everyman.</emph>
+                                <unitdate normal="1912/1913" type="inclusive">1912-1913;</unitdate>
+                                <unitdate normal="1935-01/1935-02" type="inclusive">1935,
+                                    Jan.-Feb.</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 3: <emph render="italic">John O'London's
+                                    Weekly.</emph>
+                                <unitdate normal="1929">1929,</unitdate>
+                                <unitdate normal="1937">1937,</unitdate>
+                                <unitdate normal="1945">1945,</unitdate>
+                                <unitdate normal="1946">1946.</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 4: <emph render="italic">The Literary
+                                    Repository.</emph>
+                                <unitdate normal="1954/1964" type="inclusive"
+                                >1954-1964</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 5: <emph render="italic">Outspan.</emph> 4 issues of
+                                magazine containing Curle's series: <title render="doublequote"
+                                    >Woman--The Great Mystery.</title></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 6: <emph render="italic">Pretoria News.</emph>
+                                <unitdate normal="1918">1918</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 7: <emph render="italic">Rangoon Times.</emph>
+                                <unitdate normal="1920/1922" type="inclusive"
+                                >1920-1922</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 8: <emph render="italic">The Star</emph> (London
+                                evening paper). In <unitdate normal="1956">1956</unitdate> reprinted
+                                a portion of Curle's <title render="italic">Reflections on
+                                    Woman</title></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 9-14: Articles for various newspapers and reviews,
+                                including a group on travel, <unitdate normal="1923/1952"
+                                    type="inclusive">1923-1952;</unitdate> on Conrad; misc.
+                                topics</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="subseries">
+                    <did>
+                        <unittitle>Articles By C.V. Wedgwood</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 15: Clippings, mostly written for the <emph
+                                    render="italic">Daily Telegraph</emph></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="subseries">
+                    <did>
+                        <unittitle>Articles by others about Curle.</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 16: Clippings from various newspapers</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="subseries">
+                    <did>
+                        <unittitle>Reviews of Curle's books</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 17-30: Clippings from various newspapers, reviewing
+                                the following books: <title render="italic">Caravansary and
+                                    Conversation;</title>
+                                <title render="italic">Characters of Dostoevsky;</title>
+                                <title render="italic">Collecting American First Editions;</title>
+                                <title render="italic">Corruption;</title>
+                                <title render="italic">Into the East;</title>
+                                <title render="italic">Joseph Conrad: A Study;</title>
+                                <title render="italic">Joseph Conrad and His Characters;</title>
+                                <title render="italic">Last Twelve Years of Joseph Conrad;</title>
+                                <title render="italic">The One and the Other;</title>
+                                <title render="italic">Oriental Trail; </title><title
+                                    render="italic">Robert Browning and Julia Wedgwood: A Broken
+                                    Friendship as Revealed By Their Letters;</title>
+                                <title render="italic">Stamp Collecting;</title>
+                                <title render="italic">Who Goes Home?;</title>
+                                <title render="italic">Women: An Analytical
+                                Study</title></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="subseries">
+                    <did>
+                        <unittitle>Scrapbooks</unittitle>
+                    </did>
+                    <scopecontent>
+                        <p>Contain clippings from various newspapers</p>
+                    </scopecontent>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>folder 31: Articles concerning American Art Galleries sale of
+                                Curle's Conrad collection</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container type="Box" label="Box">7</container>
+                            <unittitle>Scrapbook 1: Articles written under pseudonym John Blunt,
+                                    <unitdate normal="1926/1928" type="inclusive"
+                                    >1926-1928</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Scrapbook 2: Reviews of Curle's books and articles about him,
+                                    <unitdate normal="1908/1930" type="inclusive"
+                                    >1908-1930</unitdate></unittitle>
+                        </did>
+                    </c03>
+
+                </c02>
+
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>

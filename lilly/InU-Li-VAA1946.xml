@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Lilly Library, Indiana University, EAD template, 2003-02-21  --><!DOCTYPE ead
-  PUBLIC "-//Society of American Archivists//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN" "ead.dtd">
-<ead><!-- value of @findaidstatus should be 'originaldraft', 'inprogressdraft', 'editinprogress', or 'editedfulldraft' --><eadheader audience="internal" langencoding="iso639-2b" scriptencoding="iso15924"
+<!-- Lilly Library, Indiana University, EAD template, 2003-02-21  -->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+   <!-- value of @findaidstatus should be 'originaldraft', 'inprogressdraft', 'editinprogress', or 'editedfulldraft' --><eadheader audience="internal" langencoding="iso639-2b" scriptencoding="iso15924"
               repositoryencoding="iso15511"
               countryencoding="iso3166-1"
               dateencoding="iso8601"
               findaidstatus="originaldraft"><!-- replace [uniqueid] with collection LMC number --><eadid encodinganalog="identifier" identifier="InU-Li-VAA1946" countrycode="US"
              mainagencycode="InU-Li">InU-Li-VAA1946</eadid>
       <filedesc><!-- This is a description of the electronic finding aid, not the original finding aid or the collection --><!-- Make title "xxxx mss., yyyy-yyyy"--><!--Make subtitle "Papers, yyyy-yyyy, of [person] at the Lilly Library, Indiana University, Bloomington, Indiana--><titlestmt>
-            <titleproper>Smith, H.W. mss., </titleproper>
+            <titleproper encodinganalog="title">Smith, H.W. mss., </titleproper>
             <subtitle>Papers, <date normal="1817/1987" era="ce" calendar="gregorian">1817-1987</date>, of Hannah Whitall Smith
 					at the Lilly Library, Indiana University, Bloomington, Indiana</subtitle>
-            <author>Electronic finding aid encoded by Ryan K. Lee.</author>
+            <author encodinganalog="creator">Electronic finding aid encoded by Ryan K. Lee.</author>
          </titlestmt>
          <publicationstmt>
-            <publisher>Lilly Library, Indiana University, Bloomington, Indiana</publisher>
-            <date normal="2005" type="publication" era="ce" calendar="gregorian">© 2005</date>
+            <publisher encodinganalog="publisher">Indiana University Digital Library Program</publisher>
+            <date encodinganalog="date" normal="2005" type="publication" era="ce" calendar="gregorian">© 2005</date>
          </publicationstmt>
       </filedesc>
       <profiledesc>
@@ -23,7 +25,7 @@
 				<!--description of how the finding aid was created, for example: XML finding aid derived from
 [paper by means of scanning and OCR] [OCR file edited for typographical errors before encoding]
 [typescript by rekeying] [word processing program and version number]
-[<extref href="" linktype="simple" title="" actuate="onrequest" show="new">HTML collection description</extref>]. -->
+[<extref href="" title="" actuate="onrequest" show="new">HTML collection description</extref>]. -->
 				<lb/>[date of source: <lb/>Finding aid encoded by Ryan K. Lee, Lilly Library,
 				Indiana University, <date normal="2005-09-15" era="ce" calendar="gregorian">September 15, 2005</date>
 			      </creation>
@@ -52,7 +54,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
    </frontmatter>
    <archdesc level="collection" audience="external" type="inventory" relatedencoding="marc"><!-- @type value may alternatively be 'bulk' --><!-- use the label attribute for these elements to determine what label is displayed --><did>
          <head>Summary Information</head>
-         <repository encodinganalog="850$a" label="Repository">
+         <repository encodinganalog="852" label="Repository" id="lilly">
 				        <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
 				        <address>
                <addressline>Lilly Library</addressline>
@@ -71,40 +73,21 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
          <unitdate normal="1817/1987" type="inclusive" encodinganalog="245$f" era="ce"
                    calendar="gregorian">1817-1987</unitdate>
          <unitid encodinganalog="099" countrycode="US" repositorycode="US-InU-Li"
-                 label="Collection no">LMC 1982</unitid>
+                 label="Collection No.">LMC 1982</unitid>
          <physdesc encodinganalog="300$a$f" label="Extent">
 				        <extent>ca. 30,500 items</extent>
 				        <!-- if both linear feet and number of items included, separate by lb tag -->
 			</physdesc>
-         <langmaterial label="Language">Materials are in <language langcode="eng" encodinganalog="008/35-37">English.</language>
+         <langmaterial label="Language" encodinganalog="546">Materials are in <language langcode="eng" encodinganalog="008/35-37">English.</language>
          </langmaterial>
          <abstract encodinganalog="520$a" label="Abstract">Consists primarily of letters of
 				Hannah Whitall Smith, her two daughters Mary Berenson and Alys Whitall Pearsall
 				Russell, and Mary's two daughters Ray Strachey and Karin Stephen.</abstract>
       </did>
-      <!-- required; 'descgrp' element replaces admininfo element in 2002 DTD --><descgrp>
-         <head>Administrative Information</head>
          <accessrestrict encodinganalog="506$a">
             <head>Access Restrictions</head>
             <p>This collection is open for research.</p>
          </accessrestrict>
-         <acqinfo encodinganalog="541">
-            <head>Acquisition Information</head>
-            <p>Purchased. 1989.</p>
-         </acqinfo>
-         <userestrict encodinganalog="540">
-            <head>Usage Restrictions</head>
-            <p>Prior arrangements are not necessary before coming to the Library, however,
-					patrons from out of town are encouraged to communicate with the Library in
-					advance of their visits to ascertain availability of materials.</p>
-            <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
-					Library.</p>
-         </userestrict>
-         <prefercite encodinganalog="524$a">
-            <head>Preferred Citation</head>
-            <p>[Item], Smith, H.W. mss., Lilly Library, Indiana University, Bloomington,
-					Indiana.</p>
-         </prefercite>
          <bioghist encodinganalog="545">
             <head>Biographical Note</head>
             <p>Hannah Whitall Smith (1832-1911), American evangelist, writer, and reformer, was
@@ -130,6 +113,25 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
 					The circle of friends and relatives broadened further when Ray married into the
 					Strachey family and Karin wed Virginia Woolf's brother Adrian Stephen.</p>
          </bioghist>
+      <!-- required; 'descgrp' element replaces admininfo element in 2002 DTD --><descgrp>
+         <head>Administrative Information</head>
+         <acqinfo encodinganalog="541">
+            <head>Acquisition Information</head>
+            <p>Purchased. 1989.</p>
+         </acqinfo>
+         <userestrict encodinganalog="540">
+            <head>Usage Restrictions</head>
+            <p>Prior arrangements are not necessary before coming to the Library, however,
+					patrons from out of town are encouraged to communicate with the Library in
+					advance of their visits to ascertain availability of materials.</p>
+            <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+					Library.</p>
+         </userestrict>
+         <prefercite encodinganalog="524$a">
+            <head>Preferred Citation</head>
+            <p>[Item], Smith, H.W. mss., Lilly Library, Indiana University, Bloomington,
+					Indiana.</p>
+         </prefercite>
       </descgrp>
       <!-- required for collection level; optional for lower levels --><scopecontent encodinganalog="520$a$b">
          <head>Scope and Content Note</head>
@@ -158,8 +160,8 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
 				Temperance Union.</corpname>
          <subject encodinganalog="650$a" source="lcsh">Women --Suffrage --Great Britain.</subject>
          <subject encodinganalog="650$a" source="lcsh">Women --Suffrage --United States.</subject>
-         <subject encodinganalog="651$a" source="lcsh">Great Britain --Social life and customs.</subject>
-         <subject encodinganalog="651$a" source="lcsh">United States --Social life and customs.</subject>
+         <geogname encodinganalog="651$a" source="lcsh">Great Britain --Social life and customs.</geogname>
+         <geogname encodinganalog="651$a" source="lcsh">United States --Social life and customs.</geogname>
          <controlaccess>
             <head/>
             <persname encodinganalog="700$a" source="lcnaf">Berenson, Bernard, 1865-1959.</persname>
@@ -341,7 +343,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                      <container type="box" label="Box">15</container>
                      <container type="folder" label="Folder">26</container>
                      <unittitle>
-								                <title render="doublequote" linktype="simple">Confessions of M.W.C.,</title>
+								                <title render="doublequote">Confessions of M.W.C.,</title>
 								                <unitdate normal="1890" era="ce" calendar="gregorian">1890</unitdate>
 							              </unittitle>
                   </did>
@@ -358,7 +360,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                      <container type="box" label="Box">15</container>
                      <container type="folder" label="Folder">29</container>
                      <unittitle>
-								                <title render="doublequote" linktype="simple">Reminiscences of Walt Whitman</title>
+								                <title render="doublequote">Reminiscences of Walt Whitman</title>
 							              </unittitle>
                   </did>
                </c03>
@@ -619,7 +621,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                      <container type="box" label="Box">17</container>
                      <container type="folder" label="Folder">19</container>
                      <unittitle>
-								                <title render="doublequote" linktype="simple">On authority of a husband</title>
+								                <title render="doublequote">On authority of a husband</title>
 							              </unittitle>
                   </did>
                </c03>
@@ -1282,7 +1284,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                   <did>
                      <container type="volume" label="Volume">19</container>
                      <unittitle>
-                        <title render="doublequote" linktype="simple">Heavenly Bridegroom,</title>
+                        <title render="doublequote">Heavenly Bridegroom,</title>
 								extracts, <unitdate normal="1873-05/1874-11" type="inclusive" era="ce" calendar="gregorian">May
 									1873-Nov. 1874</unitdate>
                      </unittitle>
@@ -1632,7 +1634,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
                      <item>41. (missing)</item>
                      <item>42. <unitdate normal="1890-09-12" era="ce" calendar="gregorian">Sept. 12, 1890</unitdate>
 							              </item>
-                     <item>43-44. <unitdate normal="1890-10-01/1890-10-09" era="ce" calendar="gregorian">Oct. 1-9,
+                     <item>43-44. <unitdate normal="1890-10-01/1890-10-09" era="ce" calendar="gregorian" type="inclusive">Oct. 1-9,
 								1890</unitdate>
 							              </item>
                      <item>45-46. (missing)</item>
