@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Lilly Library, Indiana University, EAD template, 2003-02-21  -->
-<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
-   <!-- value of @findaidstatus should be 'originaldraft', 'inprogressdraft', 'editinprogress', or 'editedfulldraft' --><eadheader audience="internal" langencoding="iso639-2b" scriptencoding="iso15924"
+<!-- Lilly Library, Indiana University, EAD template, 2003-02-21  --><!DOCTYPE ead
+  PUBLIC "-//Society of American Archivists//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN" "ead.dtd">
+<ead><!-- value of @findaidstatus should be 'originaldraft', 'inprogressdraft', 'editinprogress', or 'editedfulldraft' --><eadheader audience="internal" langencoding="iso639-2b" scriptencoding="iso15924"
               repositoryencoding="iso15511"
               countryencoding="iso3166-1"
               dateencoding="iso8601"
               findaidstatus="originaldraft"><!-- replace [uniqueid] with collection LMC number --><eadid encodinganalog="identifier" identifier="InU-Li-VAA1262" countrycode="US"
              mainagencycode="InU-Li">InU-Li-VAA1262</eadid>
       <filedesc><!-- This is a description of the electronic finding aid, not the original finding aid or the collection --><!-- Make title "xxxx mss., yyyy-yyyy"--><!--Make subtitle "Papers, yyyy-yyyy, of [person] at the Lilly Library, Indiana University, Bloomington, Indiana--><titlestmt>
-            <titleproper encodinganalog="title">Gumuchian mss., </titleproper>
+            <titleproper>Gumuchian mss., </titleproper>
             <subtitle>Correspondence, <date normal="1933/1940" era="ce" calendar="gregorian">1933-1940</date>, between Kirkor
 					Gumuchian and George Alexander Ball at the Lilly Library, Indiana University,
 					Bloomington, Indiana</subtitle>
-            <author encodinganalog="creator">Electronic finding aid encoded by Magia Ghetu</author>
+            <author>Electronic finding aid encoded by Magia Ghetu</author>
          </titlestmt>
          <publicationstmt>
-            <publisher encodinganalog="publisher">Indiana University Digital Library Program</publisher>
-            <date encodinganalog="date" normal="2003" type="publication" era="ce" calendar="gregorian">© 2003</date>
+            <publisher>Indiana University Digital Library Program</publisher>
+            <date normal="2003" type="publication" era="ce" calendar="gregorian">© 2003</date>
          </publicationstmt>
       </filedesc>
       <profiledesc>
@@ -26,7 +24,7 @@
 				<!--description of how the finding aid was created, for example: XML finding aid derived from
 [paper by means of scanning and OCR] [OCR file edited for typographical errors before encoding]
 [typescript by rekeying] [word processing program and version number]
-[<extref href="" title="" actuate="onrequest" show="new">HTML collection description</extref>]. -->
+[<extref href="" linktype="simple" title="" actuate="onrequest" show="new">HTML collection description</extref>]. -->
 				<lb/>Finding aid encoded by Magia Ghetu, Lilly Library, Indiana University, <date normal="2003-07-28" era="ce" calendar="gregorian">July 28, 2003</date>
 			      </creation>
          <!-- iso three-digit 639-2 value for @langcode can be found at http://www.loc.gov/standards/iso639-2/langcodes.html --><langusage>Description is in <language encodinganalog="language" langcode="eng" scriptcode="Latn">English.</language>
@@ -66,7 +64,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
    </frontmatter>
    <archdesc level="collection" audience="external" type="inventory" relatedencoding="marc"><!-- @type value may alternatively be 'bulk' --><!-- use the label attribute for these elements to determine what label is displayed --><did>
          <head>Summary Information</head>
-         <repository encodinganalog="852" label="Repository" id="lilly">
+         <repository encodinganalog="850$a" label="Repository">
 				        <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
 				        <address>
                <addressline>Lilly Library</addressline>
@@ -85,12 +83,12 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
          <unitdate normal="1933/1940" type="inclusive" encodinganalog="245$f" era="ce"
                    calendar="gregorian">1933-1940</unitdate>
          <unitid encodinganalog="099" countrycode="US" repositorycode="US-InU-Li"
-                 label="Collection No.">LMC 1488</unitid>
+                 label="Collection no">LMC 1488</unitid>
          <physdesc encodinganalog="300$a$f" label="Extent">
 				        <extent>79 items</extent>
 				        <!-- if both linear feet and number of items included, separate by lb tag -->
 			</physdesc>
-         <langmaterial encodinganalog="546" label="Language">Materials are in <language langcode="eng" encodinganalog="008/35-37">English.</language>
+         <langmaterial label="Language">Materials are in <language langcode="eng" encodinganalog="008/35-37">English.</language>
          </langmaterial>
          <abstract encodinganalog="520$a" label="Abstract">Consists of correspondence between
 				Kirkor Gumuchian, 1887-1949, and George Alexander Ball, 1862-1955, manufacturer of
@@ -102,16 +100,12 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
 				invoices for the Gumuchian purchase and a numerical inventory by George Ball of the
 				purchase.</abstract>
       </did>
+      <!-- required; 'descgrp' element replaces admininfo element in 2002 DTD --><descgrp>
+         <head>Administrative Information</head>
          <accessrestrict encodinganalog="506$a">
             <head>Access Restrictions</head>
             <p>This collection is open for research.</p>
          </accessrestrict>
-         <bioghist encodinganalog="545">
-            <head>Biographical Note</head>
-            <p>Bookseller of the firm Gumuchian &amp; Cie in Paris, France.</p>
-         </bioghist>
-      <!-- required; 'descgrp' element replaces admininfo element in 2002 DTD --><descgrp>
-         <head>Administrative Information</head>
          <acqinfo encodinganalog="541">
             <head>Acquisition Information</head>
             <p>Gift. 1989.</p>
@@ -129,6 +123,10 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
             <p>[Item], Gumuchian mss., Lilly Library, Indiana University, Bloomington,
 				Indiana.</p>
          </prefercite>
+         <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+            <p>Bookseller of the firm Gumuchian &amp; Cie in Paris, France.</p>
+         </bioghist>
       </descgrp>
       <!-- required for collection level; optional for lower levels --><scopecontent encodinganalog="520$a$b">
          <head>Scope and Content Note</head>
@@ -142,7 +140,7 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
 				George Ball of the purchase.</p>
          <p>A collector of many things, Ball purchased a large number of children's books from
 				Gumuchian during the period 1933-1940 and this collection records those purchases.
-				In 1930, Gumuchian had published a two volume catalog <title render="italic">Les
+				In 1930, Gumuchian had published a two volume catalog <title render="italic" linktype="simple">Les
 					Livres de L'Enfance du XV au XIX Siècle</title> (Lilly PN1037 .Z9 G9) of about
 				6200 items he had in his collection, and during the course of 1935 Ball managed to
 				purchase almost the entire catalog "en bloc."</p>
@@ -151,10 +149,10 @@ using a finding aid. --><frontmatter audience="external"><!-- information should
 				bookseller in such a climate. By 1939 he felt compelled to move his book stock and
 				selling operation to New York City.</p>
          <p>A brief description of the Gumuchian collection may be found in Barton Wood Currie's
-					<title render="italic">Fishers of Books</title>, p. 334-336 (Lilly Z992 .C976
-				F3). A biographical sketch of Gumuchian appears in <title render="italic">The
+					<title render="italic" linktype="simple">Fishers of Books</title>, p. 334-336 (Lilly Z992 .C976
+				F3). A biographical sketch of Gumuchian appears in <title render="italic" linktype="simple">The
 					American Scholar</title>, vol. 10, no. 3, Summer 1941 (Lilly PN1009 .A1 G97
-				1941) for which he wrote the article <title render="doublequote">From Piety to
+				1941) for which he wrote the article <title render="doublequote" linktype="simple">From Piety to
 					Entertainment in Children's Books.</title>
          </p>
       </scopecontent>
