@@ -1,0 +1,1288 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAB8040">InU-Li-VAB8040</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Wenning mss., <date normal="1958/1987"
+                        >1958-1987</date></titleproper>
+                
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2009" type="publication">© 2009</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2009">© 2009</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                <lb/>[date of source: <date normal="2009" type="source">2009</date>
+                <lb/>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2009-10-07">Oct. 7, 2009</date>
+            </creation>
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2009-10-30"/>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository:">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Wenning, Henry W.,
+                    1911-1987</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Wenning mss., </unittitle>
+            <unitdate encodinganalog="245$f" normal="1958/1987" type="inclusive"
+                >1958-1987</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2297</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>ca. 9,000 items</extent>
+
+                <!-- if both linear feet and number of items included, repeat extent-->
+            </physdesc>
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    encodinganalog="546" langcode="eng">English</language></langmaterial>
+            <abstract encodinganalog="520" label="Abstract"> The Wenning mss., 1958-1987, consists of
+                appraisals, correspondence, invoices and sales records, and catalogues of Henry W.
+                Wenning, 1911-1987, a rare book dealer specializing in modern first
+                editions.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+            <p>Henry W. Wenning, 1911-1987, entered the rare book business in 1958, as the
+                proprietor of Henry W. Wenning Rare Books in New Haven, Connecticut. In 1967 he
+                closed this business, selling his entire stock to York University, and accepted a
+                position at Washington University Library in St. Louis, Missouri. At the last
+                minute, however, Wenning changed his mind about the library position, and instead
+                joined the firm of C. A. Stonehill in partnership with Robert Barry, Sr. and Robert
+                Barry, Jr. He continued in the rare book trade until July 1971, when he returned to
+                his previous career as a consultant with the Martin E. Segal Company.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: Biographical; Appraisals;
+                Correspondence; Invoices; Business and Sales Records; Catalogues; Henry W. Wenning,
+                Publisher records; Printed Materials. The bulk of the material in this collection
+                dates from the period 1967-1971, when Wenning was at C.A. Stonehill. However, some
+                of the appraisals, catalogues, and book publishing records date from his earlier
+                business, 1958-1967.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The correspondence includes other book dealers such as Andreas Brown, Robert Hawley,
+                Peter Howard, Richard Mohr, Anthony Rota, and Robert Wilson; private collectors,
+                including Matthew Bruccoli, Jonathan Goodwin, and Murrell Lewis; and libraries,
+                including Indiana University, Kent State, Wesleyan University in Connecticut,
+                University of Wisconsin, and Yale. There is a particularly large amount of
+                correspondence between Wenning and his main institutional customer, Washington
+                University in St. Louis. Some of the individual albeit less frequent correspondents
+                include Leonie Adams, Samuel Beckett, Alan Brilliant, C.E. Frazer Clark, Alan Clodd,
+                Malcolm Cowley, Robert Creeley, Babette Deutsch, Donald Clifford Gallup, Walter
+                Samuel Hamady, John Clendennin Burne Hawkes, Granville Hicks, David Ignatow, James
+                Laughlin, Walter Lowenfels, William John Matheson, David Meltzer, Michael Millgate,
+                Breon Mitchell, Anais Nin, Norman Holmes Pearson, and Jonathan Chamberlain
+                Williams.</p>
+            <p>Henry W. Wenning, Publisher files include records for: Book of Resemblances by Robert
+                Duncan (1966); Blowing of the Seed by William Everson (1966) and T.S. Eliot
+                &amp; Ezra Pound: A Collaboration in Letters, edited by Donald Gallup (1970).
+                Printed items include a file of three catalogues of Roman Books, Inc. of Fort
+                Lauderdale, Florida. Wenning provided Jim Roman the majority of the books that
+                formed that dealer's beginnings.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+
+            <p> The following terms have been used to index the description of this collection in
+                    <extref xlink:href="http://www.iucat.iu.edu">IUCAT</extref>, the IU Libraries'
+                online catalog. Materials about related topics, persons or places can be found by
+                searching the catalog using these terms.</p>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/wenning+henry+w+1911-1987{su}">
+                            <persname encodinganalog="100" source="lcnaf">Wenning, Henry W.,
+                                1911-1987</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/adams+leonie+1899-1988">
+                            <persname encodinganalog="100" source="lcnaf">Adams, Léonie,
+                                1899-1988</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/bruccoli+matthew+j+1931-2008{su}">
+                            <persname encodinganalog="100" source="lcnaf">Bruccoli, Matthew J.
+                                (Matthew Joseph), 1931-2008</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/clodd+alan{su}">
+                            <persname encodinganalog="100" source="lcnaf">Clodd, Alan.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/deutsch+babette+1895-1982">
+                            <persname encodinganalog="100" source="lcnaf">Deutsch, Babette,
+                                1895-1982</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/hawley+robert+1929-">
+                            <persname encodinganalog="100" source="lcnaf">Hawley, Robert,
+                                1929-</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/howard+peter+b">
+                            <persname encodinganalog="100" source="lcnaf">Howard, Peter
+                                B.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/laughlin+james+1914-1997{su}">
+                            <persname encodinganalog="100" source="lcnaf">Laughlin, James,
+                                1914-1997</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/mohr+richard{su}">
+                            <persname encodinganalog="100" source="lcnaf">Mohr, Richard.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/rota+anthony{su}">
+                            <persname encodinganalog="100" source="lcnaf">Rota, Anthony.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/henry+w+wenning+rare+books{su}">
+                            <corpname encodinganalog="110" source="lcnaf">Henry W. Wenning Rare
+                                Books.</corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/c+a+stonehill+firm{su}">
+                            <corpname encodinganalog="110" source="lcnaf">C. A. Stonehill
+                                (Firm).</corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/washington+university+libraries+special+collections{su}">
+                            <corpname encodinganalog="110" source="lcnaf">Washington University
+                                (Saint Louis, Mo.). Libraries. Rare Books and Special Collections
+                                Dept.</corpname>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/wenning+henry+w+1911-1987+correspondence{su}">
+                            <subject encodinganalog="650" source="lcsh">Wenning, Henry W., 1911-1987
+                                --Correspondence.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/c+a+stonehill+firm{su}">
+                            <subject encodinganalog="650" source="lcsh">C. A. Stonehill
+                                (Firm).</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/henry+w+wenning+rare+books{su}">
+                            <subject encodinganalog="650" source="lcsh">Henry W. Wenning Rare
+                                Books.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/booksellers+bookselling+connecticut{su}">
+                            <subject encodinganalog="650" source="lcsh">Booksellers and bookselling
+                                --Connecticut.</subject>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+        </controlaccess>
+
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Purchase. Serendipity Books, Berkeley CA. 1998</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Wenning mss., Lilly Library, Indiana University, Bloomington,
+                    Indiana.</p>
+            </prefercite>
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAB8040-00001" level="series">
+                <did>
+                    <!-- optional -->
+                    <container label="Box" type="box">1</container>
+                    <unittitle>Biographical</unittitle>
+                </did>
+                <c02 id="VAB8040-00002" level="file">
+                    <did>
+                        <unittitle><emph render="italic">Recollection of Wenning </emph>by Robert
+                            Barry, Jr. Talk given at Henry Wenning Memorial Service, <unitdate
+                                normal="1987-06-22">June 22, 1987</unitdate>at the New York office
+                            of Martin E. Segal Co.</unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAB8040-00003" level="series">
+                <did>
+                    <container label="Box" type="box">1</container>
+                    <unittitle>Appraisals</unittitle>
+                </did>
+                <c02 id="VAB8040-00004" level="file">
+                    <did>
+                        <unittitle>Aiken, Conrad</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00005" level="file">
+                    <did>
+                        <unittitle>Brooks, Van Wyck</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00006" level="file">
+                    <did>
+                        <unittitle>Carpenter, Margaret</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00007" level="file">
+                    <did>
+                        <unittitle>Cowley, Malcolm</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00008" level="file">
+                    <did>
+                        <unittitle>cummings, e.e.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00009" level="file">
+                    <did>
+                        <unittitle>Gordon, Dorothy</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00010" level="file">
+                    <did>
+                        <unittitle>Ignatow, David</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00011" level="file">
+                    <did>
+                        <unittitle>Kerr, Sophie</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00012" level="file">
+                    <did>
+                        <unittitle>Laughlin, James</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00013" level="file">
+                    <did>
+                        <unittitle>Maas, Willard</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00014" level="file">
+                    <did>
+                        <unittitle>Mack, Maynard</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00015" level="file">
+                    <did>
+                        <unittitle>Norman, Dorothy</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00016" level="file">
+                    <did>
+                        <unittitle>Odets, Walter W.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00017" level="file">
+                    <did>
+                        <unittitle>Olson, Charles</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00018" level="file">
+                    <did>
+                        <unittitle>Philbrick, Charles</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00019" level="file">
+                    <did>
+                        <unittitle>Washington University, <unitdate normal="1964/1968"
+                                type="inclusive">1964-1968</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00020" level="file">
+                    <did>
+                        <unittitle>Washington University: George Marion O'Donnell</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00021" level="file">
+                    <did>
+                        <unittitle>Wesleyan University</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00022" level="file">
+                    <did>
+                        <unittitle>Wesleyan University: Albert Schweitzer</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00023" level="file">
+                    <did>
+                        <unittitle>Wisdom, William B.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00024" level="file">
+                    <did>
+                        <unittitle>Yale University</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00025" level="file">
+                    <did>
+                        <unittitle>Yale University: Barnaby Conrad</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00026" level="file">
+                    <did>
+                        <unittitle>Yeats, W.B.</unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAB8040-00027" level="series">
+                <did>
+                    <container label="Box" type="box">1</container>
+                    <unittitle>Correspondence</unittitle>
+                </did>
+                <c02 id="VAB8040-00028" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1961/1963" type="inclusive"
+                                >1961-1963:</unitdate>miscellaneous</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00029" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1964/1971" type="inclusive"
+                                >1964-1971:</unitdate>A-Z</unittitle>
+                    </did>
+                    <c03 id="VAB8040-00030" level="file">
+                        <did>
+                            <unittitle>A Miscellaneous</unittitle>
+                            <physdesc>(3 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00031" level="file">
+                        <did>
+                            <unittitle>Adams, Leonie</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00032" level="file">
+                        <did>
+                            <unittitle>Asphodel Bookshop</unittitle>
+                            <physdesc>(3 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00033" level="file">
+                        <did>
+                            <unittitle>Atkins, Thomas R.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00034" level="file">
+                        <did>
+                            <unittitle>B Miscellaneous</unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00035" level="file">
+                        <did>
+                            <unittitle>Barker, George, Collection</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00036" level="file">
+                        <did>
+                            <unittitle>Baskin, Leonard</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00037" level="file">
+                        <did>
+                            <unittitle>Beckett, Samuel</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00038" level="file">
+                        <did>
+                            <unittitle>Black, Robert K.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00039" level="file">
+                        <did>
+                            <unittitle>Black Sparrow Press, <unitdate normal="1967/1970"
+                                    type="inclusive">1967-1970</unitdate></unittitle>
+                            <physdesc>(8 folders)</physdesc>
+                        </did>
+                    </c03>
+
+                    <c03 id="VAB8040-00040" level="file">
+                        <did>
+                            <container label="Box" type="box">2</container>
+                            <unittitle>Black Sparrow Press, <unitdate normal="1971"
+                                >1971</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00041" level="file">
+                        <did>
+                            <unittitle>The Bookman</unittitle>
+                            <physdesc>(3 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00042" level="file">
+                        <did>
+                            <unittitle>Brown, Andreas, <unitdate normal="1966">1966</unitdate>[for
+                                later correspondence See Gotham Book Mart]</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00043" level="file">
+                        <did>
+                            <unittitle>Bruccoli, Matthew</unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00044" level="file">
+                        <did>
+                            <unittitle>Busfield, Bernard</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00045" level="file">
+                        <did>
+                            <unittitle>Butterworth, John R.</unittitle>
+                            <physdesc>(2 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00046" level="file">
+                        <did>
+                            <unittitle>C Miscellaneous</unittitle>
+                            <physdesc>(5 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00047" level="file">
+                        <did>
+                            <unittitle>Calder and Boyars, Ltd.</unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00048" level="file">
+                        <did>
+                            <unittitle>California State Polytechnic College</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00049" level="file">
+                        <did>
+                            <unittitle>Clark, C.E. Frazer</unittitle>
+                            <physdesc>(3 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00050" level="file">
+                        <did>
+                            <unittitle>Clifford, Stanley</unittitle>
+                            <physdesc>(5 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00051" level="file">
+                        <did>
+                            <unittitle>Clodd, Alan</unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00052" level="file">
+                        <did>
+                            <unittitle>Country Squires Books</unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00053" level="file">
+                        <did>
+                            <unittitle>Creeley, Robert</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00054" level="file">
+                        <did>
+                            <unittitle>Currey, Lloyd W.</unittitle>
+                            <physdesc>(3 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00055" level="file">
+                        <did>
+                            <unittitle>D Miscellaneous</unittitle>
+                            <physdesc>(5 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00056" level="file">
+                        <did>
+                            <unittitle>Deutsch, Babette</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00057" level="file">
+                        <did>
+                            <unittitle>Dzierbicki, Ronald L.</unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00058" level="file">
+                        <did>
+                            <unittitle>E Miscellaneous</unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00059" level="file">
+                        <did>
+                            <unittitle>Les Editions de Minuit</unittitle>
+                            <physdesc>(3 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00060" level="file">
+                        <did>
+                            <unittitle>Everson, William</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00061" level="file">
+                        <did>
+                            <unittitle>F Miscellaneous</unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00062" level="file">
+                        <did>
+                            <unittitle>Faber and Faber, Ltd.</unittitle>
+                            <physdesc>(5 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00063" level="file">
+                        <did>
+                            <unittitle>G Miscellaneous</unittitle>
+                            <physdesc>(5 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00064" level="file">
+                        <did>
+                            <unittitle>Goodwin, Jonathan (Mr. and Mrs.)</unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00065" level="file">
+                        <did>
+                            <unittitle>Gotham Book Mart</unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+
+
+                    <c03 id="VAB8040-00066" level="file">
+                        <did>
+                            <container label="Box" type="box">3</container>
+                            <unittitle>H Miscellaneous</unittitle>
+                            <physdesc>(5 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00067" level="file">
+                        <did>
+                            <unittitle>Hamady, Walter</unittitle>
+                            <physdesc>(2 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00068" level="file">
+                        <did>
+                            <unittitle>Harvard University Library</unittitle>
+                            <physdesc>(3 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00069" level="file">
+                        <did>
+                            <unittitle>Hawkes, John</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00070" level="file">
+                        <did>
+                            <unittitle>Hicks, Granville</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00071" level="file">
+                        <did>
+                            <unittitle>Hoagland, Clayton</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00072" level="file">
+                        <did>
+                            <unittitle>Hollings, Frank (Bookseller)</unittitle>
+                            <physdesc>(3 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00073" level="file">
+                        <did>
+                            <unittitle>I Miscellaneous</unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00074" level="file">
+                        <did>
+                            <unittitle>Indiana University</unittitle>
+                            <physdesc>(3 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00075" level="file">
+                        <did>
+                            <unittitle>International Bookfinders</unittitle>
+                            <physdesc>(7 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00076" level="file">
+                        <did>
+                            <unittitle>J Miscellaneous</unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00077" level="file">
+                        <did>
+                            <unittitle>K Miscellaneous</unittitle>
+                            <physdesc>(5 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00078" level="file">
+                        <did>
+                            <unittitle>Kent State University</unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00079" level="file">
+                        <did>
+                            <unittitle>Keynes, Quentin</unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00080" level="file">
+                        <did>
+                            <unittitle>Kiphuth, Delaney</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00081" level="file">
+                        <did>
+                            <unittitle>Kobler, John</unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00082" level="file">
+                        <did>
+                            <unittitle>L Miscellaneous</unittitle>
+                            <physdesc>(6 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00083" level="file">
+                        <did>
+                            <unittitle>Laughlin, James</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00084" level="file">
+                        <did>
+                            <unittitle>Lewis, Murrell</unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00085" level="file">
+                        <did>
+                            <unittitle>Lowenfels, Walter</unittitle>
+                            <physdesc>(3 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00086" level="file">
+                        <did>
+                            <unittitle>M Miscellaneous</unittitle>
+                            <physdesc>(6 folders)</physdesc>
+                        </did>
+                    </c03>
+
+
+                    <c03 id="VAB8040-00087" level="file">
+                        <did>
+                            <container label="Box" type="box">4</container>
+                            <unittitle>Manus Presse</unittitle>
+                            <physdesc>(5 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00088" level="file">
+                        <did>
+                            <unittitle>Meltzer, David</unittitle>
+                            <physdesc>(3 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00089" level="file">
+                        <did>
+                            <unittitle>Miller, A. T. (Dusty)</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00090" level="file">
+                        <did>
+                            <unittitle>Millett, Fred B.</unittitle>
+                            <physdesc>(2 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00091" level="file">
+                        <did>
+                            <unittitle>Millgate, Michael</unittitle>
+                            <physdesc>(3 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00092" level="file">
+                        <did>
+                            <unittitle>Mitchell, Breon</unittitle>
+                            <physdesc>(3 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00093" level="file">
+                        <did>
+                            <unittitle>N Miscellaneous</unittitle>
+                            <physdesc>(5 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00094" level="file">
+                        <did>
+                            <unittitle>Newman, Julia</unittitle>
+                            <physdesc>(2 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00095" level="file">
+                        <did>
+                            <unittitle>Nin, Anais</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00096" level="file">
+                        <did>
+                            <unittitle>Nothmann, N. C.</unittitle>
+                            <physdesc>(3 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00097" level="file">
+                        <did>
+                            <unittitle>O Miscellaneous</unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00098" level="file">
+                        <did>
+                            <unittitle>Ohio State University</unittitle>
+                            <physdesc>(3 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00099" level="file">
+                        <did>
+                            <unittitle>Oyez (Robert Hawley)</unittitle>
+                            <physdesc>(7 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00100" level="file">
+                        <did>
+                            <unittitle>P Miscellaneous</unittitle>
+                            <physdesc>(5 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00101" level="file">
+                        <did>
+                            <unittitle>Pearson, Norman Holmes</unittitle>
+                            <physdesc>(2 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00102" level="file">
+                        <did>
+                            <unittitle>Phoenix Bookshop</unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00103" level="file">
+                        <did>
+                            <unittitle>Publishers</unittitle>
+                            <physdesc>(6 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00104" level="file">
+                        <did>
+                            <unittitle>Q Miscellaneous</unittitle>
+                            <physdesc>(3 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00105" level="file">
+                        <did>
+                            <unittitle>R Miscellaneous</unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00106" level="file">
+                        <did>
+                            <unittitle>Rota, Bertram Ltd.</unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00107" level="file">
+                        <did>
+                            <unittitle>S Miscellaneous, <unitdate normal="1966/1969"
+                                    type="inclusive">1966-1969</unitdate></unittitle>
+                            <physdesc>(5 folders)</physdesc>
+                        </did>
+                    </c03>
+
+
+                    <c03 id="VAB8040-00108" level="file">
+                        <did>
+                            <container label="Box" type="box">5</container>
+                            <unittitle>S Miscellaneous, <unitdate normal="1970"
+                                >1970</unitdate></unittitle>
+                            <physdesc>(2 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00109" level="file">
+                        <did>
+                            <unittitle>Serendipity Books</unittitle>
+                            <physdesc>(5 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00110" level="file">
+                        <did>
+                            <unittitle>Siegel, Daniel G.</unittitle>
+                            <physdesc>(2 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00111" level="file">
+                        <did>
+                            <unittitle>Simon Fraser University</unittitle>
+                            <physdesc>(2 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00112" level="file">
+                        <did>
+                            <unittitle>Stonehill (Bob Barry, Jr.)</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00113" level="file">
+                        <did>
+                            <unittitle>T Miscellaneous</unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00114" level="file">
+                        <did>
+                            <unittitle>Tenney, Charles H.</unittitle>
+                            <physdesc>(3 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00115" level="file">
+                        <did>
+                            <unittitle>U Miscellaneous, <unitdate normal="1968"
+                                >1968</unitdate></unittitle>
+                            <physdesc>(2 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00116" level="file">
+                        <did>
+                            <unittitle>Unicorn Press and Bookshop</unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00117" level="file">
+                        <did>
+                            <unittitle>University of California, Los Angeles</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00118" level="file">
+                        <did>
+                            <unittitle>University of California, Santa Cruz</unittitle>
+                            <physdesc>(3 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00119" level="file">
+                        <did>
+                            <unittitle>University of Iowa</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00120" level="file">
+                        <did>
+                            <unittitle>University of Wisconsin</unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00121" level="file">
+                        <did>
+                            <unittitle>V Miscellaneous</unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00122" level="file">
+                        <did>
+                            <unittitle>W Miscellaneous</unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00123" level="file">
+                        <did>
+                            <unittitle>Wallrich, Larry A.</unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00124" level="file">
+                        <did>
+                            <unittitle>Washington University, <unitdate normal="1964/1969"
+                                    type="inclusive">1964-1969</unitdate></unittitle>
+                            <physdesc>(21 folders)</physdesc>
+                        </did>
+                    </c03>
+
+
+                    <c03 id="VAB8040-00125" level="file">
+                        <did>
+                            <container label="Box" type="box">6</container>
+                            <unittitle>Washington University, <unitdate normal="1970/1971"
+                                    type="inclusive">1970-1971</unitdate></unittitle>
+                            <physdesc>(7 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00126" level="file">
+                        <did>
+                            <unittitle>Wesleyan University</unittitle>
+                            <physdesc>(5 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00127" level="file">
+                        <did>
+                            <unittitle>Williams, Jonathan</unittitle>
+                            <physdesc>(2 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00128" level="file">
+                        <did>
+                            <unittitle>Y Miscellaneous</unittitle>
+                            <physdesc>(4 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8040-00129" level="file">
+                        <did>
+                            <unittitle>York University</unittitle>
+                            <physdesc>(3 folders)</physdesc>
+                        </did>
+                    </c03>
+
+                </c02>
+            </c01>
+            <c01 id="VAB8040-00130" level="series">
+                <did>
+                    <container label="Box" type="box">6</container>
+                    <unittitle>Invoices</unittitle>
+                </did>
+                <c02 id="VAB8040-00131" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1967/1969" type="inclusive"
+                                >1967-1969</unitdate>(arranged alphabetically)</unittitle>
+                        <physdesc>(31 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00132" level="file">
+                    <did>
+                        <unittitle>Misc. invoices, <unitdate normal="1968/1970" type="inclusive"
+                                >1968-1970</unitdate>(incl. Manus Presse &amp; G.R. Minkoff,
+                            etc.)</unittitle>
+                        <physdesc>(31 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00133" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1970/1971" type="inclusive"
+                                >1970-1971</unitdate>(arranged alphabetically), A-B</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00134" level="file">
+                    <did>
+                        <container label="Box" type="box">7</container>
+                        <unittitle><unitdate normal="1970/1971" type="inclusive"
+                                >1970-1971</unitdate>(cont.), C-Z</unittitle>
+                        <physdesc>(21 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00135" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1967/1970" type="inclusive"
+                                >1967-1970</unitdate>(arranged chronologically)</unittitle>
+                        <physdesc>(16 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00136" level="file">
+                    <did>
+                        <container label="Box" type="box">8</container>
+                        <unittitle><unitdate normal="1971">1971</unitdate>(arranged
+                            chronologically)</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAB8040-00137" level="series">
+                <did>
+                    <container label="Box" type="box">8</container>
+                    <unittitle>Business and sales records</unittitle>
+                </did>
+                <c02 id="VAB8040-00138" level="file">
+                    <did>
+                        <unittitle>
+                            <title render="doublequote">Release of Lease</title>
+                            <unitdate normal="1966-12">Dec. 1966</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00139" level="file">
+                    <did>
+                        <unittitle>
+                            <title render="doublequote">Credits Issued</title>
+                            <unitdate normal="1967/1971" type="inclusive">1967-1971</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00140" level="file">
+                    <did>
+                        <unittitle>Postal insurance receipts, <unitdate normal="1967/1971"
+                                type="inclusive">1967-1971</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00141" level="file">
+                    <did>
+                        <unittitle>Postal ledgers (i.e. packages mailed), <unitdate
+                                normal="1969/1971" type="inclusive">1969-1971</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00142" level="file">
+                    <did>
+                        <unittitle>Sales Ledger, Vol. I: <unitdate normal="1967/1969"
+                                type="inclusive">1967-1969;</unitdate>Vol. II: <unitdate
+                                normal="1970/1971" type="inclusive">1970-1971</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00143" level="file">
+                    <did>
+                        <unittitle>Sales Records: <unitdate normal="1967/1971" type="inclusive"
+                                >1967-1971</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00144" level="file">
+                    <did>
+                        <unittitle>Sales Totals: <unitdate normal="1967/1971" type="inclusive"
+                                >1967-1971</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAB8040-00145" level="series">
+                <did>
+                    <container label="Box" type="box">8</container>
+                    <unittitle>Catalogues</unittitle>
+                </did>
+                <c02 id="VAB8040-00146" level="file">
+                    <did>
+                        <unittitle>Henry W. Wenning, Rare Books: Catalogues 1-10 <unitdate
+                                normal="1958/1966" type="inclusive">(1958-1966)</unitdate>[cat. #2
+                            is marked copy]; Supplementary Lists 1 &amp; 2 <unitdate
+                                normal="1962">(1962,</unitdate><unitdate normal="1965"
+                                >1965)</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00147" level="file">
+                    <did>
+                        <unittitle>Henry W. Wenning/C.A. Stonehill, Inc. Rare Books: Catalogues 1-2
+                                <unitdate normal="1968">(1968;</unitdate><unitdate normal="1969"
+                                >1969.</unitdate>2 copies of each, both marked); Supplementary Lists
+                            1-2 <unitdate normal="1969-10">Oct. 1969;</unitdate><unitdate
+                                normal="1970-10">Oct. 1970.</unitdate>2 copies each, both marked);
+                            Recent Acquisitions 1 <unitdate normal="1970">(1970.</unitdate>2 copies,
+                            both marked); Recent Acquisitions 2 <unitdate normal="1970"
+                                >(1970.</unitdate>3 copies, 2 marked); Recent Acquisitions 3
+                                <unitdate normal="1971">(1971.</unitdate>3 copies, 2
+                            marked)</unittitle>
+                        <physdesc>(5 folders)</physdesc>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAB8040-00148" level="series">
+                <did>
+                    <container label="Box" type="box">8</container>
+                    <unittitle>Henry W. Wenning, Publisher, records</unittitle>
+                </did>
+                <c02 id="VAB8040-00149" level="file">
+                    <did>
+                        <unittitle>Record book of expenses in publishing <emph render="italic">Book
+                                of Resemblances</emph> by Robert Duncan. <unitdate normal="1966"
+                                >1966</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00150" level="file">
+                    <did>
+                        <unittitle>Record book for <emph render="italic">Blowing of the Seed</emph>
+                            by William Everson. <unitdate normal="1966">1966</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00151" level="file">
+                    <did>
+                        <unittitle>Re: Wenning/Stonehill publication of T.S. Eliot &amp; Ezra
+                            Pound: <emph render="italic">A Collaboration in Letters</emph> edited by
+                            Donald Gallup. <unitdate normal="1970">1970</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAB8040-00152" level="series">
+                <did>
+                    <container label="Box" type="box">8</container>
+                    <unittitle>Printed materials</unittitle>
+                </did>
+                <c02 id="VAB8040-00153" level="file">
+                    <did>
+                        <unittitle>Roman Books, Inc. Fort Lauderdale, FL: catalogues #2 &amp; 3;
+                            Supplementary List One</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8040-00154" level="file">
+                    <did>
+                        <unittitle>Miscellaneous printed (2 items)</unittitle>
+                    </did>
+                </c02>
+            </c01>
+
+        </dsc>
+    </archdesc>
+</ead>
