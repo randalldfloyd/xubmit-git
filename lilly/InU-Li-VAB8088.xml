@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAB8088">InU-Li-VAB8088</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Scrimgeour mss., <date normal="1968/1981"
+                        >1968-1981</date></titleproper>
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2009" type="publication">© 2009</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2009">© 2009</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                <lb/>[date of source: <date normal="2009" type="source">2009</date>
+                <lb/>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2009-10-13">Oct. 13, 2009</date>
+            </creation>
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2009-10-13"/>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository:">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Scrimgeour, Gary J.</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Scrimgeour mss., </unittitle>
+            <unitdate encodinganalog="245$f" normal="1968/1981" type="inclusive"
+                >1968-1981</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2116</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>77 items</extent>
+
+                <!-- if both linear feet and number of items included, repeat extent-->
+            </physdesc>
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    encodinganalog="546" langcode="eng">English</language></langmaterial>
+            <abstract encodinganalog="520" label="Abstract">The Scrimgeour mss., 1968-1981, consists
+                of the correspondence and manuscripts of author Gary James Scrimgeour, 1934- ,
+                primarily relating to the writing and publication of his first novel, <emph
+                    render="italic">A Woman of Her Times.</emph></abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+            <p>Gary James Scrimgeour was born in Auckland, New Zealand on <unitdate
+                    normal="1934-01-15">January 15, 1934.</unitdate> Scrimgeour took his Ph.D. from
+                Princeton University in 1968. He enjoyed a long academic and professional career,
+                including being an assistant professor of English <unitdate normal="1964/1968"
+                    type="inclusive">(1964-1968)</unitdate> at Indiana University, Bloomington. He
+                published his first novel, <emph render="italic">A Woman of Her Times</emph>, in
+                1982.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Correspondence and II.
+                Manuscripts.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>Consists of correspondence and manuscripts of Gary James Scrimgeour, 1934- ,
+                primarily relating to the writing and publication of Scrimgeour's first novel, <emph
+                    render="italic">A Woman of Her Times</emph>. Correspondents include publisher
+                Frank Eugene Taylor, <unitdate normal="1916/1999" type="inclusive"
+                    >1916-1999,</unitdate> who acted as Scrimgeour's agent in selling the manuscript
+                of <emph render="italic">A Woman of Her Times</emph>, as well as editors at Michael
+                Joseph Ltd. in London and G.P. Putnam's Sons in New York, publishers of the novel.
+                Also included is a draft of Scrimgeour's <unitdate normal="1968">1968</unitdate>
+                dissertation for Princeton University, <emph render="italic">Drama and Theatre in
+                    the Early Nineteenth Century</emph>. Completing the collection are notes and
+                manuscripts on 19th century drama and dramatists, an unrealized series of
+                publications prepared in the <unitdate normal="1970/1979" type="inclusive"
+                    >1970s</unitdate> for Ben Blom, Inc.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <p>The following terms have been used to index the description of this collection in
+                    <extref xlink:href="http://www.iucat.iu.edu">IUCAT</extref>, the IU Libraries'
+                online catalog. Materials about related topics, persons or places can be found by
+                searching the catalog using these terms.</p>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/scrimgeour+gary+j{su}">
+                            <persname encodinganalog="100" source="lcnaf">Scrimgeour, Gary
+                                J.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/taylor+frank+eugene+1916{su}">
+                            <persname encodinganalog="100" source="lcnaf">Taylor, Frank Eugene,
+                                1916-</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/scrimgeour+gary+j+woman+of+her+times{su}">
+                            <persname encodinganalog="100" source="lcnaf">Scrimgeour, Gary J. Woman
+                                of her times.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/scrimgeour+gary+j+drama+and+theatre+in+the+early+nineteenth+century">
+                            <persname encodinganalog="100" source="lcnaf">Scrimgeour, Gary J. Drama
+                                and theatre in the early nineteenth century.</persname>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/scrimgeour+gary+j+correspondence{su}">
+                            <subject encodinganalog="650" source="lcsh">Scrimgeour, Gary J.
+                                --Correspondence.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/scrimgeour+gary+j+woman+of+her+times{su">
+                            <subject encodinganalog="650" source="lcsh">Scrimgeour, Gary J. Woman of
+                                her times.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/authors+american+correspondence{su}">
+                            <subject encodinganalog="650" source="lcsh">Authors, American
+                                --Correspondence.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/drama+19th+century+history+criticism{su}">
+                            <subject encodinganalog="650" source="lcsh">Drama --19th century
+                                --History and criticism.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/dramatists+english+19th+century{su}">
+                            <subject encodinganalog="650" source="lcsh">Dramatists, English --19th
+                                century.</subject>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+        </controlaccess>
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Gift. 1981, 1987</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Scrimgeour mss., Lilly Library, Indiana University, Bloomington,
+                    Indiana.</p>
+            </prefercite>
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAB8088-00001" level="series">
+                <did>
+                    <!-- optional -->
+                    <container label="Box" type="box">1</container>
+                    <unittitle>I. Correspondence</unittitle>
+                </did>
+                <c02 id="VAB8088-00002" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1981-01/1981-06" type="inclusive">1981,
+                                Jan.-June.</unitdate>Correspondence with editors at Michael Joseph,
+                            Ltd. in London and Putnam's in New York</unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAB8088-00003" level="series">
+                <did>
+                    <container label="Box" type="box">1</container>
+                    <unittitle>II. Manuscripts</unittitle>
+                </did>
+                <c02 id="VAB8088-00004" level="subseries">
+                    <did>
+                        <unittitle>A Woman of Her Times</unittitle>
+                    </did>
+                    <c03 id="VAB8088-00005" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1981-01/1981-06" type="inclusive">1981,
+                                    Jan.-June.</unitdate>1st draft notes, etc.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00006" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1978/1979" type="inclusive"
+                                    >1978-1979.</unitdate><emph render="italic">Women and
+                                    War.</emph> Part one</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00007" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1979">1979</unitdate>1st draft. Drafts,
+                                out-takes, original</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00008" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1980-10/1980-11" type="inclusive">1980,
+                                    Oct.-Nov.</unitdate>1st draft. Original typescript</unittitle>
+                            <physdesc>(2 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00009" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1980-11">1980, Nov.</unitdate>Text as
+                                edited by Phyllis Grann</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00010" level="file">
+                        <did>
+                            <container label="Box" type="box">2</container>
+                            <unittitle><unitdate normal="1981-01/1981-02" type="inclusive">1981,
+                                    Jan.-Feb.</unitdate>1st revision by author
+                                (photocopy)</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00011" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1981-02">1981, Feb.</unitdate>2nd edited
+                                text by Grann</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00012" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1981-03">1981, Mar.</unitdate>Second
+                                revision by author</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00013" level="file">
+                        <did>
+                            <container label="Box" type="box">3</container>
+                            <unittitle><unitdate normal="1981-03/1981-04" type="inclusive">1981,
+                                    Mar.-Apr.</unitdate>Final version sent for
+                                copy-editing</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00014" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1981-05-01">1981, May
+                                1.</unitdate>Out-takes during copy editing</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00015" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1981-06">1981, June.</unitdate>Edited
+                                text</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00016" level="file">
+                        <did>
+                            <unittitle>
+                                <unitdate normal="1968/1981" type="inclusive">undated.</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00017" level="file">
+                        <did>
+                            <container label="Box" type="box">4</container>
+                            <unittitle>Final version of text. Photocopy</unittitle>
+                            <physdesc>(6 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00018" level="file">
+                        <did>
+                            <unittitle>Author Galleys</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00019" level="file">
+                        <did>
+                            <unittitle>Master galleys</unittitle>
+                            <physdesc>(2 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00020" level="file">
+                        <did>
+                            <unittitle>Final-final pages galleys</unittitle>
+                        </did>
+                    </c03>
+
+                </c02>
+                <c02 id="VAB8088-00021" level="subseries">
+                    <did>
+                        <container label="Box" type="box">4</container>
+                        <unittitle>
+                            <emph render="italic">Drama and Theatre in the Early Nineteenth
+                                Century</emph>
+                        </unittitle>
+                    </did>
+                    <c03 id="VAB8088-00022" level="file">
+                        <did>
+                            <unittitle>Dissertation for Princeton University, <unitdate
+                                    normal="1968">1968</unitdate></unittitle>
+                            <physdesc>(5 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00023" level="file">
+                        <did>
+                            <unittitle>
+                                <emph render="italic">19th century drama and dramatists</emph>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00024" level="file">
+                        <did>
+                            <unittitle>General Introduction</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00025" level="file">
+                        <did>
+                            <unittitle>Bibliography</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00026" level="file">
+                        <did>
+                            <unittitle>John Baldwin Buckston, <unitdate normal="1802/1879"
+                                    type="inclusive">1802-1879</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00027" level="file">
+                        <did>
+                            <unittitle>Edward Bulwer Lytton, <unitdate normal="1803/1873"
+                                    type="inclusive">1803-1873</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00028" level="file">
+                        <did>
+                            <unittitle>James C. Cross, <unitdate normal="1810"
+                                >d.1810?</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00029" level="file">
+                        <did>
+                            <unittitle>William Diamond, <unitdate normal="1782/1837"
+                                    type="inclusive">1782?-1837?</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00030" level="file">
+                        <did>
+                            <unittitle>Charles Dibdin the Younger, <unitdate normal="1767/1833"
+                                    type="inclusive">1767-1833;</unitdate>Thomas John Dibdin,
+                                    <unitdate normal="1771/1841" type="inclusive"
+                                    >1771-1841</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00031" level="file">
+                        <did>
+                            <unittitle>Edward Fitball, <unitdate normal="1792/1873" type="inclusive"
+                                    >1792-1873</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00032" level="file">
+                        <did>
+                            <unittitle>John Thomas Haines, <unitdate normal="1799/1843"
+                                    type="inclusive">1799-1843</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00033" level="file">
+                        <did>
+                            <unittitle>Douglas William Jarrold, <unitdate normal="1803/1857"
+                                    type="inclusive">1803-1857</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00034" level="file">
+                        <did>
+                            <unittitle>James Kenney, <unitdate normal="1780/1849" type="inclusive"
+                                    >1780-1849</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00035" level="file">
+                        <did>
+                            <unittitle>James Sheridan Knowles, <unitdate normal="1784/1862"
+                                    type="inclusive">1784-1862</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00036" level="file">
+                        <did>
+                            <unittitle>Matthew Gregory Lewis, <unitdate normal="1775/1818"
+                                    type="inclusive">1775-1818</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00037" level="file">
+                        <did>
+                            <container label="Box" type="box">5</container>
+                            <unittitle>William Thomas Moncrieff, <unitdate normal="1794/1857"
+                                    type="inclusive">1794-1857</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00038" level="file">
+                        <did>
+                            <unittitle>Richard Brinsley Peake, <unitdate normal="1792/1847"
+                                    type="inclusive">1792-1847</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00039" level="file">
+                        <did>
+                            <unittitle>Isaac Pocock, <unitdate normal="1782/1835" type="inclusive"
+                                    >1782-1835</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00040" level="file">
+                        <did>
+                            <unittitle>John Poole, <unitdate normal="1786/1872" type="inclusive"
+                                    >1786?-1872</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00041" level="file">
+                        <did>
+                            <unittitle>James Robinson Planche, <unitdate normal="1796/1880"
+                                    type="inclusive">1796-1880</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00042" level="file">
+                        <did>
+                            <unittitle>George Soane, <unitdate normal="1790/1860" type="inclusive"
+                                    >1790-1860</unitdate></unittitle>
+                        </did>
+                    </c03>
+
+                </c02>
+                <c02 id="VAB8088-00043" level="subseries">
+                    <did>
+                        <container label="Box" type="box">5</container>
+                        <unittitle>Vol. III: Tragedies. Manuscript</unittitle>
+                    </did>
+                    <c03 id="VAB8088-00044" level="file">
+                        <did>
+                            <unittitle>Draft essays on drama by decades, <unitdate
+                                    normal="1800/1840" type="inclusive"
+                                >1800-1840.</unitdate>Notes</unittitle>
+                            <physdesc>(7 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00045" level="file">
+                        <did>
+                            <unittitle>Draft essays on drama by decades, <unitdate
+                                    normal="1790/1819" type="inclusive"
+                                >1790-1819.</unitdate>Manuscripts.</unittitle>
+                            <physdesc>(5 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8088-00046" level="file">
+                        <did>
+                            <unittitle>Miscellaneous. Includes research notes, book dealer
+                                catalogues, etc.</unittitle>
+                            <physdesc>(3 folders)</physdesc>
+                        </did>
+                    </c03>
+
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
