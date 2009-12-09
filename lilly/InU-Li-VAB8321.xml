@@ -1,0 +1,1058 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAB8321">InU-Li-VAB8321</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Harris, L. mss., <date normal="1931/1977"
+                        >1931-1977</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2009" type="publication">© 2009</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2009">© 2009</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                    <lb/><date normal="2009" type="source">2009</date>
+                <lb/>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2009-12-08">Dec. 8, 2009</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2009-12-08"/>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Harris, Leon A.</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Harris, L. mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1931/1977" type="inclusive"
+                >1931-1977</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1527</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>1,224 items.</extent>
+            </physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Harris, L. mss. consists of the
+                correspondence of Leon A. Harris, 1926- , author, engendered in the writing of his
+                book <title render="italic">Upton Sinclair, American Rebel</title> (published by
+                Crowell in 1975) and drafts of the book.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+
+            <p>Leon A. Harris, 1926- , is an author and social reformer from Dallas, Texas.</p>
+
+        </bioghist>
+
+
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Harris, L. mss. consists of the correspondence of Leon A. Harris, 1926- , author,
+                engendered in the writing of his book <title render="italic">Upton Sinclair,
+                    American Rebel</title> (published by Crowell in 1975) and drafts of the book.
+                The letters from 1931-1964 are those to and from Upton Beall Sinclair, 1878-1968,
+                author and social reformer, which Harris acquired during his research. The later
+                letters to Harris are from many who knew Sinclair, were swayed (or not) by his
+                works, or have written about him. Others are from libraries which supplied copies of
+                Sinclair's letters and accompanied the copies with the rules and regulations
+                regarding their use.</p>
+            <p>A group of miscellaneous items associated with Harris' research include: Allatt
+                checklist of material about Sinclair, 1963-1967; book jackets for <title
+                    render="italic">Upton Sinclair, American Rebel</title>; books contemporary with
+                Sinclair's life; chronology of Sinclair's life, 1878-1968; chronology of the United
+                States, 1862-1968; Cicero (drama) by Sinclair, mimeo copy; oral interviews
+                (transcripts) with Earl Russell Browder, Melville Henry Cane, Ronald Gottesman,
+                Carey McWilliams, David and Jean (Weidman) Sinclair, Norman Thomas, Alden Rogers
+                Whitman; people file; physical description of Sinclair; publications by Sinclair,
+                1894-1968; <title render="italic">The Sinclair CALM</title> by Ronald Gottesman;
+                work data on research; printed material.</p>
+            <p>The drafts of <title render="italic">Upton Sinclair, American Rebel</title> include:
+                Early draft, Chap. I-II, IV-XXV, T.D. with corrections; Later draft, Chap. I-XXV,
+                carbon of T.D., heavily corrected; Final draft, Chap. I-XXV, xerox of T.D.; Notes;
+                Old, T.D. &amp; xerox, many corrections and cut-offs; Notes: Final master, T.D.
+                with many corrections; Notes: Xerox (3 copies); Text and notes: pp. 474-662, carbon
+                and T.D.; Bibliography: A.D.; Bibliography: T.D. &amp; Xerox - 4 copies, 3 with
+                corrections; Bibliography: Xerox - 2 copies with corrections. Accompanying the
+                drafts are Examination copies for approval and correction by A) Edward Allatt and
+                Ronald Gottesman, carbon; B) David and Jean (Weidman) Sinclair, Xerox; C) Alden
+                Rogers Whitman, carbon; D) unidentified copy, T.D. and carbon. Resource or working
+                materials for the book are arranged first by chapter and then in a group of 26
+                general folders.</p>
+
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <p>The following terms have been used to index the description of this collection in
+                    <extref xlink:href="http://www.iucat.iu.edu">IUCAT</extref>, the IU Libraries'
+                online catalog. Materials about related topics, persons or places can be found by
+                searching the catalog using these terms.</p>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/sinclair+upton+1878-1968">
+                            <persname encodinganalog="700" source="lcnaf">Sinclair, Upton,
+                                1878-1968.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/harris+leon+a+upton+sinclair+american+rebel">
+                            <persname encodinganalog="700" source="lcnaf">Harris, Leon A. Upton
+                                Sinclair, American Rebel.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/gottesman+ronald">
+                            <persname encodinganalog="700" source="lcnaf">Gottesman,
+                                Ronald.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/allatt+edward+1924">
+                            <persname encodinganalog="700" source="lcnaf">Allatt, Edward,
+                                1924-</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/browder+earl+1891-1973">
+                            <persname encodinganalog="700" source="lcnaf">Browder, Earl,
+                                1891-1973.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/cane+melville+1879">
+                            <persname encodinganalog="700" source="lcnaf">Cane, Melville,
+                                1879-</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/mcwilliams+carey+1905">
+                            <persname encodinganalog="700" source="lcnaf">McWilliams, Carey,
+                                1905-</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/sinclair+david+1901-1987">
+                            <persname encodinganalog="700" source="lcnaf">Sinclair, David,
+                                1901-1987.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/thomas+norman+1884-1968">
+                            <persname encodinganalog="700" source="lcnaf">Thomas, Norman,
+                                1884-1968.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/whitman+alden">
+                            <persname encodinganalog="700" source="lcnaf">Whitman, Alden.</persname>
+                        </extref>
+                    </item>
+
+                </list>
+
+            </controlaccess>
+
+        </controlaccess>
+
+
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired 1979.</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>Harris, L. mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAB8321-00001" level="series">
+                <did>
+                    <!-- optional -->
+                    <container label="Box" type="box">1</container>
+
+
+                    <unittitle>Correspondence, <unitdate normal="1937/1977" type="inclusive"
+                            >1937-1977</unitdate></unittitle>
+                </did>
+
+                <c02 id="VAB8321-00002" level="file">
+                    <did>
+
+
+                        <unittitle>Folders 1-21: Correspondence, <unitdate normal="1937/1977"
+                                type="inclusive">1937-1977</unitdate></unittitle>
+                    </did>
+                    <arrangement>
+                        <p>Arranged chronologically.</p>
+                    </arrangement>
+                    <scopecontent>
+                        <p>
+                            <emph render="bold">List of correspondents:</emph>
+                        </p>
+                        <list>
+                            <item>
+                                <persname>Alinsky, Saul David</persname>
+                                <!-- Use any valid encoding within <item> here -->
+                            </item>
+                            <item>
+                                <persname>Allatt, Edward</persname>
+                            </item>
+                            <item>
+                                <persname>Anderson, Robert Bernerd</persname>
+                            </item>
+                            <item>
+                                <persname>Ashford, Gerald</persname>
+                            </item>
+                            <item>
+                                <persname>Baldwin, Roger Nash</persname>
+                            </item>
+                            <item>
+                                <persname>Bannister, Robert Corwin</persname>
+                            </item>
+                            <item>
+                                <persname>Baxandall, Lee</persname>
+                            </item>
+                            <item>
+                                <persname>Bayh, Birch Evans</persname>
+                            </item>
+                            <item>
+                                <persname>Behrmann, Samuel Nathaniel</persname>
+                            </item>
+                            <item>
+                                <persname>Bellow, Saul</persname>
+                            </item>
+                            <item>
+                                <persname>Belt, Elmer</persname>
+                            </item>
+                            <item>
+                                <persname>Bentley, Eric</persname>
+                            </item>
+                            <item>
+                                <persname>Bland, II, John Randolph</persname>
+                            </item>
+                            <item>
+                                <persname>Bland, Richard Howard</persname>
+                            </item>
+                            <item>
+                                <persname>Blanshard, Paul</persname>
+                            </item>
+                            <item>
+                                <persname>Bliven, Bruce Ormsby</persname>
+                            </item>
+                            <item>
+                                <persname>Bloodworth, William Andrew</persname>
+                            </item>
+                            <item>
+                                <persname>Boni, Albert</persname>
+                            </item>
+                            <item>
+                                <persname>Borough, Reuben W.</persname>
+                            </item>
+                            <item>
+                                <persname>Boydston, Jo Ann (Harrison)</persname>
+                            </item>
+                            <item>
+                                <persname>Braybrooke, Neville</persname>
+                            </item>
+                            <item>
+                                <persname>Bronstein, Dale W.</persname>
+                            </item>
+                            <item>
+                                <persname>Browder, Earl Russell</persname>
+                            </item>
+                            <item>
+                                <persname>Buddy, George</persname>
+                            </item>
+                            <item>
+                                <persname>Bunche, Ralph Johnson</persname>
+                            </item>
+                            <item>
+                                <persname>Bundy, McGeorge</persname>
+                            </item>
+                            <item>
+                                <persname>Caesar, Irving</persname>
+                            </item>
+                            <item>
+                                <persname>Canham, Erwin Dain</persname>
+                            </item>
+                            <item>
+                                <persname>Cantwell, Robert Emmet</persname>
+                            </item>
+                            <item>
+                                <persname>Carmichael, Stokely</persname>
+                            </item>
+                            <item>
+                                <persname>Catledge, Turner</persname>
+                            </item>
+                            <item>
+                                <persname>Catton, Bruce</persname>
+                            </item>
+                            <item>
+                                <persname>Caylor, George, N.</persname>
+                            </item>
+                            <item>
+                                <persname>Cercone, William F.</persname>
+                            </item>
+                            <item>
+                                <persname>Champion, Myra</persname>
+                            </item>
+                            <item>
+                                <persname>Clark, Ramsey</persname>
+                            </item>
+                            <item>
+                                <persname>Cohen, Wilbur, Joseph</persname>
+                            </item>
+                            <item>
+                                <persname>Collier, Phyllis (Fenington)</persname>
+                            </item>
+                            <item>
+                                <persname>Cormier, Frank</persname>
+                            </item>
+                            <item>
+                                <persname>Cousins, Norman</persname>
+                            </item>
+                            <item>
+                                <persname>Cowley, Malcolm</persname>
+                            </item>
+                            <item>
+                                <persname>Cranston, Alan</persname>
+                            </item>
+                            <item>
+                                <persname>Cronkite, Walter</persname>
+                            </item>
+                            <item>
+                                <persname>Dahlberg, Edward</persname>
+                            </item>
+                            <item>
+                                <persname>De Gruson, Eugene, Henry</persname>
+                            </item>
+                            <item>
+                                <persname>Deutsch, Babette</persname>
+                            </item>
+                            <item>
+                                <persname>Dies, Martin</persname>
+                            </item>
+                            <item>
+                                <persname>Dos Passos, John</persname>
+                            </item>
+                            <item>
+                                <persname>Dougan, Robert Ormes</persname>
+                            </item>
+                            <item>
+                                <persname>Douglas, Paul Howard</persname>
+                            </item>
+                            <item>
+                                <persname>Dubinsky, David</persname>
+                            </item>
+                            <item>
+                                <persname>Durant, William James</persname>
+                            </item>
+                            <item>
+                                <persname>Edel, Leon</persname>
+                            </item>
+                            <item>
+                                <persname>Esslin, Martin</persname>
+                            </item>
+                            <item>
+                                <persname>Evans, Henry Scarritt</persname>
+                            </item>
+                            <item>
+                                <persname>Fargis, Paul McKenna</persname>
+                            </item>
+                            <item>
+                                <persname>Farmer, James</persname>
+                            </item>
+                            <item>
+                                <persname>Farrell, James Thomas</persname>
+                            </item>
+                            <item>
+                                <persname>Fast, Howard Melvin</persname>
+                            </item>
+                            <item>
+                                <persname>Fiedler, Leslie Aaron</persname>
+                            </item>
+                            <item>
+                                <persname>Filler, Louis</persname>
+                            </item>
+                            <item>
+                                <persname>Fischer, John</persname>
+                            </item>
+                            <item>
+                                <persname>Folsom, Michael Brewster</persname>
+                            </item>
+                            <item>
+                                <persname>Freeman, Muriel</persname>
+                            </item>
+                            <item>
+                                <persname>French, Warren Graham</persname>
+                            </item>
+                            <item>
+                                <persname>Friedel, Frank Burt</persname>
+                            </item>
+                            <item>
+                                <persname>Friedman, Milton</persname>
+                            </item>
+                            <item>
+                                <persname>Fuller, Lon Luvois</persname>
+                            </item>
+                            <item>
+                                <persname>Galbraith, John Kenneth</persname>
+                            </item>
+                            <item>
+                                <persname>Gallup, Donald Clifford</persname>
+                            </item>
+                            <item>
+                                <persname>Gandhi, Indira (Nehru)</persname>
+                            </item>
+                            <item>
+                                <persname>Gardner, John William</persname>
+                            </item>
+                            <item>
+                                <persname>Geffen, Felicia</persname>
+                            </item>
+                            <item>
+                                <persname>Ginsberg, Allen</persname>
+                            </item>
+                            <item>
+                                <persname>Gordon, Darley (Fuller)</persname>
+                            </item>
+                            <item>
+                                <persname>Gordon, Robert M.</persname>
+                            </item>
+                            <item>
+                                <persname>Gottesman, Ronald</persname>
+                            </item>
+                            <item>
+                                <persname>Graham, Elliot</persname>
+                            </item>
+                            <item>
+                                <persname>Green, Ernest S.</persname>
+                            </item>
+                            <item>
+                                <persname>Haldeman, Henry J.</persname>
+                            </item>
+                            <item>
+                                <persname>Handlin, Oscar</persname>
+                            </item>
+                            <item>
+                                <persname>Halpern, Seymour</persname>
+                            </item>
+                            <item>
+                                <persname>Harriman, William Averell</persname>
+                            </item>
+                            <item>
+                                <persname>Harris, Leon A.</persname>
+                            </item>
+                            <item>
+                                <persname>Harrison, John Marshall</persname>
+                            </item>
+                            <item>
+                                <persname>Hayakawa, Samuel Ichiyé</persname>
+                            </item>
+                            <item>
+                                <persname>Hazlitt, Henry</persname>
+                            </item>
+                            <item>
+                                <persname>Heller, Walter Wolfgang</persname>
+                            </item>
+                            <item>
+                                <persname>Hicks, Granville</persname>
+                            </item>
+                            <item>
+                                <persname>Hill, Steven Phillips</persname>
+                            </item>
+                            <item>
+                                <persname>Hoagland, Hudson</persname>
+                            </item>
+                            <item>
+                                <persname>Hogan, William</persname>
+                            </item>
+                            <item>
+                                <persname>Hook, Sidney</persname>
+                            </item>
+                            <item>
+                                <persname>Hoover, John Edgar</persname>
+                            </item>
+                            <item>
+                                <persname>Huebsch, Benjamin W.</persname>
+                            </item>
+                            <item>
+                                <persname>Humphrey, Hubert Horatio</persname>
+                            </item>
+                            <item>
+                                <persname>Hutchins, Robert Maynard</persname>
+                            </item>
+                            <item>
+                                <persname>Johnson, Claudia Alta (Taylor)</persname>
+                            </item>
+                            <item>
+                                <persname>Jones, Howard Mumford</persname>
+                            </item>
+                            <item>
+                                <persname>Jones, James</persname>
+                            </item>
+                            <item>
+                                <persname>Jung, Franz</persname>
+                            </item>
+                            <item>
+                                <persname>King, Alan</persname>
+                            </item>
+                            <item>
+                                <persname>Kirstein, Lincoln</persname>
+                            </item>
+                            <item>
+                                <persname>Klein, Herbert George</persname>
+                            </item>
+                            <item>
+                                <persname>Kling, Dollie (Kimbrough)</persname>
+                            </item>
+                            <item>
+                                <persname>Koestler, Arthur</persname>
+                            </item>
+                            <item>
+                                <persname>Krasnoff, George</persname>
+                            </item>
+                            <item>
+                                <persname>Kristol, Irving</persname>
+                            </item>
+                            <item>
+                                <persname>Krock, Arthur</persname>
+                            </item>
+                            <item>
+                                <persname>Laidler, Harry Wellington</persname>
+                            </item>
+                            <item>
+                                <persname>Laxness, Halldór Kiljan</persname>
+                            </item>
+                            <item>
+                                <persname>Leedham, Linnea</persname>
+                            </item>
+                            <item>
+                                <persname>Lerner, Max</persname>
+                            </item>
+                            <item>
+                                <persname>Lesser, Sol</persname>
+                            </item>
+                            <item>
+                                <persname>Lipset, Seymour Martin</persname>
+                            </item>
+                            <item>
+                                <persname>Lorant, Stefan</persname>
+                            </item>
+                            <item>
+                                <persname>Lyons, Eugene</persname>
+                            </item>
+                            <item>
+                                <persname>McCloy, John Jay</persname>
+                            </item>
+                            <item>
+                                <persname>McNamera, Robert Strange</persname>
+                            </item>
+                            <item>
+                                <persname>McWilliams, Carey</persname>
+                            </item>
+                            <item>
+                                <persname>Mailer, Norman</persname>
+                            </item>
+                            <item>
+                                <persname>Marcuse, Herbert</persname>
+                            </item>
+                            <item>
+                                <persname>Mayhew, John D.</persname>
+                            </item>
+                            <item>
+                                <persname>Menninger, Karl Augustus</persname>
+                            </item>
+                            <item>
+                                <persname>Moley, Raymond</persname>
+                            </item>
+                            <item>
+                                <persname>Morison, Samuel Eliot</persname>
+                            </item>
+                            <item>
+                                <persname>Morse, Wayne Lyman</persname>
+                            </item>
+                            <item>
+                                <persname>Morton, Frederic</persname>
+                            </item>
+                            <item>
+                                <persname>Moynihan, Daniel Patrick</persname>
+                            </item>
+                            <item>
+                                <persname>Muelder, Walter George</persname>
+                            </item>
+                            <item>
+                                <persname>Mumford, Lewis</persname>
+                            </item>
+                            <item>
+                                <persname>Marin, Luis Monõz</persname>
+                            </item>
+                            <item>
+                                <persname>Muravyev, Dmitry</persname>
+                            </item>
+                            <item>
+                                <persname>Murphy, Elizabeth K.</persname>
+                            </item>
+                            <item>
+                                <persname>Musmanno, Michael Angelo</persname>
+                            </item>
+                            <item>
+                                <persname>Namikawa, Ryo</persname>
+                            </item>
+                            <item>
+                                <persname>Nash, Ogden</persname>
+                            </item>
+                            <item>
+                                <persname>Naumberg, Elsa H.</persname>
+                            </item>
+                            <item>
+                                <persname>Nearing, Scott</persname>
+                            </item>
+                            <item>
+                                <persname>Neutra, Dione (Niedermann)</persname>
+                            </item>
+                            <item>
+                                <persname>O'Connor, Richard</persname>
+                            </item>
+                            <item>
+                                <persname>Packard, Vance Oakley</persname>
+                            </item>
+                            <item>
+                                <persname>Peale, Norman Vincent</persname>
+                            </item>
+                            <item>
+                                <persname>Peters, Harry</persname>
+                            </item>
+                            <item>
+                                <persname>Powell, Lawrence Clark</persname>
+                            </item>
+                            <item>
+                                <persname>Randall, David Anton</persname>
+                            </item>
+                            <item>
+                                <persname>Randolph, Asa Philip</persname>
+                            </item>
+                            <item>
+                                <persname>Reisberg, Arlene</persname>
+                            </item>
+                            <item>
+                                <persname>Reuther, Victor George</persname>
+                            </item>
+                            <item>
+                                <persname>Rhine, Joseph Banks</persname>
+                            </item>
+                            <item>
+                                <persname>Riseley, Jerry B.</persname>
+                            </item>
+                            <item>
+                                <persname>Samuelson, Paul Anthony</persname>
+                            </item>
+                            <item>
+                                <persname>Scammon, Richard Montgomery</persname>
+                            </item>
+                            <item>
+                                <persname>Schlesinger, Arthur Meier</persname>
+                            </item>
+                            <item>
+                                <persname>Schulberg, Budd</persname>
+                            </item>
+                            <item>
+                                <persname>Schwartz, Alan U.</persname>
+                            </item>
+                            <item>
+                                <persname>Seldes, George</persname>
+                            </item>
+                            <item>
+                                <persname>Sevareid, Arnold Eric</persname>
+                            </item>
+                            <item>
+                                <persname>Sinclair, David</persname>
+                            </item>
+                            <item>
+                                <persname>Sinclair, Jean (Weidman)</persname>
+                            </item>
+                            <item>
+                                <persname>Sinclair, Mary Craig (Kimbrough)</persname>
+                            </item>
+                            <item>
+                                <persname>Sinclair, Upton Beall</persname>
+                            </item>
+                            <item>
+                                <persname>Smith, Datus Clifford</persname>
+                            </item>
+                            <item>
+                                <persname>Smith, Lorna D.</persname>
+                            </item>
+                            <item>
+                                <persname>Snow, Charles Percy</persname>
+                            </item>
+                            <item>
+                                <persname>Snow, Baron</persname>
+                            </item>
+                            <item>
+                                <persname>Stone, Irving</persname>
+                            </item>
+                            <item>
+                                <persname>Stone, John Anthony</persname>
+                            </item>
+                            <item>
+                                <persname>Stout, Rex Todhunter</persname>
+                            </item>
+                            <item>
+                                <persname>Styron, William</persname>
+                            </item>
+                            <item>
+                                <persname>Swados, Harvey</persname>
+                            </item>
+                            <item>
+                                <persname>Terkel, Studs Louis</persname>
+                            </item>
+                            <item>
+                                <persname>Tunney, John Varick</persname>
+                            </item>
+                            <item>
+                                <persname>Untermeyer, Louis</persname>
+                            </item>
+                            <item>
+                                <persname>Vagts, Miriam (Beard)</persname>
+                            </item>
+                            <item>
+                                <persname>Vartan, Cynthia Kirk (Smith)</persname>
+                            </item>
+                            <item>
+                                <persname>Vonnegut, Jr., Kurt</persname>
+                            </item>
+                            <item>
+                                <persname>Voorhis, Horace Jeremiah</persname>
+                            </item>
+                            <item>
+                                <persname>Walsh, Denny Jay</persname>
+                            </item>
+                            <item>
+                                <persname>Ward, John Lewis</persname>
+                            </item>
+                            <item>
+                                <persname>Warner, Robert Mark</persname>
+                            </item>
+                            <item>
+                                <persname>Warren, Earl</persname>
+                            </item>
+                            <item>
+                                <persname>Weeks, Edward Augustus</persname>
+                            </item>
+                            <item>
+                                <persname>White, Theodore Harold</persname>
+                            </item>
+                            <item>
+                                <persname>Whitman, Alden Rogers</persname>
+                            </item>
+                            <item>
+                                <persname>Wilder, Billy</persname>
+                            </item>
+                            <item>
+                                <persname>Williams, Rhys</persname>
+                            </item>
+                            <item>
+                                <persname>Williams, Wallace Edward</persname>
+                            </item>
+                            <item>
+                                <persname>Wilshire, Logan Gaylord</persname>
+                            </item>
+                            <item>
+                                <persname>Wilshire, Mary</persname>
+                            </item>
+                            <item>
+                                <persname>Wilson, James Harold</persname>
+                            </item>
+                            <item>
+                                <persname>Zeisel, Hans</persname>
+                            </item>
+                            <item>
+                                <persname>Zobel, Don Charles</persname>
+                            </item>
+
+                        </list>
+                    </scopecontent>
+                </c02>
+
+            </c01>
+            <c01 id="VAB8321-00003" level="series">
+                <did>
+                    <container label="Box" type="box">1</container>
+                    <unittitle>American Rebel</unittitle>
+                </did>
+
+                <c02 id="VAB8321-00004" level="file">
+                    <did>
+                        <unittitle>Folders 22-23: Bibliography. T.D and Xerox.</unittitle>
+                        <physdesc>(6 copies)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8321-00005" level="file">
+                    <did>
+                        <unittitle>Binder: bibliography. A.D.</unittitle>
+                    </did>
+                </c02>
+
+                <c02 id="VAB8321-00006" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>Folders 1-25: Early draft. Introduction and chap.
+                            1-25.</unittitle>
+                        <physdesc>(missing chap. 18)</physdesc>
+                    </did>
+                </c02>
+
+                <c02 id="VAB8321-00007" level="file">
+                    <did>
+                        <container label="Box" type="box">3</container>
+                        <unittitle>Folders 1-22: Later draft. Chap. 1-25. T.D.</unittitle>
+                        <physdesc>(missing chap. 3)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8321-00008" level="file">
+                    <did>
+                        <unittitle>Folders 22-38: Later draft. Acknowledgements, introduction, chap.
+                            1-16. Carbon.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8321-00009" level="file">
+                    <did>
+                        <unittitle>Folders 39-54: Later draft. Notes for introduction and chap.
+                            1-16. Carbon.</unittitle>
+                    </did>
+                </c02>
+
+                <c02 id="VAB8321-00010" level="file">
+                    <did>
+                        <container label="Box" type="box">4</container>
+                        <unittitle>Folders 1-9: Later draft. chap. 17-26. Carbon.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8321-00011" level="file">
+                    <did>
+                        <unittitle>Folders 10-18: Later draft. notes for chap. 17-26.
+                            Carbon.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8321-00012" level="file">
+                    <did>
+                        <unittitle>Folders 19-45: Final draft. Introduction and chap. 1-26.
+                            Xerox.</unittitle>
+                    </did>
+                </c02>
+
+                <c02 id="VAB8321-00013" level="file">
+                    <did>
+                        <container label="Box" type="box">5</container>
+                        <unittitle>Folders 1-28: Final master. Notes and acknowledgements,
+                            introduction, and chap. 1-26. T.D.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8321-00014" level="file">
+                    <did>
+                        <unittitle>Folders 29-56: Notes and acknowledgements, introduction, and
+                            chap. 1-26. Xerox.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8321-00015" level="file">
+                    <did>
+                        <unittitle>Folders 57-86: Examination Copy A (Allett &amp; Gotteman)
+                            notes and acknowledgements, chap. 1-26, and notes for chap.
+                            15-25.</unittitle>
+                    </did>
+                </c02>
+
+                <c02 id="VAB8321-00016" level="file">
+                    <did>
+                        <container label="Box" type="box">6</container>
+                        <unittitle>Folders 1-27: Examination copy B (David and Jean Sinclair)
+                            introduction, chap. 1-26.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8321-00017" level="file">
+                    <did>
+                        <unittitle>Folders 28-62: Examination copy C (Alden Whitman) introduction,
+                            chap. 1-25, notes for chap. 15-25.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8321-00018" level="file">
+                    <did>
+                        <unittitle>Folders 63-78: <emph render="doublequote">old
+                            notes</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8321-00019" level="file">
+                    <did>
+                        <unittitle>Folder 79: Text for pp. 474-83, notes for pp. 453-58, 558-62, and
+                            656-62.</unittitle>
+                    </did>
+                </c02>
+
+                <c02 id="VAB8321-00020" level="file">
+                    <did>
+                        <container label="Box" type="box">7</container>
+                        <unittitle>Resources material I: chap. 1-24.</unittitle>
+                    </did>
+                </c02>
+
+                <c02 id="VAB8321-00021" level="file">
+                    <did>
+                        <container label="Box" type="box">8</container>
+                        <unittitle>Resources material II: chap. 24.</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAB8321-00022" level="series">
+                <did>
+                    <container label="Box" type="box">9</container>
+                    <unittitle>General</unittitle>
+                </did>
+                <c02 id="VAB8321-00023" level="file">
+                    <did>
+                        <unittitle>Miscellaneous.</unittitle>
+                    </did>
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
