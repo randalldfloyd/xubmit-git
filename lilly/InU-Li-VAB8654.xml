@@ -1,0 +1,1824 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAB8654">InU-Li-VAB8654</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Volwiler mss., <date normal="1898/1958"
+                        >1898-1958</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2009" type="publication">© 2009</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2009">© 2009</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                    <lb/><date normal="2010" type="source">2010</date>
+                <lb/>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2010-01-25">Jan. 25, 2010</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2010-01-25"/>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Volwiler, Albert T.,
+                    1888-1957</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Volwiler mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1898/1958" type="inclusive"
+                >1898-1958</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2425</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>3648 items.</extent>
+            </physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Volwiler mss., 1898-1958, consists
+                of material collected by Albert Tangeman Volwiler, 1888-1957, historian, on Benjamin
+                Harrison, president of the United States from 1889-1893 for a biography.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+
+            <p>Volwiler taught history at Wittenberg College in Springfield, Ohio in the 1920's,
+                taking a leave from 1925-1926 to teach at Indiana University. In 1934 he was
+                appointed professor of history at Ohio University and was head of that department
+                from 1947-1955. He was the author of <title render="italic">George Croghan and the
+                    Westward Movement, 1741-1782</title> and <title render="italic">The
+                    Correspondence Between Benjamin Harrison and James G. Blaine, 1882-1893</title>
+                among other books . He pursued his research for the Harrison biography for many
+                summers, but died in 1957 before completing the work.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Correspondence; II.
+                Research and notes; III. Drafts; IV. Miscellaneous.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Volwiler mss., 1898-1958, consists of material collected by Albert Tangeman
+                Volwiler, 1888-1957, historian, on Benjamin Harrison, president of the United States
+                from 1889-1893 for a biography. The correspondence includes Volwiler's concerning
+                his research and copies of Harrison's letters. There are also eight original
+                letters, 1898-1899, from Harrison to his clerk Everard F. Tibbott <ref
+                    target="VAB8654-00220" xlink:actuate="onRequest" xlink:show="replace"
+                    xlink:type="simple">(see: II. Research and notes. Subjects. Venezuela.
+                    Correspondence)</ref></p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/volwiler+albert+t+1888-1957">
+                            <persname encodinganalog="600" source="lcnaf">Volwiler, Albert T.
+                                (Albert Tangeman), 1888-1957 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/harrison+benjamin+1833-1901">
+                            <persname encodinganalog="700" source="lcnaf">Harrison, Benjamin,
+                                1833-1901.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/harrison+benjamin+1833-1901">
+                            <persname encodinganalog="600" source="lcnaf">Harrison, Benjamin,
+                                1833-1901 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/blaine+james+gillespie+1830-1893">
+                            <persname encodinganalog="600" source="lcnaf">Blaine, James Gillespie,
+                                1830-1893 --Correspondence.</persname>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/presidents+united+states+correspondence{su}">
+                            <subject encodinganalog="650" source="lcnaf">Presidents --United States
+                                --Correspondence.</subject>
+                        </extref>
+                    </item>
+                </list>
+
+            </controlaccess>
+            <controlaccess>
+                <head>Places</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/united+states+politics+government+19th+century{su}">
+                            <geogname encodinganalog="651" source="lcnaf">United States --Politics
+                                and government --19th century.</geogname>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+        </controlaccess>
+
+
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired 1967, 1991.</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>Volwiler mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+
+
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAB8654-00001" level="series">
+                <did>
+                    <!-- optional -->
+                    <container label="Box" type="box">1</container>
+
+
+                    <unittitle>I. Correspondence</unittitle>
+
+
+                </did>
+                <arrangement>
+                    <p>Volwiler's correspondence, 1926-1954, arranged in alphabetical order,
+                        followed by transcripts and calendars of Harrison's letters, 1851-1901.
+                        Additional correspondence may be found throughout the collection. The
+                        correspondence has not been indexed.</p>
+                </arrangement>
+                <c02 id="VAB8654-00002" level="file">
+                    <did>
+                        <unittitle>A - Harrison, Mary (Lord), <unitdate normal="1926"
+                                >1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8654-00003" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>Harrison, Mary (Lord), <unitdate normal="1927">1927</unitdate> -
+                            Martin, Thomas P.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8654-00004" level="file">
+                    <did>
+                        <container label="Box" type="box">3</container>
+                        <unittitle>Mas-V</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8654-00005" level="file">
+                    <did>
+                        <container label="Box" type="box">4</container>
+                        <unittitle>W-Z</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8654-00006" level="file">
+                    <did>
+                        <unittitle>Harrison, Benjamin, <unitdate normal="1851-05/1886-04-11"
+                                type="inclusive">1851, May-1886, Apr. 11</unitdate></unittitle>
+                        <physdesc>(41 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8654-00007" level="file">
+                    <did>
+                        <container label="Box" type="box">5</container>
+                        <unittitle>Harrison, Benjamin, <unitdate normal="1886-04-12/1893-04"
+                                type="inclusive">1886, Apr. 12-1893, Apr.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8654-00008" level="file">
+                    <did>
+                        <container label="Box" type="box">6</container>
+                        <unittitle>Harrison, Benjamin, <unitdate normal="1893-05/1899"
+                                type="inclusive">1893, May-1899</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8654-00009" level="file">
+                    <did>
+                        <container label="Box" type="box">7</container>
+                        <unittitle>Harrison, Benjamin, <unitdate normal="1900/1901-03"
+                                type="inclusive">1900-1901, Mar</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8654-00010" level="file">
+                    <did>
+                        <unittitle>Calendar of Harrison's letters.</unittitle>
+                    </did>
+                    <arrangement>
+                        <p>(Alphabetically arranged)</p>
+                    </arrangement>
+                </c02>
+                <c02 id="VAB8654-00011" level="file">
+                    <did>
+                        <unittitle>Calendar of Harrison's letters.<unitdate
+                                normal="1851-05-09/1900-06-15" type="inclusive">1851, May 9-1900,
+                                June 15</unitdate></unittitle>
+                    </did>
+                    <arrangement>
+                        <p>(Chronologically arranged)</p>
+                    </arrangement>
+                </c02>
+                <c02 id="VAB8654-00012" level="file">
+                    <did>
+                        <unittitle><title render="doublequote">The Correspondence Between Benjamin
+                                Harrison and James G. Blaine, 1882-1893,</title> by
+                            Volwiler.</unittitle>
+                        <physdesc>(Proof sheets)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8654-00013" level="file">
+                    <did>
+                        <unittitle>Platt, Thomas Collier. <title render="doublequote">Thomas Collier
+                                Platt: An Account of the Political Life of T.C. Platt,</title> term
+                            paper by Rex Koons, <unitdate normal="1939-08-28">Aug. 28,
+                                1939</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8654-00014" level="file">
+                    <did>
+                        <unittitle>Platt, Thomas Collier. <title render="doublequote">Calendar of
+                                Letters Among the Benj. Harrison Papers covering primarily cabinet
+                                making in 1888 and 1889 and dealing chiefly with <emph
+                                    render="doublequote">Boss</emph> Platt....</title></unittitle>
+                        <physdesc>(2 copies)</physdesc>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAB8654-00015" level="series">
+                <did>
+                    <container label="Box" type="box">8</container>
+                    <unittitle>II. Research and notes</unittitle>
+                </did>
+                <arrangement>
+                    <p>Large and small envelopes are arranged numerically by their original assigned
+                        numbers.</p>
+                </arrangement>
+                <c02 id="VAB8654-00016" level="subseries">
+                    <did>
+                        <unittitle>Large envelopes, Nos. 1-62</unittitle>
+                    </did>
+                    <c03 id="VAB8654-00017" level="file">
+                        <did>
+                            <unittitle>Guide to Large Envelopes, Nos. 1-181</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00018" level="file">
+                        <did>
+                            <unittitle>1. Map studies of Indiana, <unitdate normal="1870/1888"
+                                    type="inclusive">1870-1888</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00019" level="file">
+                        <did>
+                            <unittitle>1a. Ancestry. Miami. Volwiler correspondence, <unitdate
+                                    normal="1928/1934" type="inclusive">1928-1934.</unitdate>Draft
+                                of Chapter I. Harrison genealogy and speeches</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00020" level="file">
+                        <did>
+                            <unittitle>1b. John Anderson Letters, <unitdate normal="1853/1868"
+                                    type="inclusive">1853-1868.</unitdate>Typescripts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00021" level="file">
+                        <did>
+                            <unittitle>1c. John Scott Harrison. Three school papers; calendar,
+                                printed pieces</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00022" level="file">
+                        <did>
+                            <unittitle>1d. Wm. H. Harrison Funeral</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00023" level="file">
+                        <did>
+                            <unittitle>2. Politics 1850's. Volwiler correspondence, <unitdate
+                                    normal="1931/1932" type="inclusive">1931-1932.</unitdate>School
+                                paper, and notes.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00024" level="file">
+                        <did>
+                            <unittitle>2a. Pen Portrait of Benjamin Harrison</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00025" level="file">
+                        <did>
+                            <unittitle>3. Civil War - Indianapolis Journal articles. Clark paper
+                                [Indiana University Seminar paper]</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00026" level="file">
+                        <did>
+                            <unittitle>5. Civil War - White Letters [James White]</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00027" level="file">
+                        <did>
+                            <unittitle>9. Lawyer. 1. John B. Elam's Paper; 2. Ferdinand Winter's
+                                statement, <unitdate normal="1927-03-10">Mar. 10, 1927</unitdate>to
+                                Volwiler; 3. Wm. D. Foulke's statement, Morrison Will Case,
+                                    <unitdate normal="1893">1893,</unitdate>Indianapolis St. Railway
+                                Case, <unitdate normal="1897">1897;</unitdate>4. Harrison's Argument
+                                in Nancy Clem Murder Case</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00028" level="file">
+                        <did>
+                            <unittitle>11. Harrison Before U.S. Supreme Court. Two school
+                                papers</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00029" level="file">
+                        <did>
+                            <unittitle>15. Treason exposed &amp; Democratic Party <unitdate
+                                    normal="1886">[1886]</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00030" level="file">
+                        <did>
+                            <unittitle>17.<unitdate normal="1874">1874,</unitdate><unitdate
+                                    normal="1876">1876,</unitdate><unitdate normal="1878"
+                                    >1878</unitdate>Campaign Speeches</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00031" level="file">
+                        <did>
+                            <unittitle>19.<unitdate normal="1876">1876</unitdate>Burnett's paper.
+                                Published in <title render="italic">Indiana Magazine of
+                                    History</title></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00032" level="file">
+                        <did>
+                            <unittitle>20.<unitdate normal="1877">1877</unitdate>Railroad Strike.
+                                Three term papers</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00033" level="file">
+                        <did>
+                            <unittitle>21. Mississippi River Com. Letter to Volwiler, <unitdate
+                                    normal="1928-03">Mar. 1928</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00034" level="file">
+                        <did>
+                            <unittitle>30. Term paper and printed.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00035" level="file">
+                        <did>
+                            <unittitle>23. Personnel of 47, 48, 49, 51, &amp; 52
+                                Congress</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00036" level="file">
+                        <did>
+                            <unittitle>25. Senate Votes.</unittitle>
+                            <note>
+                                <p>[Includes 29-page typed copy: <title render="doublequote">Yea and
+                                        Nay Votes Cast by Hon. Benjamin Harrison, A Senator from
+                                        Indiana, arranged in chronological and alphabetical order,
+                                        showing the date when cast and page of Congressional Record
+                                        where found</title>]</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00037" level="file">
+                        <did>
+                            <unittitle>27. Senator <unitdate normal="1880/1885" type="inclusive"
+                                    >1880-1885.</unitdate>Lacy, Indiana University paper</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00038" level="file">
+                        <did>
+                            <unittitle>29. Sen. Harrison - 47th Congress, 1st &amp; 2nd
+                                Sessions</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00039" level="file">
+                        <did>
+                            <unittitle>31. 48 Congress, 1st Session. Miss Galt's, Miss McClintock's
+                                term papers</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00040" level="file">
+                        <did>
+                            <unittitle>33. 49 Congress, 1st Session. Sittler &amp; Sweetland's
+                                papers</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00041" level="file">
+                        <did>
+                            <unittitle>35. Senator Harrison in 2nd Session of 49th Congress. By Karl
+                                Smith, Penn, <unitdate normal="1928">1928</unitdate>Arthur Neal,
+                                49th &amp; Reelection</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00042" level="file">
+                        <did>
+                            <unittitle>37. Harrison: Agriculture Problems, <unitdate
+                                    normal="1881/1887" type="inclusive">1881-1887.</unitdate>Mr.
+                                Kretschman, term paper</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00043" level="file">
+                        <did>
+                            <unittitle>39. Senator &amp; Territories. Five term
+                                papers</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00044" level="file">
+                        <did>
+                            <unittitle>41. Senator Harrison &amp; Bankruptcy Legislation. Term
+                                paper</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00045" level="file">
+                        <did>
+                            <unittitle>43. Chinese Exclusion. Three term papers</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00046" level="file">
+                        <did>
+                            <unittitle>45. Civil Service. Senator Harrison: Civil Service Reform,
+                                    <unitdate normal="1881/1887" type="inclusive"
+                                    >1881-1887.</unitdate>Miss Bowers, Wittenberg Pro Seminar,
+                                    <unitdate normal="1930">1930;</unitdate>Miss Morrow, Wittenberg,
+                                Pro Seminar <unitdate normal="1932">1932;</unitdate>Mr.
+                                Kretschman</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00047" level="file">
+                        <did>
+                            <unittitle>47. Sen. Harrison - the Blair Education Bill. Wittenberg,
+                                Miss Faries, <unitdate normal="1930">1930;</unitdate>Educational
+                                Problems in 47, 48th &amp; 49th, Miss Lowergrund,
+                                Pennsylvania</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00048" level="file">
+                        <did>
+                            <unittitle>49. Schrope: Eulogies of Ben. H. Wittenberg, <unitdate
+                                    normal="1932">1932</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00049" level="file">
+                        <did>
+                            <unittitle>51. Senator &amp; Internal Improvements. Davey's
+                                papers</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00050" level="file">
+                        <did>
+                            <unittitle>53. Senator &amp; Indian Affairs, Carmean's Thesis. Two
+                                term papers.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00051" level="file">
+                        <did>
+                            <unittitle>55. Senator Harrison &amp; Labor, <unitdate
+                                    normal="1881/1887" type="inclusive"
+                                >1881-1887,</unitdate>McCulloh's seminar paper; Liquor Problem,
+                                    <unitdate normal="1881/1887" type="inclusive"
+                                    >1881-1887,</unitdate>Mr. Frederick</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00052" level="file">
+                        <did>
+                            <unittitle>57. Sen. Harrison &amp; Maricopa Co., Arizona. Letter to
+                                Volwiler, Mar. 7, <unitdate normal="1932">1932;</unitdate>Term
+                                paper</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00053" level="file">
+                        <did>
+                            <unittitle>59. Senator Harrison &amp; National Parks. Bowers'
+                                paper</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00054" level="file">
+                        <did>
+                            <unittitle>61. Senator &amp; Pensions. Five term papers</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00055" level="file">
+                        <did>
+                            <unittitle>62. Personal sketch as revealed by Congressional Record. Erma
+                                Leonard, Wittenberg, <unitdate normal="1932"
+                                >1932</unitdate></unittitle>
+                        </did>
+                    </c03>
+
+                </c02>
+                <c02 id="VAB8654-00056" level="subseries">
+                    <did>
+                        <container label="Box" type="box">9</container>
+                        <unittitle>Large envelopes, Nos. 63-133</unittitle>
+                    </did>
+                    <c03 id="VAB8654-00057" level="file">
+                        <did>
+                            <unittitle>63. Senator Harrison &amp; Railroads. Wm. Avery,
+                                Wittenberg, <unitdate normal="1930">1930;</unitdate>Marshall Moore,
+                                Wittenberg, <unitdate normal="1928">1928</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00058" level="file">
+                        <did>
+                            <unittitle>65. Senator, Presidential Succession. Miss Schafer's Seminar
+                                Paper - Presidential Succession Act</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00059" level="file">
+                        <did>
+                            <unittitle>67. Senator - Tariff. Lenhart's paper</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00060" level="file">
+                        <did>
+                            <unittitle>69. Schrope: H. Voorhees &amp; Indiana. Wittenberg,
+                                    <unitdate normal="1932">1932</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00061" level="file">
+                        <did>
+                            <unittitle>71. H.L.P.A. [Holy League of Peers of America]. Letter to
+                                Volwiler, <unitdate normal="1945-03-06">Mar. 6, 1945;</unitdate>and
+                                papers</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00062" level="file">
+                        <did>
+                            <unittitle>73. Delegate, <unitdate normal="1880"
+                                    >l880,</unitdate><unitdate normal="1884">1884</unitdate>Term
+                                paper</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00063" level="file">
+                        <did>
+                            <unittitle>75.<unitdate normal="1886">1886</unitdate>Senatorial
+                                Election. W. S. Garber's manuscript</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00064" level="file">
+                        <did>
+                            <unittitle>77.<unitdate normal="1888">1888</unitdate>Nomination of
+                                Harrison. Seminar paper by Clyde Ferguson, Indiana; paper by Edmund
+                                D. Washington, Indiana; comments by Louis T. Michener</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00065" level="file">
+                        <did>
+                            <unittitle>79.<unitdate normal="1889/1891" type="inclusive"
+                                    >1889-1891.</unitdate>Harrison &amp; the 51st Congress. Miss
+                                Wright's paper, Indiana</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00066" level="file">
+                        <did>
+                            <unittitle>81. Bering Sea. Scholl, <unitdate normal="1932"
+                                    >1932</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00067" level="file">
+                        <did>
+                            <unittitle>82. Harrison to Elkins. Typescripts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00068" level="file">
+                        <did>
+                            <unittitle>83. Patrick Egan. Thesis by W. F. Beck, <unitdate
+                                    normal="1933">1933</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00069" level="file">
+                        <did>
+                            <unittitle>85. Catholic Influence &amp; the Election of '92. Term
+                                paper</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00070" level="file">
+                        <did>
+                            <unittitle>87. Chilean Crisis. Miss Buzby's and Miss Wiedinmyer's
+                                papers, Penn, <unitdate normal="1932">1932</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00071" level="file">
+                        <did>
+                            <unittitle>88. Chilean Letters. Typescripts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00072" level="file">
+                        <did>
+                            <unittitle>89. Cholera, <unitdate normal="1892">1892</unitdate>Muscalus,
+                                Penn, <unitdate normal="1932">1932</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00073" level="file">
+                        <did>
+                            <unittitle>91. Hawaii, <unitdate normal="1891/1893" type="inclusive"
+                                    >1891-1893.</unitdate>Winch, Penn, <unitdate normal="1932"
+                                    >1932</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00074" level="file">
+                        <did>
+                            <unittitle>93. Canadian Relations, <unitdate normal="1889/1893"
+                                    type="inclusive">1889-1893.</unitdate>Boyer, Penn, <unitdate
+                                    normal="1932">1932</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00075" level="file">
+                        <did>
+                            <unittitle>95. Financial Situation of the U.S.,<unitdate normal="1893"
+                                    >1893</unitdate>Ehrhart, Penn, <unitdate normal="1932"
+                                    >1932</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00076" level="file">
+                        <did>
+                            <unittitle>97. Mafia Incident. Larimer, Pro-seminar Wittenberg,
+                                    <unitdate normal="1931">1931;</unitdate>letter to Volwiler,
+                                    <unitdate normal="1941-12-14">December 14,
+                                1941</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00077" level="file">
+                        <did>
+                            <unittitle>98. Executive - Legislative Relations under Harrison and
+                                Cleveland. Dennis Porter's thesis</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00078" level="file">
+                        <did>
+                            <unittitle>99. Restrictions on American Pork. Ruth Taylor, Penn,
+                                    <unitdate normal="1932">1932</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00079" level="file">
+                        <did>
+                            <unittitle>101. Post Office Dept., <unitdate normal="1889/1893"
+                                    type="inclusive">1889-1893.</unitdate>Leatherman, <unitdate
+                                    normal="1932">1932</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00080" level="file">
+                        <did>
+                            <unittitle>105. Reciprocity. Cassell, <unitdate normal="1932"
+                                    >1932</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00081" level="file">
+                        <did>
+                            <unittitle>107. Samoa, <unitdate normal="1889">1889</unitdate>Agee,
+                                Penn, <unitdate normal="1932">1932</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00082" level="file">
+                        <did>
+                            <unittitle>108. Oklahoma</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00083" level="file">
+                        <did>
+                            <unittitle>109. Threatened Panic, <unitdate normal="1890"
+                                    >1890</unitdate>Preston, Penn, <unitdate normal="1932"
+                                    >1932</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00084" level="file">
+                        <did>
+                            <unittitle>111. Vetoes of Pres. Harrison. Louise Moser, Wittenberg,
+                                    <unitdate normal="1930">1930</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00085" level="file">
+                        <did>
+                            <unittitle>113. Allison correspondence, <unitdate normal="1891/1892"
+                                    type="inclusive">1891-1892.</unitdate>Typescripts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00086" level="file">
+                        <did>
+                            <unittitle>114. Platt. Correspondence, <unitdate normal="1888/1900"
+                                    type="inclusive">1888-1900.</unitdate>Typescripts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00087" level="file">
+                        <did>
+                            <unittitle>115. Carnegie Letters. Typescripts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00088" level="file">
+                        <did>
+                            <unittitle>116. Catholic Indian School Controversy.
+                                Typescripts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00089" level="file">
+                        <did>
+                            <unittitle>119. Clarkson political letters, <unitdate normal="1890/1892"
+                                    type="inclusive">1890-1892.</unitdate>Typescripts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00090" level="file">
+                        <did>
+                            <unittitle>121. Eccentric letters. Typescripts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00091" level="file">
+                        <did>
+                            <unittitle>123. Fishback-Hay [W. P. Fishback and Eugene Hay]. Articles
+                                on Harrison</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00092" level="file">
+                        <did>
+                            <unittitle>125. Halford-Tibbott Diaries. Typescripts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00093" level="file">
+                        <did>
+                            <unittitle>127. Halford's letters, <unitdate normal="1889/1895"
+                                    type="inclusive">1889-1895.</unitdate>Typescripts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00094" level="file">
+                        <did>
+                            <unittitle>127a. Halford's letters. Typescripts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00095" level="file">
+                        <did>
+                            <unittitle>128. Halford's Leslie Articles. Photostats, printed and
+                                typescripts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00096" level="file">
+                        <did>
+                            <unittitle>129. Homestead documents. Typescripts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00097" level="file">
+                        <did>
+                            <unittitle>130. Mrs. Isabella de la Hunt, post office at Cannelton,
+                                Indiana. Typescripts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00098" level="file">
+                        <did>
+                            <unittitle>133. Louis T. Michener. Eighteen articles, <unitdate
+                                    normal="1927">1927</unitdate></unittitle>
+                        </did>
+                    </c03>
+
+                </c02>
+                <c02 id="VAB8654-00099" level="subseries">
+                    <did>
+                        <container label="Box" type="box">10</container>
+                        <unittitle>Large envelopes, Nos. 134-173</unittitle>
+                    </did>
+                    <c03 id="VAB8654-00100" level="file">
+                        <did>
+                            <unittitle>134. Mormons. Copy of Woodruff-Clarkson letter of <unitdate
+                                    normal="1894-07-11">July 11, 1894;</unitdate>six term
+                                papers</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00101" level="file">
+                        <did>
+                            <unittitle>134a. Mormons. Copy of Woodruff-Clarkson letter of <unitdate
+                                    normal="1894-07-11">July 11, 1894</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00102" level="file">
+                        <did>
+                            <unittitle>134b. Mormons. Woodruff-Clarkson letter of <unitdate
+                                    normal="1894-07-11">July 11, 1894</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00103" level="file">
+                        <did>
+                            <unittitle>135. Levi P. Morton. Letters, <unitdate normal="1888/1892"
+                                    type="inclusive">1888-1892.</unitdate>Typescripts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00104" level="file">
+                        <did>
+                            <unittitle>137. Regarding Charles F. Murchison letters.
+                                Typescripts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00105" level="file">
+                        <did>
+                            <unittitle>139. Indiana Politics, <unitdate normal="1891"
+                                    >1891</unitdate>Mason-Edson letters. Typescripts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00106" level="file">
+                        <did>
+                            <unittitle>141. Ocean Mail, <unitdate normal="1891/1893"
+                                    type="inclusive">1891-1892.</unitdate>Typescripts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00107" level="file">
+                        <did>
+                            <unittitle>143. Quay &amp; Patronage, <unitdate normal="1889"
+                                    >1889</unitdate>Two term papers by Brunhouse</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00108" level="file">
+                        <did>
+                            <unittitle>145. B. F. Tracy. Three addresses, <unitdate normal="1891"
+                                    >1891</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00109" level="file">
+                        <did>
+                            <unittitle>147. Silver Letters, <unitdate normal="1890/1892"
+                                    type="inclusive">1890-1892.</unitdate>Typescripts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00110" level="file">
+                        <did>
+                            <unittitle>148. Family letters and others to Harrison, <unitdate
+                                    normal="1850/1892" type="inclusive"
+                                >1850-1892.</unitdate>Typescripts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00111" level="file">
+                        <did>
+                            <unittitle>150. Letters from Harrison's Private letter book, <unitdate
+                                    normal="1880/1888" type="inclusive"
+                                >1880-1888.</unitdate>Typescripts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00112" level="file">
+                        <did>
+                            <unittitle>151. Harrison's Letters to <unitdate normal="1888"
+                                    >1888</unitdate>Photostats and typescripts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00113" level="file">
+                        <did>
+                            <unittitle>153. Harrison's Letters, <unitdate normal="1888/1901"
+                                    type="inclusive">1888-1901.</unitdate>Photostats and
+                                typescripts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00114" level="file">
+                        <did>
+                            <unittitle>154. Harrison-Blaine Letters. Photostats</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00115" level="file">
+                        <did>
+                            <unittitle>155. Dictionary of American Biography article.
+                                Drafts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00116" level="file">
+                        <did>
+                            <unittitle>155a-b. Letters for No. 155. Typescripts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00117" level="file">
+                        <did>
+                            <unittitle>162. Venezuela Arbitration. Papers by Volwiler</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00118" level="file">
+                        <did>
+                            <unittitle>162a. Venezuela Arbitration. Letters to Volwiler, <unitdate
+                                    normal="1929/1931" type="inclusive">1929-1931,</unitdate>and
+                                drafts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00119" level="file">
+                        <did>
+                            <unittitle>162b. Venezuela Arbitration. Drafts 1st, 3rd, 4th,
+                                5th</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00120" level="file">
+                        <did>
+                            <unittitle>162c. Venezuela Arbitration. Letter to Volwiler, <unitdate
+                                    normal="1929">1929</unitdate>and notes.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00121" level="file">
+                        <did>
+                            <unittitle>162d. Venezuela Arbitration. Mrs. Harrison's <emph
+                                    render="doublequote">Diary</emph> letters, <unitdate
+                                    normal="1889">1889</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00122" level="file">
+                        <did>
+                            <unittitle>163. Pictures for Biography: 4 maps, 26 photos (includes
+                                political cartoons), 2 printed pictures, photos of 2
+                                letters</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00123" level="file">
+                        <did>
+                            <unittitle>l67. Indianapolis Journal references to Harrison: list of
+                                dates</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00124" level="file">
+                        <did>
+                            <unittitle>169. Bibliography for Benjamin Harrison</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00125" level="file">
+                        <did>
+                            <unittitle>171. Catalogue of Harrison's papers in Library of
+                                Congress</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00126" level="file">
+                        <did>
+                            <unittitle>173. Calendar of Harrison letters</unittitle>
+                        </did>
+                    </c03>
+
+                </c02>
+                <c02 id="VAB8654-00127" level="subseries">
+                    <did>
+                        <unittitle>Small envelopes, Nos. 1-4</unittitle>
+                    </did>
+                    <c03 id="VAB8654-00128" level="file">
+                        <did>
+                            <unittitle>1. Letters to Volwiler, <unitdate normal="1945/1948"
+                                    type="inclusive">1945-1948;</unitdate>and notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00129" level="file">
+                        <did>
+                            <unittitle>1a. Washington &amp; New York. Notes and letters to
+                                Volwiler, <unitdate normal="1928/1932" type="inclusive"
+                                    >1928-1932</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00130" level="file">
+                        <did>
+                            <unittitle>1b. Indianapolis. Letter to Volwiler, <unitdate normal="1930"
+                                    >1930;</unitdate>and notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00131" level="file">
+                        <did>
+                            <unittitle>1c. Cincinnati. Letters to and regarding Volwiler, <unitdate
+                                    normal="1927/1936" type="inclusive">1927-1936;</unitdate>maps
+                                and notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00132" level="file">
+                        <did>
+                            <unittitle>1d. Chronology</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00133" level="file">
+                        <did>
+                            <unittitle>1f. Prospective articles. Letter to Volwiler, <unitdate
+                                    normal="1932">1932;</unitdate>and notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00134" level="file">
+                        <did>
+                            <unittitle>1g. Indianapolis Journal references; list of Harrison-Hayes
+                                letters</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00135" level="file">
+                        <did>
+                            <unittitle>2. Harrison speech. Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00136" level="file">
+                        <did>
+                            <unittitle>3. John Scott Harrison. Letter to Volwiler, <unitdate
+                                    normal="1941-12-10">Dec. 10, 1941;</unitdate>notes; and
+                                clipping</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00137" level="file">
+                        <did>
+                            <unittitle>4. Ancestry and childhood. Notes</unittitle>
+                        </did>
+                    </c03>
+
+                </c02>
+                <c02 id="VAB8654-00138" level="subseries">
+                    <did>
+                        <container label="Box" type="box">11</container>
+                        <unittitle>Small envelopes, Nos. 5-37</unittitle>
+                    </did>
+                    <c03 id="VAB8654-00139" level="file">
+                        <did>
+                            <unittitle>5. Youth, Cincinnati and Miami. Notes and letters to
+                                Volwiler, <unitdate normal="1927/1928" type="inclusive"
+                                    >1927-1928.</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00140" level="file">
+                        <did>
+                            <unittitle>6. Lawyer, <unitdate normal="1853/1862" type="inclusive"
+                                    >1853-1862.</unitdate>Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00141" level="file">
+                        <did>
+                            <unittitle>9. Civil War I. Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00142" level="file">
+                        <did>
+                            <unittitle>10. Civil War II. Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00143" level="file">
+                        <did>
+                            <unittitle>12. Civil War III. Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00144" level="file">
+                        <did>
+                            <unittitle>13. Personal, <unitdate normal="1865/1889" type="inclusive"
+                                    >1865-1889.</unitdate>Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00145" level="file">
+                        <did>
+                            <unittitle>14. Personal, <unitdate normal="1865/1888" type="inclusive"
+                                    >1865-1888</unitdate>(including Religion &amp; Community).
+                                Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00146" level="file">
+                        <did>
+                            <unittitle>15. Politics, <unitdate normal="1865/1880" type="inclusive"
+                                    >1865-1880.</unitdate>Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00147" level="file">
+                        <did>
+                            <unittitle>17.<unitdate normal="1865/1878" type="inclusive"
+                                    >1865-1878</unitdate>Politics. Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00148" level="file">
+                        <did>
+                            <unittitle>19.<unitdate normal="1876">1876</unitdate>Campaign Politics.
+                                Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00149" level="file">
+                        <did>
+                            <unittitle>21. Railroad strike, <unitdate normal="1877"
+                                >1877</unitdate>Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00150" level="file">
+                        <did>
+                            <unittitle>23. Law, <unitdate normal="1865/1888" type="inclusive"
+                                    >1865-1888.</unitdate>Notes and letters to Volwiler, <unitdate
+                                    normal="1929">1929</unitdate>and <unitdate normal="1940"
+                                    >1940</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00151" level="file">
+                        <did>
+                            <unittitle>25. Law, <unitdate normal="1865/1888" type="inclusive"
+                                    >1865-1888.</unitdate>Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00152" level="file">
+                        <did>
+                            <unittitle>27. Lawyer, Law, <unitdate normal="1865/1888"
+                                    type="inclusive">1865-1888.</unitdate>Notes and letters to
+                                Volwiler, <unitdate normal="1932">1932</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00153" level="file">
+                        <did>
+                            <unittitle>35. Senate. Notes and letters to Volwiler, <unitdate
+                                    normal="1930">1930</unitdate>and <unitdate normal="1939"
+                                    >1939</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00154" level="file">
+                        <did>
+                            <unittitle>37. Senate. Notes</unittitle>
+                        </did>
+                    </c03>
+
+                </c02>
+                <c02 id="VAB8654-00155" level="subseries">
+                    <did>
+                        <container label="Box" type="box">12</container>
+                        <unittitle>Small envelopes, Nos. 39-61</unittitle>
+                    </did>
+                    <c03 id="VAB8654-00156" level="file">
+                        <did>
+                            <unittitle>39. Senate. Notes; and letter to Volwiler, <unitdate
+                                    normal="1943">1943</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00157" level="file">
+                        <did>
+                            <unittitle>43.<unitdate normal="1884">1884</unitdate>Delegate &amp;
+                                President. Notes, and Volwiler letter of <unitdate normal="1931"
+                                    >1931</unitdate></unittitle>
+                            <physdesc>(carbon)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00158" level="file">
+                        <did>
+                            <unittitle>45.<unitdate normal="1888">1888</unitdate>Nomination I.
+                                Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00159" level="file">
+                        <did>
+                            <unittitle>47.<unitdate normal="1888">1888</unitdate>Nomination.
+                                Miscellaneous notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00160" level="file">
+                        <did>
+                            <unittitle>49.<unitdate normal="1888">1888</unitdate>Campaign. Notes and
+                                Volwiler correspondence of <unitdate normal="1947"
+                                >1947</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00161" level="file">
+                        <did>
+                            <unittitle>51.<unitdate normal="1888">1888</unitdate>Campaign.
+                                Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00162" level="file">
+                        <did>
+                            <unittitle>52. Original notes on Halford's Diary</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00163" level="file">
+                        <did>
+                            <unittitle>53. Blaine I. notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00164" level="file">
+                        <did>
+                            <unittitle>54. Blaine II. notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00165" level="file">
+                        <did>
+                            <unittitle>55. Blaine III. notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00166" level="file">
+                        <did>
+                            <unittitle>57. Cabinet. Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00167" level="file">
+                        <did>
+                            <unittitle>59.<unitdate normal="1888-11/1889-03-04" type="inclusive"
+                                    >Nov. 1888-Mar. 4, 1889.</unitdate>Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00168" level="file">
+                        <did>
+                            <unittitle>61. Patronage, <unitdate normal="1889/1893" type="inclusive"
+                                    >1889-1893.</unitdate>Notes</unittitle>
+                        </did>
+                    </c03>
+
+                </c02>
+                <c02 id="VAB8654-00169" level="subseries">
+                    <did>
+                        <container label="Box" type="box">13</container>
+                        <unittitle>Small envelopes, Nos. 63-97</unittitle>
+                    </did>
+                    <c03 id="VAB8654-00170" level="file">
+                        <did>
+                            <unittitle>63. Nepotism. Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00171" level="file">
+                        <did>
+                            <unittitle>65. Patronage. Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00172" level="file">
+                        <did>
+                            <unittitle>67. Civil Service. Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00173" level="file">
+                        <did>
+                            <unittitle>69. Civil Service. Printed reports</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00174" level="file">
+                        <did>
+                            <unittitle>71. Civil Service Reform. Contemporary Documents from Foulke
+                                regarding <unitdate normal="1889"
+                                >1889.</unitdate>Printed</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00175" level="file">
+                        <did>
+                            <unittitle>73. Personal, <unitdate normal="1889/1893" type="inclusive"
+                                    >1889-1893.</unitdate>Notes.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00176" level="file">
+                        <did>
+                            <unittitle>75.<unitdate normal="1889/1893" type="inclusive"
+                                    >1889-1893</unitdate>Personal Miscellaneous. Notes and letter to
+                                Volwiler, <unitdate normal="1928">1928</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00177" level="file">
+                        <did>
+                            <unittitle>77.<unitdate normal="1889/1893" type="inclusive"
+                                    >1889-1893</unitdate>Miscellaneous Tour. Notes and letters to
+                                Volwiler, <unitdate normal="1928">1928</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00178" level="file">
+                        <did>
+                            <unittitle>79. 1st Session, 51st Congress. Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00179" level="file">
+                        <did>
+                            <unittitle>81. Panics; Finance. notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00180" level="file">
+                        <did>
+                            <unittitle>83. Southern Question. Notes and letter to Volwiler,
+                                    <unitdate normal="1898/1958" type="inclusive"
+                                >undated</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00181" level="file">
+                        <did>
+                            <unittitle>85. Tanner, Lottery, Cholera. Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00182" level="file">
+                        <did>
+                            <unittitle>89. Catholic &amp; Religious Schools Question. Notes and
+                                letters to Volwiler, <unitdate normal="1931"
+                                >1931</unitdate>&amp; <unitdate normal="1933"
+                                >1933</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00183" level="file">
+                        <did>
+                            <unittitle>90. Mormons. Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00184" level="file">
+                        <did>
+                            <unittitle>91. Election of <unitdate normal="1890"
+                                >1890</unitdate>Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00185" level="file">
+                        <did>
+                            <unittitle>93. Navy, Imperialism. Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00186" level="file">
+                        <did>
+                            <unittitle>95. Chile, Hawaii. Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00187" level="file">
+                        <did>
+                            <unittitle>97. Bering Sea, Foreign Affairs. Notes and letters to
+                                Volwiler, <unitdate normal="1940">1940</unitdate></unittitle>
+                        </did>
+                    </c03>
+
+                </c02>
+                <c02 id="VAB8654-00188" level="subseries">
+                    <did>
+                        <container label="Box" type="box">14</container>
+                        <unittitle>Small envelopes, Nos. 99-121; Oklahoma</unittitle>
+                    </did>
+                    <c03 id="VAB8654-00189" level="file">
+                        <did>
+                            <unittitle>99.<unitdate normal="1891/1892" type="inclusive"
+                                    >1891-1892.</unitdate>Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00190" level="file">
+                        <did>
+                            <unittitle>101.<unitdate normal="1891/1892" type="inclusive"
+                                    >1891-1892.</unitdate>Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00191" level="file">
+                        <did>
+                            <unittitle>103. Re-nomination. Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00192" level="file">
+                        <did>
+                            <unittitle>105.<unitdate normal="1892">1892</unitdate>Campaign.
+                                Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00193" level="file">
+                        <did>
+                            <unittitle>107.<unitdate normal="1893/1895" type="inclusive"
+                                    >1893-1895.</unitdate>Miscellaneous. Notes and letter to
+                                Volwiler, <unitdate normal="1931">1931</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00194" level="file">
+                        <did>
+                            <unittitle>109.<unitdate normal="1893/1896" type="inclusive"
+                                    >1893-1896.</unitdate>Notes &amp; letters, <unitdate
+                                    normal="1928">1928</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00195" level="file">
+                        <did>
+                            <unittitle>111. Law, <unitdate normal="1893/1901" type="inclusive"
+                                    >1893-1901.</unitdate>Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00196" level="file">
+                        <did>
+                            <unittitle>113.<unitdate normal="1895/1901" type="inclusive"
+                                    >1895-1901</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00197" level="file">
+                        <did>
+                            <unittitle>115. Venezuela. Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00198" level="file">
+                        <did>
+                            <unittitle>117. Venezuela. Notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00199" level="file">
+                        <did>
+                            <unittitle>119a-c. Venezuela, notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00200" level="file">
+                        <did>
+                            <unittitle>121. Memorial pamphlet. Printed</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00201" level="file">
+                        <did>
+                            <unittitle>Oklahoma. Research notes on Oklahoma, <unitdate
+                                    normal="1889/1891" type="inclusive"
+                                >1889-1891</unitdate></unittitle>
+                            <physdesc>(2 folders)</physdesc>
+                        </did>
+                    </c03>
+
+                </c02>
+                <c02 id="VAB8654-00202" level="subseries">
+                    <did>
+                        <container label="Box" type="box">15</container>
+                        <unittitle>Subjects, A-Z</unittitle>
+                    </did>
+                    <c03 id="VAB8654-00203" level="file">
+                        <did>
+                            <unittitle>All the Republican National Conventions, <unitdate
+                                    normal="1856/1896" type="inclusive">1856-1896,</unitdate>by
+                                Henry H. Smith. Printed.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00204" level="file">
+                        <did>
+                            <unittitle>Bayliff's notes. regarding silver and gold</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00205" level="file">
+                        <did>
+                            <unittitle>33rd, 34th, 47th-49th Congresses. lists of members &amp;
+                                votes</unittitle>
+                            <physdesc>(blank forms)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00206" level="file">
+                        <did>
+                            <unittitle><title render="doublequote">The Diaries of Elijah W. Halford
+                                    and Everard F. Tibbott, private secretaries to President
+                                    Benjamin Harrison.</title> 65pp. Typescript</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00207" level="file">
+                        <did>
+                            <unittitle>Halford &amp; Tibbott. Correspondence regarding their
+                                deaths, <unitdate normal="1927/1952" type="inclusive"
+                                    >1927-1952</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00208" level="file">
+                        <did>
+                            <unittitle>Illustrations. Photographs and negatives; plans for use of
+                                illustrations for frontispiece &amp; endpapers</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00209" level="file">
+                        <did>
+                            <unittitle>Late added notes for Harrison letters, corrected <unitdate
+                                    normal="1955">1955</unitdate>Copies of Harrison letters notes,
+                                printed material, and Volwiler correspondence, <unitdate
+                                    normal="1944">1944</unitdate>&amp; <unitdate normal="1957"
+                                    >1957</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00210" level="file">
+                        <did>
+                            <unittitle>Late additions of notes, miscellaneous material.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00211" level="file">
+                        <did>
+                            <unittitle>Michener, Louis T. Correspondence by and about Michener,
+                                    <unitdate normal="1927/1958" type="inclusive"
+                                    >1927-1958</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00212" level="file">
+                        <did>
+                            <unittitle>Michener, Louis T. Memos, prepared for Volwiler in <unitdate
+                                    normal="1932">1932</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00213" level="file">
+                        <did>
+                            <unittitle>Miscellaneous letters, <unitdate normal="1888/1950"
+                                    type="inclusive">1888-1950.</unitdate>Typescripts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00214" level="file">
+                        <did>
+                            <unittitle>Miscellaneous notes, correspondence, <unitdate
+                                    normal="1833/1957" type="inclusive"
+                                >1833-1957.</unitdate>Photostats and typescripts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00215" level="file">
+                        <did>
+                            <unittitle>Miscellaneous notes 1, 2, 3</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00216" level="file">
+                        <did>
+                            <unittitle>Miscellaneous notes, Harrison clippings</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00217" level="file">
+                        <did>
+                            <unittitle>Relations between President &amp; Congress. notes
+                                &amp; papers</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00218" level="file">
+                        <did>
+                            <unittitle>Use for quotes and notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00219" level="file">
+                        <did>
+                            <unittitle>Venezuela. Documents 1 &amp; 2</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00220" level="file">
+                        <did>
+                            <unittitle>Venezuela. Correspondence. Harrison to Everard F. Tibbott:
+                                    <unitdate normal="1898-04-04">1898, Apr. 4,</unitdate><unitdate
+                                    normal="1898-06-17">June 17,</unitdate><unitdate
+                                    normal="1898-06-21">June 21,</unitdate><unitdate
+                                    normal="1898-07-02">July 2;</unitdate><unitdate
+                                    normal="1899-04-23">1899, Apr. 23,</unitdate><unitdate
+                                    normal="1899-05-02">May 2,</unitdate><unitdate
+                                    normal="1899-05-03">May 3,</unitdate><unitdate
+                                    normal="1899-05-05">May 5.</unitdate>Tibbott to his wife,
+                                    <unitdate normal="1899-09-21">1899, Sept.
+                                21.</unitdate>Miscellaneous correspondence, <unitdate
+                                    normal="1899/1950" type="inclusive"
+                                >1899-1950</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00221" level="file">
+                        <did>
+                            <unittitle>Venezuela. Chapter 21?</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00222" level="file">
+                        <did>
+                            <unittitle>Weickselbaum, Norman. The Catholic Indian School Controversy,
+                                    <unitdate normal="1889/1891" type="inclusive"
+                                    >1889-1891:</unitdate>A Conflict of Ideas. Chapters I-VIII and
+                                complete carbon transcript</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00223" level="file">
+                        <did>
+                            <unittitle>Yellowstone Park and The First Forest Reserve, by Thomas G.
+                                Manning. Carbon, 10pp.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8654-00224" level="file">
+                        <did>
+                            <container label="Box" type="box">18</container>
+                            <unittitle>Index cards, alphabetically arranged. Harrison documents and
+                                letters, with notes</unittitle>
+                            <physdesc>(5 boxes)</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+
+            </c01>
+            <c01 id="VAB8654-00225" level="series">
+                <did>
+                    <container label="Box" type="box">16</container>
+                    <unittitle>III. Drafts</unittitle>
+                </did>
+                <c02 id="VAB8654-00226" level="file">
+                    <did>
+                        <unittitle>Drafts</unittitle>
+                        <physdesc>(6 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8654-00227" level="file">
+                    <did>
+                        <unittitle>Drafts marked by Hamilton</unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8654-00228" level="file">
+                    <did>
+                        <unittitle>Miscellaneous copies of chapters</unittitle>
+                        <physdesc>(12 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8654-00229" level="file">
+                    <did>
+                        <unittitle>Old copies</unittitle>
+                        <physdesc>(10 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8654-00230" level="file">
+                    <did>
+                        <unittitle>Printers copy</unittitle>
+                        <physdesc>(12 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8654-00231" level="file">
+                    <did>
+                        <unittitle>Typescript</unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAB8654-00232" level="series">
+                <did>
+                    <container label="Box" type="box">17</container>
+                    <unittitle>IV. Miscellaneous</unittitle>
+                </did>
+                <c02 id="VAB8654-00233" level="file">
+                    <did>
+                        <unittitle>Biographical materials</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8654-00234" level="file">
+                    <did>
+                        <unittitle>Financial materials</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8654-00235" level="file">
+                    <did>
+                        <unittitle>Carbon typescripts of theses</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8654-00236" level="file">
+                    <did>
+                        <unittitle>The Baltimore Incident, <unitdate normal="1891/1892"
+                                type="inclusive">1891-1892,</unitdate>by William F. Worthington,
+                                <unitdate normal="1936-08">Aug. 1936</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8654-00237" level="file">
+                    <did>
+                        <unittitle>The Bering Sea Arbitration, <unitdate normal="1889/1893"
+                                type="inclusive">1889-1893,</unitdate>by Guy E. Saylor, <unitdate
+                                normal="1935-08">Aug. 1935</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8654-00238" level="file">
+                    <did>
+                        <unittitle>The Proposed American Annexation of Hawaii, <unitdate
+                                normal="1893/1894" type="inclusive">1893-1894,</unitdate>by Harold
+                            S. Peters, <unitdate normal="1947-05">May 1947</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8654-00239" level="file">
+                    <did>
+                        <unittitle>Senator Benjamin Harrison in the Forty-seventh Congress, by
+                            Florence I. Larimer, <unitdate normal="1938-08">Aug.
+                            1938</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8654-00240" level="file">
+                    <did>
+                        <unittitle>39 printed items</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8654-00241" level="file">
+                    <did>
+                        <container label="Box" type="box">18</container>
+                        <unittitle>Microfilm: <title render="doublequote">Ohio Co., vol. 1-2; Gratz
+                                - Croghan, vol. 1; Deeds, miscellaneous
+                            correspondence</title></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8654-00242" level="file">
+                    <did>
+                        <unittitle>Holograph charts. American business activity, <unitdate
+                                normal="1868/1936" type="inclusive">1868-1936</unitdate></unittitle>
+                        <physdesc>(2 charts)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8654-00243" level="file">
+                    <did>
+                        <unittitle>Photostat copy of Nashville, Tennessee, <title render="italic"
+                                >The Daily American,</title>
+                            <unitdate normal="1889-05-11" type="inclusive">May 11,
+                            1889,</unitdate>containing Commissioner Tanners speech in which he used
+                            phrase <emph render="doublequote">God help the surplus</emph>; <title
+                                render="italic">The Daily American</title> for <unitdate
+                                normal="1889-05-12">May 12,</unitdate><unitdate normal="1889-05-21"
+                                >21,</unitdate>and <unitdate normal="1889-05-23">23,
+                                1889,</unitdate>regarding the same</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
