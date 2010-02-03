@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader relatedencoding="dublincore" audience="external" langencoding="iso639-2b"
+        scriptencoding="iso15924" repositoryencoding="iso15511" countryencoding="iso3166-1"
+        dateencoding="iso8601" findaidstatus="edited-full-draft">
+        <eadid encodinganalog="identifier" identifier="InU-Li-VAB8707" countrycode="US"
+            mainagencycode="InU-Li">InU-Li-VAB8707</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Willkie Clubs mss., <date normal="1940"
+                        >1940</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2009" type="publication">© 2009</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2009">© 2009</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                    <lb/><date normal="2010" type="source">2010</date>
+                <lb/>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2010-02-02">Feb. 2, 2010</date>
+            </creation>
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2010-02-02"/>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc level="collection" audience="external" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository encodinganalog="852" label="Repository" id="lilly">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <corpname encodinganalog="110">Associated Willkie Clubs of America</corpname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Willkie Clubs mss.</unittitle>
+            <unitdate normal="1940" encodinganalog="245$f" type="inclusive">1940</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2325</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>64,417 items</extent>
+            </physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Willkie Clubs mss., 1940, consists
+                of the presidential campaign records of the Associated Willkie Clubs of America for
+                the U.S. presidential election of 1940.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+            <p>Utilities executive Wendell Lewis Willkie, 1892-1944, began achieving national
+                recognition in 1939 through his vocal and written arguments opposing the Tenessee
+                Valley Authority and governmental control of energy production. A speech given in
+                late March 1940 so impressed a young Wall Street lawyer, Oren Root, Jr., that Root
+                launched a trial petition drive in New York asking for support of Willkie for
+                president. The initial success of that drive led Root to take a leave of absence
+                from his law firm and set up a headquarters for The Associated Willkie Clubs of
+                America at 63rd Street &amp; Madison Avenue, with himself as national chair of
+                the movement. </p>
+            <p>Designed from the beginning as a volunteer, grass roots movement local clubs were
+                made up of individuals of all political affiliations. The movement was so successful
+                in attracting membership and contributions that the Willkie Clubs are generally
+                given credit for Willkie's nomination at the Philadelphia Republican convention in
+                spite of the party regulars and Old Guard Republicans. Following the election the
+                Associated Willkie Clubs of America was dissolved in December 1940, with Willkie's
+                blessing, and re-organized as the Independent Clubs of America. In this guise
+                however, the organization lasted just one year, closing almost immediately after the
+                Japanese attack on Pearl Harbor. </p>
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Associated Clubs; II.
+                Campaign correspondence; III. Club correspondence; IV. Contributors' letters; V.
+                Independent Clubs; VI. Miscellaneous; VII. Post-election testimonials and
+                suggestions; VIII. Regional set-up of clubs; IX. Financial; and, X. Card files.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Willkie Clubs mss., 1940, consists of the presidential campaign records of the
+                Associated Willkie Clubs of America for the U.S. presidential election of 1940.
+                Includes correspondence; financial reports; cancelled checks; contribution receipts;
+                expense vouchers; card files of club workers, correspondents, and volunteers.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/willkie+wendell+l+1892-1944">
+                            <persname encodinganalog="600" source="lcnaf">Willkie, Wendell, L.
+                                (Wendell Lewis), 1892-1944.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/associated+willkie+clubs+of+america">
+                            <persname encodinganalog="110">Associated Willkie Clubs of
+                                America.</persname>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/politicians+united+states{su}">
+                            <subject encodinganalog="650" source="lcnaf">Politicians --United
+                                States.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/presidents+united+states+election+1940{su}">
+                            <subject encodinganalog="650" source="lcnaf">Presidents --United States
+                                --Election, 1940.</subject>
+                        </extref>
+                    </item>
+
+                </list>
+
+            </controlaccess>
+            <controlaccess>
+                <head>Places</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/united+states+politics+government{su}">
+                            <geogname encodinganalog="651" source="lcnaf">United States --Politics
+                                and government.</geogname>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+        </controlaccess>
+
+
+
+
+
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired 1952.</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>Willkie Clubs mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 level="series">
+                <did>
+                    <!-- optional -->
+                    <container type="box" label="Box">1</container>
+
+                    <unittitle>I. Associated Clubs</unittitle>
+
+                </did>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Financial reports 1-4</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Reports of receipts and expenditures</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Proceedings National Conference of Leaders, Associated Willkie
+                            Clubs of America, <unitdate normal="1940-12-14">Dec. 14,
+                            1940</unitdate></unittitle>
+                        <physdesc>(3 copies)</physdesc>
+                    </did>
+                </c02>
+
+
+            </c01>
+            <c01 level="series">
+                <did>
+                    <container label="Box" type="box">2</container>
+                    <unittitle>II. Campaign Correspondence</unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Alaska - Colorado</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">3</container>
+                        <unittitle>Connecticut - Florida</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">4</container>
+                        <unittitle>Georgia - Indiana</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">5</container>
+                        <unittitle>Iowa - Massachusetts (Misc. cities A-L)</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">6</container>
+                        <unittitle>Massachusetts (Misc. cities M-Z) - New Hampshire</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">7</container>
+                        <unittitle>New Jersey - New Mexico</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">8</container>
+                        <unittitle>North Carolina - Pennsylvania (Harrisburg)</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">9</container>
+                        <unittitle>Pennsylvania (Johnstown) - Tennessee (Misc. cities
+                            A-Q)</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">10</container>
+                        <unittitle>Tennessee (Misc. cities R-Z) - Wisconsin</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">11</container>
+                        <unittitle>Wyoming</unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did>
+                    <container label="Box" type="box">11</container>
+                    <unittitle>III. Club Correspondence</unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Alaska - Washington, D.C.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">12</container>
+                        <unittitle>Washington D.C. (cont.) - Maine</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">13</container>
+                        <unittitle>Maryland - Nebraska</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">14</container>
+                        <unittitle>Nevada - Pennsylvania (Johnstown)</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">15</container>
+                        <unittitle>Pennsylvania (Philadelphia) - Virginia
+                            (Charlottesville)</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">16</container>
+                        <unittitle>Virginia (Richmond) - Wyoming</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 level="series">
+                <did>
+                    <container label="Box" type="box">16</container>
+                    <unittitle>IV. Contributors' Letters</unittitle>
+                </did>
+                <arrangement>
+                    <p>Arranged alphabetically by state, followed by New York City, which is
+                        arranged alphabetically by correspondent</p>
+                </arrangement>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Alabama - Massachusetts</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">17</container>
+                        <unittitle>Michigan - New York City (contributors A-F)</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">18</container>
+                        <unittitle>New York City (contributors G-Z)</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Donation acknowledgements</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Contributions</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">19</container>
+                        <unittitle>Contributions (cont.)</unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did>
+                    <container label="Box" type="box">19</container>
+                    <unittitle>V. Independent Clubs</unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Alabama - Minnesota</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">20</container>
+                        <unittitle>Missouri - Tennessee</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">21</container>
+                        <unittitle>Utah - Wyoming</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 level="series">
+                <did>
+                    <container label="Box" type="box">21</container>
+                    <unittitle>VI. Miscellaneous</unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Advertising</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Airlines</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Broadcasting</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Contracts</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Democratic Party publicity</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Fifth Avenue Coach Company</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Insurance</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Lists</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>New York State, Dept. of Labor</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Pheiffer, W.T., New York</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Pre-convention personnel</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Post Office</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Regan Office Furniture Company</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Republican National Committee</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>U.S. Collector of Internal Revenue</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Willkie Club Payrolls</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Willkie Club State Expenditures</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 level="series">
+                <did>
+                    <container label="Box" type="box">21</container>
+                    <unittitle>VII. Post-Election Testimonials and Suggestions</unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <unittitle>A - New Jersey (cities A-M)</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">22</container>
+                        <unittitle>New Jersey (cities N-Z) - Wyoming </unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did>
+                    <container label="Box" type="box">22</container>
+                    <unittitle>VIII. Regional Set-up of Clubs </unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Favorable A-B</unittitle>
+                        <note>
+                            <p>(Correspondence between donors and Willkie Clubs concerning retention
+                                of unused contributions)</p>
+                        </note>
+
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">23</container>
+                        <unittitle>Favorable C-Z</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Refund letters</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Refund inquiries</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 level="series">
+                <did>
+                    <container label="Box" type="box">24</container>
+                    <unittitle>IX. Financial</unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <emph render="doublequote">R.H. Donnelley Corp. kits file</emph>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Contributors' receipts</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Checkbooks from Irving Trust Co.</unittitle>
+                        <physdesc>(3 checkbooks)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">25</container>
+                        <unittitle>Club contributors' receipts in duplicate</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Cancelled checks</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Statement of Treasurer of Political Committee</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Kits file</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Notebook of <emph render="doublequote">solicitors and
+                                contributions gotten by each</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">26</container>
+                        <unittitle>Vouchers 1 - 360</unittitle>
+                        <note>
+                            <p>(numbers 46, 161, 271, 287, 324 missing)</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">27</container>
+                        <unittitle>Vouchers 361 - 720</unittitle>
+                        <note>
+                            <p>(numbers 399, 485, 499, 503, 559, 662, 703 missing)</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Oversize" type="box">1</container>
+                        <unittitle>Receipts ledger</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 level="series">
+                <did>
+                    <container label="Box" type="box">28</container>
+                    <unittitle>X. Card files</unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Master file: club workers</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Independent clubs file</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Card index of correspondents: A - Car</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">29</container>
+                        <unittitle>Card index of correspondents: Cas - Lem</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">30</container>
+                        <unittitle>Card index of correspondents: Len - Th</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">31</container>
+                        <unittitle>Card index of correspondents: Ti - Z</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Pre-election volunteers</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Oversize" type="box">2</container>
+                        <unittitle>Card index of Willkie clubs (Alabama - Iowa)</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Oversize" type="box">3</container>
+                        <unittitle>Card index of Willkie clubs (Kansas - New York,
+                            Lynbrook)</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Oversize" type="box">4</container>
+                        <unittitle>Card index of Willkie clubs (New York, Mahopac
+                            -Wyoming)</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
