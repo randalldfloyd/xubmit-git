@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+--><ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external" countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924" relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li" identifier="InU-Li-VAB8747">InU-Li-VAB8747</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Williams, K.P. mss., <date normal="1820/1958">1820-1958</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2009" type="publication">© 2009</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2009">© 2009</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                    <lb></lb><date normal="2010" type="source">2010</date>
+                <lb></lb>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2010-02-09">Feb. 9, 2010</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng">English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2010-02-09"></date>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Williams, Kenneth P. 1887-1958.</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Williams, K.P. mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1820/1958" type="inclusive">1820-1958</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2312</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>3,646 items</extent>
+            </physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Williams, K.P. mss., 1820-1958,
+                consists of letters and papers of Kenneth Powers Williams, 1887-1958, professor of
+                mathematics at Indiana University and author of <title render="italic">Lincoln Finds
+                    a General.</title></abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+
+            <p>Career: born, August 25, 1887, Urbana, Ohio; son of John H. and Eva Augusta (Powers)
+                Williams; A.B., Indiana University, 1908, A.M., 1909; PhD., Princeton University,
+                1913; married Mrs. Ellen (Laughlin) Scott, August 20, 1920; member of the faculty of
+                the Department of Mathematics, Indiana University, 1909-1958; first lieutenant,
+                Indiana National Guard, Mexican border, 1916; captain, Field Artillery, U.S. Army,
+                with American Expeditionary Force, 1917-1919; officer, Field Artillery, Indiana
+                National Guard, 1921-1931; colonel and chief of staff, 38th division, National
+                Guard, 1931-1939; Colonel, Quartermaster corps, commanding 113th Quartermaster
+                Regiment, and Quartermaster, 38th division in national service, 1941; died,
+                September 25, 1958.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is arranged into two series: Correspondence and Writings.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Williams, K.P. mss., 1820-1958, consists of letters and papers of Kenneth Powers
+                Williams, 1887-1958, professor of mathematics at Indiana University and author of
+                    <title render="italic">Lincoln Finds a General</title>. This collection consists
+                of correspondence, 1926-1958, of Kenneth Powers Williams; drafts, illustrations,
+                maps, notes, galley and page proofs, and a scrapbook of reviews of Williams' <title render="italic">Lincoln Finds A General</title>, volumes I-IV, 1949-1956;
+                mathematics notes and problems, including worked out problems from courses taken at
+                Indiana University and Princeton University and notes of early lecture courses given
+                by him at Indiana University; and reprints of articles, 1910-1954, on mathematical,
+                military and historical subjects written by Williams and published in
+                periodicals.</p>
+            <p>The correspondence is concerned mainly with <title render="italic">Lincoln Finds A
+                    General</title>. Other subjects dealt with include the relation of Anna Ella
+                Carroll, 1815-1893, to the Tennessee River Campaign in the Civil war and Williams'
+                controversy with Sydney Greenbie, 1889-1960, and his wife, Mrs. Marjorie Latta
+                (Barstow) Greenbie, 1891- , arising from Williams' article <title render="doublequote">The Tennessee River Campaign and Anna Ella Carroll,</title>
+                which appeared in the <title render="italic">Indiana Magazine of History,</title>
+                XLVI: 221-248, September 1950; the Ku Klux Klan; the history of the Chicago
+                &amp; Eastern Illinois Railroad, the Illinois Central Railroad, and the Virginia
+                Central Railroad during and after the Civil War; cartridges for loading arms before
+                and after the Civil War; problems in astronomy and mathematics in colleges; the
+                European situation in 1938; and the discharge of Jewish professors in Vienna and
+                Prague in 1939.</p>
+            <p>Correspondence with Edwin W. Atwood, 1879- , mayor of Flint, Michigan, relates to his
+                collection of Civil War materials and includes copies of letters of Ulysses Simpson
+                Grant, Abraham Lincoln, William Tecumseh Sherman, and others, 1845-1882, which were
+                sent to Williams by Atwood.</p>
+            <p>In addition to correspondence and the Lincoln Finds A General materials the
+                collection contains a survey on the certification of teachers, 1944 papers on the
+                history and teaching of mathematics at Indiana University, 1938, 1944; a
+                mathematical manuscript textbook by Milo G. Williams, 1820; and an autographed copy
+                of the mimeographed "Introduction to Plane Algebraic Geometry" by Václav
+                Hlavatý.</p>
+            <p>Williams, Kenneth Powers, 1887-1958, professor. Lincoln Finds A General: A Military
+                Study of the Civil War, with Maps by Clark Ray. A.&amp;T.D. [9193] p. 13-28cm.
+                Comprises vol. I-IV of work by same title, published, New York, Macmillan,
+                1949-1959.</p>
+
+
+
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/williams+kenneth+p.+1887-1958">
+                            <persname encodinganalog="600" source="lcnaf">Williams, Kenneth P.
+                                (Kenneth Powers), 1887-1958.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/chicago+eastern+illinois+railroad+company">
+                            <corpname encodinganalog="610" source="lcnaf">Chicago &amp; Eastern
+                                Illinois Railroad Company--History.</corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/virginia+central+railroad">
+                            <corpname encodinganalog="610" source="lcnaf">Virginia Central
+                                Railroad--History.</corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/illinois+central+railroad+company">
+                            <corpname encodinganalog="610" source="lcnaf">Illinois Central Railroad
+                                Company--History.</corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/indiana+university+dept.+of+mathematics">
+                            <corpname encodinganalog="610" source="lcnaf">Indiana University. Dept.
+                                of Mathematics.</corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/ku+klux+klan+19th+cent.">
+                            <corpname encodinganalog="610" source="lcnaf">Ku Klux Klan (19th
+                                cent.)</corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/military+order+of+the+loyal+legion+of+the+united+states+indiana+commandery">
+                            <corpname encodinganalog="610" source="lcnaf">Military Order of the
+                                Loyal Legion of the United States. Indiana Commandery.</corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/indiana+university+faculty+archives">
+                            <corpname encodinganalog="610" source="lcnaf">Indiana
+                                University--Faculty--Archives.</corpname>
+                        </extref>
+                    </item>
+
+
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/algebra{su}">
+                            <subject encodinganalog="650" source="lcnaf">Algebra.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/ballistics{su}">
+                            <subject encodinganalog="650" source="lcnaf">Ballistics.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/calculus{su}">
+                            <subject encodinganalog="650" source="lcnaf">Calculus.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/calculus+of+tensors{su}">
+                            <subject encodinganalog="650" source="lcnaf">Calculus of
+                                tensors.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/calendar{su}">
+                            <subject encodinganalog="650" source="lcnaf">Calendar.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/cartridges{su}">
+                            <subject encodinganalog="650" source="lcnaf">Cartridges.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/center+of+mass{su}">
+                            <subject encodinganalog="650" source="lcnaf">Center of mass.</subject>
+                        </extref>
+                    </item>
+
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/dynamics+rigid{su}">
+                            <subject encodinganalog="650" source="lcnaf">Dynamics, Rigid.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/gamma+functions{su}">
+                            <subject encodinganalog="650" source="lcnaf">Gamma functions.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/generals+united+states+history+19th+century{su}">
+                            <subject encodinganalog="650" source="lcnaf">Generals--United
+                                States--History--19th century.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/geometry+algebraic{su}">
+                            <subject encodinganalog="650" source="lcnaf">Geometry,
+                                Algebraic.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/geometry+analytic{su}">
+                            <subject encodinganalog="650" source="lcnaf">Geometry,
+                                Analytic.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/geometry+non-euclidian{su}">
+                            <subject encodinganalog="650" source="lcnaf">Geometry,
+                                Non-Euclidian.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/integrals{su}">
+                            <subject encodinganalog="650" source="lcnaf">Integrals.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/jews+persecutions{su}">
+                            <subject encodinganalog="650" source="lcnaf">Jews--Persecutions.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/mathematics+study+teaching{su}">
+                            <subject encodinganalog="650" source="lcnaf">Mathematics--Study and
+                                teaching.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/mechanics{su}">
+                            <subject encodinganalog="650" source="lcnaf">Mechanics.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/morgan's+ohio+raid+1863{su}">
+                            <subject encodinganalog="650" source="lcnaf">Morgan's Ohio Raid,
+                                1863.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/planets{su}">
+                            <subject encodinganalog="650" source="lcnaf">Planets.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/shiloh+battle+of+tenn.+1862{su}">
+                            <subject encodinganalog="650" source="lcnaf">Shiloh, Battle of, Tenn.,
+                                1862</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/teachers+certification{su}">
+                            <subject encodinganalog="650" source="lcnaf">Teachers--Certification.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/trigonometry{su}">
+                            <subject encodinganalog="650" source="lcnaf">Trigonometry.</subject>
+                        </extref>
+                    </item>
+                </list>
+
+            </controlaccess>
+            <controlaccess>
+                <head>Places</head>
+                <list>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/europe+history+1918-1945{su}">
+                            <geogname encodinganalog="651" source="lcnaf">Europe--History--1918-1945.</geogname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/shades+state+park+ind.{su}">
+                            <geogname encodinganalog="651" source="lcnaf">Shades State Park
+                                (Ind.)</geogname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/united+states+history+civil+war+1861-1865{su}">
+                            <geogname encodinganalog="651" source="lcnaf">United
+                                States--History--Civil War, 1861-1865</geogname>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+        </controlaccess>
+
+       
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired 1950, 1958, 1959, 1960.</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>Williams, K.P. mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAB8747-00001" level="series">
+                <did>
+                    <!-- optional -->
+                    <container label="Box" type="box">1</container>
+
+                    <unittitle>Correspondence</unittitle>
+
+                </did>
+                <scopecontent>
+                    <p>Correspondents represented in the collection include:</p>
+                    <list>
+                        <item>Maxwell Aley</item>
+                        <item>Paul McClelland Angle</item>
+                        <item>John Edwin Bakeless</item>
+                        <item>Richard Bardolph</item>
+                        <item>John Donald Barnhart</item>
+                        <item>Roy Prentice Basler</item>
+                        <item>William Worth Balknap</item>
+                        <item>Everett Newton Bowman</item>
+                        <item>J.A.B.F. Brady</item>
+                        <item>Erdmann Neumeister Brandt</item>
+                        <item>Benjamin William Brice</item>
+                        <item>Orville Hickman Browning</item>
+                        <item>William Lowe Bryan</item>
+                        <item>Frederic Lauriston Bullard</item>
+                        <item>Ernest Franklin Canaday</item>
+                        <item>Edward Richard Sprigg Canby</item>
+                        <item>Clarence Selmer Carlson</item>
+                        <item>Anna Ella Carroll</item>
+                        <item>Thomas Nixon Carver</item>
+                        <item>Robert Francis Catterson</item>
+                        <item>Bruce Catton</item>
+                        <item>Bennett Alfred Cerf</item>
+                        <item>Gordon Keith Chalmers</item>
+                        <item>Verner Warren Clapp</item>
+                        <item>Gerald Maurice Clemence</item>
+                        <item>Monroe Fulkeron Cockrell</item>
+                        <item>William Edward Cole</item>
+                        <item>Milton Conover</item>
+                        <item>Roy Bird Cook</item>
+                        <item>Watson M. Davis</item>
+                        <item>Bernard Augustine De Voto</item>
+                        <item>Glen H. Draper</item>
+                        <item>Trevor Nevitt Dupuy</item>
+                        <item>Clement Eaton</item>
+                        <item>Robert Lawrence Eichelberger</item>
+                        <item>Otto Eisenchmil</item>
+                        <item>John Chipman Farrar</item>
+                        <item>Samuel Wilson Fleming, 1885-1966</item>
+                        <item>David Mansfield Frederick</item>
+                        <item>Douglas Southall Freeman</item>
+                        <item>Perring C. Galpin</item>
+                        <item>Christian Gauss</item>
+                        <item>Harry Merrill Gehman</item>
+                        <item>Wilber H. Glover</item>
+                        <item>Edgar Johnson Goodspeed</item>
+                        <item>Jesse Root Grant</item>
+                        <item>Ulysses Simpson Grant</item>
+                        <item>Ulysses S. Grant, 1881-1968</item>
+                        <item>Mrs. Marjorie Latta (Barstow) Greenbie</item>
+                        <item>Sydney Greenbie</item>
+                        <item>Cornelius Greenway</item>
+                        <item>Farnham Pond Griffiths</item>
+                        <item>Maruice Théodore Adolphe Hamy</item>
+                        <item>Edwin Forrest Harding</item>
+                        <item>Carl Haverlin</item>
+                        <item>Archibald Henderson</item>
+                        <item>Robert Selph Henry</item>
+                        <item>Don Herold</item>
+                        <item>Ernest Leopold Mettich</item>
+                        <item>James Ernest Hicks</item>
+                        <item>Jesse Hildebrand</item>
+                        <item>Robert Lynn Hogg</item>
+                        <item>Chauncey Benton Humphrey</item>
+                        <item>Andrew Atkinson Humphreys</item>
+                        <item>Edward Eyre Hunt</item>
+                        <item>W.P. Isham</item>
+                        <item>Samuel Richey Kamm</item>
+                        <item>Louis Charles Karpinski</item>
+                        <item>Estes Kefauver</item>
+                        <item>Frank W. Kimball</item>
+                        <item>Robert Lee Kincaid</item>
+                        <item>Alfred Charles Kinsey</item>
+                        <item>Edward Chase Kirkland</item>
+                        <item>Harry Dexter Kitson</item>
+                        <item>Alfred A. Knopf</item>
+                        <item>Gustav Philipp Körner</item>
+                        <item>Bertram Wallace Korn</item>
+                        <item>Foreman Michael Lebold</item>
+                        <item>Derrick Henry Lehmer</item>
+                        <item>Basil Henry Liddell Hart</item>
+                        <item>Abraham Lincoln</item>
+                        <item>Robert Rutherford McCormick</item>
+                        <item>Robert Gerald McMurtry</item>
+                        <item>Charles Frederick Manderson</item>
+                        <item>Sir Frederick Maurice</item>
+                        <item>George Gordon Meade</item>
+                        <item>David Chambers Mearns</item>
+                        <item>Frederick Hill Meserve</item>
+                        <item>Vernon Xavier Miller</item>
+                        <item>Robert Houston Milroy</item>
+                        <item>John Robert Moore</item>
+                        <item>Herbert Rollo Morgan</item>
+                        <item>Jonathan David Morris</item>
+                        <item>Charles Helvetius Mottier</item>
+                        <item>Forest Ray Moulton</item>
+                        <item>Herbert George Moulton</item>
+                        <item>Charles Love Mullins, Jr.</item>
+                        <item>Ralph Geoffrey Newman</item>
+                        <item>Reno Odlin</item>
+                        <item>Charles Norton Owen</item>
+                        <item>Elwin Lawrence Page</item>
+                        <item>Howard Henry Peckham</item>
+                        <item>Herbert Shaw Philbrick</item>
+                        <item>David Morris Potter</item>
+                        <item>Charles Percy Powell</item>
+                        <item>Harry Edward Pratt</item>
+                        <item>Clark Ray</item>
+                        <item>Henry Jarvis Raymond</item>
+                        <item>John Davis Reichard</item>
+                        <item>Edgar Taylor Rigg</item>
+                        <item>F. Ray Risdon</item>
+                        <item>Ashbel Sellew Roberts</item>
+                        <item>L.W. Salinas Rodriguez</item>
+                        <item>Leland Livingston Sage</item>
+                        <item>George Sarton</item>
+                        <item>Richard Schuster</item>
+                        <item>Thomas Alexander Scott</item>
+                        <item>George Pope Shannon</item>
+                        <item>William Tecumseh Sherman</item>
+                        <item>Carl Paxson Sherwin</item>
+                        <item>Elmer William Sherwood</item>
+                        <item>Harry Joseph Sievers</item>
+                        <item>William Milligan Sloane, 1906- </item>
+                        <item>Henry Warner Slocum</item>
+                        <item>Alfred Whital Stern</item>
+                        <item>Robert Roth Stoll</item>
+                        <item>Hudson Strode</item>
+                        <item>James Arthur Stuart</item>
+                        <item>Charles Pelot Summerall</item>
+                        <item>Alexander Campbell Tener</item>
+                        <item>Maurice Emerson Tennant</item>
+                        <item>Benjamin Platt Thomas</item>
+                        <item>Robert Spencer Thomas</item>
+                        <item>Stith Thompson</item>
+                        <item>Joseph Jaqcobs Thorndike, 1913- </item>
+                        <item>William Henry Townsend</item>
+                        <item>Edwin Robert Van Kleeck</item>
+                        <item>Edward Campbell Von Trees</item>
+                        <item>Guy Alwyn Wainwright</item>
+                        <item>Clyde Cameron Walton</item>
+                        <item>William S. Warford</item>
+                        <item>Ezra J. Warner</item>
+                        <item>Louis Austin Warren</item>
+                        <item>Chester Burleigh Watts</item>
+                        <item>Herman B Wells</item>
+                        <item>J. Randall Williams</item>
+                        <item>Thomas Harry Williams</item>
+                        <item>David Wilmot</item>
+                        <item>Lewis Albert Wilson</item>
+                        <item>Charles Ballard Zimmerman</item>
+
+                    </list>
+                </scopecontent>
+                <c02 id="VAB8747-00002" level="file">
+                    <did>
+
+                        <unittitle>
+                            <unitdate normal="1820/1951-07" type="inclusive">1820-1951,
+                                July</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8747-00003" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>
+                            <unitdate normal="1951-08/1958" type="inclusive">1951,
+                                Aug.-1958;</unitdate>
+                            <unitdate normal="1820/1958" type="inclusive">undated</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAB8747-00004" level="series">
+                <did>
+                    <container label="Box" type="box">3</container>
+                    <unittitle>Writings</unittitle>
+                </did>
+                <c02 id="VAB8747-00005" level="file">
+                    <did>
+                        <container label="Box" type="box">3</container>
+                        <unittitle>Mathematics notes: A-R</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8747-00006" level="file">
+                    <did>
+                        <container label="Box" type="box">4</container>
+                        <unittitle>Mathematics notes: S-Z; <title render="italic">Lincoln Finds a
+                                General:</title> drafts</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8747-00007" level="file">
+                    <did>
+                        <container label="Box" type="box">5</container>
+                        <unittitle><title render="italic">Lincoln Finds a General:</title> drafts
+                            (cont'd) - notes for vol. I-II</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8747-00008" level="file">
+                    <did>
+                        <container label="Box" type="box">6</container>
+                        <unittitle><title render="italic">Lincoln Finds a General:</title> notes for
+                            vol. III. - galleys for vol. I-II</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8747-00009" level="file">
+                    <did>
+                        <container label="Box" type="box">7</container>
+                        <unittitle><title render="italic">Lincoln Finds a General:</title> galleys
+                            for vol. III-V</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8747-00010" level="file">
+                    <did>
+                        <container label="Box" type="box">8</container>
+                        <unittitle>Printed items (9 folders); <title render="italic">Lincoln Finds a General</title>, Printer's
+                            copy in green slip case: vol. I, typescript.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8747-00011" level="file">
+                    <did>
+                        <container label="Box" type="box">9</container>
+                        <unittitle><title render="italic">Lincoln Finds a General</title>, Printer's
+                            copy in green slip cases: vol. I, carbon; vol. II, typescript and
+                            carbon; vol. III, typescript.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8747-00012" level="file">
+                    <did>
+                        <container label="Box" type="box">10</container>
+                        <unittitle><title render="italic">Lincoln Finds a General</title>, Printer's
+                            copy in green slip cases: vol. III, carbon copy; vol. IV, typescript and
+                            carbon</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8747-00013" level="file">
+                    <did>
+                        <container label="Box" type="box">11</container>
+                        <unittitle><title render="italic">Lincoln Finds a General</title>, Printer's
+                            copy in green slip case: vol. V, typescript</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8747-00014" level="file">
+                    <did>
+                        <container label="Oversize" type="box"></container>
+                        <unittitle>Maps of Civil War battles used in <title render="italic">Lincoln
+                                Finds a General</title></unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
