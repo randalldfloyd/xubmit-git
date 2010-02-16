@@ -1,0 +1,1922 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAB8750">InU-Li-VAB8750</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Bentley mss., <date normal="1891/1968"
+                        >1891-1968</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2009" type="publication">© 2009</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2009">© 2009</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                    <lb/><date normal="2010" type="source">2010</date>
+                <lb/>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2010-02-10">Feb. 10, 2010</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2010-02-10"/>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Bentley, Arthur Fisher,
+                    1870-1957</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Bentley mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1891/1968" type="inclusive"
+                >1891-1968</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1071</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>8,586 items</extent>
+            </physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Bentley mss., 1891-1968, consists of
+                the correspondence and writings of Arthur Fisher Bentley, 1870-1957,
+                author.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+
+            <p>Arthur Fisher Bentley, 1870-1957, was a philosopher and author. Bentley received his
+                Ph.D. from Johns Hopkins University in 1895. He wrote for the <title render="italic"
+                    >Chicago Times-Herald</title> (later the <title render="italic"
+                    >Record-Herald</title>) until 1910, when he retired to work and write at his
+                orchard in Paoli, Indiana. During World War I, Bentley was a member of the Red
+                Cross.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Correspondence; II.
+                Writings; and, III. Miscellaneous.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Bentley mss., 1891-1968, consists of the correspondence and writings of Arthur
+                Fisher Bentley, 1870-1957, author. Correspondence and files following Bentley's
+                death are those of his widow Imogene (Shaw) Bentley. Also present in the writings is
+                Bentley's <title render="italic">Makers, Users and Masters</title>, edited and with
+                an introduction by Sidney Ratner, 1908-1996, professor.</p>
+            <p>Also included are Bentley's diplomas from Grand Island High School, Grand Island,
+                Nebraska, 1885; Johns Hopkins University, A.B., 1892, Ph.D., 1895; the University of
+                Berlin, 1893; his notice of election to membership in Phi Beta Kappa, Johns Hopkins
+                University, 1895; and an undated certificate in recognition of services performed,
+                issued by the American Red Cross.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/bentley+arthur+fisher+1870-1957">
+                            <persname encodinganalog="600" source="lcnaf">Bentley, Arthur Fisher,
+                                1870-1957.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/bentley+arthur+fisher+1870-1957">
+                            <persname encodinganalog="600" source="lcnaf">Bentley, Arthur Fisher,
+                                1870-1957--Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/bentley+imogene+shaw+1876-1969">
+                            <persname encodinganalog="700" source="lcnaf">Bentley, Imogene Shaw,
+                                1876-1969.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/bentley+imogene+shaw+1876-1969">
+                            <persname encodinganalog="600" source="lcnaf">Bentley, Imogene Shaw,
+                                1876-1969--Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/bridgman+p.w.+1882-1961">
+                            <persname encodinganalog="700" source="lcnaf">Bridgman, P. W. (Percy
+                                Williams), 1882-1961.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/cohen+morris+raphael+1880-1947">
+                            <persname encodinganalog="700" source="lcnaf">Cohen, Morris Raphael,
+                                1880-1947.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/davis+harold+t.+1892-1974">
+                            <persname encodinganalog="700" source="lcnaf">Davis, Harold T. (Harold
+                                Thayer), 1892-1974.</persname>
+                        </extref>
+                    </item>
+
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/dewey+john+1859-1952">
+                            <persname encodinganalog="700" source="lcnaf">Dewey, John,
+                                1859-1952.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/dewey+john+1859-1952">
+                            <persname encodinganalog="600" source="lcnaf">Dewey, John, 1859-1952
+                                --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/dodd+stuart+carter+1900-1975">
+                            <persname encodinganalog="700" source="lcnaf">Dodd, Stuart Carter,
+                                1900-1975.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/eldridge+seba+1885">
+                            <persname encodinganalog="700" source="lcnaf">Eldridge, Seba, b.
+                                1885.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/gross+bertram+myron+1912-">
+                            <persname encodinganalog="700" source="lcnaf">Gross, Bertram Myron,
+                                1912- </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/hall+jerome+1901-">
+                            <persname encodinganalog="700" source="lcnaf">Hall, Jerome, 1901-
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/hapgood+william+powers">
+                            <persname encodinganalog="700" source="lcnaf">Hapgood, William
+                                Powers.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/kaufmann+felix+1895-1949">
+                            <persname encodinganalog="700" source="lcnaf">Kaufmann, Felix,
+                                1895-1949.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/korzybski+alfred+1879-1950">
+                            <persname encodinganalog="700" source="lcnaf">Korzybski, Alfred,
+                                1879-1950.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/lillie+ralph+s.+1875">
+                            <persname encodinganalog="700" source="lcnaf">Lillie, Ralph S. (Ralph
+                                Stayner), b. 1875.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/lundberg+george+andrew+1895-1966">
+                            <persname encodinganalog="700" source="lcnaf">Lundberg, George Andrew,
+                                1895-1966.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/nagel+ernest+1901-">
+                            <persname encodinganalog="700" source="lcnaf">Nagel, Ernest, 1901-
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/ogden+c.k.+1889-1957">
+                            <persname encodinganalog="700" source="lcnaf">Ogden, C. K. (Charles
+                                Kay), 1889-1957.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/pronko+n.h.+1908-">
+                            <persname encodinganalog="700" source="lcnaf">Pronko, N. H. (Nicholas
+                                Henry), 1908- </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/ratner+joseph+1901-">
+                            <persname encodinganalog="700" source="lcnaf">Ratner, Joseph, 1901-
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/roff+merrill+flagg+1909-">
+                            <persname encodinganalog="700" source="lcnaf">Roff, Merrill Flagg, 1909-
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/taylor+richard+wirth+1923-">
+                            <persname encodinganalog="700" source="lcnaf">Taylor, Richard Wirth,
+                                1923- </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/williams+kenneth+p.+1887-1958">
+                            <persname encodinganalog="700" source="lcnaf">Williams, Kenneth P.
+                                (Kenneth Powers), 1887-1958.</persname>
+                        </extref>
+                    </item>
+
+
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/behaviorism+psychology{su}">
+                            <subject encodinganalog="650" source="lcnaf">Behaviorism
+                                (Psychology).</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/mathematics+philosophy{su}">
+                            <subject encodinganalog="650" source="lcnaf">Mathematics
+                                --Philosophy.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/mathematics+terminology{su}">
+                            <subject encodinganalog="650" source="lcnaf">Mathematics
+                                --Terminology.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/philosophers+correspondence{su}">
+                            <subject encodinganalog="650" source="lcnaf">Philosophers
+                                --Correspondence.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/social+psychology{su}">
+                            <subject encodinganalog="650" source="lcnaf">Social
+                                psychology.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/social+sciences+methodology{su}">
+                            <subject encodinganalog="650" source="lcnaf">Social sciences
+                                --Methodology.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/social+sciences+philosophy{su}">
+                            <subject encodinganalog="650" source="lcnaf">Social sciences
+                                --Philosophy. </subject>
+                        </extref>
+                    </item>
+
+                </list>
+
+            </controlaccess>
+            <controlaccess>
+                <head>Places</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/chicago+ill.+politics+government{su}">
+                            <geogname encodinganalog="651" source="lcnaf">Chicago (Ill.) --Politics
+                                and government.</geogname>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+        </controlaccess>
+
+        <relatedmaterial encodinganalog="544 1">
+            <head>Related Material</head>
+            <p> Bentley mss. II; also located at the Lilly Library, Indiana University, Bloomington,
+                Indiana.</p>
+        </relatedmaterial>
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired 1953, 1958, 1960.</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>Bentley mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+
+
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAB8750-00001" level="series">
+                <did>
+                    <!-- optional -->
+                    <container label="Box" type="box">1</container>
+
+
+                    <unittitle>I. Correspondence</unittitle>
+
+
+                </did>
+                <!-- optional -->
+                <scopecontent>
+                    <p>Correspondents in the collection include:</p>
+                    <list>
+                        <item>Reuben Abel</item>
+                        <item>Lawrence Edwin Abt</item>
+                        <item>Virgil Charles Aldrich</item>
+                        <item>Adelbert Ames</item>
+                        <item>Ervin Anderson</item>
+                        <item>Read Bain</item>
+                        <item>Frances Ellen Baker</item>
+                        <item>Gladys Elizabeth Baker</item>
+                        <item>Richard Philip Baker</item>
+                        <item>Arthur Fisher Bentley</item>
+                        <item>Imogene Shaw Bentley</item>
+                        <item>Victor Veracis Branford</item>
+                        <item>Percy Williams Bridgman</item>
+                        <item>Luitzen Egbertus Jan Brouwer</item>
+                        <item>Junius Flagg Brown</item>
+                        <item>Egon von Korompa Brunswik</item>
+                        <item>Trigant Burrow</item>
+                        <item>Franklin L. Burdette</item>
+                        <item>Donald Forrester Cameron</item>
+                        <item>William Calvin Chesnut</item>
+                        <item>Hector Chevigny</item>
+                        <item>Alonzo Church</item>
+                        <item>Leon Chwistek</item>
+                        <item>Morris Raphael Cohen</item>
+                        <item>Raymond Huntington Coon</item>
+                        <item>David Rankin Craig</item>
+                        <item>Edward Darling</item>
+                        <item>Elmer Holmes Davis</item>
+                        <item>Harold Thayer Davis</item>
+                        <item>Cecil Henry Desch</item>
+                        <item>Jane Mary Dewey</item>
+                        <item>John Dewey</item>
+                        <item>Lewis Anthony Dexter</item>
+                        <item>Stuart Carter Dodd</item>
+                        <item>Joseph Dorfman</item>
+                        <item>Paul Howard Douglas</item>
+                        <item>Arnold Dresden</item>
+                        <item>Albert Plummer Duryee</item>
+                        <item>Lyle Eddy</item>
+                        <item>Jacob Murray Edelman</item>
+                        <item>Albert Einstein</item>
+                        <item>Seba Eldridge</item>
+                        <item>Lincoln Ellison</item>
+                        <item>Heinz Eulau</item>
+                        <item>Marvin Farber</item>
+                        <item>Ellsworth Faris</item>
+                        <item>Hugh D. Farley</item>
+                        <item>Alexander Farquharson</item>
+                        <item>Beatrix (Hapgood) Faust</item>
+                        <item>Abraham Flexner</item>
+                        <item>John Porter Foley</item>
+                        <item>Abraham Adolf Fraenkel</item>
+                        <item>Horace Snyder Fries</item>
+                        <item>Ralph Follen Fuchs</item>
+                        <item>James William Fulbright</item>
+                        <item>Paul Raymond Fuller</item>
+                        <item>Bernard Campbell Gavit</item>
+                        <item>Sir Patrick Geddes</item>
+                        <item>George Raymond Geiger</item>
+                        <item>George Vincent Gentry</item>
+                        <item>Ralph Morris Goldman</item>
+                        <item>John D. Graves</item>
+                        <item>Bertram Myron Gross</item>
+                        <item>Charles Banner Hagan</item>
+                        <item>Jerome Hall</item>
+                        <item>Nathan Hakman</item>
+                        <item>Charles Hutchins Hapgood</item>
+                        <item>William Powers Hapgood</item>
+                        <item>Samuel Ichie Hayakawa</item>
+                        <item>Selig Hecht</item>
+                        <item>Earle Raymond Hedrick</item>
+                        <item>Fritz Heider</item>
+                        <item>Sidney Hook</item>
+                        <item>Floyd Nelson House</item>
+                        <item>Elizabeth P. Huber</item>
+                        <item>Rockwell Dennis Hunt</item>
+                        <item>Edward Vermilye Huntington</item>
+                        <item>Nolan Pliny Jacobson</item>
+                        <item>Alvin Saunders Johnson</item>
+                        <item>Roger Arthur Johnson</item>
+                        <item>Llewellyn Jones</item>
+                        <item>Elijah Jordan</item>
+                        <item>Arnold Herman Kamiat</item>
+                        <item>Hisao Kamidera</item>
+                        <item>Else Kaufmann</item>
+                        <item>Felix Kaufmann</item>
+                        <item>George Kaufmann</item>
+                        <item>Gladys (McLaughlin) Keener</item>
+                        <item>Marjorie (Culver) Keenleyside</item>
+                        <item>Estes Kefauver</item>
+                        <item>Gail Kennedy</item>
+                        <item>William Phelps Kent</item>
+                        <item>William Heard Kilpatrick</item>
+                        <item>Laura Tilden (Kent) Klyce</item>
+                        <item>Leo Francis Koch</item>
+                        <item>Alfred Korzybski</item>
+                        <item>Gordon Jennings Laing</item>
+                        <item>Louis Erskine Lambert</item>
+                        <item>Elfrieda Wilhelmina Henrietta Lang</item>
+                        <item>Herbert Sidney Langfeld</item>
+                        <item>David Lawrence</item>
+                        <item>Merle Lawrence</item>
+                        <item>Parker Earl Lichtenstein</item>
+                        <item>Ralph Stayner Lillie</item>
+                        <item>Horace Brisbin Liveright</item>
+                        <item>Karl Nickerson Llewellyn</item>
+                        <item>George Andrew Lundberg</item>
+                        <item>Francis John McConnell</item>
+                        <item>Thomas Mann</item>
+                        <item>Gerrit Mannory</item>
+                        <item>Benjamin Clarke Marsh</item>
+                        <item>Henry Mayer</item>
+                        <item>Nelson Prestiss Mead</item>
+                        <item>Karl Menger</item>
+                        <item>Adolf Meyer</item>
+                        <item>Cecil Hale Miller</item>
+                        <item>Sherman Anthony Minton</item>
+                        <item>Charles Napoleon Moore</item>
+                        <item>Kent Underhill Moore</item>
+                        <item>Patrick Mullahy</item>
+                        <item>Hermann Joseph Muller</item>
+                        <item>Ernest Nagel</item>
+                        <item>Marie (Reidemeister) Neurath</item>
+                        <item>Otto Neurath</item>
+                        <item>George William Norris</item>
+                        <item>Orland Otway Norris</item>
+                        <item>Charles Kay Ogden</item>
+                        <item>Harry Allen Overstreet</item>
+                        <item>Bayard Henry Paine</item>
+                        <item>Sidney Painter</item>
+                        <item>Wyman West Parker</item>
+                        <item>Wallace Parks</item>
+                        <item>Kenneth Herald Parsons</item>
+                        <item>John Pearson</item>
+                        <item>Nicholas Henry Pronko</item>
+                        <item>Harold Robert Rafton</item>
+                        <item>John Herman Randall</item>
+                        <item>Joseph Austin Ranney</item>
+                        <item>Joseph Ratner</item>
+                        <item>Stanley Charles Ratner</item>
+                        <item>Gaston Richard</item>
+                        <item>Robert G. Risk</item>
+                        <item>Warren Aldrich Roberts</item>
+                        <item>Cary Robertson</item>
+                        <item>Priscilla (Smith) Robertson</item>
+                        <item>Merrill Flagg Roff</item>
+                        <item>Porter Edward Sargent</item>
+                        <item>Edward Leroy Schaub</item>
+                        <item>Agnes Schlytter</item>
+                        <item>Leslie Evan Schlytter</item>
+                        <item>Herbert Wallace Schneider</item>
+                        <item>George Adam Schumacher</item>
+                        <item>Victor Ernest Shelford</item>
+                        <item>Hoyt Leon Sherman</item>
+                        <item>Eyler Newton Simpson</item>
+                        <item>Edward Octavius Sisson</item>
+                        <item>Ernest Barton Skaggs</item>
+                        <item>Burrhus Frederic Skinner</item>
+                        <item>Sinclair Smith</item>
+                        <item>Warren Allen Smith</item>
+                        <item>Warren Wesley David Sones</item>
+                        <item>Edward James Sparling</item>
+                        <item>Guido Hermann Stempel</item>
+                        <item>Donald Howard Sweet</item>
+                        <item>Hans Syz</item>
+                        <item>Richard Wirth Taylor</item>
+                        <item>Miriam (Hapgood) Trivanovitch</item>
+                        <item>David Bicknell Truman</item>
+                        <item>Ralph Winfred Tyler</item>
+                        <item>Roy Ewing Vale</item>
+                        <item>Ulysses Grant Weatherly</item>
+                        <item>Anne Weinstock</item>
+                        <item>Soloman Weinstock</item>
+                        <item>Hermann Weyl</item>
+                        <item>Leopold Max Walter von Wiese und Kaiserwaldau</item>
+                        <item>Cora Lenore Williams</item>
+                        <item>Kenneth Powers Williams</item>
+                        <item>Edwin Henry Wilson</item>
+                        <item>Quincy Wright</item>
+                        <item>Victor S. Yarros.</item>
+
+                    </list>
+                </scopecontent>
+                <c02 id="VAB8750-00002" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1874/1944" type="inclusive">1874-1944</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00003" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>
+                            <unitdate normal="1945/1957" type="inclusive">1945-1957</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00004" level="file">
+                    <did>
+                        <container label="Box" type="box">3</container>
+                        <unittitle>A-Dewey, <unitdate normal="1946">1946</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00005" level="file">
+                    <did>
+                        <container label="Box" type="box">4</container>
+                        <unittitle>Dewey, <unitdate normal="1947">1947</unitdate>-K</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00006" level="file">
+                    <did>
+                        <container label="Box" type="box">5</container>
+                        <unittitle>L-Z</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAB8750-00007" level="series">
+                <did>
+                    <container label="Box" type="box">6</container>
+                    <unittitle>II. Writings</unittitle>
+                </did>
+                <scopecontent>
+                    <p>Includes typescripts, notes, proofs, research materials, and clippings.</p>
+                </scopecontent>
+                <c02 id="VAB8750-00008" level="file">
+                    <did>
+                        <unittitle>Address, Indianapolis: Risk. <unitdate normal="1946-12-26">Dec.
+                                26, 1946</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00009" level="file">
+                    <did>
+                        <unittitle>Analytic sociology. <unitdate normal="1931-06">June
+                                1931</unitdate></unittitle>
+                        <physdesc>(6 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00010" level="file">
+                    <did>
+                        <unittitle>Aphoristically. <unitdate normal="1949"
+                            >1949</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00011" level="file">
+                    <did>
+                        <unittitle>As through a glass darkly. <unitdate normal="1942-03">Mar.
+                                1942</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00012" level="file">
+                    <did>
+                        <unittitle>The bearing of transaction on research in the social Sciences.
+                                <unitdate normal="1951-05-10">May 10, 1951</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00013" level="file">
+                    <did>
+                        <unittitle>Behavior knowledge fact. <unitdate normal="1932-12/1935"
+                                type="inclusive">Dec. 1932-1935</unitdate></unittitle>
+                        <physdesc>(35 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00014" level="file">
+                    <did>
+                        <container label="Box" type="box">7</container>
+                        <unittitle>Behavior knowledge fact. <unitdate normal="1932-12/1935"
+                                type="inclusive">Dec. 1932-1935 </unitdate>(cont.)</unittitle>
+                        <physdesc>(12 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00015" level="file">
+                    <did>
+                        <unittitle>Behavioral fact. <unitdate normal="1947-03">Mar.
+                            1947</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00016" level="file">
+                    <did>
+                        <unittitle>Behavioral superfice. <unitdate normal="1940-01">Jan.
+                                1940</unitdate></unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00017" level="file">
+                    <did>
+                        <unittitle>Bridgman's concept in operation. <unitdate normal="1936-06">June
+                                1936</unitdate></unittitle>
+                        <physdesc>(7 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00018" level="file">
+                    <did>
+                        <unittitle>Carnap. <unitdate normal="1949-02-10">Feb. 10,
+                            1949</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00019" level="file">
+                    <did>
+                        <unittitle>Carnap's <emph render="doublequote">Truth</emph> vs. Kaufmann's
+                                <emph render="doublequote">True.</emph>
+                            <unitdate normal="1949">1949</unitdate></unittitle>
+                        <physdesc>(11 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00020" level="file">
+                    <did>
+                        <unittitle><emph render="doublequote">Causational</emph> and <emph
+                                render="doublequote">valuational</emph> sciences of society.
+                                <unitdate normal="1896">1896</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00021" level="file">
+                    <did>
+                        <container label="Box" type="box">8</container>
+                        <unittitle>Comments on Mead. <unitdate normal="1937-08/1946"
+                                type="inclusive">Aug. 1937-1946.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00022" level="file">
+                    <did>
+                        <unittitle>The concept. <unitdate normal="1937">1937</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00023" level="file">
+                    <did>
+                        <unittitle>Conceptual reliance in logical construction. <unitdate
+                                normal="1936-05">May 1936</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00024" level="file">
+                    <did>
+                        <unittitle>The condition of the western farmer. <unitdate normal="1891/1893"
+                                type="inclusive">1891-1893</unitdate></unittitle>
+                        <physdesc>(27 envelopes and folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00025" level="file">
+                    <did>
+                        <unittitle>Criticizing Dewey. <unitdate normal="1950-01">Jan.
+                                1950</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00026" level="file">
+                    <did>
+                        <unittitle>Declassifying Dewey. <unitdate normal="1940-07">July
+                                1940</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00027" level="file">
+                    <did>
+                        <unittitle>Dewey and Bentley. <unitdate normal="1949"
+                            >1949</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00028" level="file">
+                    <did>
+                        <unittitle>Dewey and Bridgman. <unitdate normal="1950"
+                            >1950</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00029" level="file">
+                    <did>
+                        <unittitle>Differentiation of term and symbol. <unitdate normal="1945"
+                                >1945</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00030" level="file">
+                    <did>
+                        <unittitle>Eine Dreifache Annäherung des Kontinuumproblemes. <unitdate
+                                normal="1929">1929</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00031" level="file">
+                    <did>
+                        <unittitle>Epilogue. <unitdate normal="1953">1953</unitdate></unittitle>
+                        <physdesc>(14 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00032" level="file">
+                    <did>
+                        <unittitle>Examination of Einstein's term <emph render="doublequote"
+                                >space.</emph>
+                            <unitdate normal="1931-01">Jan. 1931</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00033" level="file">
+                    <did>
+                        <unittitle>Factual references of psychological terms. <unitdate
+                                normal="1949/1956" type="inclusive">1949-1956</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00034" level="file">
+                    <did>
+                        <unittitle>Factual space and time of behavior. <unitdate
+                                normal="1940-12/1941" type="inclusive">Dec.
+                            1940-1941</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00035" level="file">
+                    <did>
+                        <unittitle>The fiction of <emph render="doublequote">retinal</emph> image.
+                                <unitdate normal="1943/1951" type="inclusive"
+                            >1943-1951</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00036" level="file">
+                    <did>
+                        <unittitle>For discussion (say with a critic of my construction). <unitdate
+                                normal="1954-10">Oct. 1954</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00037" level="file">
+                    <did>
+                        <unittitle>The human skin…<unitdate normal="1937-07/1940" type="inclusive"
+                                >July 1937-1940</unitdate></unittitle>
+                        <physdesc>(6 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00038" level="file">
+                    <did>
+                        <unittitle>Indianapolis talk. <unitdate normal="1950-06-20">June 20,
+                                1950</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00039" level="file">
+                    <did>
+                        <unittitle>Individual and social - terms and facts. <unitdate normal="1928"
+                                >1928</unitdate></unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00040" level="file">
+                    <did>
+                        <unittitle>The individuality as the basis for reasoning in the Social
+                            sciences. <unitdate normal="1895">1895</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00041" level="file">
+                    <did>
+                        <container label="Box" type="box">9</container>
+                        <unittitle>Inquiry into inquiries. <unitdate normal="1953/1954"
+                                type="inclusive">1953-1954</unitdate></unittitle>
+                        <physdesc>(12 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00042" level="file">
+                    <did>
+                        <unittitle>In summary. <unitdate normal="1949-01-10">Jan. 10,
+                                1949</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00043" level="file">
+                    <did>
+                        <unittitle>In summary. <unitdate normal="1951-11">Nov.
+                            1951</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00044" level="file">
+                    <did>
+                        <unittitle>Jamesian datum. <unitdate normal="1942-12/1943" type="inclusive"
+                                >Dec. 1942-1943</unitdate></unittitle>
+                        <physdesc>(7 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00045" level="file">
+                    <did>
+                        <unittitle>Kaufmann seminar. <unitdate normal="1949-03">Mar.
+                            1949</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00046" level="file">
+                    <did>
+                        <unittitle>Kennetic inquiry. <unitdate normal="1950"
+                            >1950</unitdate></unittitle>
+                        <physdesc>(6 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00047" level="file">
+                    <did>
+                        <unittitle>Knowledge and society. <unitdate normal="1910"
+                            >1910</unitdate></unittitle>
+                        <physdesc>(9 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00048" level="file">
+                    <did>
+                        <unittitle>L. Bloomfield. <unitdate normal="1940/1941" type="inclusive"
+                                >1940-1941</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00049" level="file">
+                    <did>
+                        <unittitle>Language. <unitdate normal="1939-10-29/1950-09-01"
+                                type="inclusive">Oct. 29, 1939-Sept. 1, 1950</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00050" level="file">
+                    <did>
+                        <unittitle>Language. <unitdate normal="1940/1942" type="inclusive"
+                                >1940-1942</unitdate></unittitle>
+                        <physdesc>(9 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00051" level="file">
+                    <did>
+                        <container label="Box" type="box">10</container>
+                        <unittitle>Language. <unitdate normal="1940/1942" type="inclusive"
+                                >1940-1942</unitdate>(cont.) </unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00052" level="file">
+                    <did>
+                        <unittitle>Language as human behavior. <unitdate normal="1948-09-03">Sept.
+                                3, 1948</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00053" level="file">
+                    <did>
+                        <unittitle>Lecture notes. <unitdate normal="1896"
+                            >1896</unitdate></unittitle>
+                        <physdesc>(6 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00054" level="file">
+                    <did>
+                        <unittitle>Linguistic analysis of mathematics. <unitdate normal="1928/1932"
+                                type="inclusive">1928-1932</unitdate></unittitle>
+                        <physdesc>(26 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00055" level="file">
+                    <did>
+                        <container label="Box" type="box">11</container>
+                        <unittitle>Linguistic analysis of mathematics. <unitdate normal="1928/1932"
+                                type="inclusive">1928-1932 </unitdate>(cont.)</unittitle>
+                        <physdesc>(11 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00056" level="file">
+                    <did>
+                        <unittitle>Linguistic structure of mathematical consistency. <unitdate
+                                normal="1930/1931" type="inclusive">1930-1931</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00057" level="file">
+                    <did>
+                        <unittitle>Linkage. <unitdate normal="1953-01-12">Jan. 12,
+                            1953</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00058" level="file">
+                    <did>
+                        <unittitle>Logic and logical behavior. <unitdate normal="1948/1949"
+                                type="inclusive">1948-1949</unitdate></unittitle>
+                        <physdesc>(15 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00059" level="file">
+                    <did>
+                        <container label="Box" type="box">12</container>
+                        <unittitle>Makers and users. <unitdate normal="1919/1920" type="inclusive"
+                                >1919-1920</unitdate></unittitle>
+                        <physdesc>(30 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00060" level="file">
+                    <did>
+                        <unittitle>Makers, users and masters. Printer's copy. <unitdate
+                                normal="1968-07-08">July 8, 1968</unitdate></unittitle>
+                        <physdesc>(5 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00061" level="file">
+                    <did>
+                        <container label="Box" type="box">13</container>
+                        <unittitle>Making words meet. <unitdate normal="1941-01-22">Jan. 22,
+                                1941</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00062" level="file">
+                    <did>
+                        <unittitle>Materials for a comparison of organisms and societies. <unitdate
+                                normal="1895">1895</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00063" level="file">
+                    <did>
+                        <unittitle>[Materials for various talks] <unitdate normal="1932/1940"
+                                type="inclusive">1932-1940</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00064" level="file">
+                    <did>
+                        <unittitle>Mathematics: notes and memoranda. <unitdate normal="1945-08/1951"
+                                type="inclusive">Aug. 1945-1951</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00065" level="file">
+                    <did>
+                        <unittitle>Mathematics paper. <unitdate normal="1947-03-25/1947-07-04"
+                                type="inclusive">Mar. 25, 1947-July 4, 1947</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00066" level="file">
+                    <did>
+                        <unittitle>Memo on 1927 sociology papers. <unitdate normal="1954-07-01">July
+                                1, 1954</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00067" level="file">
+                    <did>
+                        <unittitle>Memo on skin. <unitdate normal="1951">1951</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00068" level="file">
+                    <did>
+                        <unittitle>Memoranda and notes on books and letters of John Dewey. <unitdate
+                                normal="1942/1951" type="inclusive">1942-1951</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00069" level="file">
+                    <did>
+                        <unittitle>Memoranda on Dewey's <emph render="italic">Logic</emph>.
+                                <unitdate normal="1939/1946" type="inclusive"
+                            >1939-1946</unitdate></unittitle>
+                        <physdesc>(25 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00070" level="file">
+                    <did>
+                        <unittitle>Memorial...Deep waterway from Lake Michigan to the Mississippi
+                            River. <unitdate normal="1902">1902</unitdate></unittitle>
+                        <physdesc>(5 folders)</physdesc>
+                        <note>
+                            <p>
+                                <ref target="VAB8750-00181" xlink:actuate="onRequest"
+                                    xlink:show="replace" xlink:type="simple">See also: Oversize
+                                    2</ref>
+                            </p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00071" level="file">
+                    <did>
+                        <unittitle>Mike Lane material. <unitdate normal="1902/1910" type="inclusive"
+                                >1902-1910</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00072" level="file">
+                    <did>
+                        <unittitle>Miscellaneous papers. <unitdate normal="1920/1923"
+                                type="inclusive">1920-1923</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00073" level="file">
+                    <did>
+                        <unittitle>Morris. <unitdate normal="1949-10">Oct.
+                            1949</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00074" level="file">
+                    <did>
+                        <unittitle>Municipal ownership interest groups in Chicago. <unitdate
+                                normal="1904/1907" type="inclusive">1904-1907</unitdate></unittitle>
+                        <physdesc>(33 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00075" level="file">
+                    <did>
+                        <container label="Box" type="box">14</container>
+                        <unittitle>Municipal ownership interest groups in Chicago. <unitdate
+                                normal="1904/1907" type="inclusive">1904-1907</unitdate></unittitle>
+                        <physdesc>(42 folders)</physdesc>
+                        <note>
+                            <p>
+                                <ref target="VAB8750-00182" xlink:actuate="onRequest"
+                                    xlink:show="replace" xlink:type="simple">See also: Oversize
+                                    3</ref>
+                            </p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00076" level="file">
+                    <did>
+                        <unittitle>Muscle-structured psychology. <unitdate normal="1952-03/1954-01"
+                                type="inclusive">Mar. 1952-Jan. 1954</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00077" level="file">
+                    <did>
+                        <unittitle>Music. <unitdate normal="1940/1942" type="inclusive"
+                                >1940-1942</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00078" level="file">
+                    <did>
+                        <unittitle>Neurath, Kaufmann, and Dewey. <unitdate normal="1944-12-02">Dec.
+                                2, 1944.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00079" level="file">
+                    <did>
+                        <unittitle>New ways and old talk about men. <unitdate normal="1928/1929"
+                                type="inclusive">1928-1929</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00080" level="file">
+                    <did>
+                        <unittitle>Notes and memoranda on Dewey's books and articles. <unitdate
+                                normal="1936-10-10/1946" type="inclusive">Oct. 10,
+                                1936-1946</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00081" level="file">
+                    <did>
+                        <unittitle>Number one and number ought. <unitdate normal="1930"
+                                >1930</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00082" level="file">
+                    <did>
+                        <unittitle>Observable behaviours. <unitdate normal="1939/1940"
+                                type="inclusive">1939-1940</unitdate></unittitle>
+                        <physdesc>(5 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00083" level="file">
+                    <did>
+                        <unittitle>Observation (transactional). <unitdate normal="1953-04">Apr.
+                                1953</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00084" level="file">
+                    <did>
+                        <unittitle>On Lashley. <unitdate normal="1947/1948" type="inclusive"
+                                >1947-1948</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00085" level="file">
+                    <did>
+                        <unittitle>On the relation of the individual to society. <unitdate
+                                normal="1894">1894</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00086" level="file">
+                    <did>
+                        <unittitle>Paper for American Scientist. <unitdate normal="1951-03-30">Mar.
+                                30, 1951</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00087" level="file">
+                    <did>
+                        <unittitle>Peirce. <unitdate normal="1939">1939</unitdate></unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00088" level="file">
+                    <did>
+                        <container label="Box" type="box">15</container>
+                        <unittitle>Pending essays. <unitdate normal="1926/1928" type="inclusive"
+                                >1926-1928</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00089" level="file">
+                    <did>
+                        <unittitle>Perry's theory of value. <unitdate normal="1927/1928"
+                                type="inclusive">1927-1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00090" level="file">
+                    <did>
+                        <unittitle>Phenomena called <emph render="doublequote">conscious.</emph>
+                            <unitdate normal="1941-06/1942" type="inclusive">June
+                                1941-1942</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00091" level="file">
+                    <did>
+                        <unittitle>Phenomenal monism. <unitdate normal="1895">ca.
+                            1895</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00092" level="file">
+                    <did>
+                        <unittitle>Philosophy. <unitdate normal="1942-09-12">Sept. 12,
+                                1942</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00093" level="file">
+                    <did>
+                        <unittitle>Phrasings. <unitdate normal="1951">1951</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00094" level="file">
+                    <did>
+                        <unittitle>Physicists and fairies. <unitdate normal="1937-12/1938"
+                                type="inclusive">Dec. 1937-1938</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00095" level="file">
+                    <did>
+                        <unittitle>Physics reading notes. <unitdate normal="1934/1938"
+                                type="inclusive">1934-1938</unitdate></unittitle>
+                        <physdesc>(8 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00096" level="file">
+                    <did>
+                        <unittitle>Play of interests in legislative bodies. <unitdate
+                                normal="1905/1906" type="inclusive">1905-1906</unitdate></unittitle>
+                        <physdesc>(25 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00097" level="file">
+                    <did>
+                        <unittitle>Political law as fact of inquiry. <unitdate normal="1950-01-01"
+                                >Jan. 1, 1950</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00098" level="file">
+                    <did>
+                        <unittitle>Political science group. <unitdate normal="1950-08-08">Aug. 8,
+                                1950</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00099" level="file">
+                    <did>
+                        <unittitle>Positive and the logical. <unitdate normal="1936-08">Aug.
+                                1936</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00100" level="file">
+                    <did>
+                        <unittitle>Projects. <unitdate normal="1936/1954" type="inclusive"
+                                >1936-1954</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00101" level="file">
+                    <did>
+                        <unittitle>Possible paper on psychology of organism. <unitdate
+                                normal="1940-09-24">Sept. 25, 1940</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00102" level="file">
+                    <did>
+                        <unittitle>Postulates of operational physics. <unitdate normal="1928/1930"
+                                type="inclusive">1928-1930</unitdate></unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00103" level="file">
+                    <did>
+                        <unittitle>Prefatory note to collection of essays. <unitdate
+                                normal="1952-04">Apr. 1952.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00104" level="file">
+                    <did>
+                        <unittitle>Sociology and mathematics. <unitdate normal="1931-01">Jan.
+                                1931</unitdate></unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00105" level="file">
+                    <did>
+                        <unittitle>Preliminary essays on psychology. <unitdate normal="1933"
+                                >1933</unitdate></unittitle>
+                        <physdesc>(10 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00106" level="file">
+                    <did>
+                        <container label="Box" type="box">16</container>
+                        <unittitle>Preliminary essays on psychology. <unitdate normal="1933"
+                                >1933</unitdate>(cont.) </unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00107" level="file">
+                    <did>
+                        <unittitle>Problem: to know some more about <emph render="doublequote">to
+                                know.</emph>
+                            <unitdate normal="1944-01-11">Jan. 11, 1944</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00108" level="file">
+                    <did>
+                        <unittitle>Process of government. <unitdate normal="1906/1907"
+                                type="inclusive">1906-1907.</unitdate>Printed and bound
+                            items:</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00109" level="file">
+                    <did>
+                        <unittitle>Laws of Illinois. <unitdate normal="1905"
+                            >1905</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00110" level="file">
+                    <did>
+                        <unittitle>House Journal, Illinois. <unitdate normal="1905"
+                            >1905</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00111" level="file">
+                    <did>
+                        <unittitle>Senate Journal, Illinois. <unitdate normal="1905"
+                            >1905</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00112" level="file">
+                    <did>
+                        <unittitle>House Synopsis, 44th General Assembly [Illinois] <unitdate
+                                normal="1905-04-24">Apr. 24, 1905.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00113" level="file">
+                    <did>
+                        <unittitle>Final Synopsis of Senate and House Bills [Illinois] <unitdate
+                                normal="1905-01-04/1905-05-06" type="inclusive">Jan. 4, 1905-May 6,
+                                1905</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00114" level="file">
+                    <did>
+                        <unittitle>New General Ordinances [Illinois] <unitdate normal="1906-12">Dec.
+                                1906</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00115" level="file">
+                    <did>
+                        <unittitle>Report of the Illinois State Legislative Board of the Brotherhood
+                            of Railroad Trainmen. <unitdate normal="1905"
+                            >1905</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00116" level="file">
+                    <did>
+                        <unittitle>Illinois State Geological Survey: The Petroleum Industry of
+                            Southeaster Illinois. <unitdate normal="1906"
+                            >1906</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00117" level="file">
+                    <did>
+                        <unittitle>Proceedings of the City Council of Chicago. <unitdate
+                                normal="1905-04-10/1905-07-10" type="inclusive">Apr. 10, 1905-July
+                                10, 1905</unitdate></unittitle>
+                        <physdesc>(11 issues)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00118" level="file">
+                    <did>
+                        <unittitle>Process of government. <unitdate normal="1906/1907"
+                                type="inclusive">1906-1907</unitdate></unittitle>
+                        <physdesc>(37 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00119" level="file">
+                    <did>
+                        <container label="Box" type="box">17</container>
+                        <unittitle>Process of government. <unitdate normal="1906/1907"
+                                type="inclusive">1906-1907</unitdate></unittitle>
+                        <physdesc>(49 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00120" level="file">
+                    <did>
+                        <container label="Box" type="box">18</container>
+                        <unittitle>Process of government. <unitdate normal="1906/1907"
+                                type="inclusive">1906-1907</unitdate></unittitle>
+                        <physdesc>(14 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00121" level="file">
+                    <did>
+                        <unittitle>Process of vision. <unitdate normal="1943/1944" type="inclusive"
+                                >1943-1944,</unitdate><unitdate normal="1950"
+                            >1950</unitdate></unittitle>
+                        <physdesc>(22 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00122" level="file">
+                    <did>
+                        <unittitle>The psychic and the social. <unitdate normal="1929/1931"
+                                type="inclusive">1929-1931</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00123" level="file">
+                    <did>
+                        <unittitle>Public law club, Columbia. Notes. <unitdate normal="1942-01">Jan.
+                                1942</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00124" level="file">
+                    <did>
+                        <unittitle>Public policy. <unitdate normal="1942-05">May
+                            1942</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00125" level="file">
+                    <did>
+                        <unittitle>Readings and notes. <unitdate normal="1935/1952" type="inclusive"
+                                >1935-1952</unitdate></unittitle>
+                        <physdesc>(6 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00126" level="file">
+                    <did>
+                        <container label="Box" type="box">19</container>
+                        <unittitle>Readings and notes. <unitdate normal="1935/1952" type="inclusive"
+                                >1935-1952</unitdate>(cont.) </unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00127" level="file">
+                    <did>
+                        <unittitle>Relativity in man and society. <unitdate normal="1924/1926"
+                                type="inclusive">1924-1926</unitdate></unittitle>
+                        <physdesc>(21 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00128" level="file">
+                    <did>
+                        <container label="Box" type="box">20</container>
+                        <unittitle>Relativity in man and society. <unitdate normal="1924/1926"
+                                type="inclusive">1924-1926</unitdate>(cont.)</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00129" level="file">
+                    <did>
+                        <unittitle>Remarks on the method in the study of society. <unitdate
+                                normal="1926">1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00130" level="file">
+                    <did>
+                        <unittitle>Science. <unitdate normal="1941-06">June
+                            1941</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00131" level="file">
+                    <did>
+                        <unittitle>Science and mathematics. <unitdate normal="1949-04">Apr.
+                                1949</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00132" level="file">
+                    <did>
+                        <unittitle>Science and social science. <unitdate normal="1942-02">Feb.
+                                1942</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00133" level="file">
+                    <did>
+                        <unittitle>Scientific behavior versus logical misbehavior. <unitdate
+                                normal="1936-02">Feb. 1936</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00134" level="file">
+                    <did>
+                        <unittitle>Seeing and the seen. <unitdate normal="1951"
+                            >1951</unitdate></unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00135" level="file">
+                    <did>
+                        <unittitle>Self in use. <unitdate normal="1953-07">July
+                            1953</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00136" level="file">
+                    <did>
+                        <unittitle>Short cut. <unitdate normal="1952-08-02">Aug. 2,
+                            1952</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00137" level="file">
+                    <did>
+                        <unittitle>Signs of error. <unitdate normal="1948"
+                            >1948</unitdate></unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00138" level="file">
+                    <did>
+                        <unittitle>Simplicity as technique in transaction. <unitdate
+                                normal="1954-06-19">June 19, 1954</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00139" level="file">
+                    <did>
+                        <unittitle>Situational versus psychological theories of behavior. <unitdate
+                                normal="1938/1939" type="inclusive">1938-1939</unitdate></unittitle>
+                        <physdesc>(19 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00140" level="file">
+                    <did>
+                        <unittitle>Sketch on Pavlov. <unitdate normal="1947-08">Aug.
+                            1947</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00141" level="file">
+                    <did>
+                        <unittitle>Sketches. <unitdate normal="1952-08/1952-10" type="inclusive"
+                                >Aug.-Oct. 1952</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00142" level="file">
+                    <did>
+                        <unittitle>Skinner comment. <unitdate normal="1951/1952" type="inclusive"
+                                >1951-1952</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00143" level="file">
+                    <did>
+                        <unittitle>Slightly philosophical. <unitdate normal="1945-07-20">July 20,
+                                1945</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00144" level="file">
+                    <did>
+                        <unittitle>Snapping shutters. <unitdate normal="1949"
+                            >1949</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00145" level="file">
+                    <did>
+                        <unittitle>A sociological critique of behaviorism. <unitdate normal="1928"
+                                >1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00146" level="file">
+                    <did>
+                        <unittitle>Sociological studies and papers. <unitdate normal="1926/1927"
+                                type="inclusive">1926-1927</unitdate></unittitle>
+                        <physdesc>(9 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00147" level="file">
+                    <did>
+                        <unittitle>Sociology and mathematics.</unittitle>
+                        <note>
+                            <p>
+                                <ref target="VAB8750-00104" xlink:actuate="onRequest"
+                                    xlink:show="replace" xlink:type="simple">See: Box 15</ref>
+                            </p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00148" level="file">
+                    <did>
+                        <unittitle>Sociology paper. <unitdate normal="1944-11-14/1950"
+                                type="inclusive">Nov. 14, 1944-1950</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00149" level="file">
+                    <did>
+                        <unittitle>Some logical considerations…<unitdate normal="1941-05">May
+                                1941</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00150" level="file">
+                    <did>
+                        <unittitle>Subjects and objects. <unitdate normal="1942-05">Mar.
+                                1942</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00151" level="file">
+                    <did>
+                        <unittitle>A suggested development in Dewey's <emph render="italic"
+                                >Logic</emph>
+                        </unittitle>
+                        <physdesc>(5 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00152" level="file">
+                    <did>
+                        <unittitle>Sundry notes and sketches. <unitdate normal="1945-08-05/1952"
+                                type="inclusive">1945-Aug. 5, 1952</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00153" level="file">
+                    <did>
+                        <unittitle>This is a cat. <unitdate normal="1942"
+                            >1942</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00154" level="file">
+                    <did>
+                        <unittitle>Thought and the brain. <unitdate normal="1949-06-22">June 22,
+                                1949</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00155" level="file">
+                    <did>
+                        <unittitle>Time and knowledge. <unitdate normal="1949-02">Feb.
+                                1949</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00156" level="file">
+                    <did>
+                        <unittitle>Truth, reality, and behavioral fact. <unitdate
+                                normal="1942-11/1943" type="inclusive">Nov.
+                            1942-1943</unitdate></unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00157" level="file">
+                    <did>
+                        <container label="Box" type="box">21</container>
+                        <unittitle>Units of investigation in the social sciences. <unitdate
+                                normal="1895">1895</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00158" level="file">
+                    <did>
+                        <unittitle>Unity of science. <unitdate normal="1940-09">Sept.
+                                1940</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00159" level="file">
+                    <did>
+                        <unittitle>Vision materials. <unitdate normal="1949/1951" type="inclusive"
+                                >1949-1951</unitdate></unittitle>
+                        <physdesc>(14 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00160" level="file">
+                    <did>
+                        <unittitle>A visual illusion affecting mathematical reasoning. <unitdate
+                                normal="1932">1932</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00161" level="file">
+                    <did>
+                        <unittitle>Widened observations. <unitdate normal="1951"
+                            >1951</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00162" level="file">
+                    <did>
+                        <unittitle>Wisecracks. <unitdate normal="1949-10-10">Oct. 10,
+                                1949</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00163" level="file">
+                    <did>
+                        <unittitle>The word <emph render="doublequote">transaction.</emph>
+                            <unitdate normal="1956">1956</unitdate></unittitle>
+                        <physdesc>(9 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8750-00164" level="file">
+                    <did>
+                        <unittitle>Writings by others</unittitle>
+                    </did>
+                    <c03 id="VAB8750-00165" level="file">
+                        <did>
+                            <unittitle>Bentley, Arthur F. and John Dewey. Knowing and the known.
+                                    <unitdate normal="1943/1949" type="inclusive"
+                                    >1943-1949</unitdate></unittitle>
+                            <physdesc>(31 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8750-00166" level="file">
+                        <did>
+                            <container label="Box" type="box">22</container>
+                            <unittitle>Bentley, Arthur F. and John Dewey. Knowing…<unitdate
+                                    normal="1943/1949" type="inclusive">1943-1949</unitdate>(cont.) </unittitle>
+                            <physdesc>(41 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8750-00167" level="file">
+                        <did>
+                            <container label="Box" type="box">23</container>
+                            <unittitle>Bentley, Arthur F. and John Dewey. Knowing…<unitdate
+                                    normal="1943/1949" type="inclusive">1943-1949</unitdate>(cont.) </unittitle>
+                            <physdesc>(19 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8750-00168" level="file">
+                        <did>
+                            <unittitle>Dewey, John. Aid to puzzled critics. <unitdate normal="1948"
+                                    >1948</unitdate></unittitle>
+                            <physdesc>(14 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8750-00169" level="file">
+                        <did>
+                            <unittitle>Dewey, John. Concerning signs. <unitdate normal="1944-07-21"
+                                    >July 21, 1944</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8750-00170" level="file">
+                        <did>
+                            <unittitle>Dewey, John. Faith and science. <unitdate normal="1891/1968"
+                                    type="inclusive">undated</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8750-00171" level="file">
+                        <did>
+                            <unittitle>Dewey, John. Further as to valuation judgments. <unitdate
+                                    normal="1943">1943</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8750-00172" level="file">
+                        <did>
+                            <unittitle>Dewey, John. Importance, significance and meaning. <unitdate
+                                    normal="1950-03-31">Mar. 31, 1950</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8750-00173" level="file">
+                        <did>
+                            <unittitle>Dewey, John. Means and consequences. <unitdate normal="1951"
+                                    >1951</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8750-00174" level="file">
+                        <did>
+                            <unittitle>Dewey, John. Peirce's theory of linguistic signs, though and
+                                meaning. <unitdate normal="1945">1945</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8750-00175" level="file">
+                        <did>
+                            <unittitle>Dewey, John. Review of <title render="italic">Process and
+                                    reality</title>, by Whitehead. <unitdate normal="1929-10-26"
+                                    >Oct. 26, 1929.</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8750-00176" level="file">
+                        <did>
+                            <unittitle>Dewey, John. Values, valuations, and social facts. <unitdate
+                                    normal="1945">1945</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8750-00177" level="file">
+                        <did>
+                            <unittitle>Dewey, John. What is it to be a sign. <unitdate
+                                    normal="1945-05-25">May 25, 1945</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8750-00178" level="file">
+                        <did>
+                            <unittitle>Taylor, R.W. Life, language, law. <unitdate normal="1957"
+                                    >1957</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8750-00179" level="file">
+                        <did>
+                            <container label="Oversize" type="box">1</container>
+                            <unittitle>Editorials (clippings). <unitdate normal="1903/1910"
+                                    type="inclusive">1903-1910</unitdate></unittitle>
+                            <physdesc>(2 vols.)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8750-00180" level="file">
+                        <did>
+                            <container label="Oversize" type="box">2</container>
+                            <unittitle>Editorials (clippings). <unitdate normal="1903/1910"
+                                    type="inclusive">1903-1910</unitdate></unittitle>
+                            <physdesc>(9 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8750-00181" level="file">
+                        <did>
+                            <unittitle>Memorial...Deep waterway from Lake Michigan to the
+                                Mississippi. <unitdate normal="1902">1902</unitdate></unittitle>
+                            <note>
+                                <p>
+                                    <ref target="VAB8750-00070" xlink:actuate="onRequest"
+                                        xlink:show="replace" xlink:type="simple">See also: Box
+                                        13</ref>
+                                </p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8750-00182" level="file">
+                        <did>
+                            <container label="Oversize" type="box">3</container>
+                            <unittitle>Municipal ownership interest groups in Chicago. <unitdate
+                                    normal="1904/1907" type="inclusive"
+                                >1904-1907.</unitdate>Newspaper clippings, maps, plates, graphs and
+                                tables.</unittitle>
+                            <note>
+                                <p><ref target="VAB8750-00074" xlink:actuate="onRequest"
+                                        xlink:show="replace" xlink:type="simple">See also: Box
+                                        13</ref> and <ref target="VAB8750-00075"
+                                        xlink:actuate="onRequest" xlink:show="replace"
+                                        xlink:type="simple">Box 14</ref></p>
+                            </note>
+                        </did>
+                    </c03>
+
+                </c02>
+            </c01>
+            <c01 id="VAB8750-00183" level="series">
+                <did>
+                    <container label="Oversize" type="box">3</container>
+                    <unittitle>III. Miscellaneous</unittitle>
+                </did>
+                <c02 id="VAB8750-00184" level="file">
+                    <did>
+                        <unittitle>Diplomas and certificates issued Arthur F. Bentley. <unitdate
+                                normal="1885/1895" type="inclusive">1885-1895</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
