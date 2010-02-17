@@ -1,0 +1,1782 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+--><ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external" countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924" relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li" identifier="InU-Li-VAB8776">InU-Li-VAB8776</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Finlay mss., <date normal="1953/1972">1953-1972</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2009" type="publication">© 2009</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2009">© 2009</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                    <lb></lb><date normal="2010" type="source">2010</date>
+                <lb></lb>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2010-02-16">Feb. 16, 2010</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng">English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2010-02-16"></date>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Finlay, Ian Hamilton.</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Finlay mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1953/1972" type="inclusive">1953-1972</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1406</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>4,011 items</extent>
+            </physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Finlay mss., 1953-1972, consists of
+                the correspondence and writings of Ian Hamilton Finlay, 1925- , poet of Stonypath,
+                Dunsyre, Lanarkshire, Scotland, where he published works from The Wild Hawthorn
+                Press and of material sent to Finlay for inclusion into issues of <title render="italic">Poor. Old. Tired. Horse.</title></abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+
+            <p>An influential proponent of concrete poetry, Finlay moved from solely literary forms
+                of poetry, drama, and short stories in the 1950's to kinetic forms of poetry
+                expressed in stone, wood, neon and other tangible structures in the 1960's. Boats
+                and boating, sails and the sea were used by Finlay to suggest poetic ideas in many
+                of his poems such as Archangel of Archangel, Boatyard, Four Sails, The Four
+                Seasons..., Homage to Gomringer, Little Drummer boy, The Old Nobby, Seashells, Sepia
+                Barge and others. Sundials were used in like manner as in Arcadian Sundials, Biggar
+                Sundial, and Land/Sea Indoor Sundial. Letters exchanged with woodcarvers, stone
+                carvers, photographers, typographers, printers, and artists give the instructions
+                for the creation of many of his works. A book of poems, <title render="italic">Poems
+                    to See and Hear</title>, was prepared especially to introduce to children
+                Finlay's poetic concepts. During 1968 to 1971 there was much work by Films of
+                Scotland in the preparation of the films <title render="italic">Ocean Stripe
+                    5</title> and <title render="italic">KY 365</title> based on Finlay's life and
+                poetry. </p>
+            <p>Following an agreement with the Fulcrum Press in June 1968 to publish an edition of
+                    <title render="italic">The Dancers Inherit the Party</title>, a controversy
+                developed over the next several years concerning the first appearance of the work.
+                This involved lengthy correspondence with solicitors, members of parliament,
+                librarians, staffs of magazines, newspapers, arts councils, and literary
+                organizations as well as close friends and poets.</p>
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Correspondence; II.
+                Writings; III. Drawings and Photographs; IV. Printed.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Finlay mss., 1953-1972, consists of the correspondence and writings of Ian
+                Hamilton Finlay, 1925- , poet of Stonypath, Dunsyre, Lanarkshire, Scotland, where he
+                published works from The Wild Hawthorn Press and of material sent to Finlay for
+                inclusion into issues of <title render="italic">Poor. Old. Tired. Horse.</title>
+                Writings by Ian Hamilton Finlay include both his literary efforts and instructions
+                for his creative works as well as photographs of some of them. </p>
+            <p>Other items in the collection include drawings by Robert Frame, Roland Kempes, Zeljko
+                D. Kunjundzic, John Picking, and Margo Sandeman; photographs of Finlay, his boat,
+                and garden; and printed pieces by Finlay, by other writers, and of a miscellaneous
+                nature.</p>
+            <p>Completing the collection are materials for POTH (<title render="italic">Poor. Old.
+                    Tired. Horse.</title>), a poetry periodical edited by Ian Hamilton Finlay for
+                several years which provided an opportunity for collaboration by artist and poet.
+                These include poems, proofs, and layouts, but not complete in every instance, for
+                issues no. 7, 9, 12, 13, 15, 16, 17, 18, 20, 23 and 25. Projected issues by Jerome
+                Rothenberg and Victor de Vasarely are designated as <title render="italic">POTH
+                    Miscellaneous 1 and 2</title>.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/finlay+ian+hamilton">
+                            <persname encodinganalog="100" source="lcnaf">Finlay, Ian
+                                Hamilton.</persname>
+                        </extref>
+                    </item>
+
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/finlay+ian+hamilton+dancers+inherit+the+party">
+                            <persname encodinganalog="600" source="lcnaf">Finlay, Ian Hamilton.
+                                Dancers inherit the party.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/morgan+edwin+1920-">
+                            <persname encodinganalog="700" source="lcnaf">Morgan, Edwin, 1920-
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/siegel+eli+1902-1978">
+                            <persname encodinganalog="700" source="lcnaf">Siegel, Eli, 1902-1978
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/solt+mary+ellen">
+                            <persname encodinganalog="700" source="lcnaf">Solt, Mary Ellen.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/turnbull+gael">
+                            <persname encodinganalog="700" source="lcnaf">Turnbull, Gael.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/valoch+jiri">
+                            <persname encodinganalog="700" source="lcnaf">Valoch, Jirí. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/williams+jonathan+1929-2008">
+                            <persname encodinganalog="700" source="lcnaf">Williams, Jonathan,
+                                1929-2008 </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/british+broadcasting+corporation">
+                            <corpname encodinganalog="710" source="lcnaf">British Broadcasting
+                                Corporation. </corpname>
+                        </extref>
+                    </item>
+
+
+
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/concrete+poetry{su}">
+                            <subject encodinganalog="650" source="lcnaf">Concrete poetry. </subject>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+
+        </controlaccess>
+        <relatedmaterial encodinganalog="544 1">
+            <head>Related Material</head>
+            <p>Finlay mss. II; also located at the Lilly Library, Indiana University, Bloomington,
+                Indiana.</p>
+        </relatedmaterial>
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired 1973.</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>Finlay mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAB8776-00001" level="series">
+                <did>
+                    <!-- optional -->
+                    <container label="Box" type="box">1</container>
+
+
+                    <unittitle>I. Correspondence</unittitle>
+
+
+                </did>
+                <!-- optional -->
+                <arrangement>
+                    <p>Preceded by one folder of biographical material. General correspondence is
+                        arranged chronologically, followed by an undated letter and Christmas
+                        cards.</p>
+                </arrangement>
+                <scopecontent>
+                    <p>Among the correspondents are:</p>
+                    <list>
+                        <item>Robin Acland</item>
+                        <item>Wolfgang Ainberger</item>
+                        <item>George Albon</item>
+                        <item>James Allan</item>
+                        <item>Maxwell Allan</item>
+                        <item>Roberrto Altmann</item>
+                        <item>Diane Amussen</item>
+                        <item>David Angus</item>
+                        <item>Alain Arias-Misson</item>
+                        <item>G.Aroul</item>
+                        <item>Arthur Hunt &amp; Hunt, solicitors</item>
+                        <item>Dana Atchley</item>
+                        <item>Martha Baird</item>
+                        <item>Janet D. Bane</item>
+                        <item>Stephen Bann</item>
+                        <item>Mary Elizabeth Barber</item>
+                        <item>Douglas Barbour</item>
+                        <item>Harry Jefferson Barnes</item>
+                        <item>Harry Barrett</item>
+                        <item>William Beattie</item>
+                        <item>Heinz Rudolf Beck</item>
+                        <item>Donald Bell</item>
+                        <item>Asa Benveniste</item>
+                        <item>John Betjeman</item>
+                        <item>Arthur Bickerton</item>
+                        <item>Charles Joseph Biederman</item>
+                        <item>Max Bill</item>
+                        <item>A.N. Blackwood</item>
+                        <item>Margaret Blyth</item>
+                        <item>Alan Bold</item>
+                        <item>Jerry Bowles</item>
+                        <item>Edward Brandabur</item>
+                        <item>Lesley Bratton</item>
+                        <item>Christian J. Braun</item>
+                        <item>Udo Breger</item>
+                        <item>Jürgen Brenner</item>
+                        <item>Tom Bridge</item>
+                        <item>Coburn Britton</item>
+                        <item>British Broadcasting Corporation</item>
+                        <item>G.F. Brown</item>
+                        <item>George Mackay Brown</item>
+                        <item>Ernst Brücher</item>
+                        <item>William Buchanan</item>
+                        <item>Basil Bunting</item>
+                        <item>Vincent Butler</item>
+                        <item>David A. Button</item>
+                        <item>John Mackenzie Calder</item>
+                        <item>Lyn Calwell</item>
+                        <item>Augusto de Campos</item>
+                        <item>Alistair Cant</item>
+                        <item>Christopher Carrell</item>
+                        <item>Patrick Caulfield</item>
+                        <item>Douglas Chambers</item>
+                        <item>Julia L. Cherne</item>
+                        <item>Susan Chernow</item>
+                        <item>Shiomi Chieko</item>
+                        <item>JoAnne Chittick</item>
+                        <item>Ulf Christensen</item>
+                        <item>Elizabeth T. Clark</item>
+                        <item>Thomas A. Clark</item>
+                        <item>Alan Clodd</item>
+                        <item>Henry Clyne</item>
+                        <item>Bob Cobbing</item>
+                        <item>Harold Cohen</item>
+                        <item>Mary C. Cohen</item>
+                        <item>Barry Cole</item>
+                        <item>William Rossa Cole</item>
+                        <item>Sir Edmund Gerald Compton</item>
+                        <item>Margaret Conn</item>
+                        <item>John Stewart Conn</item>
+                        <item>Seamus Cooney</item>
+                        <item>Michael Cormack</item>
+                        <item>Sidney Corman</item>
+                        <item>Ron Costley</item>
+                        <item>John Cotton</item>
+                        <item>Tom Leadbetter Cottrell</item>
+                        <item>Kenelm Cox</item>
+                        <item>Margaret Cox</item>
+                        <item>Robert Creeley</item>
+                        <item>J. Elisabeth Crommelin</item>
+                        <item>Arthur Charles William Crook</item>
+                        <item>Robin Crozier</item>
+                        <item>Helen Burness Cruickshank</item>
+                        <item>Edward W. Curtis</item>
+                        <item>Simon Cutts</item>
+                        <item>Audrey Daly</item>
+                        <item>Tam Dalyell</item>
+                        <item>Jose Antonio Da Silva</item>
+                        <item>Guy Davenport</item>
+                        <item>Hervé Delagrave</item>
+                        <item>Richard Demarco</item>
+                        <item>Stephen W. Dennis</item>
+                        <item>Stanislaw Drózdz</item>
+                        <item>Kenneth Duffy</item>
+                        <item>Alexander Arbuthnot Dunbar</item>
+                        <item>Robert Edward Duncan</item>
+                        <item>Douglas Eadie</item>
+                        <item>David McAdam Eccles, 1st viscount Eccles</item>
+                        <item>Jim Ede</item>
+                        <item>Larry Eigner</item>
+                        <item>Richard England</item>
+                        <item>Theodore Enslin</item>
+                        <item>Amelia Etlinger</item>
+                        <item>Susan Finlay</item>
+                        <item>William Ian Robertson Finlay</item>
+                        <item>Roy Fisher</item>
+                        <item>Maurice Fleming</item>
+                        <item>James Allan Ford</item>
+                        <item>Renate Froehlich</item>
+                        <item>Robin Fulton</item>
+                        <item>John Furnival</item>
+                        <item>Robert E. Galen</item>
+                        <item>Heinz Gappmayr</item>
+                        <item>Ian Gardner</item>
+                        <item>John Gardner</item>
+                        <item>George Garson</item>
+                        <item>Rod Gathercole</item>
+                        <item>K.C. Gay</item>
+                        <item>Tony Gill</item>
+                        <item>Elizabeth L. Glazebrook</item>
+                        <item>Duncan Munro Glen</item>
+                        <item>Hamish Glen</item>
+                        <item>Sydney McK. Glen</item>
+                        <item>Sue Glover</item>
+                        <item>David Godwin</item>
+                        <item>Mathias Goeritz</item>
+                        <item>Eugen Gomringer</item>
+                        <item>Stephen Goode</item>
+                        <item>Arnold Abraham Goodman, baron Goodman</item>
+                        <item>Goodman Derrick &amp; Co., solicitors</item>
+                        <item>Giles Alexander Esme Gordon</item>
+                        <item>Nigel Gosling</item>
+                        <item>Jennifer Gough-Cooper</item>
+                        <item>R.C. Gowers</item>
+                        <item>Peter Grant</item>
+                        <item>Douglas Gray</item>
+                        <item>Mrs. Ann (Giffard) Greenhill</item>
+                        <item>Basil Jack Greenhill</item>
+                        <item>Christopher Murray Grieve</item>
+                        <item>Murray Grigor</item>
+                        <item>Ronald Gunn</item>
+                        <item>Daniel J. Haberman</item>
+                        <item>Hagart &amp; Burn-Murdoch, W.S., solicitors</item>
+                        <item>George Alexander Eugene Douglas Haig, 2nd earl Haig</item>
+                        <item>Barry L. Hall</item>
+                        <item>Douglas Hall Myles</item>
+                        <item>D.G. Hardie</item>
+                        <item>H. Forsyth Hardy</item>
+                        <item>P.R. Harris</item>
+                        <item>Judith Constance Mary (Ridehalgh) Hart</item>
+                        <item>Michael Harvey</item>
+                        <item>Oliver Hawkins</item>
+                        <item>Vaughn Hay</item>
+                        <item>Michael Heller</item>
+                        <item>Hamish Henderson</item>
+                        <item>James Findlay Hendry</item>
+                        <item>J. N. Herbert</item>
+                        <item>John Herdman</item>
+                        <item>Richard C. Higgins</item>
+                        <item>Hugh Creighton Hill</item>
+                        <item>Mark Hill</item>
+                        <item>Mary Cranford (Coates) Hitchens</item>
+                        <item>Sydney Ivon Hitchens</item>
+                        <item>Philip Welsby Holland</item>
+                        <item>Stephen Holland</item>
+                        <item>Sally Holman</item>
+                        <item>Michael Horovitz</item>
+                        <item>Pierre Sylvester Houédard</item>
+                        <item>Libby Houston</item>
+                        <item>W.J. Hummerstone</item>
+                        <item>Gordon Huntley</item>
+                        <item>H.C. Huntley</item>
+                        <item>T. &amp; W. Ide</item>
+                        <item>A.C. Ijenberg</item>
+                        <item>Charles d'Orville Pilkington Jackson</item>
+                        <item>Ruth L. Jacoby</item>
+                        <item>Ernest Jandl</item>
+                        <item>John MacLane Johansen</item>
+                        <item>Ronald Johnson</item>
+                        <item>Bernard Karpel</item>
+                        <item>Graham Keen</item>
+                        <item>Robert Kelly</item>
+                        <item>Robert C. Kennedy</item>
+                        <item>X.J. Kennedy</item>
+                        <item>Hugh Kenner</item>
+                        <item>Irena Kenod</item>
+                        <item>Alexander Kerr</item>
+                        <item>Nick Kimberley</item>
+                        <item>David Kindersley</item>
+                        <item>M.J. King</item>
+                        <item>Melanie Kingdon</item>
+                        <item>Dorothy Koppelman</item>
+                        <item>Richard Kostelanetz</item>
+                        <item>Ferdinand Kriwet</item>
+                        <item>Zeljko D. Kujundzic</item>
+                        <item>John Lambert</item>
+                        <item>Brian Lambie</item>
+                        <item>Barry Lane</item>
+                        <item>Phyllis Larkin</item>
+                        <item>James Laughlin</item>
+                        <item>George L. Lawson</item>
+                        <item>Robert Lax</item>
+                        <item>Jennie Lee</item>
+                        <item>David Leigh</item>
+                        <item>Theodore Ferdinand Lentz</item>
+                        <item>D.A. Levy</item>
+                        <item>Jill Liddington</item>
+                        <item>Nicholas Logsdail</item>
+                        <item>Else B. Lorch</item>
+                        <item>R.L.C. Lorimer</item>
+                        <item>Andrew Lothian</item>
+                        <item>John W. Lucas</item>
+                        <item>Edward Lucie-Smith</item>
+                        <item>Jack Lunam-Cowan</item>
+                        <item>A. McBean</item>
+                        <item>Patrick McCormack</item>
+                        <item>Thomas McGrath</item>
+                        <item>David Roy MacGregor</item>
+                        <item>Eric B. Mackay</item>
+                        <item>J.A. Mackenzie</item>
+                        <item>Michael S. Mackenzie</item>
+                        <item>Alastair Mackintosh</item>
+                        <item>Hamish McLaren</item>
+                        <item>J.N. McLaurin</item>
+                        <item>Ruari McLean</item>
+                        <item>John MacQueen</item>
+                        <item>David Jackson McWilliams</item>
+                        <item>Marvin Herbert Malone</item>
+                        <item>Anthony Richards Manser</item>
+                        <item>Edgar James March</item>
+                        <item>Linda Dorothy (Bowman) March</item>
+                        <item>Helen Marley</item>
+                        <item>Fred R. Martin</item>
+                        <item>John Kenneth Martin</item>
+                        <item>John Edward Matthias</item>
+                        <item>Charles Matz</item>
+                        <item>Ronald Mavor</item>
+                        <item>Hansjörg Mayer</item>
+                        <item>Roger Russell Maylone</item>
+                        <item>Freiderike Mayröcker</item>
+                        <item>G. Ropen Mead</item>
+                        <item>William Moelwyn Merchant</item>
+                        <item>Christopher Middleton</item>
+                        <item>Amado Ramón Millán</item>
+                        <item>Stuart Mills</item>
+                        <item>Deidre B. Montgomery</item>
+                        <item>Stuart Montgomery</item>
+                        <item>A. Doyle Moore</item>
+                        <item>Edwin Morgan</item>
+                        <item>Pete Morgan</item>
+                        <item>Alfred Morris</item>
+                        <item>James Munro</item>
+                        <item>Edward Nairn</item>
+                        <item>Julia Newman</item>
+                        <item>H. Alleyne Nicholson</item>
+                        <item>James Nicholson</item>
+                        <item>D.H. Nielsen</item>
+                        <item>Seiichi Niikuni</item>
+                        <item>Gunter Nolte</item>
+                        <item>Robert Nye</item>
+                        <item>Philip Oakes</item>
+                        <item>George A. Oliver</item>
+                        <item>Betty O'Looney</item>
+                        <item>Miles D. Orvell</item>
+                        <item>Charles Osborne</item>
+                        <item>Alicia (Suskin) Ostriker</item>
+                        <item>Derek Parker</item>
+                        <item>James Edmund Neil Paterson</item>
+                        <item>George Paterson</item>
+                        <item>John Pauker</item>
+                        <item>Noël Strange Paul</item>
+                        <item>Octavio Paz</item>
+                        <item>David Peace</item>
+                        <item>M.A. Pegg</item>
+                        <item>Paul N. Perrot</item>
+                        <item>Edward Phelps</item>
+                        <item>Anthony Phillips</item>
+                        <item>Omar Shakespear Pound</item>
+                        <item>Ian Douglas Ben Procter</item>
+                        <item>John Whitely Purser</item>
+                        <item>Michael Pye</item>
+                        <item>Geoffrey Rans</item>
+                        <item>David Raphael</item>
+                        <item>Walter M. Reid</item>
+                        <item>Robert Reiss</item>
+                        <item>Alan Riddell</item>
+                        <item>Ann Ridley</item>
+                        <item>Bridget Riley</item>
+                        <item>Francis Warren Roberts</item>
+                        <item>John Roberts</item>
+                        <item>Lewis Findlay Robertson</item>
+                        <item>Duncan Robinson</item>
+                        <item>Pamela Robinson</item>
+                        <item>William T. Rodgers</item>
+                        <item>Herbert M. Rosenthal</item>
+                        <item>Macha Louis Rosenthal</item>
+                        <item>Ian G. Ross</item>
+                        <item>Ian Simpson Ross</item>
+                        <item>Bertram Rota</item>
+                        <item>Jerome Rothenberg</item>
+                        <item>Trevor Royle</item>
+                        <item>Rubinstein</item>
+                        <item>Nash &amp; Co., solicitors</item>
+                        <item>Regina Ryan</item>
+                        <item>John Ryder</item>
+                        <item>Christopher Rye</item>
+                        <item>Magda Salvesen</item>
+                        <item>Margot Sandeman</item>
+                        <item>Oscar Sandner</item>
+                        <item>Aram Saroyan</item>
+                        <item>Robert Crombie Saunders</item>
+                        <item>Estella Schmid</item>
+                        <item>John Scholfield</item>
+                        <item>Stephen Scobie</item>
+                        <item>James Robert Seaton</item>
+                        <item>A.J. Seely</item>
+                        <item>Annabel Seidler</item>
+                        <item>Martin Seymour-Smith</item>
+                        <item>Arnold Shaw</item>
+                        <item>Jessie (McGuffie) Sheeler</item>
+                        <item>Michael R. Shepherd</item>
+                        <item>Elizabeth Shub</item>
+                        <item>Eli Siegel</item>
+                        <item>Stanley M. Simpson</item>
+                        <item>James Simson</item>
+                        <item>Leif Sjoberg</item>
+                        <item>Joan Skalley</item>
+                        <item>Philip Sked</item>
+                        <item>Alisdair Skinner</item>
+                        <item>Christopher Small</item>
+                        <item>Barbara (Brodo) Herrnstein Smith</item>
+                        <item>John L. Smith</item>
+                        <item>Hans Sohm</item>
+                        <item>Mary Ellen (Bottom) Solt</item>
+                        <item>Kaim Spalte</item>
+                        <item>John Hanbury Angus Sparrow</item>
+                        <item>Charles Spencer</item>
+                        <item>Juliet Standing</item>
+                        <item>Derek Stanford</item>
+                        <item>Margaret (Holdsworth) Stanford</item>
+                        <item>Philip Steadman</item>
+                        <item>Jeffrey Steele</item>
+                        <item>Jeremy V. Steele</item>
+                        <item>Mary Stevens</item>
+                        <item>F.R. Stevenson</item>
+                        <item>Donald James Stewart</item>
+                        <item>Peter Stitt</item>
+                        <item>Constance Stungo</item>
+                        <item>Andrew Suknaski</item>
+                        <item>Geoffrey Summerfield</item>
+                        <item>John T. Sutherland</item>
+                        <item>Michael F. Sydenham</item>
+                        <item>Robert Tait</item>
+                        <item>Diane Tamnes</item>
+                        <item>Eric Taylor</item>
+                        <item>Eyvind S. Tew</item>
+                        <item>John R. Thorpe</item>
+                        <item>Ian Tinwell</item>
+                        <item>Karl Torok</item>
+                        <item>John Hugh Tuohy</item>
+                        <item>Gael Turnbull</item>
+                        <item>Charles Turner</item>
+                        <item>Enrique Uribe Valdivielso</item>
+                        <item>Jirí Valoch</item>
+                        <item>Franz Vanderlinden</item>
+                        <item>Victor de Vasarely</item>
+                        <item>David Vaughan</item>
+                        <item>Paul de Vree</item>
+                        <item>Herman de Vries</item>
+                        <item>Frank W. Weatherhead</item>
+                        <item>Mike Weaver</item>
+                        <item>Peter Weibel</item>
+                        <item>Steve Whealton</item>
+                        <item>Charlene H. White</item>
+                        <item>Eric Walter White</item>
+                        <item>John William Mills Willett</item>
+                        <item>Ann (Stevenson) Williams</item>
+                        <item>Emmett Williams</item>
+                        <item>Jonathan Chamberlain Williams</item>
+                        <item>Angus Frank Johnstone Wilson</item>
+                        <item>Astrid Wilson</item>
+                        <item>Gloria Wilson</item>
+                        <item>Trevor Winkfield</item>
+                        <item>Melinda Winters</item>
+                        <item>Joyce Wittenborn</item>
+                        <item>Woodford &amp; Ackroyd, solicitors</item>
+                        <item>Howard Woolmer</item>
+                        <item>Edward Wright</item>
+                        <item>Kit Wright</item>
+                        <item>Pedro Xisto</item>
+                        <item>Alan Young</item>
+                        <item>Bill Zavatsky</item>
+                        <item>Nicholas Zurbrugg</item>
+
+                    </list>
+                    <p>Consult the Manuscripts Index in the Library for dates of letters of
+                        individual correspondents.</p>
+                   
+
+                   
+                </scopecontent>
+                <c02 id="VAB8776-00002" level="file">
+                    <did>
+                        <unittitle>Biographical; <unitdate normal="1962/1968-11" type="inclusive">1962 - 1968, Nov.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00003" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>
+                            <unitdate normal="1968-12/1969" type="inclusive">1968, Dec. -
+                                1969</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00004" level="file">
+                    <did>
+                        <container label="Box" type="box">3</container>
+                        <unittitle>
+                            <unitdate normal="1970-01/1970-12-21" type="inclusive">1970, Jan. - Dec.
+                                21</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00005" level="file">
+                    <did>
+                        <container label="Box" type="box">4</container>
+                        <unittitle>
+                            <unitdate normal="1970-12-22/1972-01" type="inclusive">1970, Dec. 22 -
+                                1972, Jan.</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00006" level="file">
+                    <did>
+                        <container label="Box" type="box">5</container>
+                        <unittitle><unitdate normal="1972-02/1972-12" type="inclusive">1972, Feb. -
+                                Dec.;</unitdate><unitdate normal="1953/1972" type="inclusive">undated</unitdate>letters; Christmas cards</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00007" level="file">
+                    <did>
+                        <container label="Oversize" type="box">1</container>
+                        <unittitle><unitdate normal="1967-05-30">May 30, 1967;</unitdate><unitdate normal="1969-06-04">June 4, 1969;</unitdate><unitdate normal="1953/1972" type="inclusive">undated</unitdate>letter</unittitle>
+                    </did>
+                </c02>
+
+
+
+            </c01>
+            <c01 id="VAB8776-00008" level="series">
+                <did>
+                    <container label="Box" type="box">5</container>
+                    <unittitle>II. Writings</unittitle>
+                </did>
+                <arrangement>
+                    <p>Arranged alphabetically by title of Finlay's work, followed by writings by
+                        others, arranged alphabetically by author.</p>
+                </arrangement>
+                <scopecontent>
+                    <p>Includes writings, drawings and related materials. Writings by Ian Hamilton
+                        Finlay.</p>
+                </scopecontent>
+
+                <c02 id="VAB8776-00009" level="file">
+                    <did>
+                        <unittitle>ABCD...</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00010" level="file">
+                    <did>
+                        <unittitle>Acrobats</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00011" level="file">
+                    <did>
+                        <unittitle>Additional poems</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00012" level="file">
+                    <did>
+                        <unittitle>Ajar</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00013" level="file">
+                    <did>
+                        <unittitle>Alphabet book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00014" level="file">
+                    <did>
+                        <unittitle>and/between/in</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00015" level="file">
+                    <did>
+                        <unittitle>april may june july...</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00016" level="file">
+                    <did>
+                        <unittitle>Arcadian Sundials</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00017" level="file">
+                    <did>
+                        <unittitle>The Archangel</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00018" level="file">
+                    <did>
+                        <unittitle>ark-arc</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00019" level="file">
+                    <did>
+                        <unittitle>Au Pair</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00020" level="file">
+                    <did>
+                        <unittitle>Blok</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00021" level="file">
+                    <did>
+                        <unittitle>A boatyard</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00022" level="file">
+                    <did>
+                        <unittitle>Bring Back the Birch</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00023" level="file">
+                    <did>
+                        <unittitle>Broken Heart</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00024" level="file">
+                    <did>
+                        <unittitle>Brother of the Dogfish</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00025" level="file">
+                    <did>
+                        <unittitle>Caterpillar in Pond</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00026" level="file">
+                    <did>
+                        <unittitle>Christmas was at Easter</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00027" level="file">
+                    <did>
+                        <unittitle>Ceolfrith Street Handout</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00028" level="file">
+                    <did>
+                        <unittitle>Count-down of a fir tree</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00029" level="file">
+                    <did>
+                        <unittitle>Cythera: Garden Setting</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00030" level="file">
+                    <did>
+                        <unittitle>The Dancers Inherit the Party</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00031" level="file">
+                    <did>
+                        <unittitle>Earthship</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00032" level="file">
+                    <did>
+                        <unittitle>The Estate Hunters</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00033" level="file">
+                    <did>
+                        <unittitle>Evening/Sail 2</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00034" level="file">
+                    <did>
+                        <unittitle>Fir Tree</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00035" level="file">
+                    <did>
+                        <unittitle>Fishing News News</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00036" level="file">
+                    <did>
+                        <unittitle>flags</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00037" level="file">
+                    <did>
+                        <unittitle>The flower of the fal</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00038" level="file">
+                    <did>
+                        <unittitle>The Four Seasons as Fishing Boats</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00039" level="file">
+                    <did>
+                        <unittitle>From “An Inland Garde</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00040" level="file">
+                    <did>
+                        <unittitle>Headlines</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00041" level="file">
+                    <did>
+                        <unittitle>Hic Jacet parvulum…</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00042" level="file">
+                    <did>
+                        <unittitle>Homage to Donald McGill</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00043" level="file">
+                    <did>
+                        <unittitle>Homage to Vuillard</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00044" level="file">
+                    <did>
+                        <unittitle>Homage to A. E. Hornel</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00045" level="file">
+                    <did>
+                        <unittitle>Horizon</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00046" level="file">
+                    <did>
+                        <unittitle>Instructions about boat to Salamander Press</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00047" level="file">
+                    <did>
+                        <unittitle>Instructions for setting poems</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00048" level="file">
+                    <did>
+                        <unittitle>It is little</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00049" level="file">
+                    <did>
+                        <unittitle>Joke book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00050" level="file">
+                    <did>
+                        <unittitle>Land/Sea Indoor Sundial</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00051" level="file">
+                    <did>
+                        <unittitle>The Land’s Shadow</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00052" level="file">
+                    <did>
+                        <unittitle>A memory of summer</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00053" level="file">
+                    <did>
+                        <unittitle>A minor Incident</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00054" level="file">
+                    <did>
+                        <unittitle>The mouse</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00055" level="file">
+                    <did>
+                        <unittitle>Nets</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00056" level="file">
+                    <did>
+                        <unittitle>Notes about the Fulcrum Press Affair</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00057" level="file">
+                    <did>
+                        <unittitle>Notes, miscellaneous</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00058" level="file">
+                    <did>
+                        <unittitle>The Old Nobby</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00059" level="file">
+                    <did>
+                        <unittitle>The Olsen Excerpts</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00060" level="file">
+                    <did>
+                        <unittitle>Original Verses</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00061" level="file">
+                    <did>
+                        <unittitle>Pan Loaf Provincialism</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00062" level="file">
+                    <did>
+                        <unittitle>Peasants</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00063" level="file">
+                    <did>
+                        <unittitle>Picture Book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00064" level="file">
+                    <did>
+                        <unittitle>Pittodrie</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00065" level="file">
+                    <did>
+                        <unittitle>Poem with Three Stripes</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00066" level="file">
+                    <did>
+                        <unittitle>Poems</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00067" level="file">
+                    <did>
+                        <unittitle>Postcard poem Layouts</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00068" level="file">
+                    <did>
+                        <unittitle>A Rock Rose</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00069" level="file">
+                    <did>
+                        <unittitle>The Rubenstein Questionnaire</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00070" level="file">
+                    <did>
+                        <unittitle>A Sailor's Calendar</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00071" level="file">
+                    <did>
+                        <unittitle>Sails/Waves</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00072" level="file">
+                    <did>
+                        <unittitle>Sea poppy 1.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00073" level="file">
+                    <did>
+                        <unittitle>Sea-poppy 2.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00074" level="file">
+                    <did>
+                        <unittitle>A Sea Street Anthology</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00075" level="file">
+                    <did>
+                        <unittitle>Seas/ease</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00076" level="file">
+                    <did>
+                        <unittitle>The Sea's Waves...</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00077" level="file">
+                    <did>
+                        <unittitle>Sepia Barge</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00078" level="file">
+                    <did>
+                        <unittitle>The Sign of the Nudge</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00079" level="file">
+                    <did>
+                        <unittitle>Skylarks</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00080" level="file">
+                    <did>
+                        <unittitle>Stack Net</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00081" level="file">
+                    <did>
+                        <unittitle>Tree-Shells</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00082" level="file">
+                    <did>
+                        <unittitle>Tristan's Sail</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00083" level="file">
+                    <did>
+                        <unittitle>Two Concrete poems</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00084" level="file">
+                    <did>
+                        <unittitle>Unicorn</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00085" level="file">
+                    <did>
+                        <unittitle>Walking through Seaweed</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00086" level="file">
+                    <did>
+                        <unittitle>Wave Sheaf</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00087" level="file">
+                    <did>
+                        <unittitle>The Wild Dogs in Winter</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00088" level="file">
+                    <did>
+                        <unittitle>Willing Wings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00089" level="file">
+                    <did>
+                        <unittitle>Windflower</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00090" level="file">
+                    <did>
+                        <unittitle>Xmas morn</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00091" level="file">
+                    <did>
+                        <unittitle>you me us</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00092" level="file">
+                    <did>
+                        <container label="Oversize" type="box">1</container>
+                        <unittitle>The Little Drummer Boy</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00093" level="file">
+                    <did>
+                        <unittitle>Seashells</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00094" level="file">
+                    <did>
+                        <unittitle>Tye, Cringle, etc.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00095" level="file">
+                    <did>
+                        <container label="Oversize" type="box">3</container>
+                        <unittitle>Be in Time...</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00096" level="file">
+                    <did>
+                        <unittitle>The Bigger Sundial</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00097" level="file">
+                    <did>
+                        <unittitle>Column Poem</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00098" level="file">
+                    <did>
+                        <unittitle>Evening Will Come</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00099" level="file">
+                    <did>
+                        <unittitle>Four Sails</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00100" level="file">
+                    <did>
+                        <unittitle>The Four Seasons as Fore-and-Afters</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00101" level="file">
+                    <did>
+                        <unittitle>Glossary</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00102" level="file">
+                    <did>
+                        <unittitle>Homage to Gomringer</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00103" level="file">
+                    <did>
+                        <unittitle>Love/Apple</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00104" level="file">
+                    <did>
+                        <unittitle>Poems to Hear and See</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00105" level="file">
+                    <did>
+                        <unittitle>A Rococo Walnut</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00106" level="file">
+                    <did>
+                        <unittitle>Sailing Barge (Redwing)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00107" level="subseries">
+                    <did>
+                        <container label="Box" type="box">6</container>
+                        <unittitle>Writings by others</unittitle>
+                    </did>
+                    <c03 id="VAB8776-00108" level="file">
+                        <did>
+                            <unittitle>Albert-Birot, Pierre</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00109" level="file">
+                        <did>
+                            <unittitle>Bann, Stephen</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00110" level="file">
+                        <did>
+                            <unittitle>Braga, Edgard</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00111" level="file">
+                        <did>
+                            <unittitle>Brown, Pete</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00112" level="file">
+                        <did>
+                            <unittitle>Campos, Augusto de</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00113" level="file">
+                        <did>
+                            <unittitle>Cant, Jackie</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00114" level="file">
+                        <did>
+                            <unittitle>Careme, Maurice</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00115" level="file">
+                        <did>
+                            <unittitle>Chopin, Henri</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00116" level="file">
+                        <did>
+                            <unittitle>Clark, Elizabeth T.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00117" level="file">
+                        <did>
+                            <unittitle>Costley, Ron</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00118" level="file">
+                        <did>
+                            <unittitle>Cox, Kenelm</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00119" level="file">
+                        <did>
+                            <unittitle>Creeley, Robert</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00120" level="file">
+                        <did>
+                            <unittitle>cummings, e.e.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00121" level="file">
+                        <did>
+                            <unittitle>Cutts, Simon</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00122" level="file">
+                        <did>
+                            <unittitle>Demarco Gallery</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00123" level="file">
+                        <did>
+                            <unittitle>Dragomirescu, Radu</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00124" level="file">
+                        <did>
+                            <unittitle>Falk, Gunter</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00125" level="file">
+                        <did>
+                            <unittitle>Gappmayr, Heinz</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00126" level="file">
+                        <did>
+                            <unittitle>Gomringer, Evgen</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00127" level="file">
+                        <did>
+                            <unittitle>Grigor, Murray</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00128" level="file">
+                        <did>
+                            <unittitle>Hendry, James Finlay</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00129" level="file">
+                        <did>
+                            <unittitle>Higgins, Richard C.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00130" level="file">
+                        <did>
+                            <unittitle>Hill, Hugh Creighton</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00131" level="file">
+                        <did>
+                            <unittitle>Hollo, Anselm</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00132" level="file">
+                        <did>
+                            <unittitle>Horovitz, Michael</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00133" level="file">
+                        <did>
+                            <unittitle>Houston, Libby</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00134" level="file">
+                        <did>
+                            <unittitle>Johnson, Ronald</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00135" level="file">
+                        <did>
+                            <unittitle>Jandl, Ernst</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00136" level="file">
+                        <did>
+                            <unittitle>Kujundzic, Zeljko D.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00137" level="file">
+                        <did>
+                            <unittitle>Lax, Robert</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00138" level="file">
+                        <did>
+                            <unittitle>McCaig, Norman</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00139" level="file">
+                        <did>
+                            <unittitle>McDowell, John D.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00140" level="file">
+                        <did>
+                            <unittitle>McGerrill, Ann</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00141" level="file">
+                        <did>
+                            <unittitle>Malone, Marvin Herbert</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00142" level="file">
+                        <did>
+                            <unittitle>Mayrocker, Friederike</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00143" level="file">
+                        <did>
+                            <unittitle>Melo Castro, E.M</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00144" level="file">
+                        <did>
+                            <unittitle>Mills, Stuart</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00145" level="file">
+                        <did>
+                            <unittitle>Morgan, Edwin</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00146" level="file">
+                        <did>
+                            <unittitle>Niikuni, Seiichi</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00147" level="file">
+                        <did>
+                            <unittitle>Novak, Ladislov</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00148" level="file">
+                        <did>
+                            <unittitle>Riddel, Alan</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00149" level="file">
+                        <did>
+                            <unittitle>Roth, Karl Heinz</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00150" level="file">
+                        <did>
+                            <unittitle>Scha, Remko J.H</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00151" level="file">
+                        <did>
+                            <unittitle>Seidman, Hugh</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00152" level="file">
+                        <did>
+                            <unittitle>Siegel, Eli</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00153" level="file">
+                        <did>
+                            <unittitle>Simmons, Robert</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00154" level="file">
+                        <did>
+                            <unittitle>Smith, Barbara (Bodo) Hirrnstein</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00155" level="file">
+                        <did>
+                            <unittitle>Sparrow, John Hanburg Angus</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00156" level="file">
+                        <did>
+                            <unittitle>Standford, Derek</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00157" level="file">
+                        <did>
+                            <unittitle>Sutherland, Robert Garioch</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00158" level="file">
+                        <did>
+                            <unittitle>Supervielle, Jules</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00159" level="file">
+                        <did>
+                            <unittitle>Turnbull, Gael</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00160" level="file">
+                        <did>
+                            <unittitle>Uribe Valdivie Iso, Enrique</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00161" level="file">
+                        <did>
+                            <unittitle>Valoch, Jiri</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00162" level="file">
+                        <did>
+                            <unittitle>Vree, Paul de</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00163" level="file">
+                        <did>
+                            <unittitle>Wild Hawthorn Press (2 folders)</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00164" level="file">
+                        <did>
+                            <unittitle>Williams, Jonathan Chamberlain</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00165" level="file">
+                        <did>
+                            <unittitle>Zukofsky, Louis</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00166" level="file">
+                        <did>
+                            <unittitle>Unknown authors</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00167" level="file">
+                        <did>
+                            <container label="Oversize" type="box">1</container>
+                            <unittitle>Scobie, Stephen</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+            </c01>
+            <c01 id="VAB8776-00168" level="series">
+                <did>
+                    <container label="Box" type="box">6</container>
+                    <unittitle>III. Drawings &amp; Photographs</unittitle>
+                </did>
+                <c02 id="VAB8776-00169" level="subseries">
+                    <did>
+                        <container label="Box" type="box">6</container>
+                        <unittitle>Drawings</unittitle>
+                    </did>
+                    <c03 id="VAB8776-00170" level="file">
+                        <did>
+                            <unittitle>Fraine, Robert</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00171" level="file">
+                        <did>
+                            <unittitle>Kempes, Roland</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00172" level="file">
+                        <did>
+                            <unittitle>Kujundzic, Z.D.</unittitle>
+                            <physdesc>(2 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00173" level="file">
+                        <did>
+                            <unittitle>Picking, J.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00174" level="file">
+                        <did>
+                            <unittitle>Sandeman, Margot</unittitle>
+                            <physdesc>(2 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00175" level="file">
+                        <did>
+                            <container label="Oversize" type="box">1</container>
+                            <unittitle>McNeish, Alexander</unittitle>
+                        </did>
+                    </c03>
+
+                </c02>
+                <c02 id="VAB8776-00176" level="subseries">
+                    <did>
+                        <container label="Box" type="box">6</container>
+                        <unittitle>Photographs</unittitle>
+                    </did>
+                    <c03 id="VAB8776-00177" level="file">
+                        <did>
+                            <unittitle>ASA Exhibition in Tokyo</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00178" level="file">
+                        <did>
+                            <unittitle>Brazilian Concrete Poets: Augusto and Haroldo de Campos, and
+                                Dècio Pignatari</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00179" level="file">
+                        <did>
+                            <unittitle>Cruz-Diez, Carlos. Artwork</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00180" level="file">
+                        <did>
+                            <unittitle>Finlay, I.H. Concrete poems, garden, pond and boat, two
+                                portraits</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00181" level="file">
+                        <did>
+                            <unittitle>Gomez de Liano, Ignacio. Poetry</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00182" level="file">
+                        <did>
+                            <unittitle>Niedecler, Lorine. Snapshot</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00183" level="file">
+                        <did>
+                            <unittitle>Schmalriede, Manfred, photographer. Finlay
+                                exhibit</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00184" level="file">
+                        <did>
+                            <unittitle>Schiller, Robert M., photographer. Louis Zukofsky</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00185" level="file">
+                        <did>
+                            <unittitle>Trace, M.D., photographer. Artwork by Jeffrey
+                                Steele</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00186" level="file">
+                        <did>
+                            <unittitle>Walker, Audrey, photographer. For Finlay's Autumn
+                                poem</unittitle>
+                        </did>
+                    </c03>
+
+                </c02>
+            </c01>
+            <c01 id="VAB8776-00187" level="series">
+                <did>
+                    <container label="Box" type="box">6</container>
+                    <unittitle>IV. Printed</unittitle>
+                </did>
+                <c02 id="VAB8776-00188" level="file">
+                    <did>
+                        <unittitle>The Archangel of Archangel</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00189" level="file">
+                    <did>
+                        <unittitle>A Boatyard</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00190" level="file">
+                    <did>
+                        <unittitle>Catches</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00191" level="file">
+                    <did>
+                        <unittitle>Cythera</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00192" level="file">
+                    <did>
+                        <unittitle>Fishing News News</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00193" level="file">
+                    <did>
+                        <unittitle>Homage to E.A. Hornel</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00194" level="file">
+                    <did>
+                        <unittitle>A memory of Summer</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00195" level="file">
+                    <did>
+                        <unittitle>The Old Nobby</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00196" level="file">
+                    <did>
+                        <unittitle>Pole Night</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00197" level="file">
+                    <did>
+                        <unittitle>Seashells</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00198" level="file">
+                    <did>
+                        <unittitle>Tree-Shells</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00199" level="file">
+                    <did>
+                        <unittitle>Willing Wings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8776-00200" level="file">
+                    <did>
+                        <unittitle>Other writers</unittitle>
+                    </did>
+                    <c03 id="VAB8776-00201" level="file">
+                        <did>
+                            <unittitle>Miscellaneous 1</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8776-00202" level="file">
+                        <did>
+                            <unittitle>Miscellaneous 2</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB8776-00203" level="file">
+                    <did>
+                        <container label="Oversize" type="box">2</container>
+                        <unittitle>P.O.T.H. (Poor. Old. Tired. Horse).</unittitle>
+
+                    </did>
+                    <scopecontent>
+                        <p>Includes poems, proofs, and layouts</p>
+                    </scopecontent>
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
