@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+--><ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external" countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924" relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li" identifier="InU-Li-VAB8779">InU-Li-VAB8779</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Finlay mss. II, <date normal="1965/1973">1965-1973</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2009" type="publication">© 2009</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2009">© 2009</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                    <lb></lb><date normal="2010" type="source">2010</date>
+                <lb></lb>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2010-02-17">Feb. 17, 2010</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng">English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2010-02-17"></date>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Finlay, Ian Hamilton</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Finlay mss. II</unittitle>
+            <unitdate encodinganalog="245$f" normal="1965/1973" type="inclusive">1965-1973</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1407</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>1080 items</extent>
+            </physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Finlay mss. II, 1965-1973, consists
+                of correspondence and writings of Ian Hamilton Finlay, 1925- , poet of Stonypath,
+                Dunsyre, Lanark, Scotland.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+            <p>An influential proponent of concrete poetry, Finlay moved from solely literary forms
+                of poetry, drama, and short stories in the 1950's to kinetic forms of poetry
+                expressed in stone, wood, neon and other tangible structures in the 1960's. Boats
+                and boating, sails and the sea were used by Finlay to suggest poetic ideas in many
+                of his poems such as Archangel of Archangel, Boatyard, Four Sails, The Four
+                Seasons..., Homage to Gomringer, Little Drummer boy, The Old Nobby, Seashells, Sepia
+                Barge and others. Sundials were used in like manner as in Arcadian Sundials, Biggar
+                Sundial, and Land/Sea Indoor Sundial. Letters exchanged with woodcarvers, stone
+                carvers, photographers, typographers, printers, and artists give the instructions
+                for the creation of many of his works. A book of poems, <title render="italic">Poems
+                    to See and Hear</title>, was prepared especially to introduce to children
+                Finlay's poetic concepts. During 1968 to 1971 there was much work by Films of
+                Scotland in the preparation of the films <title render="italic">Ocean Stripe
+                    5</title> and <title render="italic">KY 365</title> based on Finlay's life and
+                poetry. </p>
+            <p>Following an agreement with the Fulcrum Press in June 1968 to publish an edition of
+                    <title render="italic">The Dancers Inherit the Party</title>, a controversy
+                developed over the next several years concerning the first appearance of the work.
+                This involved lengthy correspondence with solicitors, members of parliament,
+                librarians, staffs of magazines, newspapers, arts councils, and literary
+                organizations as well as close friends and poets.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. General Correspondence; II.
+                Writings; III. Fulcrum Press; IV. Miscellaneous.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Finlay mss. II, 1965-1973, consist of correspondence and writings of Ian Hamilton
+                Finlay, 1925- , poet of Stonypath, Dunsyre, Lanark, Scotland. Letters are exchanged
+                with other poets, artists, architects, designers in glass, photographers, all in
+                pursuit of the construction of his poetry in concrete form. Also included is
+                correspondence with Fulcrum Press concerning the problems involved in the copyright
+                of <title render="italic">The Dancers Inherit the Party</title>.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/finlay+ian+hamilton">
+                            <persname encodinganalog="100" source="lcnaf">Finlay, Ian
+                                Hamilton.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/finlay+ian+hamilton">
+                            <persname encodinganalog="600" source="lcnaf">Finlay, Ian Hamilton
+                                --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/finlay+ian+hamilton+dancers+inherit+the+party">
+                            <persname encodinganalog="600" source="lcnaf">Finlay, Ian Hamilton.
+                                Dancers Inherit the Party.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/fulcrum+press">
+                            <corpname encodinganalog="710" source="lcnaf">Fulcrum Press.</corpname>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/concrete+poetry{su}">
+                            <subject encodinganalog="650" source="lcnaf">Concrete poetry.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/poets+scottish{su}">
+                            <subject encodinganalog="650" source="lcnaf">Poets, Scottish
+                                --Correspondence.</subject>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+        </controlaccess>
+
+
+
+        <!-- optional, if applicable -->
+        <relatedmaterial encodinganalog="544 1">
+            <head>Related Material</head>
+            <p>Finlay mss.; also located at the Lilly Library, Indiana University, Bloomington,
+                Indiana.</p>
+        </relatedmaterial>
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired 1974.</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>Finlay mss. II, Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAB8779-00001" level="series">
+                <did>
+                    <!-- optional -->
+                    <container label="Box" type="box">1</container>
+
+
+                    <unittitle>I. General Correspondence</unittitle>
+
+                </did>
+                <c02 id="VAB8779-00002" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1970">1970</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00003" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1971">1971</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00004" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1972">1972</unitdate>
+                        </unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+
+                </c02>
+                <c02 id="VAB8779-00005" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1973">1973</unitdate>
+                        </unittitle>
+                        <physdesc>(12 folders)</physdesc>
+                    </did>
+
+                </c02>
+                <c02 id="VAB8779-00006" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1965/1973" type="inclusive">n.d.</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAB8779-00007" level="series">
+                <did>
+                    <container label="Box" type="box">1</container>
+                    <unittitle>II. Writings</unittitle>
+                </did>
+                <scopecontent>
+                    <p>Includes writings, correspondence and other related materials.</p>
+                </scopecontent>
+                <c02 id="VAB8779-00008" level="file">
+                    <did>
+                        <unittitle>Aircraft Carrier</unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00009" level="file">
+                    <did>
+                        <unittitle>Arcadia</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00010" level="file">
+                    <did>
+                        <unittitle>Barque</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00011" level="file">
+                    <did>
+                        <unittitle>Bath Roundels</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00012" level="file">
+                    <did>
+                        <unittitle>Blue Water's Bark</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00013" level="file">
+                    <did>
+                        <unittitle>Bring Back the Birch</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00014" level="file">
+                    <did>
+                        <unittitle>Butterflies</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00015" level="file">
+                    <did>
+                        <unittitle>A Calm in a Teacup</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00016" level="file">
+                    <did>
+                        <unittitle>Canterbury Sundial</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00017" level="file">
+                    <did>
+                        <unittitle>Carrier Draughts</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00018" level="file">
+                    <did>
+                        <unittitle>Ceramic Workshop</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00019" level="file">
+                    <did>
+                        <unittitle>Ceramic Lens</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00020" level="file">
+                    <did>
+                        <unittitle>Copyright</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00021" level="file">
+                    <did>
+                        <unittitle>Daisies</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00022" level="file">
+                    <did>
+                        <unittitle>The Dancers Inherit the Party</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00023" level="file">
+                    <did>
+                        <unittitle>Dishes and Mugs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00024" level="file">
+                    <did>
+                        <unittitle>Dividing the Light</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00025" level="file">
+                    <did>
+                        <unittitle>Elegy for a Wheelbarrow</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00026" level="file">
+                    <did>
+                        <unittitle>Estuary Cupboards</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00027" level="file">
+                    <did>
+                        <unittitle>Et In Arcadia Edo</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00028" level="file">
+                    <did>
+                        <unittitle>A Family</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00029" level="file">
+                    <did>
+                        <unittitle>Family Portrait</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00030" level="file">
+                    <did>
+                        <unittitle>Five Fore-and-Afters</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00031" level="file">
+                    <did>
+                        <unittitle>Fleet Tankers</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00032" level="file">
+                    <did>
+                        <unittitle>Flotte</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00033" level="file">
+                    <did>
+                        <unittitle>Frigate/Frigatte</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00034" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>Glass Poems</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00035" level="file">
+                    <did>
+                        <unittitle>The Harbour</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00036" level="file">
+                    <did>
+                        <unittitle>Haystack's Wisp</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00037" level="file">
+                    <did>
+                        <unittitle>Harlequin</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00038" level="file">
+                    <did>
+                        <unittitle>Homage to Jonathan Williams</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00039" level="file">
+                    <did>
+                        <unittitle>Homage to Kandinsky</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00040" level="file">
+                    <did>
+                        <unittitle>Homage to Kahnweiler</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00041" level="file">
+                    <did>
+                        <unittitle>Homage to Modern Art</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00042" level="file">
+                    <did>
+                        <unittitle>Homage to Pop Art</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00043" level="file">
+                    <did>
+                        <unittitle>Homage to Victor Sylvestor</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00044" level="file">
+                    <did>
+                        <unittitle>Homage to Seurat</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00045" level="file">
+                    <did>
+                        <unittitle>Honey by the Water</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00046" level="file">
+                    <did>
+                        <unittitle>Iron Ship</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00047" level="file">
+                    <did>
+                        <unittitle>Jibs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00048" level="file">
+                    <did>
+                        <unittitle>Kelso Arts Festival</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00049" level="file">
+                    <did>
+                        <unittitle>Kelso collaborations</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00050" level="file">
+                    <did>
+                        <unittitle>Land/Sea Sundial</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00051" level="file">
+                    <did>
+                        <unittitle>Kite (Estuary model)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00052" level="file">
+                    <did>
+                        <unittitle>Littrack II</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00053" level="file">
+                    <did>
+                        <unittitle>Littrack III</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00054" level="file">
+                    <did>
+                        <unittitle>Mid-Pacific Elements</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00055" level="file">
+                    <did>
+                        <unittitle>Moskva</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00056" level="file">
+                    <did>
+                        <unittitle>National Maritime Museum exhibit</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00057" level="file">
+                    <did>
+                        <unittitle>Necktank</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00058" level="file">
+                    <did>
+                        <unittitle>Neon Lights project</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00059" level="file">
+                    <did>
+                        <unittitle>O'Erlikon</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00060" level="file">
+                    <did>
+                        <unittitle>Poetry Review project</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00061" level="file">
+                    <did>
+                        <unittitle>Poetry workshop</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00062" level="file">
+                    <did>
+                        <unittitle>Petrol/Petrel</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00063" level="file">
+                    <did>
+                        <unittitle>The Rowan is Learning to Write</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00064" level="file">
+                    <did>
+                        <unittitle>Silver Cloud</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00065" level="file">
+                    <did>
+                        <unittitle>Sails with Numbers</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00066" level="file">
+                    <did>
+                        <unittitle>Sail Wholemeal</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00067" level="file">
+                    <did>
+                        <unittitle>The Sea's Waves</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00068" level="file">
+                    <did>
+                        <unittitle>Shenval Press</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00069" level="file">
+                    <did>
+                        <unittitle>Six Glass Engravings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00070" level="file">
+                    <did>
+                        <unittitle>Spiral Binding</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00071" level="file">
+                    <did>
+                        <unittitle>Stationary</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00072" level="file">
+                    <did>
+                        <unittitle>Straiks</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00073" level="file">
+                    <did>
+                        <unittitle>Terra Mare</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00074" level="file">
+                    <did>
+                        <unittitle>They Returned Home</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00075" level="file">
+                    <did>
+                        <unittitle>Three Cornered Hat</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00076" level="file">
+                    <did>
+                        <unittitle>Three Paving Slabs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00077" level="file">
+                    <did>
+                        <unittitle>Three Tea Cards</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00078" level="file">
+                    <did>
+                        <unittitle>U-Boat</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00079" level="file">
+                    <did>
+                        <unittitle>U-Boat Sculpture</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00080" level="file">
+                    <did>
+                        <unittitle>Walking Through Seaweed</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00081" level="file">
+                    <did>
+                        <unittitle>Wave/Unda Post</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00082" level="file">
+                    <did>
+                        <unittitle>Waves</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00083" level="file">
+                    <did>
+                        <unittitle>Weathercock</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00084" level="file">
+                    <did>
+                        <unittitle>Weed Boat Masters Ticket</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00085" level="file">
+                    <did>
+                        <unittitle>White is White</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00086" level="file">
+                    <did>
+                        <unittitle>Winter Garden</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAB8779-00087" level="series">
+                <did>
+                    <container label="Box" type="box">2</container>
+                    <unittitle>III. Fulcrum Press</unittitle>
+                </did>
+                <c02 id="VAB8779-00088" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1970/1971" type="inclusive">1970-1971</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00089" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1972">1972</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00090" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1973">1973</unitdate>
+                        </unittitle>
+                        <physdesc>(11 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00091" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1965/1973" type="inclusive">n.d.</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAB8779-00092" level="series">
+                <did>
+                    <container label="Box" type="box">2</container>
+                    <unittitle>IV. Miscellaneous</unittitle>
+                </did>
+                <c02 id="VAB8779-00093" level="file">
+                    <did>
+                        <unittitle>Artwork</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8779-00094" level="file">
+                    <did>
+                        <unittitle>Miscellany</unittitle>
+                    </did>
+                    <scopecontent>
+                        <p>Includes programs, printed items, clippings, etc.</p>
+                    </scopecontent>
+                </c02>
+
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
