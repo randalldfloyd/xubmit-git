@@ -1,0 +1,2017 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAB8849">InU-Li-VAB8849</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Scott mss., <date normal="1817/1937"
+                        type="inclusive">1817-1937</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2010" type="publication">© 2010</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2009">© 2010</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                    <lb/><date normal="2010" type="source">2010</date>
+                <lb/>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2010-02-24">Feb. 24, 2010</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2010-02-24"/>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Scott, Emmet Hoyt,
+                    1842-1924</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Scott mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1817/1937" type="inclusive"
+                >1817-1937</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2113</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>65,168 items</extent>
+            </physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Scott mss., 1817-1937, consists of
+                the papers of Emmet Hoyt Scott, 1842-1924, railroadman, lumberman, manufacturer, and
+                mayor of LaPorte, Indiana, and his father, Wiley Huntington Scott, 1796-1872, farmer
+                and hotelkeeper of Nineveh, New York. Included also is a small amount of
+                correspondence, 1884-1937, of Emmet Scott, 1873-1937, son of Emmet Hoyt
+                Scott.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+
+            <p>Career of Emmet Hoyt Scott: born Broome County, New York, July 20, 1842; son of Wiley
+                Huntington and Aseneth (Locke) Scott; taught school, Oswego, New York, December
+                1862-February 1863; employee in joint express office of the Adams &amp; American
+                Express Company, Centralia, Illinois, March-September, 1863; assisted father,
+                September 1863-August 1864; construction department, Albany and Susquehanna
+                Railroad, August 1864-February 1867; superintendent, construction and operating
+                departments, Chicago, Cincinnati and Louisville Railroad Company, building a line
+                from LaPorte to Peru, Indiana, 1867-1869; lumber industry, East Saginaw, Michigan,
+                1869-1887; partner, Niles &amp; Scott, manufacturers of wheels for agricultural
+                implements and vehicles, 1876-1902; secretary-treasurer of Saginaw land, brown
+                stone, and copper mining company; and the Saginaw Copper Company, 1877; president of
+                the Lac La Belle Company, Munising, Michigan, organized to buy, manufacture and
+                dispose of timber and products thereof, and to purchase, hold, or sell the lands
+                connected therewith, 1894-1906; began development of Munising, Michigan, and was
+                general manager of the Munising Railway built from Munising to Little Lake to
+                connect with the Chicago and Northwestern Railroad, 1895; president of the Island
+                Coal Company, 1897; mayor of LaPorte, Indiana, 1889-1894; toured South America,
+                January-March, 1911; on European agricultural tour, June-August, 1912; visited
+                Central America, January-March, 1922; owned real estate and farms in Indiana and
+                Michigan; died on June 20, 1924, at LaPorte, Indiana.</p>
+            <p>On December 29, 1870, married Mary Relief Niles, 1839-1916, daughter of John Barron
+                Niles. Children: Mary Polke, 1871-1873; Emmet, 1873-1937; Margaret, 1875-1884;
+                Fanny, 1877-1979; Sarah Polke, 1880-1885; Katherine, 1881-1888.</p>
+            <p>Biographical information on E.H. Scott may be found in E.D. Daniels, <title
+                    render="italic">A Twentieth Century History and Biographical Record of LaPorte
+                    County, Indiana</title> (1904), pp. 422-423, 520-521.</p>
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Biographical/Genealogical;
+                II. Correspondence; III. Diaries; IV. Photographs; V. Letter copy books; VI.
+                Business/Financial; VII. Printed; and, VIII. Miscellaneous.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Scott mss., 1817-1937, consists of the papers of Emmet Hoyt Scott, 1842-1924,
+                railroadman, lumberman, manufacturer, and mayor of LaPorte, Indiana, and his father,
+                Wiley Huntington Scott, 1796-1872, farmer and hotelkeeper of Nineveh, New York.
+                Included also is a small amount of correspondence, 1884-1937, of Emmet Scott,
+                1873-1937, son of Emmet Hoyt Scott.</p>
+            <p>The Emmet Hoyt Scott papers consists of business and family correspondence, including
+                unbound letters and 67 letter copy books; diaries; a typescript of his
+                autobiography, which he was writing at the time of his death and which goes through
+                1888; financial materials, such as account books, memorandum books, and bank books;
+                articles of association and minutes of director's meetings of the Nester Land and
+                Mining Company, Marquette, Michigan and of the Lac La Belle Company, Munising,
+                Michigan.</p>
+            <p>The family correspondence includes letters from Scott to his wife when he was away on
+                business and on his agricultural tour of Europe in 1912; correspondence with his
+                son, Emmet, on business matters when E.H. Scott was away from LaPorte, 1911, 1912,
+                and 1922; correspondence with his daughter, Fanny (Scott) Rumely, while she was a
+                student at Smith College and during her residence in New York, 1897-1924; and
+                correspondence with relatives in New York state, Massachusetts, Michigan, Illinois,
+                and Washington state, 1861-1924. Two brothers of E.H. Scott, Arthur Lee Scott and
+                Leroy Linn Scott, were in the service during the Civil War and the papers contain
+                letters from them on camp activities, 1861-1865.</p>
+            <p>Correspondents represented in the collection include John Judson Bagley, Rogers
+                Birnie, Robert Holland Duell, Charles Fargo, Albert Lindley Lee, Electus Backus
+                Litchfield, John Barron Niles, Isamu Gilmour Noguchi, John Meredith Read, Edward
+                Aloysius Rumely, Augustus William Smith, Harlan Ingersoll Smith, and Horatio
+                Governeur Wright. Consult the Manuscripts Index in the Library for dates of letters
+                of individual correspondents.</p>
+            <p>Included also in the collection are farm account books of Mary Relief (Niles) Scott,
+                wife of E.H. Scott, and a record book, June 14, 1859-September 8, 1924, of the
+                LaPorte Society of the New Church, LaPorte, Indiana, which contains a history of the
+                church, minutes, constitutions, bylaws, and lists of members, baptisms, marriages,
+                and deaths.</p>
+            <p>The Wiley Huntington Scott papers, 1817-1872, in the collection include
+                correspondence and account books of his hotel and farm activities.</p>
+            <p>A diary of Arthur Lee Scott, 1845-1878, brother of E.H. Scott, while a student at
+                Cooperstown Seminary, Cooperstown, New York, 1865-1866, is also included in the
+                collection.</p>
+            <p>There are also family photographs and photographs of the localities in which E.H.
+                Scott lived and of his travels.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/rumely+fanny+scott+1877-1979">
+                            <persname encodinganalog="700" source="lcnaf">Rumely, Fanny Scott,
+                                1877-1979. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/rumely+fanny+scott+1877-1979">
+                            <persname encodinganalog="600" source="lcnaf">Rumely, Fanny Scott,
+                                1877-1979--Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/scott+emmet+hoyt+1842-1924">
+                            <persname encodinganalog="600" source="lcnaf">Scott, Emmet Hoyt,
+                                1842-1924. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/scott+emmet+hoyt+1842-1924">
+                            <persname encodinganalog="600" source="lcnaf">Scott, Emmet Hoyt,
+                                1842-1924--Correspondence. </persname>
+                        </extref>
+                    </item>
+
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/scott+emmet+1873-1937">
+                            <persname encodinganalog="600" source="lcnaf">Scott, Emmet, 1873-1937.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/scott+wiley+huntington+1796-1872">
+                            <persname encodinganalog="700" source="lcnaf">Scott, Wiley Huntington,
+                                1796-1872. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/scott+wiley+huntington+1796-1872">
+                            <persname encodinganalog="600" source="lcnaf">Scott, Wiley Huntington,
+                                1796-1872--Correspondence. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/scott+mary+relief+1838-1916">
+                            <persname encodinganalog="700" source="lcnaf">Scott, Mary Relief,
+                                1838-1916. </persname>
+                        </extref>
+                    </item>
+
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/cincinnati+peru+chicago+railway+company">
+                            <corpname encodinganalog="610" source="lcnaf">Cincinnati, Peru &amp;
+                                Chicago railway company. </corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/lac+la+belle+co">
+                            <corpname encodinganalog="610" source="lcnaf">Lac La Belle Co.
+                            </corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/nester+land+and+mining+co">
+                            <corpname encodinganalog="610" source="lcnaf">Nester Land and Mining Co.
+                            </corpname>
+                        </extref>
+                    </item>
+
+                </list>
+
+            </controlaccess>
+            <controlaccess>
+                <head>Subjects</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/agriculture+indiana{su}">
+                            <subject encodinganalog="650" source="lcnaf">Agriculture--Indiana.
+                            </subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/industrialists+indiana{su}">
+                            <subject encodinganalog="650" source="lcnaf"
+                                >Industrialists --Indiana--LaPorte. </subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/mines+and+mineral+resources+michigan{su}">
+                            <subject encodinganalog="650" source="lcnaf">Mines and mineral
+                                resources--Michigan. </subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/railroads+indiana{su}">
+                            <subject encodinganalog="650" source="lcnaf">Railroads--Indiana.
+                            </subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/railroads+michigan{su}">
+                            <subject encodinganalog="650" source="lcnaf">Railroads--Michigan.
+                            </subject>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Places</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/indiana+history{su}">
+                            <geogname encodinganalog="651" source="lcnaf">Indiana--History.
+                            </geogname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/laporte+ind+history{su}">
+                            <geogname encodinganalog="651" source="lcnaf">LaPorte (Ind.)--History.
+                            </geogname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/united+states+history+civil+war+1861-1865+correspondence{su}">
+                            <geogname encodinganalog="651" source="lcnaf">United
+                                States--History--Civil War, 1861-1865--Correspondence. </geogname>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+        </controlaccess>
+
+        <!-- optional, if applicable -->
+        <relatedmaterial encodinganalog="544 1">
+            <head>Related Material</head>
+            <p>Scott mss. II; also located at the Lilly Library, Indiana University, Bloomington,
+                Indiana.</p>
+        </relatedmaterial>
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 1949-1973, 1981, 2008</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>Scott mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAB8849-00001" level="series">
+                <did>
+                    <!-- optional -->
+                    <container label="Box" type="box">1</container>
+
+
+                    <unittitle>I. Biographical/Genealogical</unittitle>
+
+
+                </did>
+                <c02 id="VAB8849-00002" level="file">
+                    <did>
+                        <unittitle>Autobiography of E.H. Scott.</unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00003" level="file">
+                    <did>
+                        <unittitle>Collection of E.H. Scott. Biographical background and description
+                            of Scott mss., written and compiled by Fanny Scott Rumely, <unitdate
+                                normal="1971-08">Aug. 1971</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00004" level="file">
+                    <did>
+                        <unittitle>Genealogical research and correspondence</unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00005" level="file">
+                    <did>
+                        <unittitle>Mayflower Society</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00006" level="file">
+                    <did>
+                        <unittitle>Three genealogical blueprints</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAB8849-00007" level="series">
+                <did>
+                    <container label="Box" type="box">1</container>
+                    <unittitle>II. Correspondence</unittitle>
+                </did>
+                <c02 id="VAB8849-00008" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1820/1862" type="inclusive">1820-1862</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00009" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>
+                            <unitdate normal="1863/1873" type="inclusive">1863-1873 </unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00010" level="file">
+                    <did>
+                        <container label="Box" type="box">3</container>
+                        <unittitle>
+                            <unitdate normal="1874/1899" type="inclusive">1874-1899 </unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00011" level="file">
+                    <did>
+                        <container label="Box" type="box">4</container>
+                        <unittitle>
+                            <unitdate normal="1900/1915" type="inclusive">1900-1915 </unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00012" level="file">
+                    <did>
+                        <container label="Box" type="box">5</container>
+                        <unittitle>
+                            <unitdate normal="1916/1920" type="inclusive">1916-1920 </unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00013" level="file">
+                    <did>
+                        <container label="Box" type="box">6</container>
+                        <unittitle>
+                            <unitdate normal="1921/1937" type="inclusive">1921-1937 </unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00014" level="file">
+                    <did>
+                        <container label="Box" type="box">7</container>
+                        <unittitle>F.S. Rumely letters to Scotts, <unitdate normal="1896/1917"
+                                type="inclusive">1896-1917</unitdate></unittitle>
+                        <physdesc>(12 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00015" level="file">
+                    <did>
+                        <unittitle>Timberlands Papers, <unitdate normal="1929/1941" type="inclusive"
+                                >1929-1941</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAB8849-00016" level="series">
+                <did>
+                    <container label="Box" type="box">1</container>
+                    <unittitle>III. Diaries</unittitle>
+                </did>
+                <arrangement>
+                    <p>The diaries are filed chronologically within the correspondence.</p>
+                </arrangement>
+                <c02 id="VAB8849-00017" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1861-06-10/1862-08-22" type="inclusive">1861,
+                                June 10-1862, Aug. 22.</unitdate>Scott, E.H.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00018" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle><unitdate normal="1863">1863</unitdate>Scott, E.H. Trip
+                            west.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00019" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1865/1866" type="inclusive"
+                                >1865-1866.</unitdate>Scott, Arthur Lee</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00020" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1871/1872-03-04" type="inclusive">1871-1872,
+                                Mar. 14.</unitdate>Scott, Mary Relief (Niles)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00021" level="file">
+                    <did>
+                        <container label="Box" type="box">3</container>
+                        <unittitle><unitdate normal="1876/1880" type="inclusive"
+                                >1876-1880,</unitdate><unitdate normal="1882/1888" type="inclusive"
+                                >1882-1888,</unitdate><unitdate normal="1895">1895</unitdate>Scott,
+                            E.H.</unittitle>
+                        <physdesc>(13 volumes)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00022" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1883">1883</unitdate>Scott, Mary Relief
+                            (Niles)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00023" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1891-01-01/1891-02-18" type="inclusive">1891,
+                                Jan. 1-Feb. 18.</unitdate>Scott, Mary Relief (Niles)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00024" level="file">
+                    <did>
+                        <container label="Box" type="box">4</container>
+                        <unittitle><unitdate normal="1901/1915" type="inclusive"
+                                >1901-1915.</unitdate>Scott, E.H.</unittitle>
+                        <physdesc>(15 volumes)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00025" level="file">
+                    <did>
+                        <container label="Box" type="box">5</container>
+                        <unittitle><unitdate normal="1920">1920</unitdate>Scott, E.H.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00026" level="file">
+                    <did>
+                        <container label="Box" type="box">6</container>
+                        <unittitle><unitdate normal="1922">1922,</unitdate><unitdate normal="1924"
+                                >1924.</unitdate>Scott, E.H.</unittitle>
+                        <physdesc>(2 volumes)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00027" level="file">
+                    <did>
+                        <container label="Box" type="box">7</container>
+                        <unittitle><unitdate normal="1867-09-08/1868-10-05" type="inclusive">1867,
+                                Sept. 8-1868, Oct. 5.</unitdate>Scott, Mary Relief
+                            (Niles)</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAB8849-00028" level="series">
+                <did>
+                    <container label="Box" type="box">6</container>
+                    <unittitle>IV. Photographs</unittitle>
+                </did>
+                <c02 id="VAB8849-00029" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1860/1969" type="inclusive"
+                            >1860s.</unitdate>First tramp seen in Unadilla Valley</unittitle>
+                        <physdesc>(1 ambrotype)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00030" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1870/1875" type="inclusive"
+                                >1870-1875.</unitdate>East Saginaw, Michigan. Scott
+                            family</unittitle>
+                        <physdesc>(3 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00031" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1870/1919" type="inclusive"
+                                >1870s-1919.</unitdate>Scott family</unittitle>
+                        <physdesc>(44 photographs, 1 tintype)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00032" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1877/1963" type="inclusive"
+                                >1877-1963.</unitdate>Michigan</unittitle>
+                        <physdesc>(6 photographs, 4 postcards)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00033" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1880/1929" type="inclusive"
+                                >1880s-1920s.</unitdate>Scott family</unittitle>
+                        <physdesc>(31 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00034" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1887">1887</unitdate>St. Augustine,
+                            Florida</unittitle>
+                        <physdesc>(1 photograph)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00035" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1890/1899" type="inclusive"
+                            >1890s.</unitdate>Lumbering around Munising, Michigan</unittitle>
+                        <physdesc>(14 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00036" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1906">1906,</unitdate><unitdate normal="1917"
+                                >1917,</unitdate><unitdate normal="1817/1937" type="inclusive"
+                                >undated.</unitdate>Nineveh, New York</unittitle>
+                        <physdesc>(35 photographs, 39 postcards)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00037" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1910/1917" type="inclusive"
+                                >1910-1917.</unitdate>Unadilla, New York</unittitle>
+                        <physdesc>(6 photographs, 16 postcards)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00038" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1911">1911</unitdate>South American
+                            cruise</unittitle>
+                        <physdesc>(9 photographs, 14 postcards)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00039" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1911">1911,</unitdate><unitdate normal="1922"
+                                >1922</unitdate>Central America</unittitle>
+                        <physdesc>(4 photographs, 3 postcards)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00040" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1912">1912</unitdate>Agricultural tour to
+                            Europe with Henry Wallace</unittitle>
+                        <physdesc>(83 photographs, 2 postcards)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00041" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1912">1912</unitdate>Bureau of University
+                            Travel. European Agricultural Tour</unittitle>
+                        <physdesc>(1 photograph)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00042" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1913">1913</unitdate>and <unitdate
+                                normal="1817/1937" type="inclusive">
+                            undated.</unitdate>Indiana</unittitle>
+                        <physdesc>(1 photograph, 10 postcards)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00043" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917">1917</unitdate>Susquehanna
+                            Valley</unittitle>
+                        <physdesc>(11 postcards)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00044" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1817/1937" type="inclusive"
+                            >undated.</unitdate>Noguchi, Isamu Gilmour, with bust of E.H.
+                            Scott</unittitle>
+                        <physdesc>(5 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00045" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1817/1937" type="inclusive"
+                            >undated</unitdate>photograph album. Boys and girls agricultural clubs
+                            started in LaPorte by funds and interest of W.H. Scott</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00046" level="file">
+                    <did>
+                        <container label="Box" type="box">27</container>
+                        <unittitle><unitdate normal="1800/1899" type="inclusive">19th
+                                century.</unitdate>Wiley Huntington Scott family photograph
+                            album</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00047" level="file">
+                    <did>
+                        <container label="Oversize" type="box">5</container>
+                        <unittitle>Photograph of Fanny (Scott) Rumely</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAB8849-00048" level="series">
+                <did>
+                    <container label="Box" type="box">8</container>
+                    <unittitle>V. Letter copy Books</unittitle>
+                </did>
+                <c02 id="VAB8849-00049" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1866-12-03/1868-05-18" type="inclusive">Dec. 3,
+                                1866-May 18, 1868</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00050" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1869-05-03/1870-12-02" type="inclusive">May 3,
+                                1869-Dec. 2, 1870</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00051" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1969-05-04/1875-02-17" type="inclusive">May 4,
+                                1869-Feb. 17, 1875</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00052" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1870-12-05/1871-05-24" type="inclusive">Dec. 5
+                                1870-May 24, 1871</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00053" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1871-05-24/1871-10-09" type="inclusive">May 24,
+                                1871-Oct. 9, 1871</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00054" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1871-10-09/1872-09-02" type="inclusive">Oct. 9,
+                                1871-Sept. 2, 1872</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00055" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1872-09-03/1872-12-16" type="inclusive">Sept. 3,
+                                1872-Dec. 16 1872</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00056" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1873-01-07/1873-10-10" type="inclusive">Jan. 7,
+                                1873-Oct. 10, 1873</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00057" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1873-10-11/1874-08-14" type="inclusive">Oct. 11,
+                                1873-Aug. 14, 1874</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00058" level="file">
+                    <did>
+                        <container label="Box" type="box">9</container>
+                        <unittitle>
+                            <unitdate normal="1874-07-27/1875-02-17" type="inclusive">July 27,
+                                1874-Feb. 17, 1875</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00059" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1875-02-17/1875-09-11" type="inclusive">Feb. 17,
+                                1875-Sept. 11, 1875</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00060" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1875-09-13/1876-05-31" type="inclusive">Sept. 13,
+                                1875-May 31, 1876</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00061" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1876-05-05/1877-01-09" type="inclusive">May 5,
+                                1876-Jan. 9, 1877</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00062" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1877-01-09/1880-01-26" type="inclusive">Jan. 9,
+                                1877-Jan.26, 1880</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00063" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1878-01-10/1879-10-10" type="inclusive">Jan. 10,
+                                1878-Oct. 10, 1879</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00064" level="file">
+                    <did>
+                        <container label="Box" type="box">10</container>
+                        <unittitle>
+                            <unitdate normal="1879-10-13/1881-07-16" type="inclusive">Oct. 13,
+                                1879-July 16, 1881</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00065" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1881-12-24/1882-09-19" type="inclusive">Dec. 24,
+                                1881-Sept. 19, 1882</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00066" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1880-01-26/1883-05-06" type="inclusive">Jan. 26,
+                                1880-May 6, 1883</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00067" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1882-09-18/1883-08-11" type="inclusive">Sept. 18,
+                                1882-Aug. 11, 1883</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00068" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1883-08-13/1884-04-26" type="inclusive">Aug. 13,
+                                1883-Apr. 26, 1884</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00069" level="file">
+                    <did>
+                        <container label="Box" type="box">11</container>
+                        <unittitle>
+                            <unitdate normal="1883-05-07/1885-01-28" type="inclusive">May 7,
+                                1883-Jan. 28, 1885</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00070" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1884-04-27/1885-03-06" type="inclusive">Apr. 27,
+                                1884-Mar. 6, 1885</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00071" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1885-02-17/1885-07-12" type="inclusive">Feb. 17,
+                                1885-July 12, 1885</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00072" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1885-03-06/1886-03-23" type="inclusive">Mar. 6,
+                                1885-Mar. 23, 1886</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00073" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1885-11-23/1886-04-21" type="inclusive">Nov. 23,
+                                1885-Apr. 21, 1886</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00074" level="file">
+                    <did>
+                        <container label="Box" type="box">12</container>
+                        <unittitle>
+                            <unitdate normal="1886-04-21/1890-03-19" type="inclusive">Apr. 21,
+                                1886-Mar. 19, 1890</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00075" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1886-04-30/1886-11-15" type="inclusive">Apr. 30,
+                                1886-Nov. 15, 1886</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00076" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1886-07-12/1887-01-26" type="inclusive">July 12,
+                                1886-Jan. 26, 1887</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00077" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1886-11-15/1887-03-19" type="inclusive">Nov. 15,
+                                1886-Mar. 19, 1887</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00078" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1887-01-26/1887-10-17" type="inclusive">Jan. 26,
+                                1887-Oct. 17, 1887</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00079" level="file">
+                    <did>
+                        <container label="Box" type="box">13</container>
+                        <unittitle>
+                            <unitdate normal="1887-03-19/1888-05-06" type="inclusive">Mar. 19,
+                                1887-May 6, 1888</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00080" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1888-05-14/1889-04-26" type="inclusive">May 14, 1888-
+                                Apr. 26, 1889</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00081" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1889-04-26/1890-04-26" type="inclusive">Apr. 26, 1889-
+                                Apr. 26 1890</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00082" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1890-04-26/1891-03-24" type="inclusive">Apr. 26 1890-
+                                Mar. 24, 1891</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00083" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1891-03-27/1897-02-21" type="inclusive">Mar. 24, 1891-
+                                Feb. 21, 1897</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00084" level="file">
+                    <did>
+                        <container label="Box" type="box">14</container>
+                        <unittitle>
+                            <unitdate normal="1892-02-19/1893-03-11" type="inclusive">Feb. 19,
+                                1892-Mar. 11, 1893</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00085" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1893-03-13/1894-03-22" type="inclusive">Mar. 13, 1893-
+                                Mar. 22, 1894</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00086" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1894-03-25/1895-01-07" type="inclusive">Mar. 25, 1894-
+                                Jan. 7, 1895</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00087" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1895-01-08/1895-07-27" type="inclusive">Jan. 8, 1895-
+                                July 27, 1895</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00088" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1895-07-27/1896-01-14" type="inclusive">July 27, 1895-
+                                Jan. 14, 1896</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00089" level="file">
+                    <did>
+                        <container label="Box" type="box">15</container>
+                        <unittitle>
+                            <unitdate normal="1896-01-14/1896-08-15" type="inclusive">Jan. 14, 1896-
+                                Aug. 15, 1896</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00090" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1896-08-15/1897-02-20" type="inclusive">Aug. 15, 1896-
+                                Feb. 20, 1897</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00091" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1897-02-21/1897-09-16" type="inclusive">Feb. 21, 1897-
+                                Sept. 16, 1897</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00092" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1897-09-29/1898-05-14" type="inclusive">Sept. 29,
+                                1897- May 14, 1898</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00093" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1898-05-14/1898-12-04" type="inclusive">May 14, 1898-
+                                Dec. 4, 1898</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00094" level="file">
+                    <did>
+                        <container label="Box" type="box">16</container>
+                        <unittitle>
+                            <unitdate normal="1898-11-24/1899-06-03" type="inclusive">Nov. 24, 1898-
+                                June 3, 1899</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00095" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1899-06-05/1900-03-03" type="inclusive">June 5, 1899-
+                                Mar. 3, 1900</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00096" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1900-03-04/1901-01-04" type="inclusive">Mar. 4, 1900-
+                                Jan. 4, 1901</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00097" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1901-01-05/1902-02-06" type="inclusive">Jan. 5, 1901-
+                                Feb. 6, 1902</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00098" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1902-02-07/1903-04-09" type="inclusive">Feb. 7, 1902-
+                                Apr. 9, 1903</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00099" level="file">
+                    <did>
+                        <container label="Box" type="box">17</container>
+                        <unittitle>
+                            <unitdate normal="1903-04-11/1904-03-19" type="inclusive">Apr. 11,
+                                1903-Mar. 19, 1904</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00100" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1904-03-21/1905-05-03" type="inclusive">Mar. 21, 1904-
+                                May 3, 1905</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00101" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1905-05-05/1906-05-14" type="inclusive">May 5, 1905-
+                                May 14, 1906</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00102" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1906-05-14/1907-04-22" type="inclusive">May 14, 1906-
+                                Apr. 22, 1907</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00103" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1907-04-26/1908-04-01" type="inclusive">Apr. 26, 1907-
+                                Apr. 1, 1908</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00104" level="file">
+                    <did>
+                        <container label="Box" type="box">18</container>
+                        <unittitle>
+                            <unitdate normal="1908-04-02/1909-07-12" type="inclusive">Apr. 2, 1908-
+                                July 12, 1909</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00105" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1909-07-12/1911-05-01" type="inclusive">July 12, 1909-
+                                May 1, 1911</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00106" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1910-12-10/1916-07-26" type="inclusive">Dec. 10, 1910-
+                                July 26, 1916</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00107" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1911-05-02/1912-04-15" type="inclusive">May 2, 1911-
+                                Apr. 15, 1912</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00108" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1912-04-15/1913-11-29" type="inclusive">Apr. 15, 1912-
+                                Nov. 29, 1913</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00109" level="file">
+                    <did>
+                        <container label="Box" type="box">19</container>
+                        <unittitle>
+                            <unitdate normal="1913-12-07/1915-01-12" type="inclusive">Dec. 7, 1913-
+                                Jan. 12, 1915</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00110" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1916-07-29/1918-01-21" type="inclusive">July 29, 1916-
+                                Jan. 21, 1918</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00111" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1918-01-23/1919-03-28" type="inclusive">Jan. 23, 1918-
+                                Mar. 28, 1919</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00112" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1921-05-12/1922-08-02" type="inclusive">May 12, 1921-
+                                Aug. 2, 1922</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00113" level="file">
+                    <did>
+                        <container label="Box" type="box">20</container>
+                        <unittitle>
+                            <unitdate normal="1922-08-01/1923-10-11" type="inclusive">1922, Aug.
+                                1-1923, Oct. 11.</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00114" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1923-10-12/1924-02-19" type="inclusive">1923, Oct. 12
+                                - 1924, Feb. 19.</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00115" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1924-02-19/1924-06-20" type="inclusive">1924, Feb. 19
+                                - June 20.</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAB8849-00116" level="series">
+                <did>
+                    <container label="Box" type="box">1</container>
+                    <unittitle>VI. Business/Financial</unittitle>
+                </did>
+                <arrangement>
+                    <p>Business/Financial materials in Boxes 1-4 and Box 6 are filed chronologically
+                        within the correspondence.</p>
+                </arrangement>
+                <c02 id="VAB8849-00117" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1861-02-11/1876-08-07" type="inclusive">1861,
+                                Feb. 11 - 1876, Aug. 7.</unitdate>Scott, E.H. Memorandum
+                            book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00118" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1861-11-01/1876-01-22" type="inclusive">1861,
+                                Nov. 1 - 1876, Jan. 22.</unitdate>Scott, E.H. Account
+                            book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00119" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle><unitdate normal="1864/1867" type="inclusive"
+                                >1864-1867.</unitdate>Scott, E.H. Memorandum book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00120" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1867-01-07/1869-03-15" type="inclusive">1867,
+                                Jan. 7 - 1869, Mar. 15.</unitdate>Scott, E.H. Memorandum
+                            book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00121" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1867-03-08/1871-04-07" type="inclusive">1867,
+                                Mar. 8 - 1871, Apr. 7.</unitdate>Scott, E.H. Bank book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00122" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1868/1871-08-20" type="inclusive">1868-1871,
+                                Aug. 20.</unitdate>Scott, E.H. Memorandum book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00123" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1869">1869</unitdate>Scott, E.H. Memorandum
+                            book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00124" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1870">1870</unitdate>Scott, E.H. Memorandum
+                            book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00125" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1871">1871</unitdate>Scott, E.H. Memorandum
+                            book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00126" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1871/1872" type="inclusive"
+                                >1871-1872.</unitdate>Scott, E.H. Memorandum book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00127" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1873/1874" type="inclusive"
+                                >1873-1874.</unitdate>Scott, E.H. Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00128" level="file">
+                    <did>
+                        <container label="Box" type="box">3</container>
+                        <unittitle><unitdate normal="1874">1874</unitdate>Scott, E.H. Account
+                            book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00129" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1877">1877</unitdate>Scott, E.H. Memorandum
+                            book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00130" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1878">1878</unitdate>Scott, E.H. Memorandum
+                            book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00131" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1883-03-07/1886-11-06" type="inclusive">1883,
+                                Mar. 27 - 1886, Nov. 6.</unitdate>Scott, E.H. Bank book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00132" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1883-03-29/1884-12-19" type="inclusive">1883,
+                                Mar. 29 - 1884, Dec. 19.</unitdate>Scott, E.H. Bank book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00133" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1883">1883</unitdate>Scott, Mary Relief
+                            (Niles). Bank book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00134" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1885-07-01/1886-04-21" type="inclusive">1885,
+                                July 1 - 1886, Apr. 21.</unitdate>Scott, E.H. Bank book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00135" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1885-12-10/1887-07-04" type="inclusive">1885,
+                                Dec. 10 - 1887, July 4.</unitdate>Scott, E.H. Bank book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00136" level="file">
+                    <did>
+                        <container label="Box" type="box">4</container>
+                        <unittitle><unitdate normal="1901/1917" type="inclusive"
+                                >1901-1917.</unitdate>Scott, E.H. List of bonds</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00137" level="file">
+                    <did>
+                        <container label="Box" type="box">6</container>
+                        <unittitle><unitdate normal="1920/1922" type="inclusive"
+                                >1920-1922.</unitdate>Scott, E.H. Bond record</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00138" level="file">
+                    <did>
+                        <container label="Box" type="box">19</container>
+                        <unittitle><unitdate normal="1833/1836" type="inclusive"
+                                >1833-1836.</unitdate>Scott, W.H. Unadilla. Accounts with stage
+                            lines</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00139" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1848/1871" type="inclusive"
+                                >1848-1871.</unitdate>Scott, W.H. Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00140" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1857">1857</unitdate>Scott, W.H.
+                            Account/memorandum book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00141" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1883/1905" type="inclusive"
+                                >1883-1905.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00142" level="file">
+                    <did>
+                        <container label="Box" type="box">20</container>
+                        <unittitle><unitdate normal="1867-04-11/1871-02-21" type="inclusive">1867,
+                                Apr. 11 - 1871, Feb. 21.</unitdate>Scott, E.H. Memorandum
+                            book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00143" level="file">
+                    <did>
+                        <container label="Box" type="box">21</container>
+                        <unittitle><unitdate normal="1832/1834" type="inclusive"
+                                >1832-1834.</unitdate>Scott, W.H. Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00144" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1832/1836" type="inclusive"
+                                >1832-1836.</unitdate>Unadilla account book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00145" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1833/1837" type="inclusive"
+                                >1833-1837.</unitdate>Scott, W.H. Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00146" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1834-12-13/1838-05-26" type="inclusive">1834,
+                                Dec. 13 - 1838, May 26.</unitdate>Scott, W.H. Account
+                            book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00147" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1837-04/1843-10" type="inclusive">1837, Apr. -
+                                1843, Oct.</unitdate>Scott, W.H. Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00148" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1838/1841" type="inclusive"
+                                >1838-1841.</unitdate>Scott, W.H. Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00149" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1840/1846" type="inclusive"
+                                >1840-1846.</unitdate>Scott, W.H. Farm book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00150" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1838-06-01/1841-08-31" type="inclusive">1838,
+                                June 1 - 1841, Aug. 31.</unitdate>Scott, W.H. Account
+                            book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00151" level="file">
+                    <did>
+                        <container label="Box" type="box">22</container>
+                        <unittitle><unitdate normal="1839/1855" type="inclusive"
+                                >1839-1855.</unitdate>Pulver account book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00152" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1841/1845" type="inclusive"
+                                >1841-1845.</unitdate>Scott, W.H. Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00153" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1841-09-01/1846-08-31" type="inclusive">1841,
+                                Sept. 1 - 1846, Aug. 31.</unitdate>Scott, W.H. Account
+                            book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00154" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1841/1846" type="inclusive"
+                                >1841-1846.</unitdate>Scott accounts</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00155" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1843/1847" type="inclusive"
+                                >1843-1847.</unitdate>Scott, W.H. Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00156" level="file">
+                    <did>
+                        <container label="Box" type="box">23</container>
+                        <unittitle><unitdate normal="1844-11-27/1863-01-31" type="inclusive">1844,
+                                Nov. 27 - 1863, Jan. 31.</unitdate>Scott, W.H. Account
+                            book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00157" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1846-06/1849-01" type="inclusive">1846, June -
+                                1849, Jan.</unitdate>Scott, W.H. Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00158" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1846-09-01/1851-07-18" type="inclusive">1846,
+                                Sept. 1 - 1851, July 18.</unitdate>Scott, W.H. Account
+                            book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00159" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1850/1855" type="inclusive"
+                                >1850-1855.</unitdate>Scott accounts</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00160" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1861/1869" type="inclusive"
+                                >1861-1869.</unitdate>Scott journal</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00161" level="file">
+                    <did>
+                        <container label="Box" type="box">24</container>
+                        <unittitle><unitdate normal="1846/1871" type="inclusive"
+                                >1846-1871.</unitdate>Scott accounts</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00162" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1854-05-09/1856-11-10" type="inclusive">1854,
+                                May 9 - 1856, Nov. 10.</unitdate>Cincinnati, Peru, and Chicago
+                            Railway Company receipt book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00163" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1864/1865" type="inclusive"
+                                >1864-1865.</unitdate>Marsh accounts</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00164" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1894/1906" type="inclusive"
+                                >1894-1906.</unitdate>Lac la Belle Co. minutes</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00165" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1849-01-15/1851" type="inclusive">1849, Jan. 15
+                                - 1851.</unitdate>Scott, W.H. Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00166" level="file">
+                    <did>
+                        <container label="Box" type="box">25</container>
+                        <unittitle><unitdate normal="1851-07/1857-06-22" type="inclusive">1851, July
+                                - 1857, June 22.</unitdate>Scott, W.H. Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00167" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1857-06/1862-09" type="inclusive">1857, June -
+                                1862, Sept.</unitdate>Scott, W.H. Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00168" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1857-07-01/1860-09-30" type="inclusive">1857,
+                                July 1 - 1860, Sept. 30.</unitdate>Scott, W.H. Account
+                            book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00169" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1860-10-01/1864-07-01" type="inclusive">1860,
+                                Oct. 1 - 1864, July 1.</unitdate>Scott, W.H. Account
+                            book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00170" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1862-03/1867-06" type="inclusive">1862, Mar. -
+                                1867, June.</unitdate>Scott, W.H. Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00171" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1867/1873" type="inclusive"
+                                >1867-1873.</unitdate>Scott, W.H. Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00172" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1864-08-01/1867-07-31" type="inclusive">1864,
+                                Aug. 1 - 1867, July 31.</unitdate>Scott, W.H. Account
+                            book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00173" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1867-08-01/1873-01" type="inclusive">1867, Aug.
+                                1 - 1873, Jan.</unitdate>Scott, W.H. Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00174" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1867/1876" type="inclusive"
+                                >1867-1876.</unitdate>Scott, E.H. &amp; Mary Relief (Niles).
+                            Expenses at Saginaw</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00175" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1871">1871</unitdate>Scott, E.H. Account book
+                            as executor of his father and mother</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00176" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1872-09-23/1876-11-12" type="inclusive">1872,
+                                Sept. 23-1876, Nov. 12.</unitdate>Scott, E.H. Account book of
+                            Cinchfield estate, Carrollton, Mich.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00177" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1894/1924" type="inclusive"
+                                >1894-1924.</unitdate>Scott, E.H. Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00178" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1859-06-14/1924-09-08" type="inclusive">1859,
+                                June 14 - 1924, Sept. 8.</unitdate>LaPorte Society of the New
+                            Church, LaPorte, Ind. Record</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00179" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1830/1831" type="inclusive"
+                                >1830-1831.</unitdate>Account book of butchering</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00180" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1817/1827" type="inclusive"
+                                >1817-1827.</unitdate>Scott, Silas. Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00181" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1827">1827, </unitdate>Scott, Silas. Justice
+                            docket; <unitdate normal="1831-06-28/1837-10" type="inclusive">1831,
+                                June 28-1837, Oct.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00182" level="file">
+                    <did>
+                        <container label="Box" type="box">26</container>
+                        <unittitle><unitdate normal="1875/1914" type="inclusive"
+                                >1875-1914.</unitdate>Scott, Mary R. Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00183" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1879/1884" type="inclusive"
+                                >1879-1884.</unitdate>Scott, Mary R. Farm accounts
+                            daybook</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00184" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1879/1884" type="inclusive"
+                                >1879-1884.</unitdate>Scott, Mary R. Farm accounts
+                            ledger</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00185" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1884/1891" type="inclusive"
+                                >1884-1891.</unitdate>Scott, Mary R. Farm accounts
+                            daybook</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00186" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1884/1901" type="inclusive"
+                                >1884-1904.</unitdate>Scott, Mary R. Farm accounts
+                            daybook</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00187" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1890-10-24/1916-01-29" type="inclusive">1890,
+                                Oct. 24 - 1916, Jan. 29.</unitdate>Nester Land and Mining Company.
+                            Minutes of the directors</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00188" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1890-12-12/1904-04-28" type="inclusive">1890,
+                                Dec. 12 - 1904, Apr. 28.</unitdate>Nester Land and Mining Company.
+                            Capital stock account</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00189" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1892-05-31/1924-06-10" type="inclusive">1892,
+                                May 31-1924, June 10.</unitdate>Morrison and Scott.
+                            Ledger</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00190" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1894/1937" type="inclusive"
+                                >1894-1937.</unitdate>Scott, Mary R. and Fanny (Scott) Rumely. Farm
+                            statistics</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00191" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1904/1916" type="inclusive"
+                                >1904-1916.</unitdate>Scott, Mary R. Farm accounts
+                            daybook</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00192" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1904/1916" type="inclusive"
+                                >1904-1916.</unitdate>Scott, Mary R. Farm accounts
+                            ledger</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00193" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1906/1907" type="inclusive"
+                                >1906-1907.</unitdate>Planett Manufacturing Company.
+                            Accounts</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00194" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1906-07">1906, July.</unitdate>Planett
+                            Manufacturing Company. Auditor's report</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00195" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1817/1937" type="inclusive"
+                            >undated.</unitdate>Index listing</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00196" level="file">
+                    <did>
+                        <container label="Oversize" type="box">4</container>
+                        <unittitle><unitdate normal="1861/1924" type="inclusive"
+                                >1861-1924.</unitdate>Scott, E.H. Real estate and farm
+                            accounts</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAB8849-00197" level="series">
+                <did>
+                    <container label="Box" type="box">7</container>
+                    <unittitle>VII. Printed</unittitle>
+                </did>
+                <c02 id="VAB8849-00198" level="file">
+                    <did>
+                        <unittitle>The Hoosier, <unitdate normal="1901">1901</unitdate></unittitle>
+                        <physdesc>(Vol. 1, nos. 2-9)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00199" level="file">
+                    <did>
+                        <unittitle>LaPorte Centennial</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00200" level="file">
+                    <did>
+                        <unittitle>Legal publications, <unitdate normal="1909"
+                            >1909</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00201" level="file">
+                    <did>
+                        <unittitle>Obituaries</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00202" level="file">
+                    <did>
+                        <unittitle>United Mining Company publications</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00203" level="file">
+                    <did>
+                        <unittitle>McGarr, Philip Morehouse. <title render="doublequote">Emmet Hoyt
+                                Scott, 1842-1924: Middle West Businessman.</title> Dissertation,
+                            published by Emmet Hoyt Scott Rumely, Birmingham, Michigan, <unitdate
+                                normal="1981-03">March, 1981.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00204" level="file">
+                    <did>
+                        <container label="Oversize" type="box">2</container>
+                        <unittitle><unitdate normal="1866">1866</unitdate>Topographical map of
+                            Broome County, NY</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00205" level="file">
+                    <did>
+                        <container label="Oversize" type="box">3</container>
+                        <unittitle>Newspapers.</unittitle>
+                    </did>
+                    <scopecontent>
+                        <p>Includes specimens from LaPorte Argus, 1891-1894; LaPorte Argus-Bulletin,
+                            1900-1901, 1913; LaPorte Daily Herald, 1892, 1900-1902, 1913; Daily
+                            Republican, 1889; LaPorte Republican, 1901; Marshal County Independent,
+                            1900; Mining Journal, 1901; Weekly Sun, 1885</p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAB8849-00206" level="file">
+                    <did>
+                        <container label="Oversize" type="box">5</container>
+                        <unittitle><unitdate normal="1869">1869</unitdate>Indianapolis and St. Louis
+                            Railroad Company timetable</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00207" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1903-01-16">1903, Jan. 16.</unitdate>Passport
+                            issued to Mary Relief (Niles) Scott</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00208" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1903">1903</unitdate>Literature from United
+                            Mining and Development Company</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00209" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1911-02-01">1911, Feb. 1.</unitdate><emph
+                                render="doublequote">Father Neptune 'Passport</emph> for Emmet H.
+                            Scott (for South American cruise)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00210" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1912-08-09/1913-07-18" type="inclusive">1912,
+                                Aug. 9 - 1913, July 18.</unitdate>Wallace, H.A. Studying
+                            agricultural Europe</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00211" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1817/1937" type="inclusive"
+                            >undated.</unitdate>Map of Isle Royale, Keweenaw County
+                            Michigan</unittitle>
+                        <physdesc>(2 sheets)</physdesc>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAB8849-00212" level="series">
+                <did>
+                    <container label="Box" type="box">1</container>
+                    <unittitle>VIII. Miscellaneous</unittitle>
+
+                </did>
+                <c02 id="VAB8849-00213" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1862-10-21/1862-10-31" type="inclusive">1862,
+                                Oct. 21-31.</unitdate>Scott, E.H. <emph render="doublequote">Note
+                                Book at Teachers Institute Binghamton NY.</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00214" level="file">
+                    <did>
+                        <container label="Box" type="box">7</container>
+                        <unittitle><unitdate normal="1884/1887" type="inclusive"
+                                >1884-1887.</unitdate>Scott, Mary Relief (Niles). Scrapbook
+                            clippings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00215" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1859/1924" type="inclusive"
+                                >1859-1924.</unitdate>LaPorte Society of the New Church, Record.
+                            Records removed from bound volume.</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00216" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1817/1937" type="inclusive"
+                            >undated.</unitdate>Scott, Mary Relief (Niles). Recipes</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00217" level="file">
+                    <did>
+                        <container label="Box" type="box">20</container>
+                        <unittitle><unitdate normal="1912">1912</unitdate>Scott, E.H. Scrapbook of
+                            agricultural tour of Europe</unittitle>
+                        <physdesc>(2 volumes)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00218" level="file">
+                    <did>
+                        <container label="Oversize" type="box">1</container>
+                        <unittitle>Wooden sign: William Niles/E.H. Scott/Lac La Belle
+                            Co.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8849-00219" level="file">
+                    <did>
+                        <container label="Oversize" type="box">5</container>
+                        <unittitle>Property maps and indentures; land deeds signed by Ulysses S.
+                            Grant; household insurance policy; abstracts of title; photostats of
+                            plates of Northern Indiana swamp lands, showing Indian trails and E.H.
+                            Scott lands.</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
