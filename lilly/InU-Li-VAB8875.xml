@@ -1,0 +1,1212 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAB8875">InU-Li-VAB8875</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Wilson mss., <date normal="1891/1983"
+                        >1891-1983</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2010" type="publication">© 2010</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2010">© 2010</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                    <lb/><date normal="2010" type="source">2010</date>
+                <lb/>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2010-03-03">March 3, 2010</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2010-03-03"/>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Wilson, William Edward, 1906-
+                </persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Wilson mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1891/1983" type="inclusive"
+                >1891-1983</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2327</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>1,535 items</extent>
+            </physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Wilson mss., 1891-1983, consists of
+                the papers of William Edward Wilson, 1906-1988, Indiana University James A. Work
+                Professor of English at Bloomington, Indiana, author, and newspaperman.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+
+            <p>Born in Evansville, Indiana, Wilson received his education at Harvard University and
+                holds honorary degrees from the University of Evansville, Indiana University, and
+                Indiana State University. During World War II Wilson served in the Navy and taught
+                at the U.S. Naval Academy at Annapolis. Other teaching positions were at Brown
+                University, Rhode Island School of Design, Johns Hopkins University, University of
+                Colorado, University of Aix-Marseille, and Indiana University. As a newspaperman
+                Wilson reported for The Evansville Press, The New Bedford (Mass.) Standard, and The
+                Evening Sun of Baltimore, as well as serving as a free-lance journalist for a number
+                of other newspapers.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Biographical; II.
+                Correspondence; III. Financial; IV. Indiana University; V. Photographs; VI.
+                Speeches; VII. Writings; VIII. Printed.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Wilson mss., 1891-1983, consists of the papers of William Edward Wilson,
+                1906-1988, Indiana University James A. Work Professor of English at Bloomington,
+                Indiana, author, and newspaperman. Includes Indiana University faculty reports;
+                class outlines and lectures for 20th Century American fiction course; articles;
+                short stories; a novel and a play; reviews of Wilson's work; magazine and newspaper
+                clippings; and photographs of family, friends and graduate writing class at Indiana
+                University, 1955.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/wilson+william+edward+1906-">
+                            <persname encodinganalog="100" source="lcnaf">Wilson, William Edward,
+                                1906- </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/wilson+william+edward+1906-">
+                            <persname encodinganalog="600" source="lcnaf">Wilson, William Edward,
+                                1906- --Correspondence. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/indiana+university+faculty+archives">
+                            <corpname encodinganalog="610" source="lcnaf">Indiana
+                                University--Faculty--Archives. </corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/united+states+naval+academy+history">
+                            <corpname encodinganalog="610" source="lcnaf">United States Naval
+                                Academy--History. </corpname>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Subjects</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/authors+american+20th+century+correspondence{su}">
+                            <subject encodinganalog="650" source="lcnaf">Authors, American--20th
+                                century--Correspondence. </subject>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+        </controlaccess>
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired 1968, 1978, 1983</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>Wilson mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAB8875-00001" level="series">
+                <did>
+                    <!-- optional -->
+                    <container label="Box" type="box">1</container>
+
+                    <unittitle>I. Biographical</unittitle>
+                </did>
+                <c02 id="VAB8875-00002" level="file">
+                    <did>
+                        <unittitle>Emmart, Adolphus Dunan </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00003" level="file">
+                    <did>
+                        <unittitle>Leich, Charles Francis </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00004" level="file">
+                    <did>
+                        <unittitle>Wilson, Douglas Cook </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00005" level="file">
+                    <did>
+                        <unittitle>Wilson, Ellen Janet (Cameron) </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00006" level="file">
+                    <did>
+                        <unittitle>Wilson, William Edward, <unitdate normal="1870/1948"
+                                type="inclusive">1870-1948</unitdate>and Nettie (Cook) Wilson
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00007" level="file">
+                    <did>
+                        <unittitle>Wilson, William Edward, <unitdate normal="1906/1988"
+                                type="inclusive">1906-1988</unitdate></unittitle>
+                        <physdesc>(8 folders)</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Includes address book; biographical sketches; certificates and awards,
+                            1959-1973; new items, 1939-1973; Sagas yearbook, 1923; miscellaneous
+                            items, 1916-1948</p>
+                    </scopecontent>
+                </c02>
+            </c01>
+            <c01 id="VAB8875-00008" level="series">
+                <did>
+                    <container label="Box" type="box">1</container>
+                    <unittitle>II. Correspondence</unittitle>
+                </did>
+                <scopecontent>
+                    <p> The correspondents include: <lb/><list>
+                            <item>Earl Henry Antes</item>
+                            <item>Philip Dean Appleman</item>
+                            <item>John William Ashton</item>
+                            <item>Edward Campbell Aswell</item>
+                            <item>J. Robert Atkinson</item>
+                            <item>David Sweet Ballou</item>
+                            <item>Helen Ballou</item>
+                            <item>Richard Elwell Banta</item>
+                            <item>Cesar Lombardi Barber</item>
+                            <item>Walter Jackson Bate</item>
+                            <item>Pierre Baubaut</item>
+                            <item>Yvonne Baubaut</item>
+                            <item>Morris Bishop</item>
+                            <item>Lurton Blassingame</item>
+                            <item>Odette E. Bornand</item>
+                            <item>James Oliver Brown</item>
+                            <item>John Mason Brown</item>
+                            <item>Edwin Harrison Cady</item>
+                            <item>Frank Michael Calabria</item>
+                            <item>William Edward March Campbell</item>
+                            <item>Roberta (Murray) Capers</item>
+                            <item>Paul Jefferson Carter</item>
+                            <item>John Orville Chewning</item>
+                            <item>Thomas Dionysius Clark</item>
+                            <item>Diane Cleaver</item>
+                            <item>James Lowry Clifford</item>
+                            <item>Ralph Leonard Collins</item>
+                            <item>Henry Steele Commager</item>
+                            <item>Richard Albert Cordell</item>
+                            <item>George Washington Corner</item>
+                            <item>Savington Crampton</item>
+                            <item>George Michael Cuomo</item>
+                            <item>Burke Davis</item>
+                            <item>Kenneth S. Davis</item>
+                            <item>Ralph Otis Davis</item>
+                            <item>Thomas J. Davis</item>
+                            <item>George Deaux</item>
+                            <item>Anne (Folger) Decker</item>
+                            <item>William Butterfield Decker</item>
+                            <item>James Frank Dobie</item>
+                            <item>John Richard Dodds</item>
+                            <item>Scott Donaldson</item>
+                            <item>Denis Joseph Dooley</item>
+                            <item>Vera Dreiser</item>
+                            <item>Electa Duncan</item>
+                            <item>Marilyn (Wall) Durham</item>
+                            <item>Charles E. East</item>
+                            <item>Lealdes M. Eaton</item>
+                            <item>William Henry Edwards</item>
+                            <item>Helen Elliott</item>
+                            <item>Josephine Dorothea (Mirabella) Elliott</item>
+                            <item>Agnes Elpers</item>
+                            <item>Bergen Evans</item>
+                            <item>Robert James Fair</item>
+                            <item>Royal Bailey Farnum</item>
+                            <item>Oliver Watkins Ferguson</item>
+                            <item>Edward Lewis Ferman</item>
+                            <item>Louis Filler</item>
+                            <item>Aubrey Wray Fitch</item>
+                            <item>Charles J. Foltz</item>
+                            <item>Joseph Chamberlain Furnas</item>
+                            <item>Mary Elizabeth Gaither</item>
+                            <item>Lewis Stiles Gannett</item>
+                            <item>John Champlin Gardner</item>
+                            <item>Kellie Gardner</item>
+                            <item>Elizabeth L. Gilman</item>
+                            <item>Donald Gray</item>
+                            <item>Arlette Grebel</item>
+                            <item>Donald Jay Grout</item>
+                            <item>Susanne (Ribeyre) Guenther</item>
+                            <item>Roger C. Hackett</item>
+                            <item>Margaret Halsey</item>
+                            <item>Philip Hamburger</item>
+                            <item>William Burnett Harvey</item>
+                            <item>Stanley H. Haste</item>
+                            <item>Walter Edwin Havighurst</item>
+                            <item>Brian P. Hayes</item>
+                            <item>Joseph Arnold Hayes</item>
+                            <item>Marrijane (Johnston) Hayes</item>
+                            <item>Louis H. Haynes</item>
+                            <item>Will Harrison Hays</item>
+                            <item>Stanislaw Helsztynski</item>
+                            <item>Robert Henderson</item>
+                            <item>Cecilia (Hennel) Hendricks</item>
+                            <item>Ruth (Elliott) Hickam</item>
+                            <item>Quentin Manning Hope</item>
+                            <item>Hazel (Whiteleather) Hopper</item>
+                            <item>David Stewart Hull</item>
+                            <item>Haydn Huntley</item>
+                            <item>Melvin Watson Hyde</item>
+                            <item>Elizabeth (Stevenson) Ives</item>
+                            <item>Ejler Jakobsson</item>
+                            <item>Oliver Ormerod Jensen</item>
+                            <item>Bess (Sellers) Johnson</item>
+                            <item>Felix L. Johnson</item>
+                            <item>Howard Mumford Jones</item>
+                            <item>Matthew Josephson</item>
+                            <item>Israel James Kapstein</item>
+                            <item>Alfred Kazin</item>
+                            <item>Elizabeth Hutchings (Zulauf) Kelemen</item>
+                            <item>Michael Korda</item>
+                            <item>Alexander Lemcke Leich</item>
+                            <item>Charles Francis Leich</item>
+                            <item>Lois Marie (Bauman) Leich</item>
+                            <item>Roland Leich</item>
+                            <item>Harry Guyer Leslie</item>
+                            <item>Harry Tuchman Levin</item>
+                            <item>Sonia Levinthal</item>
+                            <item>Kenneth Dale McCormick</item>
+                            <item>Kenneth Peva McCutchan</item>
+                            <item>Elizabeth McCutcheon</item>
+                            <item>Clarence H. MacLachlan</item>
+                            <item>Archibald MacLeish</item>
+                            <item>Claude A. Mahoney</item>
+                            <item>John Phillips Marquand</item>
+                            <item>John Bartlow Martin</item>
+                            <item>Lynne Lionel Merritt</item>
+                            <item>Ellen (Boyd) Milisen</item>
+                            <item>Edith Ronald Mirrielees</item>
+                            <item>Henry Allen Moe</item>
+                            <item>Vardine (Russell) Moore</item>
+                            <item>Malcolm Charles Moos</item>
+                            <item>Herbert Joseph Muller</item>
+                            <item>Jay Neugeboren</item>
+                            <item>Jeannette (Covert) Nolan</item>
+                            <item>Jane (Blaffer) Owen</item>
+                            <item>Thomas L. Owen</item>
+                            <item>Hamilton Owens</item>
+                            <item>Katharine F. Pantzer</item>
+                            <item>Edwards Park</item>
+                            <item>Edd Winfield Parks</item>
+                            <item>Isabel M. (Bowler) Paterson</item>
+                            <item>Bernard Berenson Perry</item>
+                            <item>Harrison Gray Platt</item>
+                            <item>Murray Pollinger</item>
+                            <item>David Ambrose Remley</item>
+                            <item>Stanley Marshall Rinehart</item>
+                            <item>John Albert Robbins</item>
+                            <item>Martin Robbins</item>
+                            <item>George Chambers Roberts</item>
+                            <item>Betty J. Russell</item>
+                            <item>John William Ryan</item>
+                            <item>Mildred (Walker) Schemm</item>
+                            <item>Mark Schorer</item>
+                            <item>Dorothy (Stingle) Schrodt</item>
+                            <item>John Franklin Schrodt</item>
+                            <item>Charles Elbert Scoggins</item>
+                            <item>Winfield Townley Scott</item>
+                            <item>John Allen Selby</item>
+                            <item>Karl Jay Shapiro</item>
+                            <item>Louis Sheaffer</item>
+                            <item>Edward Shenton</item>
+                            <item>Constance Lindsay Skinner</item>
+                            <item>Bernard Smith</item>
+                            <item>Lillian Eugenia Smith</item>
+                            <item>William Mode Spackman</item>
+                            <item>Berry Spacks</item>
+                            <item>Sara Spencer</item>
+                            <item>Sharon (Dougherty) Spencer</item>
+                            <item>Elvis Jacob Stahr</item>
+                            <item>John Ernst Steinbeck</item>
+                            <item>Miriam Joy (Meloy) Sturgeon</item>
+                            <item>William Andrew Swanberg</item>
+                            <item>Lorna LaVonne (Lutes) Sylvester</item>
+                            <item>Gayle Thornbrough</item>
+                            <item>Coles Trapnell</item>
+                            <item>Erico Lopes Verissimo</item>
+                            <item>James O'Shea Wade</item>
+                            <item>Thomas Christopher Wallace</item>
+                            <item>Edward Augustus Weeks</item>
+                            <item>Herman B Wells</item>
+                            <item>Matthew Empson Welsh</item>
+                            <item>Jessamyn West</item>
+                            <item>Harry Anthony White</item>
+                            <item>Douglas Cook Wilson</item>
+                            <item>Ellen Janet (Cameron) Wilson</item>
+                            <item>Henry Cameron Wilson</item>
+                            <item>Howard Aaron Wilson</item>
+                            <item>William Edward Wilson, 1906-1988</item>
+                            <item>William Edward Wilson, 1934- </item>
+                            <item>Sophus Keith Winther</item>
+                            <item>Mirian S. Wood</item>
+                            <item>Lawrence Counselman Wroth</item>
+                            <item>Thelma Louise (Sherrill) Wynn</item>
+                            <item>Samuel Yellen</item>
+                            <item>Lela Ann (Ives) Zacharias.</item>
+
+                        </list><lb/>Consult the Manuscripts Index in the Library for dates of
+                        letters of Individual correspondents. </p>
+                </scopecontent>
+                <c02 id="VAB8875-00009" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1927/1966" type="inclusive">1927-1966</unitdate>
+                        </unittitle>
+                        <physdesc>(30 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00010" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>
+                            <unitdate normal="1967/1977" type="inclusive">1967-1977</unitdate>
+                        </unittitle>
+                        <physdesc>(26 folders)</physdesc>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAB8875-00011" level="series">
+                <did>
+                    <container label="Box" type="box">2</container>
+                    <unittitle>III. Financial</unittitle>
+                </did>
+                <scopecontent>
+                    <p>Includes receipts and account statements, 1941-1973.</p>
+                </scopecontent>
+            </c01>
+            <c01 id="VAB8875-00012" level="series">
+                <did>
+                    <container label="Box" type="box">2</container>
+                    <unittitle>IV. Indiana University</unittitle>
+                </did>
+                <c02 id="VAB8875-00013" level="file">
+                    <did>
+                        <unittitle>Faculty reports. Wilson to English Department, <unitdate
+                                normal="1950/1971" type="inclusive">1950-1971</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00014" level="file">
+                    <did>
+                        <unittitle>L358, 20th century American fiction, <unitdate normal="1954/1959"
+                                type="inclusive">1954-1959</unitdate>Course outlines and lectures </unittitle>
+                        <physdesc>(26 folders)</physdesc>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAB8875-00015" level="series">
+                <did>
+                    <container label="Box" type="box">3</container>
+                    <unittitle>V. Photographs</unittitle>
+                </did>
+                <c02 id="VAB8875-00016" level="file">
+                    <did>
+                        <unittitle>Wilson, W.E.; Ellen Wilson and sons, family and friends,
+                                <unitdate normal="1891/1983" type="inclusive"
+                            >1891-1983</unitdate></unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00017" level="file">
+                    <did>
+                        <unittitle>Congressional junket, <unitdate normal="1924-12">1924,
+                                Dec.</unitdate></unittitle>
+                        <physdesc>(5 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00018" level="file">
+                    <did>
+                        <unittitle>Congressional tree planting, <unitdate normal="1923-03">1923,
+                                Mar.</unitdate></unittitle>
+                        <physdesc>(4 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00019" level="file">
+                    <did>
+                        <unittitle>Graduate writing class party, <unitdate normal="1955-05-13">May
+                                13, 1955</unitdate></unittitle>
+                        <physdesc>(18 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00020" level="file">
+                    <did>
+                        <unittitle>Homes, <unitdate normal="1918/1959" type="inclusive"
+                                >1918-1959</unitdate></unittitle>
+                        <physdesc>(4 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00021" level="file">
+                    <did>
+                        <unittitle>Houses in Evansville, Ind., <unitdate normal="1952"
+                                >1952</unitdate></unittitle>
+                        <physdesc>(21 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00022" level="file">
+                    <did>
+                        <unittitle>People, identified</unittitle>
+                        <physdesc>(3 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00023" level="file">
+                    <did>
+                        <unittitle>Places</unittitle>
+                        <physdesc>(49 photographs, 1 postcard)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00024" level="file">
+                    <did>
+                        <unittitle>Trip on the Gordon C. Greene, <unitdate normal="1942"
+                                >1942</unitdate></unittitle>
+                        <physdesc>(47 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00025" level="file">
+                    <did>
+                        <unittitle>White, Harry A., <unitdate normal="1970/1971" type="inclusive"
+                                >1970-1971</unitdate></unittitle>
+                        <physdesc>(6 photographs)</physdesc>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAB8875-00026" level="series">
+                <did>
+                    <container label="Box" type="box">3</container>
+                    <unittitle>VI. Speeches</unittitle>
+                </did>
+                <c02 id="VAB8875-00027" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1965-11-13">1965, Nov. 13.</unitdate>Society of
+                            Indiana Pioneers.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00028" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1965-12-08">1965, Dec. 8.</unitdate>Vincennes
+                            Historical Society and Antiquarian Society.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00029" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1966-04-28">1966, Apr. 28.</unitdate>Indiana
+                            Library Association, District V.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00030" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1966-05-11">1966, May 11.</unitdate>IU Alumni
+                            at Evansville.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00031" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1966-07-07">1966, July 7.</unitdate>Brown
+                            University N.D.E.A. Lectures.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00032" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1966-08-01">1966, Aug. 1.</unitdate>Writer's
+                            Conference at Boulder, Colorado.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00033" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1966">1966</unitdate>Indiana University Women's
+                            Club.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00034" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1967-09-09">1967, Sept. 29.</unitdate>Harmonie
+                            Associates, Evansville.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00035" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1891/1983" type="inclusive"
+                            >undated.</unitdate>Boulder, Colorado.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00036" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1891/1983" type="inclusive"
+                            >undated.</unitdate>English teachers club.</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAB8875-00037" level="series">
+                <did>
+                    <container label="Box" type="box">1</container>
+                    <unittitle>VII. Writings</unittitle>
+                </did>
+                <c02 id="VAB8875-00038" level="file">
+                    <did>
+                        <unittitle>The following are enclosed in correspondence:</unittitle>
+                    </did>
+                    <c03 id="VAB8875-00039" level="file">
+                        <did>
+                            <unittitle>Graduates of the U.S. Naval Academy</unittitle>
+                            <note>
+                                <p>(enclosed June 23, 1945)</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8875-00040" level="file">
+                        <did>
+                            <unittitle>The Horse That Could Play the Calliope</unittitle>
+                            <note>
+                                <p>(enclosed June 7, 1945)</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8875-00041" level="file">
+                        <did>
+                            <unittitle>The House on Audubon Street</unittitle>
+                            <note>
+                                <p>(enclosed Aug. 22, 1952)</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8875-00042" level="file">
+                        <did>
+                            <unittitle>U.S. Naval Academy</unittitle>
+                            <note>
+                                <p>(enclosed May 22, 1945)</p>
+                            </note>
+                        </did>
+                    </c03>
+
+                </c02>
+                <c02 id="VAB8875-00043" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>The following are enclosed in correspondence:</unittitle>
+                    </did>
+                    <c03 id="VAB8875-00044" level="file">
+                        <did>
+                            <unittitle>The Boatload of Knowledge</unittitle>
+                            <note>
+                                <p>(enclosed Apr. 28, 1973)</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8875-00045" level="file">
+                        <did>
+                            <unittitle>Independence</unittitle>
+                            <note>
+                                <p>(enclosed Feb. 14, 1976)</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8875-00046" level="file">
+                        <did>
+                            <unittitle>Book review</unittitle>
+                            <note>
+                                <p>(enclosed Sept. 20, 1974)</p>
+                            </note>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB8875-00047" level="file">
+                    <did>
+                        <container label="Box" type="box">3</container>
+                        <unittitle>Kinnell, Galway</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00048" level="file">
+                    <did>
+                        <unittitle>Poems, <unitdate normal="1957-05-09">May 9,
+                            1957,</unitdate>inscribed to Wilson</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00049" level="file">
+                    <did>
+                        <unittitle>Wilson, William Edward, <unitdate normal="1870/1948"
+                                type="inclusive">1870-1948</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00050" level="file">
+                    <did>
+                        <unittitle>Enjoy the present day, <unitdate normal="1891/1983"
+                                type="inclusive">undated</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00051" level="file">
+                    <did>
+                        <unittitle>Wilson, William Edward, 1906-1988</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00052" level="file">
+                    <did>
+                        <unittitle>Abe Lincoln of Pigeon Creek, a play</unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00053" level="file">
+                    <did>
+                        <unittitle>The Angel and the Serpent</unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00054" level="file">
+                    <did>
+                        <unittitle>Articles, 1938-1975</unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00055" level="file">
+                    <did>
+                        <unittitle>Bailley's Wells or Déjà vu</unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00056" level="file">
+                    <did>
+                        <unittitle>Bibliography, <unitdate normal="1921/1977" type="inclusive"
+                                >1921-1977</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00057" level="file">
+                    <did>
+                        <unittitle>Book Reviews, <unitdate normal="1973/1975" type="inclusive"
+                                >1973-1975</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00058" level="file">
+                    <did>
+                        <unittitle>Every Man is My Father</unittitle>
+                        <physdesc>(8 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00059" level="file">
+                    <did>
+                        <container label="Box" type="box">4</container>
+                        <unittitle>Hush-a-Bye, Indiana</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00060" level="file">
+                    <did>
+                        <unittitle>Indiana: A History</unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00061" level="file">
+                    <did>
+                        <unittitle>Memo to Don Congdon regarding future books</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00062" level="file">
+                    <did>
+                        <unittitle>Mirrors on the Road: short stories</unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00063" level="file">
+                    <did>
+                        <unittitle>On His Being Arrived to the Age of Sixty-Three, or Out to Old
+                            Uncle Charlie's, <unitdate normal="1969-02-20">Feb. 20,
+                            1969</unitdate>[poem]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00064" level="file">
+                    <did>
+                        <unittitle>On the Sunny Side of a One-Way Street, <unitdate
+                                normal="1958-07-24">July 24, 1958</unitdate></unittitle>
+                        <physdesc>(5 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00065" level="file">
+                    <did>
+                        <unittitle>Prudence Goodchild's Indian</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00066" level="file">
+                    <did>
+                        <unittitle>The Raiders, <unitdate normal="1954">1954</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00067" level="file">
+                    <did>
+                        <unittitle>Saint Tropez [poem], <unitdate normal="1968-12-12">Dec. 12,
+                                1968</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00068" level="file">
+                    <did>
+                        <unittitle>Short Stories, <unitdate normal="1934/1973" type="inclusive"
+                                >1934-1973</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00069" level="file">
+                    <did>
+                        <unittitle>Spain is a Fine Country: short stories</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00070" level="file">
+                    <did>
+                        <unittitle>The Strangers, <unitdate normal="1952"
+                            >1952</unitdate></unittitle>
+                        <physdesc>(9 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00071" level="file">
+                    <did>
+                        <unittitle>We must all start sometime: short stories</unittitle>
+                        <physdesc>(7 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00072" level="file">
+                    <did>
+                        <unittitle>Miscellaneous notes, <unitdate normal="1891/1983"
+                                type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00073" level="file">
+                    <did>
+                        <unittitle>Wilson, William Edward, 1934-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00074" level="file">
+                    <did>
+                        <unittitle>Me, Myself &amp; I, <unitdate normal="1949"
+                            >1949</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00075" level="file">
+                    <did>
+                        <container label="Oversize" type="box">1</container>
+                        <unittitle>Abe Lincoln of Pigeon Creek, a novel, <unitdate
+                                normal="1949-06-08">June 8, 1949.</unitdate>Bound. Master
+                            copy.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00076" level="file">
+                    <did>
+                        <container label="Oversize" type="box">2</container>
+                        <unittitle>The Raiders, <unitdate normal="1954-12-16">Dec 16,
+                                1954.</unitdate>Bound proof copy, signed by Wilson.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00077" level="file">
+                    <did>
+                        <container label="Oversize" type="box">3</container>
+                        <unittitle>On the Sunny Side of a One-Way Street, <unitdate normal="1958"
+                                >1958</unitdate>Galley D</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAB8875-00078" level="file">
+                <did>
+                    <container label="Box" type="box">5</container>
+                    <unittitle>VIII. Printed</unittitle>
+                </did>
+                <c02 id="VAB8875-00079" level="file">
+                    <did>
+                        <unittitle>Articles, <unitdate normal="1940/1982" type="inclusive"
+                                >1940-1982</unitdate></unittitle>
+                        <physdesc>(10 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00080" level="file">
+                    <did>
+                        <unittitle>Poems, <unitdate normal="1955">1955</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00081" level="file">
+                    <did>
+                        <unittitle>Reviews</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00082" level="file">
+                    <did>
+                        <unittitle>Abe Lincoln...novel, <unitdate normal="1949/1962"
+                                type="inclusive">1949-1962</unitdate></unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00083" level="file">
+                    <did>
+                        <unittitle>The Angel and the Serpent, <unitdate normal="1963-12/1965-03"
+                                type="inclusive">1963, Dec.-1965, Mar.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00084" level="file">
+                    <did>
+                        <unittitle>Big Knife, <unitdate normal="1940-08/1941-02" type="inclusive"
+                                >1940, Aug.-1941, Feb.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00085" level="file">
+                    <did>
+                        <unittitle>Crescent City, <unitdate normal="1947-08/1947-12"
+                                type="inclusive">1947, Aug.-Dec.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00086" level="file">
+                    <did>
+                        <unittitle>Empty noon, <unitdate normal="1953-02">1953,
+                            Feb.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00087" level="file">
+                    <did>
+                        <unittitle>Every Man is my Father, <unitdate normal="1973-04/1974-11"
+                                type="inclusive">1973, Apr.-1974, Nov.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00088" level="file">
+                    <did>
+                        <unittitle>Indiana: A History, <unitdate normal="1967/1975" type="inclusive"
+                                >1967-1975</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00089" level="file">
+                    <did>
+                        <unittitle>Indiana: A State Portrait, <unitdate normal="1950-06/1950-07"
+                                type="inclusive">1950, June-July</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00090" level="file">
+                    <did>
+                        <unittitle>On the Sunny Side…, <unitdate normal="1959"
+                            >1959</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00091" level="file">
+                    <did>
+                        <unittitle>The Raiders, <unitdate normal="1955-04/1955-12" type="inclusive"
+                                >1955, Apr.-Dec.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00092" level="file">
+                    <did>
+                        <unittitle>Shooting Star, <unitdate normal="1942-03/1942-07"
+                                type="inclusive">1942, Mar.-July</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00093" level="file">
+                    <did>
+                        <unittitle>Social Experiments on the Wabash, <unitdate normal="1964"
+                                >1964</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00094" level="file">
+                    <did>
+                        <unittitle>The Stranger, <unitdate normal="1952-08/1953-02" type="inclusive"
+                                >1952, Aug.-1953, Feb.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00095" level="file">
+                    <did>
+                        <unittitle>The Wabash, <unitdate normal="1940-02/1940-03" type="inclusive"
+                                >1940, Feb.-Mar.</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00096" level="file">
+                    <did>
+                        <unittitle>Yesterday's Son, <unitdate normal="1941-07/1942-06"
+                                type="inclusive">1941, July-1942, June</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00097" level="file">
+                    <did>
+                        <unittitle>Reviews by W.E. Wilson, <unitdate normal="1941/1977"
+                                type="inclusive">1941-1977</unitdate></unittitle>
+                        <physdesc>(5 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00098" level="file">
+                    <did>
+                        <unittitle>Short Stories</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00099" level="file">
+                    <did>
+                        <unittitle>The Answer</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00100" level="file">
+                    <did>
+                        <unittitle>Baby Lions</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00101" level="file">
+                    <did>
+                        <unittitle>Beyond Darkness</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00102" level="file">
+                    <did>
+                        <unittitle>Beyond the Loud Winds</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00103" level="file">
+                    <did>
+                        <unittitle>Bird Roby's Sidewheeler</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00104" level="file">
+                    <did>
+                        <unittitle>The Blue Boy</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00105" level="file">
+                    <did>
+                        <unittitle>Class Report</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00106" level="file">
+                    <did>
+                        <unittitle>Deception</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00107" level="file">
+                    <did>
+                        <unittitle>End of a Voyage</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00108" level="file">
+                    <did>
+                        <unittitle>Engagement Under Fire</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00109" level="file">
+                    <did>
+                        <unittitle>The Girl Named Irene</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00110" level="file">
+                    <did>
+                        <unittitle>Hoosier Hot Spell</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00111" level="file">
+                    <did>
+                        <unittitle>In Some Far Corner</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00112" level="file">
+                    <did>
+                        <unittitle>La Ley de Lynch</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00113" level="file">
+                    <did>
+                        <unittitle>The Lone Pioneer</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00114" level="file">
+                    <did>
+                        <unittitle>Longies</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00115" level="file">
+                    <did>
+                        <unittitle>Mucho Calor</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00116" level="file">
+                    <did>
+                        <unittitle>Off the Record</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00117" level="file">
+                    <did>
+                        <unittitle>Paradise House</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00118" level="file">
+                    <did>
+                        <unittitle>The Ship's Doctor</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00119" level="file">
+                    <did>
+                        <unittitle>The Sign</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00120" level="file">
+                    <did>
+                        <unittitle>The Trap</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00121" level="file">
+                    <did>
+                        <unittitle>Where Now?</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00122" level="file">
+                    <did>
+                        <unittitle>Wooden Funeral</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8875-00123" level="file">
+                    <did>
+                        <unittitle>Duplicate copies of articles and stories in Book
+                            Dept.</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
