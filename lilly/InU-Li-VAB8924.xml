@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAB8924">InU-Li-VAB8924</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">White, H. mss., <date normal="1927/1982"
+                        >1927-1982</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2010" type="publication">© 2010</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2010">© 2010</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                    <lb/><date normal="2010" type="source">2010</date>
+                <lb/>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2010-03-09">March 9, 2010</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2010-03-08"/>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">White, Harry Anthony,
+                    1908-1982.</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">White, H. mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1927/1982" type="inclusive"
+                >1927-1982</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2303</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>ca. 1124 items</extent>
+            </physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The White, H. mss., 1927-1982, consists
+                primarily of the correspondence of musician and writer Harry Anthony White,
+                1908-1982.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+
+            <p>Harry Anthony White, 1908-1982, was a musician and writer.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The files are in alphabetical order by correspondent.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The White, H. mss., 1927-1982, consist primarily of the correspondence of musician
+                and writer Harry Anthony White, 1908-1982. Manuscript compositions and fragments of
+                music, 1927-1937, written by Harry Anthony White complete the collection.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/white+harry+anthony+1908-1982">
+                            <persname encodinganalog="100" source="lcnaf">White, Harry Anthony,
+                                1908-1982 </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/white+harry+anthony+1908-1982">
+                            <persname encodinganalog="600" source="lcnaf">White, Harry Anthony,
+                                1908-1982 --Correspondence</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/kamen+martin+david+1913-2002">
+                            <persname encodinganalog="700" source="lcnaf">Kamen, Martin David,
+                                1913-2002 </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/levine+rachmiel+1910-">
+                            <persname encodinganalog="700" source="lcnaf">Levine, Rachmiel, 1910-
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/mcwilliams+carey+1905-">
+                            <persname encodinganalog="700" source="lcnaf">McWilliams, Carey, 1905-
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/sutton+william+alfred+1915-">
+                            <persname encodinganalog="700" source="lcnaf">Sutton, William Alfred,
+                                1915- </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/terkel+studs+1912-">
+                            <persname encodinganalog="700" source="lcnaf">Terkel, Studs, 1912-
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/wilson+william+edward+1906-">
+                            <persname encodinganalog="700" source="lcnaf">Wilson, William Edward,
+                                1906- </persname>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+
+        </controlaccess>
+
+
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired 1983, 1992</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>White, H. mss, Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+            <!--optional -->
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAB8924-00001" level="series">
+                <did>
+                    <!-- optional -->
+                    <container label="Box" type="box">1</container>
+
+
+                    <unittitle>Correspondence</unittitle>
+
+
+                </did>
+                <scopecontent>
+                    <p> List of correspondents include:<lb/>
+                        <list>
+                            <item>Kenneth Emanuelson</item>
+                            <item>Lou Gilbert</item>
+                            <item>James Roger Hansen</item>
+                            <item>Alma Frank Jacobson</item>
+                            <item>Martin David Kamen</item>
+                            <item>Rachmiel Levine</item>
+                            <item>Carey McWilliams</item>
+                            <item>Milton Preves</item>
+                            <item>William Alfred Sutton</item>
+                            <item>Studs Louis Terkel</item>
+                            <item>Harry Anthony White</item>
+                            <item>William Edward Wilson</item>
+                        </list>
+                    </p>
+                </scopecontent>
+                <c02 id="VAB8924-00002" level="file">
+                    <did>
+                        <unittitle>Emanuelson, Kenneth, <unitdate normal="1967/1981"
+                                type="inclusive">1967-1981</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8924-00003" level="file">
+                    <did>
+                        <unittitle>Gilbert, Lou, <unitdate normal="1966/1975" type="inclusive"
+                                >1966-1975</unitdate>and <unitdate normal="1927/1982"
+                                type="inclusive">undated</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8924-00004" level="file">
+                    <did>
+                        <unittitle>Hanson, James Roger, <unitdate normal="1961/1979"
+                                type="inclusive">1961-1979</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8924-00005" level="file">
+                    <did>
+                        <unittitle>Hanson, James Roger, David Moll, Milton Preves, <unitdate
+                                normal="1973/1980" type="inclusive">1973-1980</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8924-00006" level="file">
+                    <did>
+                        <unittitle>Jacobson, Alma Frank, <unitdate normal="1966/1981"
+                                type="inclusive">1966-1981</unitdate>and <unitdate
+                                normal="1927/1982" type="inclusive">undated</unitdate></unittitle>
+                        <physdesc>(16 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8924-00007" level="file">
+                    <did>
+                        <unittitle>Kamen, Martin David, <unitdate normal="1975/1979"
+                                type="inclusive">1975-1979</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8924-00008" level="file">
+                    <did>
+                        <unittitle>Levine, Rachmiel, <unitdate normal="1978"
+                            >1978</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8924-00009" level="file">
+                    <did>
+                        <unittitle>McWilliams, Carey, <unitdate normal="1969/1980" type="inclusive"
+                                >1969-1980</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8924-00010" level="file">
+                    <did>
+                        <unittitle>Miscellaneous, <unitdate normal="1961/1981" type="inclusive"
+                                >1961-1981</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8924-00011" level="file">
+                    <did>
+                        <unittitle>Moll, David and Agatha, <unitdate normal="1972/1979"
+                                type="inclusive">1972-1979</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8924-00012" level="file">
+                    <did>
+                        <unittitle>Omaha Printing Co., <unitdate normal="1969/1972" type="inclusive"
+                                >1969-1972</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8924-00013" level="file">
+                    <did>
+                        <unittitle>Preves, Milton and Rebecca, <unitdate normal="1960/1979"
+                                type="inclusive">1960-1979</unitdate></unittitle>
+                        <physdesc>(6 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8924-00014" level="file">
+                    <did>
+                        <unittitle>Sutton, William Alfred, <unitdate normal="1977"
+                            >1977</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8924-00015" level="file">
+                    <did>
+                        <unittitle>Terkel, Studs Louis and Ida, <unitdate normal="1968/1971"
+                                type="inclusive">1968-1971</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8924-00016" level="file">
+                    <did>
+                        <unittitle>Wilson, William Edward, <unitdate normal="1965/1979"
+                                type="inclusive">1965-1979</unitdate>and <unitdate
+                                normal="1927/1982" type="inclusive">undated</unitdate></unittitle>
+                        <physdesc>(11 folders)</physdesc>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAB8924-00017" level="series">
+                <did>
+                    <container label="Box" type="box">2</container>
+                    <unittitle>Manuscript compositions and fragments of music, <unitdate
+                            normal="1927/1937" type="inclusive">1927-1937</unitdate></unittitle>
+                </did>
+                <c02 id="VAB8924-00018" level="file">
+                    <did>
+                        <unittitle>Music compositions and fragments, <unitdate normal="1927/1937"
+                                type="inclusive">1927-1937</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8924-00019" level="file">
+                    <did>
+                        <unittitle>Manuscript music books, <unitdate normal="1937"
+                            >1937</unitdate></unittitle>
+                        <physdesc>(2 books)</physdesc>
+                    </did>
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
