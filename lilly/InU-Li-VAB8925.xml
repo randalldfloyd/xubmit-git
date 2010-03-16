@@ -1,0 +1,1648 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAB8925">InU-Li-VAB8925</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Untermeyer mss. III, <date normal="1917/1977"
+                        >1917-1977</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2010" type="publication">© 2010</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2010">© 2010</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                    <lb/><date normal="2010" type="source">2010</date>
+                <lb/>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2010-03-09">March 9, 2010</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2010-03-09"/>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Untermeyer, Louis,
+                    1885-1977.</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Untermeyer mss. III</unittitle>
+            <unitdate encodinganalog="245$f" normal="1917/1977" type="inclusive"
+                >1917-1977</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2242</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>654 items</extent>
+            </physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Untermeyer mss. III, 1917-1977, are
+                the papers of Louis Untermeyer, 1885-1977, author, poet, and anthologist.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+
+            <p>Louis Untermeyer, 1885-1977, was an author, poet, and anthologist born in New York
+                City. Untermeyer wrote several volumes of poetry, and also compiled several
+                anthologies, including "Modern American Poetry and Modern British Poetry" (1969). He
+                served as Poet Laureate Consultant in Poetry to the Library of Congress from 1961 to
+                1963.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Biographical; II.
+                Correspondence; III. Writings; IV. Printed.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Untermeyer mss. III, 1917-1977, are the papers of Louis Untermeyer, 1885-1977,
+                author, poet, and anthologist. The early part of the correspondence consists of two
+                letters, for 1917 and 1928; the bulk of the letters begins in 1945 and extends
+                through 1977. They refer to the All India Writers' Conference and other conferences,
+                the blacklisting of writers, the celebration of Untermeyer's 80th and 85th
+                birthdays, the presentation of the letters of Robert Frost to Untermeyer to the
+                Library of Congress in 1963, the protest of the writers against the Vietnamese
+                Conflict, and the publication of several books.</p>
+            <p>The writings, which include collected materials concerning the blacklisting of
+                writers, conference materials, interviews, lectures and speeches, poems and prose,
+                projects, and scripts for Voice of America, range from 1924 to 1977. Some of these
+                are: The Best Humor Annual, Burning Bush, Bygones, The Changing Voices of America
+                (lectures at Kyoto, Japan), Haiku, How to Hate Poetry in One Easy Lesson, How to
+                Kill a Poem (lecture at Suffield Conference), How to Misunderstand Poetry without
+                Really Trying, Marionettes, On the Birth of a Child, On the Eve of New Wars, Music
+                Tour on the Renaissance (diary), The Poets Speak (for Voice of America), Response to
+                The People's Almanac poll on Utopia, Said I to Myself..., These Bones, and This is
+                Christmas. A bibliographical folder notes titles by year of publication, 1919-1955
+                and copies sold to June 30, 1959.</p>
+            <p>Thirteen photographs are filed with the letters and writings, 1961-1965.</p>
+            <p>Printed materials include biographical clippings, 1917-1978; scrapbooks of poems,
+                1907-1922 and 1924-1963; prose, 1932-1976; reviews or promotional clippings for
+                Untermeyer's writings, 1917-1965; and clippings reporting his 80th birthday
+                celebration, 1965.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/untermeyer+louis+1885-1977{su}">
+                            <persname encodinganalog="600" source="lcnaf">Untermeyer, Louis,
+                                1885-1977 </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/untermeyer+louis+1885-1977">
+                            <persname encodinganalog="600" source="lcnaf">Untermeyer, Louis,
+                                1885-1977--Correspondence. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/voice+of+america+organization">
+                            <corpname encodinganalog="610" source="lcnaf">Voice of America
+                                (Organization) </corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/all+india+writers+conference+1961+bombay">
+                            <corpname encodinganalog="611" source="lcnaf">All India Writers
+                                Conference (1961 : Bombay) </corpname>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/authors+american+correspondence{su}">
+                            <subject encodinganalog="650" source="lcnaf">Authors,
+                                American--Correspondence. </subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/blacklisting+of+authors{su}">
+                            <subject encodinganalog="650" source="lcnaf">Blacklisting of authors.
+                            </subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/vietnam+war+1961-1975{su}">
+                            <subject encodinganalog="650" source="lcnaf">Vietnam War, 1961-1975
+                            </subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/american+poetry+20th+century{su}">
+                            <subject encodinganalog="650" source="lcnaf">American poetry--20th
+                                century. </subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/pulitzer+prizes{su}">
+                            <subject encodinganalog="650" source="lcnaf">Pulitzer Prizes. </subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/radio+scripts{su}">
+                            <subject encodinganalog="650" source="lcnaf">Radio scripts. </subject>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+        </controlaccess>
+
+
+
+        <!-- optional, if applicable -->
+        <relatedmaterial encodinganalog="544 1">
+            <head>Related Material</head>
+            <p>Untermeyer mss., Untermeyer mss. II, Untermeyer mss. IV; also located at the Lilly
+                Library, Indiana University, Bloomington, Indiana.</p>
+        </relatedmaterial>
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired 1978, 1983</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>Untermeyer mss. III, Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAB8925-00001" level="series">
+                <did>
+                    <!-- optional -->
+                    <container label="Box" type="box">1</container>
+
+
+                    <unittitle>I. Biographical</unittitle>
+
+
+                </did>
+                <c02 id="VAB8925-00002" level="file">
+                    <did>
+                        <unittitle>Biographical material. Printed</unittitle>
+                        <physdesc>(1 folder)</physdesc>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAB8925-00003" level="series">
+                <did>
+                    <container label="Box" type="box">1</container>
+                    <unittitle>II. Correspondence</unittitle>
+                </did>
+                <scopecontent>
+                    <p><lb/>List of correspondents:<lb/>
+                        <list>
+                            <item>Conrad Potter Aiken</item>
+                            <item>Mary (Hoover) Aiken</item>
+                            <item>Abe Ajay</item>
+                            <item>Signe Anderson</item>
+                            <item>Anthony Edward</item>
+                            <item>Jonathan Bartlett</item>
+                            <item>Roy Prentice Basler</item>
+                            <item>Enid (Nordeen) Beagle</item>
+                            <item>Peter Soyer Beagle</item>
+                            <item>Ralph A. Beebe</item>
+                            <item>Ann (Keay) Beneduce</item>
+                            <item>Shauna Bernacchi</item>
+                            <item>Doris Elsa (Fleishman) Bernays</item>
+                            <item>Edward L. Bernays</item>
+                            <item>Francis Biddle</item>
+                            <item>Wallace Brockway</item>
+                            <item>Gladys (Rice) Brooks</item>
+                            <item>Donald Brown</item>
+                            <item>Lyman Bryson</item>
+                            <item>Stanley Burnshaw</item>
+                            <item>John Mack Carter</item>
+                            <item>Richard P. Cecil</item>
+                            <item>Cyril Clemens</item>
+                            <item>Ralph Frederick Colin</item>
+                            <item>George Collins</item>
+                            <item>Saxe Commins</item>
+                            <item>George Colman de Kay</item>
+                            <item>Babette Deutsch</item>
+                            <item>Anne Ophelia (Todd) Dowden</item>
+                            <item>Pierre Dussert</item>
+                            <item>Paul Erik Edlund</item>
+                            <item>Alfred Conway Edwards</item>
+                            <item>Nathan R. Einhorn</item>
+                            <item>Mel Evans</item>
+                            <item>Charles E. Feinberg</item>
+                            <item>Nan Findlow</item>
+                            <item>Barthold Fles</item>
+                            <item>Louis Alexander Freedman</item>
+                            <item>Greer Garson</item>
+                            <item>Elinor (Steiner) Gimbel</item>
+                            <item>Mark Goodson</item>
+                            <item>Molly Harrington</item>
+                            <item>John Hohenberg</item>
+                            <item>Frank Orville Holmes</item>
+                            <item>Richard Huett</item>
+                            <item>Lyndon Baines Johnson</item>
+                            <item>Anne (Bernays) Kaplan</item>
+                            <item>Justin Kaplan</item>
+                            <item>Elizabeth (Edwards) Hamer Kegan</item>
+                            <item>Gilbert Kerr</item>
+                            <item>Alfred Kreymborg</item>
+                            <item>Krishna R. Kripalani</item>
+                            <item>Robert Hunt Land</item>
+                            <item>Elizabeth Mott Lee</item>
+                            <item>William Colston Leigh</item>
+                            <item>Leo Lerman</item>
+                            <item>Albert Rice Leventhal</item>
+                            <item>Eva (Garson) Levy</item>
+                            <item>Newman Levy</item>
+                            <item>Nicolas Vachel Lindsay</item>
+                            <item>Jack Long</item>
+                            <item>Anna D. McNeil</item>
+                            <item>Marianne (Roney) Mantell</item>
+                            <item>David Chambers Mearns</item>
+                            <item>Francis Trevelyan Miller</item>
+                            <item>Lawrence Quincy Mumford</item>
+                            <item>Robert Nathan</item>
+                            <item>George M. Nicholson</item>
+                            <item>Laurel Overman</item>
+                            <item>Allen (Talmey) Plaut</item>
+                            <item>Richard Laurance Plaut</item>
+                            <item>Tom Prideaux</item>
+                            <item>David Anton Randall</item>
+                            <item>Samson Raphaelson</item>
+                            <item>Joseph H. Ream</item>
+                            <item>James Malcolm Reid</item>
+                            <item>John Turner Reid</item>
+                            <item>William W. Rossiter</item>
+                            <item>Frances Clarke Sayers</item>
+                            <item>Gladys Schmitt</item>
+                            <item>Alice Schryver</item>
+                            <item>Elliott W. Schryver</item>
+                            <item>Peter Schwed</item>
+                            <item>Harlow Shapley</item>
+                            <item>Donald Taylor Shea</item>
+                            <item>Ralph E. Shikes</item>
+                            <item>Arthur Shimkin</item>
+                            <item>Henry Williams Simon</item>
+                            <item>D. Fred Slota</item>
+                            <item>William Jay Smith</item>
+                            <item>Sophia Sorkin</item>
+                            <item>Howard Marget Spiro</item>
+                            <item>Lawrence Edmund Spivak</item>
+                            <item>Yoshihiro Taguchi</item>
+                            <item>Frank Stacy Tavenner</item>
+                            <item>Bryna (Ivens) Untermeyer</item>
+                            <item>Louis Untermeyer</item>
+                            <item>Martin E. Untermeyer</item>
+                            <item>Enrique Uribe White</item>
+                            <item>Pamela Veley</item>
+                            <item>Eugenio C. Villicana</item>
+                            <item>James O'Shea Wade</item>
+                            <item>Louise (Hetzel) Waller</item>
+                            <item>George William Walsh</item>
+                            <item>Harriett (Sherwood) Weaver</item>
+                            <item>John Downing Weaver</item>
+                            <item>Ann L. Weingarden</item>
+                            <item>Rosalind Wells</item>
+                            <item>Mary Charlotte Hayes (Ward) Wilbur</item>
+                            <item>Richard Wilbur</item>
+                            <item>Jennings Wood</item>
+                            <item>Lydia Zelaya.</item>
+
+                        </list>
+                    </p>
+                </scopecontent>
+
+                <c02 id="VAB8925-00004" level="file">
+                    <did>
+                        <unittitle>Correspondence, <unitdate normal="1917/1977" type="inclusive"
+                                >1917-1977</unitdate></unittitle>
+                        <physdesc>(19 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Photographs</unittitle>
+
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle><unitdate normal="1961-11-14">1961, Nov. 14</unitdate>
+                                (enclosed with K.R. Kripalani to Untermeyer, <unitdate
+                                    normal="1961-12-04">Dec. 4, 1961)</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle><unitdate normal="1961-11">1961, Nov.</unitdate> (enclosed
+                                with Donald Taylor Shea to Untermeyer, <unitdate normal="1961-12-24"
+                                    >Dec. 24, 1961)</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle><unitdate normal="1961-11">1961, Nov.</unitdate> (3 -
+                                enclosed with John Turner Reid to Untermeyer, <unitdate
+                                    normal="1961-12-24">Dec. 24, 1961)</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle><unitdate normal="1965-10-01">1965, Oct. 1</unitdate>
+                                (accompanied by diploma, dated <unitdate normal="1903"
+                                    >1903)</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle><unitdate normal="1965-10-03">1965, Oct. 3.</unitdate> (80th
+                                birthday observance)</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle><unitdate normal="1917/1977" type="inclusive">n.d.</unitdate>
+                                (enclosed with Cyril Clemens to Untermeyer, <unitdate
+                                    normal="1962-04-18">Apr. 18, 1962)</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+            </c01>
+            <c01 id="VAB8925-00005" level="series">
+                <did>
+                    <container label="Box" type="box">1</container>
+                    <unittitle>III. Writings</unittitle>
+                </did>
+                <note>
+                    <p>(numbers in brackets refer to original delivery inventory number)</p>
+                </note>
+
+                <c02 id="VAB8925-00006" level="file">
+                    <did>
+                        <unittitle>These Bones. <unitdate normal="1917/1977" type="inclusive"
+                                >undated.</unitdate> Accompanied by clippings mounted and in folder,
+                                <unitdate normal="1934/1950" type="inclusive"
+                            >1934-1950.</unitdate>Bound volume, with <emph render="doublequote"
+                                >Record</emph> on spine.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00007" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>Bibliographical material, <unitdate normal="1919/1959"
+                                type="inclusive">1919-1959.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00008" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1924-01/1927-07" type="inclusive">1924,
+                                Jan.-1927, July.</unitdate>Burning Bush. bound. [#56]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00009" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1924-02">1924, Feb.</unitdate>Folk-Songs.
+                            bound. [#58]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00010" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1927-08/1932-07-04" type="inclusive">1927,
+                                Aug.-1932, July 4.</unitdate>Poems written since July, 1927. bound.
+                            [#57]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00011" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1946-07-09">1946, July 9.</unitdate>CBS.
+                            Woman's Club. Interview with Louis Untermeyer. [#64]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00012" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1947">1947.</unitdate>The New American Arts.
+                            [#64]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00013" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1949-03-06/1951-04-05" type="inclusive">1949,
+                                Mar. 26-1951, Apr. 5.</unitdate>Speeches and statements related to
+                            the Hollywood Ten, the Cultural and Scientific Conference for World
+                            Peace, the Town Hall Meeting of June 19, 1950, and the House Un-American
+                            Activities Committee. [#27, #28, #29]</unittitle>
+                    </did>
+                    <c03 id="VAB8925-00014" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1949-03-26">1949, Mar. 26.</unitdate>The
+                                other night I tried to put down some notes... T.D. 1p.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8925-00015" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1949-03-27">1949, Mar. 27.</unitdate>Text
+                                Resolution on Cultural Freedom adopted by Plenary Session. Cultural
+                                and Scientific Conference for World Peace Sunday, March 27, Waldorf
+                                Astoria Hotel. Mimeo copy. 2pp.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8925-00016" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1949-03-27">1949, Mar. 27.</unitdate>Text
+                                of Resolution Presented at Plenary Session...(not identical with the
+                                above). Mimeo copy. 2pp.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8925-00017" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1950-06-19">1950, June 19.</unitdate>Town
+                                Hall meeting. T.D. with extensive notes in the hand of Untermeyer.
+                                12pp.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8925-00018" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1950-08-08">1950, Aug. 8.</unitdate>This,
+                                as far as I know, is the first time that American writers have been
+                                sent to jail... T.D. 1p.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8925-00019" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1951-03-04">1951, Mar. 4.</unitdate>It
+                                seems that a number of people have begun writing to the sponsors of
+                                    <emph render="doublequote">What's My Line…</emph> T.D. (first
+                                draft) with corrections in Untermeyer's hand. 4pp.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8925-00020" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1951-03">1951, Mar.</unitdate>It seems that
+                                a number of people... (another draft of the above). T.D.S.
+                                6pp.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8925-00021" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1951-04-05">1951, Apr. 5.</unitdate>To the
+                                Members of the House Un-American Activities Committee:
+                                T.(carbon)D.S. 2pp.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8925-00022" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1951-04-05">1951, Apr. 5.</unitdate>To the
+                                Members of the House Un-American Activities Committee: T.(carbon) D.
+                                3pp.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8925-00023" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1951-04">1951, Apr.</unitdate>I am deeply
+                                distressed that any group of my fellow Americans should question my
+                                loyalty... [basically the same statement as that of Apr. 5, 1951].
+                                T.D.S. 4pp.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8925-00024" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1917/1977" type="inclusive"
+                                    >undated.</unitdate>I am deeply distressed that any group of my
+                                fellow Americans should question my loyalty... T. (carbon)D.
+                                1p.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8925-00025" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1917/1977" type="inclusive"
+                                    >undated.</unitdate>I am told that letters have been received
+                                questioning my devotion to my country... T. (carbon)D.
+                                1p.</unittitle>
+                            <physdesc>(2 copies)</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB8925-00026" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1951/1952" type="inclusive"
+                                >1951-1952.</unitdate>The Best Humor Annual. [#47] With notes by
+                            Charles Angof folders</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00027" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1951/1952" type="inclusive"
+                                >1951-1952.</unitdate>The Best humor Annual. Fillers.
+                            [#47]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00028" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1952/1962" type="inclusive"
+                                >1952-1962.</unitdate>Reports to the Pulitzer Prize Committee for
+                            Poetry. [#31]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00029" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1955">1955.</unitdate>Orpheus with His Lute.
+                            [#62]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00030" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1958-05-12">1958, May 12.</unitdate>For a Novel
+                            by Edwin Gilbert. [#59]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00031" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1958">1958.</unitdate>Bryson, Lyman. Man's
+                            Knowledge [#55]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00032" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1958">1958.</unitdate>Bryson, Lyman. Man's
+                            Knowledge Chapter 26: Louis Untermeyer, Modern American Writing.
+                            [#51]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00033" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1961-04">1961, Apr.</unitdate>Newell,
+                            Professor. Introduction for Louis Untermeyer at California State
+                            College, PA. [#55]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00034" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1961-10-22">1961, Oct. 22.</unitdate>CBS.
+                            Washington Conversation. Interview with Louis Untermeyer.
+                            [#55]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00035" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1961-10/1961-12" type="inclusive">1961,
+                                Oct.-Dec.</unitdate>All India Writers' Conference. [#63]</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00036" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1961/1963" type="inclusive"
+                                >1961-1963.</unitdate>One Hundred American Poems of the Twentieth
+                            Century. [#55]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00037" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1963-07">1963, July.</unitdate>Haiku: Thunder
+                            At Hosokawa. Ryoan-Ji Garden. [#68]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00038" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1963-07">1963, July.</unitdate>It may seem
+                            irrelevant for a poet to be inflicted on economists... [at Kyoto,
+                            Japan]. [#9]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00039" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1963">1963.</unitdate>The Changing Voices of
+                            America. [#12]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00040" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1963">1963.</unitdate>Letters from Robert Frost
+                            to Louis Untermeyer. [#34]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00041" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1963">1963.</unitdate>Letters from Robert Frost
+                            to Louis Untermeyer. Reviews (printed) [#65]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00042" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1964-03-23">1964, Mar. 23.</unitdate>Robert
+                            Frost, A Backward Look. [#64]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00043" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1964-08">1964, Aug.</unitdate>For Another
+                            Birth. [#59]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00044" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1964">1964.</unitdate>Aesops Fables, Retold.
+                            [#45]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00045" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1964">1964.</unitdate>Labyrinth of Love.
+                            [#13]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00046" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1965-05-11">1965, May 11.</unitdate>Toward an
+                            American Poetry [Lecture at Indiana University]. [#16]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00047" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1965">1965.</unitdate>Bygones, The
+                            Recollections of Louis Untermeyer. [#32]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00048" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1965">1965.</unitdate>Bygones... Galleys.
+                            [#31]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00049" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1965">1965.</unitdate>Bygones... Notes.
+                            [#32]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00050" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1965">1965.</unitdate>Bygones: Reviews
+                            (printed). [#65]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00051" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1966-02-20">1966, Feb. 20.</unitdate>Read-In
+                            for Peace in Vietnam: On the Birth of a Child. On the Eve of New Wars.
+                            [#64]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00052" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1966-04-26">1966. Apr. 26.</unitdate>From the
+                            Psalms. An Introduction. [#42]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00053" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1966">1966.</unitdate>Alfred Kreymborg:
+                            1883-1966. [#42]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00054" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1966">1966.</unitdate>Eve. [#42]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00055" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1967">1967.</unitdate>One, Two, Buckle my Shoe.
+                            [#44]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00056" level="file">
+                    <did>
+                        <container label="Box" type="box">3</container>
+                        <unittitle><unitdate normal="1967/1968" type="inclusive"
+                                >1967-1968.</unitdate>The Firebringer and Other Great Stories.
+                            [#38]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00057" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1968-02-05/1968-02-16" type="inclusive">1968,
+                                Feb. 5-16.</unitdate>Prominent People Program at University of
+                            California, Berkeley. Includes Untermeyer's schedules and poems by Jean
+                            Brownson, John Hoffman, Robin Magowan, Rosalie Moore, Rosemary Thompson,
+                            Elizabeth Tsuji. [#55]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00058" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1968">1968.</unitdate>A Foreword to Vachel
+                            Lindsay's <emph render="doublequote">lost</emph> poems for Children [by
+                            Pierre Dussert] [#15]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00059" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1968/1969" type="inclusive"
+                                >1968-1969.</unitdate>Men and Women: The Poetry of Love.
+                            [#52]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00060" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1970-04-15">1970, Apr. 15.</unitdate>I am going
+                            to start what I hope will be a discussion... [Remarks at International
+                            Poetry Festival, Washington, D.C.]. [#64]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00061" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1970-06-22/1970-06-29" type="inclusive">1970,
+                                June 22-29.</unitdate>Suffield Reader Writer Conference: How to Kill
+                            poem. [#35]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00062" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1970">1970.</unitdate>A Foreword for The
+                            Language of Flowers. [#14]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00063" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1970/1971" type="inclusive"
+                                >1970-1971.</unitdate>Portraits in Poetry. [#26]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00064" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1971">1971.</unitdate>The Law of Order: The
+                            Promise of Poetry. [#7]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00065" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1971">1971.</unitdate>Story Poem Record
+                            Project. [#55]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00066" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1972-07">1972, July.</unitdate>Portrait of a
+                            Girl. [#10]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00067" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1973-01-04/1973-01-17" type="inclusive">1973,
+                                Jan. 4-17.</unitdate>Music Tour on the Renaissance [Diary]. Bound.
+                            [#33]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00068" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1974-08-22">1974, Aug.
+                            22.</unitdate>Extraudenary. [#41]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00069" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1974/1975" type="inclusive"
+                                >1974-1975.</unitdate>Said I to Myself, Said I... [#36]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00070" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1974/1975" type="inclusive"
+                                >1974-1975.</unitdate>Said I to Myself, Said I... Material edited
+                            out by Bryna Untermeyer. [#36]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00071" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1977">1977.</unitdate>Galaxy of Verse
+                            [#40]</unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00072" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1977">1977.</unitdate>It will merely raise his
+                            dander... [In the hand of Bryna Untermeyer]. [#7]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00073" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Levy, Norman. Nighttime in the Adirondacks.
+                            [#1]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00074" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>About Anthologies. [#64]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00075" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>At Last. [#59]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00076" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Carnal Clerkhews. [#24]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00077" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>The Chart. [#67]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00078" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>The City has most of the advantages...
+                            [#18]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00079" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Conrad Aiken. [#19]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00080" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>The Contradiction of Modern Poetry.
+                            [#55]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00081" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Contrasted Greatness: Two Lives [Walt Whitman and
+                            Emily Dickinson]. [#64]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00082" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Do American Speak English. [#64]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00083" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>E.A.R.: A Remembrance. [#42]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00084" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>The Essential Whitman. [#53]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00085" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Folk-Songs. [#58]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00086" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>A Foreword. [#42]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00087" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>A Foreword [to Howard Fast, Time of the Riddle]
+                            [#55]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00088" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>The Glory of the Commonplace: Walt Whitman.
+                            [#42]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00089" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>The Golden Book of Fun and Nonsense: collected
+                            material. [#55]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00090" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Golden Treasury of Animal Stories and Poems.
+                            [#55]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00091" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Hercules... His Twelve Labors. [#21]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00092" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Home. [#61]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00093" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Homo Sapiens. [#6]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00094" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>How to Hate Poetry... [#64]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00095" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>How to Misunderstand Poetry. [#64]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00096" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>I regret to tell you... [Remarks at Texas Tech,
+                            Lubbock]. [#64]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00097" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Jane. [#11]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00098" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>A Kind of Credo. [#5]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00099" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>The Light Fantastic. [#55]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00100" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>The Lighter Side of Poetry. [#64]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00101" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Linus Pauling. [#64]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00102" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>[Lives of the Poets]. Sketch for a Preface.
+                            [#55]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00103" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>The Lost Continent. [#39]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00104" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>LU's Commentary and Poems to Read. [#65]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00105" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Makers of the Modern World. [#64]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00106" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Marionettes (To the memory of Edward MacDowell).
+                            [#3]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00107" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Meaning and Magic. [#23]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00108" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Misalliance. [#42]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00109" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>My First Book of Poems. [#48]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00110" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Nativity. [#71]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00111" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>New Frontiers in American Culture. [#64]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00112" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Notes for talks on Theodore Roethke and e e
+                            cummings. [#64]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00113" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Now that I am in my nineties... [#8]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00114" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Odyssey Projects. [#54]</unittitle>
+                    </did>
+                    <c03 id="VAB8925-00115" level="file">
+                        <did>
+                            <unittitle>1. Foreign Research by Secret Agent 685A093. T.(carbon)D. 1p.
+                                28cm. Signed L.U.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8925-00116" level="file">
+                        <did>
+                            <unittitle>2. Lift Up Your Heart. T.(carbon)D. 6pp. 28cm.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8925-00117" level="file">
+                        <did>
+                            <unittitle>3. Man's Best Friends. T.(carbon)D. 6pp. 28cm.
+                                Corrections</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8925-00118" level="file">
+                        <did>
+                            <unittitle>4. Thinking of You. T.(carbon)D. 6pp. 28cm.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8925-00119" level="file">
+                        <did>
+                            <unittitle>5. This is Christmas. T.(carbon)D. 10pp. 28cm. Many
+                                corrections</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8925-00120" level="file">
+                        <did>
+                            <unittitle>6. Your Lucky Stars. T.(carbon)D. 9pp. 28cm.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB8925-00121" level="file">
+                        <did>
+                            <unittitle>7. Words of Wisdom or A Little Book of Wisdom. Compiled by
+                                Bryna and Louis Untermeyer. T.(carbon)D. 19pp. 28cm.</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB8925-00122" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>One Hundred Treasured Poems. [#22]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00123" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Open the Door. [#49]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00124" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>The Painters Discover America. [#64]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00125" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Poetry and Reality. [#64]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00126" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>The Poets Speak: Radio scripts for Voice of America.
+                            [#37]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00127" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Prayer. [#69]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00128" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>The Productive Life. [#64]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00129" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>The Proper Study... Review of R.D. Altick, Lives and
+                            Letters. [#42]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00130" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Publishers are again taking a chance...on poetry.
+                            [#64]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00131" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>The Pursuit of Poetry. [#64 and 55]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00132" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>The Road Taken... Review of Lawrance Thompson,
+                            Robert Frost. [#71]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00133" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Robert Browning... [#42]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00134" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Shelley... [#59]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00135" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Sorrento. [#55]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00136" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Der Struwwelpeter. [#46]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00137" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Sturdy. [#55]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00138" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Sunday Sonnet. [#59]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00139" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>This American Language. [#64]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00140" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>This is your day. [#50]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00141" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Tramp, Peddler, and Poet. Review of R. J. Stansifer,
+                                <emph render="italic">W.H. Davies…</emph> [#42]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00142" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>The Uncertainties of Taste. [#64]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00143" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Walt Whitman and American Words. [#55]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00144" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>What America Reads - And Why. [#55]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00145" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>What Can We Expect of Our Culture. [#64]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00146" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>What Makes Modern Poetry Modern. [3 drafts].
+                            [#55]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00147" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>What Robert Frost has to Tell Us. [#20]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00148" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate>Whitman and other Mavericks. [#64]</unittitle>
+                    </did>
+                </c02>
+
+                <c02 level="file">
+                    <did>
+                        <unittitle>Photographs</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle><unitdate normal="1961-11-21">1961, Nov. 21</unitdate> (with
+                                    <unitdate normal="1961-12">Dec. 1961</unitdate> Newsletter of
+                                the Indo-American Society in All India Writers' Conference II,
+                                    <unitdate normal="1961-10/1961-12" type="inclusive">Oct.-Dec.
+                                    1961)</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle><unitdate normal="1963-07/1963-08" type="inclusive">1963,
+                                    July-Aug.</unitdate> (with Untermeyer, The Changing Voices of
+                                America, <unitdate normal="1963">1963)</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle><unitdate normal="1917/1977" type="inclusive">n.d.</unitdate>
+                                (3 - with Untermeyer, Bygones - Notes, <unitdate normal="1965"
+                                    >1965)</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+            </c01>
+            <c01 id="VAB8925-00149" level="series">
+                <did>
+                    <container label="Box" type="box">3</container>
+                    <unittitle>IV. Printed</unittitle>
+                </did>
+                <c02 id="VAB8925-00150" level="file">
+                    <did>
+                        <unittitle>The Britannica Library of Great American Writings. Promotional,
+                                <unitdate normal="1917/1977" type="inclusive"
+                            >undated.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00151" level="file">
+                    <did>
+                        <unittitle>Including Horace. Review, <unitdate normal="1919"
+                            >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00152" level="file">
+                    <did>
+                        <unittitle>Lives of the Poets. Promotional, <unitdate normal="1959"
+                                >1959</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00153" level="file">
+                    <did>
+                        <unittitle>Long Feud. Reviews, <unitdate normal="1962"
+                            >1962</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00154" level="file">
+                    <did>
+                        <unittitle>Makers of the Modern World. Promotional, <unitdate
+                                normal="1917/1977" type="inclusive">undated.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00155" level="file">
+                    <did>
+                        <unittitle>Miscellaneous clippings, <unitdate normal="1949/1967"
+                                type="inclusive">1949-1967</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00156" level="file">
+                    <did>
+                        <unittitle>Modern American and British Poetry. Reviews, <unitdate
+                                normal="1962">1962</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00157" level="file">
+                    <did>
+                        <unittitle>Moses. Reviews, <unitdate normal="1928/1930" type="inclusive"
+                                >1928-1930</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00158" level="file">
+                    <did>
+                        <unittitle>New Era in American Poetry. Reviews, <unitdate normal="1919"
+                                >1919</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00159" level="file">
+                    <did>
+                        <unittitle>Paths of Poetry. Review, <unitdate normal="1967"
+                            >1967</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00160" level="file">
+                    <did>
+                        <unittitle>Poems (in Quarterly Journal of the Library of Congress, <unitdate
+                                normal="1970-04">Apr. 1970)</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00161" level="file">
+                    <did>
+                        <unittitle>Poems of Heinrich Heine. Reviews, <unitdate normal="1917"
+                                >1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00162" level="file">
+                    <did>
+                        <unittitle>These Times. Reviews, <unitdate normal="1917"
+                            >1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00163" level="file">
+                    <did>
+                        <unittitle>These Times and Poems of Heinrich Heine. Reviews, <unitdate
+                                normal="1917">1917</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00164" level="file">
+                    <did>
+                        <unittitle>A Treasury of Great Poems, English and American. Promotional,
+                                <unitdate normal="1942">1942</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00165" level="file">
+                    <did>
+                        <unittitle>A Treasury of Laughter. Promotional, <unitdate normal="1917/1977"
+                                type="inclusive">undated.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00166" level="file">
+                    <did>
+                        <unittitle>A Treasury of Ribaldry. Reviews, <unitdate normal="1956/1957"
+                                type="inclusive">1956-1957</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00167" level="file">
+                    <did>
+                        <unittitle>Scrapbook of Poems, <unitdate normal="1924/1963" type="inclusive"
+                                >1924-1963.</unitdate>Bound</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00168" level="file">
+                    <did>
+                        <container label="Oversize" type="box">1</container>
+                        <unittitle><unitdate normal="1965-10-01">1965, Oct. 1.</unitdate>Watercolor
+                            in honor of Untermeyer's 80th birthday. Signed [Justin?]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00169" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1965-10-02">1965, Oct. 2.</unitdate>Gilbert,
+                            Edwin. A lyric to Louis</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00170" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1965-10-09">1965, Oct. 9.</unitdate>Barkham,
+                            John. Among Books and Authors. Mimeo Copy</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00171" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1965">1965.</unitdate>Bauman, Morely and Irma.
+                            Panel of ten cat stamps from Poland</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00172" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1965">1965.</unitdate>Nasatir, Iain. When I'm
+                            eight...</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00173" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1965">1965.</unitdate>[Untermeyer?], Karen,
+                            Alice and Martin. Drawing of birds in honor of Untermeyer's 80th
+                            birthday</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00174" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1965-09-28/1965-10-11" type="inclusive">1965,
+                                Sept. 28-Oct. 11.</unitdate>Clippings reporting Untermeyer's 80th
+                            birthday celebrations</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00175" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1965-10-17">1965, Oct.
+                            17.</unitdate>Promotional for Bygones by Louis Untermeyer</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00176" level="file">
+                    <did>
+                        <unittitle>Prose clippings, <unitdate normal="1932/1976" type="inclusive"
+                                >1932-1976.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8925-00177" level="file">
+                    <did>
+                        <container label="Oversize" type="box">2</container>
+                        <unittitle>Scrapbook of Poems, <unitdate normal="1907/1922" type="inclusive"
+                                >1907-1922.</unitdate>Disbound. Lacks pages 1 and 2.</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
