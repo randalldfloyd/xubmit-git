@@ -1,0 +1,2278 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAB8976">InU-Li-VAB8976</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Indiana University Press mss. II, <date
+                        normal="1950/1969">ca. 1950-1969</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2010" type="publication">© 2010</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2010">© 2010</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                    <lb/><date normal="2010" type="source">2010</date>
+                <lb/>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2010-03-24">March 24, 2010</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2010-03-24"/>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <corpname encodinganalog="110" source="lcnaf">Indiana University. Press. </corpname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Indiana University Press mss.
+                II</unittitle>
+            <unitdate encodinganalog="245$f" normal="1950/1969" type="inclusive">ca.
+                1950-1969</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2356</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>20,070 items</extent>
+            </physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Indiana University Press mss. II,
+                ca. 1950-1969, consists of the office and correspondence files of the press from its
+                establishment in 1950.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+
+            <p>Founded in 1950 in Bloomington, Indiana, the Indiana University Press is a an
+                academic publisher specializing in the humanities and social sciences. The majority
+                of publications emphasize scholarship, but the the press also publishes text, trade,
+                and reference titles.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is arranged into the following series: I. Author correspondence; II.
+                Distributors and press representatives; III. Sales; IV. Miscellaneous.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Indiana University Press mss. II, ca. 1950-1969, consists of the office and
+                correspondence files of the press from its establishment in 1950. The Author series
+                contains mostly correspondence with or about authors and concerning specific books,
+                though a few files are listed by book project. Other materials in the collection
+                include correspondence with sales distributors, publisher representatives and
+                salesmen. The overall arrangement is as it was maintained at the press offices.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/indiana+university+press{su}">
+                            <corpname encodinganalog="110" source="lcnaf">Indiana University. Press.
+                            </corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/indiana+university+press{su}">
+                            <corpname encodinganalog="610" source="lcnaf">Indiana University.
+                                Press--Correspondence. </corpname>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/university+press+publications{su}">
+                            <subject encodinganalog="650" source="lcnaf">University press
+                                publications. </subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/university+presses+correspondence{su}">
+                            <subject encodinganalog="650" source="lcnaf">University
+                                presses--Correspondence. </subject>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+        </controlaccess>
+
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 1976</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>Indiana University Press mss. II, Lilly Library, Indiana University, Bloomington,
+                    Indiana.</p>
+            </prefercite>
+
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAB8976-00001" level="series">
+                <did>
+                    <!-- optional -->
+                    <container label="Box" type="box">1</container>
+
+
+                    <unittitle>I. Correspondence</unittitle>
+
+
+                </did>
+                <arrangement>
+                    <p>Arranged alphabetically by author, followed by several miscellaneous files
+                        and a chronological section mostly concerning rejected books.</p>
+                </arrangement>
+                <c02 id="VAB8976-00002" level="file">
+                    <did>
+                        <unittitle>A - Bi</unittitle>
+                    </did>
+                    <scopecontent>
+                        <p>Complete list of names: <list>
+                                <item>A.F.A. [Andrew Field?] Translation of Fyodor Sologub</item>
+                                <item>Abbe, George</item>
+                                <item>Abcarian, Gilbert</item>
+                                <item>Adams, Elsie B.</item>
+                                <item>Ade, George</item>
+                                <item>Africa, Thomas</item>
+                                <item>Agnew, Allen F.</item>
+                                <item>Akheiser &amp; Berestetsky</item>
+                                <item>Aldridge, Alfred Owen</item>
+                                <item>Aldridge, John W.</item>
+                                <item>Alexander, Samuel</item>
+                                <item>Alford, John (2 folders)</item>
+                                <item>Allee, Alfred H.</item>
+                                <item>Allen, David</item>
+                                <item>Allen, Gay Wilson</item>
+                                <item>Allen, H.C.</item>
+                                <item>Allen, John E.</item>
+                                <item>Alpern, Hymen</item>
+                                <item>Altick, Richard D.</item>
+                                <item>American Association on Mental Deficiency</item>
+                                <item>American Philosophical Society Proceedings <date normal="1964"
+                                        >1964</date></item>
+                                <item>The American Scholar</item>
+                                <item>Ames, Bernice</item>
+                                <item>Ames, Blanche (Mrs. Oakes Ames)</item>
+                                <item>Anders, Gunther</item>
+                                <item>Anderson, David D.</item>
+                                <item>Anderson, James B.</item>
+                                <item>Anderson, Lee</item>
+                                <item>Anderson, Nels</item>
+                                <item>Anderson, Patricia E.</item>
+                                <item>Anderson, Sherwood</item>
+                                <item>Anderson, Thornton</item>
+                                <item>Andrew, Warren</item>
+                                <item>Andrieux, Maurice</item>
+                                <item>Angeles, Philip</item>
+                                <item>Angus, Sylvia (Mrs. Douglas Angus)</item>
+                                <item>Antal, László</item>
+                                <item>Apel, David</item>
+                                <item>Appel, Benjamin</item>
+                                <item>Arasteh, Reza</item>
+                                <item>Arico, Victor</item>
+                                <item>Arling, Emanie</item>
+                                <item>Arnott. Peter D.</item>
+                                <item>Aronson, Michael A.</item>
+                                <item>Ashbrook, William S.</item>
+                                <item>Ashby, Eric</item>
+                                <item>Asia Society (2 folders)</item>
+                                <item>Asian Classics</item>
+                                <item>Atcheson, Richard</item>
+                                <item>Atkinson, James D.</item>
+                                <item>Atomic Energy-Peacetime Uses</item>
+                                <item>Ault, Verlyn</item>
+                                <item>Babb, Howard S.</item>
+                                <item>Baer, Frank</item>
+                                <item>Baer, Mabel Van Dyke</item>
+                                <item>Bailey, Hugh C.</item>
+                                <item>Bailey, Liberty Hyde</item>
+                                <item>Baker, Lon S.</item>
+                                <item>Baker, Sheridan</item>
+                                <item>Baker, William E.</item>
+                                <item>Baney, Ralph E.</item>
+                                <item>Banks, J.A.</item>
+                                <item>Banta, Richard E.</item>
+                                <item>Bantock, G.H.</item>
+                                <item>Bar-Adon, Aaron</item>
+                                <item>Barden, John</item>
+                                <item>Barlach, Ernst</item>
+                                <item>Barnard, Mary</item>
+                                <item>Barnouw, Adriaan J.</item>
+                                <item>Barnstone, Willis</item>
+                                <item>Barrett, David</item>
+                                <item>Barrett, E.W.</item>
+                                <item>Barthell, Edward E., Jr. (2 folders)</item>
+                                <item>Barton, Walter E.</item>
+                                <item>Barzel, Hillel</item>
+                                <item>Basler, Roy P.</item>
+                                <item>Baudin, Maurice</item>
+                                <item>Baumrin, Bernard H.</item>
+                                <item>Baxter, Maurice</item>
+                                <item>Bayne, David C., S.J.</item>
+                                <item>Bayne, E.A.</item>
+                                <item>Bazell, Catford</item>
+                                <item>Beard, James F.</item>
+                                <item>Becker, Carl L.</item>
+                                <item>Beckett, Samuel (see: UNESCO)</item>
+                                <item>Beloff, Max</item>
+                                <item>Bemis, Samuel F.</item>
+                                <item>Benes, Vaclav</item>
+                                <item>Benjamin, Anna S.</item>
+                                <item>Bennett, James V.</item>
+                                <item>Bennett, Mildred R.</item>
+                                <item>Bennett, Wilma</item>
+                                <item>Benoit, Emile</item>
+                                <item>Bentwich, Norman</item>
+                                <item>Berenson, Bernard</item>
+                                <item>Berezin, F.A.</item>
+                                <item>Bergler, Edmund and A.M. Merloo</item>
+                                <item>Berkman, Aaron</item>
+                                <item>Berland, Alwyn</item>
+                                <item>Berman, Ronald</item>
+                                <item>Berndt, Ronald &amp; Catherine</item>
+                                <item>Bernstein, Bart</item>
+                                <item>Bernstein, J.L. (2 folders)</item>
+                                <item>Bernstein, Lotte K.</item>
+                                <item>Bernstein, Meyer</item>
+                                <item>Berry, Jack</item>
+                                <item>Besterman, Theodore (3 folders)</item>
+                                <item>Bharati, A.</item>
+                                <item>Bibliotheca Linguistica</item>
+                                <item>Bidney, David</item>
+                                <item>Bird, Charles</item>
+                                <item>Bird Song Project</item>
+                                <item>Bishop, Jonathan</item>
+                                <item>Bittner, William</item>
+
+                            </list>
+                        </p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAB8976-00003" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>Bk - Ck</unittitle>
+                    </did>
+                    <scopecontent>
+                        <p> Complete list of names: <list>
+                                <item>Black, John</item>
+                                <item>Blake, I. George</item>
+                                <item>Blake, Eugene Carson</item>
+                                <item>Blakiston, Noel</item>
+                                <item>Blanch, Robert J.</item>
+                                <item>Blankner, Frederika</item>
+                                <item>Blend, Charles D.</item>
+                                <item>Blinderman, Charles</item>
+                                <item>Blow, J.H.</item>
+                                <item>Blumenthal, Walter H.</item>
+                                <item>Bode, Carl</item>
+                                <item>Bolitho, Hector</item>
+                                <item>Bolton, Charles D.</item>
+                                <item>Bond, Walden Garratt</item>
+                                <item>Bondurant, Stuart M.D.</item>
+                                <item>Bontemps, Arna</item>
+                                <item>Book of Snobs</item>
+                                <item>Booth, Bradford A.</item>
+                                <item>Borecky, V.P.</item>
+                                <item>Borgese, Elizabeth Mann</item>
+                                <item>Borkenstein, Robert F.</item>
+                                <item>Born, Max</item>
+                                <item>Borneman, Ernest</item>
+                                <item>Bossism Series</item>
+                                <item>Bourgholtzer, Frank</item>
+                                <item>Bouscaren, Anthony T.</item>
+                                <item>Bowen, J.C.E.</item>
+                                <item>Bowen, James</item>
+                                <item>Bowling, Lawrence</item>
+                                <item>Bowman, Sylvia E.</item>
+                                <item>Bracher, K.D.</item>
+                                <item>Bracker, Jon</item>
+                                <item>Bradford, Curtis B.</item>
+                                <item>Bradley, Chester D.</item>
+                                <item>Brand, Lester</item>
+                                <item>Brandon, William</item>
+                                <item>Brandt, Willy</item>
+                                <item>Brann, C. Gerald</item>
+                                <item>Brau, Stanley</item>
+                                <item>Brendel, Otto J.</item>
+                                <item>Brians, Paul</item>
+                                <item>Briggs, G. Wright, Jr.</item>
+                                <item>Bristol, Marie</item>
+                                <item>Broadbent, J.B.</item>
+                                <item>Brodine, Virginia</item>
+                                <item>Bronowski, J.</item>
+                                <item>Brooks, Cleanth</item>
+                                <item>Brooks, Lester J.</item>
+                                <item>Brown, Guy</item>
+                                <item>Brown, Herbert</item>
+                                <item>Brown, John Russell</item>
+                                <item>Brown, Mary J.</item>
+                                <item>Brown, Norman O.</item>
+                                <item>Brown, Peter O.</item>
+                                <item>Browne, Ray</item>
+                                <item>Browne, Ray B.</item>
+                                <item>Brumfield, Mary</item>
+                                <item>Bruyn, Kathleen</item>
+                                <item>Bryan, W.L.</item>
+                                <item>Bryant, William C.</item>
+                                <item>Buchan, John</item>
+                                <item>Buchanan, Keith</item>
+                                <item>Buehne, Sheema Z.</item>
+                                <item>Bühler, Karl</item>
+                                <item>Bunker, Robert</item>
+                                <item>Burlingame, Michael</item>
+                                <item>Burn, A.R.</item>
+                                <item>Bursill-Hall, D.M.</item>
+                                <item>Burt, David</item>
+                                <item>Burton, Robert A.</item>
+                                <item>Bush, Oakleigh Ross</item>
+                                <item>Butwell, Richard</item>
+                                <item>Buzzell, Mary L.</item>
+                                <item>Byrnes, Robert F.</item>
+                                <item>C Misc. Declined</item>
+                                <item>Cady, Edwin</item>
+                                <item>Caldwell, Lynton K.</item>
+                                <item>Camara, J. Mattoso</item>
+                                <item>Cameron, Elizabeth</item>
+                                <item>Cameron, J.M.</item>
+                                <item>Cammarosano, Joseph R.</item>
+                                <item>Campbell, John C.</item>
+                                <item>Cannon, Walter F.</item>
+                                <item>Capel, Lee</item>
+                                <item>Capers, Gerald</item>
+                                <item>Captive Cities</item>
+                                <item>Carey, Glenn O.</item>
+                                <item>Carlson, Helen</item>
+                                <item>Carne-Ross, D.S.</item>
+                                <item>Caroline, Nancy L.</item>
+                                <item>Carpenter, John</item>
+                                <item>Carrington, Charles</item>
+                                <item>Carruth, Hayden</item>
+                                <item>Carter, Burnham</item>
+                                <item>Carter, George F.</item>
+                                <item>Casper, Leonard</item>
+                                <item>Cassill, R.V.</item>
+                                <item>Cassirer, Ernst</item>
+                                <item>Cervenka, Edward John</item>
+                                <item>Chalmers, Olivia</item>
+                                <item>Champigny, Robert</item>
+                                <item>Chappelear, Nancy</item>
+                                <item>Charter, S.P.R.</item>
+                                <item>Chesneaux, Jean</item>
+                                <item>Chesterton, D.K.</item>
+                                <item>Childs, J. Rives</item>
+                                <item>Chisholm, William S.</item>
+                                <item>Chomsky, Noam</item>
+                                <item>Choron, Jacques</item>
+                                <item>Christensen, Erwin O.</item>
+                                <item>Christman, Henry M.</item>
+                                <item>Christoph, James</item>
+                                <item>Ciardi, John</item>
+                                <item>Cioran, Samuel D. (2 folders)</item>
+                                <item>Civil War Round Table</item>
+
+                            </list>
+                        </p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAB8976-00004" level="file">
+                    <did>
+                        <container label="Box" type="box">3</container>
+                        <unittitle>Cl - Em</unittitle>
+                    </did>
+                    <scopecontent>
+                        <p> Complete list of names: <list>
+                                <item>Clack, Robert Wood</item>
+                                <item>Clark, John Abbot</item>
+                                <item>Clark, John C., Jr.</item>
+                                <item>Clark, R.T.</item>
+                                <item>Clarvoe, Frank A.</item>
+                                <item>Classen, Hans George</item>
+                                <item>Clayton, A. Stafford</item>
+                                <item>Claytor, Gertrude</item>
+                                <item>Clecak, Peter</item>
+                                <item>Cleland, Robert</item>
+                                <item>Clough, Wilson O.</item>
+                                <item>Coffey, Brian</item>
+                                <item>Cohen, Carl</item>
+                                <item>Cohen, J.M. (John Michael)</item>
+                                <item>Cohen, Morton N.</item>
+                                <item>Cohen, William H.</item>
+                                <item>Colbourn, H. Trevor</item>
+                                <item>Collins, Christopher</item>
+                                <item>Comer, Irene Forsyth</item>
+                                <item>Comfort, Alex</item>
+                                <item>Commager, Henry Steele</item>
+                                <item>Consolo, Dominick P.</item>
+                                <item>Cook, Peggy</item>
+                                <item>Coolidge, Archibald C., Jr.</item>
+                                <item>Cooper, George William</item>
+                                <item>Cormier, Raymond J.</item>
+                                <item>Coulborn, Rushborn</item>
+                                <item>Coulter, Eliot B.</item>
+                                <item>Cournos, John</item>
+                                <item>Cox, Arthur</item>
+                                <item>Cox, Edward F.</item>
+                                <item>Cox, James M.</item>
+                                <item>Cox, James W.</item>
+                                <item>Cox, Lee Sheridan</item>
+                                <item>Crandall, Andrew W.</item>
+                                <item>Crane [, Stephen] Definitive Edition</item>
+                                <item>Crane, Harriet Capel</item>
+                                <item>Crane, Ralph W.</item>
+                                <item>Cray, Myrtle</item>
+                                <item>Creative Mind Method</item>
+                                <item>Crehan, Herbert</item>
+                                <item>Creighton, Helen</item>
+                                <item>Crittenden, John A.</item>
+                                <item>Croce, Alda</item>
+                                <item>Crosby, Alfred W., Jr.</item>
+                                <item>Crowther, J.G.</item>
+                                <item>Culmsee, Carlton</item>
+                                <item>Curti, Merle</item>
+                                <item>Cvetanovski, Save</item>
+                                <item>Dabney, R.L. Daiches, David</item>
+                                <item>Dance, E.H.</item>
+                                <item>Dane, Nathan</item>
+                                <item>Daneman, Bette</item>
+                                <item>Danich, Glyn</item>
+                                <item>Dathorne, O. Ronald</item>
+                                <item>Dauner, Louise</item>
+                                <item>Davidson, Eeuene</item>
+                                <item>Davidson, Mabel E.</item>
+                                <item>Davis, Curtis Carroll</item>
+                                <item>Davis, George E.</item>
+                                <item>Davis, Joe Lee</item>
+                                <item>Dawson, Francis, W.</item>
+                                <item>Dawson, Raymond</item>
+                                <item>Day, Warden</item>
+                                <item>Deak, Étienne and Simone</item>
+                                <item>Dean, Joel</item>
+                                <item>Dearth, Nona</item>
+                                <item>De Belie, A.</item>
+                                <item>Decker, Robert Daniel</item>
+                                <item>DeConde, Alex</item>
+                                <item>DeForest, John William</item>
+                                <item>DeGroat, Albert</item>
+                                <item>Degruyter, Julius</item>
+                                <item>DeJean, Edgar K.</item>
+                                <item>Delange, Jacquesline</item>
+                                <item>Deleeuw, Margaret</item>
+                                <item>Demos, John P.</item>
+                                <item>Deneau, Daniel P.</item>
+                                <item>De Visé, Pierre</item>
+                                <item>Dhingra, Baldoon</item>
+                                <item>Dick, Claribel</item>
+                                <item>Dickason, David H.</item>
+                                <item>Diekhoff, John S.</item>
+                                <item>Di Giovanni, Norman Thomas</item>
+                                <item>Dillon, George</item>
+                                <item>Dirac, P.A.M.</item>
+                                <item>Dixon, Robert G.</item>
+                                <item>Dixon, Robert M.W.</item>
+                                <item>Dobzhansky, Theodosius</item>
+                                <item>Donaldy, Ernestine (Mrs. William J. Donaldy)</item>
+                                <item>Donham, Ralph A.</item>
+                                <item>Donner, Jörn</item>
+                                <item>Dorson, Richard</item>
+                                <item>Doty, James E.</item>
+                                <item>Douglass, Elisha P.</item>
+                                <item>Douglass, Paul</item>
+                                <item>Downey, Fairfax</item>
+                                <item>Doyle, Harrison</item>
+                                <item>Dreiser, Theodore</item>
+                                <item>DuCann, C.G.L.</item>
+                                <item>Duckham, A.N.</item>
+                                <item>Duke, Francis</item>
+                                <item>Duncan, Hugh D.</item>
+                                <item>Dunn, Ethel (Mrs. Stephen P. Dunn)</item>
+                                <item>Dunning, Charles H.</item>
+                                <item>Durgin, Frank A., Jr.</item>
+                                <item>Durkin, Joseph T.</item>
+                                <item>East, C. Earl</item>
+                                <item>Eaton, Charles Edward</item>
+                                <item>Eaton, Walter H.</item>
+                                <item>Economics Forum <date normal="1964">1964</date></item>
+                                <item>Edel, Leon</item>
+                                <item>Edgerton, William B.</item>
+                                <item>Edwards, Corwin D.</item>
+                                <item>Edwards, Lawrence</item>
+                                <item>Egerton, Genevieve</item>
+                                <item>Ehrenpreis, Irvin</item>
+                                <item>Eiseley, Loren</item>
+                                <item>Elam, Stanley (2 folders)</item>
+                                <item>Elek Classics Project</item>
+                                <item>Elias, Robert</item>
+                                <item>Eliasberg, W.G.</item>
+                                <item>Elkin, Stanley</item>
+                                <item>Ellman, Richard</item>
+                                <item>Ellsworth, Ralph E.</item>
+                                <item>Elman, Richard</item>
+                                <item>Elsen, Albert</item>
+
+                            </list>
+                        </p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAB8976-00005" level="file">
+                    <did>
+                        <container label="Box" type="box">4</container>
+                        <unittitle>En - G</unittitle>
+                    </did>
+                    <scopecontent>
+                        <p> Complete list of names: <list>
+                                <item>Engelberg, Edward</item>
+                                <item>England, Martha W.</item>
+                                <item>Eoff, Sherman</item>
+                                <item>Ericksen, E. Gordon</item>
+                                <item>Ernst, Morris L.</item>
+                                <item>Ettlinger, John R. Turner</item>
+                                <item>Evans, B. Ifor</item>
+                                <item>Evans, J.A.S.</item>
+                                <item>Ewing, A.C.</item>
+                                <item>Ezra, Bernice H.</item>
+                                <item>Faaland, Just</item>
+                                <item>Fagles, Robert</item>
+                                <item>Fair, C.M.</item>
+                                <item>Fairbank, John K.</item>
+                                <item>Farah, Caesar E.</item>
+                                <item>Farrell, James T.</item>
+                                <item>Feibleman, James K.</item>
+                                <item>Feinberg, Leonard</item>
+                                <item>Feinsilver, Alexander</item>
+                                <item>Felix, Herbert</item>
+                                <item>Fenn, Dan Huntington</item>
+                                <item>Ferrari, Robert</item>
+                                <item>Ferrell, Robert (3 folders)</item>
+                                <item>Ferrier, E. Eloise</item>
+                                <item>Fetscher, Iring</item>
+                                <item>Field, Oliver P.</item>
+                                <item>Fielder, Mildred (Mrs. Ronald Fielder)</item>
+                                <item>Fink, Carolyn J.</item>
+                                <item>Fink, Zera S.</item>
+                                <item>Fisch, Max H.</item>
+                                <item>Fish, Stanley</item>
+                                <item>Fisher, Horace Cecil</item>
+                                <item>Fisher, James</item>
+                                <item>Fisher, John Hurt</item>
+                                <item>Fisher, Vardis</item>
+                                <item>Fishwick, Marshall W.</item>
+                                <item>FitzGibbon, Constantine</item>
+                                <item>Flanders, Helen</item>
+                                <item>Fleet, Betsy M.</item>
+                                <item>Fleisher, Frederic</item>
+                                <item>Fles, Barthold</item>
+                                <item>Flexner, Eleanor</item>
+                                <item>Flynn, James R.</item>
+                                <item>Foerster, Norman</item>
+                                <item>Folger Shakespeare Library Reports</item>
+                                <item>Fonagy, Ivan</item>
+                                <item>Forbes, Henry W.</item>
+                                <item>Ford, Harvey S.</item>
+                                <item>Ford, Hugh D.</item>
+                                <item>Ford, Nick Aaron</item>
+                                <item>Ford, Phyllis</item>
+                                <item>Forker, Charles R.</item>
+                                <item>Foster, Charles H.</item>
+                                <item>Foster, John W.</item>
+                                <item>Foster, Richard</item>
+                                <item>Fowler, Kenneth</item>
+                                <item>Fowlie, Wallace</item>
+                                <item>Foxe, John</item>
+                                <item>Fraenkel, Gerd</item>
+                                <item>Frank, Bernhard</item>
+                                <item>Frank, Waldo David</item>
+                                <item>Frankfort, Herman</item>
+                                <item>Frankfurter, Felix</item>
+                                <item>Frank-Kamenetskiy, D.A.</item>
+                                <item>Franklin, John Hope</item>
+                                <item>Frantz, Donald H., Jr.</item>
+                                <item>Fraser, J.T.</item>
+                                <item>Freedman, Warren</item>
+                                <item>Freeman, Jo</item>
+                                <item>Freeman, John N.</item>
+                                <item>Freeman, Orville</item>
+                                <item>French, Bryant M.</item>
+                                <item>French, Herbert</item>
+                                <item>Friedman, Lionel J.</item>
+                                <item>Friedman, Melvin J.</item>
+                                <item>Friedman, Samuel A.</item>
+                                <item>Friedrich, Hugo</item>
+                                <item>Froméh, Ethel</item>
+                                <item>Frost, W.E.</item>
+                                <item>Frye, Northrop</item>
+                                <item>Fuchs, Daniel</item>
+                                <item>Fuerst, Norbert</item>
+                                <item>Fuller, R. Buckminster</item>
+                                <item>Furness, Edna L.</item>
+                                <item>G Misc. Declined</item>
+                                <item>Gagnon, Simon</item>
+                                <item>Galway, Geoffrey</item>
+                                <item>Gardiner, C. Harvey</item>
+                                <item>Gardner, Burdett</item>
+                                <item>Gardner, Martin</item>
+                                <item>Garelick, Herbert</item>
+                                <item>Garrigue, Jean</item>
+                                <item>Garvin, Paul L.</item>
+                                <item>Gascoigne, Bamber</item>
+                                <item>Gay, Mary A.H.</item>
+                                <item>Gebhard, Paul H.</item>
+                                <item>Geduld, Harry</item>
+                                <item>Gentry, Dwight</item>
+                                <item>Gerking, Shelby D.</item>
+                                <item>Getman, Julius</item>
+                                <item>Gianakos, Perry E.</item>
+                                <item>Gibson, Donald B.</item>
+                                <item>Gilkes, Lillian</item>
+                                <item>Ginsberg, Louis</item>
+                                <item>Gipsy Wharf</item>
+                                <item>Girdlestone, Cuthbert</item>
+                                <item>Gissing, A.C.</item>
+                                <item>Glanville, R.J.B.</item>
+                                <item>Gleason, Henry A., Jr.</item>
+                                <item>Gliksman, Jerzy</item>
+                                <item>Glueck, Marguerite V.</item>
+                                <item>Godan, Prem Chand</item>
+                                <item>Goethe's Farbenlehre</item>
+                                <item>Goldberg, S.L.</item>
+                                <item>Goldstein, Melvin L.</item>
+                                <item>Golffing, Francis</item>
+                                <item>Gordon, Lois G.</item>
+                                <item>Gore, Lillian</item>
+                                <item>Gorman, Warren</item>
+                                <item>Graf, Herbert</item>
+                                <item>Gram, Moltke S.</item>
+                                <item>Granick, David</item>
+                                <item>Grant, Helen Hardie (Mrs. Frederick C.)</item>
+                                <item>Grant, Joanne</item>
+                                <item>Grant, Ulysses S</item>
+                                <item>Green, Billie</item>
+                                <item>Green, Gladys B.</item>
+                                <item>Green, Peter</item>
+                                <item>Greenhood, David</item>
+                                <item>Greet, Anne Hyde</item>
+                                <item>Gregor, Ian</item>
+                                <item>Gregor, Ulrich and Enno Patalas</item>
+                                <item>Gregory, V.J.</item>
+                                <item>Greimas, A.J.</item>
+                                <item>Grella, George</item>
+                                <item>Griffin, Bulkley</item>
+                                <item>Grimshaw, Allen</item>
+                                <item>Grinnell-Milne, Duncan</item>
+                                <item>Grodner, Murray</item>
+                                <item>Grossman, Reinhardt</item>
+                                <item>Grubb, Frederick</item>
+                                <item>Guenther, Charles</item>
+                                <item>Guerin, Andre</item>
+                                <item>Guerrero, D. Leon Ma</item>
+                                <item>Guibert of Nogent</item>
+                                <item>Guiraud, Pierre</item>
+                                <item>Gunden, Lois Mary</item>
+                                <item>Gustin, Molly</item>
+
+                            </list>
+                        </p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAB8976-00006" level="file">
+                    <did>
+                        <container label="Box" type="box">5</container>
+                        <unittitle>H - I</unittitle>
+                    </did>
+                    <scopecontent>
+                        <p> Complete list of names: <list>
+                                <item>H Misc. Declined</item>
+                                <item>Hadas, Moses</item>
+                                <item>Hall, David</item>
+                                <item>Hall, Louis B.</item>
+                                <item>Halliday, Frank E.</item>
+                                <item>Halperin, Irving</item>
+                                <item>Halpern, Manfred</item>
+                                <item>Halpern, Martin</item>
+                                <item>Hamblen, James</item>
+                                <item>Hammen, Oscar J.</item>
+                                <item>Hammer, Darrell P.</item>
+                                <item>Hancher, Virgil</item>
+                                <item>Hanchett, William</item>
+                                <item>Hancock, Ralph</item>
+                                <item>Handbook of Aboriginal American Antiquities</item>
+                                <item>Hanessian, John Jr.</item>
+                                <item>Hanke, Lewis</item>
+                                <item>Hanna, Suhail ibn-Salim</item>
+                                <item>Hanson, Henry</item>
+                                <item>Hanson, Norwood Russell</item>
+                                <item>Hapgood, Charles</item>
+                                <item>Hare, Richard</item>
+                                <item>Harrington, Alan</item>
+                                <item>Harris, Val</item>
+                                <item>Hart, Charles R.</item>
+                                <item>Hart, Clive</item>
+                                <item>Hart, Hornell</item>
+                                <item>Haskins, Dr. Caryl P.</item>
+                                <item>Haskins, Charles Homer</item>
+                                <item>Hass, Wilbur A.</item>
+                                <item>Hathaway, Baxter</item>
+                                <item>Hathorn, Richmond Y.</item>
+                                <item>Haugen, Einar</item>
+                                <item>Hauptmann, Gerhart</item>
+                                <item>Havighurst, Walter</item>
+                                <item>Hawgood, John A.</item>
+                                <item>Hayter, Alethea</item>
+                                <item>Haywood, Charles</item>
+                                <item>Hearle, Ed and Raymond Mason</item>
+                                <item>Hediger, H.</item>
+                                <item>Heffernan, John B.</item>
+                                <item>Hefner, Hugh</item>
+                                <item>Heilbroner, Robert L.</item>
+                                <item>Heiser, Charles B.</item>
+                                <item>Heller, Erich</item>
+                                <item>Hemphill, George</item>
+                                <item>Hendrick, Burton J.</item>
+                                <item>Henig, Suzanne</item>
+                                <item>Henley, Norman</item>
+                                <item>Henry, Jules</item>
+                                <item>Hentoff, Nat</item>
+                                <item>Hergesheimer, Joseph</item>
+                                <item>Hermann and Co.</item>
+                                <item>Hernandez, David</item>
+                                <item>Herrnstadt, Richard L.</item>
+                                <item>Hessenstan, Peter</item>
+                                <item>Hicks, J.R.</item>
+                                <item>Higginson, Thomas W.</item>
+                                <item>Hill, Jim Dan</item>
+                                <item>Hill and Wang, Inc.</item>
+                                <item>Hirschman, Jack</item>
+                                <item>Hirshson, Stanley P.</item>
+                                <item>Hispanic Arts Journal</item>
+                                <item>History of American Life Series</item>
+                                <item>Hiz, Henry</item>
+                                <item>Hlavaty, Vaclav</item>
+                                <item>Hoblitzelle, Harrison</item>
+                                <item>Hocking, William Ernest</item>
+                                <item>Hoffman, Daniel</item>
+                                <item>Hoffman, Horace Addison</item>
+                                <item>Hohenberger, Frank</item>
+                                <item>Hole, Christina</item>
+                                <item>Holland, Norman N.</item>
+                                <item>Hollander, John</item>
+                                <item>Holloway, John</item>
+                                <item>Holmes, W.H.</item>
+                                <item>Holst, Imogen</item>
+                                <item>Honig, Edwin</item>
+                                <item>Hornick, Lita</item>
+                                <item>Horowitz, Irving Louis</item>
+                                <item>Horsman, Reginald</item>
+                                <item>Houghton, Herbert P.</item>
+                                <item>Howe, Leroy T.</item>
+                                <item>Hughes, Langston</item>
+                                <item>Hull, David</item>
+                                <item>Hull, Denison B.</item>
+                                <item>Hull, Margaret Latham</item>
+                                <item>Hull, William</item>
+                                <item>Humphries, Rolfe</item>
+                                <item>Hurley, G.V.</item>
+                                <item>Husain, Itrat</item>
+                                <item>Husserl, Edmund</item>
+                                <item>Huston, James A.</item>
+                                <item>Huxley, George L.</item>
+                                <item>Hynes, H.B.N.</item>
+                                <item>Ickes, Jane D. (Mrs. Harold L. Ickes)</item>
+                                <item>Iezzi, Frank</item>
+                                <item>Iggers, George G.</item>
+                                <item>Indiana Classics series</item>
+                                <item>Indiana history - junior high school</item>
+                                <item>Indiana Portfolios of Photography</item>
+                                <item>Indiana Projects</item>
+                                <item>Inlow, William De Prez</item>
+                                <item>Insecticide Project</item>
+                                <item>International Institute for Comparative Music Studies</item>
+                                <item>Iordan, Iorgu (2 folders)</item>
+                                <item>Isaacs, Elizabeth</item>
+
+                            </list>
+                        </p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAB8976-00007" level="file">
+                    <did>
+                        <container label="Box" type="box">6</container>
+                        <unittitle>J - Leh</unittitle>
+                    </did>
+                    <scopecontent>
+                        <p> Complete list of names: <list>
+                                <item>J Misc. Declined</item>
+                                <item>Jack, Homer A. (2 folders)</item>
+                                <item>Jackman, S.W.</item>
+                                <item>Jackson, Charles W.</item>
+                                <item>Jackson, Donald D.</item>
+                                <item>Jackson, George F.</item>
+                                <item>Jacobson, George Hartvig and William Ennis Thomson</item>
+                                <item>Jager, Ronald</item>
+                                <item>Jasny, Naum</item>
+                                <item>Jay, Louisa Barlow (Mrs. Pierre Jay)</item>
+                                <item>Jefferson, D.W.</item>
+                                <item>Jenner, Ernest</item>
+                                <item>Jensen, Oliver</item>
+                                <item>Jent, H. Clay</item>
+                                <item>Jerome, Judson</item>
+                                <item>Jespersen, Otto</item>
+                                <item>Jobes, Gertrude</item>
+                                <item>Johnson, Francis R.</item>
+                                <item>Johnson, Geoffrey</item>
+                                <item>Johnson, Hollis R. and Peery, Benjamin F.</item>
+                                <item>Johnson, Jean</item>
+                                <item>Johnson, Jocelyn Ida</item>
+                                <item>Jones, John A.</item>
+                                <item>Jones, I. Rhys</item>
+                                <item>Jones, Klaus W.</item>
+                                <item>Jones, Peter D'A.</item>
+                                <item>Jones, Robert L., Jr.</item>
+                                <item>Jones, W.R.</item>
+                                <item>Jones, Willis Knapp</item>
+                                <item>Jordan, Nehemiah</item>
+                                <item>Joseph, Stephen</item>
+                                <item>Josey, Charles C.</item>
+                                <item>Journal of the West</item>
+                                <item>Juergensmeyer, Jane</item>
+                                <item>K Misc. Declined</item>
+                                <item>Kadic, Ante</item>
+                                <item>Kallen, Horace M.</item>
+                                <item>Kallich, Martin</item>
+                                <item>Kalow, Gert</item>
+                                <item>
+                                    <emph render="doublequote">Kamba Ramayana</emph>
+                                </item>
+                                <item>Kamentsky, Ihor</item>
+                                <item>Kaminsky, Jack and Harry B. Lincoln</item>
+                                <item>Kamke, Erich</item>
+                                <item>Kampa, George</item>
+                                <item>Kanya, Joseph R.</item>
+                                <item>Kaufman, Arnold S.</item>
+                                <item>Kaufman, Walter</item>
+                                <item>Kayden, Eugene M.</item>
+                                <item>Keeley, Edmund and Philip Sherrard</item>
+                                <item>Keenan, Boyd R.</item>
+                                <item>Kees, Weldon</item>
+                                <item>Keller, William F.</item>
+                                <item>Kelley, S.J.</item>
+                                <item>Kellogg, Rhoda B.</item>
+                                <item>Kelly, Fred Charters</item>
+                                <item>Kempf, Edward J.</item>
+                                <item>Kendall, Willmore</item>
+                                <item>Khouri, Fred J.</item>
+                                <item>Kibbe, Pauline R.</item>
+                                <item>Kilgore, William J.</item>
+                                <item>Killigrew, John W.</item>
+                                <item>Kimball, Gussie</item>
+                                <item>Kimball, Stanley Buchholz</item>
+                                <item>Kimbrough, Sara Dodge</item>
+                                <item>Kimpel, Ben (2 folders)</item>
+                                <item>Kirby, Thomas A.</item>
+                                <item>Kirk, Rudolf</item>
+                                <item>Kirkendall, Lester A.</item>
+                                <item>Kisch, Sir Cecil</item>
+                                <item>Klein, George</item>
+                                <item>Kliewer, Warren</item>
+                                <item>Klose, Nelson</item>
+                                <item>Klotzer, Charles L.</item>
+                                <item>Knepper, George W.</item>
+                                <item>Knox, Rawle</item>
+                                <item>Koch, Vivienne</item>
+                                <item>Kökeritz, Helge</item>
+                                <item>Kopal, Zdenek</item>
+                                <item>Kolenda, Konstantin</item>
+                                <item>Kosambi, D.D.</item>
+                                <item>Koshland, Miriam</item>
+                                <item>Koutsoudas, Andreas</item>
+                                <item>Kramer, Eugene</item>
+                                <item>Kraus, Sidney</item>
+                                <item>Kreusler, Abraham</item>
+                                <item>Kroll, Ernest</item>
+                                <item>Kromer, Arial</item>
+                                <item>Kroner, Richard</item>
+                                <item>Krug, Mark M.</item>
+                                <item>Krylov's Fables</item>
+                                <item>Kuhn, Reinhard</item>
+                                <item>L Misc. Declined</item>
+                                <item>Laing, Alexander</item>
+                                <item>Lall, Helen Chaman</item>
+                                <item>Lamb, Sidney</item>
+                                <item>Lambert, R.J.</item>
+                                <item>Lambert, Wallace E.</item>
+                                <item>Lamont, Helen Lamb</item>
+                                <item>Lamont, William H.F.</item>
+                                <item>Lancaster, Clay</item>
+                                <item>Landau, Sara</item>
+                                <item>Langer, Susanne</item>
+                                <item>Landsberg, Melvin</item>
+                                <item>Lark-Horovitz, Betty</item>
+                                <item>Larson, Cedric A.</item>
+                                <item>Law, Glen C.</item>
+                                <item>Lawrence, D.H.</item>
+                                <item>Lawlis, Merritt</item>
+                                <item>Leach, Barry</item>
+                                <item>Leach, Henry Goddard</item>
+                                <item>Leach, Nancy R. (Mrs. MacEdward Leach)</item>
+                                <item>Leary, Paris</item>
+                                <item>Leaves of Chess</item>
+                                <item>Leavis, Queenie Dorothy</item>
+                                <item>Leblanc, Hugues (2 folders)</item>
+                                <item>Lee, Alfred McClung</item>
+                                <item>Lee, Perlette</item>
+                                <item>Leech, Geoffrey N.</item>
+                                <item>LeFevre, Louis</item>
+                                <item>Lefranc, Pierre</item>
+                                <item>Lehman, Harry</item>
+                                <item>Lehmann, W.P. and Rolf A. Stachowitz</item>
+
+                            </list>
+                        </p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAB8976-00008" level="file">
+                    <did>
+                        <container label="Box" type="box">7</container>
+                        <unittitle>Lei - Mh</unittitle>
+                    </did>
+                    <scopecontent>
+                        <p> Complete list of names: <list>
+                                <item>Leites, Bernard</item>
+                                <item>Lens, Sidney (2 folders)</item>
+                                <item>Leonard, Chilson H.</item>
+                                <item>Leopold, Aldo</item>
+                                <item>LeRoy, Gaylord Clark</item>
+                                <item>Levart, Herman H.</item>
+                                <item>Levin, David</item>
+                                <item>Levine, Edwin B.</item>
+                                <item>Levine, Stuart</item>
+                                <item>Levinson, Ronald B.</item>
+                                <item>Levi-Strauss, Claude</item>
+                                <item>Levy, Alan</item>
+                                <item>Levy, William Turner (2 folders)</item>
+                                <item>Lewis, Alfred Henry</item>
+                                <item>Lewis, Charles Lee</item>
+                                <item>Lewis, Montgomery S.</item>
+                                <item>Library of Education</item>
+                                <item>Lid, Richard W.</item>
+                                <item>Liddell, Katharine</item>
+                                <item>Lieberson, Stanley</item>
+                                <item>Liell, John</item>
+                                <item>Light, Robert E.</item>
+                                <item>Lind, L.R.</item>
+                                <item>Linderstr?-Lang, Kaj Ulrik</item>
+                                <item>Lindesmith, Alfred R.</item>
+                                <item>Lister, Robert H. and Florence C. Lister</item>
+                                <item>Little, William C.</item>
+                                <item>Litto, Fredric M.</item>
+                                <item>Livermore, Harold V. (3 folders)</item>
+                                <item>Livermore, Mary A.</item>
+                                <item>Livermore, Seward W.</item>
+                                <item>Lofton, John</item>
+                                <item>Loftsgordon, Donald Rice</item>
+                                <item>Loggins, Vernon</item>
+                                <item>London School of Economics Project</item>
+                                <item>Longchamps, Joanne de</item>
+                                <item>Longley, John L., Jr.</item>
+                                <item>Longwell, Marjorie R.</item>
+                                <item>Loos, Dorothy S.</item>
+                                <item>Lorca, Garcia</item>
+                                <item>Lord, Albert B.</item>
+                                <item>Lovington, Ted, Jr.</item>
+                                <item>Lowes, John Livingston</item>
+                                <item>Lowenthal, Max</item>
+                                <item>Lubin, Bernard</item>
+                                <item>Luks, Caroline L.</item>
+                                <item>Lumbera, Bienvenido</item>
+                                <item>Lurie, Leonard</item>
+                                <item>Lutz, Jerry</item>
+                                <item>Lyman, Theodore</item>
+                                <item>Lystad, Mary H.</item>
+                                <item>M Misc. Declined</item>
+                                <item>McAvoy, Thomas T.</item>
+                                <item>McCall, Dan</item>
+                                <item>McConnell, Allen</item>
+                                <item>McCormick, Robert A.</item>
+                                <item>MacDonald, John W.</item>
+                                <item>MacDonell, George N.</item>
+                                <item>McDowell, Judith H.</item>
+                                <item>Mace, Malcolm</item>
+                                <item>McGarry, Daniel D.</item>
+                                <item>MacGowan, Michael</item>
+                                <item>Machado, Antonio</item>
+                                <item>McHugh, Roger Joseph</item>
+                                <item>McKee, J.H.</item>
+                                <item>McKenzie, Gordon</item>
+                                <item>Mackworth, Cecily</item>
+                                <item>McLean, Albert F., Jr.</item>
+                                <item>MacLise, Angus</item>
+                                <item>McMahon, Helen</item>
+                                <item>McMurray, William</item>
+                                <item>McReynolds, F.L.</item>
+                                <item>McWilliams, Carey</item>
+                                <item>Mahr, August C.</item>
+                                <item>Maim, Nikolai</item>
+                                <item>Makal, Mahmut</item>
+                                <item>Malin, Irving</item>
+                                <item>Maloney, Terry</item>
+                                <item>Manasse, Ernst Moritz</item>
+                                <item>Manierre, William R.</item>
+                                <item>Mann, W. Howard</item>
+                                <item>Marceau, Marcel</item>
+                                <item>Marett, R.R.</item>
+                                <item>Margolis, Joseph</item>
+                                <item>Mariano, Nicky</item>
+                                <item>Markham, Dean F.</item>
+                                <item>Markowitz, H.M.</item>
+                                <item>Marley, Harold P.</item>
+                                <item>Marshall, Howard D.</item>
+                                <item>Martí, José</item>
+                                <item>Martin, F. David</item>
+                                <item>Martin, Kingsley</item>
+                                <item>Massa, Ann (2 folders)</item>
+                                <item>Mayer, Dorothy Moulton</item>
+                                <item>Mayes, Stanley</item>
+                                <item>Mayhall, Jane</item>
+                                <item>Meier, August</item>
+                                <item>Meixner, John A.</item>
+                                <item>Meltzer, Milton</item>
+                                <item>Memmo, Paul E., Jr.</item>
+                                <item>Meredith, James</item>
+                                <item>Meredith, Robert C.</item>
+                                <item>Merivale, Patricia</item>
+                                <item>Merriam, Charles E.</item>
+                                <item>Merwin, William S.</item>
+                                <item>Meserve, Walter J.</item>
+                                <item>Mexico Writers Conference</item>
+
+                            </list>
+                        </p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAB8976-00009" level="file">
+                    <did>
+                        <container label="Box" type="box">8</container>
+                        <unittitle>Mi - O</unittitle>
+                    </did>
+                    <scopecontent>
+                        <p> Complete list of names: <list>
+                                <item>Mikes, George</item>
+                                <item>Milbrath, Lester W.</item>
+                                <item>Miles, Leland</item>
+                                <item>Miles, Simon</item>
+                                <item>Millar, Kenneth</item>
+                                <item>Miller, Daniel D.</item>
+                                <item>Miller, Dickinson S.</item>
+                                <item>Miller, Francesca Falk</item>
+                                <item>Miller, Henry</item>
+                                <item>Miller, Mabel Barnes</item>
+                                <item>Miller, Ronald and David Sawers</item>
+                                <item>Milliken, William</item>
+                                <item>Mills, Barriss (2 folders)</item>
+                                <item>Milne, Gordon (2 folders)</item>
+                                <item>Mintz, Jerry</item>
+                                <item>Mitchell, John M.</item>
+                                <item>Mitchner, Stu</item>
+                                <item>Mix, Sheldon A.</item>
+                                <item>Mock, Albert</item>
+                                <item>Mock, James R.</item>
+                                <item>Momsen, Richard P.</item>
+                                <item>Monaghan, Jay</item>
+                                <item>Montano, Rocco</item>
+                                <item>Montgomery, John Warwick</item>
+                                <item>Moody, Richard and A.M. Drummond</item>
+                                <item>Moon, Sheila</item>
+                                <item>Moore, Floyd</item>
+                                <item>Moore, Katharine</item>
+                                <item>More, José Ferrater</item>
+                                <item>Morgan, H. Wayne</item>
+                                <item>Morgan, James Morris</item>
+                                <item>Morgan, John</item>
+                                <item>Morley, Charles</item>
+                                <item>Morris, Bernard S.</item>
+                                <item>Morse, A. Reynolds</item>
+                                <item>Moseley, Virginia</item>
+                                <item>Moser, Charles A.</item>
+                                <item>Moss, Suzanne</item>
+                                <item>Mott, Frank Luther</item>
+                                <item>Moulds, Henry</item>
+                                <item>Moulton, William G.</item>
+                                <item>Movie Comedians of the '30's</item>
+                                <item>Mowrer, Paul Scott</item>
+                                <item>Mudd, Emily H.</item>
+                                <item>Mudd, Stuart</item>
+                                <item>Mueller, Gustav Emil</item>
+                                <item>Mueller, John H.</item>
+                                <item>Muhler, Joseph C.</item>
+                                <item>Muller, David E.</item>
+                                <item>Muller, Ernest P.</item>
+                                <item>Muller, Hermann J. (2 folders)</item>
+                                <item>Munk, Arthur W.</item>
+                                <item>Munson, Thomas N.</item>
+                                <item>Murchison, Carl</item>
+                                <item>Murfin, James V.</item>
+                                <item>Murie, Margaret E.</item>
+                                <item>Murphy, Jay</item>
+                                <item>Murr, J. Edward</item>
+                                <item>Musa, Mark (4 folders)</item>
+                                <item>Muse, Benjamin</item>
+                                <item>Musgrove, Frank</item>
+                                <item>Musick, Ruth Ann</item>
+                                <item>Myrdal, Gunnar</item>
+                                <item>Nabokov, Vladimir</item>
+                                <item>Nahm, Milton C.</item>
+                                <item>Napoleão, Aluízio</item>
+                                <item>Nasser, Eugene Paul</item>
+                                <item>Nathan, Norman</item>
+                                <item>National Archives</item>
+                                <item>Neal, Fred Warner</item>
+                                <item>Neal, Julia</item>
+                                <item>Neff, Emery</item>
+                                <item>Neff, William D.</item>
+                                <item>Newcombe, Howard B.</item>
+                                <item>Newton, Harry G.</item>
+                                <item>Nichols, Charles H.</item>
+                                <item>Nichols, John R.</item>
+                                <item>Nielsen, J.V., Jr.</item>
+                                <item>Nielson, David G.</item>
+                                <item>Nist, John</item>
+                                <item>Nolan, Alan T.</item>
+                                <item>Norberg, Dag</item>
+                                <item>Nott, Kathleen (2 folders)</item>
+                                <item>Nurnberger, John I.</item>
+                                <item>Nussbaum, Dolores Kersey</item>
+                                <item>Nyswander, Marie</item>
+                                <item>O Misc. Declined</item>
+                                <item>Oberlin Colloquium in Philosophy, <date normal="1967"
+                                        >1967</date></item>
+                                <item>Oberndörfer, Dieter</item>
+                                <item>O'Brien, Frances B.</item>
+                                <item>Ó Broin, Tomás</item>
+                                <item>Ochoa, Severo</item>
+                                <item>O'Connor, William Van</item>
+                                <item>O'Dell, DeForest</item>
+                                <item>Ofiesh, Gabriel D.</item>
+                                <item>Ogilvy, J.D.A.</item>
+                                <item>O'Hara, Frederick</item>
+                                <item>Oliner, Leo</item>
+                                <item>Olson, Elder</item>
+                                <item>Olson, Robert G.</item>
+                                <item>Oppenheim, Jerrold</item>
+                                <item>Orel, Harold</item>
+                                <item>Orr, Lloyd D.</item>
+                                <item>Orvis, Mary</item>
+                                <item>Osborn, Fairfield</item>
+                                <item>Osborn, George Coleman</item>
+                                <item>Osborne, Lilly de Jongh (Mrs. E.A. Osborne)</item>
+                                <item>O'Sullivan, Donald</item>
+                                <item>Otake, Masaru</item>
+                                <item>Otto, Max</item>
+                                <item>Overmyer, Janet</item>
+                                <item>Oxford, James LeRoy</item>
+
+                            </list>
+                        </p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAB8976-00010" level="file">
+                    <did>
+                        <container label="Box" type="box">9</container>
+                        <unittitle>P - Rh</unittitle>
+                    </did>
+                    <scopecontent>
+                        <p> Complete list of names: <list>
+                                <item>P Misc. Declined</item>
+                                <item>Padover, Saul K. (2 folders)</item>
+                                <item>Page, Stanley W.</item>
+                                <item>Palerm, Angel</item>
+                                <item>Palmer, F.R.</item>
+                                <item>Palmer, John E.</item>
+                                <item>Paloczi-Horvath, George</item>
+                                <item>Pandit, Rajit Sitaram.</item>
+                                <item>Pankey, Clyde Ely (Mrs. Hugh Ballard Pankey)</item>
+                                <item>Pansegrouw, N.J. deW.</item>
+                                <item>Pappas, Phillip M.</item>
+                                <item>Pappenheim, Fritz</item>
+                                <item>Parker, Donald Dean</item>
+                                <item>Parker, Eleanor</item>
+                                <item>Parker, William Riley</item>
+                                <item>Parsons, Thornton H.</item>
+                                <item>Paschini, Pio</item>
+                                <item>Paszkiewicz, Henryk</item>
+                                <item>Patterson, James T.</item>
+                                <item>Pattison, E. Mansell</item>
+                                <item>Paul, Leslie</item>
+                                <item>Pauling, Linus</item>
+                                <item>Paz, Octavio (see: UNESCO)</item>
+                                <item>Payne, Alma J.</item>
+                                <item>Pearce, Roy Harvey</item>
+                                <item>Pearson, Hesketh</item>
+                                <item>Peat, Wilbur D.</item>
+                                <item>Peck, A.L.</item>
+                                <item>Peck, James</item>
+                                <item>Peckham, Howard H.</item>
+                                <item>Pecora, Ferdinand</item>
+                                <item>Peden, Rachel</item>
+                                <item>Peden, William</item>
+                                <item>Peel, Roy V.</item>
+                                <item>Peet, Telfair B.</item>
+                                <item>Pei, Mario</item>
+                                <item>Pemberton, John Clifford</item>
+                                <item>Pendell, Elmer</item>
+                                <item>Penrose, Edith</item>
+                                <item>Perkins, Dexter</item>
+                                <item>Perry, Bliss</item>
+                                <item>Perry, Clay</item>
+                                <item>Perry, Ralph Barton</item>
+                                <item>Peter, Emmett, Jr.</item>
+                                <item>Peterkiewicz, Jerzy</item>
+                                <item>Peterson, Harries-Clichy</item>
+                                <item>Petrie, Paul</item>
+                                <item>Pfeiffer, Karl G.</item>
+                                <item>Phelps, Orme W.</item>
+                                <item>Philippi, Donald L.</item>
+                                <item>Phillips, C.E. Lucas</item>
+                                <item>Physiology of Aging</item>
+                                <item>Pick, Ernest</item>
+                                <item>Pickering, Frederick Pickering</item>
+                                <item>Pierson, Coen G.</item>
+                                <item>Pinsker, Sanford</item>
+                                <item>Piper, Raymond F.</item>
+                                <item>Pirenne, Jacques</item>
+                                <item>Pitluck, Sherman</item>
+                                <item>Pizer, Donald</item>
+                                <item>Poe, Douglas</item>
+                                <item>Poe, L. Harvey</item>
+                                <item>Poetry Rejections (2 folders)</item>
+                                <item>Pohl, Frederick J.</item>
+                                <item>Poirot, Eugene M.</item>
+                                <item>Polak, M.W.</item>
+                                <item>Polner, Murray</item>
+                                <item>Popper, Hermine I.</item>
+                                <item>Popper, Karl Raimund</item>
+                                <item>Porten, Harry</item>
+                                <item>Post, Levi Arnold</item>
+                                <item>Posternak, Noel</item>
+                                <item>Postgate, Raymond</item>
+                                <item>Pound Anthologies</item>
+                                <item>Pozzatti, Rudy</item>
+                                <item>Prall, Stuart E.</item>
+                                <item>Pratt, Alice Day</item>
+                                <item>Price, Hilda</item>
+                                <item>Price, Robert</item>
+                                <item>Pritchard, William H.</item>
+                                <item>Proodian, Ralph</item>
+                                <item>Proust, Marcel</item>
+                                <item>Pundeff, Marin</item>
+                                <item>Purcell, Royal</item>
+                                <item>Purdue University</item>
+                                <item>Putnam, Phelps</item>
+                                <item>Pyle, Hilary</item>
+                                <item>Quigley, John J.</item>
+                                <item>Quinlan, Maurice James</item>
+                                <item>Quint, Howard H.</item>
+                                <item>R misc. Declined</item>
+                                <item>Raduitzky, Gerard</item>
+                                <item>Rafferty, Keen</item>
+                                <item>Raghavacharyulu, D.V.K.</item>
+                                <item>Rainey, Homer P.</item>
+                                <item>Ramanujan, A.K. (2 folders)</item>
+                                <item>Randall, Ollie A.</item>
+                                <item>Randall, Randolph</item>
+                                <item>Randel, William</item>
+                                <item>Ratner, Joseph</item>
+                                <item>Ratner, Sidney</item>
+                                <item>Rauch, Basil</item>
+                                <item>Rawley, James A.</item>
+                                <item>Rayburn, Otto Ernest</item>
+                                <item>Rea, Joy</item>
+                                <item>Rea, Robert R.</item>
+                                <item>Rees, Ennis</item>
+                                <item>Regler, Gustav</item>
+                                <item>Reifsnyder, Henry G., Jr.</item>
+                                <item>Rein, David</item>
+                                <item>Reiss, Ira L.</item>
+                                <item>Reiter, Seymour</item>
+                                <item>Remer, Theodore G.</item>
+                                <item>Remmers, H.H.</item>
+                                <item>René-Moreno, Gabriel</item>
+                                <item>Reynolds, Clark G.</item>
+                                <item>Reynolds, Tim</item>
+
+                            </list>
+                        </p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAB8976-00011" level="file">
+                    <did>
+                        <container label="Box" type="box">10</container>
+                        <unittitle>Ri - Sh</unittitle>
+                    </did>
+                    <scopecontent>
+                        <p> Complete list of names: <list>
+                                <item>Riabokin, Toma</item>
+                                <item>Rice, Robert</item>
+                                <item>Richardson, Dorothy M.</item>
+                                <item>Richter, Gisela M.A.</item>
+                                <item>Ridley, M.R.</item>
+                                <item>Riggs, Fred W.</item>
+                                <item>Rilke, Rainer Maria</item>
+                                <item>Rimbaud, Arthur</item>
+                                <item>Rintala, Marvin</item>
+                                <item>Rischin, Moses</item>
+                                <item>Ritchell, Rella</item>
+                                <item>Ritchie, Norman</item>
+                                <item>Robbins, John Albert</item>
+                                <item>Robbins, John Albert and David A. Randall</item>
+                                <item>Roberts, Bessie Keeran</item>
+                                <item>Roberts, Gildas O.</item>
+                                <item>Roberts, Thomas J.</item>
+                                <item>Robey, Donald H.</item>
+                                <item>Robinson, Donald Fay</item>
+                                <item>Robinson, Donald W.</item>
+                                <item>Robinson, James Harvey and Henry Winchester Rolfe</item>
+                                <item>Rodin, Leonid Efimovich and Natalia Ivanovna Basilevich</item>
+                                <item>Rodriguez, José</item>
+                                <item>Roethke, Theodore</item>
+                                <item>Rogal, Samuel J.</item>
+                                <item>Rogers, Josephine</item>
+                                <item>Roll, Charles</item>
+                                <item>Rolnick, Stanley R.</item>
+                                <item>Roman, Jo</item>
+                                <item>Roman de la Rose</item>
+                                <item>Romero, Francisco</item>
+                                <item>Róna-Tas, András</item>
+                                <item>Rose, Kenneth F.C.</item>
+                                <item>Rosenberg, Bruce A.</item>
+                                <item>Rosenmeyer, Thomas G.</item>
+                                <item>Rosenstock, Gershon George</item>
+                                <item>Rosenthal, Macha Louis</item>
+                                <item>Ross, Sidney Scott</item>
+                                <item>Rosten, Norman</item>
+                                <item>Rostenberg, Leona</item>
+                                <item>Roth, Robert J.</item>
+                                <item>Rothermund, Dietmar</item>
+                                <item>Rothschild, Lincoln</item>
+                                <item>Roucek, Joseph S.</item>
+                                <item>Rouner, Leroy S.</item>
+                                <item>Rousselot, Pierre</item>
+                                <item>Rubashev, Boris Maksimovich</item>
+                                <item>Rubin, Louis D., Jr.</item>
+                                <item>Rubin, Ruth</item>
+                                <item>Rühle, Oskar</item>
+                                <item>Rukavina, Thomas</item>
+                                <item>Rukeyser, Muriel</item>
+                                <item>Ruotold, Lucio P.</item>
+                                <item>Rupp, Richard H.</item>
+                                <item>Rusk, Ralph L.</item>
+                                <item>Russell, Henry N.</item>
+                                <item>Russian Poetry Translation</item>
+                                <item>Rutledge, William, III</item>
+                                <item>Ryan, Harriet Fitts (Mrs. Bernard Ryan)</item>
+                                <item>Ryder, Frank G.</item>
+                                <item>S Misc. Declined</item>
+                                <item>Saba, Umberto</item>
+                                <item>Sackett, Samuel John</item>
+                                <item>Sachs, Nelly</item>
+                                <item>Salmon, Wesley C.</item>
+                                <item>Samkange, Stanlake</item>
+                                <item>Sandburg, Carl</item>
+                                <item>Santymer, Helen H.</item>
+                                <item>Sarton, George</item>
+                                <item>Satina, Sophie</item>
+                                <item>Saturday Review of Literature</item>
+                                <item>Sauers, Robert C.</item>
+                                <item>Saunor, Peter</item>
+                                <item>Sayre, Robert F.</item>
+                                <item>Schaffer, Ronald</item>
+                                <item>Scheler, Max</item>
+                                <item>Schiller, Friedrich</item>
+                                <item>Schilling, Bernard N.</item>
+                                <item>Schmuller, Aaron</item>
+                                <item>Schoedel, William R.</item>
+                                <item>Schoenberg, Arnold</item>
+                                <item>Schoenfeld, Charles</item>
+                                <item>Schofield, Robert E.</item>
+                                <item>Schonfield, Hugh J.</item>
+                                <item>School of Education Lectures</item>
+                                <item>Schultz, Leonard P.</item>
+                                <item>Schwarzbaum, Haim</item>
+                                <item>Schweitzer, Arthur</item>
+                                <item>Scott, Nathan A., Jr.</item>
+                                <item>Scriven, Michael</item>
+                                <item>Searcher, Victor</item>
+                                <item>Searle, John</item>
+                                <item>Sebeok, Thomas A. (2 folders)</item>
+                                <item>Segy, Ladislas</item>
+                                <item>Seiden, Morton I.</item>
+                                <item>Seidler, Grzegorz Leopold</item>
+                                <item>Sellin, Eric</item>
+                                <item>Sells, Arthur Lytton</item>
+                                <item>Semenenko, G.I.</item>
+                                <item>Semmel, Bernard</item>
+                                <item>Setchkarev, Vsevolod</item>
+                                <item>Severn, Marvin W.</item>
+                                <item>Shapiro, Karl</item>
+                                <item>Shapiro, Samuel (2 folders)</item>
+                                <item>Shapley, Harlow</item>
+                                <item>Sharma, I.D.</item>
+                                <item>Shea, J.M. Jr.</item>
+                                <item>Sheehan, Jack</item>
+                                <item>General Sheridan's Memoirs</item>
+                                <item>Shumaker, Arthur W.</item>
+
+                            </list>
+                        </p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAB8976-00012" level="file">
+                    <did>
+                        <container label="Box" type="box">11</container>
+                        <unittitle>Si - Thn</unittitle>
+                    </did>
+                    <scopecontent>
+                        <p> Complete list of names: <list>
+                                <item>Sienkiewicz, Henryk</item>
+                                <item>Sigler, Jay A.</item>
+                                <item>Simmons, James E.</item>
+                                <item>Simms, Ruth</item>
+                                <item>Simon, John Y.</item>
+                                <item>Simon, William and John H. Gagnon,</item>
+                                <item>Simons, Algie Martin</item>
+                                <item>Simpson, Amos E.</item>
+                                <item>Simson, Gerhard</item>
+                                <item>Sinclair, Upton</item>
+                                <item>Singer, Arthur L., Jr.</item>
+                                <item>Sinor, Denis</item>
+                                <item>Sisson, C.J.</item>
+                                <item>Skelton, Robin</item>
+                                <item>Skinner, B.F.</item>
+                                <item>Skornia, Harry</item>
+                                <item>Slama-Cazacu, Tatiana</item>
+                                <item>Slessinger, Seymour</item>
+                                <item>Slicher van Bath, B.H.</item>
+                                <item>Sloca, Charles</item>
+                                <item>Slochower, Harry</item>
+                                <item>Small, William</item>
+                                <item>Smigel, Erwin O.</item>
+                                <item>Smith, David E.</item>
+                                <item>Smith, Duane A.</item>
+                                <item>Smith, Kathleen J.</item>
+                                <item>Smith, William C.</item>
+                                <item>Smock, George E.</item>
+                                <item>Smout, Charles Frederick Victor</item>
+                                <item>Snedeker, Caroline Dale</item>
+                                <item>Snell, Bruno</item>
+                                <item>Snyder, Gary</item>
+                                <item>Sokel, Walter H.</item>
+                                <item>Sologub, Fedor</item>
+                                <item>Sonneborn, Tracy M. (2 folders)</item>
+                                <item>Sontag, Frederick</item>
+                                <item>Sorel, Albert</item>
+                                <item>Spagnoletti, Giacinto</item>
+                                <item>Sparks, David S.</item>
+                                <item>Sparrow, C.M.</item>
+                                <item>Spaulding, John A.</item>
+                                <item>Spicer, Harold</item>
+                                <item>Spiller, Frieda J.</item>
+                                <item>Spingarn, Lawrence P.</item>
+                                <item>Spitzer, Leo</item>
+                                <item>Sprague, Rosamond Kent</item>
+                                <item>Staal, J.Frits</item>
+                                <item>Staebler, Warren</item>
+                                <item>Stafford, William E.</item>
+                                <item>Stallknect, N.P.</item>
+                                <item>Stallknect, N.P. and Horst Frenz</item>
+                                <item>Stalnaker, Robert C.</item>
+                                <item>Stampfer, Judah L.</item>
+                                <item>Stanonik, Janez</item>
+                                <item>Starkey, Lawrence H.</item>
+                                <item>Starkey, Otis</item>
+                                <item>Starlinger, Wilhelm</item>
+                                <item>Stauffer, Robert C.</item>
+                                <item>Stavrou, Theo</item>
+                                <item>Steele, Selma Neubacher (Mrs. T.C. Steele)</item>
+                                <item>Stein, Arnold</item>
+                                <item>Steinberg, Erwin R.</item>
+                                <item>Steiner, George</item>
+                                <item>Steiner, Jesse F.</item>
+                                <item>Stephens, Ian</item>
+                                <item>Stephens, Robert Oren</item>
+                                <item>Stern, Joseph Peter</item>
+                                <item>Stern, Madeleine B.</item>
+                                <item>Stern, Philip Van Doren</item>
+                                <item>Sternberg, Hilgard O'Reilly</item>
+                                <item>Steveni, Michael</item>
+                                <item>Stevens, Harvey A.</item>
+                                <item>Stevens, W.D.</item>
+                                <item>Stewart, Bruce</item>
+                                <item>Stewart, Douglas J. (2 folders)</item>
+                                <item>Stewart, John L.</item>
+                                <item>Stilwell, Robert Lee</item>
+                                <item>Stocking, George W., Jr.</item>
+                                <item>Stokes, Adrian</item>
+                                <item>Stoneman, Virginia</item>
+                                <item>Strachey, John</item>
+                                <item>Strickland, Donald A.</item>
+                                <item>Strickland, Ruth</item>
+                                <item>Strindberg, August</item>
+                                <item>Strodach, George</item>
+                                <item>Stromgren, Richard L.</item>
+                                <item>Struve, Gleb</item>
+                                <item>Stuart, Kenneth P.</item>
+                                <item>Stucky, Harley J.</item>
+                                <item>Sturmer, Anna M.</item>
+                                <item>Sudhalter, David L.</item>
+                                <item>Suhr, Elmer G.</item>
+                                <item>Sullivan, John Patrick</item>
+                                <item>Sullivan, Walter</item>
+                                <item>Summers, F.P.</item>
+                                <item>Sutherland, Edwin H.</item>
+                                <item>Sutherland, James and Joel Hurstfield</item>
+                                <item>Sutton, William A.</item>
+                                <item>Swann, Thomas Burnett</item>
+                                <item>Swiggett, Glen Levin</item>
+                                <item>Swing, Raymond</item>
+                                <item>Swing, Thomas Kaehao</item>
+                                <item>Swomley, John M., jr.</item>
+                                <item>Sykes, John</item>
+                                <item>Sylvester-Bradley, P.C.</item>
+                                <item>Szepe, George and Dan I. Slobin</item>
+                                <item>T-V Misc. Declined</item>
+                                <item>Tabori, Paul</item>
+                                <item>Tang, Peter S.H.</item>
+                                <item>Tanham, George K.</item>
+                                <item>Tarrant, Desmond (2 folders)</item>
+                                <item>Taylor, Earl A.</item>
+                                <item>Taylor, George Coffin</item>
+                                <item>Tedlock, E. W., Jr.</item>
+                                <item>Teller, Edward</item>
+                                <item>Temple, Wayne C.</item>
+                                <item>Templin, Ralph T.</item>
+                                <item>Teng, Ssfu-yü</item>
+                                <item>Tennyson, Charles</item>
+                                <item>Terry, Clementine Wien (Mrs. William Terry)</item>
+                                <item>Thakur, S.C.</item>
+                                <item>Thale, Jerome</item>
+                                <item>Thirring, Hans</item>
+
+                            </list>
+                        </p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAB8976-00013" level="file">
+                    <did>
+                        <container label="Box" type="box">12</container>
+                        <unittitle>Tho - Wek</unittitle>
+                    </did>
+                    <scopecontent>
+                        <p> Complete list of names: <list>
+                                <item>Thompson, Wallon H. (Buddie)</item>
+                                <item>Thompson, Kenneth W.</item>
+                                <item>Thompson, Louis E.</item>
+                                <item>Thompson, Stith</item>
+                                <item>Thompson, Wade</item>
+                                <item>Thomson, George</item>
+                                <item>Thomson, Helen</item>
+                                <item>Thorne, James Peter</item>
+                                <item>Thorp, Raymond W.</item>
+                                <item>Thorpe, Clarence D.</item>
+                                <item>Thro, Linus J.</item>
+                                <item>Tibble, Anne Northgrave</item>
+                                <item>Tillman, Seth P.</item>
+                                <item>Tippy, Worth M.</item>
+                                <item>Tobias, Henry J.</item>
+                                <item>Tobin, John</item>
+                                <item>Tobin, Terence</item>
+                                <item>Todd, William I.</item>
+                                <item>Todorov, Tzvetan</item>
+                                <item>Todrin, Boris</item>
+                                <item>Ton, Paul</item>
+                                <item>Törnebohm, Håkan</item>
+                                <item>Torres, Emmanuel</item>
+                                <item>Torres, Louis</item>
+                                <item>Trace, Arther S.</item>
+                                <item>Trager, Frank N.</item>
+                                <item>Travelers Research Center</item>
+                                <item>Treacy, Kenneth W.</item>
+                                <item>Troupe, Quincy</item>
+                                <item>Troyer, Howard</item>
+                                <item>Trubitt, Hillard J.</item>
+                                <item>Truesdell, Evans</item>
+                                <item>Tuchman, Barbara (2 folders)</item>
+                                <item>Tucker, John</item>
+                                <item>Tucker, Martin</item>
+                                <item>Turgenev, Ivan</item>
+                                <item>Turner, Ethel Duffy</item>
+                                <item>Turner, Lynn W.</item>
+                                <item>Tylden-Wright, David</item>
+                                <item>Tynan, Kenneth</item>
+                                <item>Tymieniecka, Anna-Teresa</item>
+                                <item>Ueda, Makoto</item>
+                                <item>Uhl, Alexander</item>
+                                <item>Ulman, Seth P.</item>
+                                <item>Umpierre, Gustav</item>
+                                <item>Unger, Aryeh L.</item>
+                                <item>United Nations</item>
+                                <item>UNESCO Book Project</item>
+                                <item>UNESCO Project - Beckett/Paz</item>
+                                <item>UNESCO Translations</item>
+                                <item>Unterecker, John E.</item>
+                                <item>Untereiner, Wayne</item>
+                                <item>Unwin, Joseph Daniel</item>
+                                <item>Unwin, Sir Stanley</item>
+                                <item>Ure, Peter</item>
+                                <item>Urey, Harold C.</item>
+                                <item>Valenstein, Elliot S.</item>
+                                <item>Vallance, Theodore R.</item>
+                                <item>Van Den Haag, Ernest</item>
+                                <item>Van Meter, Simon</item>
+                                <item>Van Natter, F.W.</item>
+                                <item>Van Noppen, Ina Woestemeyer</item>
+                                <item>Van Vredenburgh, Clarence</item>
+                                <item>Van Zandt, Roland</item>
+                                <item>Varney, John</item>
+                                <item>Vars, Gordon F.</item>
+                                <item>Vaughn, Eric</item>
+                                <item>Veatch, Henry B. (2 folders)</item>
+                                <item>Verburg, Pieter Adrianus</item>
+                                <item>Verrall, Arthur Woollgar</item>
+                                <item>Versenyi, Laszlo G.</item>
+                                <item>Viereck, Peter</item>
+                                <item>Vietnamese Poetry Project</item>
+                                <item>Vinacke, Harold M.</item>
+                                <item>Vincent, Irene Vongehr</item>
+                                <item>Vinocur, Jacob</item>
+                                <item>Vogt, David J.</item>
+                                <item>Von Abele, Rudolph</item>
+                                <item>Von Humbold, Alexander</item>
+                                <item>Von Szeliski, John J.</item>
+                                <item>W Misc. Declined</item>
+                                <item>Wachs, W.C.</item>
+                                <item>Wachtel, W.W.</item>
+                                <item>Waelder, Robert</item>
+                                <item>Wagenheim, Kal</item>
+                                <item>Wager, Raymond J.</item>
+                                <item>Wagner, Geoffrey</item>
+                                <item>Wain, John</item>
+                                <item>Walcott, Fred G.</item>
+                                <item>Waldschmidt, Ernst</item>
+                                <item>Walker, Kenneth R.</item>
+                                <item>Wallace, Harry L.</item>
+                                <item>Wallace, Virginia</item>
+                                <item>Wallas, May Graham</item>
+                                <item>Waller, Willard</item>
+                                <item>Wallis, Wilson D.</item>
+                                <item>Walsh, J. Hartt</item>
+                                <item>Walsh, Thomas F.</item>
+                                <item>Walton, Judy</item>
+                                <item>Wandycz, Piotr S.</item>
+                                <item>Wang, David Rafael</item>
+                                <item>Ward, Harry M.</item>
+                                <item>Ward, Herman M.</item>
+                                <item>Wardy, Ben-Zion</item>
+                                <item>Warren, Charles</item>
+                                <item>Warren, Louis A.</item>
+                                <item>Warren, Sidney</item>
+                                <item>Warriner, Doreen</item>
+                                <item>Washington, Booker T.</item>
+                                <item>Waters, Farl Jacob</item>
+                                <item>Watkins, C. Robert</item>
+                                <item>Watkins, Lloyd</item>
+                                <item>Watkins, Ronald</item>
+                                <item>Watkins, Ronald and Jeremy Lemmon</item>
+                                <item>Watkins, W.B.C.</item>
+                                <item>Watson, Jack M.</item>
+                                <item>Watson, Richard L., Jr.</item>
+                                <item>Watson, Virginia</item>
+                                <item>Waugh, Dorothy</item>
+                                <item>Webb, Eugene</item>
+                                <item>Weber, Wayne M.</item>
+                                <item>Webster's New International Dictionary, third edition</item>
+                                <item>Wedeck, Harry E.</item>
+                                <item>Wegener, Frank C.</item>
+                                <item>Weight, Harold O.</item>
+                                <item>Weisinger, Kenneth D.</item>
+                                <item>Weiss, E.B.</item>
+                                <item>Weiss, Neil</item>
+                                <item>Weisskopf, Kurt</item>
+                                <item>Weisstein, Ulrich</item>
+
+                            </list>
+                        </p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAB8976-00014" level="file">
+                    <did>
+                        <container label="Box" type="box">13</container>
+                        <unittitle>Wel - Z; miscellaneous book projects, including plans to publish
+                            various calendars</unittitle>
+                    </did>
+                    <scopecontent>
+                        <p> Complete list of names: <list>
+                                <item>Welliver, Warman</item>
+                                <item>Wellman, Manly Wade</item>
+                                <item>Wells, George</item>
+                                <item>Wells, Henry W.</item>
+                                <item>Wells, Herman B</item>
+                                <item>Weltin, E.G.</item>
+                                <item>Wendt, Herbert</item>
+                                <item>Wenholz, Hazel</item>
+                                <item>West, Paul</item>
+                                <item>Whaples, Miriam Karpilow</item>
+                                <item>Wharton, John F.</item>
+                                <item>Wheeler, Otis B.</item>
+                                <item>Wheeler-Voegelin, Erminie</item>
+                                <item>Wheelwright, Philip</item>
+                                <item>Whitaker, Thomas R.</item>
+                                <item>Whitehall, Harold</item>
+                                <item>White House Conference on Health</item>
+                                <item>Whiteside, Andrew G.</item>
+                                <item>Whitney, Monroe</item>
+                                <item>Whitridge, Arnold</item>
+                                <item>Wickens, George Michael</item>
+                                <item>Wiegel, Nancy</item>
+                                <item>Wiencke, Martha C.</item>
+                                <item>Wild, John</item>
+                                <item>Wilder, Amos N.</item>
+                                <item>Wiley, Bell I.</item>
+                                <item>Wiley, J. Barron</item>
+                                <item>Will, Frederic</item>
+                                <item>Will, Frederic and Dori Katz</item>
+                                <item>Willbern, York</item>
+                                <item>Willhelm, Sidney M.</item>
+                                <item>Williams, Albert N.</item>
+                                <item>Williams, Gwyn Alfred</item>
+                                <item>Williams, Raymond</item>
+                                <item>Williams, Roger L.</item>
+                                <item>Williamson, Craig</item>
+                                <item>Williamson, Harold F.</item>
+                                <item>Willis, Hugh E.</item>
+                                <item>Willoughby, William R.</item>
+                                <item>Wills, Roberta J.</item>
+                                <item>Wilson, Andrew</item>
+                                <item>Wilson, James L. and Robert J. Scholes</item>
+                                <item>Wilson, John</item>
+                                <item>Wilson, Mitchell</item>
+                                <item>Wilson, Theodore R.</item>
+                                <item>Wilson, William E.</item>
+                                <item>Wiltz, John E.</item>
+                                <item>Windell, Violet Bruner (Mrs. Lester Windell)</item>
+                                <item>Wing, Leonard W.and Anne Hinshaw Wing</item>
+                                <item>Winks, Robin W.</item>
+                                <item>Winter, Stephen I.</item>
+                                <item>Winther, Oscar</item>
+                                <item>Winther, S.K.</item>
+                                <item>Wisan, Richard Norman</item>
+                                <item>Wolf, Leonard</item>
+                                <item>Wolfe, Bertram D.</item>
+                                <item>Wolfe, Katherine A.</item>
+                                <item>Wolfe, Thomas</item>
+                                <item>Wolfert, Helen</item>
+                                <item>Wolff, Michael (2 folders)</item>
+                                <item>Wolle, Muriel S.</item>
+                                <item>Wood, A. St. John</item>
+                                <item>Woodman, Dorothy</item>
+                                <item>Woodress, James L., Jr.</item>
+                                <item>Woods, Thomas</item>
+                                <item>Woodworth, A. Hanna</item>
+                                <item>Wooldridge, David</item>
+                                <item>Woolf, Douglas</item>
+                                <item>Woolsey, A. Wallace</item>
+                                <item>Wou, Saofong F.</item>
+                                <item>Wrangham, D.A.</item>
+                                <item>Wrenn, C.L.</item>
+                                <item>Wreszin, Michael</item>
+                                <item>Wright, Louis B.</item>
+                                <item>Writers and Critics Series</item>
+                                <item>Wronski, Tadeusz</item>
+                                <item>Wrubel, Marshal H.</item>
+                                <item>Wuliger, R.</item>
+                                <item>Wyatt, Caroline Cox</item>
+                                <item>Wyatt, Edith Franklin</item>
+                                <item>Wynes, Charles E.</item>
+                                <item>X Y Z Misc. Declined</item>
+                                <item>Yamada, Ayako</item>
+                                <item>Yanovskiy, B.M.</item>
+                                <item>Yanuck, Julius</item>
+                                <item>Yarmolinsky, Avrahm</item>
+                                <item>Yette, Samuel F.</item>
+                                <item>Yoder, Paton</item>
+                                <item>Yorke-Long, Alan</item>
+                                <item>Young, Arthur C.</item>
+                                <item>Young, Kimball</item>
+                                <item>Young, Ruth Elizabeth</item>
+                                <item>Younger, Richard Davis</item>
+                                <item>Yourgrau, Wolfgang</item>
+                                <item>Yukichi, Fukuzawa</item>
+                                <item>Zagiba, Franz</item>
+                                <item>Zaremba, Joseph</item>
+                                <item>Zavodny, J.K.</item>
+                                <item>Zeisler, Ernest B.</item>
+                                <item>Zink, Karl E.</item>
+                                <item>Zink, Sidney</item>
+                                <item>Zhelezniakov, Vladimir Vasilevich</item>
+                                <item>Zupnick, Irving L.</item>
+
+                            </list>
+                        </p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAB8976-00015" level="file">
+                    <did>
+                        <container label="Box" type="box">14</container>
+                        <unittitle><unitdate normal="1950/1958" type="inclusive"
+                                >1950-1958</unitdate>A-K</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00016" level="file">
+                    <did>
+                        <container label="Box" type="box">15</container>
+                        <unittitle><unitdate normal="1950/1958" type="inclusive"
+                                >1950-1958</unitdate>L-Z</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00017" level="file">
+                    <did>
+                        <container label="Box" type="box">16</container>
+                        <unittitle><unitdate normal="1959">1959</unitdate>A - <unitdate
+                                normal="1961">1961</unitdate>L</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00018" level="file">
+                    <did>
+                        <container label="Box" type="box">17</container>
+                        <unittitle><unitdate normal="1961">1961</unitdate>M - <unitdate
+                                normal="1963">1963</unitdate>Z</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00019" level="file">
+                    <did>
+                        <container label="Box" type="box">18</container>
+                        <unittitle><unitdate normal="1964">1964</unitdate>A - <unitdate
+                                normal="1966">1966</unitdate>H</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00020" level="file">
+                    <did>
+                        <container label="Box" type="box">19</container>
+                        <unittitle><unitdate normal="1966">1966</unitdate>I - <unitdate
+                                normal="1968">1968</unitdate>Z</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00021" level="file">
+                    <did>
+                        <container label="Box" type="box">20</container>
+                        <unittitle><unitdate normal="1969">1969</unitdate>A-Z</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAB8976-00022" level="series">
+                <did>
+                    <container label="Box" type="box">20</container>
+                    <unittitle>II. Distributors and press representatives</unittitle>
+                </did>
+                <c02 id="VAB8976-00023" level="file">
+                    <did>
+                        <unittitle>American News Co., New York</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00024" level="file">
+                    <did>
+                        <unittitle>Baker and Taylor, New Jersey</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00025" level="file">
+                    <did>
+                        <unittitle>Campbell and Hall, Boston</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00026" level="file">
+                    <did>
+                        <unittitle>Curtis Brown, Ltd., London</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00027" level="file">
+                    <did>
+                        <unittitle>Elmo, Ann</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00028" level="file">
+                    <did>
+                        <unittitle>Feffer &amp; Simons, New York</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00029" level="file">
+                    <did>
+                        <unittitle>Folklore Associates, Philadelphia</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00030" level="file">
+                    <did>
+                        <unittitle>Foreign representatives-misc.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00031" level="file">
+                    <did>
+                        <unittitle>H.R. Hunting Co., Massachusetts</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00032" level="file">
+                    <did>
+                        <unittitle>Henry M. Snyder &amp; Co., New York</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00033" level="file">
+                    <did>
+                        <unittitle>Howard Moorepark, New York</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00034" level="file">
+                    <did>
+                        <unittitle>Kroch's &amp; Brentano's, Chicago</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00035" level="file">
+                    <did>
+                        <unittitle>Marion Saunders Agency</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00036" level="file">
+                    <did>
+                        <unittitle>Otis Kline Associates, New York</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00037" level="file">
+                    <did>
+                        <unittitle>Paterson, Mark</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00038" level="file">
+                    <did>
+                        <unittitle>Miscellaneous review correspondence</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAB8976-00039" level="series">
+                <did>
+                    <container label="Box" type="box">21</container>
+                    <unittitle>III. Sales</unittitle>
+                </did>
+                <arrangement>
+                    <p>Arranged alphabetically by salesman, followed by remainders, miscellaneous
+                        salesman's files, and sales records by state.</p>
+                </arrangement>
+                <c02 id="VAB8976-00040" level="file">
+                    <did>
+                        <unittitle>Blackiston, Elliot</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00041" level="file">
+                    <did>
+                        <unittitle>Blau, Fred G.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00042" level="file">
+                    <did>
+                        <unittitle>Dallas, David</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00043" level="file">
+                    <did>
+                        <unittitle>DeWitt, Richard</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00044" level="file">
+                    <did>
+                        <unittitle>Fagnano, Ange</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00045" level="file">
+                    <did>
+                        <unittitle>Greenfield, George</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00046" level="file">
+                    <did>
+                        <unittitle>Harper, Fred</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00047" level="file">
+                    <did>
+                        <unittitle>Hill, Larry</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00048" level="file">
+                    <did>
+                        <unittitle>Hotho, Albert</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00049" level="file">
+                    <did>
+                        <unittitle>Jervis, Edward</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00050" level="file">
+                    <did>
+                        <unittitle>Johnson, Henry</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00051" level="file">
+                    <did>
+                        <unittitle>Placht, Karl</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00052" level="file">
+                    <did>
+                        <unittitle>Rainer, Robert</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00053" level="file">
+                    <did>
+                        <unittitle>Turner, Guy</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00054" level="file">
+                    <did>
+                        <unittitle>Miscellaneous sales representatives</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00055" level="file">
+                    <did>
+                        <unittitle>Remainders</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00056" level="file">
+                    <did>
+                        <unittitle>Salesmen's accounts, itineraries, memos</unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00057" level="file">
+                    <did>
+                        <unittitle>Sales records by state</unittitle>
+                        <physdesc>(39 folders)</physdesc>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAB8976-00058" level="series">
+                <did>
+                    <container label="Box" type="box">21</container>
+                    <unittitle>IV. Miscellaneous</unittitle>
+                </did>
+                <c02 id="VAB8976-00059" level="file">
+                    <did>
+                        <unittitle>American Council of Learned Societies</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00060" level="file">
+                    <did>
+                        <unittitle>American Folklore Society</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00061" level="file">
+                    <did>
+                        <unittitle>American Foreign Policy Conference, <unitdate normal="1950-07"
+                                >July 1950</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00062" level="file">
+                    <did>
+                        <unittitle>Committee for organizing an Indiana University Press - <unitdate
+                                normal="1950-03">prior to March 1950</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00063" level="file">
+                    <did>
+                        <unittitle>Conference on Children's Books &amp; Publishing</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00064" level="file">
+                    <did>
+                        <unittitle>Conference on Oriental-Western literary &amp; cultural
+                            relations</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00065" level="file">
+                    <did>
+                        <unittitle>Fund for the Republic</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00066" level="file">
+                    <did>
+                        <unittitle>Guggenheim Foundation</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00067" level="file">
+                    <did>
+                        <unittitle>Indiana University Writer's Conference — <unitdate normal="1960"
+                                >before 1960</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00068" level="file">
+                    <did>
+                        <unittitle>Mississippi Valley Historical Association — session on
+                            publishing, <unitdate normal="1958-04">Apr. 1958</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00069" level="file">
+                    <did>
+                        <unittitle>National Association of College Stores, Inc.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8976-00070" level="file">
+                    <did>
+                        <container label="Box" type="box">22</container>
+                        <unittitle>Printed catalogs, <unitdate normal="1990/2010" type="inclusive"
+                                >1990-</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
