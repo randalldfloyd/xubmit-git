@@ -1,0 +1,3988 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAB9017">InU-Li-VAB9017</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Meltzer mss., <date normal="1954/1974"
+                        >1954-1974</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2010" type="publication">© 2010</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2010">© 2010</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                    <lb/><date normal="2010" type="source">2010</date>
+                <lb/>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2010-03-30">March 30, 2010</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2010-03-30"/>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Meltzer, David. </persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Meltzer mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1954/1974" type="inclusive"
+                >1954-1974</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1837</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>3041 items</extent>
+            </physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Meltzer mss., 1954-1974, consists of
+                the correspondence and writings of Lionel David Meltzer, 1937- , poet.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+
+            <p>Lionel David Meltzer, 1937- , is an American poet and musician. He is considered one
+                of the key poets of the <emph render="doublequote">Beat Generation</emph> in San
+                Fransisco.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is arranged into four series: Correspondence; Writings; Writings by
+                others; and Miscellaneous.</p>
+
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>Included are texts and galleys for the biennial periodical of writings by Jewish
+                authors, <title render="italic">Tree: 1 -4,</title> edited by Meltzer. Drawings and
+                pictures, financial statements, miscellaneous items, and a folder of printed pieces
+                complete the collection.</p>
+            <p>The collection has been partially indexed at the item level in the manuscripts index
+                of the Lilly Library. A list of index entries is available at the end of the finding
+                aid.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/meltzer+david{su}">
+                            <persname encodinganalog="100" source="lcnaf">Meltzer, David.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/meltzer+david{su}">
+                            <persname encodinganalog="600" source="lcnaf">Meltzer,
+                                David--Correspondence. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/abbott+keith+1944-{su}">
+                            <persname encodinganalog="700" source="lcnaf">Abbott, Keith, 1944-
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/berkson+bill">
+                            <persname encodinganalog="700" source="lcnaf">Berkson, Bill. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/brandi+john">
+                            <persname encodinganalog="700" source="lcnaf">Brandi, John. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/codrescu+andrei+1946-{su}">
+                            <persname encodinganalog="700" source="lcnaf">Codrescu, Andrei, 1946-
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/di+prima+diane{su}">
+                            <persname encodinganalog="700" source="lcnaf">Di Prima, Diane.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/drachler+rose">
+                            <persname encodinganalog="700" source="lcnaf">Drachler, Rose.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/fishman+charles+m+1942-">
+                            <persname encodinganalog="700" source="lcnaf">Fishman, Charles M., 1942-
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/jabaes+edmond">
+                            <persname encodinganalog="700" source="lcnaf">Jabáes, Edmond.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/stanley+george+1934-">
+                            <persname encodinganalog="700" source="lcnaf">Stanley, George, 1934-
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/tarn+nathaniel{su}">
+                            <persname encodinganalog="700" source="lcnaf">Tarn, Nathaniel.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/warsh+lewis">
+                            <persname encodinganalog="700" source="lcnaf">Warsh, Lewis. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/weishaus+joel+1939-">
+                            <persname encodinganalog="700" source="lcnaf">Weishaus, Joel, 1939-
+                            </persname>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/poets+american+correspondence{su}">
+                            <subject encodinganalog="650" source="lcnaf">Poets,
+                                American--Correspondence. </subject>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="110" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+
+
+        <!-- optional, if applicable -->
+        <relatedmaterial encodinganalog="544 1">
+            <head>Related Material</head>
+            <p>Meltzer mss. II; also located at the Lilly Library, Indiana University, Bloomington,
+                Indiana.</p>
+        </relatedmaterial>
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 1971, 1972, 1973, 1974, 1976</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>Meltzer mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAB9017-00001" level="series">
+                <did>
+                    <!-- optional -->
+                    <container label="Box" type="box">1</container>
+
+
+                    <unittitle>Correspondence</unittitle>
+
+
+                </did>
+                <c02 id="VAB9017-00002" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1954/1967" type="inclusive">1954-1967</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00003" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>
+                            <unitdate normal="1968/1971-06" type="inclusive">1968-1971,
+                                June</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00004" level="file">
+                    <did>
+                        <container label="Box" type="box">3</container>
+                        <unittitle>
+                            <unitdate normal="1971-07/1975" type="inclusive">1971,
+                                July-1975</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00005" level="file">
+                    <did>
+                        <container label="Box" type="box">4</container>
+                        <unittitle>
+                            <unitdate normal="1954/1974" type="inclusive">undated</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAB9017-00006" level="series">
+                <did>
+                    <container label="Box" type="box">4</container>
+                    <unittitle>Writings</unittitle>
+                </did>
+                <scopecontent>
+                    <p>This series includes the writings of David Meltzer, arranged in alphabetical
+                        order by title or first line as designated by the author. Some effort has
+                        been made to cross reference variant titles of essentially the same work,
+                        but it is by no means complete. Portions of stories, collections of poems,
+                        or no other works in revised form may be located under more than one
+                        title.</p>
+                </scopecontent>
+                <c02 id="VAB9017-00007" level="file">
+                    <did>
+                        <unittitle>Abra- Birth</unittitle>
+                    </did>
+                    <c03 id="VAB9017-00008" level="file">
+                        <did>
+                            <unittitle>Abra.</unittitle>
+                            <note>
+                                <p>illus. By John Brandi. Incl. Typescript and water colors. <date
+                                        normal="1970-07">July 1970;</date> photocopy of typescript
+                                    draft</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00009" level="file">
+                        <did>
+                            <unittitle>The Agency [novel].</unittitle>
+                            <note>
+                                <p>Carbon typescript; carbon typescripts of The Agent How Many
+                                    Blocks [novels]. <date normal="1967/1968" type="inclusive"
+                                        >1967-68.</date> In back binder.</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00010" level="file">
+                        <did>
+                            <unittitle>Albion Bison [poem].</unittitle>
+                            <note>
+                                <p>Typescript with autograph corrections. <date normal="1972-04-04"
+                                        >Apr. 4, 1972.</date> 2 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00011" level="file">
+                        <did>
+                            <unittitle>All the Way Home [story].</unittitle>
+                            <note>
+                                <p>Typescript. 10 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00012" level="file">
+                        <did>
+                            <unittitle>Apple [poem].</unittitle>
+                            <note>
+                                <p>Several drafts, typescript. <date normal="1974-06/1974-07"
+                                        type="inclusive">June-July, 1974.</date> 83 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00013" level="file">
+                        <did>
+                            <unittitle>Ascension [poem].</unittitle>
+                            <note>
+                                <p>2 drafts, typescript. 2 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00014" level="file">
+                        <did>
+                            <unittitle>Bark.</unittitle>
+                            <note>
+                                <p>4 drafts, typescripts and photocopy of final typescript. <date
+                                        normal="1972">1972</date></p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00015" level="file">
+                        <did>
+                            <unittitle>The Bird [story].</unittitle>
+                            <note>
+                                <p>2 drafts, 11 leaves and 14 leaves, typescripts</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00016" level="file">
+                        <did>
+                            <unittitle>Birth.</unittitle>
+                            <note>
+                                <p>Typescript, <date normal="1972">1972.</date> approx. 370 leaves,
+                                    photocopy copy; 2 drafts of tape transcript; galley proofs</p>
+                            </note>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9017-00017" level="file">
+                    <did>
+                        <container label="Box" type="box">5</container>
+                        <unittitle>Birth (cont.) - Epic</unittitle>
+                    </did>
+                    <c03 id="VAB9017-00018" level="file">
+                        <did>
+                            <unittitle>Birth (cont.).</unittitle>
+                            <note>
+                                <p>proofs</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00019" level="file">
+                        <did>
+                            <unittitle>Blind Art's Martian Blues [story].</unittitle>
+                            <note>
+                                <p>Typescript draft. 12 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00020" level="file">
+                        <did>
+                            <unittitle>Blue Rags; for radio, a romance.</unittitle>
+                            <note>
+                                <p>Typescript of final draft, <date normal="1974">1974.</date> 23
+                                    leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00021" level="file">
+                        <did>
+                            <unittitle>Blues in Black and White.</unittitle>
+                            <note>
+                                <p>2 drafts, typescript. In blue binder. <date normal="1952-10-12"
+                                        >Oct. 12, 1952</date></p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00022" level="file">
+                        <did>
+                            <unittitle>Bolero.</unittitle>
+                            <note>
+                                <p>Several drafts, typescripts. 35 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00023" level="file">
+                        <did>
+                            <unittitle>Brain-Plant, vol. 1 (Lovely) [novel].</unittitle>
+                            <note>
+                                <p>Carbon typescript, 175 leaves; typescript outline</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00024" level="file">
+                        <did>
+                            <unittitle>Brain-Plant, vol. 2 (Healer) [novel].</unittitle>
+                            <note>
+                                <p>Carbon typescript, 168 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00025" level="file">
+                        <did>
+                            <unittitle>Brain-Plant, vol. 3 (Out) [novel].</unittitle>
+                            <note>
+                                <p>Carbon typescript, 183 leaves; notecards</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00026" level="file">
+                        <did>
+                            <unittitle>Brain-Plant, vol. 4 (Glue Factory) [novel].</unittitle>
+                            <note>
+                                <p>Carbon typescript, 185 leaves; autograph notes on scratch paper,
+                                    6 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00027" level="file">
+                        <did>
+                            <unittitle>Carla [novel].</unittitle>
+                            <note>
+                                <p>Typescript, 118 leaves; typescript and carbon of partial revision
+                                    each 14 leaves (Also titled Paula.)</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00028" level="file">
+                        <did>
+                            <unittitle>The Cherry Tree [poem].</unittitle>
+                            <note>
+                                <p>Several drafts, typescripts. 6P</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00029" level="file">
+                        <did>
+                            <unittitle>Collected Poems.</unittitle>
+                            <note>
+                                <p>Typescript of poems in brown binder, 79 leaves; anonymous
+                                    criticism of <title render="doublequote">The
+                                        Individualist</title> on notepaper, 1 leaf. <date
+                                        normal="1950/1951" type="inclusive">1950-51</date></p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00030" level="file">
+                        <did>
+                            <unittitle>Contemporary Poets of the English Language.</unittitle>
+                            <note>
+                                <p>Several drafts, typescripts, <date normal="1973-09-02">Sept. 2,
+                                        1973</date></p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00031" level="file">
+                        <did>
+                            <unittitle>Cracks - For Jah [poem].</unittitle>
+                            <note>
+                                <p>Several drafts, carbon typescripts. <date normal="1971-03">March
+                                        1971</date></p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00032" level="file">
+                        <did>
+                            <unittitle>The Creator [story].</unittitle>
+                            <note>
+                                <p>Typescript, 26 leaves. <date normal="1955-05-26">May 26,
+                                        1955</date></p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00033" level="file">
+                        <did>
+                            <unittitle>Cthonic Fragments [poems].</unittitle>
+                            <note>
+                                <p>Typescript drafts for poems that later appeared in Dark
+                                    Continent; approx. 120 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00034" level="file">
+                        <did>
+                            <unittitle>Dark Continent.</unittitle>
+                            <note>
+                                <p>Incl. 2 sets of galleys (1st galleys and authors copy); page
+                                    proofs; carbon of final typescript; carbon typescript of some
+                                    1st draft material; proof of cover print; sample proof of title
+                                    page; sample proof of cover</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00035" level="file">
+                        <did>
+                            <unittitle>Dark Continent.</unittitle>
+                            <note>
+                                <p>Several carbon typescript drafts of parts of Dark Continent.
+                                        <date normal="1967">1967</date></p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00036" level="file">
+                        <did>
+                            <unittitle>Darn That Dream [poem].</unittitle>
+                            <note>
+                                <p>Typescript drafts. <date normal="1971-06-30">June 30,
+                                    1971</date></p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00037" level="file">
+                        <did>
+                            <unittitle>Dim Lights, Thick Smoke and Loud, Loud, Music.</unittitle>
+                            <note>
+                                <p>2 drafts, typescript</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00038" level="file">
+                        <did>
+                            <unittitle>Django.</unittitle>
+                            <note>
+                                <p>2 drafts, carbon typescripts. (See also <title
+                                        render="doublequote">Green Atom</title>)</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00039" level="file">
+                        <did>
+                            <unittitle>Green Star Stud: A Trilogy. vol. 1 (Star)
+                                [novel].</unittitle>
+                            <note>
+                                <p>Carbon typescripts, 171 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00040" level="file">
+                        <did>
+                            <unittitle>Dream Star Stud: A Trilogy. vol. 2 (Dream)
+                                [novel].</unittitle>
+                            <note>
+                                <p>Several drafts of a fragment of the first chapter, 9 Leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00041" level="file">
+                        <did>
+                            <unittitle>Eats.</unittitle>
+                            <note>
+                                <p>Several drafts of a proposed but unfinished cookbook review,
+                                    typescript</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00042" level="file">
+                        <did>
+                            <unittitle>Eden book.</unittitle>
+                            <note>
+                                <p>Several drafts, typescript and carbon typescript. <date
+                                        normal="1970">1970</date></p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00043" level="file">
+                        <did>
+                            <unittitle>Epic.</unittitle>
+                            <note>
+                                <p>See Saga</p>
+                            </note>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9017-00044" level="file">
+                    <did>
+                        <container label="Box" type="box">6</container>
+                        <unittitle>The Evil Old Man - Kabbals</unittitle>
+                    </did>
+                    <c03 id="VAB9017-00045" level="file">
+                        <did>
+                            <unittitle>The Evil Old Man [sketch].</unittitle>
+                            <note>
+                                <p>Typescript draft, 2 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00046" level="file">
+                        <did>
+                            <unittitle>Eyes Are Windows.</unittitle>
+                            <note>
+                                <p>2 drafts, typescript. Also contains typescript drafts of material
+                                    for Dark Continent</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00047" level="file">
+                        <did>
+                            <unittitle>The Eyes, The Blood.</unittitle>
+                            <note>
+                                <p>Several drafts - typescript, carbon typescript and photocopy;
+                                    page proofs. <date normal="1970/1973" type="inclusive"
+                                        >1970-1973</date></p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00048" level="file">
+                        <did>
+                            <unittitle>Face.</unittitle>
+                            <note>
+                                <p>Several drafts of Books 1 and 2, typescript</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00049" level="file">
+                        <did>
+                            <unittitle>Face.</unittitle>
+                            <note>
+                                <p>Typescript and photocopy of typescript for Book 1 and part of
+                                    Book 2</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00050" level="file">
+                        <did>
+                            <unittitle>First Decision.</unittitle>
+                            <note>
+                                <p>Typescript; reader's report</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00051" level="file">
+                        <did>
+                            <unittitle>Five.</unittitle>
+                            <note>
+                                <p>Typescript. Includes <title render="doublequote">VAV,</title>
+                                    <title render="doublequote">Tree,</title>
+                                    <title render="doublequote">Face,</title>
+                                    <title render="doublequote">Lights,</title>
+                                    <title render="doublequote">Cracks</title></p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00052" level="file">
+                        <did>
+                            <unittitle>From a Mischnah.</unittitle>
+                            <note>
+                                <p>2 drafts, typescript; proofs of From a Midrash (title change) as
+                                    published in Tens; selected poems <date normal="1961/1971"
+                                        type="inclusive">1961-1971</date></p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00053" level="file">
+                        <did>
+                            <unittitle>From ASAPH [poem].</unittitle>
+                            <note>
+                                <p>Typescript drafts, 4 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00054" level="file">
+                        <did>
+                            <unittitle>From: SEFER Ha-ADAM [poem].</unittitle>
+                            <note>
+                                <p>Typescript draft, 2 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00055" level="file">
+                        <did>
+                            <unittitle>The Frozen Roses.</unittitle>
+                            <note>
+                                <p>Typescript,<date normal="1956-06/1956-07" type="inclusive"
+                                        >June-July, 1956.</date> 38 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00056" level="file">
+                        <did>
+                            <unittitle>Harps.</unittitle>
+                            <note>
+                                <p>Typescript drafts</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00057" level="file">
+                        <did>
+                            <unittitle>Henry Miller Book Review for Kulchur.</unittitle>
+                            <note>
+                                <p>Early drafts, typescript. <date normal="1965-08">Aug.
+                                        1965.</date> 33 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00058" level="file">
+                        <did>
+                            <unittitle>Hero (of Hero/Lil).</unittitle>
+                            <note>
+                                <p>Several typescript; carbon transcript and photocopy of typescript
+                                    drafts; photopcopy of drawings. <date normal="1969"
+                                    >1969</date></p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00059" level="file">
+                        <did>
+                            <unittitle>Hero (of Hero/Lil).</unittitle>
+                            <note>
+                                <p>Carbon of final transcript</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00060" level="file">
+                        <did>
+                            <unittitle>Hero.</unittitle>
+                            <note>
+                                <p>Proof of cover for Hero</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00061" level="file">
+                        <did>
+                            <unittitle>Hero/Lil.</unittitle>
+                            <note>
+                                <p>Carbon typescript of Lil (illustrated); sheet of deletions to be
+                                    made from typescript; galleys for</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00062" level="file">
+                        <did>
+                            <unittitle>Hero/Lil</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00063" level="file">
+                        <did>
+                            <unittitle>A High Time [story].</unittitle>
+                            <note>
+                                <p>Typescript, 12 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00064" level="file">
+                        <did>
+                            <unittitle>The Hungry Hawk [story].</unittitle>
+                            <note>
+                                <p>Typescript, <date normal="1965-05">May 1965.</date> 20 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00065" level="file">
+                        <did>
+                            <unittitle>I am Marvin Repnick [1st line of story].</unittitle>
+                            <note>
+                                <p>Typescript, 9 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00066" level="file">
+                        <did>
+                            <unittitle>Interview of David Meltzer conducted by Barry
+                                Alpert.</unittitle>
+                            <note>
+                                <p>Photocopy of heavily corrected typescript, 36 leaves; typescript
+                                    of later draft, 28 leaves. <date normal="1973-10-04">Oct. 4,
+                                        1973</date></p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00067" level="file">
+                        <did>
+                            <unittitle>Introduction for Roman Books catalogue <unitdate
+                                    normal="1962">1962.</unitdate></unittitle>
+                            <note>
+                                <p>galley proofs; typescript of 1st complete draft; carbon
+                                    typescript of 15 letters between Meltzer and U. Grant Roman or
+                                    Jim Roman, <date normal="1962-09-12/1963-04-13" type="inclusive"
+                                        >Sept. 21, 1962 to Apr. 13, 1963</date></p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00068" level="file">
+                        <did>
+                            <unittitle>Isthmus.</unittitle>
+                            <note>
+                                <p>Carbon typescript of 1st draft. 5 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00069" level="file">
+                        <did>
+                            <unittitle>Handbook of the Invisible.</unittitle>
+                            <note>
+                                <p>Typescript of early drafts; typescript of final 1st draft;
+                                    typescript of late (final?) draft</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00070" level="file">
+                        <did>
+                            <unittitle>Kabbala Anthology.</unittitle>
+                            <note>
+                                <p>Typescript and autograph preliminary notes, 120 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00071" level="file">
+                        <did>
+                            <unittitle>Kabbal Anthology - J. Hirschman material.</unittitle>
+                            <note>
+                                <p>Typescripts, carbon typescripts and autograph translations by
+                                    Hirschman</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00072" level="file">
+                        <did>
+                            <unittitle>Kabbala Anthology.</unittitle>
+                            <note>
+                                <p>Photocopies of texts to be used in anthology</p>
+                            </note>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9017-00073" level="file">
+                    <did>
+                        <container label="Box" type="box">7</container>
+                        <unittitle>Knots - Our Happy...</unittitle>
+                    </did>
+                    <c03 id="VAB9017-00074" level="file">
+                        <did>
+                            <unittitle>Knots.</unittitle>
+                            <note>
+                                <p>Galleys: 2 copies of 1st set, one corrected; carbon of final
+                                    typescript; artwork</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00075" level="file">
+                        <did>
+                            <unittitle>The Last Mask Gone: an incident.</unittitle>
+                            <note>
+                                <p>Typescript of 1st draft, 13 leaves. <date normal="1955-12-22"
+                                        >Dec. 22, 1955;</date> 1 miscellaneous sheet, apparently
+                                    unrelated</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00076" level="file">
+                        <did>
+                            <unittitle>Let Me Tell You.</unittitle>
+                            <note>
+                                <p>By Meltzer and Michael McClure. Carbon typescript, 2 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00077" level="file">
+                        <did>
+                            <unittitle>Light for JRW.</unittitle>
+                            <note>
+                                <p>Early drafts, carbon typescript and photocopy</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00078" level="file">
+                        <did>
+                            <unittitle>Lil.</unittitle>
+                            <note>
+                                <p>Typescript of early drafts; carbon typescript <emph
+                                        render="doublequote">From: Lil</emph>, 10 leaves; carbon
+                                    typescript of final revisions, 5 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00079" level="file">
+                        <did>
+                            <unittitle>Liner Notes.</unittitle>
+                            <note>
+                                <p>3 drafts, typescript, 2 with autograph revisions. <date
+                                        normal="1969-03">March 1969</date></p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00080" level="file">
+                        <did>
+                            <unittitle>The Lover [story].</unittitle>
+                            <note>
+                                <p>Typescript. 2 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00081" level="file">
+                        <did>
+                            <unittitle>The Lover; Or, An Old-Fashioned Romance.</unittitle>
+                            <note>
+                                <p>[Unpublished <emph render="doublequote">partial</emph> of erotic
+                                    novel]. Carbon typescript. 33 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00082" level="file">
+                        <did>
+                            <unittitle>Luna.</unittitle>
+                            <note>
+                                <p>Several drafts, typescripts; autograph notes; research
+                                    correspondence. <date normal="1969/1970" type="inclusive">ca
+                                        1969-1970</date></p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00083" level="file">
+                        <did>
+                            <unittitle>The Man From the Family Clinic [story].</unittitle>
+                            <note>
+                                <p>Typescript, 12 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00084" level="file">
+                        <did>
+                            <unittitle>March 1, 1973 [poem].</unittitle>
+                            <note>
+                                <p>3 drafts, typescript</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00085" level="file">
+                        <did>
+                            <unittitle>March 7, 1973 [poem].</unittitle>
+                            <note>
+                                <p>2 drafts, typescript, one with autograph corrections</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00086" level="file">
+                        <did>
+                            <unittitle>The Mark [story].</unittitle>
+                            <note>
+                                <p>Typescript, 12 leaves; rejection notice</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00087" level="file">
+                        <did>
+                            <unittitle>The Martyr [novel].</unittitle>
+                            <note>
+                                <p>Carbon typescript, 179 leaves; outline, 2 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00088" level="file">
+                        <did>
+                            <unittitle>Memorial.</unittitle>
+                            <note>
+                                <p>Typescript, 6 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00089" level="file">
+                        <did>
+                            <unittitle>Message Found in An Angel's Novae [story].</unittitle>
+                            <note>
+                                <p>Typescript, 9 leaves; reader's report</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00090" level="file">
+                        <did>
+                            <unittitle>The Monkey's Side of Life [story].</unittitle>
+                            <note>
+                                <p>Typescript, 12 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00091" level="file">
+                        <did>
+                            <unittitle>Monologue in a Lost Tense.</unittitle>
+                            <note>
+                                <p>Carbon typescript in blue binder. <date normal="1951-10/1952-06"
+                                        type="inclusive">Oct. 1951-June 1952</date></p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00092" level="file">
+                        <did>
+                            <unittitle>The Monument [story].</unittitle>
+                            <note>
+                                <p>Typescript, 11 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00093" level="file">
+                        <did>
+                            <unittitle>The Mouse [story].</unittitle>
+                            <note>
+                                <p>3 drafts, typescript</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00094" level="file">
+                        <did>
+                            <unittitle>Mouse.</unittitle>
+                            <note>
+                                <p>Carbon typescript, 2 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00095" level="file">
+                        <did>
+                            <unittitle>My Town [novel].</unittitle>
+                            <note>
+                                <p>Typescript, 91 leaves; typescript and autograph notes, 29 leaves;
+                                    outline. <date normal="1954">ca 1954</date></p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00096" level="file">
+                        <did>
+                            <unittitle>Night Before Morning.</unittitle>
+                            <note>
+                                <p>2 drafts of Book I, typescript; draft of Book II, typescript.
+                                        <date normal="1960">ca. 1960</date></p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00097" level="file">
+                        <did>
+                            <unittitle>A Night; or Burlesque Downtown [story].</unittitle>
+                            <note>
+                                <p>Typescript with autograph corrections. 21 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00098" level="file">
+                        <did>
+                            <unittitle>Night Reel [poem].</unittitle>
+                            <note>
+                                <p>Typescript. 1 leave</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00099" level="file">
+                        <did>
+                            <unittitle>Night Reel-Night Real [poem].</unittitle>
+                            <note>
+                                <p>Typescript with autograph corrections. <date normal="1970">ca.
+                                        1970</date></p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00100" level="file">
+                        <did>
+                            <unittitle>Night-Light Texts [poem].</unittitle>
+                            <note>
+                                <p>Typescript. <date normal="1970-03-12">Mar. 12, 1970.</date> 2
+                                    leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00101" level="file">
+                        <did>
+                            <unittitle>Notes on Melville.</unittitle>
+                            <note>
+                                <p>Typescript of notes for a projected essay</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00102" level="file">
+                        <did>
+                            <unittitle>Once Upon a Time.</unittitle>
+                            <note>
+                                <p>Incomplete draft of television play, typescript</p>
+                            </note>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9017-00103" level="file">
+                    <did>
+                        <container label="Box" type="box">8</container>
+                        <unittitle>P-T</unittitle>
+                    </did>
+                    <c03 id="VAB9017-00104" level="file">
+                        <did>
+                            <unittitle>Parents, Children and Things [story].</unittitle>
+                            <note>
+                                <p>Typescript. <date normal="1955-06-12">June 12, 1955</date></p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00105" level="file">
+                        <did>
+                            <unittitle>Paula.</unittitle>
+                            <note>
+                                <p>See Carla</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00106" level="file">
+                        <did>
+                            <unittitle>The Peace That Frees/ The Dead is Life [poem].</unittitle>
+                            <note>
+                                <p>Typescript with autograph corrections. <date normal="1958-05-05"
+                                        >May 5, 1958.</date> 31 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00107" level="file">
+                        <did>
+                            <unittitle>Peter Le Blancâ [biographical sketch].</unittitle>
+                            <note>
+                                <p>6 drafts, typescript. 7 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00108" level="file">
+                        <did>
+                            <unittitle>Pinball [story].</unittitle>
+                            <note>
+                                <p>Typescript drafts. 13 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00109" level="file">
+                        <did>
+                            <unittitle>Poems at San Francisco.</unittitle>
+                            <note>
+                                <p>Typescript drafts. <date normal="1968/1969" type="inclusive">ca.
+                                        1968-1969</date></p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00110" level="file">
+                        <did>
+                            <unittitle>Poems <unitdate normal="1957">1957.</unitdate></unittitle>
+                            <note>
+                                <p>Typescripts of most Meltzer poems published in Poems by David
+                                    Meltzer and Donald Schenker, <date normal="1957">1957</date></p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00111" level="file">
+                        <did>
+                            <unittitle>Poems, <unitdate normal="1959-01">January
+                                1959.</unitdate></unittitle>
+                            <note>
+                                <p>Typescripts in tan binder. 40 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00112" level="file">
+                        <did>
+                            <unittitle>Poetry: <unitdate normal="1951/1953" type="inclusive"
+                                    >1951-1953</unitdate>(New York) vol. 1.</unittitle>
+                            <note>
+                                <p>Typescripts in white binder. ca. 125 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00113" level="file">
+                        <did>
+                            <unittitle>Poetry: <unitdate normal="1952/1953" type="inclusive"
+                                    >1952-1953</unitdate>(California) vol. 2.</unittitle>
+                            <note>
+                                <p>Typescripts in orange binder. ca. 125 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00114" level="file">
+                        <did>
+                            <unittitle>Poetry: <unitdate normal="1954">1954.</unitdate></unittitle>
+                            <note>
+                                <p>Typescripts in red binder. ca. 100 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00115" level="file">
+                        <did>
+                            <unittitle>Poetry Primer.</unittitle>
+                            <note>
+                                <p>5 drafts, typescript , of p. 10 of introduction</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00116" level="file">
+                        <did>
+                            <unittitle>The Prickbook of Rosy Thorns [poem].</unittitle>
+                            <note>
+                                <p>Typescript. <date normal="1959-09">Sept. 1959.</date> 11
+                                    leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00117" level="file">
+                        <did>
+                            <unittitle>The Process.</unittitle>
+                            <note>
+                                <p>Notes and typescript drafts of poems. ca. 200 leaves (2
+                                    folders)</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00118" level="file">
+                        <did>
+                            <unittitle>Prose <unitdate normal="1951/1953" type="inclusive"
+                                    >1951-1953.</unitdate></unittitle>
+                            <note>
+                                <p>Typescript drafts of short stories and essays in grey binder. ca.
+                                    130 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00119" level="file">
+                        <did>
+                            <unittitle>Ragas/1-25 [poems].</unittitle>
+                            <note>
+                                <p>Typescripts in tan binder. <date normal="1959-01-13/1959-01-16"
+                                        type="inclusive">Jan. 13-16, 1959</date></p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00120" level="file">
+                        <did>
+                            <unittitle>Rain Poem.</unittitle>
+                            <note>
+                                <p>3 drafts, typescript. 18 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00121" level="file">
+                        <did>
+                            <unittitle>Randall the Artist [outline for novel].</unittitle>
+                            <note>
+                                <p>3 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00122" level="file">
+                        <did>
+                            <unittitle>Randall, The Artist; or, Portrait of the Artist as a
+                                Trembling Image [novel].</unittitle>
+                            <note>
+                                <p>Typescript in brown binder. <date normal="1955-08/1955-09"
+                                        type="inclusive">Aug.-Sept. 1955.</date> 329 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00123" level="file">
+                        <did>
+                            <unittitle>Resurface [introduction to re-issue of San Francisco
+                                Poets].</unittitle>
+                            <note>
+                                <p>2 drafts, typescript; bibliography. <date normal="1975-02-22"
+                                        >Feb. 22, 1975</date></p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00124" level="file">
+                        <did>
+                            <unittitle>Revolution [essay].</unittitle>
+                            <note>
+                                <p>Typescript drafts. 5 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00125" level="file">
+                        <did>
+                            <unittitle>Saga [novel].</unittitle>
+                            <note>
+                                <p>Typescript of beginning. <date normal="1954-09-12">Sept. 12,
+                                        1954.</date> 42 leaves. [s.fr. Epic]</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00126" level="file">
+                        <did>
+                            <unittitle>Séance [poem].</unittitle>
+                            <note>
+                                <p>Typescript. 7 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00127" level="file">
+                        <did>
+                            <unittitle>Short Stories: <unitdate normal="1954">1954</unitdate>(Volume
+                                One).</unittitle>
+                            <note>
+                                <p>Typescript drafts in tan binder</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00128" level="file">
+                        <did>
+                            <unittitle>Short Stories: <unitdate normal="1954">1954</unitdate>(Volume
+                                Two).</unittitle>
+                            <note>
+                                <p>Typescript drafts in black binder</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00129" level="file">
+                        <did>
+                            <unittitle>Sister Dear [story].</unittitle>
+                            <note>
+                                <p>Typescript. 7 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00130" level="file">
+                        <did>
+                            <unittitle>Songs.</unittitle>
+                            <note>
+                                <p>Typescript and autograph drafts of songs for Sperent Power</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00131" level="file">
+                        <did>
+                            <unittitle>Songs of David Dog the Lion [poem].</unittitle>
+                            <note>
+                                <p>Carbon typescript drafts. 9 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00132" level="file">
+                        <did>
+                            <unittitle>Sound Movie.</unittitle>
+                            <note>
+                                <p>Autograph notes for sound track. 1 leave</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00133" level="file">
+                        <did>
+                            <unittitle>The Stage [poem].</unittitle>
+                            <note>
+                                <p>Typescript. 2 leaves (appears to lack p. 15, 18)</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00134" level="file">
+                        <did>
+                            <unittitle>State Grant [poem].</unittitle>
+                            <note>
+                                <p>Several drafts, typescript and carbon. <date normal="1971">ca.
+                                        1971.</date> (Also titled: Well-Fair Stage)</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00135" level="file">
+                        <did>
+                            <unittitle>Summer Poems. </unittitle>
+                            <note>
+                                <p>Typescript. <date normal="1955-07/1955-08" type="inclusive"
+                                        >July-Aug. 1955</date></p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00136" level="file">
+                        <did>
+                            <unittitle>Ten Acts, or Vaudeville, A Play.</unittitle>
+                            <note>
+                                <p>Typescript and carbon drafts</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00137" level="file">
+                        <did>
+                            <unittitle>The Ten Lost Books of the Ten Lost Prophets.</unittitle>
+                            <note>
+                                <p>2 incomplete drafts, carbon typescript. (Some of the material
+                                    later appeared in Yesod)</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00138" level="file">
+                        <did>
+                            <unittitle>Thanitopsis In Drag [poem].</unittitle>
+                            <note>
+                                <p>Carbon typescript. <date normal="1952-10-11">Oct. 11,
+                                        1952.</date> 70 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00139" level="file">
+                        <did>
+                            <unittitle>Tools [poem].</unittitle>
+                            <note>
+                                <p>Autograph draft. 1 leave</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00140" level="file">
+                        <did>
+                            <unittitle>Tree [prose poem].</unittitle>
+                            <note>
+                                <p>Carbon typescript. 4 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9017-00141" level="file">
+                    <did>
+                        <container label="Box" type="box">9</container>
+                        <unittitle>Vampire Poems - Z</unittitle>
+                    </did>
+                    <c03 id="VAB9017-00142" level="file">
+                        <did>
+                            <unittitle>Vampire Poems; <unitdate normal="1959-10-16">October 16th,
+                                    1959.</unitdate>
+                            </unittitle>
+                            <note>
+                                <p>Typescript. 7 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00143" level="file">
+                        <did>
+                            <unittitle>VAV [poem].</unittitle>
+                            <note>
+                                <p>Several drafts, typescript. <date normal="1972">ca.
+                                    1972</date></p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00144" level="file">
+                        <did>
+                            <unittitle>Waiting [novel].</unittitle>
+                            <note>
+                                <p>Carbon typescript in blue binder. <date
+                                        normal="1953-01-28/1953-09-05" type="inclusive">Jan 28-Sept.
+                                        5, 1953.</date> 130p.</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00145" level="file">
+                        <did>
+                            <unittitle>Waiting Again.</unittitle>
+                            <note>
+                                <p>Incomplete draft, typescript.<date normal="1955-05-12">May 12,
+                                        1955.</date> 7 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00146" level="file">
+                        <did>
+                            <unittitle>War-Song; A Monologue [story].</unittitle>
+                            <note>
+                                <p>Typescript. 7 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00147" level="file">
+                        <did>
+                            <unittitle>We haven't learned to see [poem].</unittitle>
+                            <note>
+                                <p>Carbon typescript. <date normal="1971">1971.</date> 2 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00148" level="file">
+                        <did>
+                            <unittitle>Well-Fair Stage.</unittitle>
+                            <note>
+                                <p>See State Grant</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00149" level="file">
+                        <did>
+                            <unittitle>A Womb With A View [story].</unittitle>
+                            <note>
+                                <p>Typescript. 9 leaves</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00150" level="file">
+                        <did>
+                            <unittitle>The World of John Foley [novel].</unittitle>
+                            <note>
+                                <p>3 typescript drafts and excerpts from drafts. <date normal="1955"
+                                        >ca. 1955</date></p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00151" level="file">
+                        <did>
+                            <unittitle>Yesod . Carbon typescript.</unittitle>
+                            <note>
+                                <p>See also: Ten Lost Books and Ten Lost Prophets</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00152" level="file">
+                        <did>
+                            <unittitle>YHShWH (Davka).</unittitle>
+                            <note>
+                                <p>Carbon typescript of poem and commentary.</p>
+                            </note>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9017-00153" level="file">
+                    <did>
+                        <unittitle>Miscellaneous-drafts, fragments, etc.</unittitle>
+                    </did>
+                    <c03 id="VAB9017-00154" level="file">
+                        <did>
+                            <unittitle>Notebooks.</unittitle>
+                            <note>
+                                <p>24 volumes containing poetry, trip notes, drawings, etc.</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00155" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1955/1956" type="inclusive"
+                                    >1955-1956:</unitdate>The Black Book.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00156" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1958-03/1958-10" type="inclusive">1958,
+                                    March-October:</unitdate>9 numbered, 3 spiral bound
+                                notebooks.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00157" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1959/1960" type="inclusive"
+                                    >1959-1960:</unitdate>orange spiral bound notebook.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00158" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1961">1961:</unitdate>Black bound
+                                volume.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00159" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1961/1966" type="inclusive"
+                                    >1961-1966:</unitdate>Black bound volume.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00160" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1962">1962:</unitdate>[1st line] cables,
+                                bands threads, cardsâ</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00161" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1963">1963:</unitdate>[1st line] They are
+                                outside.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00162" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1964">1964:</unitdate>[1st line] NEVER NO
+                                MOE.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00163" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1964">1964:</unitdate>[1st line] driving
+                                car dream.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00164" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1964">1964:</unitdate>[1st line]
+                                Chein-Hexagram (cont.)</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00165" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1966">1966:</unitdate>Theogony.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00166" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1970">1970:</unitdate>[1st line] ladder
+                                from large airplane.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00167" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1971/1972" type="inclusive"
+                                    >1971-1972:</unitdate>Small looseleaf volume,
+                                unbound.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00168" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1954/1974" type="inclusive"
+                                    >n.d.:</unitdate>3 spiral bound volumes.</unittitle>
+                        </did>
+                    </c03>
+
+                </c02>
+                <c02 id="VAB9017-00169" level="file">
+                    <did>
+                        <container label="Box" type="box">10</container>
+                        <unittitle>Tree Books; Tree journal</unittitle>
+                    </did>
+                    <c03 id="VAB9017-00170" level="file">
+                        <did>
+                            <unittitle>Catalog (mss.) of Tree publications.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00171" level="file">
+                        <did>
+                            <unittitle>Branchings</unittitle>
+                        </did>
+                        <c04 id="VAB9017-00172" level="file">
+                            <did>
+                                <unittitle>Codrescu, Andrei. For Max Jacob. <unitdate normal="1971"
+                                        >[1971]</unitdate></unittitle>
+                                <note>
+                                    <p>Typescript, 16 leaves </p>
+                                </note>
+                            </did>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB9017-00173" level="file">
+                        <did>
+                            <unittitle>Tree Books</unittitle>
+                        </did>
+                        <c04 id="VAB9017-00174" level="file">
+                            <did>
+                                <unittitle>Brandi, John. Desde Alla. <unitdate normal="1971"
+                                        >[1971].</unitdate></unittitle>
+                                <note>
+                                    <p>Typescript draft, 74 leaves; galleys, 21 leaves</p>
+                                </note>
+                            </did>
+                        </c04>
+                        <c04 id="VAB9017-00175" level="file">
+                            <did>
+                                <unittitle>Drachler, Rose. Burrowing in, Digging Out. Berkeley,
+                                        <unitdate normal="1974">1974</unitdate></unittitle>
+                                <note>
+                                    <p>Xerox of ms.; Xerox of galleys, corrected; page proofs;
+                                        sample cover. 88 leaves</p>
+                                </note>
+                            </did>
+                        </c04>
+                        <c04 id="VAB9017-00176" level="file">
+                            <did>
+                                <unittitle>Fishman, Charles. Aurora. Berkeley, <unitdate
+                                        normal="1974">1974</unitdate></unittitle>
+                                <note>
+                                    <p>Xerox of page proofs, corrected; ms.; photocopy and
+                                        typescript; paste-up. 50 leaves</p>
+                                </note>
+                            </did>
+                        </c04>
+                        <c04 id="VAB9017-00177" level="file">
+                            <did>
+                                <unittitle>Hirschman, Jack. Aur Sea. Berkeley, <unitdate
+                                        normal="1974">1974</unitdate></unittitle>
+                                <note>
+                                    <p>Ms.; Xerox of galleys; graphics; page proof; sample cover.
+                                        113 leaves</p>
+                                </note>
+                            </did>
+                        </c04>
+                        <c04 id="VAB9017-00178" level="file">
+                            <did>
+                                <unittitle>Hirschman, Jack. Scintilla. <unitdate normal="1971"
+                                        >[1971].</unitdate></unittitle>
+                                <note>
+                                    <p>Ms.; 2 sets of galleys, corrected. 94 leaves</p>
+                                </note>
+                            </did>
+                        </c04>
+                        <c04 id="VAB9017-00179" level="file">
+                            <did>
+                                <unittitle>Jabes, Edmond. Elya. <unitdate normal="1973"
+                                        >[1973].</unitdate></unittitle>
+                                <note>
+                                    <p>Xerox of ms., 105 leaves; 2 xeroxes of paste-up, corrected, 9
+                                        leaves; 2 paste-ups 187 leaves.; page proof, 99 leaves (4
+                                        folders)</p>
+                                </note>
+                            </did>
+                        </c04>
+                        <c04 id="VAB9017-00180" level="file">
+                            <did>
+                                <unittitle>Kruglick, Lewis. Unknown Angel. <unitdate normal="1970"
+                                        >[1970].</unitdate></unittitle>
+                                <note>
+                                    <p>2 Xeroxes of ms,. 34 leaves graphics; page proof, 6
+                                        leaves</p>
+                                </note>
+                            </did>
+                        </c04>
+                        <c04 id="VAB9017-00181" level="file">
+                            <did>
+                                <unittitle>Rothenberg, Jerome. A Book of Testimony.</unittitle>
+                                <note>
+                                    <p>Cover designs; ms,. 27 leaves; 2 sets of galley proof, 9
+                                        leaves each</p>
+                                </note>
+                            </did>
+                        </c04>
+                        <c04 id="VAB9017-00182" level="file">
+                            <did>
+                                <unittitle>Rothenberg, Jerome. Fragments form the Pirke Abot of
+                                    Rabbi Eleazer &amp; the Pearl. Berkeley, <unitdate
+                                        normal="1974">1974</unitdate></unittitle>
+                                <note>
+                                    <p>Xerox of ms., 16 leaves</p>
+                                </note>
+                            </did>
+                        </c04>
+                        <c04 id="VAB9017-00183" level="file">
+                            <did>
+                                <unittitle>Tarn, Nathaniel. Section: The Artemision from the Lyrics
+                                    From the Bride of God. <unitdate normal="1973"
+                                    >1973</unitdate></unittitle>
+                                <note>
+                                    <p>Xerox of ms., 21 leaves; galleys, 9 leaves; graphics</p>
+                                </note>
+                            </did>
+                        </c04>
+                        <c04 id="VAB9017-00184" level="file">
+                            <did>
+                                <unittitle>Tarn, Nathaniel. Section: Dutch Artemis or the Holland
+                                    Bride from the Lyrics From the Bride of God.</unittitle>
+                                <note>
+                                    <p>Photocopy of ms., 9 leaves [unpublished?]</p>
+                                </note>
+                            </did>
+                        </c04>
+
+                    </c03>
+                    <c03 id="VAB9017-00185" level="file">
+                        <did>
+                            <unittitle>Tree Books</unittitle>
+                        </did>
+                        <c04 id="VAB9017-00186" level="file">
+                            <did>
+                                <unittitle>1. The Book of Noah.</unittitle>
+                                <note>
+                                    <p>Trans. By Jack Hirschman. Xerox of ms., 8 leaves </p>
+                                </note>
+                            </did>
+                        </c04>
+                        <c04 id="VAB9017-00187" level="file">
+                            <did>
+                                <unittitle>2. Eleazor of Worms. Tree Tracts.</unittitle>
+                                <note>
+                                    <p>Trans. By Alexander Altman and Jack Hirschman. 1974. Xerox
+                                        and holograph, 26 leaves </p>
+                                </note>
+                            </did>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB9017-00188" level="file">
+                        <did>
+                            <unittitle>Tree (journal)</unittitle>
+                        </did>
+                        <c04 id="VAB9017-00189" level="file">
+                            <did>
+                                <unittitle>Tree 1. <unitdate normal="1970">Winter
+                                    1970</unitdate></unittitle>
+                            </did>
+                            <c05 id="VAB9017-00190" level="file">
+                                <did>
+                                    <unittitle>Art work</unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB9017-00191" level="file">
+                                <did>
+                                    <unittitle>Galley proofs</unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB9017-00192" level="file">
+                                <did>
+                                    <unittitle>Manuscripts</unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB9017-00193" level="file">
+                                <did>
+                                    <unittitle>Page proofs</unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                        <c04 id="VAB9017-00194" level="file">
+                            <did>
+                                <unittitle>Tree 2. <unitdate normal="1971">Summer
+                                    1971</unitdate></unittitle>
+                            </did>
+                            <c05 id="VAB9017-00195" level="file">
+                                <did>
+                                    <unittitle>Art work</unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB9017-00196" level="file">
+                                <did>
+                                    <unittitle>Galley proofs</unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB9017-00197" level="file">
+                                <did>
+                                    <unittitle>Manuscript</unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB9017-00198" level="file">
+                                <did>
+                                    <container label="Box" type="box">11</container>
+                                    <unittitle>Page proofs</unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB9017-00199" level="file">
+                                <did>
+                                    <unittitle>Proofs</unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                        <c04 id="VAB9017-00200" level="file">
+                            <did>
+                                <unittitle>Tree 3. <unitdate normal="1972">Winter
+                                    1972</unitdate></unittitle>
+                            </did>
+                            <c05 id="VAB9017-00201" level="file">
+                                <did>
+                                    <unittitle>Art work</unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB9017-00202" level="file">
+                                <did>
+                                    <unittitle>Galleys</unittitle>
+                                    <physdesc>(3 folders)</physdesc>
+                                </did>
+                            </c05>
+                            <c05 id="VAB9017-00203" level="file">
+                                <did>
+                                    <unittitle>Manuscript</unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB9017-00204" level="file">
+                                <did>
+                                    <unittitle>Material omitted</unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                        <c04 id="VAB9017-00205" level="file">
+                            <did>
+                                <unittitle>Tree 4. <unitdate normal="1974">Winter
+                                    1974</unitdate></unittitle>
+                            </did>
+                            <c05 id="VAB9017-00206" level="file">
+                                <did>
+                                    <unittitle>Manuscript</unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB9017-00207" level="file">
+                                <did>
+                                    <unittitle>Page proof - Xerox</unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB9017-00208" level="file">
+                                <did>
+                                    <unittitle>Unbound sheets; table of contents;
+                                        graphics</unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                        <c04 id="VAB9017-00209" level="file">
+                            <did>
+                                <unittitle>Tree 5. <unitdate normal="1975">Summer
+                                    1975</unitdate></unittitle>
+                            </did>
+                            <c05 id="VAB9017-00210" level="file">
+                                <did>
+                                    <unittitle>Manuscript</unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+
+                    </c03>
+                </c02>
+
+            </c01>
+            <c01 id="VAB9017-00211" level="series">
+                <did>
+                    <container label="Box" type="box">11</container>
+                    <unittitle>Writings by others</unittitle>
+                </did>
+                <scopecontent>
+                    <p>(All are poems unless otherwise identified)</p>
+                </scopecontent>
+                <c02 id="VAB9017-00212" level="file">
+                    <did>
+                        <container label="Box" type="box">11</container>
+                        <container label="Folder" type="folder">1</container>
+                        <unittitle>A-J</unittitle>
+                    </did>
+                    <c03 id="VAB9017-00213" level="file">
+                        <did>
+                            <unittitle>Branaman, Beth. Recipe</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00214" level="file">
+                        <did>
+                            <unittitle>Brent, John. Chemical Blues; Letter, <unitdate
+                                    normal="1954/1974" type="inclusive">n.d.</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00215" level="file">
+                        <did>
+                            <unittitle>Floris, A</unittitle>
+                        </did>
+                        <c04 id="VAB9017-00216" level="file">
+                            <did>
+                                <unittitle>Stuffy Surroundings.</unittitle>
+                                <physdesc>(Carbon typescript)</physdesc>
+                            </did>
+                        </c04>
+                        <c04 id="VAB9017-00217" level="file">
+                            <did>
+                                <unittitle>Sunbathing.</unittitle>
+                                <physdesc>Autograph</physdesc>
+                            </did>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB9017-00218" level="file">
+                        <did>
+                            <unittitle>Hartman, Robert. For Me</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00219" level="file">
+                        <did>
+                            <unittitle>Hoyem, Andrew. In a corner squats [1st line]</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9017-00220" level="file">
+                    <did>
+                        <container label="Box" type="box">11</container>
+                        <container label="Folder" type="folder">2</container>
+                        <unittitle>Detro, Gene</unittitle>
+                    </did>
+                    <c03 id="VAB9017-00221" level="file">
+                        <did>
+                            <unittitle>Footnote to a Dedication/For Jennifer Love Meltxer
+                                [essay].</unittitle>
+                            <physdesc>(Carbon typescript).</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9017-00222" level="file">
+                    <did>
+                        <container label="Box" type="box">11</container>
+                        <container label="Folder" type="folder">3</container>
+                        <unittitle>Haselwood, Dave L.</unittitle>
+                    </did>
+                    <c03 id="VAB9017-00223" level="file">
+                        <did>
+                            <unittitle>Connections.</unittitle>
+                            <physdesc>(Typescript)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00224" level="file">
+                        <did>
+                            <unittitle>Slack Poem.</unittitle>
+                            <physdesc>(Typescript)</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9017-00225" level="file">
+                    <did>
+                        <container label="Box" type="box">11</container>
+                        <container label="Folder" type="folder">4</container>
+                        <unittitle>K-Z</unittitle>
+                    </did>
+                    <c03 id="VAB9017-00226" level="file">
+                        <did>
+                            <unittitle>Kandel, Lenore. I thought Id give up [1st line].</unittitle>
+                            <physdesc>(Typescript)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00227" level="file">
+                        <did>
+                            <unittitle>Kupferberg, Tuli. I Say.</unittitle>
+                            <physdesc>(Carbon typescript)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00228" level="file">
+                        <did>
+                            <unittitle>Lippincott, Bruce. Girl From Froggy Bottom.</unittitle>
+                            <physdesc>(Typescript)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00229" level="file">
+                        <did>
+                            <unittitle>Margolis, Martin. First Generation.</unittitle>
+                            <physdesc>(Carbon typescript).</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00230" level="file">
+                        <did>
+                            <unittitle>O'Connell, Walter.</unittitle>
+                        </did>
+                        <c04 id="VAB9017-00231" level="file">
+                            <did>
+                                <unittitle>Return of the Explorer.</unittitle>
+                                <physdesc>(Mimeo)</physdesc>
+                            </did>
+                        </c04>
+                        <c04 id="VAB9017-00232" level="file">
+                            <did>
+                                <unittitle>Egress.</unittitle>
+                                <physdesc>(Mimeo)</physdesc>
+                            </did>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB9017-00233" level="file">
+                        <did>
+                            <unittitle>Raworth, Tom. Cinema 1.</unittitle>
+                            <physdesc>(Typescript)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00234" level="file">
+                        <did>
+                            <unittitle>Reed, John. The beast [1st line].</unittitle>
+                            <physdesc>(Typescript)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00235" level="file">
+                        <did>
+                            <unittitle>Rudolf, Anthony. Yael and Elya by Edmond Jabes [book
+                                review].</unittitle>
+                            <physdesc>(Typescript)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00236" level="file">
+                        <did>
+                            <unittitle>Schenker, Don. The Alphabet Bird. <unitdate
+                                    normal="1972-08-10">August 10, 1972</unitdate></unittitle>
+                            <physdesc>(Typescript)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00237" level="file">
+                        <did>
+                            <unittitle>Vermont, Charlie. The Last Jew in the Bronx.</unittitle>
+                            <physdesc>(Typescript)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00238" level="file">
+                        <did>
+                            <unittitle>Weishaus, Joel. Turning. <unitdate normal="1971-01">Jan.
+                                    1971.</unitdate></unittitle>
+                            <physdesc>(Carbon typescript)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00239" level="file">
+                        <did>
+                            <unittitle>Wiater, Michael. Feel better in the Morning. <unitdate
+                                    normal="1971-07-04">July 4, 1971</unitdate></unittitle>
+                            <physdesc>(Typescript)</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9017-00240" level="file">
+                    <did>
+                        <container label="Box" type="box">11</container>
+                        <container label="Folder" type="folder">5</container>
+                        <unittitle>Kruglick, Lewis</unittitle>
+                    </did>
+                    <c03 id="VAB9017-00241" level="file">
+                        <did>
+                            <unittitle>A Letter From Brixton Prison [memoir].</unittitle>
+                            <physdesc>(Xerox of typescript)</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9017-00242" level="file">
+                    <did>
+                        <container label="Box" type="box">11</container>
+                        <container label="Folder" type="folder">6</container>
+                        <unittitle>Kruglick, Lewis</unittitle>
+                    </did>
+                    <c03 id="VAB9017-00243" level="file">
+                        <did>
+                            <unittitle>Poems.</unittitle>
+                            <physdesc>(Carbon typescript and Xerox of typescript of several
+                                poems)</physdesc>
+                        </did>
+                        <c04 id="VAB9017-00244" level="file">
+                            <did>
+                                <unittitle>Autumn Song</unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAB9017-00245" level="file">
+                            <did>
+                                <unittitle>Awareness of intra-musculature [1st line]</unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAB9017-00246" level="file">
+                            <did>
+                                <unittitle>Cantor</unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAB9017-00247" level="file">
+                            <did>
+                                <unittitle>Dream Song</unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAB9017-00248" level="file">
+                            <did>
+                                <unittitle>The Groan [1st line]</unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAB9017-00249" level="file">
+                            <did>
+                                <unittitle>Inside the body [1st line]</unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAB9017-00250" level="file">
+                            <did>
+                                <unittitle>It's how the Kid's folks [1st line]</unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAB9017-00251" level="file">
+                            <did>
+                                <unittitle>It's your transparence [1st line]</unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAB9017-00252" level="file">
+                            <did>
+                                <unittitle>The Lizard in my Head</unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAB9017-00253" level="file">
+                            <did>
+                                <unittitle>Maya</unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAB9017-00254" level="file">
+                            <did>
+                                <unittitle>My Whore [1st line]</unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAB9017-00255" level="file">
+                            <did>
+                                <unittitle>O your medieval childhood [1st line]</unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAB9017-00256" level="file">
+                            <did>
+                                <unittitle>Painting by William Blake</unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAB9017-00257" level="file">
+                            <did>
+                                <unittitle>Shrove Tuesday</unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAB9017-00258" level="file">
+                            <did>
+                                <unittitle>The System</unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAB9017-00259" level="file">
+                            <did>
+                                <unittitle>Well, there's just no further [1st line]</unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAB9017-00260" level="file">
+                            <did>
+                                <unittitle>Your voice is house [1st line]</unittitle>
+                            </did>
+                        </c04>
+                    </c03>
+                </c02>
+                <c02 id="VAB9017-00261" level="file">
+                    <did>
+                        <container label="Box" type="box">11</container>
+                        <container label="Folder" type="folder">7</container>
+                        <unittitle>Kruglick, Lewis</unittitle>
+                    </did>
+                    <c03 id="VAB9017-00262" level="file">
+                        <did>
+                            <unittitle>Trance/Positions.</unittitle>
+                            <physdesc>(Xerox of typescript)</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9017-00263" level="file">
+                    <did>
+                        <container label="Box" type="box">11</container>
+                        <container label="Folder" type="folder">8</container>
+                        <unittitle>Korte, Mary Norbert </unittitle>
+                    </did>
+                    <c03 id="VAB9017-00264" level="file">
+                        <did>
+                            <unittitle>Beginning of Lines/Response to Albion Moonlight.</unittitle>
+                            <physdesc>(Mimeograph)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00265" level="file">
+                        <did>
+                            <unittitle>Poems to grow into.</unittitle>
+                            <physdesc>(Autograph draft, signed, illustrated.)</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9017-00266" level="file">
+                    <did>
+                        <container label="Box" type="box">11</container>
+                        <container label="Folder" type="folder">9</container>
+                        <unittitle>Lowenfels, Walter</unittitle>
+                    </did>
+                    <c03 id="VAB9017-00267" level="file">
+                        <did>
+                            <unittitle>Loving You In the Fall out (extracts).</unittitle>
+                            <physdesc>(Photocopy of typescript)</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9017-00268" level="file">
+                    <did>
+                        <container label="Box" type="box">11</container>
+                        <container label="Folder" type="folder">10</container>
+                        <unittitle>Malanga, Gerard</unittitle>
+                    </did>
+                    <c03 id="VAB9017-00269" level="file">
+                        <did>
+                            <unittitle>Poems.</unittitle>
+                            <physdesc>(Xerox of typescript)</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9017-00270" level="file">
+                    <did>
+                        <container label="Box" type="box">11</container>
+                        <container label="Folder" type="folder">11</container>
+                        <unittitle>McMurtry, Larry</unittitle>
+                    </did>
+                    <c03 id="VAB9017-00271" level="file">
+                        <did>
+                            <unittitle>Breeding Darrell [story].</unittitle>
+                            <physdesc>(Typescript)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00272" level="file">
+                        <did>
+                            <unittitle>The Everlasting Arms [story].</unittitle>
+                            <physdesc>(Typescript)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00273" level="file">
+                        <did>
+                            <unittitle>There Will Be Peace in Korea [story].</unittitle>
+                            <physdesc>(Typescript)</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9017-00274" level="file">
+                    <did>
+                        <container label="Box" type="box">11</container>
+                        <container label="Folder" type="folder">12</container>
+                        <unittitle>McMurtry, Larry</unittitle>
+                    </did>
+                    <c03 id="VAB9017-00275" level="file">
+                        <did>
+                            <unittitle>Contemporary American Poetry and Prose [speech].</unittitle>
+                            <physdesc>(Typescript)</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9017-00276" level="file">
+                    <did>
+                        <container label="Box" type="box">11</container>
+                        <container label="Folder" type="folder">13</container>
+                        <unittitle>Nelville, Kris</unittitle>
+                    </did>
+                    <c03 id="VAB9017-00277" level="file">
+                        <did>
+                            <unittitle>Phil Kabolinsky-ex football [1st line, story].</unittitle>
+                            <physdesc>(Typescript)</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9017-00278" level="file">
+                    <did>
+                        <container label="Box" type="box">11</container>
+                        <container label="Folder" type="folder">14</container>
+                        <unittitle>Olay, Lionel</unittitle>
+                    </did>
+                    <c03 id="VAB9017-00279" level="file">
+                        <did>
+                            <unittitle>Man in Space [story].</unittitle>
+                            <physdesc>(Carbon typescript)</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9017-00280" level="file">
+                    <did>
+                        <container label="Box" type="box">11</container>
+                        <container label="Folder" type="folder">15</container>
+                        <unittitle>Steiner, John </unittitle>
+                    </did>
+                    <c03 id="VAB9017-00281" level="file">
+                        <did>
+                            <unittitle>For David Meltxer. <unitdate normal="1970-11-07">Nov. 7,
+                                    1970</unitdate></unittitle>
+                            <physdesc>(Typescript)</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9017-00282" level="file">
+                    <did>
+                        <container label="Box" type="box">11</container>
+                        <container label="Folder" type="folder">16</container>
+                        <unittitle>Tarlow, Idell</unittitle>
+                    </did>
+                    <c03 id="VAB9017-00283" level="file">
+                        <did>
+                            <unittitle>Poems.</unittitle>
+                            <physdesc>(Typescripts and carbons of 49 poems.)</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9017-00284" level="file">
+                    <did>
+                        <container label="Box" type="box">11</container>
+                        <container label="Folder" type="folder">17</container>
+                        <unittitle>Whalen, Philip</unittitle>
+                    </did>
+                    <c03 id="VAB9017-00285" level="file">
+                        <did>
+                            <unittitle>Acacias: Rain.</unittitle>
+                            <physdesc>(Typescript)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00286" level="file">
+                        <did>
+                            <unittitle>Sad Song in the Antique Manner.</unittitle>
+                            <physdesc>(Typescript)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00287" level="file">
+                        <did>
+                            <unittitle>[Untitled].</unittitle>
+                            <physdesc>(Typescript)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00288" level="file">
+                        <did>
+                            <unittitle>Waterlilies.</unittitle>
+                            <physdesc>(Typescript)</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9017-00289" level="file">
+                    <did>
+                        <container label="Box" type="box">11</container>
+                        <container label="Folder" type="folder">18</container>
+                        <unittitle>Unidentified authors</unittitle>
+                    </did>
+                    <c03 id="VAB9017-00290" level="file">
+                        <did>
+                            <unittitle>&amp; on the seventh day petals fell in
+                                Petaluma</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00291" level="file">
+                        <did>
+                            <unittitle>and why [1st line] (by B.S.)</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00292" level="file">
+                        <did>
+                            <unittitle>As the hats of [1st line}</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00293" level="file">
+                        <did>
+                            <unittitle>Charcoal marks anoint the drawing board [1st
+                                line]</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00294" level="file">
+                        <did>
+                            <unittitle>Dear david [1st line] (by___, Lee)</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00295" level="file">
+                        <did>
+                            <unittitle>Drdvd -snotften tht I tak it upn misieff [1st
+                                line]</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00296" level="file">
+                        <did>
+                            <unittitle>The flotsam on the water [1st line]</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00297" level="file">
+                        <did>
+                            <unittitle>For David</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00298" level="file">
+                        <did>
+                            <unittitle>for david Meltzer from sheila's dream of oct. 2. (by ____,
+                                Sheila)</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00299" level="file">
+                        <did>
+                            <unittitle>for the good of the rose [1st line]</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00300" level="file">
+                        <did>
+                            <unittitle>A group of people sit cross legged [1st line]</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00301" level="file">
+                        <did>
+                            <unittitle>in the havoc room of old fame's custom [1st line]</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00302" level="file">
+                        <did>
+                            <unittitle>lionel david tina &amp; fam</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00303" level="file">
+                        <did>
+                            <unittitle>poem to be recited by a young girl</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00304" level="file">
+                        <did>
+                            <unittitle>Prophecy (by Jules Supervielle, trans. by Bob
+                                Stock)</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00305" level="file">
+                        <did>
+                            <unittitle>Revelation at Courthouse Park</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00306" level="file">
+                        <did>
+                            <unittitle>San Francisco Newsboy Cries</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00307" level="file">
+                        <did>
+                            <unittitle>Scarlet Witch</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00308" level="file">
+                        <did>
+                            <unittitle>shining discovery of a fink [1st line]</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00309" level="file">
+                        <did>
+                            <unittitle>someday ill find that long sought [1st line]</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00310" level="file">
+                        <did>
+                            <unittitle>stop talking [1st line]</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00311" level="file">
+                        <did>
+                            <unittitle>A Strange Wild Song (by L.D.)</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00312" level="file">
+                        <did>
+                            <unittitle>the golden child walks [1st line]</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00313" level="file">
+                        <did>
+                            <unittitle>this is it: [1st line] (by i. [Idell Tarlow?)]</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00314" level="file">
+                        <did>
+                            <unittitle>This One Summer</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00315" level="file">
+                        <did>
+                            <unittitle>U.S. Highball</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00316" level="file">
+                        <did>
+                            <unittitle>Waiting [1st line]</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00317" level="file">
+                        <did>
+                            <unittitle>witty draining minds of slough [1st line]</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00318" level="file">
+                        <did>
+                            <unittitle>You should always look over ther [1st line]</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9017-00319" level="file">
+                        <did>
+                            <unittitle>you gondie somdayanyounoit [1st line] (by ____,
+                                Robert)</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+
+            </c01>
+            <c01 id="VAB9017-00320" level="series">
+                <did>
+                    <container label="Box" type="box">11</container>
+                    <unittitle>Miscellaneous</unittitle>
+                </did>
+                <c02 id="VAB9017-00321" level="file">
+                    <did>
+                        <unittitle>Audio tape</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00322" level="file">
+                    <did>
+                        <unittitle>Drawings</unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00323" level="file">
+                    <did>
+                        <container label="Box" type="box">12</container>
+                        <unittitle>Engraving block from <title render="doublequote">The
+                                Process</title></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00324" level="file">
+                    <did>
+                        <unittitle>Financial statements</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00325" level="file">
+                    <did>
+                        <unittitle>Photographs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00326" level="file">
+                    <did>
+                        <unittitle>Printed matter</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00327" level="file">
+                    <did>
+                        <unittitle>Miscellany</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00328" level="file">
+                    <did>
+                        <container label="Map case" type="box"/>
+                        <unittitle>Miscellaneous artwork</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00329" level="file">
+                    <did>
+                        <unittitle>Posters</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAB9017-00330" level="file">
+                <did>
+                    <unittitle>
+                        <emph render="bold">Index entries</emph>
+                    </unittitle>
+                </did>
+                <c02 id="VAB9017-00331" level="file">
+                    <did>
+                        <unittitle>Abbot, Keith, 1944-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00332" level="file">
+                    <did>
+                        <unittitle>Ackerman, Forrest J., 1916-</unittitle>
+                        <physdesc>(2 entries)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00333" level="file">
+                    <did>
+                        <unittitle>Allen, Donald Merriam, 1912-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00334" level="file">
+                    <did>
+                        <unittitle>Alpert, Barry, 1945-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00335" level="file">
+                    <did>
+                        <unittitle>Andre, Michael, 1946-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00336" level="file">
+                    <did>
+                        <unittitle>Austin, James Clayton, 1923-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00337" level="file">
+                    <did>
+                        <unittitle>Banks, Russel, 1940-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00338" level="file">
+                    <did>
+                        <unittitle>Bargad, Warren, 1940-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00339" level="file">
+                    <did>
+                        <unittitle>Barnett, Anthony, 1941-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00340" level="file">
+                    <did>
+                        <unittitle>Beck, Julian, 1925-1985</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00341" level="file">
+                    <did>
+                        <unittitle>Bercholz, Samuel, 1947-</unittitle>
+                        <physdesc>(2 entries)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00342" level="file">
+                    <did>
+                        <unittitle>Berry, Paul Lucien, 1921-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00343" level="file">
+                    <did>
+                        <unittitle>Bertolino, James, 1942-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00344" level="file">
+                    <did>
+                        <unittitle>Bierman, James Henry, 1942-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00345" level="file">
+                    <did>
+                        <unittitle>Bixby, Jerome Lewis, 1923-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00346" level="file">
+                    <did>
+                        <unittitle>Bloch, Chana Florence (Faerstein), 1940-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00347" level="file">
+                    <did>
+                        <unittitle>Blazek, Douglas, 1941-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00348" level="file">
+                    <did>
+                        <unittitle>Borregaard, Ebbe, 1933-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00349" level="file">
+                    <did>
+                        <unittitle>Brakhage, Stan, 1933-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00350" level="file">
+                    <did>
+                        <unittitle>Braman, Sandra, 1951-</unittitle>
+                        <physdesc>(2 entries)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00351" level="file">
+                    <did>
+                        <unittitle>Brandi, John, 1943-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00352" level="file">
+                    <did>
+                        <unittitle>Briggs, Robert</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00353" level="file">
+                    <did>
+                        <unittitle>Brilliant, Alan, 1936-</unittitle>
+                        <physdesc>(4 entries)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00354" level="file">
+                    <did>
+                        <unittitle>Brit, Alan William, 1950-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00355" level="file">
+                    <did>
+                        <unittitle>Bromige, David Mansfield, 1933-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00356" level="file">
+                    <did>
+                        <unittitle>Broughton, James, 1913-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00357" level="file">
+                    <did>
+                        <unittitle>Burton, Phillip, 1926-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00358" level="file">
+                    <did>
+                        <unittitle>Cameron, Elsa Sue, 1939-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00359" level="file">
+                    <did>
+                        <unittitle>Cargas, Harry James, 1932-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00360" level="file">
+                    <did>
+                        <unittitle>Carroll, Paul, 1927-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00361" level="file">
+                    <did>
+                        <unittitle>Castro, Michael, 1945-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00362" level="file">
+                    <did>
+                        <unittitle>Chance, John Newton, 1911-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00363" level="file">
+                    <did>
+                        <unittitle>Chandonnet, Ann (Fox), 1943-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00364" level="file">
+                    <did>
+                        <unittitle>Charny, Carmi, 1925-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00365" level="file">
+                    <did>
+                        <unittitle>Charters, Samuel Barclay, 1929-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00366" level="file">
+                    <did>
+                        <unittitle>Clothier, Peter Dean, 1936-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00367" level="file">
+                    <did>
+                        <unittitle>Cloutier, David Edward, 1951-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00368" level="file">
+                    <did>
+                        <unittitle>Codrescu, Andrei, 1946-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00369" level="file">
+                    <did>
+                        <unittitle>Cohen, Marty, 1947-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00370" level="file">
+                    <did>
+                        <unittitle>Cohn, Marguerite (Arnold), 1897-1984</unittitle>
+                        <physdesc>(2 entries)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00371" level="file">
+                    <did>
+                        <unittitle>Coll, John Daniel, 1934-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00372" level="file">
+                    <did>
+                        <unittitle>Collom, Jack, 1931-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00373" level="file">
+                    <did>
+                        <unittitle>Coolidge, Clark, 1939-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00374" level="file">
+                    <did>
+                        <unittitle>Corman, Sidney, 1924-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00375" level="file">
+                    <did>
+                        <unittitle>Cranston, Alan, 1914-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00376" level="file">
+                    <did>
+                        <unittitle>Crawford, Max, 1938-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00377" level="file">
+                    <did>
+                        <unittitle>Dawson, Fielding, 1930-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00378" level="file">
+                    <did>
+                        <unittitle>DeLoach, Allen, 1939-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00379" level="file">
+                    <did>
+                        <unittitle>Derleth, August William, 1909-1971</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00380" level="file">
+                    <did>
+                        <unittitle>Detro, Gene, 1935-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00381" level="file">
+                    <did>
+                        <unittitle>Dienst, Rolf Gunter, 1939-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00382" level="file">
+                    <did>
+                        <unittitle>Drachler, Rose (Kaplowitz), 1911-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00383" level="file">
+                    <did>
+                        <unittitle>Durand, Robert, 1944-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00384" level="file">
+                    <did>
+                        <unittitle>Eisenstein, Samuel Abraham, 1932-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00385" level="file">
+                    <did>
+                        <unittitle>Elder, Muldoon, 1935-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00386" level="file">
+                    <did>
+                        <unittitle>Eshleman, Clayton, 1935-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00387" level="file">
+                    <did>
+                        <unittitle>Eulert, Donald Dean, 1935-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00388" level="file">
+                    <did>
+                        <unittitle>Everson, William Oliver, 1912-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00389" level="file">
+                    <did>
+                        <unittitle>Federman, Raymond, 1928-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00390" level="file">
+                    <did>
+                        <unittitle>Fein, Cheri</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00391" level="file">
+                    <did>
+                        <unittitle>Ferlinghetti, Lawrence, 1919-</unittitle>
+                        <physdesc>(2 entries)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00392" level="file">
+                    <did>
+                        <unittitle>Field, Patti</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00393" level="file">
+                    <did>
+                        <unittitle>Fishman, Charles Munro, 1942-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00394" level="file">
+                    <did>
+                        <unittitle>Fles, John</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00395" level="file">
+                    <did>
+                        <unittitle>Fowlie, Wallace, 1908-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00396" level="file">
+                    <did>
+                        <unittitle>Fram, Michael L.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00397" level="file">
+                    <did>
+                        <unittitle>Fredman, Stephen, 1948-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00398" level="file">
+                    <did>
+                        <unittitle>Gach, Gary, 1947-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00399" level="file">
+                    <did>
+                        <unittitle>Gallup, Dick, 1941-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00400" level="file">
+                    <did>
+                        <unittitle>Gardner, Geoffrey, 1943-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00401" level="file">
+                    <did>
+                        <unittitle>Ginsberg, Allen, 1926-</unittitle>
+                        <physdesc>(2 entries)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00402" level="file">
+                    <did>
+                        <unittitle>Gitin, David Daniel, 1941-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00403" level="file">
+                    <did>
+                        <unittitle>Gizzi, Michael, 1949-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00404" level="file">
+                    <did>
+                        <unittitle>Gleason, Ralph Joseph, 1917-1975</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00405" level="file">
+                    <did>
+                        <unittitle>Glicksman, Hal, 1937-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00406" level="file">
+                    <did>
+                        <unittitle>Gold, Herbert, 1924-</unittitle>
+                        <physdesc>(2 entries)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00407" level="file">
+                    <did>
+                        <unittitle>Grantier, John Robert, 1937-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00408" level="file">
+                    <did>
+                        <unittitle>Greene, Jonathon Edward, 1943-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00409" level="file">
+                    <did>
+                        <unittitle>Griffin, Walter, 1937-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00410" level="file">
+                    <did>
+                        <unittitle>Griffith, E.V., 1927-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00411" level="file">
+                    <did>
+                        <unittitle>Grossinger, Richard, 1944-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00412" level="file">
+                    <did>
+                        <unittitle>Grossman, Martin, 1943-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00413" level="file">
+                    <did>
+                        <unittitle>Hacket, Philip, 1941-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00414" level="file">
+                    <did>
+                        <unittitle>Halpern, Daniel, 1945-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00415" level="file">
+                    <did>
+                        <unittitle>Hanson, Kenneth O 1922-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00416" level="file">
+                    <did>
+                        <unittitle>Harper, Michael Steven, 1938-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00417" level="file">
+                    <did>
+                        <unittitle>Harrold, William Eugene, 1936-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00418" level="file">
+                    <did>
+                        <unittitle>Haselwood, Dave</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00419" level="file">
+                    <did>
+                        <unittitle>Hausman, Gerald, 1945-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00420" level="file">
+                    <did>
+                        <unittitle>Hawley, Robert L</unittitle>
+                        <physdesc>(3 entries)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00421" level="file">
+                    <did>
+                        <unittitle>Hejinian, Lyn, 1941-</unittitle>
+                        <physdesc>(2 entries)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00422" level="file">
+                    <did>
+                        <unittitle>Herms, George, 1935-</unittitle>
+                        <physdesc>(2 entries)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00423" level="file">
+                    <did>
+                        <unittitle>Higgins, Richard Carter, 1938-</unittitle>
+                        <physdesc>(2 entries)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00424" level="file">
+                    <did>
+                        <unittitle>Hirschman, Jack, 1933-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00425" level="file">
+                    <did>
+                        <unittitle>Hite, Robert Ernest, 1943-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00426" level="file">
+                    <did>
+                        <unittitle>Hollo, Anselm, 1934-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00427" level="file">
+                    <did>
+                        <unittitle>Hopps, Walter</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00428" level="file">
+                    <did>
+                        <unittitle>Hornick, Lita R., 1927-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00429" level="file">
+                    <did>
+                        <unittitle>Hough, Lindy Downer, 1944-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00430" level="file">
+                    <did>
+                        <unittitle>Howard, Peter Brigham, 1938-</unittitle>
+                        <physdesc>(2 entries)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00431" level="file">
+                    <did>
+                        <unittitle>Hoyem, Andrew, 1935-</unittitle>
+                        <physdesc>(2 entries)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00432" level="file">
+                    <did>
+                        <unittitle>Jardine, Jack, 1931-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00433" level="file">
+                    <did>
+                        <unittitle>Johnson, Karl Bernard, 1942-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00434" level="file">
+                    <did>
+                        <unittitle>Johnson, Raymond Edward, 1927-</unittitle>
+                        <physdesc>(4 entries)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00435" level="file">
+                    <did>
+                        <unittitle>Jones, Jeanetta L, 1947-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00436" level="file">
+                    <did>
+                        <unittitle>Kaplan, Jean Caryl (Korn), 1926-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00437" level="file">
+                    <did>
+                        <unittitle>Kelly, Robert, 1935-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00438" level="file">
+                    <did>
+                        <unittitle>Kennedy, Richard, 1932-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00439" level="file">
+                    <did>
+                        <unittitle>Kherdian, David, 1931-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00440" level="file">
+                    <did>
+                        <unittitle>Kienholz, Edward, 1927-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00441" level="file">
+                    <did>
+                        <unittitle>Kessler, Jascha Frederick, 1929-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00442" level="file">
+                    <did>
+                        <unittitle>Kimberly, Nick</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00443" level="file">
+                    <did>
+                        <unittitle>Kirby, Brian</unittitle>
+                        <physdesc>(2 entries)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00444" level="file">
+                    <did>
+                        <unittitle>Kissam, Edward, 1943-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00445" level="file">
+                    <did>
+                        <unittitle>Klenk, Richard George, 1907-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00446" level="file">
+                    <did>
+                        <unittitle>Kleyman, Paul, 1945-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00447" level="file">
+                    <did>
+                        <unittitle>Koerte, Mary Norbert, 1934-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00448" level="file">
+                    <did>
+                        <unittitle>Koran, Dennis Howard, 1947-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00449" level="file">
+                    <did>
+                        <unittitle>Kremen, Kathryn R, 1943-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00450" level="file">
+                    <did>
+                        <unittitle>Kruchkow, Diane, 1947-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00451" level="file">
+                    <did>
+                        <unittitle>Kruglick, Lewis</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00452" level="file">
+                    <did>
+                        <unittitle>Laderman, Paul Samuel, 1934-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00453" level="file">
+                    <did>
+                        <unittitle>Larsen, Carl, 1934-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00454" level="file">
+                    <did>
+                        <unittitle>Laughlin, James, 1914-</unittitle>
+                        <physdesc>(2 entries)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00455" level="file">
+                    <did>
+                        <unittitle>LaVigne, Robert Clair, 1928-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00456" level="file">
+                    <did>
+                        <unittitle>Lawless, Gary Cameron, 1951-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00457" level="file">
+                    <did>
+                        <unittitle>Legman, Gershon, 1917-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00458" level="file">
+                    <did>
+                        <unittitle>Lerner, Arthur, 1915-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00459" level="file">
+                    <did>
+                        <unittitle>Levertov, Denise, 1923-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00460" level="file">
+                    <did>
+                        <unittitle>Lewis, Grover Virgil, 1934-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00461" level="file">
+                    <did>
+                        <unittitle>Linenthal, Mark</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00462" level="file">
+                    <did>
+                        <unittitle>Lowenfels, Walter, 1897-1976</unittitle>
+                        <physdesc>(2 entries)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00463" level="file">
+                    <did>
+                        <unittitle>Lowry, Robert, 1919-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00464" level="file">
+                    <did>
+                        <unittitle>McClure, Michael, 1932-</unittitle>
+                        <physdesc>(2 entries)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00465" level="file">
+                    <did>
+                        <unittitle>McConnel, Frances Hunt Ruhlen, 1941-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00466" level="file">
+                    <did>
+                        <unittitle>McCord, Howard, 1932-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00467" level="file">
+                    <did>
+                        <unittitle>McFarland, Ronald Earl, 1942-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00468" level="file">
+                    <did>
+                        <unittitle>McNail, Stanley Duane, 1918-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00469" level="file">
+                    <did>
+                        <unittitle>Maimes, Steven L</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00470" level="file">
+                    <did>
+                        <unittitle>Malanga, Gerard Joseph, 1943-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00471" level="file">
+                    <did>
+                        <unittitle>Marchman, Fred, 1941-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00472" level="file">
+                    <did>
+                        <unittitle>Margolis, William Julius, 1927-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00473" level="file">
+                    <did>
+                        <unittitle>Marlatt, Daphne (Buckle), 1942-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00474" level="file">
+                    <did>
+                        <unittitle>Martin, John Kenneth, 1930-</unittitle>
+                        <physdesc>(2 entries)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00475" level="file">
+                    <did>
+                        <unittitle>Martino, Bill, 1933-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00476" level="file">
+                    <did>
+                        <unittitle>Matheson, William John, 1927-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00477" level="file">
+                    <did>
+                        <unittitle>Mayer, Gerda Kamilla (Stein), 1927-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00478" level="file">
+                    <did>
+                        <unittitle>Marlowe, Alan Stephen, 1937-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00479" level="file">
+                    <did>
+                        <unittitle>Meissner, William, 1948-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00480" level="file">
+                    <did>
+                        <unittitle>Meltzer, David, 1937-</unittitle>
+                        <physdesc>(29 entries)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00481" level="file">
+                    <did>
+                        <unittitle>Mernit, Susan, 1953-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00482" level="file">
+                    <did>
+                        <unittitle>Metz, Jerred, 1943-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00483" level="file">
+                    <did>
+                        <unittitle>Meyer, Helen (Honig), 1907-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00484" level="file">
+                    <did>
+                        <unittitle>Miller, Rob Hollis, 1944-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00485" level="file">
+                    <did>
+                        <unittitle>Mintz, Jerome Richard, 1930-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00486" level="file">
+                    <did>
+                        <unittitle>Mirsky, Mark Jay, 1939-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00487" level="file">
+                    <did>
+                        <unittitle>Mitchell, Stephen</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00488" level="file">
+                    <did>
+                        <unittitle>Moore, Richard Thomas, 1927-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00489" level="file">
+                    <did>
+                        <unittitle>Morris, James Ryan, 1933-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00490" level="file">
+                    <did>
+                        <unittitle>Moser, Norman Calvin, 1931-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00491" level="file">
+                    <did>
+                        <unittitle>Mycue, Edward, 1937-</unittitle>
+                        <physdesc>(2 entries)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00492" level="file">
+                    <did>
+                        <unittitle>Nelson, Sharon H., 1948-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00493" level="file">
+                    <did>
+                        <unittitle>Neugroschel, Joachim</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00494" level="file">
+                    <did>
+                        <unittitle>Neville, Kris, 1925-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00495" level="file">
+                    <did>
+                        <unittitle>Norris, Kathleen, 1947-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00496" level="file">
+                    <did>
+                        <unittitle>Norse, Harold, 1916-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00497" level="file">
+                    <did>
+                        <unittitle>Padgett, Ron, 1942-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00498" level="file">
+                    <did>
+                        <unittitle>Patchen, Kenneth, 1911-1972</unittitle>
+                        <physdesc>(2 entries)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00499" level="file">
+                    <did>
+                        <unittitle>Patchen, Miriam (Oikemus)</unittitle>
+                        <physdesc>(2 entries)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00500" level="file">
+                    <did>
+                        <unittitle>Pearlman, William Dennis, 1943-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00501" level="file">
+                    <did>
+                        <unittitle>Peck, John Frederick, 1941-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00502" level="file">
+                    <did>
+                        <unittitle>Perkins, Michael, 1942-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00503" level="file">
+                    <did>
+                        <unittitle>Phillips, William, 1907-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00504" level="file">
+                    <did>
+                        <unittitle>Pickering, Stephen, 1947-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00505" level="file">
+                    <did>
+                        <unittitle>Pillin, William, 1910-1985</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00506" level="file">
+                    <did>
+                        <unittitle>Potts, Charles, 1943-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00507" level="file">
+                    <did>
+                        <unittitle>Randolph, Leonard Wray, 1926-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00508" level="file">
+                    <did>
+                        <unittitle>Raworth, Thomas Moore, 1938-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00509" level="file">
+                    <did>
+                        <unittitle>Rexroth, Kenneth, 1905-1982</unittitle>
+                        <physdesc>(2 entries)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00510" level="file">
+                    <did>
+                        <unittitle>Reyes, Carlos, 1935-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00511" level="file">
+                    <did>
+                        <unittitle>Rice, Stan, 1942-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00512" level="file">
+                    <did>
+                        <unittitle>Rinzler, Alan, 1938-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00513" level="file">
+                    <did>
+                        <unittitle>Robertson, David Alan, 1937-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00514" level="file">
+                    <did>
+                        <unittitle>Robson, Jeremy, 1939-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00515" level="file">
+                    <did>
+                        <unittitle>Roditi, Edouard, 1910-1992</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00516" level="file">
+                    <did>
+                        <unittitle>Roman, U Grant</unittitle>
+                        <physdesc>(2 entries)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00517" level="file">
+                    <did>
+                        <unittitle>Rosenthal, Irving, 1912-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00518" level="file">
+                    <did>
+                        <unittitle>Rothenberg, Jerome, 1931-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00519" level="file">
+                    <did>
+                        <unittitle>Rudolph, Anthony, 1942-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00520" level="file">
+                    <did>
+                        <unittitle>Sanfield, Steve</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00521" level="file">
+                    <did>
+                        <unittitle>Savory, Teo</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00522" level="file">
+                    <did>
+                        <unittitle>Schell, Orville H, 1940-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00523" level="file">
+                    <did>
+                        <unittitle>Schenker, Donald, 1930-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00524" level="file">
+                    <did>
+                        <unittitle>Schwartz, Howard, 1945-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00525" level="file">
+                    <did>
+                        <unittitle>Shevin, David Avram, 1951-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00526" level="file">
+                    <did>
+                        <unittitle>Shoemaker, Jack</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00527" level="file">
+                    <did>
+                        <unittitle>Silberman, James Henry, 1927-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00528" level="file">
+                    <did>
+                        <unittitle>Simckes, Lazarre Seymour, 1937-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00529" level="file">
+                    <did>
+                        <unittitle>Simon, John Oliver, 1942-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00530" level="file">
+                    <did>
+                        <unittitle>Sinclair, John, 1941?-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00531" level="file">
+                    <did>
+                        <unittitle>Solomon, Maynard Elliot, 1930-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00532" level="file">
+                    <did>
+                        <unittitle>Spahn, Theodore Jurgen, 1931-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00533" level="file">
+                    <did>
+                        <unittitle>Stern, Gerd, 1928-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00534" level="file">
+                    <did>
+                        <unittitle>Stettner, Irving, 1922-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00535" level="file">
+                    <did>
+                        <unittitle>Swann, Brian, 1940-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00536" level="file">
+                    <did>
+                        <unittitle>Taggart, John, 1942-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00537" level="file">
+                    <did>
+                        <unittitle>Tarlow, Idell Rose, 1932-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00538" level="file">
+                    <did>
+                        <unittitle>Tarn, Nathaniel, 1928-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00539" level="file">
+                    <did>
+                        <unittitle>Taylor, Alix, 1921-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00540" level="file">
+                    <did>
+                        <unittitle>Teiser, Ruth, 1915-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00541" level="file">
+                    <did>
+                        <unittitle>Thayler, Carl, 1933-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00542" level="file">
+                    <did>
+                        <unittitle>Tinker, Carol, 1940-</unittitle>
+                        <physdesc>(3 entries)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00543" level="file">
+                    <did>
+                        <unittitle>Turner, Frederick, 1943-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00544" level="file">
+                    <did>
+                        <unittitle>Tussman, Malka (Heifetz), 1896-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00545" level="file">
+                    <did>
+                        <unittitle>Unger, Barbara (Frankel), 1932-</unittitle>
+                        <physdesc>(2 entries)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00546" level="file">
+                    <did>
+                        <unittitle>Valaoritis, Nanos, 1921-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00547" level="file">
+                    <did>
+                        <unittitle>Vangelisti, Paul, 1945-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00548" level="file">
+                    <did>
+                        <unittitle>Van Newkirk, Allen, 1940-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00549" level="file">
+                    <did>
+                        <unittitle>Vas Dias, Robert, 1931-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00550" level="file">
+                    <did>
+                        <unittitle>Vincent, John Nathaniel, 1902-1977</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00551" level="file">
+                    <did>
+                        <unittitle>Vincent, Stephen, 1941-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00552" level="file">
+                    <did>
+                        <unittitle>Vinson, James, 1933-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00553" level="file">
+                    <did>
+                        <unittitle>Voelcker, Hunce, 1940-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00554" level="file">
+                    <did>
+                        <unittitle>Waldman, Anne Lesley, 1945-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00555" level="file">
+                    <did>
+                        <unittitle>Waldrop, Rosmarie, 1935-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00556" level="file">
+                    <did>
+                        <unittitle>Warren, Eugene, 1941-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00557" level="file">
+                    <did>
+                        <unittitle>Warsh, Lewis, 1944-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00558" level="file">
+                    <did>
+                        <unittitle>Webb, Jon Edgar, 1905?-1971</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00559" level="file">
+                    <did>
+                        <unittitle>Weil, James Lehman, 1929-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00560" level="file">
+                    <did>
+                        <unittitle>Weinstein, Norman Charles, 1948-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00561" level="file">
+                    <did>
+                        <unittitle>Weishaus, Joel, 1939-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00562" level="file">
+                    <did>
+                        <unittitle>Weiss, Ruth, 1928-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00563" level="file">
+                    <did>
+                        <unittitle>Wenning, Henry W</unittitle>
+                        <physdesc>(2 entries)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00564" level="file">
+                    <did>
+                        <unittitle>Whalen, Philip Glenn, 1923-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00565" level="file">
+                    <did>
+                        <unittitle>White, William Anthony Parker, 1911-1968</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00566" level="file">
+                    <did>
+                        <unittitle>Wiater, Michael</unittitle>
+                        <physdesc>(2 entries)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00567" level="file">
+                    <did>
+                        <unittitle>Willems, James Rutherford, 1944-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00568" level="file">
+                    <did>
+                        <unittitle>Williams, Galen</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00569" level="file">
+                    <did>
+                        <unittitle>Wilson, Keith, 1927-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00570" level="file">
+                    <did>
+                        <unittitle>Wilson, Robert Alfred Jump, 1922-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00571" level="file">
+                    <did>
+                        <unittitle>Winans, Allan Davis, 1936-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00572" level="file">
+                    <did>
+                        <unittitle>Witt-Diamant, Sophia Ruth, 1900-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00573" level="file">
+                    <did>
+                        <unittitle>Wynn, Dudley, 1904-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00574" level="file">
+                    <did>
+                        <unittitle>Young, Al, 1939-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00575" level="file">
+                    <did>
+                        <unittitle>Young, Noel, 1922-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00576" level="file">
+                    <did>
+                        <unittitle>Ziegler, Alan, 1947-</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9017-00577" level="file">
+                    <did>
+                        <unittitle>Zucker, Jack, 1935-</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
