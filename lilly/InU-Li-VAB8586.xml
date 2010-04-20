@@ -1,0 +1,3030 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader relatedencoding="dublincore" audience="external" langencoding="iso639-2b"
+        scriptencoding="iso15924" repositoryencoding="iso15511" countryencoding="iso3166-1"
+        dateencoding="iso8601" findaidstatus="edited-full-draft">
+        <eadid encodinganalog="identifier" identifier="InU-Li-VAB8586" countrycode="US"
+            mainagencycode="InU-Li">InU-Li-VAB8586</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Holland mss., <date normal="1781/1953"
+                        >1781-1953</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2009" type="publication">© 2009</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2009">© 2009</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                    <lb/><date normal="2010" type="source">2010</date>
+                <lb/>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2010-01-13">Jan. 13, 2010</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2010-01-13"/>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc level="collection" audience="external" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository encodinganalog="852" label="Repository" id="lilly">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname source="lcnaf" encodinganalog="100">Holland family</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Holland mss.</unittitle>
+            <unitdate normal="1781/1953" type="inclusive" encodinganalog="245$f"
+                >1781-1953</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1575</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>2,172 items</extent>
+            </physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Holland mss., 1781-1953, consists of
+                correspondence and papers of three generations of Holland family physicians from
+                Bloomington, Indiana: Philip Calphy Holland, 1840-1929, his son, George Frank
+                Holland, 1871-1936, and his son, Philip Todd Holland, 1905-1973. The collection also
+                contains letters and papers, 1892-1950, of Ernest Otto Holland, 1874-1950, son of
+                Philip Calphy Holland and president of Washington State College, Pullman,
+                Washington, 1916-1945; letters and papers, 1812-1858, of Levi Luther Todd,
+                1791-1867, judge and son of General Robert Todd, 1754-1814; and letters and papers,
+                1851-1901, of Levi Luther Todd, 1830-1901, son of Judge Levi Luther Todd and
+                physician of Paris, Illinois, and Indianapolis, Indiana, whose daughter, Margaret
+                Ashby Todd, married George Frank Holland in 1904.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+            <p>Career of Philip Calphy Holland: born, Dec. 25, 1840, at Mt. Sterling, Indiana; son
+                of Gustav and Catherine Jane (Whitmore) Holland; attended Hartsoule College; served
+                in Civil War, Sept. 1861-Sept. 22, 1864; studied at the Medical College of Ohio,
+                Cincinnati, and attended lectures at the Commercial Hospital of Cincinnati and the
+                Hospital of the Good Samaritan, 1867-1869; 1869, married Ann Atlanta Chittenden of
+                Switzerland County, Indiana; studied at Columbia University College of Physicians
+                and Surgeons and Bellevue Hospital Medical College, New York, 1876-1877; practiced
+                medicine in Switzerland County; elected auditor of Switzerland County, 1882; began
+                practice of medicine in Bloomington, Indiana, 1891; died, May 15, 1929. Children:
+                William Bismark, George Frank, Ernest Otto, and Edith Catherine (Mrs. Glen J.
+                Gifford). Biographical material on Philip Calphy Holland may be found in the
+                Bloomington <title render="italic">Daily Telephone,</title> May 16, 1929.</p>
+            <p>Career of George Frank Holland: born, Nov. 1, 1871, in Bennington, Switzerland
+                County, Indiana; son of Philip Calphy and Ann Atlanta (Chittenden) Holland; took a
+                business course at the Louisville Bryant &amp; Stratton Business College,
+                1886-1889; attended Indiana University, 1891-1892; studied pharmacy, 1893-1894;
+                served in the Spanish-American War as apothecary on the U.S.S. Vicksburg, 1897-1900;
+                graduated from New York University and Bellevue Hospital Medical College, 1903;
+                1904, married, Margaret Ashby Todd, daughter of Levi Luther and Susan G. Todd and
+                graduate of Indiana University in 1893, who died on Mar. 14, 1956, at the age of 86;
+                served in medical corps of U.S. Army, July 15, 1916-June 9, 1919; discharged as
+                major; died July 15, 1936. Children: Philip Todd, Elizabeth Chittenden (Mrs. Troy
+                Cook Daniels), and William Ernest. Biographical material on George Frank Holland may
+                be found in the Bloomington <title render="italic">Evening World,</title> July 16,
+                1936.</p>
+            <p>Career of Philip Todd Holland: born, Mar. 8, 1905, in Bloomington, Indiana; son of
+                George Frank and Margaret Ashby (Todd) Holland; B.S. Washington State College,
+                Pullman, Washington, 1927; married Ellen Keyser, July 17, 1929; M.D. New York
+                University and Bellevue Hospital Medical College, 1931-1932; practiced medicine,
+                Bloomington, Indiana, 1932- ; served in Medical Corps, U.S. Navy, 1942-1946.
+                Children: George Frank and Nancy Ellen. Biographical material on Philip Todd Holland
+                may be found in <title render="italic">Who's Important in Medicine,</title> 2nd ed.
+                (Hicksville, New York, [c. 1952]), p.485.</p>
+            <p>Career of Levi Luther Todd: born, July 26, 1791, in Lexington, Kentucky, son of
+                General Robert and Anne (Todd) Todd; educated at Transylvania university; studied
+                law; practiced law in Kentucky; served in the War of 1812; married Sarah Ashby,
+                1813; member of Kentucky legislature, 1815; moved family to Greenwood, Indiana, and
+                became a farmer, 1834; judge of Court of common pleas of Marion County, Indiana,
+                1852-1856; died Jan. 10, 1867, at Southport, Indiana. Biographical material on Levi
+                Luther Todd may be found in papers in the collection and in R.B. Sulgrove, <title
+                    render="italic">History of Indianapolis and Marion County, Indiana</title>
+                (Philadelphia, 1884), p.498.</p>
+            <p>Career of Levi Luther Todd: born, Sept. 2, 1830, in Nicholasville, Kentucky; son of
+                Judge Levi Luther and Sarah (Ashby) Todd; at age of 17 attended Danville Seminary
+                for two terms, followed by a year and a half at Wabash College; studied medicine for
+                a year under Dr. David Todd of Danville, Indiana, and his brother Robert Nathaniel
+                Todd; appointed captain of Washington Guards, 1st regiment 6th military district,
+                Indiana militia, June 27, 1854; graduated from University of Louisville, Mar. 1856;
+                married Susan G. Todd of Paris, Kentucky, 1857; in spring of 1858 moved to Paris,
+                Illinois, where he practiced medicine for 16 years; president and secretary of the
+                Esculapian Society of the Wabash Valley; Jan. 1874, moved to Indianapolis, Indiana,
+                and practiced medicine with Robert Nathaniel Todd and James K. Bigelow; professor of
+                clinical medicine at Central College of Physicians and Surgeons, Indianapolis,
+                Indiana, 1893-1901; died Nov. 16, 1901. Children: Mrs. Samuel David Murphy, Margaret
+                Ashby (Mrs. George Frank Holland), Susan, and Nancy (Mrs. Martin M. Hugg).
+                Biographical material on Levi Luther Todd may be found in R.F. Stone's <title
+                    render="italic">Biography of Eminent American Physicians and Surgeons</title>,
+                (Indianapolis, 1894), p.690; the <title render="italic">Indiana Medical
+                    Journal,</title> XX, p.206, 1901-1902; and the <title render="italic"
+                    >Transactions of the Indiana State Medical Society,</title> 1902, p.425.</p>
+        </bioghist>
+
+
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Holland mss., 1781-1953, consists of correspondence and papers of three
+                generations of Holland family physicians from Bloomington, Indiana: Philip Calphy
+                Holland, 1840-1929, his son, George Frank Holland, 1871-1936, and his son, Philip
+                Todd Holland, 1905-1973. The collection also contains letters and papers, 1892-1950,
+                of Ernest Otto Holland, 1874-1950, son of Philip Calphy Holland and president of
+                Washington State College, Pullman, Washington, 1916-1945; letters and papers,
+                1812-1858, of Levi Luther Todd, 1791-1867, judge and son of General Robert Todd,
+                1754-1814; and letters and papers, 1851-1901, of Levi Luther Todd, 1830-1901, son of
+                Judge Levi Luther Todd and physician of Paris, Illinois, and Indianapolis, Indiana,
+                whose daughter, Margaret Ashby Todd, married George Frank Holland in 1904. In
+                addition to correspondence there are military papers, lectures, licenses, patient
+                lists, medical reports, medical school class notes, photographs, certificates,
+                diaries, and scrapbooks present in the collection.</p>
+            <p>The papers, 1862-1924, of Philip Calphy Holland include: his appointment as sergeant,
+                1862; a letter to his mother from Nashville, Tennessee, May 18, 1863; his discharge
+                from the army, 1864; admission cards for the Medical College of Ohio, lectures at
+                the Commercial Hospital of Cincinnati and of the Hospital of the Good Samaritan,
+                1867-1869; a certificate of private instruction in physical diagnosis by Edward
+                Gamaliel Janeway, 1877; a certificate of his election as auditor of Switzerland
+                County, Indiana, 1882; letters requesting an increase in pension, 1887-1924; his
+                appointment as examining surgeon for the Bureau of Pensions in Bloomington, Indiana,
+                1893; licenses to practice medicine in Indiana and Monroe County, Indiana, 1897; and
+                a certificate from New Orleans Polyclinic of Tulane Medical College for a course on
+                diseases of children, 1907.</p>
+            <p>The papers, 1886-1936, of George Frank Holland consist of business college, Indiana
+                University, school of pharmacy, and medical school notes, 1886-1903;
+                Spanish-American War letters and papers, consisting of letter to his family, a diary
+                as apothecary on the U.S.S. Vicksburg, 1897-1899, reports on patients on the U.S.S.
+                Vicksburg, 1897-1899, and a list of patients and treatment applied by W.O.
+                Stephenson, apothecary on the U.S.S. Merrimac, 1898; a hospital formulary,
+                1897-1903; membership cards in medical and non-medical societies, 1906-1925; a
+                certificate enrolling George Frank Holland as a thirty-second degree mason, 1912; a
+                certificate admitting him as a noble of the mystic shrine in Murat temple,
+                Indianapolis, 1923; letters pertaining to business matters, influenza, the League of
+                nations, and World War I, 1915-1931; a copy of a letter from George V to the
+                soldiers of the U.S., 1918; federal and state elections, 1918; reports of medical
+                examinations of patients, 1920-1923; a report of the field examiners of the
+                Department of inspection and supervision of public offices of Indiana on an
+                examination of the Treasurer of the Bloomington school city, Apr. 10, 1928; railroad
+                passes, 1935-1936; a photograph of George Frank Holland as a major in World War I,
+                and photographs of members of his family.</p>
+            <p>Margaret Ashby (Todd) Holland (Mrs. George Frank Holland), 1870?-1956, is represented
+                in the collection by correspondence with members of her family and friends, and by
+                diaries of her trip to the British Isles, 1914, and to Mexico, 1938.</p>
+            <p>The papers of Philip Todd Holland include: Washington State College class notes,
+                1926-1927; New York University and Bellevue Hospital Medical College class notes,
+                1927-1931; correspondence with relatives and friends, 1939-1942; public health
+                nursing reports for Monroe County, Indiana, 1940-1942; and a receipt book (carbons),
+                1948-1949.</p>
+            <p>Included also in the collection are the following financial records of the three
+                generations of the Holland family as physicians in Switzerland County, Indiana, and
+                Bloomington, Indiana: ledgers, 1869-1933; account books, 1883-1942; financial
+                statements, 1903-1911 and undated; statements and collections book, 1915-1920; and
+                an account book of office medical supplies, 1932-1942. There are also articles of
+                association and stock certificates of the Bloomington ginseng company, 1907-1908; a
+                stock certificate of the Monroe County Fair Association, 1907; articles of
+                incorporation of the New Castle clinic, New Castle, Indiana, 1921; letters on
+                osteopathy as a profession, 1905; the constitution and minutes of the Philomathean
+                Literary Society, Vevay, Indiana, 1833-1885; stock certificates of the San Fernando
+                mining company of Arizona, 1912-1913; and a commencement program of Vevay high
+                school, 1888. Undated items include a list of Bloomington, Indiana telephone numbers
+                arranged by number, 1-1182; a code of ethics of the Medical Society of Monroe
+                County, Indiana; a treatise on the certification of teachers in Massachusetts; and a
+                group of pictures of Vevay.</p>
+            <p>For Ernest Otto Holland, 1874-1950, son of Philip C. Holland and president of
+                Washington State College, Pullman, Washington, 1916-1945, the collection contains
+                chemistry class notes at Indiana University, 1892; correspondence with relatives,
+                1897-1940; and a memorial to him from the Board of Directors of the First National
+                Bank of Seattle, Washington, 1950.</p>
+            <p>The papers, 1812-1858, of Levi Luther Todd include: the original and negative
+                microfilm of his War of 1812 orderly book, Aug. 15, 1812-Feb. 14, 1813, for Captain
+                Nathaniel G.S. Hart's company of Kentucky light infantry; a muster roll of the same
+                company in the War of 1812 made by him from memory in 1851; his commissions as
+                captain of the Lexington light infantry, 1st battalion, 42nd regiment, dated Apr.
+                16, 1813, as aide-de-camp to Brigadier-general James Shelby, Oct. 13, 1817, and as
+                captain of the Montgomery independent rifle company, Aug. 10, 1819; George
+                Caldwell's morning report of Captain Bean's company of U.S. rangers, Apr. 11, 1833;
+                a letter, Dec. 1, 1843, from William Orlando Butler, 1791-1880, to Levi Luther Todd;
+                and a letter, Sept. 27, 1858, to him from John O'Fallon, 1791-1865.</p>
+            <p>The papers, 1851-1901, of Levi Luther Todd include: Todd's memorandum books,
+                1851-1899; his commission as captain in the Washington guards, 1854; a speech,
+                    <title render="doublequote">Natural forces,</title> delivered in behalf of the
+                Board of Trustees of the Medical College of Indiana, 1880; a report of grades of his
+                daughter, Susan Todd, at the Indianapolis female seminary, 1882; correspondence with
+                relatives and friends, 1893-1901; a speech, <title render="doublequote">Our departed
+                    brothers,</title> delivered at a banquet of the Mystic Tie Lodge, a Masonic body
+                in Indianapolis, 1894; lectures on various medical subjects, 1894-1897 and undated;
+                a prescription book, 1895-1897; specifications for two houses to be built in west
+                Indianapolis, 1900; a paper on Edgar Allan Poe; a commencement address <emph
+                    render="doublequote">to the friends of the Central med[ical] college</emph>; and
+                some genealogical notes on the Todd family.</p>
+            <p>The collection also contains a grant of land to George Rogers Clark, 1781; a report
+                of the strength of the 8th regiment of Kentucky militia, 1792, certified by Levi
+                Todd, 1756-1807, uncle of Levi Luther Todd, 1791-1867, and grandfather of Mary
+                (Todd) Lincoln; a letter copybook of James Hughes, 1823-1873, congressman,
+                pertaining to his law practice in Bloomington, 1845-1853; a list of graduates of the
+                Central College of Physicians and Surgeons, Indianapolis, 1934; letters to Nancy
+                (Todd) Hugg, daughter of Levi Luther Todd, 1830-1901, from her cousin, Robert,
+                1934-1937, and from her husband, Martin M. Hugg, 1935-1938; and undated volume on
+                diseases by Dr. M.H. Shrum; two unidentified daguerreotypes; and some printed
+                items.</p>
+            <p>Among the correspondents represented in the collection are Wayman Adams, Thomas
+                Almond Ashby, Moses Behrend, William Orlando Butler, Lee D. Cady, George V, king of
+                Great Britain, Francis Marion Griffith, Harvey G. Hazelrigg, Theodore James Louden,
+                Franklin Henry Martin, John Herr Musser, John O'Fallon, Robert Nathaniel Todd,
+                Harold Oliver Voorhis, William Niles Wishard. An index of correspondents is
+                available in the Library.</p>
+            
+            <p>Photographs in the collection are indexed in the Visual 2 database in the Lilly Library.</p>
+            <p>Manuscripts index in the Lilly Library contains entries at item level.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/clark+george+rogers+1752-1818">
+                            <persname encodinganalog="600" source="lcnaf">Clark, George Rogers,
+                                1752-1818.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/holland+family">
+                            <famname>Holland family.</famname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/holland+ernest+otto+1874-1950">
+                            <persname encodinganalog="600" source="lcnaf">Holland, Ernest Otto,
+                                1874-1950.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/holland+george+frank+1871-1936">
+                            <persname encodinganalog="600" source="lcnaf">Holland, George Frank,
+                                1871-1936.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/holland+margaret+ashby+1870-1956">
+                            <persname encodinganalog="600" source="lcnaf">Holland, Margaret Ashby,
+                                ca. 1870-1956.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/holland+philip+calphy+1840-1929">
+                            <persname encodinganalog="600" source="lcnaf">Holland, Philip Calphy,
+                                1840-1929.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/todd+family">
+                            <famname>Todd family.</famname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/todd+levi+1756-1807">
+                            <persname encodinganalog="600" source="lcnaf">Todd, Levi,
+                                1756-1807.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/todd+levi+luther+1791-1867">
+                            <persname encodinganalog="600" source="lcnaf">Todd, Levi Luther,
+                                1791-1867.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/todd+levi+luther+1830-1901">
+                            <persname encodinganalog="600" source="lcnaf">Todd, Levi Luther,
+                                1830-1901.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/indiana+battleship">
+                            <corpname encodinganalog="610" source="lcnaf">Indiana (Battleship:
+                                BB-1).</corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/vicksburg+gunboat">
+                            <corpname encodinganalog="610" source="lcnaf">Vicksburg (Gunboat:
+                                PG-11).</corpname>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/elections+indiana{su}">
+                            <subject encodinganalog="650" source="lcnaf">Elections
+                                --Indiana.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/medical+colleges+indiana{su}">
+                            <subject encodinganalog="650" source="lcnaf">Medical colleges
+                                --Indiana.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/medical+colleges+new+york{su}">
+                            <subject encodinganalog="650" source="lcnaf">Medical colleges --New
+                                York.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/medical+colleges+ohio{su}">
+                            <subject encodinganalog="650" source="lcnaf">Medical colleges
+                                --Ohio.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/medicine+indiana{su}">
+                            <subject encodinganalog="650" source="lcnaf">Medicine
+                                --Indiana.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/mineral+industries+finance{su}">
+                            <subject encodinganalog="650" source="lcnaf">Mineral industries
+                                --Finance.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/mineral+industries+arizona{su}">
+                            <subject encodinganalog="650" source="lcnaf">Mineral industries
+                                --Arizona.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/physicians+illinois{su}">
+                            <subject encodinganalog="650" source="lcnaf">Physicians
+                                --Illinois.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/physicians+indiana{su}">
+                            <subject encodinganalog="650" source="lcnaf">Physicians
+                                --Indiana.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/spanish-american+war+1898{su}">
+                            <subject encodinganalog="650" source="lcnaf">Spanish-American War, 1898
+                                --Personal narratives.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/teachers+certification+massachusetts{su}">
+                            <subject encodinganalog="650" source="lcnaf">Teachers --Certification
+                                --Massachusetts.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/world+war+1914-1918{su}">
+                            <subject encodinganalog="650" source="lcnaf">World War,
+                                1914-1918.</subject>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Places</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/bloomington+indiana+schools{su}">
+                            <geogname encodinganalog="651" source="lcnaf">Bloomington (Ind.)
+                                --Schools.</geogname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/indiana+history+civil+war{su}">
+                            <geogname encodinganalog="651" source="lcnaf">Indiana --History --Civil
+                                War.</geogname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/united+states+history+civil+war{su}">
+                            <geogname encodinganalog="651" source="lcnaf">United States --History
+                                --Civil War.</geogname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/united+states+history+war+1812{su}">
+                            <geogname encodinganalog="651" source="lcnaf">United States --History
+                                --War of 1812.</geogname>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+        </controlaccess>
+
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired 1952, 1953, 1960, 1961, 1962, 1964.</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>Holland mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 level="series">
+                <did>
+                    <!-- optional -->
+                    <container type="box" label="Box">1</container>
+
+
+                    <unittitle>Chronological files</unittitle>
+
+
+                </did>
+                <scopecontent>
+                    <p>Contains correspondence, certificates, appointments, postcards, etc.</p>
+                </scopecontent>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate type="inclusive" normal="1781/1858">1781-1858</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate type="inclusive" normal="1858/1869">1858-1869</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate type="inclusive" normal="1870/1875">1870-1875</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1876">1876</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1877">1877</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate type="inclusive" normal="1878/1883">1878-1883</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1884">1884</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1885">1885</unitdate>
+                        </unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1886">1886</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1887">1887</unitdate>
+                        </unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1886-07-27/1889-08-21">1886,
+                                July 27-1889, Aug. 21.</unitdate>Booking notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1888">1888</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate type="inclusive" normal="1889/1890">1889-1890</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate type="inclusive" normal="1891/1892">1891-1892</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1893">1893</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1893-12/1894-03-26">1893,
+                                Dec.-1894, Mar. 26.</unitdate>Holland, George Frank. Pharmacognosy
+                            notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate type="inclusive" normal="1894/1895">1894-1895</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1896">1896</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1896">1896</unitdate>Wedding
+                            invitations</unittitle>
+                    </did>
+                </c02>
+
+                <c02 level="file">
+                    <did>
+                        <container type="box" label="Box">2</container>
+                        <unittitle>
+                            <unitdate normal="1897">1897</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1898">1898</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1899">1899</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1900">1900</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1901">1901</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1901-04-17">1901, Apr. 17.</unitdate>Physiology
+                            notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1901-04-24/1901-05-01">1901,
+                                Apr. 24-May 1.</unitdate>Physiological chemistry notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1901-10-04/1902-05-07">1901,
+                                Oct. 4-1902, May 7.</unitdate>Holland, George Frank. Surgery
+                            notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1901-01-08/1902-04-21">1901,
+                                Oct. 8-1902, Apr. 21.</unitdate>Holland, George Frank. Pathology
+                            notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1901-10-10/1902-03-20">1901,
+                                Oct. 10-1902, Mar. 20.</unitdate>Holland, George Frank. Therapeutics
+                            notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1901-10-10/1902-05-08">1901,
+                                Oct. 10-1902, May 8.</unitdate>Holland, George Frank. Obstetrics
+                            notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1901-10-11/1901-12-13">1901,
+                                Oct. 11-Dec. 13.</unitdate>Holland, George Frank. Disease of
+                            children notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1901-10-12/1903-04-20">1901,
+                                Oct. 12-1903, Apr. 20.</unitdate>Holland, George Frank. Breech
+                            extraction notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1901-10-12/1902-05-05">1901,
+                                Oct. 12-1902, May 5.</unitdate>Holland, George Frank. Gynaecology
+                            notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1901-10-12/1902-01-18">1901,
+                                Oct. 12-1902, Jan. 18.</unitdate>Holland, George Frank. Pathological
+                            chemistry notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1901-10-14">1901, Oct. 14.</unitdate>Holland,
+                            George Frank. Applied Pathology notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1902">1902</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1903">1903</unitdate>
+                        </unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1902-10-16/1903-05-07">1902,
+                                Oct. 16-1903, May 7.</unitdate>Holland, George Frank. Bacteriology
+                            notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1902-10-14/1903-04-28">1902,
+                                Oct. 14-1903, Apr. 28.</unitdate>Holland, George Frank. Pneumonia
+                            notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1902-10-14/1903-04-20">1902,
+                                Oct. 14-1903, Apr. 20.</unitdate>Holland, George Frank. Medical
+                            school notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1902-10-17/1903-01-09">1902,
+                                Oct. 17-1903, Jan 9.</unitdate>Holland, George Frank. Dermatology
+                            notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1903-01-07/1903-05-05">1903,
+                                Jan. 7-May 5.</unitdate>Holland, George Frank. Medical school
+                            notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1904">1904</unitdate>
+                        </unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1905">1905</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1906">1906</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1907">1907</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate type="inclusive" normal="1908/1909">1908-1909</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate type="inclusive" normal="1910/1911">1910-1911</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate type="inclusive" normal="1912/1913">1912-1913</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate type="inclusive" normal="1914/1915">1914-1915</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1914">[1914].</unitdate>Holland, Mary Ashby
+                            (Todd)</unittitle>
+                    </did>
+                </c02>
+
+                <c02 level="file">
+                    <did>
+                        <container type="box" label="Box">3</container>
+                        <unittitle>
+                            <unitdate normal="1916">1916</unitdate>
+                        </unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1917">1917</unitdate>
+                        </unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1918">1918</unitdate>
+                        </unittitle>
+                        <physdesc>(5 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1919">1919</unitdate>
+                        </unittitle>
+                        <physdesc>(10 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1920">1920</unitdate>
+                        </unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1921">1921</unitdate>
+                        </unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate type="inclusive" normal="1922/1923">1922-1923</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate type="inclusive" normal="1924/1925">1924-1925</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+
+                <c02 level="file">
+                    <did>
+                        <container type="box" label="Box">4</container>
+                        <unittitle><unitdate type="inclusive" normal="1926/1927"
+                                >1926-1927.</unitdate>Holland, Philip Todd. Analysis of
+                            documents</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1926/1927"
+                                >1926-1927.</unitdate>Holland, Philip Todd. Bacteriology Culture
+                            Sheet Records</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1926/1927"
+                                >1926-1927.</unitdate>Holland, Philip Todd. Education
+                            Notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1926/1927"
+                                >1926-1927.</unitdate>Holland, Philip Todd. Physical
+                            Chemistry</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1926/1927"
+                                >1926-1927.</unitdate>Holland, Philip Todd. Economics</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1926/1927"
+                                >1926-1927.</unitdate>Holland, Philip Todd. Sociology and English
+                            notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1927">1927</unitdate>Holland, Philip Todd.
+                            Economics</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1927">1927</unitdate>Holland, Philip Todd.
+                            Psychology</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1927">1927</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1927/1928"
+                                >1927-1928.</unitdate>Holland, Philip Todd. Microscopic
+                            anatomy</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1927/1928"
+                                >1927-1928.</unitdate>Holland, Philip Todd. Osteology
+                            anatomy</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1927/1928"
+                                >1927-1928.</unitdate>Holland, Philip Todd. Physical
+                            Chemistry</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1927/1929"
+                                >1927-1929.</unitdate>Holland, Philip Todd. Physiology,
+                            electrocardiography</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1927/1928"
+                                >1927-1928.</unitdate>Holland, Philip Todd. Physiology lab
+                            notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1927/1928"
+                                >1927-1928.</unitdate>Holland, Philip Todd. Physiology written
+                            reports</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1927/1928"
+                                >1927-1928.</unitdate>Holland, Philip Todd. Military Science
+                            tactics</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1928">1928</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1928">1928</unitdate>Holland, Philip Todd.
+                            Neuro-anatomy</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1928">1928</unitdate>Holland, Philip Todd.
+                            Laboratory aid for study of neuro-anatomy</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1928/1929"
+                                >1928-1929.</unitdate>Holland, Philip Todd. Pathology lab (2
+                            folders)</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1928/1929"
+                                >1928-1929.</unitdate>Holland, Philip Todd. Pathology
+                            lectures</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1928/1929"
+                                >1928-1929.</unitdate>Holland, Philip Todd. Rough pediatrics
+                            notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1928/1929"
+                                >1928-1929.</unitdate>Holland, Philip Todd. Pharmacology lab
+                            outline</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1928/1929"
+                                >1928-1929.</unitdate>Holland, Philip Todd. Physiology lab
+                            notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1928/1929"
+                                >1928-1929.</unitdate>Holland, Philip Todd. Dermatology
+                            notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1928/1929"
+                                >1928-1929.</unitdate>Holland, Philip Todd. Lab course in
+                            surgery</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1928/1929"
+                                >1928-1929.</unitdate>Holland, Philip Todd. Operative
+                            surgery</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1929">1929</unitdate>Bacteriology</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1929">1929</unitdate>Gynecology</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1929">1929</unitdate>Medicine</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1929">1929</unitdate>Neurology</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1929">1929</unitdate>Obstetrics</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1929">1929</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1929">1929</unitdate>Pathology</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1929">1929</unitdate>Pharmacology</unittitle>
+                    </did>
+                </c02>
+
+                <c02 level="file">
+                    <did>
+                        <container type="box" label="Box">5</container>
+                        <unittitle><unitdate type="inclusive" normal="1929/1930"
+                                >1929-1930.</unitdate>Psychiatry</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1929/1930"
+                                >1929-1930.</unitdate>Gastro-enterology, cardiology</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1929/1930"
+                                >1929-1930.</unitdate>Hygiene</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1929/1930"
+                                >1929-1930.</unitdate>Hygiene. Special papers</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1929/1930"
+                                >1929-1930.</unitdate>Immunology lab notebook</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1929/1930"
+                                >1929-1930.</unitdate>Laryngology, rhinology, otology</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1929/1930"
+                                >1929-1930.</unitdate>Medicine</unittitle>
+                        <physdesc>(6 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1929/1930"
+                                >1929-1930.</unitdate>Neurology</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1929/1930"
+                                >1929-1930.</unitdate>Neurology, psychiatry</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1929/1930"
+                                >1929-1930.</unitdate>Obstetrics</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1929/1930"
+                                >1929-1930.</unitdate>Clinical History</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1929/1930"
+                                >1929-1930.</unitdate>Dermatology</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1929/1930"
+                                >1929-1930.</unitdate>Fractures, chest, breast, hernia</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1929/1930"
+                                >1929-1930.</unitdate>Psychiatry</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1929/1930"
+                                >1929-1930.</unitdate>Surgery</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1929/1930"
+                                >1929-1930.</unitdate>Surgery clinic</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1929/1930"
+                                >1929-1930.</unitdate>Therapeutics</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1929/1930"
+                                >1929-1930.</unitdate>Pediatrics</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1929/1930"
+                                >1929-1930.</unitdate>Bacteriology notebook</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1929/1930"
+                                >1929-1930.</unitdate>Gynecology</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1930">1930</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1930">[1930?]</unitdate>Gynecological case
+                            reports</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1930">1930</unitdate>Clinical history, phys.
+                            exam</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1930">1930</unitdate>Surgery</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1930">1930</unitdate>Dermatology</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1930">1930</unitdate>Psychiatry</unittitle>
+                    </did>
+                </c02>
+
+                <c02 level="file">
+                    <did>
+                        <container type="box" label="Box">6</container>
+                        <unittitle><unitdate type="inclusive" normal="1930/1931"
+                                >1930-1931.</unitdate>Genito-urinary surgery</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1930/1931"
+                                >1930-1931.</unitdate>Obstetrics</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1930/1931"
+                                >1930-1931.</unitdate>Medicine</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1930/1931"
+                                >1930-1931.</unitdate>Orthopedics</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1930/1931"
+                                >1930-1931.</unitdate>Pediatrics</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1930/1931"
+                                >1930-1931.</unitdate>Surgery</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1930/1931"
+                                >1930-1931.</unitdate>Surgical Clinic</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1931">1931</unitdate>Neurology</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1931">1931</unitdate>Prescription
+                            writing</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate type="inclusive" normal="1931/1932">1931-1932</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate type="inclusive" normal="1933/1934">1933-1934</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1935">1935</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1936">1936</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1937">1937</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate type="inclusive" normal="1938/1939">1938-1939</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate type="inclusive" normal="1940/1946">1940-1946</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate type="inclusive" normal="1947/1953">1947-1953</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate type="inclusive" normal="1781/1953">undated.
+                                [1914-1925?]</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate type="inclusive" normal="1781/1953">undated.</unitdate>
+                        </unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+
+                <c02 level="file">
+                    <did>
+                        <container type="box" label="Box">7</container>
+                        <unittitle><unitdate type="inclusive" normal="1781/1953"
+                            >undated.</unitdate>Certification of teachers in Massachusetts during
+                            the colonial period</unittitle>
+                        <physdesc>(6 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1781/1953"
+                            >undated.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1781/1953"
+                            >undated.</unitdate>Medical notebook</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1781/1953"
+                            >undated.</unitdate>Holland, George Frank. Medical notebooks</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1781/1953"
+                            >undated.</unitdate>Correspondence</unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1781/1953"
+                            >undated.</unitdate>Holland papers</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1781/1953"
+                            >undated.</unitdate>Book of numbers. Bloomington, Ind. telephone
+                            numbers</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1781/1953"
+                            >undated.</unitdate>Holland, Philip Todd. Bellevue Medical
+                            College</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1781/1953"
+                            >undated.</unitdate>Todd papers</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1781/1953"
+                            >undated.</unitdate>Todd, Levi Luther. Pulmonary consumption
+                            lecture</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1781/1953"
+                            >undated.</unitdate>Medical Society of Monroe County, Ind. Simple code
+                            of ethics</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1781/1953"
+                            >undated.</unitdate>miscellaneous</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1781/1953"
+                            >undated.</unitdate>Medical</unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1781/1953"
+                            >undated.</unitdate>Autopsy of Kate McLaughlin</unittitle>
+                    </did>
+                </c02>
+
+
+            </c01>
+            <c01 level="series">
+                <did>
+                    <container label="Box" type="box">8</container>
+                    <unittitle>Photographs</unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Holland family</unittitle>
+                        <physdesc>(9 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Holland family</unittitle>
+                        <physdesc>(20 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Todd family</unittitle>
+                        <physdesc>(16 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Todd family</unittitle>
+                        <physdesc>(5 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Todd family</unittitle>
+                        <physdesc>(2 daguerreotypes)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Vevay, Indiana</unittitle>
+                        <physdesc>(15 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Photo album I</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Photos 1</unittitle>
+                        <physdesc>(16 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Photos 2</unittitle>
+                        <physdesc>(16 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Photos 3</unittitle>
+                        <physdesc>(12 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Photos 4</unittitle>
+                        <physdesc>(1 tintype, 98 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Photos 6</unittitle>
+                        <physdesc>(4 tintypes, 81 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Photos 7</unittitle>
+                        <physdesc>(1 tintype, 22 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Photos 8</unittitle>
+                        <physdesc>(13 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Photos 9</unittitle>
+                        <physdesc>(1 tintype, 40 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Photos 10</unittitle>
+                        <physdesc>(1 photograph)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Photos 11</unittitle>
+                        <physdesc>(1 photograph)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Photos 13</unittitle>
+                        <physdesc>(1 photograph)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Photos 14</unittitle>
+                        <physdesc>(3 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Photos 15</unittitle>
+                        <physdesc>(21 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Photos 16</unittitle>
+                        <physdesc>(2 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Photos 17</unittitle>
+                        <physdesc>(9 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Photos 18</unittitle>
+                        <physdesc>(8 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Photos 19</unittitle>
+                        <physdesc>(2 tintypes, 28 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">9</container>
+                        <unittitle>Photo albums</unittitle>
+                        <physdesc>(3 albums)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Canadian fishing trip</unittitle>
+                        <physdesc>(161 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Photographs</unittitle>
+                        <physdesc>(4 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Photographs</unittitle>
+                        <physdesc>(5 tintypes, 56 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Photos 5</unittitle>
+                        <physdesc>(2 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Photographs</unittitle>
+                        <physdesc>(18 photographs)</physdesc>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 level="series">
+                <did>
+                    <container label="Box" type="box">6</container>
+                    <unittitle>Diaries</unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1874">1874</unitdate>Todd, Levi Luther.
+                            Physician's diary</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1881">1881,</unitdate><unitdate normal="1888"
+                                >1888</unitdate>Holland, George Frank. Autograph books</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1884/1885"
+                                >1884-1885,</unitdate><unitdate normal="1887"
+                            >1887</unitdate>Holland, Ernest Otto. Autograph books</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1892">1892,</unitdate><unitdate normal="1902"
+                                >1902,</unitdate><unitdate normal="1781/1953" type="inclusive"
+                                >undated.</unitdate>Holland, Mary Ashby (Todd). Notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1893">1893</unitdate>Holland, Mary Ashby
+                            (Todd). Scrapbook</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1895/1898"
+                                >1895-1898.</unitdate>Holland, Mary Ashby (Todd).
+                            Diaries</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1938-02-26/1938-04-04">1938,
+                                Feb. 26-Apr. 4.</unitdate>Holland, Mary Ashby (Todd). Mexican travel
+                            notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1781/1953"
+                            >undated.</unitdate>sketchbook</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 level="series">
+                <did>
+                    <container label="Box" type="box">10</container>
+                    <unittitle>Bound volumes</unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1851/1853"
+                                >1851-1853.</unitdate>Todd, Levi Luther. Memorandum book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1872-01-01/1973-11-28">1872,
+                                Jan 1-1873, Nov 28.</unitdate>Todd, Levi Luther. Memorandum
+                            book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1879">1879</unitdate>Todd, Levi Luther.
+                            Memorandum book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1879-05/1881-05">1879,
+                                May-1881, May.</unitdate>Cash book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate type="inclusive" normal="1894-09/1899-03">1894, Sept.-1899,
+                                March</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1895-01-05/1898-04-13">1895,
+                                Jan. 5-1898, Apr. 13.</unitdate>Todd, Levi Luther. Memorandum
+                            book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1897/1903"
+                                >1897-1903.</unitdate>Holland, George Frank. Hospital
+                            formulary.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1897-10-28/1899-05-13">1897,
+                                Oct. 28-1899, May 13.</unitdate>Holland, George Frank.
+                            Diary</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1897-10-31/1899-03-30">1897,
+                                Oct. 31-1899, Mar. 30.</unitdate>Quarterly abstract of patients.
+                            U.S.S. Vicksburg</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1898-04-26/1898-06-01">1898,
+                                Apr. 26-1898, June 1.</unitdate>List of patients, U.S.S. Merrimac,
+                            W.O. Stephenson, apothecary</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1898-09-24/1899-05-20">1898,
+                                Sept. 24-1899, May 20.</unitdate>Rough journal. U.S.S. Vicksburg,
+                            Norfolk Navy Yard. Washington B. Grove. Assistant surgeon
+                            USN</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1898-12">1898, December.</unitdate>Todd, Levi
+                            Luther. Memorandum book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1898">[1898].</unitdate>Holland, George Frank.
+                            Pharmacognosy, botany, and materia medica notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1900-10-01/1901-02-13">1900,
+                                Oct. 1-1901, Feb. 13.</unitdate>Holland, George Frank. Medical
+                            school notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1900-10-09/1901-04-23">1900,
+                                Oct. 9-1901, Apr. 23.</unitdate>Holland, George Frank. Medical
+                            school notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1900">1900</unitdate>Holland, George Frank.
+                            Surgical clinic.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1900-10-04/1901-04-30">1900,
+                                Oct. 4-1901, Apr. 30.</unitdate>Holland, George Frank.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Medical school notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1900-10-06/1901-04-10">1900,
+                                Oct. 6-1901, Apr. 10.</unitdate>Holland, George Frank. Medical
+                            school notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1900-12-18/1901-04-12">1900,
+                                Dec. 18-1901, Apr. 12.</unitdate>Holland, George Frank. Medical
+                            school notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1900/1901"
+                                >1900-1901.</unitdate>Holland, George Frank. Anatomy
+                            notes.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1900/1903"
+                                >1900-1903.</unitdate>Holland, George Frank. Anatomy
+                            notes.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1901-02-04/1901-05-07">1901,
+                                Feb. 4-1901, May 7.</unitdate>Holland, George Frank. Medical school
+                            notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1901-04-30">1901, Apr. 30.</unitdate>Holland,
+                            George Frank. Medical school notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1901-10-03/1901-11-14">1901,
+                                Oct.3-1901, Nov. 14.</unitdate>Holland, George Frank. Medical school
+                            notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1914-06-30/1914-07-15">1914,
+                                June 30-July 15.</unitdate>Holland, Margaret Ashby (Todd). Revision
+                            of a portion of diary of journey to London and British Isles</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1914-06-30/1914-08-06">1914,
+                                June 30-Aug. 6.</unitdate>Holland, Margaret Ashby (Todd). Diary of
+                            journey to London and British Isles</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1933/1942"
+                                >1933-1942.</unitdate>Account book of office medical
+                            supplies</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1937-01-01/1937-07-29">1937,
+                                Jan. 1-1937, July 29.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1937-07-29/1938-04-14">1937,
+                                July 29-1938, Apr. 14.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1942-04-27/1942-08-07">1942,
+                                Apr. 27-1942, Aug. 7.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">11</container>
+                        <unittitle><unitdate type="inclusive" normal="1904-10-01/1905-01-16">1904,
+                                Oct. 1-1905, Jan. 16.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1905-11-01/1906-01-31">1905,
+                                Nov. 1-1906, Jan. 31.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1905-08-01/1905-10-31">1905,
+                                Aug. 1-Oct. 31.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1905-04-01/1905-07-31">1905,
+                                Apr. 1-July 31.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1905-01-01/1905-03-31">1905,
+                                Jan. 1-Mar. 31.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1906-02-01/1906-04-30">1906,
+                                Feb. 1-Apr. 30.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1906-05-01/1906-07-25">1906,
+                                May 1-July 25.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1906-07-26/1906-10-16">1906,
+                                July 26-Oct. 16.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1906-10-17/1906-12-31">1906,
+                                Oct. 17-Dec. 31.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1907-01-01/1907-03-22">1907,
+                                Jan. 1-Mar. 22.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1907-03-22/1907-06-30">1907,
+                                Mar. 22-June 30.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1907-07-01/1907-09-16">1907,
+                                July 1-Sept. 16.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1907-09-17/1907-11-30">1907,
+                                Sept. 17-Nov. 30.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1907-12-01/1908-02-21">1907,
+                                Dec. 1- 1908, Feb. 21.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1908-02-22/1908-05-01">1908,
+                                Feb. 22-May 1.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1908-05-27/1908-08-31">1908,
+                                May 27-Aug. 31.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1908-08-21/1908-11-30">1908,
+                                Aug. 21-Nov. 30.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1908-11-24/1909-03-17">1908,
+                                Nov. 24-1909, Mar. 17.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1909-03-17/1909-06-19">1909,
+                                Mar. 17-1909, June 19.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1909-06-20/1909-09-20">1909,
+                                June 20-1909, Sept. 20.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1909-09-21/1910-01-31">1909,
+                                Sept. 21-1910, Jan. 31.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1910-01-01/1910-09-27">1910,
+                                Jan. 1-1910, Sept. 27.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1910-10-01/1911-08-24">1910,
+                                Oct. 1-1911, Aug. 24.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1914-02-04/1915-05-31">1914,
+                                Feb. 4-1915, May 31.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1915-06-01/1919-06-13">1915,
+                                June 1-1919, June 13.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1919-06-12/1921-03-15">1919,
+                                June 12-1921, Mar. 15.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1921-03-15/1922-09-30">1921,
+                                Mar. 15-1922, Sept. 30.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1935-09-01/1936-12-31">1935,
+                                Dec. 1-1936, Dec. 31.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">12</container>
+                        <unittitle><unitdate type="inclusive" normal="1812/1813"
+                                >1812-1813.</unitdate>Todd, Levi Luther. Orderly book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1869/1870"
+                                >1869-1870.</unitdate>Ledger</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1869/1871"
+                                >1869-1871.</unitdate>Ledger</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1872/1873"
+                                >1872-1873.</unitdate>Ledger</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1876/1877"
+                                >1876-1877.</unitdate>Ledger</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1876/1877"
+                                >1876-1877.</unitdate>Ledger</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1878/1882"
+                                >1878-1882.</unitdate>Ledger</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1883/1884"
+                                >1883-1884.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1883/1894"
+                                >1883-1894.</unitdate>Ledger</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1891-10-05/1893-04-05">1891,
+                                Oct. 5-1893, Apr. 5.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1891">1891</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1893-04-08/1894-08-31">1893,
+                                Apr. 8-1894, Aug. 31.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1894-09-18/1895-09-30">1894,
+                                Sept. 18-1895, Sept. 30.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1895-10-01/1896-07-31">1895,
+                                Oct. 1-1896, July 31.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1896-08-01/1897-05-31">1896,
+                                Aug. 1-1897, May 31.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1897-01-01/1898-03-31">1897,
+                                Jan. 1-1898, Mar. 31.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1898-04-01/1899-02-28">1898,
+                                Apr. 1-1899, Feb. 28.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1899-03-01/1899-12-31">1899,
+                                Mar. 1-Dec. 31.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1900-08-01/1901-07-01">1900,
+                                Aug. 1-1901, July 1.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1901-01-01/1901-07-31">1901,
+                                Jan. 1-July 31.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1901-07-01/1902-07-31">1901,
+                                July 1-1902, July 31.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1902-08-01/1903-06-14">1902,
+                                Aug. 1-1903, June 14.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1903-10-23/1903-11-01">1903,
+                                June 15-Nov. 1.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1903-10-23/1904-03-04">1903,
+                                Oct. 23-1904, Mar. 4.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1904-03-04/1904-06-30">1904,
+                                Mar. 4-June 30.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1904-07-01/1904-09-30">1904,
+                                July 1-Sept. 30.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">13</container>
+                        <unittitle><unitdate type="inclusive" normal="1886-07-01/1886-12-24">1886,
+                                July 1-1886, Dec. 24.</unitdate>Holland, George Frank. Bookkeeping
+                            notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1887-01-01/1888-03-09">1887,
+                                Jan. 1-1888, Mar. 9.</unitdate>Holland, George Frank. Bookkeeping
+                            notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1887-01-01/1888-06-10">1887,
+                                Jan. 1-1888, June 10.</unitdate>Holland, George Frank. Bookkeeping
+                            notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1888-01-01/1888-04-01">1888,
+                                Jan. 1-Apr. 1.</unitdate>Holland, George Frank. Bookkeeping
+                            notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1888-01-01/1888-05-12">1888,
+                                Jan. 1-May 12.</unitdate>Holland, George Frank. Bookkeeping
+                            notes</unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1888-01-01/1888-05-19">1888,
+                                Jan. 1-May 19.</unitdate>Holland, George Frank. Bookkeeping
+                            notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1888-01-01/1888-08-28">1888,
+                                Jan. 1-Aug. 28.</unitdate>Holland, George Frank. Bookkeeping
+                            notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1888-09-01/1888-10-30">1888,
+                                Sept. 1-Oct. 30.</unitdate>Holland, George Frank. Bookkeeping
+                            notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1888-09-01/1889-02-01">1888,
+                                Sept. 1-1889, Feb 1.</unitdate>Holland, George Frank. Bookkeeping
+                            notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1888/1889"
+                                >1888-1889.</unitdate>Ledger</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1889-02-01/1889-04-01">1889,
+                                Feb. 1-Apr. 1.</unitdate>Holland, George Frank. Bookkeeping
+                            notes</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1889-03-25/1889-04-08">1889,
+                                March 25-Apr. 8.</unitdate>Holland, George Frank. Bookkeeping
+                            notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1889-04-11/1889-05-01">1889,
+                                Apr. 11-May 1.</unitdate>Holland, George Frank. Penmanship
+                            notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1889-05-20/1889-05-30">1889,
+                                May 20-30.</unitdate>Holland, George Frank. Penmanship
+                            notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1892">1892</unitdate>Chemistry notes. Holland,
+                            Ernest Otto</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1894/1897"
+                                >1894-1897.</unitdate>Ledger</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1897/1899"
+                                >1897-1899.</unitdate>Ledger</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1900/1908"
+                                >1900-1908.</unitdate>Ledger</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1903/1905"
+                                >1903-1905.</unitdate>Ledger</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1903/1905"
+                                >1903-1905.</unitdate>Ledger</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1904/1905"
+                                >1904-1905.</unitdate>Ledger</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1905/1907"
+                                >1905-1907.</unitdate>Ledger</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1781/1953"
+                            >undated.</unitdate>Chemistry notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1781/1953"
+                            >undated.</unitdate>Clinical pathology notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">14</container>
+                        <unittitle><unitdate type="inclusive" normal="1883-02-16/1885-10-01">1883,
+                                Feb. 16-1885, Oct. 1.</unitdate>Philomathean Society, Vevay,
+                            Indiana. Constitution and minutes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1891/1892"
+                                >1891-1892.</unitdate>Holland, George Frank. Indiana University
+                            notes</unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1893/1894"
+                                >1893-1894.</unitdate>Pharmacy notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1894">1894</unitdate>Organic
+                            chemistry</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1894">1894</unitdate>Materia medica</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1894">1894</unitdate>Chemistry notes. Holland,
+                            George Frank.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1895-11-30/1897-11-14">1895,
+                                Nov. 30-[1897], Nov. 14.</unitdate>Todd, Levi Luther. Prescription
+                            book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1897/1900"
+                                >1897-1900.</unitdate>Osteology. Holland, George Frank</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1900/1901"
+                                >1900-1901.</unitdate>Anatomy. Holland, George Frank</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1907-10-05/1908-02-08">1907,
+                                Oct. 5-1908, Feb. 8.</unitdate>Bloomington Ginseng Company, stock
+                            certificate book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1915/1920"
+                                >1915-1920.</unitdate>Statements and collections</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1781/1953"
+                            >undated.</unitdate>Holland, George Frank. Formulas</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1781/1953"
+                            >undated.</unitdate>Dr. M.H. Shrum. Diseases</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1781/1953"
+                            >undated.</unitdate>Ledger</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1781/1953"
+                            >undated.</unitdate>Clinical pathology</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1781/1953"
+                            >undated.</unitdate>Scrapbook</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">15</container>
+                        <unittitle><unitdate type="inclusive" normal="1941/2003">ca.
+                                1941-2003.</unitdate>World War II history of the U.S.S. Mississippi,
+                            including reminiscences of men who served on her</unittitle>
+                        <physdesc>(6 folders, one bound volume, one VHS videotape)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Oversize" type="box">1</container>
+                        <unittitle><unitdate type="inclusive" normal="1845-02-13/1853-01-10">1845,
+                                Feb. 13-1853, Jan. 10.</unitdate>Hughes, James. Letter
+                            copybook</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Oversize" type="box">2</container>
+                        <unittitle><unitdate type="inclusive" normal="1906/1930"
+                                >1906-1930.</unitdate>Ledger</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Oversize" type="box">3</container>
+                        <unittitle><unitdate type="inclusive" normal="1907/1911"
+                                >1907-1911.</unitdate>Ledger</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Oversize" type="box">4</container>
+                        <unittitle><unitdate type="inclusive" normal="1911/1915"
+                                >1911-1915.</unitdate>Ledger</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Oversize" type="box">5</container>
+                        <unittitle><unitdate type="inclusive" normal="1920/1933"
+                                >1920-1933.</unitdate>Ledger</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Oversize" type="box">6</container>
+                        <unittitle><unitdate type="inclusive" normal="1911-08-24/1912-11-01">1911,
+                                Aug. 24-1912, Nov. 1.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1912-11-02/1914-02-03">1912,
+                                Nov. 2-1914, Feb. 3.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1922-10-01/1926-05-29">1922,
+                                Oct. 1-1926, May 29.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Oversize" type="box">7</container>
+                        <unittitle><unitdate type="inclusive" normal="1926-06-01/1931-07-13">1926,
+                                June 1-1931, July 13.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1931-07-14/1935-12-31">1931,
+                                July 14-1935, Dec. 31.</unitdate>Account book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Oversize" type="box">8</container>
+                        <unittitle><unitdate type="inclusive" normal="1860/1917"
+                                >1860s-1917.</unitdate>Scrapbook</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Oversize" type="box">9</container>
+                        <unittitle><unitdate type="inclusive" normal="1904/1929"
+                                >1904-1929.</unitdate>Scrapbook</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Oversize" type="box">10</container>
+                        <unittitle><unitdate type="inclusive" normal="1926/1938"
+                                >1926-1938.</unitdate>Holland, Philip Todd. Scrapbook</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Oversize" type="box">11</container>
+                        <unittitle><unitdate type="inclusive" normal="1930/1949"
+                                >1930s-1940s.</unitdate>Holland, Philip Todd. Scrapbook</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 level="series">
+                <did>
+                    <container label="Oversize" type="box">12</container>
+                    <unittitle>Printed</unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Contains newspaper clippings, mainly from <unitdate normal="1950"
+                                >1950,</unitdate>concerning the death of Ernest Otto Holland, but
+                            also from <unitdate normal="1898">1898,</unitdate>concerning George
+                            Frank Holland's time aboard the U.S.S. Vicksburg; medical journal
+                            articles, <unitdate normal="1877/1901" type="inclusive"
+                                >1877-1901,</unitdate>by Levi Luther Todd.</unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did>
+                    <container label="Oversize" type="box">13</container>
+                    <unittitle>Certificates, etc.</unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1854-06-27">1854, June 27.</unitdate>Todd, Levi
+                            Luther, Jr. Appointment to office of captain, Washington
+                            Guard</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1862-12-21">1862, Dec. 21.</unitdate>Holland,
+                            Philip Calphy. Appointment to office of sergeant, Co. H, 6th reg.,
+                            Indiana Volunteers</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1882-11-13">1882, Nov. 13.</unitdate>Holland,
+                            Philip Calphy. Election certificate, auditor of Switzerland County,
+                            Indiana</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1894-04-25">1894, Apr. 25.</unitdate>Holland,
+                            George Frank. Diploma. College of Pharmacy of the City of New
+                            York.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1897-07-13">1897, July 13.</unitdate>Holland,
+                            Philip Calphy. Physician's certificate</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1897-07-14">1897, July 14.</unitdate>Holland,
+                            Philip Calphy. Physician's license</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1899">1899</unitdate>Yearly abstract of
+                            patients, U.S.S. Vicksburg</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1901-04-30">1901, Apr. 30.</unitdate>Holland,
+                            George Frank. Pharmacy license, State Board of New York</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1902-02-10">1902, Feb. 10.</unitdate>Todd, Anne
+                            D. Diploma from Indianapolis Normal School</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1903">1903</unitdate>Bellevue Medical College
+                            class of 1903</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1904-06-08">1904, June 8.</unitdate>Holland,
+                            George Frank and Margaret Ashby Todd. Marriage license</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1907-02-12">1907, Feb. 12.</unitdate>Holland,
+                            Philip Calphy. Certificate of attendance, New Orleans
+                            Polyclinic</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1912-07-10">1912, July 10.</unitdate>Holland,
+                            George Frank. Military commission</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1913-12-01">1913, Dec. 1.</unitdate>Holland,
+                            George Frank. Appointment to first lieutenant in the Medical Reserve
+                            corps</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1913/1915"
+                                >1913-1915.</unitdate>Documents relating to appointment to Medical
+                            Reserve Corps</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1914-06-22">1914, June 22.</unitdate>Holland,
+                            George Frank. Membership certificate, American College of
+                            Surgeons</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1915-05-25">1915, May 25.</unitdate>Holland,
+                            George Frank. Membership certificate, Association of Military Surgeons
+                            of the United States</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1915-06-28">1915, June 28.</unitdate>Holland,
+                            George Frank. Appointment of medical examiner for Aetna Life Insurance
+                            Company</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1915-07-27">1915, July 27.</unitdate>Holland,
+                            George Frank. Military commission</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1915-09-24">1915, Sept. 24.</unitdate>Holland,
+                            George Frank. Appointment to first lieutenant, Medical Reserve
+                            corps</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1916-02-12">1916, Feb. 12.</unitdate>Holland,
+                            George Frank. Appointment to first lieutenant, Medical Reserve
+                            corps</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1916-06-01">1916, June 1.</unitdate>Holland,
+                            George Frank. Membership certificate, Association of Military Surgeons
+                            of the United States</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917-08-05">1917, Aug. 5.</unitdate>Holland,
+                            George Frank. Appointment to captain, National Guard medical
+                            corps</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917-08-11">1917, Aug. 11.</unitdate>Holland,
+                            George Frank. Military commission</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917-08-12">1917, Aug. 12.</unitdate>Holland,
+                            George Frank. Certificate, Ancient Accepted Scottish Rite of
+                            Free-Masonry</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917-08-12">1917, Aug. 12.</unitdate>Liberty
+                            Class portrait. Ancient Accepted Scottish Rite of
+                            Free-Masonry</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1917-08-12">1917, Aug. 12.</unitdate>Ancient
+                            Accepted Scottish Rite of Free-Masonry. Liberty class, taken in front of
+                            Scottish Rite building</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1918-03-13">1918, Mar. 13.</unitdate>Holland,
+                            George Frank. Appointment to major, National Guard medical
+                            corps</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1922-01-27">1922, Jan. 27.</unitdate>Holland,
+                            Elizabeth. Diploma from Bloomington Junior High School</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1923-03-24">1923, Mar. 24.</unitdate>Holland,
+                            George Frank. Membership certificate, Ancient Order of the Nobles of the
+                            Mystic Shrine for North America. Murat Temple, Indianapolis,
+                            Indiana</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1923-09-22">1923, Sept. 22.</unitdate>Hugg,
+                            Martin M. and Nancy D. Todd. Marriage license</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate normal="1929-01-30">1929, Jan. 30.</unitdate>Holland,
+                            Elizabeth. Diploma from Bloomington High School</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1781/1953"
+                            >undated.</unitdate>Holland, Philip Calphy. Certificate of membership,
+                            Indiana State Medical Society</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1781/1953"
+                            >undated.</unitdate>Indiana Field Hospital, Co. No. 21, Hattiesburg,
+                            Miss.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><unitdate type="inclusive" normal="1781/1953"
+                            >undated.</unitdate>Todd, Levi Luther. Photograph</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
