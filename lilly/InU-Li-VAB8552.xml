@@ -1,0 +1,1577 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAB8552">InU-Li-VAB8552</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Harrison, W.H. mss., <date normal="1779/1922"
+                        >1779-1922</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2009" type="publication">© 2009</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2009">© 2009</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                    <lb/><date normal="2010" type="source">2010</date>
+                <lb/>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2010-01-11">Jan. 11, 2010</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2010-01-11"/>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Harrison, William Henry,
+                    1773-1841</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Harrison, W.H. mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1779/1922" type="inclusive">1779-1922, </unitdate>
+            <unitdate encodinganalog="245$g" normal="1800/1815" type="bulk">bulk
+                1800-1815</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1532</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>797 items</extent>
+            </physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Harrison, W.H. mss., 1779-1922, but
+                principally 1800-1815, consists of photostats and transcripts of manuscript and
+                printed material collected by Logan Esarey, professor of history at Indiana
+                University, for his <title render="italic">Messages and Letters of William Henry
+                    Harrison,</title> Indianapolis, 1922, 2 vols., Indiana Historical <title
+                    render="italic">Collections,</title> vols. 7-8.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+            <p>William Henry Harrison was the ninth President of the United States and territorial
+                governor of Indiana.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Materials used by Logan
+                Esarey; and II. Materials not used by Esarey.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Harrison, W.H. mss., 1779-1922, but principally 1800-1815, consists of photostats
+                and transcripts of manuscript and printed material collected by Logan Esarey,
+                professor of history at Indiana University, for his <title render="italic">Messages
+                    and Letters of William Henry Harrison,</title> Indianapolis, 1922, 2 vols.,
+                Indiana Historical <title render="italic">Collections,</title> vols. 7-8. It
+                includes correspondence, petitions to Congress concerning land questions, suffrage
+                and elections, divisions of the Indiana territory, post roads and post offices,
+                slavery, and miscellaneous subjects; bills and amendments to bills; and reports of
+                congressional committees. The Indian treaties (printed) are with: the Delaware,
+                Shawnee, Potowatomi, Miami, Eel River, Wea, Kickapoo, Piankashaw, Kaskaskia, Ojibwa,
+                Ottawa, and Wyandot Indians.</p>
+            <p>The correspondents include John Badollet, Edward Banvick, Lewis Cass, James Cox,
+                William Harris Crawford, James Alexander Dallas, Henry Davidge, Henry Dearborn,
+                Mathew Ernest, Nathanial Ewing, Albert Gallatin, John Gibson, George Graham, Adam
+                Guthrie, Cornelius Harnett, William James, Thomas Jefferson, Jonathan Jennings, John
+                Johnston, James Madison, Jared Mansfield, Josiah Meigs, Return Jonathan Meigs,
+                Thomas Posey, Arthur St. Clair, Jesse Burgess Thomas, Henry Vanderburgh, and John
+                Whistler.</p>
+            <p>The petitions to Congress relate to land questions, suffrage and elections, divisions
+                of the Indiana Territory, post roads and post offices, slavery, and miscellaneous
+                subjects.</p>
+            <p>1) The petitions relating to land questions are from: George Ash for confirmation of
+                a grant of land from the Indians, 1802, Jan. 29; citizens of the Indiana Territory
+                in support of George Ash's claim, 1802, Jan. 29; the Illinois and Ouabache Land
+                Company for confirmation of their land title, 1803, Oct. 17; citizens of Randolph
+                and St. Clair counties for favorable terms for securing lands, 1804, Dec. 12; George
+                Ash for confirmation of a land title, 1804, Dec. 13; Sally Lusk for the right to
+                operate a ferry and for a grant of land, 1804, Dec. 14; citizens of Livingston
+                County, Kentucky, in support of Sally Lusk's petition, 1804, Dec. 14; citizens of
+                Indiana Territory and the state of Kentucky in support of George Ash's petition,
+                1804, Dec. 20; citizens living near Fort Massac for confirmation of the land claims,
+                1805, Jan. 10; land purchasers of Ohio and the Indiana Territory for an extension of
+                time in making payments, 1805, Oct. 1 and Nov. 19; citizens of Randolph and St.
+                Clair counties for land grants, 1805, Dec. 2; French inhabitants of Vincennes
+                requesting an extension of time in filing land claims, 1806, Feb. 27; William Wells
+                for right of pre-emption on a tract of land near Ft. Wayne, 1807, Oct. 7 and a
+                deposition of William Henry Harrison in support of his petition, 1806, Nov. 28; the
+                Legislature of the Indiana Territory for the establishment of a land office in the
+                territory, 1811, Jan. 21; the Legislative council and the House of representatives
+                of the Indiana Territory for an extension of time in making land payments, 1811,
+                Jan. 21; the Legislature of Ohio for the fixing of the northern and western
+                boundaries of the state, 1811, Dec. 21; citizens of the Indiana Territory for a
+                change in the law allowing an extension of time for making land payments, 1812, June
+                15; the Legislature of the Indiana Territory for an extension of time in making land
+                payments, 1813, May 3; the Legislature of the Indiana Territory for confirmation of
+                the claims to land sold by the Trustees of the university, 1813, May 25; John Small
+                for confirmation of his title to a tract of land, 1817, Oct. 9 and depositions in
+                support of his claim, 1818, Jan. 2 and 5; citizens of Vincennes for removal of land
+                claims which were on worthless land, 1817, Dec.; Jane Dubois and Will Jones for
+                location of the land claims of Toussaint Dubois, 1818, Jan. 27; citizens of
+                Vincennes requesting a survey of the town, n.d.</p>
+            <p>2) Petitions relating to suffrage and elections are from: the Legislative council of
+                the Indiana Territory for popular election of the council and of the delegate to
+                Congress, 1808, Oct. 26; the Legislative council and House of Representatives of the
+                Indiana Territory questioning the constitutionality of the meeting of the general
+                assembly and inquiring about methods for organizing a new legislature and
+                apportioning delegates, 1809, Oct. 21; citizens of Clark County and the Indiana
+                Territory for popular election of militia officers, magistrates, sheriffs and
+                coroners, 1809, Dec. 12; citizens of the Indiana Territory for the extension of the
+                right of suffrage, 1809, Dec. 12; citizens of Harrison County for the extension of
+                the right of suffrage, 1809, Dec. 12; the Legislative council and the House of
+                Representatives of the Indiana Territory for the extension of the right of suffrage,
+                1811, Jan. 2 and 24; the Republican Corresponding Society of Brookville for the
+                popular election of sheriffs and magistrates, 1811, Oct. 26; the Legislative council
+                protesting against the governor's division of the territory into new council
+                districts, 1814, Jan. 6; Daniel C. Lane and Patrick Shields for a correction in the
+                census report and the apportionment of another delegate to the convention from
+                Harrison County, 1816, Jan. 3.</p>
+            <p>3) Petitions relating to the division of the Indiana Territory are from: citizens of
+                [Michigan] for a separate government, 1803, Mar. 20 and Sept. 1, 1804, Oct. 24;
+                landowners near Ohio asking to be joined to that state, 1805, Dec. 18; the
+                Democratic Republicans of Wayne for a separate government, [1804, Dec. 6]; a
+                committee of the citizens of Illinois for separation from the Indiana Territory,
+                1807, Feb. 20; citizens of Knox County against the separation of Illinois from the
+                Indiana Territory, 1808, Dec. 16; citizens of Randolph County against the separation
+                of Illinois from the Indiana Territory, n.d. </p>
+            <p>4) Petitions relating to post roads and post offices are from: citizens of Dearborn
+                County requesting a post road, 1806, Feb. 13; citizens of Dearborn, Franklin and
+                Wayne counties requesting post roads and post offices, 1811, Jan. 22; the
+                Legislature of the Indiana Territory requesting a post road through Eaton, 1813,
+                Dec. 27.</p>
+            <p>5) Petitions requesting that slavery be allowed in the Indiana Territory are from:
+                The Legislative council and the House of Representatives of the Indiana Territory,
+                1807, Sept. 19 and 1806, Dec. 20.</p>
+            <p>6) Petitions on several subjects are from: citizens of Randolph and St. Clair
+                counties for slavery, the extinguishment of the Indian title to a tract of land in
+                Illinois, grants to men who will open a road to Vincennes and keep inns along it,
+                and the establishment of garrisons in the Illinois region, 1800, Oct. 11; the
+                Legislative council and House of Representatives of the Indiana Territory for
+                slavery, extension of the right of suffrage, cession of the salt springs to the
+                territory, confirmation of certain land titles and statehood, and against the
+                division of the Indiana Territory, 1805, Aug. 19; a committee of citizens of St.
+                Clair and Randolph counties for separation from the Indiana Territory, grants of
+                land, slavery, 1806, Jan. 17 and the proceedings of the committee, 1805, Nov. 25;
+                citizens of Randolph and St. Clair counties for separation from the Indiana
+                Territory and for slavery, 1805, Dec. 18; citizens of Harrison County for popular
+                election of a delegate to Congress and of the Legislative council and for an
+                extension of time in making land payments, 1809, Feb. 3; the Legislature of Indiana
+                Territory for the relief of the widows and orphans of the soldiers killed at the
+                Battle of Tippecanoe and for a grant of land to the troops who fought there, 1811,
+                Dec. 9.</p>
+            <p>7) Miscellaneous petitions are from: the judges of the Indiana Territory requesting
+                an increase in their salaries, 1803, Nov. 1; the board of Trustees of the University
+                of Vincennes for a tax on salt and Indian trade for the use of the university, 1807,
+                Nov. 20; the House of Representatives of the Indiana Territory asking for the repeal
+                of the governor's power of veto and requesting the right of appeal from the general
+                court to the circuit court of Kentucky in 1808, Oct. 11; John Gibson and Henry
+                Vanderburgh asking for back pay as officers in the Revolutionary army, 1808, Oct.
+                22; citizens of Harrison County against the reappointment of Governor Harrison,
+                1809; citizens of Clark County against the reappointment of Governor Harrison, 1809,
+                Isaac Wayne asking for the settlement of his father's accounts with the government,
+                1811, Jan. 7; the Legislative council and House of Representatives of the Indiana
+                Territory for the removal of the capitol to a more centrally located place, 1811,
+                Jan. 7; Peter Jones and James Dill protesting against the petition of the
+                Legislature requesting statehood, 1811, Dec. 13; the House of Representatives of the
+                Indiana Territory for the reappointment of Governor Harrison, 1811, Dec. 18;
+                citizens of Knox County for relief from damages done by the Kentucky militia, 1812,
+                Dec. 15 (and claims, Oct. 4, 1812-Aug. 1, 1817); members of the Indiana legislature
+                who were militia officers against Harrison's retirement from the command of the
+                northwest army and for his promotion to Major general, 1813, Feb. 17; the
+                Legislature of the Indiana Territory requesting that the militia be paid, 1813, Dec.
+                15; the Legislature of the Indiana Territory asking for changes in the judicial
+                system, 1814, Jan. 5; the Legislative council and House of Representatives
+                requesting an extension of time for the payment of the excise tax, 1816, Jan. 2; the
+                Legislative council and House of Representatives of Indiana Territory for statehood,
+                1816, Jan. 2; the Legislative council and House of Representatives of Indiana
+                Territory for permission to work the salt springs, 1816, Jan. 11; Martin Rose asking
+                compensation for horses lost to the Indians at Tippecanoe (and depositions in
+                support of the claim), 1817, Dec. 17; William Purcell asking compensation for horses
+                lost to the Indians at Tippecanoe (and depositions in support of the claim), 1817,
+                Dec. 17; citizens of Vincennes requesting the draining of a swamp, n.d.</p>
+            <p>The papers include the claims of the Shakers at Busseron, Knox County for property
+                destroyed by Potawatomi Indians and the Kentucky militia, 1817, July 29; and the
+                claim of Antoine Marchall, with depositions in support of it, for compensation for
+                property destroyed by the 4th U.S. Regiment, 1812, May 6 and 11.</p>
+            <p>The statistics consist of: statements of land sales in [Ohio and Indiana], 1808, Oct.
+                1 to 1809, Oct. 1, 1809, Oct. 1 to 1810, Oct. 1, 1812, Oct. 1 to 1813, Oct. 1; a
+                statement of land sales in [Ohio, Indiana and Illinois], 1815, Oct. 1 to 1816, Oct.
+                1; a statement of the amount of lands sold at each land office to 1811, Sept. 30; a
+                statement of the land offices northwest of the Ohio to 1811, Sept. 30, dated 1812,
+                Jan. 22; an estimate of the public lands still unsold in the state of Ohio and the
+                territories of Michigan, Indiana, Illinois and Mississippi, 1811, Sept. 30; and a
+                report of the land commissioners at Vincennes, Indiana, 1806, Mar. 25 and 1812, May
+                27. Also included are: an abstract of Indiana annuities, 1795, Aug. 3 to 1809, Dec.
+                9; a statement of Indian treaties, land cessions, and annuities from 1789, Mar. 4 to
+                1812, Dec. 30; a statement of Indian department expenditures from 1811, Mar. 3 to
+                1815, Mar. 3, dated 1816, Feb. 22; a memo of Indian annuities for 1812 and 1813; a
+                statement of losses at Indian factories during the war, 1814, Apr. 1; census returns
+                for Indiana Territory for 1801, July 4; census returns for the Northwest Territory,
+                1801, Dec. 23; census returns for St. Clair and Randolph counties, 1806, Mar. 26,
+                and for Randolph County (1807) 1808, Nov. 2; a return of votes in Randolph and St.
+                Clair counties, 1808, Nov. 2; a return of the killed and wounded in the action near
+                Prophet's Town, 1811, Nov. 7; a statement of postal receipts for 1800, Oct. 1 to
+                1803, Oct. 1; and a docket of causes in the general court, 1803, Nov. 5.</p>
+            <p>Miscellaneous papers consist of: a typescript of George Ash's story from the
+                Indianapolis <title render="italic">Journal,</title> 1830, Mar. 10; a typescript of
+                Harrison's speech at Fort Meigs from the Logansport <title render="italic"
+                    >Telegraph,</title> 1840, Aug. 8; a typescript of the proceedings of the
+                Republican convention at Indianapolis, 1858, Mar. 4; a typescript of Adam Walker's
+                journal, n.d.; Capt. Peter Funk's narrative of the Tippecanoe campaign [as told to
+                D.R. Poignand, 1862]; a deed from certain Indian chiefs to George Ash, 1802, Apr.
+                13; the laws of the Indiana Territory, 1803, Feb. 14 and Dec. 7; a plat of the
+                reserved tract around Vincennes, 1818, Feb. 12; a map of southern Indiana, n.d.;
+                depositions of John Kidd and others stating that they did not sign a petition asking
+                for the separation of Illinois from the Indiana Territory and charging Governor
+                Harrison with improper conduct, 1808, Sept. 1, Oct. 7 and Oct. 12; and a list of
+                papers pertaining to Indiana which are in the Library of Congress, 1922, Aug.
+                24.</p>
+            <p>The Indian treaties (printed) are: with the Delaware, Shawnee, Potowatomi, Miami, Eel
+                River, Wea, Kickapoo, Piankashaw and Kaskaskia Indians at Ft. Wayne, 1803, June 7;
+                with the Eel River, Wyandot, Piankashaw, Kaskaskia, and Kickapoo Indians at
+                Vincennes, 1803, Aug. 7; with the Delaware Indians at Vincennes, 1804, Aug. 18; with
+                the Piankashaw Indians at Vincennes, 1804, Aug. 27; with the Delaware, Potowatomi,
+                Miami, Eel River and Wea Indians at Grouseland, 1805, Aug. 21; with the Piankashaw
+                Indians at Vincennes, 1805, Dec. 30; with the Delaware, Potowatomi, Miami, Eel River
+                Indians at Ft. Wayne, 1809, Sept. 30. There are two manuscript journals (photostats)
+                of proceedings at conferences with the Indians: with the Wyandot, Seneca, Delaware,
+                Miami, Eel River and Wea Indians at Greenville, 1814, July; and with the Wyandot,
+                Ottawa, Chippewa, and Potawatomi Indians at Detroit, 1815, Aug. 8; and a manuscript
+                proclamation (photostat) concerning the ratification of the treaty of Vincennes,
+                Oct. 26, 1809, with the Weas, dated 1810, Jan. 25.</p>
+            <p>The acts of Congress, which are printed unless otherwise stated, are dated: 1800,
+                Mar. 31, May 6; 1801, Feb 25; 1803, Feb. 25; 1804, Dec. 26, Dec. 28 (mss.); 1809,
+                Jan. 19, Feb. 14; 1810, Mar. 26, Apr. 14; 1811, Feb. 6, Feb. 11, May 5; 1812, Mar.
+                13, June 30, Feb. 24; 1813, Jan. 19; 1814, Mar. 14; 1815, Feb. 1, Feb. 3, Feb. 23;
+                1816, Jan. 8, Feb. 27, Apr. 1 (2), Apr. 1 (with a census report on Indiana, 1816,
+                Apr. 4), Apr. 13; 1817, Feb. 28 (2).</p>
+            <p>Bills (printed unless otherwise stated) are dated: 1803, Nov. 4 (mss.); 1804, Mar. 20
+                (printed &amp; mss.), Dec. 14 (mss.); 1806, Jan. 16, Jan. 27 (printed &amp; mss.),
+                Feb. 10, Mar. 5 (mss.), Mar. 28, Apr. 5, Apr. 11,; 1807, Jan. 21, Nov. 17; 1808,
+                Jan. 15, Feb. 14, Feb. 25 (printed &amp; mss.); 1809, Dec. 5; 1811, Jan. 10 (mss.),
+                Feb. 8; 1812, Jan. 4, Mar. 4 (mss.); 1813, Feb. 26 (printed &amp; mss.); 1814, Feb.
+                11; 1817, Jan. 2 (printed &amp; mss.), Feb. 24 (mss.).</p>
+            <p>Amendments to acts of Congress are dated: 1800, Apr. 16 (printed &amp; mss.); 1801,
+                Feb. 25 (mss.); 1803, Feb. 25 (printed &amp; mss.); 1810, Apr. 21; 1811, Feb. 19
+                (printed &amp; mss.), May 14; 1812, Mar. 24 (printed &amp; mss.), Apr. 7, May 14
+                (mss.); 1815, Feb.; 1816, Apr. 4 (printed &amp; mss.).</p>
+            <p>Amendments to bills are dated: 1803, Nov. 16 (printed &amp; mss.); 1805, Jan. 7
+                (mss.); 1806, Jan. 21, Feb. 25 (printed &amp; mss.); 1815, Feb. 17. </p>
+            <p>Reports of congressional committees are dated: 1802, Feb. 5 (mss.); 1804, Mar. 21
+                (mss.); 1811, Jan. 10 (mss.), Jan. 17 (mss.), Jan. 30 (mss.), and Feb. 7 (mss.).</p>
+        </scopecontent>
+
+        <bibliography>
+            <head>Bibliography</head>
+            <p>Some of the materials not used have been published in Clarence Edwin Carter's <title
+                    render="italic">The Territorial Papers of the U.S.,</title> Washington, 1934,
+                volumes 2 &amp; 3; <title render="italic">The Territory Northwest of the River Ohio,
+                    1787-1803</title>; volumes 7 &amp; 8, <title render="italic">The Territory of
+                    Indiana, 1800-1816;</title> Logan Esarey's <title render="italic">Messages and
+                    Papers of Jonathan Jennings, Ratliff Boon &amp; William Hendricks.</title>
+                Indianapolis, 1924, Indiana Historical <title render="italic">Collections,</title>
+                vol. 3; Louis B. Ewbank &amp; Dorothy L. Riker, <title render="italic">The Laws of
+                    Indiana Territory, 1809-1816.</title> Indianapolis, 1934, Indiana Historical
+                    <title render="italic">Collections,</title> vol. 20; <title render="italic"
+                    >Treaties Between the U.S.A. and the Several Indian Tribes, From 1778 to
+                    1837</title> (Washington, 1837); and <title render="italic">Indian Treaties and
+                    Laws and Regulations Relating to Indian Affairs</title> (Washington, 1826).
+                Indication of such publication is given on folders which contain such material. This
+                second group consists of letters, petitions and claims addressed to Congress,
+                statistics, miscellaneous material, Indian treaties and acts, bills, amendments and
+                reports of committees of the United States Congress.</p>
+        </bibliography>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <p>The following terms have been used to index the description of this collection in
+                    <extref xlink:href="http://www.iucat.iu.edu">IUCAT</extref>, the IU Libraries'
+                online catalog. Materials about related topics, persons or places can be found by
+                searching the catalog using these terms.</p>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/harrison+william+henry+1773-1841">
+                            <persname encodinganalog="600" source="lcnaf">Harrison, William Henry,
+                                1773-1841 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/gibson+john+1740-1822">
+                            <persname encodinganalog="600" source="lcnaf">Gibson, John,
+                                1740-1822.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/posey+john+1750-1818">
+                            <persname>Posey, John, 1750-1818.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/esarey+logan+1874-1942">
+                            <persname encodinganalog="700" source="lcnaf">Esarey, Logan,
+                                1874-1942.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/harrison+william+henry+1773-1841+messages+letters+william+henry+harrison+1800-1816">
+                            <persname encodinganalog="700" source="lcnaf">Harrison, William Henrey,
+                                1773-1841 --Messages and letters of William Henry Harrison,
+                                1800-1816.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/dallas+alexander+james+1759-1817">
+                            <persname encodinganalog="700" source="lcnaf">Dallas, Alexander James,
+                                1759-1817.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/gallatin+albert+1761-1849">
+                            <persname encodinganalog="700" source="lcnaf">Gallatin, Albert,
+                                1761-1849.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/graham+john+1774-1820">
+                            <persname encodinganalog="700" source="lcnaf">Graham, John,
+                                1774-1820.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/jennings+jonathan+1784-1834">
+                            <persname encodinganalog="700" source="lcnaf">Jennings, Jonathan,
+                                1784-1834.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/vanderburgh+henry+1760-1812">
+                            <persname encodinganalog="700" source="lcnaf">Vanderburgh, Henry,
+                                1760-1812.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/united+states+war+department">
+                            <corpname encodinganalog="710" source="lcnaf">United States --War
+                                Dept.</corpname>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/elections+indiana{su}">
+                            <subject encodinganalog="650" source="lcnaf">Elections
+                                --Indiana.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/indians+north+america+treaties{su}">
+                            <subject encodinganalog="650" source="lcnaf">Indians of North America
+                                --Treaties.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/land+titles+indiana{su}">
+                            <subject encodinganalog="650" source="lcnaf">Land titles
+                                --Indiana.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/post+roads{su}">
+                            <subject encodinganalog="650" source="lcnaf">Post roads.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/postal+service+united+states{su}">
+                            <subject encodinganalog="650" source="lcnaf">Postal service --United
+                                States.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/slavery+united+states{su}">
+                            <subject encodinganalog="650" source="lcnaf">Slavery --United
+                                States.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/suffrage+indiana{su}">
+                            <subject encodinganalog="650" source="lcnaf">Suffrage
+                                --Indiana.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/tippecanoe+battle+of+1811{su}">
+                            <subject>Tippecanoe, Battle of, 1811.</subject>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Places</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/indiana+politics+government{su}">
+                            <geogname encodinganalog="651" source="lcnaf">Indiana --Politics and
+                                government --Sources.</geogname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/ohio+politics+government{su}">
+                            <geogname encodinganalog="651" source="lcnaf">Ohio --Politics and
+                                government --Sources.</geogname>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+        </controlaccess>
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Transfer from Main Library.</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>Harrison, W.H. mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAB8552-00001" level="series">
+                <did>
+                    <!-- optional -->
+                    <container label="Box" type="box">1</container>
+
+
+                    <unittitle>I. Materials used by Esarey</unittitle>
+
+
+                </did>
+                <!-- optional -->
+                <arrangement>
+                    <p>Arranged in the order in which the texts appear in the volumes, with the
+                        corresponding page numbers of the printed work indicated.</p>
+                </arrangement>
+
+                <c02 id="VAB8552-00002" level="file">
+                    <did>
+                        <unittitle>I: pp. 23-688</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00003" level="file">
+                    <did>
+                        <unittitle>II: pp. 1-399</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00004" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>II: pp. 400-756</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00005" level="file">
+                    <did>
+                        <container label="Box:" type="box">Oversize</container>
+                        <unittitle>I: pp. 253-255</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00006" level="file">
+                    <did>
+                        <unittitle>I: pp. 630-631</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00007" level="file">
+                    <did>
+                        <unittitle>I: pp. 717-723</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAB8552-00008" level="series">
+                <did>
+                    <container label="Box" type="box">2</container>
+                    <unittitle>II. Materials not used by Esarey</unittitle>
+                </did>
+                <arrangement>
+                    <p>Arranged chronologically.</p>
+                </arrangement>
+                <c02 id="VAB8552-00009" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1796-09-19">1796, Sept. 19</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00010" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1800-03-31/1800-04-16" type="inclusive">1800,
+                                Mar. 31-Apr. 16</unitdate>(Carter VII, pp.7-10)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00011" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1800-05-06">1800, May 6</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00012" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1801-02-25">1801, Feb. 25</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00013" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1801-07-04">1801, July 4</unitdate>(Carter VII,
+                            pp. 24-25)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00014" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1801-12/1803-01" type="inclusive">1801, Dec.-1803,
+                                Jan.</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00015" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1803-02-14">1803, Feb. 14</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00016" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1803-02-14">1803, Feb.
+                            14,</unitdate>transcript</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00017" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1803-06/1803-08" type="inclusive">1803,
+                                June-Aug.</unitdate>(Indian Treaties, 1826, pp. 57-60)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00018" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1803-02-25">1803, Feb. 25</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00019" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1803-09-01">1803, Sept. 1</unitdate>(Carter
+                            VII, pp.118-123)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00020" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1803-10-17">1803, Oct. 17</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00021" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1803-11-01">1803, Nov. 1</unitdate>(Carter VII,
+                            pp. 147-148)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00022" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1803-11-04/1804-03-20" type="inclusive">1803, Nov.
+                                4-1804, Mar. 20</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00023" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1804-10-09">1804, Oct. 9</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00024" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1804-03-21">1804, Mar. 21</unitdate>(Carter
+                            VII, pp. 171-172)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00025" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1804-08">1804, Aug.</unitdate>(Indian Treaties,
+                            1837, pp. 104-107)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00026" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1804-10-24">1804, Oct. 24</unitdate>(Carter
+                            VII, pp. 227-231)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00027" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1804-12-06/1804-12-12" type="inclusive">1804,
+                                Dec. 6-12</unitdate>(Carter VII, pp. 240-247)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00028" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1804-12-13/1804-12-28" type="inclusive">1804, Dec
+                                13-28</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00029" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1805-01-01/1805-01-10" type="inclusive">1805,
+                                Jan. 1-10</unitdate>(Carter VII, pp. 251-256</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00030" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1805-08-19">1805, Aug. 19</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00031" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1805-08-21">1805, Aug. 21</unitdate>(Indian
+                            Treaties, 1826, pp. 63-65)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00032" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1805-10-01">1805, Oct. 1</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00033" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1805-11-19">1805, Nov. 19</unitdate>(Carter
+                            VII, pp. 314-317)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00034" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1805-11-25">1805, Nov. 25</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00035" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1805-12-02">1805, Dec. 2</unitdate>(Carter VII,
+                            pp. 317-323)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00036" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1805-12-18/1805-12-22" type="inclusive">1805, Dec.
+                                18-22</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00037" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1805-12-30">1805, Dec. 30</unitdate>(Indian
+                            Treaties, 1837, pp. 131-132)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00038" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1806-01-16/1806-02-10" type="inclusive">1806, Jan
+                                16-Feb. 10</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00039" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1806-02-27">1806, Feb. 27</unitdate>(Carter
+                            VII, pp. 336-337)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00040" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1806-03-05">1806, Mar. 5</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00041" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1806-03-25">1806, Mar. 25</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00042" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1806-03-25">1806, Mar.
+                            25,</unitdate>transcript</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00043" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1806-03-26/1806-04-15" type="inclusive">1806, Mar.
+                                26-Apr. 15</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00044" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1806-09/1806-11-27" type="inclusive">1806, Sept.-Nov.
+                                27</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00045" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1806-11-27">1806, Nov. 27</unitdate>(Carter
+                            VII, pp.399-400)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00046" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1806-11-28/1806-12-20" type="inclusive">1806, Nov.
+                                28-Dec. 20</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00047" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1806-12-20">1806, Dec. 20</unitdate>(Carter
+                            VII, pp. 405-407)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00048" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1807-01/1807-02" type="inclusive">1807,
+                                Jan.-Feb.</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00049" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1807-09-03/1807-09-16" type="inclusive">1807,
+                                Sept.3-16</unitdate>(Carter VII, pp. 476)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00050" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1807-10-07/1807-11-17" type="inclusive">1807, Oct.
+                                7-Nov. 17</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00051" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1807-11-20">1807, Nov. 20</unitdate>(Carter
+                            VII, pp. 492-493)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00052" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1808-01-15/1808-02-24" type="inclusive">1808, Jan.
+                                15-Feb. 24</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00053" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1808-02-25">1808, Feb. 25</unitdate>(Carter
+                            VII, pp. 525)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00054" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1808-09-01">1808, Sept. 1</unitdate>(Carter
+                            VII, pp. 585-586)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00055" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1808-10-07/1808-10-11" type="inclusive">1808,
+                                Oct. 7-11</unitdate>(Carter VII, pp. 598-601)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00056" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1808-10-12">1808, Oct. 12</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00057" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1808-10-12">1808, Oct. 12</unitdate>(Carter
+                            VII, pp. 602-603)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00058" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1808-10-22">1808, Oct. 22</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00059" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1808-10-26">1808, Oct. 26</unitdate>(Carter
+                            VII, pp. 608)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00060" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1808-11-02">1808, Nov. 2</unitdate>(Carter VII,
+                            pp. 609-610)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00061" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1808-12-16">1808, Dec. 16</unitdate>(Carter
+                            VII, pp. 619-621)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00062" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1809-01-19">1809, Jan. 19</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00063" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1809-02-03">1809, Feb. 3</unitdate>(Carter VII,
+                            pp. 633-635)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00064" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1809-02-14">1809, Feb 14</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00065" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1809-09-30">1809, Sept. 30</unitdate>(Indian
+                            Treaties, 1826, pp. 71-74)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00066" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1809-10-21">1809, Oct. 21</unitdate>(Ewbank
+                            &amp; Riker, pp. 768-770)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00067" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1809-12-05">1809, Dec. 5</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00068" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1809-12-12">1809, Dec. 12</unitdate>(Carter
+                            VII, pp. 687-694)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00069" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1809">1809,</unitdate><unitdate
+                                normal="1779/1922" type="inclusive">n.d.</unitdate>(Carter VII, pp.
+                            703-707)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00070" level="file">
+                    <did>
+                        <container label="Box" type="box">3</container>
+                        <unittitle>
+                            <unitdate normal="1810-01/1810-04" type="inclusive">1810,
+                                Jan.-Apr.</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00071" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1810-12-10">1810, Dec. 10</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00072" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1811-01-02">1811, Jan. 2</unitdate>(Ewbank
+                            &amp; Riker, pp. 772)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00073" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1811-01-07">1811, Jan. 7</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00074" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1811-01-07">1811, Jan. 7</unitdate>(Ewbank
+                            &amp; Riker, pp. 772-774)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00075" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1811-01-10/1811-01-17" type="inclusive">1811, Jan.
+                                10-17</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00076" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1811-01-21">1811, Jan. 21</unitdate>(Ewbank
+                            &amp; Riker, pp. 774-780)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00077" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1811-01-22">1811, Jan. 22</unitdate>(Carter
+                            VIII, pp. 102-103)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00078" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1811-01-24">1811, Jan. 24</unitdate>(Ewbank
+                            &amp; Riker, pp. 780-783)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00079" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1811-01-30/1811-02-06" type="inclusive">1811, Jan.
+                                30-Feb. 6</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00080" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1811-02-07">1811, Feb. 7</unitdate>(Carter
+                            VIII, pp.105-106)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00081" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1811-02-08/1811-02-12" type="inclusive">1811, Feb.
+                                8-12</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00082" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1811-05-05">1811, May 5</unitdate>(Carter VIII,
+                            pp. 105-106)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00083" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1811-09-30">1811, Sept. 30</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00084" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1811-10-26">1811, Oct. 26</unitdate>(Carter
+                            VIII, pp. 137-138)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00085" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1811-12-09">1811, Dec. 9</unitdate>(Ewbank
+                            &amp; Riker, pp. 785-786)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00086" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1811-12-13">1811, Dec. 13</unitdate>(Carter
+                            VIII, pp. 147-148)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00087" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1811-12-18">1811, Dec. 18</unitdate>(Carter
+                            VIII, pp. 157)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00088" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1811-12-21/1812-03-13" type="inclusive">1811, Dec
+                                21-1812, Mar. 13</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00089" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1812-03-06">1812, Mar. 16</unitdate>(Carter
+                            VIII, pp. 171-173)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00090" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1812-03-24/1812-05-14" type="inclusive">1812, Mar.
+                                24-May 14</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00091" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1812-06-15">1812, June 15</unitdate>(Carter
+                            VIII, pp. 183-184)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00092" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1812-06/1812-10" type="inclusive">1812,
+                                June-Oct.</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00093" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1812-11-02/1812-12-22" type="inclusive">1812, Nov.
+                                2-Dec. 22</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00094" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1812">1812</unitdate> &amp; <unitdate
+                                normal="1813">1813</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00095" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1813-01-15/1813-01-20" type="inclusive">1813, Jan.
+                                15-20</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00096" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1813-02-17">1813, Feb. 17</unitdate>(Carter
+                            VIII, pp. 239-240)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00097" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1813-02-20/1813-03-14" type="inclusive">1813, Feb.
+                                20-Mar. 14</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00098" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1813-05-03/1813-05-25" type="inclusive">1813,
+                                May 3-25</unitdate>(Ewbank &amp; Riker, pp. 790-793)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00099" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1813-12-15">1813, Dec. 15</unitdate>(Ewbank
+                            &amp; Riker, pp. 797-798)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00100" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1813-12-27">1813, Dec. 27</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00101" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1814-02-05">1814, Jan. 5</unitdate>(Ewbank
+                            &amp; Riker, pp. 801-802)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00102" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1814-02-06">1814, Jan. 6</unitdate>(Carter
+                            VIII. pp. 280-281)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00103" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1814-02/1814-04" type="inclusive">1814,
+                                Feb-Apr.</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00104" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1814-07">1814, July</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00105" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1814-07">1814,
+                            July,</unitdate>transcript</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00106" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1814-08-31">1814, Aug. 31</unitdate>(Ewbank
+                            &amp; Riker, pp. 806-808)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00107" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1815-02">1815, Feb.</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00108" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1815-06">1815, June</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00109" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1815-07-12/1815-08-07" type="inclusive">1815, July
+                                12-Aug. 7</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00110" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1815-08-08">1815, Aug. 8</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00111" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1815-08-08">1815, Aug.
+                            8,</unitdate>transcript</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00112" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1815-09-09/1815-09-13" type="inclusive">1815, Sept.
+                                9-13</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00113" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1815-10-01">1815, Oct. 1</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00114" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1815-10-04/1815-10-22" type="inclusive">1815, Oct.
+                                4-22</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00115" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1816-01-02">1816, Jan. 2</unitdate>(Ewbank
+                            &amp; Riker, pp. 811-815)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00116" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1816-01-03">1816, Jan. 3</unitdate>(Carter
+                            VIII, 369-371)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00117" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1816-01-08">1816, Jan. 8</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00118" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1816-01-11">1816, Jan. 11</unitdate>(Ewbank
+                            &amp; Riker, pp. 816)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00119" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1816-01-23">1816, Jan. 23</unitdate>(Carter
+                            VIII, pp. 375-379)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00120" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1816-02-27/1816-04-04" type="inclusive">1816, Feb.
+                                27-Apr. 4</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00121" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1816-04-04">1816, Apr. 4</unitdate>(Carter
+                            VIII, pp. 409-410)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00122" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1816-04-13/1816-12" type="inclusive">1816, Apr.
+                                13-Dec.</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00123" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1817-01/1817-02" type="inclusive">1817,
+                                Jan.-Feb.</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00124" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1817-07/1817-09" type="inclusive">1817,
+                                Jul.-Sept.</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00125" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1817-10/1817-12" type="inclusive">1817,
+                                Oct.-Dec.</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00126" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1818-01">1818, Jan.</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00127" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1826-05-13">1826, May 13</unitdate>(Esarey III,
+                            pp. 339-345)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00128" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1829/1830" type="inclusive">1829-1830</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00129" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1840-08-08">1840, Aug. 8;</unitdate><unitdate
+                                normal="1858-03-04">1858, Mar. 4,</unitdate>typed copies</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00130" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1922-08-24">1922, Aug. 24,</unitdate>list of
+                            papers</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00131" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1779/1922" type="inclusive">n.d.
+                            </unitdate>Petitions</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00132" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1779/1922" type="inclusive">n.d.
+                            </unitdate>Miscellaneous</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00133" level="file">
+                    <did>
+                        <container label="Box:" type="box">Oversize</container>
+                        <unittitle>
+                            <unitdate normal="1779-11-04">1779, Nov. 4</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00134" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1800-10-01">1800, Oct. 1</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00135" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1803-03-20">1803, Mar. 20</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00136" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1806-02-13">1806, Feb. 13</unitdate>(Carter
+                            VII, pp. 340-342)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00137" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1809-10-01">1809, Oct. 1</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00138" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1809-12-09">1809, Dec. 9</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00139" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1810-10-01">1810, Oct. 1</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00140" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1811-12-21">1811, Dec. 21</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00141" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1812-05-27">1812, May 27</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00142" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1812-12-30">1812, Dec. 30</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00143" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1913-10-01">1813, Oct. 1</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00144" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1816-02-22">1816, Feb. 22</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00145" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1816-10-01">1816, Oct. 1</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8552-00146" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1818-02-12">1818, Feb. 12</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
