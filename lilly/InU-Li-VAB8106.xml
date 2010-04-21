@@ -1,0 +1,1169 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAB8106">InU-Li-VAB8106</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Knapik mss., <date normal="1936/1979"
+                        >1936-1979</date></titleproper>
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2009" type="publication">© 2009</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2009">© 2009</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                <lb/>[date of source: <date normal="2009" type="source">2009</date>
+                <lb/>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2009-10-14">Oct. 14, 2009</date>
+            </creation>
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2009-10-14"/>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Knapik, Harold</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Knapik mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1936/1979" type="inclusive"
+                >1936-1979</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+            <unitid encodinganalog="099" label="Collection No.">LMC 1591</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>145 items</extent>
+                <!-- if both linear feet and number of items included, repeat extent-->
+            </physdesc>
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    encodinganalog="546" langcode="eng">English.</language></langmaterial>
+            <abstract encodinganalog="520" label="Abstract">The Knapik mss., 1936-1979, consists of
+                the papers of Harold L. Knapik, 1916-1976, and Virginia Knapik,
+                1911-1975.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+            <p>In <unitdate normal="1948">1948</unitdate> the Knapiks moved to Paris where Harold
+                studied counterpoint music at the Ecole Normale de Musique, while Virginia worked at
+                the American Embassy. An accomplished musician, Harold Knapik published several
+                musical compositions, as well as a text on the musical style of Counterpoint. While
+                living in Paris, the Knapiks befriended Alice B. Toklas <unitdate normal="1877/1967"
+                    type="inclusive">(1877-1967)</unitdate> and were introduced to her social
+                network of friends and admirers. After returning to the United States Harold and
+                Virginia opened the Knapik Gallery in New York City. Harold also published a
+                cookbook titled <emph render="italic">Haute Cuisine Without Help</emph>. Virginia
+                Knapik died in <unitdate normal="1975-06">June 1975</unitdate> from a heart attack;
+                Harold Knapik died in <unitdate normal="1976-02">February 1976,</unitdate> after
+                apparently taking his own life.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Correspondence; II. Alice
+                B. Toklas; III. Writings; IV. Miscellaneous; V. Personal/Financial; VI. Printed.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The bulk of the collection consists of the Knapiks' correspondence with family and
+                friends. It includes eight letters from Harold to Virginia, as well as a number of
+                letters to and from Harold's brother, Eugene Knapik <unitdate normal="1913/1983"
+                    type="inclusive">(1913-1983).</unitdate> Other correspondents include Osborn
+                Andreas, Joseph Amber Barry, William Nelson Copley, Gilbert A. Harrison, Darius
+                Milhaud, Man Ray and his wife Juliet, Carl Van Vechten, Charles William White,
+                Isabel Wilder, and Thornton Niven Wilder. The Knapiks also corresponded with a
+                number of friends affiliated with the Ramakrishna-Vivekananda Mission Society of the
+                Hindu religion. Filed separately are twenty-six letters from Alice B. Toklas and a
+                small group of photographs relating to her.</p>
+            <p>Other items in the collection include a typed carbon draft of Osborn Andreas' <title
+                    render="doublequote">Henry James and the Expanding Horizon,</title> published by
+                the University of Washington Press in <unitdate normal="1948">1948;</unitdate> a
+                small group of notes or handwritten copies of articles relating to frescoes; some
+                miscellaneous financial papers for the Knapiks; and a file of printed clippings,
+                etc., relating chiefly to Harold Knapik's books and to the Art Galley the Knapiks
+                ran in New York.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <p>The following terms have been used to index the description of this collection in
+                    <extref xlink:href="http://www.iucat.iu.edu">IUCAT</extref>, the IU Libraries'
+                online catalog. Materials about related topics, persons or places can be found by
+                searching the catalog using these terms.</p>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/knapik+harold{su}">
+                            <persname encodinganalog="100" source="lcnaf">Knapik, Harold.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/knapik+virginia">
+                            <persname encodinganalog="700" source="lcnaf">Knapik, Virginia.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/knapik+eugene+1913-1983">
+                            <persname encodinganalog="700" source="lcnaf">Knapik, Eugene, 1913-1983.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/milhaud+darius+1892-1974{su}">
+                            <persname encodinganalog="700" source="lcnaf">Milhaud, Darius, 1892-1974
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/wilder+isabel+1900-">
+                            <persname encodinganalog="700" source="lcnaf">Wilder, Isabel, 1900-
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/wilder+thornton+1897-1975{su}">
+                            <persname encodinganalog="700" source="lcnaf">Wilder, Thornton,
+                                1897-1975. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/toklas+alice+b{su}">
+                            <persname encodinganalog="700" source="lcnaf">Toklas, Alice B.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/andreas+osborn+henry+james+and+the+expanding+horizon">
+                            <persname encodinganalog="700" source="lcnaf">Andreas, Osborn. Henry
+                                James and the expanding horizon. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/nikhilananda+swami">
+                            <persname encodinganalog="700" source="lcnaf">Nikhilananda, Swami.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/knapik+harold{su}">
+                            <persname encodinganalog="600" source="lcnaf">Knapik,
+                                Harold--Correspondence. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/toklas+alice+b{su}">
+                            <persname encodinganalog="600" source="lcnaf">Toklas, Alice
+                                B.--Photographs. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/toklas+alice+b{su}">
+                            <persname encodinganalog="600" source="lcnaf">Toklas, Alice
+                                B.--Correspondence. </persname>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+        </controlaccess>
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 1989</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Knapik mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAB8106-00001" level="series">
+                <did>
+
+
+
+                    <unittitle>I. Correspondence</unittitle>
+                </did>
+                <arrangement>
+                    <p>Arranged chronologically.</p>
+                </arrangement>
+                <c02 id="VAB8106-00002" level="file">
+                    <did>
+                        <container label="Folders" type="folder">1-5</container>
+                        <unittitle>
+                            <unitdate normal="1937/1979" type="inclusive">1937-1979;</unitdate>
+                            <unitdate normal="1936/1979" type="inclusive">undated.</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8106-00003" level="file">
+                    <did>
+                        <unittitle>Index of Correspondents</unittitle>
+                    </did>
+                    <arrangement>
+                        <p>Arranged alphabetically.</p>
+                    </arrangement>
+                    <c03 id="VAB8106-00004" level="file">
+                        <did>
+                            <unittitle>Andreas, Osborn, <unitdate normal="1903/1967"
+                                    type="inclusive">1903-1967,</unitdate>writer, stock
+                                broker</unittitle>
+                        </did>
+                        <c04 id="VAB8106-00005" level="file">
+                            <did>
+                                <unittitle>To Knapik, Harold L.</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00006" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1959-11-09">1959, Nov. 9</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB8106-00007" level="file">
+                        <did>
+                            <unittitle>Barry, Joseph Amber, <unitdate normal="1917/1994"
+                                    type="inclusive">1917-1994,</unitdate>author</unittitle>
+                        </did>
+                        <c04 id="VAB8106-00008" level="file">
+                            <did>
+                                <unittitle>To Knapik, Virginia</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00009" level="file">
+                                <did>
+                                    <unittitle><unitdate normal="1963-07-30">1963, July
+                                            30</unitdate>[concerns: Toklas, Alice B., <unitdate
+                                            normal="1877/1967" type="inclusive"
+                                            >1877-1967]</unitdate></unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB8106-00010" level="file">
+                        <did>
+                            <unittitle>Burns, Edward, <unitdate normal="1944">1944-
+                                ,</unitdate>editor</unittitle>
+                        </did>
+                        <c04 id="VAB8106-00011" level="file">
+                            <did>
+                                <unittitle>To Knapik, Harold and Virginia</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00012" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1971-07-14">1971, July 14</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB8106-00013" level="file">
+                        <did>
+                            <unittitle>Copley, William Nelson, <unitdate normal="1919/1996"
+                                    type="inclusive">1919-1996,</unitdate>painter</unittitle>
+                        </did>
+                        <c04 id="VAB8106-00014" level="file">
+                            <did>
+                                <unittitle>To Knapik, Harold L.</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00015" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1958-10-01">1958, Oct. 1</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB8106-00016" level="file">
+                        <did>
+                            <unittitle>Gallup, Donald Clifford, <unitdate normal="1913">1913-
+                                    ,</unitdate>author</unittitle>
+                        </did>
+                        <c04 id="VAB8106-00017" level="file">
+                            <did>
+                                <unittitle>To Knapik, Harold L.</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00018" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1975-06-11">1975, June 11</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB8106-00019" level="file">
+                        <did>
+                            <unittitle>Harrison, Gilbert A., <unitdate normal="1915">1915-
+                                    ,</unitdate>publisher</unittitle>
+                        </did>
+                        <c04 id="VAB8106-00020" level="file">
+                            <did>
+                                <unittitle>To Knapik, Harold and Virginia</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00021" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1967-03-14">1967, Mar. 14</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB8106-00022" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1936/1979" type="inclusive"
+                                            >Undated</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB8106-00023" level="file">
+                        <did>
+                            <unittitle>Hightower, Rosella, <unitdate normal="1920">1920-
+                                    ,</unitdate>dancer, teacher</unittitle>
+                        </did>
+                        <c04 id="VAB8106-00024" level="file">
+                            <did>
+                                <unittitle>To Knapik, Harold L. and Virginia</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00025" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1963-06-11">1963, June 11</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB8106-00026" level="file">
+                        <did>
+                            <unittitle>Knapik, Eugene, <unitdate normal="1913/1983" type="inclusive"
+                                    >1913-1983,</unitdate>violin-maker</unittitle>
+                        </did>
+                        <c04 id="VAB8106-00027" level="file">
+                            <did>
+                                <unittitle>To Knapik, Harold</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00028" level="file">
+                                <did>
+                                    <unittitle><unitdate normal="1965-01-10">1965, Jan.
+                                            10</unitdate>(enclosure)</unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB8106-00029" level="file">
+                        <did>
+                            <unittitle>Knapik, Harold L., <unitdate normal="1916/1976"
+                                    type="inclusive">1916-1976,</unitdate>musician</unittitle>
+                        </did>
+                        <c04 id="VAB8106-00030" level="file">
+                            <did>
+                                <unittitle>To Daugherty, Paul C.</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00031" level="file">
+                                <did>
+                                    <unittitle><unitdate normal="1947-12-02">1947, Dec.
+                                        2</unitdate>(carbon)</unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB8106-00032" level="file">
+                        <did>
+                            <unittitle>Knapik, Harold L., <unitdate normal="1916/1976"
+                                    type="inclusive">1916-1976,</unitdate>musician</unittitle>
+                        </did>
+                        <c04 id="VAB8106-00033" level="file">
+                            <did>
+                                <unittitle>To Knapik, Eugene</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00034" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1970-12-21">1970, Dec. 21</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB8106-00035" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1974-02-16">1974, Feb. 16,</unitdate>
+                                        <unitdate normal="1974-09-18">Sept. 18,</unitdate>
+                                        <unitdate normal="1974-11-04">Nov. 4</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB8106-00036" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1975-06-06">1975, June 6,</unitdate>
+                                        <unitdate normal="1975-07-02">July 2</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB8106-00037" level="file">
+                        <did>
+                            <unittitle>Knapik, Harold L., <unitdate normal="1916/1976"
+                                    type="inclusive">1916-1976,</unitdate>musician</unittitle>
+                        </did>
+                        <c04 id="VAB8106-00038" level="file">
+                            <did>
+                                <unittitle>To Knapik, Eugene and Eleanor</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00039" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1974-12-08">1974, Dec. 8</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB8106-00040" level="file">
+                        <did>
+                            <unittitle>Knapik, Harold L., <unitdate normal="1916/1976"
+                                    type="inclusive">1916-1976,</unitdate>musician</unittitle>
+                        </did>
+                        <c04 id="VAB8106-00041" level="file">
+                            <did>
+                                <unittitle>To Knapik, Virginia</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00042" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1953-10-04/1953-10-06" type="inclusive"
+                                            >1953, Oct. 4, 5, 6</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB8106-00043" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1955-11-02">1955, Nov. 2</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB8106-00044" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1956-02-06">1956, Feb. 6</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB8106-00045" level="file">
+                                <did>
+                                    <unittitle><unitdate normal="1936/1979" type="inclusive"
+                                            >Undated</unitdate>(2)</unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB8106-00046" level="file">
+                        <did>
+                            <unittitle>Knapik, Harold L., <unitdate normal="1916/1976"
+                                    type="inclusive">1916-1976,</unitdate>musician</unittitle>
+                        </did>
+                        <c04 id="VAB8106-00047" level="file">
+                            <did>
+                                <unittitle>To Sister Bernadette</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00048" level="file">
+                                <did>
+                                    <unittitle><unitdate normal="1965-09-08">1965, Sept.
+                                            8</unitdate>(draft)</unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB8106-00049" level="file">
+                        <did>
+                            <unittitle>Knapik, Virginia, <unitdate normal="1911/1975"
+                                    type="inclusive">1911-1975,</unitdate>art dealer</unittitle>
+                        </did>
+                        <c04 id="VAB8106-00050" level="file">
+                            <did>
+                                <unittitle>To Knapik, Eleanor</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00051" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1974-12-14">1974, Dec. 14</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB8106-00052" level="file">
+                        <did>
+                            <unittitle>Knapik, Virginia, <unitdate normal="1911/1975"
+                                    type="inclusive">1911-1975,</unitdate>art dealer</unittitle>
+                        </did>
+                        <c04 id="VAB8106-00053" level="file">
+                            <did>
+                                <unittitle>To Knapik, Eleanor and Eugene</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00054" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1974-02-15">1974, Feb. 15</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB8106-00055" level="file">
+                        <did>
+                            <unittitle>Knapik, Virginia, <unitdate normal="1911/1975"
+                                    type="inclusive">1911-1975,</unitdate>art dealer</unittitle>
+                        </did>
+                        <c04 id="VAB8106-00056" level="file">
+                            <did>
+                                <unittitle>To Miles, Jeanne Patterson</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00057" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1948-09-30">1948, Sept. 30</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB8106-00058" level="file">
+                        <did>
+                            <unittitle>Milhaud, Darius, <unitdate normal="1892/1974"
+                                    type="inclusive">1892-1974,</unitdate>composer</unittitle>
+                        </did>
+                        <c04 id="VAB8106-00059" level="file">
+                            <did>
+                                <unittitle>To Knapik, Harold L.</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00060" level="file">
+                                <did>
+                                    <unittitle><unitdate normal="1936/1979" type="inclusive"
+                                            >Undated</unitdate>(2 in French)</unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB8106-00061" level="file">
+                        <did>
+                            <unittitle>Monnet, Jean, <unitdate normal="1888/1979" type="inclusive"
+                                    >1888-1979,</unitdate>French economist, politician</unittitle>
+                        </did>
+                        <c04 id="VAB8106-00062" level="file">
+                            <did>
+                                <unittitle>To Knapik, Virginia</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00063" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1960-07-05">1960, July 5</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB8106-00064" level="file">
+                        <did>
+                            <unittitle>Nikhilananda, Swami, <unitdate normal="1895/1973"
+                                    type="inclusive">1895-1973</unitdate></unittitle>
+                        </did>
+                        <c04 id="VAB8106-00065" level="file">
+                            <did>
+                                <unittitle>To Knapik, Virginia</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00066" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1955-11-05">1955, Nov. 5</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB8106-00067" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1967-02-28">1967, Feb. 28</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB8106-00068" level="file">
+                                <did>
+                                    <unittitle><unitdate normal="1936/1979" type="inclusive"
+                                            >Undated</unitdate>(card)</unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB8106-00069" level="file">
+                        <did>
+                            <unittitle>Raffel, Gertrude Stein, <unitdate normal="1900/1990"
+                                    type="inclusive">1900-1990</unitdate></unittitle>
+                        </did>
+                        <c04 id="VAB8106-00070" level="file">
+                            <did>
+                                <unittitle>To Knapik, Harold L.</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00071" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1975-06-18">1975, June 18</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB8106-00072" level="file">
+                        <did>
+                            <unittitle>Ray, Juliet Man, <unitdate normal="1911/1991"
+                                    type="inclusive">1911-1991,</unitdate>dancer</unittitle>
+                        </did>
+                        <c04 id="VAB8106-00073" level="file">
+                            <did>
+                                <unittitle>To Knapik, Virginia and Harold L.</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00074" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1936/1979" type="inclusive"
+                                            >Undated</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB8106-00075" level="file">
+                        <did>
+                            <unittitle>Ray, Man, <unitdate normal="1890/1976" type="inclusive"
+                                    >1890-1976,</unitdate>artist, photographer</unittitle>
+                        </did>
+                        <c04 id="VAB8106-00076" level="file">
+                            <did>
+                                <unittitle>To Knapik, Harold L. and Virginia</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00077" level="file">
+                                <did>
+                                    <unittitle><unitdate normal="1936/1979" type="inclusive"
+                                            >Undated</unitdate>(appended to Juliet Man Ray to
+                                        Virginia and Harold Knapik, <unitdate normal="1936/1979"
+                                            type="inclusive">undated)</unitdate></unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB8106-00078" level="file">
+                        <did>
+                            <unittitle>Taylor, Louise, <unitdate normal="1884/1974" type="inclusive"
+                                    >1884-1974,</unitdate>soprano</unittitle>
+                        </did>
+                        <c04 id="VAB8106-00079" level="file">
+                            <did>
+                                <unittitle>To Knapik, Harold L.</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00080" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1975-06-19">1975, June 19</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB8106-00081" level="file">
+                        <did>
+                            <unittitle>Toklas, Alice B., <unitdate normal="1887/1967"
+                                    type="inclusive">1877-1967,</unitdate>author</unittitle>
+                        </did>
+                        <c04 id="VAB8106-00082" level="file">
+                            <did>
+                                <unittitle>To Knapik, Harold L.</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00083" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1950-11-10">1950, Nov. 10</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB8106-00084" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1953-05-01">1953, May 1</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB8106-00085" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1954-10-01">1954, Oct. 1</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB8106-00086" level="file">
+                        <did>
+                            <unittitle>Toklas, Alice B., <unitdate normal="1887/1967"
+                                    type="inclusive">1877-1967,</unitdate>author</unittitle>
+                        </did>
+                        <c04 id="VAB8106-00087" level="file">
+                            <did>
+                                <unittitle>To Knapik, Harold L. and Virginia</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00088" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1959-12-25">1959, Dec. 25</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB8106-00089" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1950/1959" type="inclusive"
+                                            >195?</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB8106-00090" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1960-02-13">1960, Feb. 13</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB8106-00091" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1961-08-19">1961, Aug. 19</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB8106-00092" level="file">
+                        <did>
+                            <unittitle>Toklas, Alice B., <unitdate normal="1887/1967"
+                                    type="inclusive">1877-1967,</unitdate>author</unittitle>
+                        </did>
+                        <c04 id="VAB8106-00093" level="file">
+                            <did>
+                                <unittitle>To Knapik, Virginia</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00094" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1948-11-19">1948, Nov. 19</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB8106-00095" level="file">
+                                <did>
+                                    <unittitle><unitdate normal="1953-09-19">1953, Sept.
+                                            19,</unitdate><unitdate normal="1953-09-26"
+                                            >26</unitdate>(copy)</unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB8106-00096" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1954-01-08">1954, Jan. 8,</unitdate>
+                                        <unitdate normal="1954-07-03">July 3</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB8106-00097" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1955-08-20">1955, Aug. 20,</unitdate>
+                                        <unitdate normal="1955-12-26">Dec. 26</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB8106-00098" level="file">
+                                <did>
+                                    <unittitle><unitdate normal="1959-02-09">1959, Feb.
+                                        9</unitdate>(copy), <unitdate normal="1959-05-04">May
+                                            4,</unitdate><unitdate normal="1959-09-04">Sept.
+                                            4,</unitdate><unitdate normal="1959-10-23">Oct.
+                                            23</unitdate></unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB8106-00099" level="file">
+                                <did>
+                                    <unittitle><unitdate normal="1961-02-20">1961, Feb.
+                                            20</unitdate>(copy)</unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB8106-00100" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1962-05-05">1962, May 5,</unitdate>
+                                        <unitdate normal="1962-11-17">Nov. 17</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB8106-00101" level="file">
+                                <did>
+                                    <unittitle><unitdate normal="1936/1979" type="inclusive"
+                                            >Undated</unitdate>(4 copies)</unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB8106-00102" level="file">
+                        <did>
+                            <unittitle>Toklas, Alice B., <unitdate normal="1887/1967"
+                                    type="inclusive">1877-1967,</unitdate>author</unittitle>
+                        </did>
+                        <c04 id="VAB8106-00103" level="file">
+                            <did>
+                                <unittitle>To White, Charles William</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00104" level="file">
+                                <did>
+                                    <unittitle><unitdate normal="1959-05-02">1959, May
+                                        2</unitdate>(enclosed in White to Virginia Knapik, <unitdate
+                                            normal="1959-05-05">May 5, 1959)</unitdate></unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB8106-00105" level="file">
+                        <did>
+                            <unittitle>Van Vechten, Carl, <unitdate normal="1880/1964"
+                                    type="inclusive">1880-1964,</unitdate>author</unittitle>
+                        </did>
+                        <c04 id="VAB8106-00106" level="file">
+                            <did>
+                                <unittitle>To Knapik, Harold L.</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00107" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1961-03-14">1961, Mar. 14</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB8106-00108" level="file">
+                        <did>
+                            <unittitle>White, Charles William, <unitdate normal="1906">1906-
+                                    ,</unitdate>author</unittitle>
+                        </did>
+                        <c04 id="VAB8106-00109" level="file">
+                            <did>
+                                <unittitle>To Knapik, Virginia</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00110" level="file">
+                                <did>
+                                    <unittitle><unitdate normal="1959-05-05">1959, May
+                                        5</unitdate>(enclosure) [concerns: Toklas, Alice B.,
+                                            <unitdate normal="1877/1967" type="inclusive"
+                                            >1877-1967]</unitdate></unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB8106-00111" level="file">
+                        <did>
+                            <unittitle>Wilder, Isabel, <unitdate normal="1900/1995" type="inclusive"
+                                    >1900-1995,</unitdate>author</unittitle>
+                        </did>
+                        <c04 id="VAB8106-00112" level="file">
+                            <did>
+                                <unittitle>To Knapik, Harold L. and Virginia</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00113" level="file">
+                                <did>
+                                    <unittitle><unitdate normal="1954-12-03">1954, Dec.
+                                        3</unitdate>[concerns: Toklas, Alice B., <unitdate
+                                            normal="1877/1967" type="inclusive"
+                                            >1877-1967]</unitdate></unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB8106-00114" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1960-06-13">1960, June 13</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB8106-00115" level="file">
+                                <did>
+                                    <unittitle><unitdate normal="1961-08-16">1961, Aug.
+                                            16</unitdate>[concerns: Toklas, Alice B., <unitdate
+                                            normal="1877/1967" type="inclusive"
+                                            >1877-1967]</unitdate></unittitle>
+                                </did>
+                            </c05>
+                            <c05 id="VAB8106-00116" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1971-02-20">1971, Feb. 20</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB8106-00117" level="file">
+                        <did>
+                            <unittitle>Wilder, Thornton Niven, <unitdate normal="1897/1975"
+                                    type="inclusive">1897-1975,</unitdate>author</unittitle>
+                        </did>
+                        <c04 id="VAB8106-00118" level="file">
+                            <did>
+                                <unittitle>To Knapik, Harold L.</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00119" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1960-06-09">1960, June 9</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+                    <c03 id="VAB8106-00120" level="file">
+                        <did>
+                            <unittitle>Wilder, Thornton Niven, <unitdate normal="1897/1975"
+                                    type="inclusive">1897-1975,</unitdate>author</unittitle>
+                        </did>
+                        <c04 id="VAB8106-00121" level="file">
+                            <did>
+                                <unittitle>To Knapik, Harold L. and Virginia</unittitle>
+                            </did>
+                            <c05 id="VAB8106-00122" level="file">
+                                <did>
+                                    <unittitle>
+                                        <unitdate normal="1961-06-25">1961, June 25</unitdate>
+                                    </unittitle>
+                                </did>
+                            </c05>
+                        </c04>
+                    </c03>
+
+                </c02>
+
+            </c01>
+            <c01 id="VAB8106-00123" level="series">
+                <did>
+                    <unittitle>II. Toklas, Alice B.</unittitle>
+                </did>
+                <c02 id="VAB8106-00124" level="file">
+                    <did>
+                        <container label="Folder" type="folder">6</container>
+                        <unittitle>Correspondence, <unitdate normal="1948/1962" type="inclusive"
+                                >1948-1962</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8106-00125" level="file">
+                    <did>
+                        <container label="Folder" type="folder">7</container>
+                        <unittitle>Photographs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8106-00126" level="file">
+                    <did>
+                        <container label="Folder" type="folder">8</container>
+                        <unittitle>Printed: clippings from <emph render="italic">The New
+                                Yorker</emph>, re: Toklas</unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAB8106-00127" level="series">
+                <did>
+                    <unittitle>III. Writings</unittitle>
+                </did>
+                <c02 id="VAB8106-00128" level="file">
+                    <did>
+                        <container label="Folder" type="folder">9</container>
+                        <unittitle>Andreas, Osborn. <title render="doublequote">Henry James and the
+                                Expanding Horizon.</title> T(carbon)D. 201p.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8106-00129" level="file">
+                    <did>
+                        <container label="Folder" type="folder">10</container>
+                        <unittitle>Davis, Catherine. [poems] T.D. 8p.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8106-00130" level="file">
+                    <did>
+                        <container label="Folder" type="folder">11</container>
+                        <unittitle>Knapik, Harold L. <title render="doublequote">Shopping in
+                                Paris-Nostalgic Reminiscences - 1948-1960.</title> T.D.
+                            6p.</unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAB8106-00131" level="series">
+                <did>
+                    <unittitle>IV. Miscellaneous</unittitle>
+                </did>
+                <c02 id="VAB8106-00132" level="file">
+                    <did>
+                        <container label="Folder" type="folder">12</container>
+                        <unittitle>Notes re: frescoes</unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAB8106-00133" level="series">
+                <did>
+                    <unittitle>V. Personal/Financial</unittitle>
+                </did>
+                <c02 id="VAB8106-00134" level="file">
+                    <did>
+                        <container label="Folder" type="folder">13</container>
+                        <unittitle>
+                            <unitdate normal="1945/1948" type="inclusive">1945-1948</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAB8106-00135" level="series">
+                <did>
+                    <unittitle>VI. Printed</unittitle>
+                </did>
+                <c02 id="VAB8106-00136" level="file">
+                    <did>
+                        <container label="Folder" type="folder">14</container>
+                        <unittitle>Clippings and other printed items</unittitle>
+                    </did>
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
