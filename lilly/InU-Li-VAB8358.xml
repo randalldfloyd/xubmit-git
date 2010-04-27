@@ -1,0 +1,2925 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAB8358">InU-Li-VAB8358</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Fetter mss., <date normal="1875/1988"
+                        >1875-1988</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2009" type="publication">© 2009</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2009">© 2009</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                    <lb/><date normal="2009" type="source">2009</date>
+                <lb/>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2010-01-05">Jan. 5, 2010</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2010-01-05"/>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Fetter, Frank A. (Frank Albert),
+                    1863-1949</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Fetter mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1875/1988" type="inclusive"
+                >1875-1988</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1401</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>ca. 8,454 items</extent>
+            </physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Fetter mss., 1875-1988, consists of
+                letters and papers of Frank Albert Fetter, 1863-1949, economist.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+
+            <p>Career: born, Peru, Indiana, March 8, 1863; bookseller, Peru, Indiana, 1883-1890;
+                A.B., Indiana University, 1891; Ph.M., Cornell, 1892; postgraduate, Sorbonne, Ecole
+                de droit, Paris, 1892-1893; Ph.D., Halle, 1894; LLD, Colgate, 1910-1911, Occidental,
+                1930, Indiana, 1934, Princeton, 1945; professor, Indiana, 1895-1898, Leland
+                Stanford, Jr., 1898-1900, Cornell, 1901-1910, Princeton, 1911-1931; chairman, Dept.
+                of economics and social institutions, Princeton, 1911-1922; professor emeritus
+                Princeton, 1931-1949; visiting professor, Harvard, 1906-1907, Columbia, 1912-1913,
+                Claremont Colleges, 1928-1929, Illinois, 1934-1936; commissioner, New York State
+                Board Of Charities, 1910-1911; general manager, National War Camp Community Service,
+                1918-1919; president, New Jersey Conference For Social Welfare, 1919; economic
+                adviser to the Associated States Opposing Pittsburg-Plus, 1923; special expert on
+                the basing point practices for the Federal Trade Commission, 1938-1939; author:
+                    <title render="italic">The Principles of Economics,</title> 1904, Economic
+                Principles, 1915, <title render="italic">Modern Economic Problems,</title> 1916,
+                1922, <title render="italic">The Masquerade of Monopoly,</title> 1931; and articles
+                on economic subjects. Fetter died on Mar. 21, 1949.</p>
+
+        </bioghist>
+
+
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Fetter mss., 1875-1988, consists of letters and papers of Frank Albert Fetter,
+                1863-1949, economist. The papers in the collection relate in the main to monopolies,
+                anti-trust legislation, Federal Trade Commission, and the basing point system of
+                pricing particularly in the steel and cement industries. In addition to manuscripts
+                there is printed and mimeographed material including miscellaneous numbers of
+                periodicals, reprints, clippings, pamphlets, briefs of court cases and Federal Trade
+                Commission hearings, and some government documents. Included also in the collection
+                is correspondence, 1900-1901, relating to the dismissal of Edward Alsworth Ross from
+                the faculty of Stanford University under circumstances which, it was claimed,
+                involved the freedom of teaching, and Fetter's resignation as a result of this
+                affair. The correspondence is largely between Fetter and David Starr Jordan, but
+                there are also letters from other persons, most of them being members of university
+                faculties.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+
+            <p>The following terms have been used to index the description of this collection in
+                    <extref xlink:href="http://www.iucat.iu.edu">IUCAT</extref>, the IU Libraries'
+                online catalog. Materials about related topics, persons or places can be found by
+                searching the catalog using these terms.</p>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/affleck+benjamin+franklin+1869-1944">
+                            <persname>Affleck, Benjamin Franklin, 1869-1944.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/blaisdell+james+arnold+1867-1957">
+                            <persname>Blaisdell, James Arnold, 1867-1957.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/borah+william+edgar+1865-1940">
+                            <persname encodinganalog="700" source="lcnaf">Borah, William Edgar,
+                                1865-1940.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/fetter+frank+a+1863-1949">
+                            <persname encodinganalog="600" source="lcnaf">Fetter, Frank A. (Frank
+                                Albert), 1863-1949 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/fetter+frank+whitson+1899-">
+                            <persname encodinganalog="700" source="lcnaf">Fetter, Frank Whitson,
+                                1899- .</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/hard+william+1878-1962">
+                            <persname encodinganalog="700" source="lcnaf">Hard, William,
+                                1878-1962.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/healy+robert+e+1883-1946">
+                            <persname>Healy, Robert E., 1883-1946.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/jordan+david+starr+1851-1931">
+                            <persname encodinganalog="700" source="lcnaf">Jordan, David Starr,
+                                1851-1931.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/keezer+dexter+merriam+1895-">
+                            <persname encodinganalog="700" source="lcnaf">Keezer, Dexter Merriam,
+                                1895- .</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/knox+frank+1874-1944">
+                            <persname encodinganalog="700" source="lcnaf">Knox, Frank,
+                                1874-1944.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/leeds+morris+evans+1869-1952">
+                            <persname encodinganalog="700" source="lcnaf">Leeds, Morris Evans,
+                                1869-1952.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/lyon+leverett+s+1885">
+                            <persname encodinganalog="700" source="lcnaf">Lyon, Leverett S., b.
+                                1885.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/robinson+james+j+1893-">
+                            <persname encodinganalog="700" source="lcnaf">Robinson, James J. (James
+                                Jacques), 1893- .</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/ross+edward+alsworth+1866-1951">
+                            <persname encodinganalog="600" source="lcnaf">Ross, Edward Alsworth,
+                                1866-1951.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/seligman+edwin+robert+anderson+1861-1939">
+                            <persname encodinganalog="700" source="lcnaf">Seligman, Edwin Robert
+                                Anderson, 1861-1939.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/thompson+huston+1875-1966">
+                            <persname>Thompson, Huston, 1875-1966.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/treanor+john+1883-1936">
+                            <persname>Treanor, John, 1883-1936.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/turner+john+rosco+1882-1960">
+                            <persname>Turner, John Rosco, 1882-1960.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/united+states+federal+trade+commission">
+                            <corpname encodinganalog="610" source="lcnaf">United States. Federal
+                                Trade Commission.</corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/viner+jacob+1892-1970">
+                            <persname encodinganalog="700" source="lcnaf">Viner, Jacob,
+                                1892-1970.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/watkins+myron+w+1893-">
+                            <persname encodinganalog="700" source="lcnaf">Watkins, Myron W. (Myron
+                                Webster), 1893- .</persname>
+                        </extref>
+                    </item>
+
+                </list>
+
+
+            </controlaccess>
+            <controlaccess>
+                <head>Subjects</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/antitrust+law{su}">
+                            <subject encodinganalog="650" source="lcnaf">Antitrust law.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/basing-point+system{su}">
+                            <subject encodinganalog="650" source="lcnaf">Basing-point
+                                system.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/cement+industries{su}">
+                            <subject encodinganalog="650" source="lcnaf">Cement industries
+                                --Prices.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/monopolies+united+states{su}">
+                            <subject encodinganalog="650" source="lcnaf">Monopolies --United
+                                States.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/steel+industry+trade{su}">
+                            <subject encodinganalog="650" source="lcnaf">Steel industry and trade
+                                --Prices.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/teaching+freedom+of{su}">
+                            <subject encodinganalog="650" source="lcnaf">Teaching, Freedom
+                                of.</subject>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+        </controlaccess>
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired 1954, 1961, 1968, 1986, 1992.</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>Fetter mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAB8358-00001" level="series">
+                <did>
+                    <!-- optional -->
+                    <container label="Box" type="box">1</container>
+
+
+                    <unittitle>Collection</unittitle>
+                </did>
+                <scopecontent>
+                    <p>
+                        <emph render="bold">List of correspondents:</emph>
+                    </p>
+                    <list>
+                        <item>
+                            <persname>James Truslow Adams</persname>
+                        </item>
+                        <item>
+                            <persname>Benjamin Franklin Affleck</persname>
+                        </item>
+                        <item>
+                            <persname>William Albert Alexander</persname>
+                        </item>
+                        <item>
+                            <persname>Benjamin McAlester Anderson</persname>
+                        </item>
+                        <item>
+                            <persname>Dewey Anderson</persname>
+                        </item>
+                        <item>
+                            <persname>Thurman Wesley Arnold</persname>
+                        </item>
+                        <item>
+                            <persname>Albert William Atwood</persname>
+                        </item>
+                        <item>
+                            <persname>Leonard Porter Ayres</persname>
+                        </item>
+                        <item>
+                            <persname>Liberty Hyde Bailey</persname>
+                        </item>
+                        <item>
+                            <persname>Willis Jerome Ballinger</persname>
+                        </item>
+
+                        <item>
+                            <persname>Albert Stephen James Baster </persname>
+                        </item>
+                        <item>
+                            <persname>Adelaide Steele Baylor </persname>
+                        </item>
+                        <item>
+                            <persname>Benjamin Haggott Beckhart </persname>
+                        </item>
+                        <item>
+                            <persname>Wendell Berge </persname>
+                        </item>
+                        <item>
+                            <persname>Remson du Bois Bird </persname>
+                        </item>
+                        <item>
+                            <persname>James Arnold Blaisdell </persname>
+                        </item>
+                        <item>
+                            <persname>Bruce Ormsby Bliven </persname>
+                        </item>
+                        <item>
+                            <persname>Mandell Morton Bober </persname>
+                        </item>
+                        <item>
+                            <persname>Ernest Ludlow Bogart </persname>
+                        </item>
+                        <item>
+                            <persname>James Cummings Bonbright </persname>
+                        </item>
+                        <item>
+                            <persname>William Edgar Borah </persname>
+                        </item>
+                        <item>
+                            <persname>Ralph Borsodi </persname>
+                        </item>
+                        <item>
+                            <persname>Lemuel Ricketts Boulware </persname>
+                        </item>
+                        <item>
+                            <persname>James Ernest Boyle </persname>
+                        </item>
+                        <item>
+                            <persname>Charles Hudson Boynton </persname>
+                        </item>
+                        <item>
+                            <persname>Louis Dembitz Brandeis </persname>
+                        </item>
+                        <item>
+                            <persname>Joseph August Brandt </persname>
+                        </item>
+                        <item>
+                            <persname>Howard S. Braucher </persname>
+                        </item>
+                        <item>
+                            <persname>William Lowe Bryan </persname>
+                        </item>
+                        <item>
+                            <persname>Daniel Houston Buchanan </persname>
+                        </item>
+                        <item>
+                            <persname>Raymond Leslie Buell </persname>
+                        </item>
+                        <item>
+                            <persname>Robert Johns Bulkley </persname>
+                        </item>
+                        <item>
+                            <persname>Ernest Francis Burchard </persname>
+                        </item>
+                        <item>
+                            <persname>Warren Randolph Burgess </persname>
+                        </item>
+                        <item>
+                            <persname>Eugene Wyllys Burr </persname>
+                        </item>
+                        <item>
+                            <persname>Thomas Gregory Burt </persname>
+                        </item>
+                        <item>
+                            <persname>Neil Carothers </persname>
+                        </item>
+                        <item>
+                            <persname>Edward Hastings Chamberlin </persname>
+                        </item>
+                        <item>
+                            <persname>Stuart Chase </persname>
+                        </item>
+                        <item>
+                            <persname>Bennett Champ Clark </persname>
+                        </item>
+                        <item>
+                            <persname>Fred Emerson Clark </persname>
+                        </item>
+                        <item>
+                            <persname>George Archibald Clark </persname>
+                        </item>
+                        <item>
+                            <persname>John Bates Clark </persname>
+                        </item>
+                        <item>
+                            <persname>John Davidson Clark </persname>
+                        </item>
+                        <item>
+                            <persname>Victor Selden Clark </persname>
+                        </item>
+                        <item>
+                            <persname>Robert Glass Cleland </persname>
+                        </item>
+                        <item>
+                            <persname>Arthur Harrison Cole </persname>
+                        </item>
+                        <item>
+                            <persname>Wilson Martindale Compton </persname>
+                        </item>
+                        <item>
+                            <persname>Arthur Gardiner Coons </persname>
+                        </item>
+                        <item>
+                            <persname>Morris Albert Copeland </persname>
+                        </item>
+                        <item>
+                            <persname>Joseph David Coppock </persname>
+                        </item>
+                        <item>
+                            <persname>Edward Samuel Corwin </persname>
+                        </item>
+                        <item>
+                            <persname>Edward Prentiss Costigan </persname>
+                        </item>
+                        <item>
+                            <persname>Oscar Sydney Cox </persname>
+                        </item>
+                        <item>
+                            <persname>Reavis Cox </persname>
+                        </item>
+                        <item>
+                            <persname>David Cushman Coyle </persname>
+                        </item>
+                        <item>
+                            <persname>Robert Treat Crane </persname>
+                        </item>
+                        <item>
+                            <persname>Francis B. Critchlow </persname>
+                        </item>
+                        <item>
+                            <persname>Samuel Crowther </persname>
+                        </item>
+                        <item>
+                            <persname>Vanderveer Custis </persname>
+                        </item>
+                        <item>
+                            <persname>George Dallas </persname>
+                        </item>
+                        <item>
+                            <persname>Winthrop More Daniels </persname>
+                        </item>
+                        <item>
+                            <persname>Clarence Seward Darrow </persname>
+                        </item>
+                        <item>
+                            <persname>Elmer Holmes Davis </persname>
+                        </item>
+                        <item>
+                            <persname>John Lionberger Davis </persname>
+                        </item>
+                        <item>
+                            <persname>Lambert Davis </persname>
+                        </item>
+                        <item>
+                            <persname>Clive Day </persname>
+                        </item>
+                        <item>
+                            <persname>Frederick Shipp Deibler </persname>
+                        </item>
+                        <item>
+                            <persname>Davis Rich Dewey </persname>
+                        </item>
+                        <item>
+                            <persname>James Frederic Dewhurst </persname>
+                        </item>
+                        <item>
+                            <persname>Frank Greene Dickinson </persname>
+                        </item>
+                        <item>
+                            <persname>Karl Diehl </persname>
+                        </item>
+                        <item>
+                            <persname>Harold Willis Dodds </persname>
+                        </item>
+                        <item>
+                            <persname>Charles Dollard </persname>
+                        </item>
+                        <item>
+                            <persname>Joseph Dorfman </persname>
+                        </item>
+                        <item>
+                            <persname>Paul Howard Douglas </persname>
+                        </item>
+                        <item>
+                            <persname>William Orville Douglas </persname>
+                        </item>
+                        <item>
+                            <persname>Edward Augustin Duddy </persname>
+                        </item>
+                        <item>
+                            <persname>Stephen Duggan </persname>
+                        </item>
+                        <item>
+                            <persname>Clyde Augustus Duniway </persname>
+                        </item>
+                        <item>
+                            <persname>Edward Dana Durand </persname>
+                        </item>
+                        <item>
+                            <persname>Edward Mead Earle </persname>
+                        </item>
+                        <item>
+                            <persname>Lucile Eaves </persname>
+                        </item>
+                        <item>
+                            <persname>Edwin Clarence Eckel </persname>
+                        </item>
+                        <item>
+                            <persname>Franklin Spencer Edmonds </persname>
+                        </item>
+                        <item>
+                            <persname>Corwin D. Edwards </persname>
+                        </item>
+                        <item>
+                            <persname>Herman Lewis Ekern </persname>
+                        </item>
+                        <item>
+                            <persname>Abram Isaac Elkus </persname>
+                        </item>
+                        <item>
+                            <persname>Richard Theodore Ely </persname>
+                        </item>
+                        <item>
+                            <persname>Ralph Cecil Epstein </persname>
+                        </item>
+                        <item>
+                            <persname>Evan Alfred Evans </persname>
+                        </item>
+                        <item>
+                            <persname>Henry Pratt Fairchild </persname>
+                        </item>
+                        <item>
+                            <persname>Roland Post Falkner </persname>
+                        </item>
+                        <item>
+                            <persname>Arthur Louis Faubel </persname>
+                        </item>
+                        <item>
+                            <persname>Herbert Feis </persname>
+                        </item>
+                        <item>
+                            <persname>Garland Sevier Ferguson </persname>
+                        </item>
+                        <item>
+                            <persname>Henry Burchard Fine </persname>
+                        </item>
+                        <item>
+                            <persname>Hamilton Fish </persname>
+                        </item>
+                        <item>
+                            <persname>Irving Fisher </persname>
+                        </item>
+                        <item>
+                            <persname>Ralph Edward Flanders </persname>
+                        </item>
+                        <item>
+                            <persname>Roy Caston Flickinger </persname>
+                        </item>
+                        <item>
+                            <persname>John Thomas Flynn </persname>
+                        </item>
+                        <item>
+                            <persname>Percy Ford </persname>
+                        </item>
+                        <item>
+                            <persname>Lindley Macnaghten Fraser </persname>
+                        </item>
+                        <item>
+                            <persname>Robert Elliott Freer </persname>
+                        </item>
+                        <item>
+                            <persname>Garet Garrett </persname>
+                        </item>
+                        <item>
+                            <persname>Karl Frederick Geiser </persname>
+                        </item>
+                        <item>
+                            <persname>Charles Henry Gilbert </persname>
+                        </item>
+                        <item>
+                            <persname>William Henry Glasson </persname>
+                        </item>
+                        <item>
+                            <persname>Arthur Butler Graham </persname>
+                        </item>
+                        <item>
+                            <persname>Frank Dunstone Graham </persname>
+                        </item>
+                        <item>
+                            <persname>John Temple Graves </persname>
+                        </item>
+                        <item>
+                            <persname>Hall McAllister Griffith </persname>
+                        </item>
+                        <item>
+                            <persname>Gottfried Haberler </persname>
+                        </item>
+                        <item>
+                            <persname>Paul Haensel </persname>
+                        </item>
+                        <item>
+                            <persname>Sir Noel Frederick Hall </persname>
+                        </item>
+                        <item>
+                            <persname>Walton Hale Hamilton </persname>
+                        </item>
+                        <item>
+                            <persname>George Henry Hand </persname>
+                        </item>
+                        <item>
+                            <persname>Milton Handler </persname>
+                        </item>
+                        <item>
+                            <persname>Lewis Henry Haney </persname>
+                        </item>
+                        <item>
+                            <persname>William Hard </persname>
+                        </item>
+                        <item>
+                            <persname>George McLean Harper </persname>
+                        </item>
+                        <item>
+                            <persname>Seymour Edward Harris </persname>
+                        </item>
+                        <item>
+                            <persname>Henry Hazlitt </persname>
+                        </item>
+                        <item>
+                            <persname>Robert E. Healy </persname>
+                        </item>
+                        <item>
+                            <persname>Leon Henderson </persname>
+                        </item>
+                        <item>
+                            <persname>Ervin Paul Hexner </persname>
+                        </item>
+                        <item>
+                            <persname>Benjamin Horace Hibbard </persname>
+                        </item>
+                        <item>
+                            <persname>Herbert Wade Hibbard </persname>
+                        </item>
+                        <item>
+                            <persname>John Grier Hibben </persname>
+                        </item>
+                        <item>
+                            <persname>Clifford L. Hilton </persname>
+                        </item>
+                        <item>
+                            <persname>Paul Gray Hoffman </persname>
+                        </item>
+                        <item>
+                            <persname>Arthur Cort Holden </persname>
+                        </item>
+                        <item>
+                            <persname>Paul Thomas Homan </persname>
+                        </item>
+                        <item>
+                            <persname>George Harrison Houston </persname>
+                        </item>
+                        <item>
+                            <persname>Cordell Hull </persname>
+                        </item>
+                        <item>
+                            <persname>Merlin Harold Hunter </persname>
+                        </item>
+                        <item>
+                            <persname>William Harold Hutt </persname>
+                        </item>
+                        <item>
+                            <persname>John Ise </persname>
+                        </item>
+                        <item>
+                            <persname>Robert Houghwout Jackson </persname>
+                        </item>
+                        <item>
+                            <persname>Ernest James Jaqua </persname>
+                        </item>
+                        <item>
+                            <persname>Emory Richard Johnson </persname>
+                        </item>
+                        <item>
+                            <persname>Eugene Kinckle Jones </persname>
+                        </item>
+                        <item>
+                            <persname>David Starr Jordan </persname>
+                        </item>
+                        <item>
+                            <persname>Virgil Dustin Jordan </persname>
+                        </item>
+                        <item>
+                            <persname>Dexter Merriam Keezer </persname>
+                        </item>
+                        <item>
+                            <persname>Estes Kefauver </persname>
+                        </item>
+                        <item>
+                            <persname>William Thomas Kelley </persname>
+                        </item>
+                        <item>
+                            <persname>Paul Underwood Kellogg </persname>
+                        </item>
+                        <item>
+                            <persname>Frederick Paul Keppel </persname>
+                        </item>
+                        <item>
+                            <persname>William Henry Kiekhofer </persname>
+                        </item>
+                        <item>
+                            <persname>Clyde Lyndon King </persname>
+                        </item>
+                        <item>
+                            <persname>George Judson King </persname>
+                        </item>
+                        <item>
+                            <persname>Willford Isbell King </persname>
+                        </item>
+                        <item>
+                            <persname>William Henry King </persname>
+                        </item>
+                        <item>
+                            <persname>Oswald Whitman Knauth </persname>
+                        </item>
+                        <item>
+                            <persname>Frank Hyneman Knight </persname>
+                        </item>
+                        <item>
+                            <persname>Franklin Knox </persname>
+                        </item>
+                        <item>
+                            <persname>Kenesaw Mountain Landis </persname>
+                        </item>
+                        <item>
+                            <persname>Alfred Mossman Landon </persname>
+                        </item>
+                        <item>
+                            <persname>Morris Evans Leeds </persname>
+                        </item>
+                        <item>
+                            <persname>Simeon Elbridge Leland </persname>
+                        </item>
+                        <item>
+                            <persname>Joy Luther Leonard </persname>
+                        </item>
+                        <item>
+                            <persname>Richard A. Lester </persname>
+                        </item>
+                        <item>
+                            <persname>David Eli Lilienthal </persname>
+                        </item>
+                        <item>
+                            <persname>Walter Lippmann </persname>
+                        </item>
+                        <item>
+                            <persname>William Bruce Lockling </persname>
+                        </item>
+                        <item>
+                            <persname>George Horace Lorimer </persname>
+                        </item>
+                        <item>
+                            <persname>Isador Lubin </persname>
+                        </item>
+                        <item>
+                            <persname>George Francis Luthringer </persname>
+                        </item>
+                        <item>
+                            <persname>Leverett Samuel Lyon </persname>
+                        </item>
+                        <item>
+                            <persname>Reid Lage McClung </persname>
+                        </item>
+                        <item>
+                            <persname>Harlan Linneus McCracken </persname>
+                        </item>
+                        <item>
+                            <persname>William MacDonald </persname>
+                        </item>
+                        <item>
+                            <persname>Julian William Mack </persname>
+                        </item>
+                        <item>
+                            <persname>Charles Hoyt March </persname>
+                        </item>
+                        <item>
+                            <persname>Isaac Frederick Marcosson </persname>
+                        </item>
+                        <item>
+                            <persname>Arthur William Marget </persname>
+                        </item>
+                        <item>
+                            <persname>John Martin </persname>
+                        </item>
+                        <item>
+                            <persname>Alpheus Thomas Mason </persname>
+                        </item>
+                        <item>
+                            <persname>Lowell Blake Mason </persname>
+                        </item>
+                        <item>
+                            <persname>Frank Asbury Mathews </persname>
+                        </item>
+                        <item>
+                            <persname>Joseph Mayer </persname>
+                        </item>
+                        <item>
+                            <persname>Royal Meeker </persname>
+                        </item>
+                        <item>
+                            <persname>Frederick Cecil Mills </persname>
+                        </item>
+                        <item>
+                            <persname>Ludwig edler von Mises </persname>
+                        </item>
+                        <item>
+                            <persname>Wesley Clair Mitchell </persname>
+                        </item>
+                        <item>
+                            <persname>Tsunao Miyajima </persname>
+                        </item>
+                        <item>
+                            <persname>Arthur Ernest Morgan </persname>
+                        </item>
+                        <item>
+                            <persname>Oskar Morgenstern </persname>
+                        </item>
+                        <item>
+                            <persname>Wayne Lyman Morse </persname>
+                        </item>
+                        <item>
+                            <persname>James Edward Murray </persname>
+                        </item>
+                        <item>
+                            <persname>William Starr Myers </persname>
+                        </item>
+                        <item>
+                            <persname>Frederic Cooke Nelson </persname>
+                        </item>
+                        <item>
+                            <persname>Edwin Griswold Nourse </persname>
+                        </item>
+                        <item>
+                            <persname>John Lord O'Brian </persname>
+                        </item>
+                        <item>
+                            <persname>Joseph Christopher O'Mahoney </persname>
+                        </item>
+                        <item>
+                            <persname>Paul Palmer </persname>
+                        </item>
+                        <item>
+                            <persname>James George Patton </persname>
+                        </item>
+                        <item>
+                            <persname>Warren Milton Persons </persname>
+                        </item>
+                        <item>
+                            <persname>Harold Gregg Pickering </persname>
+                        </item>
+                        <item>
+                            <persname>Howard Samuel Piquet </persname>
+                        </item>
+                        <item>
+                            <persname>Edmund Platt </persname>
+                        </item>
+                        <item>
+                            <persname>Walter Christian Ploeser </persname>
+                        </item>
+                        <item>
+                            <persname>Joseph Ezekial Pogue </persname>
+                        </item>
+                        <item>
+                            <persname>DeWitt Clinton Poole </persname>
+                        </item>
+                        <item>
+                            <persname>Walter Franklin Prince </persname>
+                        </item>
+                        <item>
+                            <persname>Charles Frederick Remer </persname>
+                        </item>
+                        <item>
+                            <persname>Walter L. Rice </persname>
+                        </item>
+                        <item>
+                            <persname>Robert Fleming Rich </persname>
+                        </item>
+                        <item>
+                            <persname>Jesse Hale Riddle </persname>
+                        </item>
+                        <item>
+                            <persname>John A. Ritchie </persname>
+                        </item>
+                        <item>
+                            <persname>James Jaquess Robinson </persname>
+                        </item>
+                        <item>
+                            <persname>Maurice Roche-Agussol </persname>
+                        </item>
+                        <item>
+                            <persname>Mary (Harriman) Rumsey </persname>
+                        </item>
+                        <item>
+                            <persname>Frederic Arthur Russell </persname>
+                        </item>
+                        <item>
+                            <persname>Frederick John Schlink </persname>
+                        </item>
+                        <item>
+                            <persname>Louis Bernard Schmidt </persname>
+                        </item>
+                        <item>
+                            <persname>Joseph Alois Schumpeter </persname>
+                        </item>
+                        <item>
+                            <persname>Horace Secrist </persname>
+                        </item>
+                        <item>
+                            <persname>Edwin Robert Anderson Seligman </persname>
+                        </item>
+                        <item>
+                            <persname>Joseph Bernard Shannon </persname>
+                        </item>
+                        <item>
+                            <persname>Isaiah Leo Sharfman </persname>
+                        </item>
+                        <item>
+                            <persname>Earl Owen Shreve </persname>
+                        </item>
+                        <item>
+                            <persname>George Harrison Shull </persname>
+                        </item>
+                        <item>
+                            <persname>Howard Alexander Smith </persname>
+                        </item>
+                        <item>
+                            <persname>James Gerald Smith </persname>
+                        </item>
+                        <item>
+                            <persname>Henry Snell </persname>
+                        </item>
+                        <item>
+                            <persname>Baron Snell </persname>
+                        </item>
+                        <item>
+                            <persname>Walter Earl Spahr </persname>
+                        </item>
+                        <item>
+                            <persname>Joseph John Spengler </persname>
+                        </item>
+                        <item>
+                            <persname>Oliver Mitchell Sprague </persname>
+                        </item>
+                        <item>
+                            <persname>George Albert Steiner </persname>
+                        </item>
+                        <item>
+                            <persname>George Asbury Stephens </persname>
+                        </item>
+                        <item>
+                            <persname>Harold Montelle Stephens </persname>
+                        </item>
+                        <item>
+                            <persname>William Harrison Spring Stevens </persname>
+                        </item>
+                        <item>
+                            <persname>Russell Alger Stevenson </persname>
+                        </item>
+                        <item>
+                            <persname>Walter W. Stewart </persname>
+                        </item>
+                        <item>
+                            <persname>George Ward Stocking </persname>
+                        </item>
+                        <item>
+                            <persname>Harlan Fiske Stone </persname>
+                        </item>
+                        <item>
+                            <persname>Samuel Sommerville Stratton </persname>
+                        </item>
+                        <item>
+                            <persname>Camillo Supino </persname>
+                        </item>
+                        <item>
+                            <persname>Theodore Victor Suráanyi-Unger </persname>
+                        </item>
+                        <item>
+                            <persname>Joseph Swain </persname>
+                        </item>
+                        <item>
+                            <persname>Frank William Taussig </persname>
+                        </item>
+                        <item>
+                            <persname>Earl Howard Taylor </persname>
+                        </item>
+                        <item>
+                            <persname>Paul Schuster Taylor </persname>
+                        </item>
+                        <item>
+                            <persname>Huston Thompson </persname>
+                        </item>
+                        <item>
+                            <persname>Willard Long Thorp </persname>
+                        </item>
+                        <item>
+                            <persname>Charles Sanford Tippetts </persname>
+                        </item>
+                        <item>
+                            <persname>Paul Greene Thompson </persname>
+                        </item>
+                        <item>
+                            <persname>James Buchanan Trant </persname>
+                        </item>
+                        <item>
+                            <persname>John Treanor </persname>
+                        </item>
+                        <item>
+                            <persname>Rufus Stickney Tucker </persname>
+                        </item>
+                        <item>
+                            <persname>John Roscoe Turner </persname>
+                        </item>
+                        <item>
+                            <persname>Jacob Viner </persname>
+                        </item>
+                        <item>
+                            <persname>Horace Jerry Voorhis </persname>
+                        </item>
+                        <item>
+                            <persname>Warren C. Waite </persname>
+                        </item>
+                        <item>
+                            <persname>Q. George Frederick Warren </persname>
+                        </item>
+                        <item>
+                            <persname>Myron Webster Watkins </persname>
+                        </item>
+                        <item>
+                            <persname>Hugo Christian Martin Wendel </persname>
+                        </item>
+                        <item>
+                            <persname>Burton Kendall Wheeler </persname>
+                        </item>
+                        <item>
+                            <persname>William Allen White </persname>
+                        </item>
+                        <item>
+                            <persname>Charles Parker Wilber </persname>
+                        </item>
+                        <item>
+                            <persname>Walter Francis Willcox </persname>
+                        </item>
+                        <item>
+                            <persname>Henry Parker Willis </persname>
+                        </item>
+                        <item>
+                            <persname>Joseph Henry Willits </persname>
+                        </item>
+                        <item>
+                            <persname>George Smith Wilson </persname>
+                        </item>
+                        <item>
+                            <persname>Albert Benedict Wolfe </persname>
+                        </item>
+                        <item>
+                            <persname>Leo Wolman </persname>
+                        </item>
+                        <item>
+                            <persname>Robert Archer Woods </persname>
+                        </item>
+                        <item>
+                            <persname>Theodore Otte Yntema </persname>
+                        </item>
+                        <item>
+                            <persname>John Parke Young </persname>
+                        </item>
+                        <item>
+                            <persname>William Sterling Youngman </persname>
+                        </item>
+                    </list>
+                </scopecontent>
+
+                <c02 id="VAB8358-00002" level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <unittitle>Correspondence: <unitdate normal="1900/1932-06" type="inclusive"
+                                >1900 - 1932, June</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00003" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>Correspondence: <unitdate normal="1932-07/1939" type="inclusive"
+                                >1932, July - 1939</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00004" level="file">
+                    <did>
+                        <container label="Box" type="box">3</container>
+                        <unittitle>Correspondence: <unitdate normal="1940/1948-08" type="inclusive"
+                                >1940 - 1948, Aug.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00005" level="file">
+                    <did>
+                        <container label="Box" type="box">4</container>
+                        <unittitle>Correspondence: <unitdate normal="1948-09/1950" type="inclusive"
+                                >1948, Sept. - 1950</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00006" level="file">
+                    <did>
+                        <unittitle>Miscellaneous manuscripts</unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00007" level="file">
+                    <did>
+                        <unittitle>Cement case</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00008" level="file">
+                    <did>
+                        <unittitle>Overhead costs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00009" level="file">
+                    <did>
+                        <unittitle>Pictures</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00010" level="file">
+                    <did>
+                        <unittitle>Steel industry</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00011" level="file">
+                    <did>
+                        <unittitle>Printed material</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00012" level="file">
+                    <did>
+                        <unittitle>Clippings relating to Fetter</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00013" level="file">
+                    <did>
+                        <unittitle>Reviews of Fetter, <title render="italic">Masquerade of
+                                Monopoly,</title><unitdate normal="1931/1932" type="inclusive"
+                                >1931-1932</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00014" level="file">
+                    <did>
+                        <unittitle>Writings by Fetter, <unitdate normal="1924/1949" type="inclusive"
+                                >1924-1949</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00015" level="file">
+                    <did>
+                        <unittitle>List of printed material not kept with manuscript
+                            collection</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00016" level="file">
+                    <did>
+                        <unittitle>Scrapbook of newspaper clippings, <unitdate normal="1931"
+                                >1931</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00017" level="file">
+                    <did>
+                        <unittitle>Brief for the petitioner: U.S.A. vs. The Sugar Institute, et al.
+                            In the District Court of the United States for the southern district of
+                            New York, <unitdate normal="1932">1932</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00018" level="file">
+                    <did>
+                        <unittitle>Brief for the defendants on the law, economic briefs: U.S.A. vs.
+                            The Sugar Institute, et al. In the District Court of the United States
+                            for the southern district of New York, <unitdate normal="1875/1988"
+                                type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00019" level="file">
+                    <did>
+                        <unittitle>Brief for the defendants on the facts: U.S.A. vs. The Sugar
+                            Institute, et al. In the District Court of the United States for the
+                            southern district of New York, <unitdate normal="1932"
+                            >1932</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00020" level="file">
+                    <did>
+                        <unittitle>Petition: U.S.A. vs. The Wool Institute, Inc. In the District
+                            Court of the United States for the southern district of New York. Filed
+                                <unitdate normal="1930-06-27">June 27, 1930</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00021" level="file">
+                    <did>
+                        <unittitle>Final Decree: U.S.A. vs. The Wool Institute, Inc. In the District
+                            Court of the United States for the southern district of New York.
+                            Entered <unitdate normal="1930-06-27">June 27,
+                            1930</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00022" level="file">
+                    <did>
+                        <unittitle>Petition: U.S.A. vs. Asphalt Shingle and Roofing Institute, et
+                            al. In the District Court of the United States for the southern district
+                            of New York. Filed <unitdate normal="1930-12-30">Dec. 30,
+                                1930</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00023" level="file">
+                    <did>
+                        <unittitle>Petition: U.S.A. vs. Bolt, Nut, and Rivet Manufacturers
+                            Association, et al. In the District Court of the United States for the
+                            southern district of New York. Filed <unitdate normal="1931-03-17">March
+                                17, 1931</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00024" level="file">
+                    <did>
+                        <unittitle>Final Decree: U.S.A. vs. Bolt, Nut, and Rivet Manufacturers
+                            Association, et al. In the District Court of the United States for the
+                            southern district of New York. Entered <unitdate normal="1931-03-17"
+                                >March 17, 1931</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00025" level="file">
+                    <did>
+                        <unittitle>Petition: U.S.A. vs. Paramount Pictures, et al. In the District
+                            Court of the United States for the southern district of New York. Filed
+                                <unitdate normal="1938-07-20">July 20, 1938</unitdate></unittitle>
+                    </did>
+                </c02>
+
+
+
+
+                <c02 id="VAB8358-00026" level="file">
+                    <did>
+                        <container label="Box" type="box">5</container>
+                        <unittitle>Brief for respondents: Federal Trade Commission vs. United States
+                            Steel Corporation, et al. Before Federal Trade Commission, <unitdate
+                                normal="1875/1988" type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00027" level="file">
+                    <did>
+                        <unittitle>Brief on behalf of respondent: The Youngstown Sheet and Tube
+                            Company. In the matter of Rigid Steel Conduit Association, et al. Before
+                            Federal Trade Commission <unitdate normal="1943-04-08">Apr. 8,
+                                1943</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00028" level="file">
+                    <did>
+                        <unittitle>Opinion and order: In the matter of the state-wide investigation
+                            on the commission's own motion of the rates, rules...of the Wisconsin
+                            Telephone Company. Before the Public Service Commission of Wisconsin.
+                            Decided <unitdate normal="1933-07-05">July 5,
+                            1933</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00029" level="file">
+                    <did>
+                        <unittitle>Opinion and order: In the matter of the state-wide investigation
+                            on the commission's own motion of the rates, rules...of the Wisconsin
+                            Telephone Company. Before the Public Service Commission of Wisconsin.
+                            Decided <unitdate normal="1934-07-05">July 5,
+                            1934</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00030" level="file">
+                    <did>
+                        <unittitle>On petition to review an order of the Federal Trade Commission:
+                            A.E. Staley Manufacturing Company vs. Federal Trade Commission. In the
+                            United States Circuit Court of Appeals for the Seventh Circuit,
+                                <unitdate normal="1944-07-06">July 6, 1944.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00031" level="file">
+                    <did>
+                        <unittitle>Reply brief for respondent in further support of modified
+                            findings: A.E. Staley Manufacturing Company vs. Federal Trade
+                            Commission. In the United States Circuit Court of Appeals for the
+                            Seventh Circuit, <unitdate normal="1944-01-29">Jan. 29,
+                            1944.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00032" level="file">
+                    <did>
+                        <unittitle>Reply brief for respondent in further support of modified
+                            findings: A.E. Staley Manufacturing Company vs. Federal Trade
+                            Commission. In the United States Circuit Court of Appeals for the
+                            Seventh Circuit, <unitdate normal="1943-12-16">Dec. 16,
+                            1943.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00033" level="file">
+                    <did>
+                        <unittitle>Brief for respondent: Aetna Portland Cement Company, et al. vs.
+                            Federal Trade Commission. In the United States Circuit Court of Appeals
+                            for the Seventh Circuit, <unitdate normal="1946-02-11">Feb. 11,
+                                1946</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00034" level="file">
+                    <did>
+                        <unittitle>On petition to review an order of the Federal Trade Commission:
+                            Aetna Portland Cement Company, et al. vs. Federal Trade Commission. In
+                            the United States Circuit Court of Appeals for the Seventh Circuit,
+                                <unitdate normal="1946-09-20">Sept. 20, 1946</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00035" level="file">
+                    <did>
+                        <unittitle>Brief of respondents-petitioners: Aetna Portland Cement Company,
+                            et al. vs. Federal Trade Commission. In the United States Circuit Court
+                            of Appeals for the Seventh Circuit, <unitdate normal="1875/1988"
+                                type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00036" level="file">
+                    <did>
+                        <unittitle>Statement of respondent in opposition to petitioner Marquette's
+                            attempts to disqualify the commission: Marquette Cement Manufacturing
+                            Company vs. Federal Trade Commission. In the United States Circuit Court
+                            of Appeals for the Seventh Circuit, <unitdate normal="1944-12-30">Dec.
+                                30, 1944</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00037" level="file">
+                    <did>
+                        <unittitle>Memorandum of opinion and order to show cause upon excessive and
+                            imprudent plant investment: In the matter of the state-wide
+                            investigation on the commission's own motion of the rates, rules...of
+                            the Wisconsin Telephone Company. Before the Public Service Commission of
+                            Wisconsin, <unitdate normal="1933-02-17">Feb. 17,
+                            1933</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00038" level="file">
+                    <did>
+                        <unittitle>Proceedings: In the matter of the state-wide investigation on the
+                            commission's own motion of the rates, rules...of the Wisconsin Telephone
+                            Company. Before the Public Service Commission of Wisconsin.<unitdate
+                                normal="1932-06-01">June 1, 1932</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00039" level="file">
+                    <did>
+                        <unittitle>Motion to reverse and reconsider orders: Marquette Cement
+                            Manufacturing Company vs. Federal Trade Commission. In The United States
+                            Circuit Court of Appeals for the Seventh Circuit, <unitdate
+                                normal="1945-01-29">Jan. 29, 1945</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00040" level="file">
+                    <did>
+                        <unittitle>On petition for review of order: Corn Products Refining Company
+                            vs. Federal Trade Commission. In the United States Circuit Court of
+                            Appeals for the Seventh Circuit, <unitdate normal="1944-07-06">July 6,
+                                1944.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00041" level="file">
+                    <did>
+                        <unittitle>On petition for review of order: Corn Products Refining Company
+                            vs. Federal Trade Commission. In the United States Circuit Court of
+                            Appeals for the Seventh Circuit, <unitdate normal="1943-11-15">Nov. 15,
+                                1943</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00042" level="file">
+                    <did>
+                        <unittitle>Petition for review of order: United States Maltsters
+                            Associations, et al. vs. Federal Trade Commission. In the United States
+                            Circuit Court of Appeals for the Seventh Circuit, <unitdate
+                                normal="1945-11-24">Nov. 24, 1945</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00043" level="file">
+                    <did>
+                        <unittitle>On petition to review an order: United States Maltsters
+                            Associations, et al. vs. Federal Trade Commission. In the United States
+                            Circuit Court of Appeals for the Seventh Circuit, <unitdate
+                                normal="1945-03">Mar. 1945</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00044" level="file">
+                    <did>
+                        <unittitle>Order and opinions: In the matter of Manhattan Brewing Company,
+                            statement of Federal Trade Commission in re: modified order with opinion
+                            of Commissioner Lowell B. Mason and dissenting opinion of Commissioner
+                            W.A. Ayres, Chairman, <unitdate normal="1946-04">Apr.
+                            1946</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00045" level="file">
+                    <did>
+                        <unittitle>Petitions for review of an order: Fort Howard Paper Company, et
+                            al. vs. Federal Trade Commission. In the United States Circuit Court of
+                            Appeals for the Seventh Circuit, <unitdate normal="1946-07-12">July 12,
+                                1946</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00046" level="file">
+                    <did>
+                        <unittitle>Brief for General Electric Company: General Electric Company vs.
+                            Federal Trade Commission. In the United States Circuit Court of Appeals
+                            for the Seventh Circuit, <unitdate normal="1947-07-27">July 27,
+                                1947</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00047" level="file">
+                    <did>
+                        <unittitle>Brief for respondent: Triangle Conduit and Cable Company, Inc.,
+                            et al. vs. Federal Trade Commission. In the United States Circuit Court
+                            of Appeals for the Seventh Circuit, <unitdate normal="1947-09">Sept.
+                                1947</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00048" level="file">
+                    <did>
+                        <unittitle>Petitions for review of order: Triangle Conduit and Cable
+                            Company, et al. vs. Federal Trade Commission. In the United States
+                            Circuit Court of Appeals for the Seventh Circuit, <unitdate
+                                normal="1948-05-12">May 12, 1948</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00049" level="file">
+                    <did>
+                        <unittitle>Brief for respondent General Baking Company: In the matter of
+                            General Baking Company. U.S.A. before the Federal Trade Commission
+                                <unitdate normal="1940">[1940]</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00050" level="file">
+                    <did>
+                        <unittitle>Oral argument of U.S. Webb for relator: In the matter of the
+                            application of W.H. George and others for habeas corpus. In the Supreme
+                            Court of California, <unitdate normal="1929-04-05">Apr. 5,
+                                1929</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00051" level="file">
+                    <did>
+                        <unittitle>Brief for respondent: Salt Producers Association, et al. vs.
+                            Federal Trade Commission. In the United States Circuit Court of Appeals
+                            for the Seventh Circuit, <unitdate normal="1942-10-28">Oct. 28,
+                                1942.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00052" level="file">
+                    <did>
+                        <unittitle>Order modifying order to cease and desist: In the matter of
+                            Standard Oil Company. U.S.A. before Federal Trade Commission, <unitdate
+                                normal="1946-08-09">Aug. 9, 1946</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00053" level="file">
+                    <did>
+                        <unittitle>On petitions for re-hearing: Eugene Dietzgen Company, et al. vs.
+                            Federal Trade Commission. In the United States Circuit Court of Appeals
+                            for the Seventh Circuit, <unitdate normal="1944-05-03">May 3,
+                                1944</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00054" level="file">
+                    <did>
+                        <unittitle>On petition for enforcement of an order: National Labor Relations
+                            Board vs. Maurice Eanet and Ben Rich. United States Court of Appeals,
+                            District of Columbia, <unitdate normal="1948"
+                            >1948</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00055" level="file">
+                    <did>
+                        <unittitle>Appeals: Walter E. Watson vs. United States of America. United
+                            States District Court for the District of Columbia circuit, <unitdate
+                                normal="1948">1948</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00056" level="file">
+                    <did>
+                        <unittitle>Special appeal: Brotherhood of Locomotive Firemen and Enginemen
+                            vs. Leroy Graham, et al. United States District Court for the District
+                            of Columbia Circuit, <unitdate normal="1948">1948</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00057" level="file">
+                    <did>
+                        <unittitle>Appeal and motion to dismiss: U.S.A. vs. Samuel F. Waters. United
+                            States Court of Appeals for the District of Columbia circuit, <unitdate
+                                normal="1948">1948</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00058" level="file">
+                    <did>
+                        <unittitle>Petition for review of decision of Board of Tax Appeals: District
+                            of Columbia vs. Elise H. Clark, et al. United States Court of Appeals
+                            for the District of Columbia Circuit, <unitdate normal="1948"
+                                >1948</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00059" level="file">
+                    <did>
+                        <unittitle>Petition for review of order: Philadelphia Company vs. Securities
+                            and Exchange Commission. United States Court of Appeals for the District
+                            of Columbia Circuit, <unitdate normal="1948">1948</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00060" level="file">
+                    <did>
+                        <unittitle>On motion for allowance of attorneys' fees: Theodore Heitmuller
+                            vs. Jerry J. Berkow. United States Court of Appeals District of
+                            Columbia, <unitdate normal="1948">1948</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00061" level="file">
+                    <did>
+                        <unittitle>Appeal: WJR, The Goodwill Station vs. Federal Communications
+                            Commission. United States Court of Appeals for the District of Columbia
+                            Circuit, <unitdate normal="1948">1948</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00062" level="file">
+                    <did>
+                        <unittitle>Appeal: WJR, The Goodwill Station vs. Federal Communications
+                            Commission. United States Court of Appeals for the District of Columbia
+                            Circuit, <unitdate normal="1948">1948</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00063" level="file">
+                    <did>
+                        <unittitle>Petition for review of order: A.E. Staley Manufacturing Company
+                            vs. Federal Trade Commission. In the United States Circuit Court of
+                            Appeals for the Seventh Circuit, <unitdate normal="1943-05-10">May 10,
+                                1943</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00064" level="file">
+                    <did>
+                        <unittitle>Petition for review of order: The Milk and Ice Cream Can
+                            Institute, et al. vs. Federal Trade Commission. In the United States
+                            Circuit Court of Appeals for the Seventh Circuit, <unitdate
+                                normal="1946-01-07">Jan. 7, 1946</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00065" level="file">
+                    <did>
+                        <unittitle>Prohibition of price discriminations (Robinson-Patman bill).
+                            House of Representatives, <unitdate normal="1875/1988" type="inclusive"
+                                >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00066" level="file">
+                    <did>
+                        <unittitle>On writ of certiorari to the U.S. Circuit Court of Appeals for
+                            the Seventh Circuit: Corn Products Refining Company and Corn Products
+                            Sales Company vs. Federal Trade Commission. Supreme Court of the U.S.,
+                                <unitdate normal="1945-04-23">Apr. 23, 1945</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00067" level="file">
+                    <did>
+                        <unittitle>Brief of Mr. H.E. Miles: Extract of hearings before the Senate
+                            Committee on Interstate Commerce, <unitdate normal="1936-06-14">June 14,
+                                1936</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00068" level="file">
+                    <did>
+                        <unittitle>On writ of certiorari to the U.S. Circuit Court of Appeals for
+                            the Seventh Circuit: Federal Trade Commission vs. A.E. Staley
+                            Manufacturing Company. Supreme Court of the U.S., <unitdate
+                                normal="1945-04-23">Apr. 23, 1945</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00069" level="file">
+                    <did>
+                        <unittitle>Brief of counsel for the commission: U.S.A. before Federal Trade
+                            Commission in the matter of General Baking Company <unitdate
+                                normal="1940">[1940]</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00070" level="file">
+                    <did>
+                        <unittitle>Modified findings as to the facts and conclusions: A.E. Staley
+                            Manufacturing Company vs. Federal Trade Commission. In the United States
+                            Circuit Court of Appeals for the Seventh Circuit, <unitdate
+                                normal="1943-09-13">Sept. 13, 1943</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00071" level="file">
+                    <did>
+                        <unittitle>Brief for the respondent: A.E. Staley Manufacturing Company vs.
+                            Federal Trade Commission. In the United States Circuit Court of Appeals
+                            for the Seventh Circuit, <unitdate normal="1943-03">Mar.
+                            1943</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00072" level="file">
+                    <did>
+                        <unittitle>Brief for the respondent: The Milk and Ice Cream Can Institute et
+                            al. vs. Federal Trade Commission. In the United States Circuit Court of
+                            Appeals for the Seventh Circuit, <unitdate normal="1945-09-05">Sept. 5,
+                                1945</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00073" level="file">
+                    <did>
+                        <unittitle>Duties and Procedure: Federal Trade Commission, <unitdate
+                                normal="1936-06-15">June 15, 1936</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00074" level="file">
+                    <did>
+                        <unittitle>On writ of certiorari to the U.S. Circuit Court of Appeals for
+                            the Seventh Circuit: Federal Trade Commission vs. The Cement Institute,
+                            et al. Supreme Court of the U.S., <unitdate normal="1948-04-26">Apr. 26,
+                                1948</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00075" level="file">
+                    <did>
+                        <unittitle>Reply Brief for the Federal Trade Commission: Federal Trade
+                            Commission vs. The Cement Institute, et al., Oct. term, <unitdate
+                                normal="1947">1947</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00076" level="file">
+                    <did>
+                        <unittitle>Brief for the Federal Trade Commission: Federal Trade Commission
+                            vs. The Cement Institute, et al. In the Supreme Court of the U.S. Oct.
+                            term, <unitdate normal="1947">1947</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00077" level="file">
+                    <did>
+                        <unittitle>Cement Industry. Letter from the Chairman of the Federal Trade
+                            Commission. A report relative to competitive conditions in the cement
+                            industry, <unitdate normal="1933-06-06">June 6,
+                            1933</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00078" level="file">
+                    <did>
+                        <unittitle>Brief for the Federal Trade Commission: Corn Products Refining
+                            Company and Corn Products Sales Company vs. Federal Trade Commission. In
+                            the Supreme Court of the U.S., Oct. term, <unitdate normal="1944"
+                                >1944</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00079" level="file">
+                    <did>
+                        <unittitle>Brief for the Federal Trade Commission: Federal Trade Commission
+                            vs. A.E. Staley Manufacturing Company. In The Supreme Court of the U.S.,
+                            Oct. term, <unitdate normal="1944">1944</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00080" level="file">
+                    <did>
+                        <unittitle>National Recovery Administration. Code of fair competition for
+                            the cement industry, <unitdate normal="1933-11-27">Nov. 27,
+                                1933</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00081" level="file">
+                    <did>
+                        <unittitle>Brief for respondent: U.S. Steel Corporation, et al. vs. Federal
+                            Trade Commission. In the U.S. Circuit Court of Appeals for the Third
+                            Circuit, Mar. term, <unitdate normal="1938">1938</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00082" level="file">
+                    <did>
+                        <unittitle>Motion by respondent to strike certain portions of the petition:
+                            U.S. Steel Corporation, et al. vs. Federal Trade Commission. In the U.S.
+                            Circuit Court of Appeals for the Third Circuit, <unitdate
+                                normal="1943-10">Oct. 1943</unitdate></unittitle>
+                        <physdesc>(2 copies)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00083" level="file">
+                    <did>
+                        <unittitle>Answer in opposition to petition for clarification and
+                            cross-petition for further relief: U.S. Steel Corporation, et al. vs.
+                            Federal Trade Commission. In the U.S. Circuit Court of Appeals for the
+                            Third Circuit, Mar. term, <unitdate normal="1938"
+                            >1938</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00084" level="file">
+                    <did>
+                        <unittitle>To prevent uniform delivered prices. Hearings before the
+                            Committee on Interstate Commerce, United States Senate. A bill to
+                            supplement existing antitrust acts…, <unitdate
+                                normal="1936-03-09/1936-04-10" type="inclusive">Mar. 9-Apr. 10,
+                                1936.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00085" level="file">
+                    <did>
+                        <unittitle>Brief for the U.S.: The Sugar Institute, et al. vs. The U.S.A. In
+                            the Supreme Court of the U.S. Oct. term, <unitdate normal="1935"
+                                >1935</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00086" level="file">
+                    <did>
+                        <unittitle>Price bases inquiry: The basing-point formula and cement prices.
+                            Federal Trade Commission, <unitdate normal="1932-03">Mar.
+                                1932</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00087" level="file">
+                    <did>
+                        <unittitle>Final decree: U.S.A. vs. Corn Derivatives Institute, et al. In
+                            the District Court of the U.S., Northern District of Illinois, <unitdate
+                                normal="1932-04-06">Apr. 6, 1932</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00088" level="file">
+                    <did>
+                        <unittitle>Petition: U.S.A. vs. Corn Derivatives Institute, et al. In the
+                            District Court of the U.S., Northern District of Illinois, <unitdate
+                                normal="1932-01-27">Jan. 27, 1932</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00089" level="file">
+                    <did>
+                        <unittitle>Petition: U.S.A. vs. Republic Steel Corporation, et al. District
+                            Court of the U.S. Northern District of Ohio, <unitdate
+                                normal="1935-02-07">Feb. 7, 1935</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00090" level="file">
+                    <did>
+                        <unittitle>Brief for the U.S.: U.S.A. vs. Republic Steel Corporation, et al.
+                            District Court of the United States Northern District of Ohio, <unitdate
+                                normal="1935-04-06">Apr. 6, 1935</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00091" level="file">
+                    <did>
+                        <unittitle>Reply brief for the U.S.: U.S.A. vs. Republic Steel Corporation,
+                            et al. In the District Court of the United States Northern District of
+                            Ohio, <unitdate normal="1935-04-15">Apr. 15, 1935</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00092" level="file">
+                    <did>
+                        <unittitle>On writ of certiorari to the U.S. Circuit Court of Appeals for
+                            the Second Circuit: A.L.A. Schecter Poultry Corporation, et al. vs.
+                            U.S.A. U.S.A. vs. A.L.A. Schecter Poultry Corporation, et al. Supreme
+                            Court of the U.S., <unitdate normal="1935-05-27">May 27,
+                            1935</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00093" level="file">
+                    <did>
+                        <unittitle>A bill to supplement existing Antitrust Acts...to prevent
+                            wasteful cross-hauling of commodities, to restore and preserve
+                            purchasing power... In the Senate of the U.S., <unitdate
+                                normal="1936-01-16">Jan. 16 1936</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00094" level="file">
+                    <did>
+                        <unittitle>A bill to regulate interstate and foreign commerce by prescribing
+                            the conditions under which corporations...to assist the several States
+                            in improving labor conditions and enlarging purchasing power for goods
+                            sold... In the Senate of the U.S., <unitdate normal="1937-11-16">Nov.
+                                16, 1937</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00095" level="file">
+                    <did>
+                        <unittitle>Miscellaneous course outlines, etc., <unitdate normal="1905/1936"
+                                type="inclusive">1905-1936</unitdate></unittitle>
+                        <physdesc>(5 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00096" level="file">
+                    <did>
+                        <unittitle>Ely, Richard T., LL.D. Competition: Its nature, its permanency,
+                            and its beneficence, <unitdate normal="1900-12-27">Dec. 27,
+                                1900</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00097" level="file">
+                    <did>
+                        <unittitle>Cassel, M. Gustav. Recent monopolistic tendencies in industry and
+                            trade. Geneva, <unitdate normal="1927">1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00098" level="file">
+                    <did>
+                        <unittitle>Lohr, Louis W. An analysis of the steel price structure and the
+                            effect of the differential in the South, <unitdate normal="1909-12-27"
+                                >Dec. 27, 1909</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00099" level="file">
+                    <did>
+                        <unittitle>Untermeyer, Samuel. Hobson's choice between government ownership
+                            and bankruptcy of the railroads, <unitdate normal="1933-02-27">Feb. 27,
+                                1933</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00100" level="file">
+                    <did>
+                        <unittitle>Second 1948 Economic Institute. Delivered pricing and the future
+                            of American business, <unitdate normal="1948"
+                            >1948</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00101" level="file">
+                    <did>
+                        <unittitle>School of Public and International Affairs, Princeton University.
+                            Selected bibliography on the stabilization of industry, <unitdate
+                                normal="1933-03">Mar. 1933</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00102" level="file">
+                    <did>
+                        <unittitle>Chamber of Commerce of the United States. Proposed restrictions
+                            on price-making methods, <unitdate normal="1937-01">Jan.
+                            1937</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00103" level="file">
+                    <did>
+                        <unittitle>Program of symposium of the anti-trust laws, <unitdate
+                                normal="1931">1931</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00104" level="file">
+                    <did>
+                        <unittitle>Podell, David L. Our anti-trust laws and the economic situation,
+                                <unitdate normal="1931-02-06">Feb. 6, 1931</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00105" level="file">
+                    <did>
+                        <unittitle>Montgomery, Donald E. Basing-point prices, <unitdate
+                                normal="1875/1988" type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00106" level="file">
+                    <did>
+                        <unittitle>Great Northern Railway Company. Local, joint and proportional
+                            tariff on ore, bullion, copper concentrates, lead, zinc…, <unitdate
+                                normal="1925-05-27">May 27, 1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00107" level="file">
+                    <did>
+                        <unittitle>The Denver and Rio Grande Western Railroad Company. Supplement
+                            No. 7...joint, proportional and export rates on smelter products, ore
+                            and concentrates, carloads…, <unitdate normal="1927-12-12">Dec. 12,
+                                1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00108" level="file">
+                    <did>
+                        <unittitle>Solvay &amp; Cie. Letter to Mr. Orlando Weber, President,
+                            Allied Chemical &amp; Dye Corporation. Printed copies sent to all
+                            holders of Allied Stock, <unitdate normal="1933-06-24">June 24,
+                                1933</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00109" level="file">
+                    <did>
+                        <unittitle>Barrett, Jesse W., Attorney-General of Missouri. The limitations
+                            of anti-trust laws, <unitdate normal="1934-07-07">July 7,
+                                1934</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00110" level="file">
+                    <did>
+                        <unittitle>American Iron and Steel Institute. Basing points and competition
+                            in steel, <unitdate normal="1935-03-13">Mar. 13,
+                            1935</unitdate></unittitle>
+                        <physdesc>(2 copies)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00111" level="file">
+                    <did>
+                        <unittitle>NYU, School of Law, School of Commerce, Accounts, and Finance.
+                            National conference on the relation of law and business, with specific
+                            emphasis on the anti-trust laws. Program, <unitdate
+                                normal="1931-10-26/1931-10-27" type="inclusive">Oct.26-27,
+                                1931</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00112" level="file">
+                    <did>
+                        <unittitle>Platform adopted by the National Democratic Convention, <unitdate
+                                normal="1932">1932</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00113" level="file">
+                    <did>
+                        <unittitle>Emerich, Frank. Pittsburgh Plus: A comprehensive and concise
+                            treatise... <unitdate normal="1923">[1923]</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00114" level="file">
+                    <did>
+                        <unittitle>Gillette, Hablert P. Why bidding prices on Portland cement are
+                            uniform, <unitdate normal="1875/1988" type="inclusive"
+                                >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00115" level="file">
+                    <did>
+                        <unittitle>Minnesota Dairy and Food Department. Dairy and food laws and
+                            rules and regulations, <unitdate normal="1927"
+                            >1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00116" level="file">
+                    <did>
+                        <unittitle>Kahn, Otto H. A few thoughts on the depression, <unitdate
+                                normal="1931-09-08">Sept. 8, 1931</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00117" level="file">
+                    <did>
+                        <unittitle>Kind, Morris. How Portland cement is distributed <unitdate
+                                normal="1926">[1926?]</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00118" level="file">
+                    <did>
+                        <unittitle>Terborgh, George. Price control devices in NRA codes, <unitdate
+                                normal="1934">1934</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00119" level="file">
+                    <did>
+                        <unittitle>Lyon, Leverett S. and Victor Abramson. Government and economic
+                            life, <unitdate normal="1940">1940</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00120" level="file">
+                    <did>
+                        <unittitle>The platform of American industry for 1932. Drawn by
+                            representative manufacturers from all parts of the country..., <unitdate
+                                normal="1932">1932</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00121" level="file">
+                    <did>
+                        <unittitle>Williams, J. Harvey. A cure for our Sherman Act troubles,
+                                <unitdate normal="1931">1931</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00122" level="file">
+                    <did>
+                        <unittitle>Congress of American Industry. Resolutions expressing the
+                            Manufacturers' viewpoint. Adapted at the annual meeting of the National
+                            Association of Manufacturers, <unitdate normal="1933-12-07/1933-12-08"
+                                type="inclusive">Dec. 7-8, 1933</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00123" level="file">
+                    <did>
+                        <unittitle>King, Judson. Miami fights the power trust and a federal judge,
+                                <unitdate normal="1933-05-27">May 27, 1933</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00124" level="file">
+                    <did>
+                        <unittitle>Lyon, Leverett S. and Harry W. Laidler. What shall we do about
+                            the anti-trust laws? <unitdate normal="1933-04-01">Apr. 1,
+                                1933</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00125" level="file">
+                    <did>
+                        <unittitle>Princeton University Department of Economics and Social
+                            Institutions. Economics 407 final exam, <unitdate normal="1933-01-30"
+                                >Jan. 30, 1933</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00126" level="file">
+                    <did>
+                        <unittitle>Dairy and Food Department of the State of Minnesota. Bulletin of
+                            information on creameries, cheese, ice cream factories, commercial
+                            canneries, and soft drink manufacturers. Creamery, cheese, and cannery
+                            list, <unitdate normal="1928">1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00127" level="file">
+                    <did>
+                        <unittitle>Dixon, Frank Haigh and Leslie Thomas Fournier. The Sherman
+                            Anti-trust Act and the Clayton Act. Excerpts from recent judicial
+                            decisions, <unitdate normal="1927">1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00128" level="file">
+                    <did>
+                        <unittitle>Epstein, Ralph C. Business planning, <unitdate
+                                normal="1932-02-27">Feb. 27, 1932</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00129" level="file">
+                    <did>
+                        <unittitle>Beer, Henry Ward. Federal Trade Commission and its due process of
+                            law, <unitdate normal="1931/1932" type="inclusive"
+                            >1931-1932</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00130" level="file">
+                    <did>
+                        <unittitle>Merchants' Association of New York. The iron and steel industry,
+                                <unitdate normal="1914">1914</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00131" level="file">
+                    <did>
+                        <unittitle>New York State Bar Association. Robinson-Patman Act symposium.
+                            The federal law against price and other discrimination, <unitdate
+                                normal="1946-01-23">Jan. 23, 1946</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00132" level="file">
+                    <did>
+                        <unittitle>Geisler, Dr. Emil. Frachtgrundlagen bei berbaulichen und
+                            industriellen Erzeugnissen, <unitdate normal="1931"
+                            >1931</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00133" level="file">
+                    <did>
+                        <unittitle>New York State Bar Association. Robinson-Patman Act
+                            symposium</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00134" level="file">
+                    <did>
+                        <unittitle>Cremers, Bert. Pricing Policies: Alkali industry, <unitdate
+                                normal="1948-12-06">Dec. 6, 1948</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00135" level="file">
+                    <did>
+                        <unittitle>Brief submitted on behalf of a committee appointed at conferences
+                            of American Manufacturers of Metal Product…, <unitdate
+                                normal="1912-11/1912-12" type="inclusive">Nov.-Dec.
+                            1912</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00136" level="file">
+                    <did>
+                        <unittitle>Hancock, John M. The freedom to compete, <unitdate
+                                normal="1948-11-09">Nov. 9, 1948</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00137" level="file">
+                    <did>
+                        <unittitle>Institute of Public Affairs, University of Virginia. Summer
+                            quarterly bulletin, <unitdate normal="1932-07-03/1932-07-16"
+                                type="inclusive">July 3-16, 1932</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00138" level="file">
+                    <did>
+                        <unittitle>Chamber of Commerce of the State of New York. Resolution
+                            adopted...in regard to proposed anti-trust legislation. Statement of the
+                            underlying principles that should control the regulation of business,
+                                <unitdate normal="1914-03-03">Mar. 3, 1914</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00139" level="file">
+                    <did>
+                        <unittitle>Capehart, Sen. Homer E. Remarks to Senate Subcommittee On Trade
+                            Policies, <unitdate normal="1948-09-15">Sept. 15,
+                            1948</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00140" level="file">
+                    <did>
+                        <unittitle>Simon, William. The legality of freight absorption and delivered
+                            prices under the decision in the cement case, <unitdate
+                                normal="1948-09-15">Sept. 15, 1948</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00141" level="file">
+                    <did>
+                        <unittitle>Nye, Hon. Gerald P. Remarks: Federal Trade Commission and
+                            antitrust laws, <unitdate normal="1932-01-05">Jan. 5,
+                            1932</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00142" level="file">
+                    <did>
+                        <unittitle>Knutson, Hon. Harold. Capper-Kelly fair trade bill, <unitdate
+                                normal="1931-01-27">Jan. 27, 1931</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00143" level="file">
+                    <did>
+                        <unittitle>Deppé, W.P. The appalling consequences of the refusal of U.S.
+                            government executive and judicial officials to enforce laws against rich
+                            and poor alike where individual and groups wreck the public interests
+                            for selfish gains by open violations of congressional acts and court
+                            decrees</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00144" level="file">
+                    <did>
+                        <container label="Box" type="box">6</container>
+                        <unittitle>Printed</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00145" level="file">
+                    <did>
+                        <unittitle>Newspaper clippings.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00146" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1900-11-14/1900-12" type="inclusive">1900, Nov.
+                                14-Dec.</unitdate>Chiefly regarding E.A. Ross</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00147" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1901-01/1905-12" type="inclusive">1901,
+                                Jan.-1905, Dec.</unitdate>Chiefly regarding E.A. Ross</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00148" level="file">
+                    <did>
+                        <unittitle>Miscellaneous</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00149" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1905/1938" type="inclusive">1905-1938</unitdate>
+                        </unittitle>
+                        <physdesc>(6 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00150" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1939">1939</unitdate>Monopoly
+                            testimony</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00151" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1940/1948" type="inclusive">1940-1948</unitdate>
+                        </unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00152" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1948">1948</unitdate>Anti-Capehart. Supporting
+                            the cement decision</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00153" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1948">1948</unitdate>Middle-of-the-road. FTC
+                            interpretation</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00154" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1948">1948.</unitdate>Pro-Capehart
+                            undated</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00155" level="file">
+                    <did>
+                        <unittitle>Transcription of F.A. Fetter letters to his mother. <unitdate
+                                normal="1889">Summer, 1889</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00156" level="file">
+                    <did>
+                        <unittitle>Journals and diaries</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00157" level="file">
+                    <did>
+                        <unittitle>Correspondence: <unitdate normal="1891/1892" type="inclusive"
+                                >1891-1892</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00158" level="file">
+                    <did>
+                        <unittitle>Transcription of Fetter letters to his mother, <unitdate
+                                normal="1892-07-03/1894-07-12" type="inclusive">July 3, 1892-July
+                                12, 1894</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00159" level="file">
+                    <did>
+                        <unittitle>Correspondence: <unitdate normal="1893/1906" type="inclusive"
+                                >1893-1906</unitdate></unittitle>
+                        <physdesc>(5 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00160" level="file">
+                    <did>
+                        <container label="Box" type="box">7</container>
+                        <unittitle>Correspondence: <unitdate normal="1907/1949" type="inclusive"
+                                >1907-1949</unitdate></unittitle>
+                        <physdesc>(12 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00161" level="file">
+                    <did>
+                        <unittitle>Frank W. Fetter re: Frank A. Fetter, <unitdate normal="1949/1960"
+                                type="inclusive">1949-1960</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00162" level="file">
+                    <did>
+                        <unittitle>Regarding study in Germany - 1890s, <unitdate normal="1949">ca.
+                                1949</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00163" level="file">
+                    <did>
+                        <unittitle>Frank W. Fetter re: Frank A. Fetter, <unitdate normal="1961/1992"
+                                type="inclusive">1961-1992</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00164" level="file">
+                    <did>
+                        <unittitle>Publications</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00165" level="file">
+                    <did>
+                        <unittitle><title render="italic">Principles of economics.</title> The
+                            Century Co., <unitdate normal="1904/1906" type="inclusive"
+                                >1904-1906</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00166" level="file">
+                    <did>
+                        <unittitle><title render="italic">Principles of economics;</title>
+                            <title render="italic">Source book on economics;</title>
+                            <title render="italic">Modern economic problems;</title>
+                            <title render="italic">Manual on economic principles;</title>
+                            <title render="italic">Manual on modern economic problems;</title>
+                            <title render="italic">Economic principles,</title><unitdate
+                                normal="1915/1916" type="inclusive">1915-1916</unitdate>and
+                                <unitdate normal="1905/1947" type="inclusive"
+                            >1905-1947</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00167" level="file">
+                    <did>
+                        <unittitle><title render="italic">Masquerade of monopoly.</title> Harcourt,
+                            Brace, &amp; Co., <unitdate normal="1930/1932" type="inclusive"
+                                >1930-1932;</unitdate><unitdate normal="1938/1940" type="inclusive"
+                                >1938-1940;</unitdate><unitdate normal="1944"
+                                >1944;</unitdate><unitdate normal="1950">1950;</unitdate><unitdate
+                                normal="1931/1946" type="inclusive">1931-1946</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00168" level="file">
+                    <did>
+                        <unittitle><title render="italic">Economic principles and problems.</title>
+                            Farrar and Rinehart, Inc., <unitdate normal="1936/1938" type="inclusive"
+                                >1936-1938.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00169" level="file">
+                    <did>
+                        <container label="Box" type="box">8</container>
+                        <unittitle>Correspondence: Listing of early correspondence</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00170" level="file">
+                    <did>
+                        <unittitle>Financial</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00171" level="file">
+                    <did>
+                        <unittitle>Securities and insurance information; summary sheet, <unitdate
+                                normal="1913/1949" type="inclusive">1913-1949</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00172" level="file">
+                    <did>
+                        <unittitle>Expense book, <unitdate normal="1912/1927" type="inclusive"
+                                >1912-1927</unitdate></unittitle>
+                        <physdesc>(2 books)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00173" level="file">
+                    <did>
+                        <unittitle>Income tax returns, <unitdate normal="1917/1948" type="inclusive"
+                                >1914-1948</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00174" level="file">
+                    <did>
+                        <unittitle>Early student assignments and writings, <unitdate
+                                normal="1880/1891" type="inclusive">1880-1891</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00175" level="file">
+                    <did>
+                        <unittitle>Addresses. Outlines of talks</unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00176" level="file">
+                    <did>
+                        <container label="Box" type="box">9</container>
+                        <unittitle>Addresses. Outlines of talks</unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00177" level="file">
+                    <did>
+                        <unittitle>Addresses. Outlines of addresses, <unitdate normal="1934/1936"
+                                type="inclusive">1934-1936.</unitdate>Urbana</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00178" level="file">
+                    <did>
+                        <unittitle>Unpublished writings: <unitdate normal="1898/1943"
+                                type="inclusive">1898-1943</unitdate>and <unitdate
+                                normal="1875/1988" type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00179" level="file">
+                    <did>
+                        <unittitle>Published writings</unittitle>
+                    </did>
+                </c02>
+
+
+                <c02 id="VAB8358-00180" level="file">
+                    <did>
+                        <unittitle>Published writings of Frank A. Fetter, <unitdate
+                                normal="1887/1895" type="inclusive">1887-1895</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00181" level="file">
+                    <did>
+                        <unittitle>Miscellaneous writings: <unitdate normal="1891/1910"
+                                type="inclusive">1891-1910</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00182" level="file">
+                    <did>
+                        <container label="Box" type="box">10</container>
+                        <unittitle>Published writings: <unitdate normal="1911/1939" type="inclusive"
+                                >1911-1939</unitdate></unittitle>
+                        <physdesc>(7 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00183" level="file">
+                    <did>
+                        <container label="Box" type="box">11</container>
+                        <unittitle>Published writings: <unitdate normal="1946/1949" type="inclusive"
+                                >1946-1949</unitdate>and <unitdate normal="1875/1988"
+                                type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00184" level="file">
+                    <did>
+                        <unittitle>Book Reviews</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00185" level="file">
+                    <did>
+                        <unittitle>Hearings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00186" level="file">
+                    <did>
+                        <unittitle>Reports</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00187" level="file">
+                    <did>
+                        <unittitle>Miscellaneous</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00188" level="file">
+                    <did>
+                        <unittitle>Social Science Research Council. Report on the two commissions,
+                                <unitdate normal="1933/1936" type="inclusive"
+                            >1933-1936</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00189" level="file">
+                    <did>
+                        <unittitle>Minority reports. Iron and steel prices, <unitdate normal="1933"
+                                >1933,</unitdate><unitdate normal="1937">1937</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00190" level="file">
+                    <did>
+                        <unittitle>Docket #3167. The basing point in the cement industry</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00191" level="file">
+                    <did>
+                        <unittitle>FTC memos on the basing point, <unitdate normal="1934"
+                                >1934</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00192" level="file">
+                    <did>
+                        <unittitle>The basing point in the cement industry</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00193" level="file">
+                    <did>
+                        <unittitle>Maps. The senate and the export debenture</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00194" level="file">
+                    <did>
+                        <unittitle>Research and writings: Drafts</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00195" level="file">
+                    <did>
+                        <unittitle>Insanity of farm wives</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00196" level="file">
+                    <did>
+                        <unittitle>Administration of the college curriculum (Information on);
+                            Systematic texts on general economics</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00197" level="file">
+                    <did>
+                        <unittitle>Materials on theory</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00198" level="file">
+                    <did>
+                        <unittitle>Böhm-Bawerk. Miscellaneous</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00199" level="file">
+                    <did>
+                        <unittitle>Landerdale (notes on)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00200" level="file">
+                    <did>
+                        <unittitle>Malthus</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00201" level="file">
+                    <did>
+                        <unittitle>J.B. Say</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00202" level="file">
+                    <did>
+                        <unittitle>Duplicates of (typewritten) Turgot, rent; Smith, rent, capital;
+                            Ricardo, rent; Mill, rent (1900-1905) Mill, on capital J.S.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00203" level="file">
+                    <did>
+                        <unittitle>Mill, on rent</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00204" level="file">
+                    <did>
+                        <unittitle>Ricardo. Rent; Labor theory of value; Capital.<unitdate
+                                normal="1898/1906" type="inclusive"
+                            >(1898-1906)</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00205" level="file">
+                    <did>
+                        <unittitle>The Ricardian cult</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00206" level="file">
+                    <did>
+                        <unittitle>Ricardo notes</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00207" level="file">
+                    <did>
+                        <unittitle>Ricardo. Miscellaneous notes, unclarified</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00208" level="file">
+                    <did>
+                        <unittitle>Adam Smith</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00209" level="file">
+                    <did>
+                        <unittitle>Adam Smith. The industrial revolution</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00210" level="file">
+                    <did>
+                        <unittitle>Adam Smith. Distribution, general outline; Rent;
+                            Capital</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00211" level="file">
+                    <did>
+                        <unittitle>Adam Smith. Miscellaneous notes on. Not arranged</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00212" level="file">
+                    <did>
+                        <unittitle>Book. Development of economic theory</unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00213" level="file">
+                    <did>
+                        <unittitle>Miscellaneous writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00214" level="file">
+                    <did>
+                        <unittitle>Report of Chicago housing conditions to the Sub- Committee on
+                            Investigation of the City Homes Association, <unitdate
+                                normal="1875/1988" type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00215" level="file">
+                    <did>
+                        <unittitle>National economy, economics and economic method, translated...by
+                            Frank Fetter, <unitdate normal="1875/1988" type="inclusive"
+                                >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00216" level="file">
+                    <did>
+                        <unittitle>The treaty making power of the Senate, <unitdate normal="1892"
+                                >1892</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00217" level="file">
+                    <did>
+                        <unittitle>The masquerade of monopoly, <unitdate normal="1931"
+                                >1931</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00218" level="file">
+                    <did>
+                        <unittitle>Assorted writings</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00219" level="file">
+                    <did>
+                        <unittitle>The Recardian cult</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00220" level="file">
+                    <did>
+                        <unittitle>Ricardo notes</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00221" level="file">
+                    <did>
+                        <unittitle>Ricardo. Miscellaneous notes, unclarified</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00222" level="file">
+                    <did>
+                        <container label="Box" type="box">12</container>
+                        <unittitle>Research and writings: Drafts (cont.)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00223" level="file">
+                    <did>
+                        <unittitle>Adam Smith</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00224" level="file">
+                    <did>
+                        <unittitle>Adam Smith. The industrial revolution</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00225" level="file">
+                    <did>
+                        <container label="Box" type="box">13</container>
+                        <unittitle>Miscellaneous writings</unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00226" level="file">
+                    <did>
+                        <unittitle>Calling cards for F.A.F</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00227" level="file">
+                    <did>
+                        <unittitle>Photographs</unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00228" level="file">
+                    <did>
+                        <unittitle>Scrapbook contents</unittitle>
+                        <physdesc>(8 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00229" level="file">
+                    <did>
+                        <container label="Box" type="box">14</container>
+                        <unittitle>Subjects for research and writing</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00230" level="file">
+                    <did>
+                        <unittitle>Research and writing of interest to F.A. Fetter, <unitdate
+                                normal="1893/1945" type="inclusive">1893-1945</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00231" level="file">
+                    <did>
+                        <unittitle>Books and articles about the work of F.A. Fetter</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00232" level="file">
+                    <did>
+                        <unittitle>Courses taught</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00233" level="file">
+                    <did>
+                        <unittitle>Cornell University. Class notes</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00234" level="file">
+                    <did>
+                        <unittitle>Indiana University. Syllabi and class notes</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00235" level="file">
+                    <did>
+                        <unittitle>Stanford University</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00236" level="file">
+                    <did>
+                        <unittitle>Columbia University. Class outline, <unitdate normal="1906"
+                                >Summer, 1906</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00237" level="file">
+                    <did>
+                        <unittitle>Northwestern University, <unitdate normal="1935">Summer,
+                                1935</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00238" level="file">
+                    <did>
+                        <unittitle>Princeton University. Class notes, student papers</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00239" level="file">
+                    <did>
+                        <unittitle>University of Chicago, <unitdate normal="1926">Summer,
+                                1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00240" level="file">
+                    <did>
+                        <unittitle>University of Illinois</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00241" level="file">
+                    <did>
+                        <unittitle>Stanford. The Ross Affair</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00242" level="file">
+                    <did>
+                        <unittitle>Biographical</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00243" level="file">
+                    <did>
+                        <unittitle>H.G. Fetter family genealogy</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00244" level="file">
+                    <did>
+                        <unittitle>Ellen Cole Fetter book fund. Peru, Indiana Public
+                            Library</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00245" level="file">
+                    <did>
+                        <unittitle>F.A. Fetter</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00246" level="file">
+                    <did>
+                        <unittitle>William E. Henry</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00247" level="file">
+                    <did>
+                        <unittitle>Publications list</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8358-00248" level="file">
+                    <did>
+                        <unittitle>Contents of Fetter collection</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
