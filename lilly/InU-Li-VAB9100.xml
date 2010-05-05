@@ -1,0 +1,1168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader relatedencoding="dublincore" audience="external" langencoding="iso639-2b"
+        scriptencoding="iso15924" repositoryencoding="iso15511" countryencoding="iso3166-1"
+        dateencoding="iso8601" findaidstatus="edited-full-draft">
+        <eadid encodinganalog="identifier" identifier="InU-Li-VAB9100" countrycode="US"
+            mainagencycode="InU-Li">InU-Li-VAB9100</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Brophy mss., <date normal="1962/1979"
+                        >1962-1979</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2010" type="publication">© 2010</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2010">© 2010</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                    <lb/><date normal="2009" type="source">2009</date>
+                <lb/>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2010-05-04">May 4, 2010</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2010-05-04"/>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc level="collection" audience="external" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository encodinganalog="852" label="Repository" id="lilly">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname source="lcnaf" encodinganalog="100">Brophy, Brigid, 1929-</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Brophy mss.</unittitle>
+            <unitdate normal="1962/1979" type="inclusive" encodinganalog="245$f"
+                >1962-1979</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1849</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>ca. 275 items</extent>
+            </physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Brophy mss., 1962‑1979, consists of
+                the correspondence and writings of British author Brigid Brophy,
+                1929‑1995.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+
+            <p>Brigid Brophy, 1929-1995, was a British novelist, essayist, critic, biographer, and
+                dramatist.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Correspondence; II. Major
+                Works; III. Notebooks; IV. Essays; V. Reviews; VI. Speeches; VII. Reprints.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Brophy mss., 1962‑1979, consists of the correspondence and writings of British
+                author Brigid Brophy, 1929‑1995. The correspondence is primarily with publishers and
+                editors and relates to Miss Brophy's publications. Correspondents include: Bryan
+                David Farrer, Ronald Fletcher, David Paradine Frost, Arnold Abraham Goodman, baron
+                Goodman, Giles Alexander Esme Gordon, Lawrence Grow, Caroline Hobhouse, Thomas
+                Michael Maschler, Derwent James May, Karl Ernest Meyer, William Targ, Violet
+                (Keppel) Trefusis, Fredric Warburg, Eric Walter White, Hugo Williams, Cecil Woolf,
+                and Francis Wyndham. An <emph render="doublequote">explanation of correspondence
+                    with Secker &amp; Warburg</emph> by Miss Brophy, Feb. 1979, completes this
+                section. </p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/brophy+brigid+1929-{su}">
+                            <persname encodinganalog="100" source="lcnaf">Brophy, Brigid, 1929-
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/brophy+brigid+1929-{su}">
+                            <persname encodinganalog="600" source="lcnaf">Brophy, Brigid, 1929-
+                                --Correspondence. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/farrer+david+1906-">
+                            <persname encodinganalog="700" source="lcnaf">Farrer, David, 1906-
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/fletcher+ronald">
+                            <persname encodinganalog="700" source="lcnaf">Fletcher, Ronald.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/frost+david+1939+apr+7{su}">
+                            <persname encodinganalog="700" source="lcnaf">Frost, David, 1939 Apr. 7-
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/goodman+arnold+goodman+baron+1913-{su}">
+                            <persname encodinganalog="700" source="lcnaf">Goodman, Arnold Goodman,
+                                Baron, 1913- </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/gordon+giles+1940-{su}">
+                            <persname encodinganalog="700" source="lcnaf">Gordon, Giles, 1940-
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/grow+lawrence">
+                            <persname encodinganalog="700" source="lcnaf">Grow, Lawrence.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/may+derwent+1930-">
+                            <persname encodinganalog="700" source="lcnaf">May, Derwent, 1930-
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/targ+william+1907-{su}">
+                            <persname encodinganalog="700" source="lcnaf">Targ, William, 1907-
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/meyer+karl+ernest">
+                            <persname encodinganalog="700" source="lcnaf">Meyer, Karl Ernest.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/trefusis+violet+keppel+1894-1972{su}">
+                            <persname encodinganalog="700" source="lcnaf">Trefusis, Violet Keppel,
+                                1894-1972. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/warburg+frederic+1898-">
+                            <persname encodinganalog="700" source="lcnaf">Warburg, Frederic, 1898-
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/white+eric+walter+1905-">
+                            <persname encodinganalog="700" source="lcnaf">White, Eric Walter, 1905-
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/williams+hugo+1942-{su}">
+                            <persname encodinganalog="700" source="lcnaf">Williams, Hugo, 1942-
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/woolf+cecil">
+                            <persname encodinganalog="700" source="lcnaf">Woolf, Cecil. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/wyndham+francis">
+                            <persname encodinganalog="700" source="lcnaf">Wyndham, Francis.
+                            </persname>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/authors+english+20th+century+correspondence{su}">
+                            <subject encodinganalog="650" source="lcnaf">Authors, English--20th
+                                century--Correspondence. </subject>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="110" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+        <relatedmaterial encodinganalog="544 1">
+            <head>Related Material</head>
+            <p>Brophy mss. II; also located at the Lilly Library, Indiana University, Bloomington,
+                Indiana.</p>
+        </relatedmaterial>
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired 1979</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>Brophy mss., Lilly Library, Indiana University, Bloomington, Indiana. </p>
+            </prefercite>
+
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 level="series">
+                <did>
+                    <!-- optional -->
+                    <container type="box" label="Box">1</container>
+
+
+                    <unittitle>I. Correspondence</unittitle>
+
+
+                </did>
+                <arrangement>
+                    <p>Arranged chronologically. Consult Manuscripts Index for dates of letters of
+                        individual correspondents.</p>
+                </arrangement>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1962/1979" type="inclusive">1962-1979</unitdate>
+                        </unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Explanation of correspondence with Secker &amp; Warburg,
+                                <unitdate normal="1979-02">Feb. 1979</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did>
+                    <container label="Box" type="box">1</container>
+                    <unittitle>II. Major Works</unittitle>
+                </did>
+                <arrangement>
+                    <p>Arranged in alphabetical order by title. One title per folder, unless
+                        otherwise indicated.</p>
+                </arrangement>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <title render="italic">The Adventures of God…</title>
+                        </unittitle>
+                        <physdesc>(9 folders)</physdesc>
+                        <note>
+                            <p>4 holographs, 3 carbon typescripts, 2 printer's typescripts</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <title render="italic">Beardsley and His World.</title>
+                        </unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                        <note>
+                            <p>2 holographs, carbon typescript, proofs</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <title render="italic">Black and White.</title>
+                        </unittitle>
+                        <note>
+                            <p>Holograph, carbon typescript, printer's copy</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <title render="italic">Black Ship to Hell.</title>
+                        </unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                        <note>
+                            <p>2 holographs</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>
+                            <title render="italic">Black Ship to Hell (cont'd).</title>
+                        </unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                        <note>
+                            <p>2 typescripts, reader's report</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <title render="italic">The Burglar.</title>
+                        </unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                        <note>
+                            <p>Holograph and typescript of early drafts, carbon typescript,
+                                proofs</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <title render="italic">Don't Never Forget.</title>
+                        </unittitle>
+                        <physdesc>(5 folders)</physdesc>
+                        <note>
+                            <p>5 carbon typescripts</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <title render="doublequote">Essay on the Morning of Christ's
+                                Nativity.</title>
+                        </unittitle>
+                        <note>
+                            <p>Holograph, carbon typescript</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <title render="italic">Ex Libris.</title>
+                        </unittitle>
+                        <note>
+                            <p>Holograph</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><title render="italic">Fifty Works of English* Literature We
+                                Could Do Without (*and American),</title> by BB, Michael Levey, and
+                            Charles Osborne.</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                        <note>
+                            <p>Typescript, photocopy</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <title render="italic">Finishing Touch.</title>
+                        </unittitle>
+                        <note>
+                            <p>Holograph, typescript, proofs</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">3</container>
+                        <unittitle>
+                            <title render="italic">Flesh.</title>
+                        </unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                        <note>
+                            <p>2 carbon typescripts, typescript, proof</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <title render="italic">Hackenfeller's Ape.</title>
+                        </unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                        <note>
+                            <p>Holograph, carbon typescript, proofs</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <title render="italic">A Hero to His Valet.</title>
+                        </unittitle>
+                        <note>
+                            <p>Typescript</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>I<title render="italic">n Transit.</title></unittitle>
+                        <physdesc>(9 folders)</physdesc>
+                        <note>
+                            <p>3 holographs, carbon typescript, 2 typescripts, 2 printer's
+                                typescripts, photocopy of proof</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">4</container>
+                        <unittitle>Jane Austen essay.</unittitle>
+                        <note>
+                            <p>Holograph (published in Critical Essay on JA?, 1968)</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <title render="doublequote">Jane Austin Unlimited.</title>
+                        </unittitle>
+                        <note>
+                            <p>Carbon typescript (introduction and notes to Pride &amp;
+                                Prejudice, 1967)</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <title render="italic">King of a Rainy Country.</title>
+                        </unittitle>
+                        <note>
+                            <p>Proofs</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <title render="italic">Let Me Go.</title>
+                        </unittitle>
+                        <note>
+                            <p>Holograph fragment</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <title render="italic">Libretto.</title>
+                        </unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                        <note>
+                            <p>Holograph, typescript, 2 carbons</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <title render="italic">Love Now, Die Later.</title>
+                        </unittitle>
+                        <note>
+                            <p>Holograph</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <title render="italic">Mozart the Dramatist.</title>
+                        </unittitle>
+                        <physdesc>(9 folders)</physdesc>
+                        <note>
+                            <p>Holograph, 4 typescripts, 2 carbon typescript, 2 proofs</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><title render="doublequote">Nardalark's Wedding</title> and
+                                <title render="doublequote">Nocturne</title> (poems).</unittitle>
+                        <note>
+                            <p>Typescript and carbon typescript of each</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">5</container>
+                        <unittitle>
+                            <title render="italic">Palace Without Chairs.</title>
+                        </unittitle>
+                        <physdesc>(6 folders)</physdesc>
+                        <note>
+                            <p>3 holographs, 3 carbon typescripts</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <title render="italic">Prancing Novelist.</title>
+                        </unittitle>
+                        <physdesc>(9 folders)</physdesc>
+                        <note>
+                            <p>9 holographs</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">6</container>
+                        <unittitle>
+                            <title render="italic">Prancing Novelist (cont'd).</title>
+                        </unittitle>
+                        <physdesc>(16 folders)</physdesc>
+                        <note>
+                            <p>Notebooks, notes, drafts</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">7</container>
+                        <unittitle>
+                            <title render="italic">Prancing Novelist (cont'd).</title>
+                        </unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                        <note>
+                            <p>Notes and drafts, proofs</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <title render="italic">Pussy Owl (children's book).</title>
+                        </unittitle>
+                        <note>
+                            <p>Holograph and photocopy</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Religious Education in State Schools.</unittitle>
+                        <note>
+                            <p>Lecture notes, 1966, to Fabian Society; carbon typescript and galleys
+                                for <title render="doublequote">Religion by Act of
+                                    Parliament</title>; holograph and typescript of related lecture
+                                given on 19 June 1970</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <title render="doublequote">Saint Colette.</title>
+                        </unittitle>
+                        <note>
+                            <p>Holograph</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <title render="italic">The Snow Ball.</title>
+                        </unittitle>
+                        <physdesc>(6 folders)</physdesc>
+                        <note>
+                            <p>2 holographs, typescript, 2 carbon typescripts, proof</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Vivisection.</unittitle>
+                        <note>
+                            <p>Holograph and carbon typescript for lecture to National
+                                Anti-Vivisection Society on 30 May 1970, printed in <title
+                                    render="italic">Animals' Defender</title> 14:4, July/August
+                                1970; typescript on cut sheets for lecture to Scottish
+                                Anti-Vivisection Society on 5 May 1973; holograph and 2 pp. of
+                                carbon typescript of contribution to <title render="italic">Animals,
+                                    Men and Morals,</title> published 1971; typescript and printed
+                                of <title render="doublequote">Brigid Brophy on Vivisection</title>
+                                (pamphlet) 1970</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>
+                            <title render="italic">The Waste Disposal Unit.</title>
+                        </unittitle>
+                        <note>
+                            <p>Holograph, typescript</p>
+                        </note>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 level="series">
+                <did>
+                    <container label="Box" type="box">7</container>
+                    <unittitle>III. Notebooks</unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <unittitle>1. Arts Theatre Club Speech; misc. false starts, letter
+                            drafts</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>2. <title render="doublequote">China Eggs</title> (poem); false
+                            starts re: 1755 Lisbon earthquake; letter drafts</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>3. Notes on Mozart; notes on Katherine Mansfield; <title
+                                render="doublequote">Eliot's lines oblige the ear</title> [1st line
+                            of poem]; <title render="doublequote">Country, that disdains to be
+                                called a republic</title> [1st line of poem]; <title
+                                render="doublequote">Garrison Town</title> (poem)</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>4. Notes on Françoise Sagan; reviews: <title render="italic">The
+                                New Rhythm and Other Pieces</title> by Ronald Firbank and <title
+                                render="italic">The Divine Propagandist</title> by Lord Beaverbrook
+                                (<title render="italic">London Magazine</title>)</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">8</container>
+                        <unittitle>5. Review of <title render="italic">The Perfumed Garden of the
+                                Shaylah</title> Nefzawi (for <title render="italic">New
+                                Statesman</title>); notes on British humor for <title
+                                render="italic">Sunday Times</title> article; misc. false starts,
+                            letter drafts</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>6. Review of <title render="italic">The Blue Lantern</title>, by
+                            Colette and other novels; letter to Mr. Cogdon re: Profumo
+                            scandal</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>7. Notes on Profumo-Ward scandal; Reviews of <title
+                                render="italic">The Girls of Slender Means</title> by Muriel Spark,
+                            the film <title render="doublequote">Assassino</title>, <title
+                                render="italic">The President</title> by M.A. Asturias, and other
+                            books</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>8. Notes on My Mother for <title render="italic">Sunday
+                                Telegraph</title> article; programme notes for <title
+                                render="italic">La Serva Padrona</title> by Pergolesi</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>9. Article on Mersey Sound 1750 for <title render="italic">New
+                                Statesman</title>; reviews of <title render="italic">The Lonely
+                                Life</title> by Bette Davis and <title render="italic">Mrs.
+                                Grundy</title> by Peter Fryer</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>10. Reviews of <title render="italic">Our Lady of the
+                                Flowers</title> by Jean Genet (for <title render="italic">London
+                                Magazine</title>), television program <title render="doublequote"
+                                >Hugh and I,</title>
+                            <title render="italic">The Train</title> by Simenon, <title
+                                render="italic">You Are Not The Target</title> by Laura A. Huxley
+                            for <title render="italic">New Statesman</title>; letter drafts; review
+                            of <title render="italic">The somnambulists</title> by Janice Elliot;
+                            Open letter to Director of Public Prosecutions</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>11. Notes on Katherine Mansfield; <title render="doublequote"
+                                >Funeral Oration</title> (poem); <title render="doublequote"
+                                >Recruits</title> (poem); <title render="doublequote">Officer's
+                                Wife</title> (poem); <title render="doublequote">The Officer</title>
+                            poem)</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>12. Reassessment of Aldous Huxley (radio); reviews of <title
+                                render="italic">The Brickfield</title> by L.P. Hartley, <title
+                                render="italic">Love In Our Time</title> by Vincent Brome, <title
+                                render="italic">Under the Skin</title> by Nina Bawden, <title
+                                render="italic">The Lord of Burleigh</title> by Elizabeth
+                            Inglis-Jones</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>13. Review of <title render="italic">Henry James and His
+                                Cult</title>, by Maxwell Geismar; <title render="doublequote">I
+                                asked to share your bed...</title> [1st line of poem]; <title
+                                render="doublequote">Monument</title> (poem); letter drafts; review
+                            of <title render="italic">The Two Faces of January</title> by Patricia
+                            Highsmith for <title render="italic">New Statesman</title></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>14. Review? of <title render="italic">The Gallery</title> by
+                            Horne Burns for <title render="italic">Sunday Times</title>; talk,
+                            Oxford Union</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>15. Article on Henry Miller; talk at Slade School of Art,
+                            University College, London; letter drafts; draft for BB vita; Mozart
+                            notes; reviews of <title render="italic">Medusa</title> by EH Visiak,
+                                <title render="italic">The Purple Cloud</title> by MP Shiel and
+                                <title render="italic">A Voyage to Arcturus</title> by David
+                            Lindsay; review of <title render="italic">Face of a Stranger</title> by
+                            Diana Marr-Johnson</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>16. Notes on Lisbon--notes and draft</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>17. <title render="doublequote">A Modern Myth of
+                                Violence?</title> (article on crime novels); letter drafts; review
+                            of <title render="italic">Textures of Life</title>, by Hortense Calisher
+                            and other books; review of <title render="italic">The Serpent</title> by
+                            Jane Gaskell</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>18. Notes for speech at Trinity College, Dublin</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>19. Talk on art; talk on Simenon; Talk on novels; reviews of
+                                <title render="italic">Tale for the Mirror</title> by Hortense
+                            Calisher and <title render="italic">The Collector</title> by John
+                            Fowles</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 level="series">
+                <did>
+                    <container label="Box" type="box">8</container>
+                    <unittitle>IV. Essays</unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <unittitle>1. <title render="doublequote">Citizens, beware.</title>
+                            <title render="italic">Daily Mail</title>, <unitdate normal="1971-05-07"
+                                >May 7, 1971.</unitdate></unittitle>
+                        <note>
+                            <p>Holograph, typescript</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>2. <title render="doublequote">Dear Dutch Friend,</title>
+                            <unitdate type="inclusive" normal="1962/1979"
+                            >undated.</unitdate></unittitle>
+                        <note>
+                            <p>Typescript</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>3. <title render="doublequote">I often wonder…</title>
+                            <title render="italic">TV Times</title>, <unitdate normal="1973-01-17"
+                                >Jan. 17, 1973.</unitdate></unittitle>
+                        <note>
+                            <p>Holograph, typescript</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>4. <title render="doublequote">I would say at a guess…</title>
+                            <unitdate type="inclusive" normal="1962/1979"
+                            >undated.</unitdate></unittitle>
+                        <note>
+                            <p>National Secular Society brochure. Typescript</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>5. <title render="doublequote">It was on a February night in
+                                1874…</title>
+                            <title render="italic">Times</title>, <unitdate normal="1976"
+                                >1976</unitdate></unittitle>
+                        <note>
+                            <p>Holograph</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>6. <title render="doublequote">Lucio Silla…</title>
+                            <title render="italic">Listener</title>, <unitdate normal="1973-03-29"
+                                >Mar. 29, 1973.</unitdate></unittitle>
+                        <note>
+                            <p>Holograph</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>7. <title render="doublequote">My personality…</title>
+                            Contribution to Bookmarks, edited by F. Raphael, <unitdate normal="1974"
+                                >1974</unitdate></unittitle>
+                        <note>
+                            <p>Holograph, typescript</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>8. <title render="doublequote">One of the most imperative
+                                reasons…</title>
+                            <unitdate type="inclusive" normal="1962/1979"
+                            >undated.</unitdate></unittitle>
+                        <note>
+                            <p>Carbon typescript</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>9. Essay on Clodius &amp; Clodia. <title render="italic"
+                                >Sunday Times</title>, <unitdate type="inclusive" normal="1962/1979"
+                                >Mar. 9 [no year].</unitdate></unittitle>
+                        <note>
+                            <p>Galley</p>
+                        </note>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 level="series">
+                <did>
+                    <container label="Box" type="box">8</container>
+                    <unittitle>V. Reviews</unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <unittitle>1. <title render="italic">The George Bernard Shaw Vegetarian
+                                Cookbook</title>, ed. by R.J. Minney. <title render="italic"
+                                >Listener</title>, <unitdate normal="1972-09">Sept.
+                            1972.</unitdate></unittitle>
+                        <note>
+                            <p>Holograph, typescript</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>2. <title render="italic">Summer Overtures</title>, by Clive
+                            Murphy. <title render="italic">Spectator</title>, <unitdate
+                                normal="1976-03-26">Mar. 26, 1976.</unitdate></unittitle>
+                        <note>
+                            <p>Holograph</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>3. <title render="doublequote">Records</title> [on Weber]. <title
+                                render="italic">Listener</title>, <unitdate normal="1972-08-31">Aug.
+                                31, 1972.</unitdate></unittitle>
+                        <note>
+                            <p>Holograph, galley</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>4. <title render="doublequote">A Roman PR Machine.</title> Review
+                            of <title render="italic">Cicero</title> by D.R. Shackleton Bailey.
+                                <title render="italic">Listener</title>, <unitdate
+                                normal="1971-12-09">Dec. 9, 1971.</unitdate></unittitle>
+                        <note>
+                            <p>Holograph, galley</p>
+                        </note>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 level="series">
+                <did>
+                    <container label="Box" type="box">8</container>
+                    <unittitle>VI. Speeches</unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <unittitle>1. <title render="doublequote">It is commonly believed…</title>
+                            NCCL Children's Rights Conference, <unitdate normal="1972-03-11">Mar.
+                                11, 1972.</unitdate></unittitle>
+                        <note>
+                            <p>Carbon typescript</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>2. <title render="doublequote">I do not believe that the
+                                authors…</title> National Secular Society, <unitdate
+                                normal="1972-10-03">Oct. 3, 1972.</unitdate></unittitle>
+                        <note>
+                            <p>Carbon typescript with corrections. Copy of <title render="italic"
+                                    >The Freethinker</title>, Vol.92, No. 42, Oct. 14, 1972 with
+                                article about the meeting</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>3. <title render="doublequote">...I am delighted to be opening a
+                                fashion show…</title>
+                            <unitdate type="inclusive" normal="1962/1979">23 Sept. [no
+                                year]</unitdate></unittitle>
+                        <note>
+                            <p>Holograph. Flyer for fashion show</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>4. <title render="doublequote">I don't know if many…</title>
+                            <unitdate type="inclusive" normal="1962/1980"
+                            >undated.</unitdate></unittitle>
+                        <note>
+                            <p>Holograph.</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>5. <title render="doublequote">If a researcher…</title> UFAW
+                            symposium, <unitdate type="inclusive" normal="1962/1981"
+                                >undated.</unitdate></unittitle>
+                        <note>
+                            <p>Holograph</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>6. <title render="doublequote">Last July…</title> [on her <title
+                                render="italic">Black Ship to Hell</title>] <unitdate
+                                type="inclusive" normal="1962/1982">undated.</unitdate></unittitle>
+                        <note>
+                            <p>Holograph</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>7. <title render="doublequote">...Woman myself</title> (To
+                            Authors Club?) <unitdate type="inclusive" normal="1962/1983"
+                                >undated.</unitdate></unittitle>
+                        <note>
+                            <p>Holograph</p>
+                        </note>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 level="series">
+                <did>
+                    <container label="Box" type="box">8</container>
+                    <unittitle>VII. Reprints</unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <unittitle>1. Our Impermissive Society. Reprint from <title render="italic"
+                                >Mosaic</title>, <unitdate normal="1968-01">Jan.
+                            1968</unitdate>1:2</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>2. <title render="doublequote">My relations with Horace…</title>
+                            Reprint from <title render="italic">Arion</title>, <unitdate
+                                normal="1970">Summer/Autumn 1970</unitdate>9:2&amp;3</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
