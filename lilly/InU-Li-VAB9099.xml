@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAB9099">InU-Li-VAB9099</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Barnard, H. mss., <date normal="1924/1983"
+                        >1924-1983</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2010" type="publication">© 2010</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2010">© 2010</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                    <lb/><date normal="2009" type="source">2009</date>
+                <lb/>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2010-05-04">May 4, 2010</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2010-05-04"/>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Barnard, Harry, 1906-</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Barnard, H. mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1924/1983" type="inclusive"
+                >1924-1983</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1065</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>ca. 7000 items</extent>
+            </physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Barnard, H. mss., 1924-1983,
+                consists of the correspondence of Harry Barnard, 1906-1982, journalist, relating to
+                his projected biography of Wendell Lewis Willkie, 1892-1944.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+
+            <p>Harry Barnard, 1906-1982, was a journalist and biographer.</p>
+
+        </bioghist>
+
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Barnard, H. mss., 1924-1983, consists of the correspondence of Harry Barnard,
+                1906-1982, journalist, relating to his projected biography of Wendell Lewis Willkie,
+                1892-1944. Also present are transcripts of interviews with various people
+                reminiscing about Willkie, photographs of Willkie and Willkie family members,
+                Barnard's typed and holograph notes about Willkie or Willkie material, photocopies
+                of Willkie's letters in various libraries and research collections, and news
+                clippings and articles by and about Willkie. </p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/barnard+harry+1906-{su}">
+                            <persname encodinganalog="100" source="lcnaf">Barnard, Harry, 1906-
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/barnard+harry+1906-{su}">
+                            <persname encodinganalog="600" source="lcnaf">Barnard, Harry, 1906-
+                                --Correspondence. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/willkie+wendell+l+1892-1944{su}">
+                            <persname encodinganalog="600" source="lcnaf">Willkie, Wendell L.
+                                (Wendell Lewis), 1892-1944. </persname>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/presidential+candidates+united+states+biography{su}">
+                            <subject encodinganalog="650" source="lcnaf">Presidential
+                                candidates--United States--Biography. </subject>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Places</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/united+states+politics+and+government+1933-1945{su}">
+                            <persname encodinganalog="651" source="lcnaf">United States--Politics
+                                and government--1933-1945. </persname>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="110" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired 1985</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>Barnard, H. mss., Lilly Library, Indiana University, Bloomington, Indiana. </p>
+            </prefercite>
+
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAB9099-00001" level="series">
+                <did>
+                    <!-- optional -->
+                    <container label="Box" type="box">1</container>
+
+
+                    <unittitle>Collection</unittitle>
+
+                </did>
+                <c02 id="VAB9099-00002" level="file">
+                    <did>
+                        <container label="Folders" type="folder">1-19</container>
+                        <unittitle>Correspondence:<unitdate normal="1924">1924,</unitdate><unitdate
+                                normal="1963/1983" type="inclusive">1963-1983</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9099-00003" level="file">
+                    <did>
+                        <container label="Folder" type="folder">20</container>
+                        <unittitle><unitdate normal="1940">1940</unitdate>campaign speeches on
+                            behalf of Wendell Willkie</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9099-00004" level="file">
+                    <did>
+                        <container label="Folder" type="folder">21</container>
+                        <unittitle>Willkie's death</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9099-00005" level="file">
+                    <did>
+                        <container label="Folder" type="folder">22</container>
+                        <unittitle>Edith Willkie interview</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9099-00006" level="file">
+                    <did>
+                        <container label="Folder" type="folder">23</container>
+                        <unittitle>Philip Willkie interview</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9099-00007" level="file">
+                    <did>
+                        <container label="Folder" type="folder">24</container>
+                        <unittitle>Newspaper releases, general biography of Willkie</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9099-00008" level="file">
+                    <did>
+                        <container label="Folder" type="folder">25</container>
+                        <unittitle>One World Tour memorandum, news releases</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9099-00009" level="file">
+                    <did>
+                        <container label="Folders" type="folder">26-27</container>
+                        <unittitle>Reminiscences and interviews, <unitdate normal="1949/1975"
+                                type="inclusive">1949-1975</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9099-00010" level="file">
+                    <did>
+                        <container label="Folder" type="folder">28</container>
+                        <unittitle>Items from Willkie's <emph render="doublequote">name</emph>
+                            book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9099-00011" level="file">
+                    <did>
+                        <container label="Folder" type="folder">29</container>
+                        <unittitle>Information from Elwood Public Library</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9099-00012" level="file">
+                    <did>
+                        <container label="Folder" type="folder">30</container>
+                        <unittitle><unitdate normal="1940">1940</unitdate>Campaign Organization.
+                            National, state, local officers</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9099-00013" level="file">
+                    <did>
+                        <container label="Folder" type="folder">31</container>
+                        <unittitle>Ephemera</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9099-00014" level="file">
+                    <did>
+                        <container label="Folder" type="folder">32</container>
+                        <unittitle>Norman Corwin. One World award, <unitdate normal="1946"
+                                >1946</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9099-00015" level="file">
+                    <did>
+                        <container label="Folders" type="folder">33-34</container>
+                        <unittitle>325th field artillery</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9099-00016" level="file">
+                    <did>
+                        <container label="Folder" type="folder">35</container>
+                        <unittitle>Unknown</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9099-00017" level="file">
+                    <did>
+                        <container label="Folder" type="folder">36</container>
+                        <unittitle>Miscellaneous non-Willkie material</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9099-00018" level="file">
+                    <did>
+                        <container label="Folder" type="folder">37</container>
+                        <unittitle>The Republican Willkie [thesis], <unitdate normal="1958"
+                                >1958</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9099-00019" level="file">
+                    <did>
+                        <container label="Folders" type="folder">38-39</container>
+                        <unittitle>Tape recordings</unittitle>
+                        <physdesc>(3 cassette tapes, one reel-to-reel tape)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9099-00020" level="file">
+                    <did>
+                        <container label="Folder" type="folder">40</container>
+                        <unittitle>Photographs - Personal</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9099-00021" level="file">
+                    <did>
+                        <container label="Folder" type="folder">41</container>
+                        <unittitle>Photographs - Official</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9099-00022" level="file">
+                    <did>
+                        <container label="Folder" type="folder">42</container>
+                        <unittitle>Photographs - 325th field artillery reunion, <unitdate
+                                normal="1960">1960</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9099-00023" level="file">
+                    <did>
+                        <container label="Folder" type="folder">43</container>
+                        <unittitle>Photograph - Willkie on phone</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9099-00024" level="file">
+                    <did>
+                        <unittitle>Notes</unittitle>
+                    </did>
+                    <c03 id="VAB9099-00025" level="file">
+                        <did>
+                            <container label="Folder" type="folder">44</container>
+                            <unittitle>Coffeeville</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00026" level="file">
+                        <did>
+                            <container label="Folder" type="folder">45</container>
+                            <unittitle>FDR</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00027" level="file">
+                        <did>
+                            <container label="Folder" type="folder">46</container>
+                            <unittitle>FDR Library</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00028" level="file">
+                        <did>
+                            <container label="Folder" type="folder">47</container>
+                            <unittitle>Iowa</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00029" level="file">
+                        <did>
+                            <container label="Folder" type="folder">48</container>
+                            <unittitle>SEC</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00030" level="file">
+                        <did>
+                            <container label="Folder" type="folder">49</container>
+                            <unittitle>Young lawyer, Elwood</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00031" level="file">
+                        <did>
+                            <container label="Folder" type="folder">50</container>
+                            <unittitle>Willkie in Elwood</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00032" level="file">
+                        <did>
+                            <container label="Folder" type="folder">51</container>
+                            <unittitle>Henry Wallace. Hoover library</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00033" level="file">
+                        <did>
+                            <container label="Folder" type="folder">52</container>
+                            <unittitle>Wendell Willkie in England, <unitdate normal="1941"
+                                    >1941</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00034" level="file">
+                        <did>
+                            <container label="Folder" type="folder">53</container>
+                            <unittitle>World War I</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00035" level="file">
+                        <did>
+                            <container label="Box" type="box">2</container>
+                            <container label="Folder" type="folder">1</container>
+                            <unittitle>Akron, Ohio</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00036" level="file">
+                        <did>
+                            <container label="Folder" type="folder">2</container>
+                            <unittitle>Culver</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00037" level="file">
+                        <did>
+                            <container label="Folder" type="folder">3</container>
+                            <unittitle>One World</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00038" level="file">
+                        <did>
+                            <container label="Folder" type="folder">4</container>
+                            <unittitle>One World Tour. General</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00039" level="file">
+                        <did>
+                            <container label="Folder" type="folder">5</container>
+                            <unittitle>One World Tour. China, U.S.S.R.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00040" level="file">
+                        <did>
+                            <container label="Folder" type="folder">6</container>
+                            <unittitle>One World Tour. Palestine</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00041" level="file">
+                        <did>
+                            <container label="Folder" type="folder">7</container>
+                            <unittitle>Sacco and Vanzetti</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00042" level="file">
+                        <did>
+                            <container label="Folder" type="folder">8</container>
+                            <unittitle>Willkie's traits, themes, characteristics</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00043" level="file">
+                        <did>
+                            <container label="Folder" type="folder">9</container>
+                            <unittitle><unitdate normal="1940">1940</unitdate>campaign
+                                tactics</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00044" level="file">
+                        <did>
+                            <container label="Folder" type="folder">10</container>
+                            <unittitle>Jews, <unitdate normal="1940/1941" type="inclusive"
+                                    >1940-1941</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00045" level="file">
+                        <did>
+                            <container label="Folder" type="folder">11</container>
+                            <unittitle>John L. Lewis</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00046" level="file">
+                        <did>
+                            <container label="Folder" type="folder">12</container>
+                            <unittitle>Irita Van Doren relationship, et al.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00047" level="file">
+                        <did>
+                            <container label="Folder" type="folder">13</container>
+                            <unittitle>Philip Willkie interviews</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00048" level="file">
+                        <did>
+                            <container label="Folders" type="folder">14-26</container>
+                            <unittitle>Miscellaneous notes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00049" level="file">
+                        <did>
+                            <container label="Box" type="box">3</container>
+                            <container label="Folders" type="folder">1-16</container>
+                            <unittitle>Miscellaneous notes</unittitle>
+                        </did>
+                    </c03>
+
+                </c02>
+                <c02 id="VAB9099-00050" level="file">
+                    <did>
+                        <unittitle>Correspondence - photocopies</unittitle>
+                    </did>
+                    <c03 id="VAB9099-00051" level="file">
+                        <did>
+                            <container label="Folders" type="folder">17-18</container>
+                            <unittitle>Miscellaneous</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00052" level="file">
+                        <did>
+                            <container label="Box" type="box">4</container>
+                            <container label="Folders" type="folder">1-2</container>
+                            <unittitle>FDR papers</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00053" level="file">
+                        <did>
+                            <container label="Folder" type="folder">3</container>
+                            <unittitle>Jonathan Daniels papers</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00054" level="file">
+                        <did>
+                            <container label="Folder" type="folder">4</container>
+                            <unittitle>Irita Van Doren papers</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00055" level="file">
+                        <did>
+                            <container label="Folder" type="folder">5</container>
+                            <unittitle>Dorothy Thompson mss</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00056" level="file">
+                        <did>
+                            <container label="Folders" type="folder">6-7</container>
+                            <unittitle>FDR Library</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00057" level="file">
+                        <did>
+                            <container label="Folder" type="folder">8</container>
+                            <unittitle>Julius Klein</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00058" level="file">
+                        <did>
+                            <container label="Folder" type="folder">9</container>
+                            <unittitle>Herbert Hoover Presidential Library</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00059" level="file">
+                        <did>
+                            <container label="Folders" type="folder">10-22</container>
+                            <unittitle>Miscellaneous</unittitle>
+                        </did>
+                    </c03>
+
+                </c02>
+                <c02 id="VAB9099-00060" level="file">
+                    <did>
+                        <unittitle>Miscellaneous photocopies</unittitle>
+                    </did>
+                    <c03 id="VAB9099-00061" level="file">
+                        <did>
+                            <container label="Folder" type="folder">23</container>
+                            <unittitle>Sacco and Vanzetti</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00062" level="file">
+                        <did>
+                            <container label="Folder" type="folder">24</container>
+                            <unittitle>One World Tour. China, U.S.S.R.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00063" level="file">
+                        <did>
+                            <container label="Folder" type="folder">25</container>
+                            <unittitle>Hoover Library, Iowa</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00064" level="file">
+                        <did>
+                            <container label="Folder" type="folder">26</container>
+                            <unittitle>Clippings - Henry Wallace</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00065" level="file">
+                        <did>
+                            <container label="Folder" type="folder">27</container>
+                            <unittitle>Clippings - Miscellaneous</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00066" level="file">
+                        <did>
+                            <container label="Folder" type="folder">28</container>
+                            <unittitle>FDR Library</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00067" level="file">
+                        <did>
+                            <container label="Folder" type="folder">29</container>
+                            <unittitle>FDR papers</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00068" level="file">
+                        <did>
+                            <container label="Folder" type="folder">30</container>
+                            <unittitle>Willkie. Isolationism. Truman Library</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00069" level="file">
+                        <did>
+                            <container label="Folder" type="folder">31</container>
+                            <unittitle>Office of War Information, Bureau of Intelligence</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9099-00070" level="file">
+                        <did>
+                            <container label="Folders" type="folder">32-35</container>
+                            <unittitle>Miscellaneous</unittitle>
+                        </did>
+                    </c03>
+
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
