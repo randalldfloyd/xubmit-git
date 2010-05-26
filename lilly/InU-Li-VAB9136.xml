@@ -1,0 +1,1418 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAB9136">InU-Li-VAB9136</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Butler mss., <date normal="1835/1937"
+                        >1835-1937</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2010" type="publication">© 2010</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2010">© 2010</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                    <lb/><date normal="2010" type="source">2010</date>
+                <lb/>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2010-05-12">May 12, 2010</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2010-05-12"/>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Butler, Amos W. 1860-1937. </persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Butler mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1835/1937" type="inclusive"
+                >1835-1937</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1177</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>10,597 items</extent>
+            </physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Butler mss., 1835-1937, includes
+                papers, 1877-1937, of Amos William Butler, 1860-1937, zoologist, anthropologist, and
+                sociologist, and a few papers, 1835-1871, of his father, William Wallace Butler,
+                1810-1903, merchant and farmer.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+
+            <p>Career of William Wallace Butler: born, Brookville, Indiana, March 11, 1810, the son
+                of Amos Butler, 1770-1837, and Mary (Wallace) Butler, 1786-1852; moved with parents
+                to Hanover, Indiana, attended Hanover College; returned to Brookville, 1832; started
+                a general mercantile business, 1835; disposed of goods and devoted himself to
+                superintending his farms and other business, 1842; married three times; son, Amos
+                William Butler, child of third marriage; died November 21, 1903.</p>
+            <p>Career of Amos William Butler: born, Brookville, Indiana, October 1, 1860, the son of
+                William Wallace Butler and Hannah (Wright) Butler; educated in Brookville schools,
+                including a year or more at Brookville College; attended Hanover College; spent
+                winter, 1879-1880, in Mexico, nominally attached to U.S. legation at Mexico City but
+                actually engaged in field work in zoology and archaeology; before completing
+                education spent several years in insurance business in Brookville, Indiana; married
+                Mary I. Reynolds of Brookville, June 2, 1880; a founder of the Brookville Society of
+                Natural History, 1881; a founder of the Indiana Academy of Science, 1885; A.B.,
+                Indiana University, 1894; president, Indiana Academy of Science, 1895;
+                ornithologist, Department of Geology and Resources of Indiana, 1896-1897; secretary,
+                Indiana Board of State Charities, 1898-1923; a founder of Indiana Audubon Society,
+                1898; president of Indiana State Truancy Board, 1898-1912, secretary, 1913-1921;
+                A.M., Indiana University, 1900; a founder of American Anthropological Association,
+                1902; lecturer on economics, Purdue University, 1905; later lectured on public
+                charities at Purdue, Indiana University, the University of Chicago, the Lane
+                Theological Seminary, and the Chicago School of Philanthropy; president of National
+                Conference of Charities and Corrections, 1906-1907; member of White House children's
+                conference, 1909; president of American Prison Association, 1909-1910; chairman of
+                American Committee on the International Prison Congress, Washington, D.C., 1910;
+                LLD, Hanover College, 1915; Ph.D., Butler University, 1915; president of Indiana
+                Conference of Charities and Corrections, 1915; secretary of Indiana Commission on
+                Mental Defectives, 1915; delegate to 2nd Pan American Scientific Congress,
+                Washington, D.C., 1915-1916; a founder of the Society of Indiana Pioneers, 1916;
+                chairman of executive committee of Indiana Society for Mental Hygiene, 1918-1925; a
+                founder of the American Mammalogists, 1919; LLD, Indiana University, 1922; delegate
+                from the U.S. to the International Prison Congress, London, 1925; president of
+                Indiana Society for Mental Hygiene, 1925-1930; senior sociologist, U.S. Bureau of
+                Efficiency to advise the Congressional committee on Federal Penal and Reformatory
+                Institutions, 1928-1929; member of Advisory Committee to President Hoover's National
+                Committee on Law Observance and Enforcement, 1929-1931; secretary of Indiana
+                Committee on Observance and Enforcement of Law, 1929-1931; a founder of the
+                International Commission on Mental Hygiene, and a member of the 1st International
+                Congress on Mental Hygiene, Washington, D.C., 1930; delegate from the U.S. to the
+                International Prison Congress, Prague, 1930; member of the executive board of the
+                American Institute of Criminal Law and Criminology, 1935; member American
+                Ornithologists' Union; and fellow, American Association for the Advancement of
+                Science.</p>
+            <p>Biographical data from Marcus Ward Lyon, Jr., <title render="doublequote">Amos
+                    William Butler,</title>
+                <title render="italic">Proceedings of the Indiana Academy of Science</title>, XLVII:
+                21-25, 1937; B.W. Evermann, <title render="doublequote">Amos William Butler,</title>
+                <title render="italic">Audubon Year Book of the Indiana Audubon Society</title>,
+                1932, pp. 5-19.</p>
+            <p>Lists of Butler's numerous writings appear in the <title render="italic">Proceedings
+                    of the Indiana Academy of Science</title>, XLVII: 25-30, 1937, and in the <title
+                    render="italic">Audubon Year Book of the Indiana Audubon Society</title>, 1932,
+                pp. 5-19.</p>
+
+        </bioghist>
+
+
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The papers of William Wallace Butler in the collection consist of the indentures, tax
+                receipts, a <emph render="doublequote">subscription for the erection of a
+                    Presbyterian church in the town of Brookville, Indiana,</emph> March 29, 1848;
+                Franklin County, Indiana Bible Society, <emph render="doublequote">Report of a
+                    committee appointed to examine the accounts of the society,</emph> April 1852;
+                and notes for a <title render="doublequote">History of Presbyterianism in and about
+                    Brookville, Indiana</title> by Ludlow D. Potter, 1852.</p>
+            <p>The papers of Amos William Butler from 1877-1888 deal almost entirely with zoological
+                subjects, particularly birds. The later years of the collection also contain
+                material on these subjects, but from 1889 on the bulk of the papers relate to
+                charities and corrections, including material on prisons, reformatories, parole,
+                probation, insanity, feeble-mindedness, mental hygiene, orphanages, child welfare,
+                the blind, etc.; the work of the Indiana Board of state charities; notes on Indiana
+                and other U.S. institutions of charities and corrections; meetings of the
+                International Prison Congress, American Prison Association, the National Conference
+                of Charities and Corrections, and the National Commission on Law Observance and
+                Enforcement, and the Indiana Society for Mental Hygiene, the Indiana State
+                Conference of Charities and Corrections, and the Indiana Committee on Observance and
+                Enforcement of Law. The collection also contains papers on: the early history of
+                Brookville, Indiana; Hanover College; and various other societies of which Butler
+                was a member, among them being the Brookville Society of Natural History; the
+                Indiana Academy of Science, 1886-1936; the Indiana Audubon Society, 1907-1930; the
+                Society of Indiana Pioneers; and the World Peace Foundation.</p>
+            <p>Photographs include pictures of Amos William Butler and members of his family,
+                Florida, particularly New Smyrna and vicinity, and Aztec remains in Mexico. There
+                are also clippings, 1885-1937; printed materials on charities and corrections and
+                related subjects, scientific societies, the Irvington Presbyterian church of
+                Indianapolis, Indiana, and universities; and four scrapbooks, 1907-1908, 1910, and
+                1923-1927, containing pictures, programs, clippings, pamphlets, and maps.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/butler+amos+w+1860-1937{su}">
+                            <persname encodinganalog="600" source="lcnaf">Butler, Amos W. (Amos
+                                William), 1860-1937--Correspondence. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/american+peace+society{su}">
+                            <corpname encodinganalog="610" source="lcnaf">American Peace Society.
+                            </corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/brookville+society+of+natural+history+brookville+ind{su}">
+                            <corpname encodinganalog="610" source="lcnaf">Brookville Society of
+                                Natural History (Brookville, Ind.) </corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/franklin+county+bible+society{su}">
+                            <corpname encodinganalog="610" source="lcnaf">Franklin County Bible
+                                Society. </corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/hanover+college+history{su}">
+                            <corpname encodinganalog="610" source="lcnaf">Hanover College--History.
+                            </corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/indiana+academy+of+science{su}">
+                            <corpname encodinganalog="610" source="lcnaf">Indiana Academy of
+                                Science. </corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/indiana+audubon+society{su}">
+                            <corpname encodinganalog="610" source="lcnaf">Indiana Audubon Society.
+                            </corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/indiana+society+for+mental+hygiene{su}">
+                            <corpname encodinganalog="610" source="lcnaf">Indiana Society for Mental
+                                Hygiene. </corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/indiana+state+conference+on+social+work{su}">
+                            <corpname encodinganalog="610" source="lcnaf">Indiana State Conference
+                                on Social Work. </corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/society+of+indiana+pioneers{su}">
+                            <corpname encodinganalog="610" source="lcnaf">Society of Indiana
+                                Pioneers. </corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/world+peace+foundation{su}">
+                            <corpname encodinganalog="610" source="lcnaf">World Peace Foundation.
+                            </corpname>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/birds+colorado{su}">
+                            <subject encodinganalog="650" source="lcnaf">Birds--Colorado. </subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/birds+indiana{su}">
+                            <subject encodinganalog="650" source="lcnaf">Birds--Indiana. </subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/birds+mexico{su}">
+                            <subject encodinganalog="650" source="lcnaf">Birds--Mexico. </subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/presbyterians+indiana{su}">
+                            <subject encodinganalog="650" source="lcnaf">Presbyterians--Indiana.
+                            </subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/mental+illness+indiana{su}">
+                            <subject encodinganalog="650" source="lcnaf">Mental illness--Indiana.
+                            </subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/mammals+indiana{su}">
+                            <subject encodinganalog="650" source="lcnaf">Mammals--Indiana.
+                            </subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/psychiatric+hospitals+indiana{su}">
+                            <subject encodinganalog="650" source="lcnaf">Psychiatric
+                                hospitals--Indiana. </subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/reformatories+indiana{su}">
+                            <subject encodinganalog="650" source="lcnaf">Reformatories--Indiana.
+                            </subject>
+                        </extref>
+                    </item>
+
+
+                </list>
+                <controlaccess>
+                    <head>Places</head>
+                    <list>
+                        <item>
+                            <extref
+                                xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/brookville+ind+history{su}">
+                                <geogname encodinganalog="651" source="lcnaf">Brookville
+                                    (Ind.)--History. </geogname>
+                            </extref>
+                        </item>
+                    </list>
+                </controlaccess>
+            </controlaccess>
+            <!-- <persname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="110" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired 1939-1940</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>Butler mss., Lilly Library, Indiana University, Bloomington, Indiana. </p>
+            </prefercite>
+
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAB9136-00001" level="series">
+                <did>
+                    <!-- optional -->
+                    <container label="Box" type="box">1</container>
+
+
+                    <unittitle>Materials relating to Butler family</unittitle>
+
+
+                </did>
+                <scopecontent>
+                    <p> Included in the collection are letters from the following prominent persons:<lb/>
+                        <list>
+                            <item>Edith Abbott</item>
+                            <item>Grace Abbott</item>
+                            <item>Russell Bigelow Abbott</item>
+                            <item>William Louis Abbott</item>
+                            <item>John Alfred McDowell Adair</item>
+                            <item>Alva Adams</item>
+                            <item>John Ottis Adams</item>
+                            <item>Robert Judson Aley</item>
+                            <item>Joel Asaph Allen</item>
+                            <item>William Harvey Allen</item>
+                            <item>Frederic Almy</item>
+                            <item>Martin Frederick Ansel</item>
+                            <item>John J. Appel</item>
+                            <item>Joseph Charles Arthur</item>
+                            <item>Charles Albert Ashburner</item>
+                            <item>Sir Allen Bristol Aylesworth</item>
+                            <item>Albion (Fellows) Bacon</item>
+                            <item>Liberty Hyde Bailey</item>
+                            <item>Joshua L. Baily</item>
+                            <item>Harry Foster Bain</item>
+                            <item>Spencer Fullerton Baird</item>
+                            <item>Albert Baker</item>
+                            <item>Harry Everett Barnard</item>
+                            <item>Charles Reid Barnes</item>
+                            <item>Henry A. Barnhart</item>
+                            <item>Kate (Waller) Barrett</item>
+                            <item>Katharine Isabel (Hayes) Barrows</item>
+                            <item>Samuel June Barrows</item>
+                            <item>William James Beal</item>
+                            <item>Charles Emerson Beecher</item>
+                            <item>Charles August Behrens</item>
+                            <item>Robert Bell</item>
+                            <item>August Belmont</item>
+                            <item>Frank Williamson Benson</item>
+                            <item>Charles Bernstein</item>
+                            <item>Charles Edwin Bessey</item>
+                            <item>Union Noble Bethell</item>
+                            <item>Albert Jeremiah Beveridge</item>
+                            <item>Ernest Percy Bicknell</item>
+                            <item>Theodore Gilmore Bilbo</item>
+                            <item>Frank Billings</item>
+                            <item>Frank Wilson Blackmar</item>
+                            <item>Eliza Ann (Cooper) Blaker</item>
+                            <item>William Martin Blanchard</item>
+                            <item>Willis Stanley Blatchley</item>
+                            <item>Charles Harvey Bollman</item>
+                            <item>Charles Joseph Bonaparte</item>
+                            <item>Charles A. Bookwalter</item>
+                            <item>Maud (Charlesworth) Booth</item>
+                            <item>Eugène Borel</item>
+                            <item>Claude Gernade Bowers</item>
+                            <item>Paul Eugene Bowers</item>
+                            <item>David Ross Boyd</item>
+                            <item>John Joseph Boylan</item>
+                            <item>Jeffrey Richardson Brackett</item>
+                            <item>James Henry Brady</item>
+                            <item>John Casper Branner</item>
+                            <item>William Brewster</item>
+                            <item>Daniel Garrison Brinton</item>
+                            <item>Zebulon Reed Brockway</item>
+                            <item>Bryant Butler Brooks</item>
+                            <item>Demarchus Clariton Brown</item>
+                            <item>Henry Baker Brown</item>
+                            <item>Herbert Daniel Brown</item>
+                            <item>Hilton Ultimus Brown</item>
+                            <item>John A. Brown</item>
+                            <item>Joseph Mackey Brown</item>
+                            <item>Henry Lane Bruner</item>
+                            <item>William Jennings Bryan</item>
+                            <item>William Lowe Bryan</item>
+                            <item>Albert G. Bryant</item>
+                            <item>Henry Augustus Buchtel</item>
+                            <item>James Monroe Buckley</item>
+                            <item>John Burke</item>
+                            <item>Bailey Barton Burritt</item>
+                            <item>Noble Chase Butler</item>
+                            <item>Joseph Perkins Byers</item>
+                            <item>Starr Cadwallader</item>
+                            <item>Charles Macfie Campbell</item>
+                            <item>John TenBrook Campbell</item>
+                            <item>Joseph Maull Carey</item>
+                            <item>Henry Smith Carhart</item>
+                            <item>Charles Arthur Carlisle</item>
+                            <item>Alexander Mitchell Carroll</item>
+                            <item>Christian Carl Carstens</item>
+                            <item>Hamilton Cassels</item>
+                            <item>Demetrio Castillo Duany</item>
+                            <item>Sidney Johnston Catts</item>
+                            <item>John William Cavanaugh</item>
+                            <item>Arthur Billings Chaffee</item>
+                            <item>Montague Chamberlain</item>
+                            <item>Joseph Chartrand</item>
+                            <item>Charles Lionel Chute</item>
+                            <item>George Washington Clarke</item>
+                            <item>Grace Giddings (Julian) Clarke</item>
+                            <item>James Everitt Clarke</item>
+                            <item>Edward Nicholas Clopper</item>
+                            <item>Ewing Cockrell</item>
+                            <item>Charles Fisher Coffin</item>
+                            <item>Lotus Delta Coffman</item>
+                            <item>Wilbur Adelman Cogshall</item>
+                            <item>John Rogers Commons</item>
+                            <item>John Heman Converse</item>
+                            <item>Melville Thurston Cook</item>
+                            <item>Mary Elizabeth Burroughs (Roberts) Coolidge</item>
+                            <item>John Gordon Cooper</item>
+                            <item>Edward Drinker Cope</item>
+                            <item>Owen Copp</item>
+                            <item>John Jacob Cornwell</item>
+                            <item>Elliott Coues</item>
+                            <item>John Merle Coulter</item>
+                            <item>Stanley Coulter</item>
+                            <item>William Chalmers Covert</item>
+                            <item>Edward Travers Cox</item>
+                            <item>James Middleton Cox</item>
+                            <item>Joseph M. Cravens</item>
+                            <item>Edgar Roscoe Cumings</item>
+                            <item>Oscar Kennedy Cushing</item>
+                            <item>James Elbert Cutler</item>
+                            <item>Mabel (Potter) Daggett</item>
+                            <item>Charles Benedict Davenport</item>
+                            <item>Katharine Bement Davis</item>
+                            <item>Albert Eugene Davisson</item>
+                            <item>George Bannerman Dealey</item>
+                            <item>Charles Clemons Deam</item>
+                            <item>Sarah S. (Platt) Decker</item>
+                            <item>Charles A. DeCourcy</item>
+                            <item>Robert Weeks DeForest</item>
+                            <item>Charles Samuel Deneen</item>
+                            <item>David Worth Dennis</item>
+                            <item>William Cullen Dennis</item>
+                            <item>Edward Thomas Devine</item>
+                            <item>John Hibbett DeWitt</item>
+                            <item>Solomon Cravens Dickey</item>
+                            <item>Lincoln Dixon</item>
+                            <item>James Owen Dorsey</item>
+                            <item>Hugh Dougherty</item>
+                            <item>Eben Sumner Draper</item>
+                            <item>William Francis Drewry</item>
+                            <item>Charles Redway Wilmarth Dryer</item>
+                            <item>Knight Dunlap</item>
+                            <item>Jacob Piatt Dunn</item>
+                            <item>Edward Fitzsimons Dunne</item>
+                            <item>Winfield Taylor Durbin</item>
+                            <item>Charles Dury</item>
+                            <item>John Samuel Duss</item>
+                            <item>William Dutcher</item>
+                            <item>Edwin T. Earl</item>
+                            <item>Walter Evans Edge</item>
+                            <item>John Joy Edson</item>
+                            <item>David Morton Edwards</item>
+                            <item>Edward Eggleston</item>
+                            <item>Carl H. Eigenmann</item>
+                            <item>Edward Charles Elliott</item>
+                            <item>Alston Ellis</item>
+                            <item>William John Ellis</item>
+                            <item>Thomas Emmet Ellison</item>
+                            <item>Charles Abram Ellwood</item>
+                            <item>Edson James Emerick</item>
+                            <item>Charles Phillips Emerson</item>
+                            <item>Haven Emerson</item>
+                            <item>Barton Warren Evermann</item>
+                            <item>Charles Warren Fairbanks</item>
+                            <item>Leon Charles Faulkner</item>
+                            <item>Walter Elmore Fernald</item>
+                            <item>Woodbridge Nathan Ferris</item>
+                            <item>Frank Albert Fetter</item>
+                            <item>Morris M. Feuerlicht</item>
+                            <item>Jesse Walter Fewkes</item>
+                            <item>James Louis Fieser</item>
+                            <item>Tom Finty</item>
+                            <item>Daniel Webster Fisher</item>
+                            <item>Duncan Upshaw Fletcher</item>
+                            <item>Bernard Flexner</item>
+                            <item>Arthur Lee Foley</item>
+                            <item>Homer Folks</item>
+                            <item>Stephen Alfred Forbes</item>
+                            <item>John Franklin Fort</item>
+                            <item>William Fortune</item>
+                            <item>Eugene Noble Foss</item>
+                            <item>Warren William Foster</item>
+                            <item>William Dudley Foulke</item>
+                            <item>Lee Kaufer Frankel</item>
+                            <item>Berthold Freudenthal</item>
+                            <item>Ray Clarence Friesner</item>
+                            <item>Simon Henry Gage</item>
+                            <item>Harry Otto Garman</item>
+                            <item>James Wilford Garner</item>
+                            <item>John Hutchison Garnier</item>
+                            <item>Francis Henry Gavisk</item>
+                            <item>Enrico Hillyer Giglioli</item>
+                            <item>Charles Henry Gilbert</item>
+                            <item>Albert Waller Gilchrist</item>
+                            <item>John Lewis Gillin</item>
+                            <item>William Ellsworth Glasscock</item>
+                            <item>Wenzeslaus Karl Maximilian Maria^graf von Gleispach</item>
+                            <item>John Mark Glenn</item>
+                            <item>Mary (Willcox) Glenn</item>
+                            <item>George Brown Goode</item>
+                            <item>James Putnam Goodrich</item>
+                            <item>William Freeman Myrick Goss</item>
+                            <item>William C. Graves</item>
+                            <item>James Leon Greene</item>
+                            <item>John Hubert Greusel</item>
+                            <item>John Hugo Grimm</item>
+                            <item>George Richmond Grose</item>
+                            <item>Julia Henrietta Gulliver</item>
+                            <item>Carl Gunderson</item>
+                            <item>Carl Eugen Guthe</item>
+                            <item>James Edward Hagerty</item>
+                            <item>Matthias Loring Haines</item>
+                            <item>Horatio Hale</item>
+                            <item>Allen Garland Hall</item>
+                            <item>Edward Richardson Hall</item>
+                            <item>Frederic Aldin Hall</item>
+                            <item>Matthew Walton Hall</item>
+                            <item>Charles Wesley Hargitt</item>
+                            <item>Judson Harmon</item>
+                            <item>Abram Winegardner Harris</item>
+                            <item>Hastings Hornell Hart</item>
+                            <item>Henry Drury Hatfield</item>
+                            <item>Marion E. Hay</item>
+                            <item>Oliver Perry Hay</item>
+                            <item>William Harrison Hays</item>
+                            <item>James Alexander Hemenway</item>
+                            <item>Charles Richmond Henderson</item>
+                            <item>Walter Cleaveland Henderson</item>
+                            <item>William Elmer Henry</item>
+                            <item>Henry Wetherbee Henshaw</item>
+                            <item>William Howard Hickman</item>
+                            <item>Linnaeus Neal Hines</item>
+                            <item>Frederick Webb Hodge</item>
+                            <item>Nathaniel Dana Carlile Hodges</item>
+                            <item>Enoch George Hogate</item>
+                            <item>James Irving Holcomb</item>
+                            <item>Louis Edward Holden</item>
+                            <item>John Hampden Holliday</item>
+                            <item>William Steele Holman</item>
+                            <item>Carl Oliver Holmes</item>
+                            <item>Harry Nicholls Holmes</item>
+                            <item>William Henry Holmes</item>
+                            <item>Ben W. Hooper</item>
+                            <item>Herbert Hoover</item>
+                            <item>William Temple Hornaday</item>
+                            <item>Leland Ossian Howard</item>
+                            <item>Thomas Carr Howe</item>
+                            <item>Aleš Hrdlicka</item>
+                            <item>Charles Evans Hughes</item>
+                            <item>Edwin Holt Hughes</item>
+                            <item>William St. Pierre Hughes</item>
+                            <item>George Wylie Paul Hunt</item>
+                            <item>Huber William Hurt</item>
+                            <item>John Newell Hurty</item>
+                            <item>Henry Augustus Huston</item>
+                            <item>Harry Burns Hutchins</item>
+                            <item>John Ireland</item>
+                            <item>William Glanton Irwin</item>
+                            <item>James Frederick Jackson</item>
+                            <item>Edmund Janes James</item>
+                            <item>Joseph Francis James</item>
+                            <item>Joseph Jastrow</item>
+                            <item>Oliver Peebles Jenkins</item>
+                            <item>Jeremiah Whipple Jenks</item>
+                            <item>Richard Henry Jesse</item>
+                            <item>John Price Durbin John</item>
+                            <item>Alexander Johnson</item>
+                            <item>Charles Henry Johnson</item>
+                            <item>John Albert Johnson</item>
+                            <item>James A. Johnston</item>
+                            <item>Lynds Jones</item>
+                            <item>David Starr Jordan</item>
+                            <item>James Yadkin Joyner</item>
+                            <item>Arthur Piper Kellogg</item>
+                            <item>John Harvey Kellogg</item>
+                            <item>Paul Underwood Kellogg</item>
+                            <item>Robert Lincoln Kelly</item>
+                            <item>Carl Kelsey</item>
+                            <item>Calvin Noyes Kendall</item>
+                            <item>William Converse Kendall</item>
+                            <item>Charles Kettleborough</item>
+                            <item>Alfred Vincent Kidder</item>
+                            <item>Edward Martin Kindle</item>
+                            <item>Harry Andrews King</item>
+                            <item>Henry Churchill King</item>
+                            <item>John Sterling Kingsley</item>
+                            <item>La Vega George Kinne</item>
+                            <item>George Hughes Kirby</item>
+                            <item>William Walton Kitchin</item>
+                            <item>Rufus Bernard von Kleinsmid</item>
+                            <item>George Milton Kline</item>
+                            <item>John Koren</item>
+                            <item>William Frederick Kuhn</item>
+                            <item>George Frederick Kunz</item>
+                            <item>James Sansome Lakin</item>
+                            <item>Ricardo R. Lancis</item>
+                            <item>Julia Clifford Lathrop</item>
+                            <item>Harry Hamilton Laughlin</item>
+                            <item>Lewis E. Lawes</item>
+                            <item>George Newbold Lawrence</item>
+                            <item>Porter Raymond Lee</item>
+                            <item>Frederick William Lehmann</item>
+                            <item>Harry Guyer Leslie</item>
+                            <item>Frank Leverett</item>
+                            <item>Orlando Faulkland Lewis</item>
+                            <item>Charles Freeman Libby</item>
+                            <item>Richard Lieber</item>
+                            <item>Harlow Lindley</item>
+                            <item>Samuel McCune Lindsay</item>
+                            <item>Benjamin Barr Lindsey</item>
+                            <item>Burton Edward Livingston</item>
+                            <item>John Uri Lloyd</item>
+                            <item>George Browning Lockwood</item>
+                            <item>William Newton Logan</item>
+                            <item>William Frederick Lorenz</item>
+                            <item>Owen Reed Lovejoy</item>
+                            <item>Frank Orren Lowden</item>
+                            <item>Frederick Elmore Lumley</item>
+                            <item>Charles Jackson Lynn</item>
+                            <item>Frank Emory Lyon</item>
+                            <item>Robert Wesley McBride</item>
+                            <item>Robert Wilson McClaughry</item>
+                            <item>James Gore King McClure</item>
+                            <item>Warren Terry McCray</item>
+                            <item>James Bennett McCreary</item>
+                            <item>George Grant MacCurdy</item>
+                            <item>Daniel Trembly MacDougal</item>
+                            <item>Sir Alexander Burness McHardy</item>
+                            <item>Thomas McIlwraith</item>
+                            <item>Roderick Duncan McKenzie</item>
+                            <item>William McKibben</item>
+                            <item>Paul Vories McNutt</item>
+                            <item>William Henry McReynolds</item>
+                            <item>Frank LeRond McVey</item>
+                            <item>Henry Brown Floyd Macfarland</item>
+                            <item>Julian William Mack</item>
+                            <item>George Lewis Mackintosh</item>
+                            <item>Elliott Woolfolk Major</item>
+                            <item>Sir James Marchant</item>
+                            <item>Thomas Riley Marshall</item>
+                            <item>Otis Tufton Mason</item>
+                            <item>Edwin Doak Mead</item>
+                            <item>Carl Leo Mees</item>
+                            <item>Thomas Corwin Mendenhall</item>
+                            <item>Charles Oliver Merica</item>
+                            <item>Clinton Hart Merriam</item>
+                            <item>James Cushing Merrill</item>
+                            <item>Carl Elias Milliken</item>
+                            <item>William Alfred Millis</item>
+                            <item>Frederick H. Mills</item>
+                            <item>William C. Mills</item>
+                            <item>William Joseph Mills</item>
+                            <item>William DeWitt Mitchell</item>
+                            <item>William J. Moenkhaus</item>
+                            <item>Clarence Bloomfield Moore</item>
+                            <item>David Richard Moore</item>
+                            <item>George Thomas Moore</item>
+                            <item>Henry Frank Moore</item>
+                            <item>John Bassett Moore</item>
+                            <item>Richard Bishop Moore</item>
+                            <item>Charles Washington Moores</item>
+                            <item>Merrill Moores</item>
+                            <item>Ephraim Franklin Morgan</item>
+                            <item>David Myers Mottier</item>
+                            <item>William Henry Moyer</item>
+                            <item>Burton Dorr Myers</item>
+                            <item>Quincy Alden Myers</item>
+                            <item>John Ulric Nef</item>
+                            <item>Edward William Nelson</item>
+                            <item>Nels Christian Nelson</item>
+                            <item>Harry Stewart New</item>
+                            <item>George T. Nicholson</item>
+                            <item>Timothy Nicholson</item>
+                            <item>Edmund Favor Noel</item>
+                            <item>Frank Parson Norbury</item>
+                            <item>Edwin Lee Norris</item>
+                            <item>Cecil Clare North</item>
+                            <item>Cyrus Northrop</item>
+                            <item>Thomas Herbert Norton</item>
+                            <item>William Albert Noyes</item>
+                            <item>Wallace George Nye</item>
+                            <item>Harry Church Oberholser</item>
+                            <item>William Henry O'Connell</item>
+                            <item>Howard Washington Odum</item>
+                            <item>Edward Orton</item>
+                            <item>Henry Leslie Osborn</item>
+                            <item>Herbert Osborn</item>
+                            <item>Edward William Osborne</item>
+                            <item>Winfred Overholser</item>
+                            <item>Richard Owen</item>
+                            <item>Robert Latham Owen</item>
+                            <item>Garfield Bromley Oxnam</item>
+                            <item>Theodore Sherman Palmer</item>
+                            <item>Albert George Parker</item>
+                            <item>Benjamin Strattan Parker</item>
+                            <item>David Maclean Parry</item>
+                            <item>William Wood Parsons</item>
+                            <item>Thomas Gilbert Pearson</item>
+                            <item>Stanton Judkins Peelle</item>
+                            <item>Paul Skeels Peirce</item>
+                            <item>Frederick Peterson</item>
+                            <item>Sir William Peterson</item>
+                            <item>Charles Winfield Pilgrim</item>
+                            <item>Merritt Willis Pinckney</item>
+                            <item>Lemuel Arthur Pittenger</item>
+                            <item>Walter George Hepburne-Scott</item>
+                            <item>9th baron Polwarth</item>
+                            <item>Aram J. Pothier</item>
+                            <item>George Herbert Prouty</item>
+                            <item>Albert Homer Purdue</item>
+                            <item>Frederic Ward Putnam</item>
+                            <item>Kate (Milner) Rabb</item>
+                            <item>Samuel Moffett Ralston</item>
+                            <item>Frank Lange Randall</item>
+                            <item>Leo M. Rappaport</item>
+                            <item>James Bronson Reynolds</item>
+                            <item>John Merriman Reynolds</item>
+                            <item>Mary Ellen Richmond</item>
+                            <item>Robert Ridgway</item>
+                            <item>Charles Valentine Riley</item>
+                            <item>Thomas James Riley</item>
+                            <item>George Lucas Roberts</item>
+                            <item>James Alexander Robertson</item>
+                            <item>Gifford Simeon Robinson</item>
+                            <item>James Jaquess Robinson</item>
+                            <item>Arthur Curtis Rogers</item>
+                            <item>Theodore Roosevelt</item>
+                            <item>Joseph Nelson Rose</item>
+                            <item>Victor Rosewater</item>
+                            <item>Edward Alsworth Ross</item>
+                            <item>Leonard August Rossing</item>
+                            <item>David Andrew Rothrock</item>
+                            <item>Leo S. Rowe</item>
+                            <item>Sir Evelyn John Ruggles-Brise</item>
+                            <item>Frank Russell</item>
+                            <item>Robert Lemuel Sackett</item>
+                            <item>John Hall Sage</item>
+                            <item>Thomas William Salmon</item>
+                            <item>Franklin Benjamin Sanborn</item>
+                            <item>Jared Young Sanders</item>
+                            <item>Kenosha Sessions</item>
+                            <item>Thomas Roerty Shipp</item>
+                            <item>George H. Simmons</item>
+                            <item>Harold Douglas Singer</item>
+                            <item>Hubert Marshall Skinner</item>
+                            <item>William Frederick Slocum</item>
+                            <item>Alexander Smith</item>
+                            <item>Bolton Smith</item>
+                            <item>Eugene Allen Smith</item>
+                            <item>Hugh McCormick Smith</item>
+                            <item>Samuel Edwin Smith</item>
+                            <item>Jonathan Le Moyne Snyder</item>
+                            <item>John J. Sonsteby</item>
+                            <item>John Wesley Spencer</item>
+                            <item>William Jasper Spillman</item>
+                            <item>Mary Angela Spink</item>
+                            <item>Alfred Springer</item>
+                            <item>Frederick Starr</item>
+                            <item>Theodore Clement Steele</item>
+                            <item>Joseph Beal Steere</item>
+                            <item>Leonard Stejneger</item>
+                            <item>Frank Mann Stewart</item>
+                            <item>William Rhinelander Stewart</item>
+                            <item>John B. Stoll</item>
+                            <item>Winthrop Ellsworth Stone</item>
+                            <item>Witmer Stone</item>
+                            <item>Albert Boynton Storms</item>
+                            <item>Elmer William Stout</item>
+                            <item>Thomas Nelson Strong</item>
+                            <item>Francis Sumichrast</item>
+                            <item>Walter Taylor Sumner</item>
+                            <item>Joseph Swain</item>
+                            <item>Henry Chapman Swearingen</item>
+                            <item>Glen Levin Swiggett</item>
+                            <item>William Howard Taft</item>
+                            <item>Thomas Taggart</item>
+                            <item>Graham Taylor</item>
+                            <item>Mark Thislethwaite</item>
+                            <item>Cyrus Thomas</item>
+                            <item>Mason Blanchard Thomas</item>
+                            <item>Julia Alice (Conner) Thompson</item>
+                            <item>William Oxley Thompson</item>
+                            <item>Craig Sharpe Thoms</item>
+                            <item>Allen Benton Thrasher</item>
+                            <item>Henry Winfred Thurston</item>
+                            <item>Francis J. Torrance</item>
+                            <item>Arthur Whittlesey Towne</item>
+                            <item>William Trelease</item>
+                            <item>Frederick William True</item>
+                            <item>Joseph Patrick Tumulty</item>
+                            <item>David Turpie</item>
+                            <item>Millard Evelyn Tydings</item>
+                            <item>Albert Brennus Ulrey</item>
+                            <item>Henry Elias Van Deman</item>
+                            <item>George Vaux</item>
+                            <item>Monroe Vayhinger</item>
+                            <item>Chester Garfield Vernier</item>
+                            <item>Robert Scadden Vessey</item>
+                            <item>George Edgar Vincent</item>
+                            <item>Oscar McMurtrie Voorhees</item>
+                            <item>Charles Gray Wagner</item>
+                            <item>Charles Doolittle Walcott</item>
+                            <item>Clarence Abiathar Waldo</item>
+                            <item>Henry Baldwin Ward</item>
+                            <item>Eugene Fitch Ware</item>
+                            <item>Fred Maltby Warner</item>
+                            <item>Henry Kimball Warren</item>
+                            <item>Frederic Leonard Washburn</item>
+                            <item>James Eli Watson</item>
+                            <item>Arthur Trezevant Wayne</item>
+                            <item>Ulysses Grant Weatherly</item>
+                            <item>Francis Marion Webster</item>
+                            <item>David Fairchild Weeks</item>
+                            <item>William Henry Welch</item>
+                            <item>James Edward West</item>
+                            <item>F.D. Whipp</item>
+                            <item>Charles Abiathar White</item>
+                            <item>Reuel Clyde White</item>
+                            <item>Thomas Bruce White</item>
+                            <item>Ernest Stagg Whitin</item>
+                            <item>George Woodward Wickersham</item>
+                            <item>Frank Scott Corey Wicks</item>
+                            <item>John Henry Wigmore</item>
+                            <item>Ansley Wilcox</item>
+                            <item>Harvey Washington Wiley</item>
+                            <item>Sidney Dean Wilgus</item>
+                            <item>Mornay Williams</item>
+                            <item>Augustus Everett Willson</item>
+                            <item>George Smith Wilson</item>
+                            <item>Harry Bruce Wilson</item>
+                            <item>Newton Horace Winchell</item>
+                            <item>Frederick Howard Wines</item>
+                            <item>Charles Francis Winter</item>
+                            <item>William Albert Wirt</item>
+                            <item>William Niles Wishard</item>
+                            <item>Clark Wissler</item>
+                            <item>Robert Henry Wolcott</item>
+                            <item>James Albert Woodburn</item>
+                            <item>Robert Archey Woods</item>
+                            <item>Walter Carleton Woodward</item>
+                            <item>William Watson Woollen</item>
+                            <item>Theophilus Adam Wylie</item>
+                            <item>Elbert Robb Zaring</item>
+
+                        </list>
+                    </p>
+                    <p>Consult the Manuscripts Index in the Library for dates of letters of
+                        individual correspondents.</p>
+                </scopecontent>
+
+                <c02 id="VAB9136-00002" level="file">
+                    <did>
+                        <unittitle>Correspondence, <unitdate normal="1835/1897" type="inclusive"
+                                >1835-1897</unitdate></unittitle>
+                        <physdesc>(31 folders)</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p> Includes:<lb/>
+                            <list>
+                                <item>Natural history notes, <date normal="1884/1892"
+                                        type="inclusive">1884-1892</date> (1 folder)</item>
+                                <item>Notes of visits-Eastern hospital, <date normal="1891"
+                                        >1891</date> (1 folder)</item>
+                                <item>Notes of visits-Soldiers and sailors orphans home, <date
+                                        normal="1891/1914" type="inclusive">1891-1914</date> (1
+                                    folder)</item>
+                                <item>Natural history notes, <date normal="1893/1897"
+                                        type="inclusive">1893-1897</date> (1 folder, 1
+                                    notebook)</item>
+                                <item>Notes of visits-State prison, <date normal="1894/1916"
+                                        type="inclusive">1894-1916</date> (1 folder, 6
+                                    notebooks)</item>
+
+                            </list>
+                        </p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAB9136-00003" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>Correspondence, <unitdate normal="1898/1909-10-15"
+                                type="inclusive">1898-1909, Oct. 15</unitdate></unittitle>
+                        <physdesc>(31 folders)</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p> Includes:<lb/>
+                            <list>
+                                <item>Notes of visits - Reformatory, <date normal="1902/1914"
+                                        type="inclusive">1902-1914</date> (1 folder)</item>
+                                <item>Notes of visits - School for Deaf, <date normal="1904"
+                                        >1904</date> (1 folder)</item>
+                                <item>Notes of visits - Soldiers' Home, <date normal="1904"
+                                        >1904</date> (1 folder)</item>
+
+                            </list>
+                        </p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAB9136-00004" level="file">
+                    <did>
+                        <container label="Box" type="box">3</container>
+                        <unittitle>Correspondence, <unitdate normal="1909-10-16/1913-08"
+                                type="inclusive">1909, Oct. 16-1913, Aug.</unitdate></unittitle>
+                        <physdesc>(26 folders)</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p> Includes:<lb/>
+                            <list>
+                                <item>R.S.V.P cards for Indiana Academy of Science banquet, <date
+                                        normal="1909-11-26">Nov. 26, 1909</date> (1 envelope)</item>
+                                <item>Ticket stubs for Indiana Academy of Science banquet, <date
+                                        normal="1909-11-26">Nov. 26, 1909</date> (1 envelope)</item>
+
+
+                            </list>
+                        </p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAB9136-00005" level="file">
+                    <did>
+                        <container label="Box" type="box">4</container>
+                        <unittitle>Correspondence, <unitdate normal="1913-09/1917-12"
+                                type="inclusive">1913, Sept.-1917, Dec.</unitdate></unittitle>
+                        <physdesc>(25 folders)</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p> Includes:<lb/>
+                            <list>
+                                <item><title render="italic">Mental Defectives in Indiana,
+                                        </title><date normal="1916-11-10" type="inclusive">1916,
+                                        Nov. 10;</date>
+                                    <title render="italic">Indiana, A Century of Progress: A Study
+                                        of the Development of Public Charities and Correction,
+                                        1790-1915, </title><date normal="1916">1916;</date>
+                                    <title render="italic">Survey of the Mentally Diseased and
+                                        Defective in Indiana , for the National Committee for Mental
+                                        Hygiene, </title><date normal="1917">1917</date> (1
+                                    vol.)</item>
+
+
+                            </list>
+                        </p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAB9136-00006" level="file">
+                    <did>
+                        <container label="Box" type="box">5</container>
+                        <unittitle>Correspondence, <unitdate normal="1917/1922" type="inclusive"
+                                >1917-1922</unitdate></unittitle>
+                        <physdesc>(20 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00007" level="file">
+                    <did>
+                        <container label="Box" type="box">6</container>
+                        <unittitle>Correspondence, <unitdate normal="1922-07/1925-06"
+                                type="inclusive">1922, July-1925, June</unitdate></unittitle>
+                        <physdesc>(60 folders)</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p> Includes:<lb/>
+                            <list>
+                                <item>Tributes to Amos William Butler, <date normal="1922"
+                                        >1922</date> (1 folder)</item>
+                            </list>
+                        </p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAB9136-00008" level="file">
+                    <did>
+                        <container label="Box" type="box">7</container>
+                        <unittitle>Correspondence, <unitdate normal="1925-07/1929-07"
+                                type="inclusive">1925, July-1929, July</unitdate></unittitle>
+                        <physdesc>(27 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00009" level="file">
+                    <did>
+                        <container label="Box" type="box">8</container>
+                        <unittitle>Correspondence, <unitdate normal="1929-08/1937" type="inclusive"
+                                >1929, Aug.-1937</unitdate></unittitle>
+                        <physdesc>(27 folders)</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p> Includes:<lb/>
+                            <list>
+                                <item>
+                                    <title render="italic">Proceedings at Conference of Committee on
+                                        Observance and Enforcement of Law, </title>
+                                    <date normal="1930-04-26">Apr. 26, 1930</date>
+                                </item>
+                                <item>
+                                    <title render="italic">Indiana Committee on Observance and
+                                        Enforcement of Law. Conference, </title>
+                                    <date normal="1930-07-26">July 26, 1930</date>
+                                </item>
+                                <item>
+                                    <title render="italic">Report of the Advisory Committee on Penal
+                                        Institutions, Probation and Parole, </title>
+                                    <date normal="1931">1931</date>
+                                </item>
+                                <item>Balance sheet, treasurer's report, and auditor's certificate
+                                    for Hanover College, <date normal="1932-04/1932-05"
+                                        type="inclusive">Apr.-May 1932</date></item>
+
+                            </list>
+                        </p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAB9136-00010" level="file">
+                    <did>
+                        <container label="Box" type="box">9</container>
+                        <unittitle>Charities</unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00011" level="file">
+                    <did>
+                        <unittitle>Charities and corrections</unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00012" level="file">
+                    <did>
+                        <unittitle>Photographs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00013" level="file">
+                    <did>
+                        <unittitle>Amos William Butler</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00014" level="file">
+                    <did>
+                        <unittitle>Florida</unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00015" level="file">
+                    <did>
+                        <unittitle>Miscellaneous</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00016" level="file">
+                    <did>
+                        <unittitle>Miscellaneous</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00017" level="file">
+                    <did>
+                        <unittitle>Brookville, Indiana - History</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00018" level="file">
+                    <did>
+                        <unittitle>Florida</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00019" level="file">
+                    <did>
+                        <unittitle>Indiana Academy of Science</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00020" level="file">
+                    <did>
+                        <unittitle>Mexico</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00021" level="file">
+                    <did>
+                        <unittitle>Miscellaneous</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00022" level="file">
+                    <did>
+                        <unittitle>Scientific Papers</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00023" level="file">
+                    <did>
+                        <unittitle>Prisons</unittitle>
+                        <physdesc>(5 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00024" level="file">
+                    <did>
+                        <container label="Box" type="box">10</container>
+                        <unittitle>Prisons</unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00025" level="file">
+                    <did>
+                        <unittitle>Clippings, <unitdate normal="1885/1934" type="inclusive"
+                                >1885-1934</unitdate></unittitle>
+                        <physdesc>(18 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00026" level="file">
+                    <did>
+                        <container label="Box" type="box">11</container>
+                        <unittitle>Clippings, <unitdate normal="1935/1937" type="inclusive"
+                                >1935-1937</unitdate></unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00027" level="file">
+                    <did>
+                        <unittitle>Printed</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00028" level="file">
+                    <did>
+                        <unittitle>Indiana Board of Charities and State Board of Control</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00029" level="file">
+                    <did>
+                        <unittitle>Charities and Corrections, Miscellaneous</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00030" level="file">
+                    <did>
+                        <unittitle>Child welfare. Eugenics</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00031" level="file">
+                    <did>
+                        <unittitle>Drug addiction</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00032" level="file">
+                    <did>
+                        <unittitle>Mental defectives</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00033" level="file">
+                    <did>
+                        <unittitle>Mental hygiene societies</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00034" level="file">
+                    <did>
+                        <unittitle>Poor relief in Indiana</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00035" level="file">
+                    <did>
+                        <unittitle>Psychiatry and the courts</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00036" level="file">
+                    <did>
+                        <unittitle>Statistics, surveys, and reports on prisons</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00037" level="file">
+                    <did>
+                        <unittitle>Senate and House bills</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00038" level="file">
+                    <did>
+                        <unittitle>Rules and forms pertaining to penal institutions</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00039" level="file">
+                    <did>
+                        <unittitle>Prison forms</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00040" level="file">
+                    <did>
+                        <unittitle>Probation material</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00041" level="file">
+                    <did>
+                        <unittitle>Prison associations</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00042" level="file">
+                    <did>
+                        <unittitle>Miscellaneous. Prison material</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00043" level="file">
+                    <did>
+                        <container label="Box" type="box">12</container>
+                        <unittitle>Printed</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00044" level="file">
+                    <did>
+                        <unittitle>Irvington Presbyterian Church</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00045" level="file">
+                    <did>
+                        <unittitle>Scientific societies</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00046" level="file">
+                    <did>
+                        <unittitle>Universities</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00047" level="file">
+                    <did>
+                        <unittitle>Miscellaneous</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00048" level="file">
+                    <did>
+                        <container label="Oversize" type="box">1</container>
+                        <unittitle>Scrapbook, <unitdate normal="1907/1908" type="inclusive"
+                                >1907-1908</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00049" level="file">
+                    <did>
+                        <container label="Oversize" type="box">2</container>
+                        <unittitle>Scrapbook, <unitdate normal="1910">1910</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00050" level="file">
+                    <did>
+                        <container label="Oversize" type="box">3</container>
+                        <unittitle>Scrapbook, <unitdate normal="1910">1910</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00051" level="file">
+                    <did>
+                        <container label="Oversize" type="box">4</container>
+                        <unittitle>Scrapbook, <unitdate normal="1922">1922</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00052" level="file">
+                    <did>
+                        <container label="Oversize" type="box">5</container>
+                        <unittitle>Scrapbook, <unitdate normal="1923/1927" type="inclusive"
+                                >1923-1927</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9136-00053" level="file">
+                    <did>
+                        <container label="Oversize" type="box">6</container>
+                        <unittitle>Miscellaneous</unittitle>
+                    </did>
+                    <scopecontent>
+                        <p> Includes:<lb/>
+                            <list>
+                                <item>Bird sighting charts, <date normal="1895">1895;</date>
+                                    prisoners' bill of fare, Indiana State Prison, <date
+                                        normal="1904-08-06">Aug. 6</date> and <date
+                                        normal="1904-08-13">13, 1904;</date> roll of the House of
+                                    Representatives, <date normal="1921-03-04/1921-03-05"
+                                        type="inclusive">Mar. 4 and 5, 1921;</date>
+                                    <emph render="doublequote">Reception Committee,</emph> listed by
+                                    Indiana county, <date normal="1835/1937" type="inclusive"
+                                        >undated</date></item>
+                            </list>
+                        </p>
+                    </scopecontent>
+                </c02>
+
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
