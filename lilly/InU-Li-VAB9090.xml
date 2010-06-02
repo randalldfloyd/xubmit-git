@@ -1,0 +1,1434 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAB9090">InU-Li-VAB9090</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Temperance mss., <date normal="1859/1885"
+                        >1859-1885</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2010" type="publication">© 2010</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2010">© 2010</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                    <lb/><date normal="2009" type="source">2009</date>
+                <lb/>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2010-04-27">April 27, 2010</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2010-04-27"/>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Central Association for Stopping the
+                    Sale of Intoxicating Liquor on Sundays</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Temperance mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1859/1885" type="inclusive"
+                >1859-1885</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2602</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>276 items</extent>
+            </physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Temperance mss., 1859-1885, consists
+                of over two hundred letters and signatures, as well as some images, relating to the
+                Temperance Movement in Britain.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+
+            <p>The Temperance Movement was a social movement against the sale or drinking of
+                alcoholic beverages. In Britain, the movement reached its peak in the mid-to-late
+                1800s, as alcohol consumption and alcohol-related violence was a wide-spread
+                problem. Advocates formed numerous societies and associations to combat alcoholism,
+                each group with their own ideas about how to go about stamping out the problem. Some
+                advocated moderation in drinking, while others espoused complete abstinence; some
+                focused on the religious message of temperance, while others sought to put pressure
+                on the government to pass temperance legislation. The Central Association for
+                Stopping the Sale of Intoxicating Liquor on Sundays, centered in Manchester,
+                England, focused on petitioning Parliament to pass legislation that would close
+                public houses and bars on Sundays. During the 1860s and 70s, the issue became highly
+                politicized as the Temperance Movement became closely tied to the aims of the
+                Liberal Party. </p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is arranged into the following series: I. Correspondence; II.
+                Signatures; III. Other. </p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Temperance mss., 1859-1885, consists of over two hundred letters and signatures,
+                as well as some images, relating to the Temperance Movement in Britain. The letters
+                date predominantly from the 1870s, a time when the Temperance Movement was emerging
+                as an important political force in Great Britain, and are principally addressed to
+                Edwin Barton and Robert Whitworth, leading figures in the Temperance Movement in
+                north-west England and honorary secretaries for the Central Association for Stopping
+                the Sale of Intoxicating Liquor on Sundays. The majority of the letters are written
+                by politicians, relating to petitions to stop the sale of intoxicating liquors on
+                Sundays. </p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+
+            <p>The following terms have been used to index the description of this collection in
+                    <extref xlink:href="http://www.iucat.iu.edu">IUCAT</extref>, the IU Libraries'
+                online catalog. Materials about related topics, persons or places can be found by
+                searching the catalog using these terms.</p>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/crowther+samuel+1806?-1891{su}">
+                            <persname encodinganalog="600" source="lcnaf">Crowther, Samuel,
+                                1806?-1891--Photographs. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/hall+samuel+romilly+1812-1876{su}">
+                            <persname encodinganalog="600" source="lcnaf">Hall, Samuel Romilly,
+                                1812-1876.--Photographs. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/central+association+for+stopping+the+sale+of+intoxicating+liquor+on+sundays{su}">
+                            <corpname encodinganalog="610" source="lcnaf">Central Association for
+                                Stopping the Sale of Intoxicating Liquor on Sundays. </corpname>
+                        </extref>
+                    </item>
+
+
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/barton+edwin">
+                            <persname encodinganalog="700" source="lcnaf">Barton, Edwin, fl. 19th
+                                century.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/whitworth+robert">
+                            <persname encodinganalog="700" source="lcnaf">Whitworth, Robert., fl.
+                                19th century. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/martin+robert">
+                            <persname encodinganalog="700" source="lcnaf">Martin, Robert.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/balfour+clara+lucas+1808-1878">
+                            <persname encodinganalog="700" source="lcnaf">Balfour, Clara Lucas,
+                                1808-1878. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/brassey+thomas+brassey+earl+1836-1918">
+                            <persname encodinganalog="700" source="lcnaf">Brassey, Thomas Brassey,
+                                Earl, 1836-1918. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/bright+john+1811-1889">
+                            <persname encodinganalog="700" source="lcnaf">Bright, John, 1811-1889.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/cecil+eustace+lord+1834-1921">
+                            <persname encodinganalog="700" source="lcnaf">Cecil, Eustace, Lord,
+                                1834-1921. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/egerton+wilbraham+egerton+earl+1832-1909">
+                            <persname encodinganalog="700" source="lcnaf">Egerton, Wilbraham
+                                Egerton, Earl, 1832-1909. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/gladstone+w+e+1809-1898">
+                            <persname encodinganalog="700" source="lcnaf">Gladstone, W. E. (William
+                                Ewart), 1809-1898. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/grossmith+george+1847-1912">
+                            <persname encodinganalog="700" source="lcnaf">Grossmith, George,
+                                1847-1912. </persname>
+                        </extref>
+                    </item>
+
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/home+d+d+1833-1886">
+                            <persname encodinganalog="700" source="lcnaf">Home, D. D. (Daniel
+                                Dunglas, 1833-1886. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/lubbock+john+sir+1834-1913">
+                            <persname encodinganalog="700" source="lcnaf">Lubbock, John, Sir,
+                                1834-1913. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/miall+edward+1809-1881">
+                            <persname encodinganalog="700" source="lcnaf">Miall, Edward, 1809-1881.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/nugent+james">
+                            <persname encodinganalog="700" source="lcnaf">Nugent, James. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/pease+arthur+a">
+                            <persname encodinganalog="700" source="lcnaf">Pease, Arthur A.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/rathbone+william+1787-1868">
+                            <persname encodinganalog="700" source="lcnaf">Rathbone, William,
+                                1787-1868. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/spurgeon+c+h+1834-1892">
+                            <persname encodinganalog="700" source="lcnaf">Spurgeon, C. H. (Charles
+                                Haddon), 1834-1892. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/stevenson+a+g">
+                            <persname encodinganalog="700" source="lcnaf">Stevenson, A. G.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/vivian+a+pendarves+1834-1926">
+                            <persname encodinganalog="700" source="lcnaf">Vivian, A. Pendarves
+                                (Arthur Pendarves), 1834-1926. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/woods+henry+1846-1921">
+                            <persname encodinganalog="700" source="lcnaf">Woods, Henry, 1846-1921.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/license+amendment+league">
+                            <corpname encodinganalog="710" source="lcnaf">License Amendment League.
+                            </corpname>
+                        </extref>
+                    </item>
+
+
+                </list>
+                <controlaccess>
+                    <head>Topics</head>
+                    <list>
+                        <item>
+                            <extref
+                                xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/temperance+societies+etc+great+britain+19th+century{su}">
+                                <subject encodinganalog="650" source="lcnaf">Temperance--Societies,
+                                    etc.--Great Britain--19th century. </subject>
+                            </extref>
+                        </item>
+                        <item>
+                            <extref
+                                xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/temperance+great+britain+19th+century{su}">
+                                <subject encodinganalog="650" source="lcnaf">Temperance--Great
+                                    Britain--19th century. </subject>
+                            </extref>
+                        </item>
+                        <item>
+                            <extref
+                                xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/temperance+and+religion+great+britain{su}">
+                                <subject encodinganalog="650" source="lcnaf">Temperance and
+                                    religion--Great Britain. </subject>
+                            </extref>
+                        </item>
+                        <item>
+                            <extref
+                                xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/prohibition+great+britain+19th+century{su}">
+                                <subject encodinganalog="650" source="lcnaf">Prohibition--Great
+                                    Britain--19th century. </subject>
+                            </extref>
+                        </item>
+                        <item>
+                            <extref
+                                xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/alcoholism+great+britain+19th+century{su}">
+                                <subject encodinganalog="650" source="lcnaf">Alcoholism--Great
+                                    Britain--19th century. </subject>
+                            </extref>
+                        </item>
+
+
+                    </list>
+                </controlaccess>
+                <controlaccess>
+                    <head>Places</head>
+                    <list>
+                        <item>
+                            <extref
+                                xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/great+britain+history+victoria+1837-1901+sources{su}">
+                                <geogname encodinganalog="651" source="lcnaf">Great
+                                    Britain--History--Victoria, 1837-1901--Sources. </geogname>
+                            </extref>
+                        </item>
+                    </list>
+                </controlaccess>
+            </controlaccess>
+            <!-- <persname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="110" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired 2008</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>Temperance mss., Lilly Library, Indiana University, Bloomington, Indiana. </p>
+            </prefercite>
+
+
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAB9090-00001" level="series">
+                <did>
+                    <!-- optional -->
+                    <container label="Folder" type="folder">1</container>
+
+
+                    <unittitle>Correspondence</unittitle>
+
+
+                </did>
+                <arrangement>
+                    <p>Arranged chronologically.</p>
+                </arrangement>
+                <note>
+                    <p>Transcriptions of the letters are available in each folder.</p>
+                </note>
+                <c02 id="VAB9090-00002" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1859/1869" type="inclusive">1859-1869</unitdate>
+                        </unittitle>
+                    </did>
+                    <c03 id="VAB9090-00003" level="file">
+                        <did>
+                            <unittitle>Bisley, Hugh</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00004" level="file">
+                        <did>
+                            <unittitle>Brown, H. P.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00005" level="file">
+                        <did>
+                            <unittitle> Cocker, Rev. Dr.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00006" level="file">
+                        <did>
+                            <unittitle> Cooke, Rev. Dr. William</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00007" level="file">
+                        <did>
+                            <unittitle>Cameron, Angus</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00008" level="file">
+                        <did>
+                            <unittitle>Delaran, Edward G.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00009" level="file">
+                        <did>
+                            <unittitle>Dorn, Neal</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00010" level="file">
+                        <did>
+                            <unittitle>Egerton, Wilbraham</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00011" level="file">
+                        <did>
+                            <unittitle>Gladstone, William Edwart</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00012" level="file">
+                        <did>
+                            <unittitle>Home, D. D.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00013" level="file">
+                        <did>
+                            <unittitle>McKerrow, Rev.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00014" level="file">
+                        <did>
+                            <unittitle>McKinton, John</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00015" level="file">
+                        <did>
+                            <unittitle>Nugent, James</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00016" level="file">
+                        <did>
+                            <unittitle>Smith, M. A.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00017" level="file">
+                        <did>
+                            <unittitle>Spurgeon, C. H.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00018" level="file">
+                        <did>
+                            <unittitle>Strong, William Henry</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00019" level="file">
+                        <did>
+                            <unittitle>Thompson, George</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00020" level="file">
+                        <did>
+                            <unittitle>Whitworth, Robert</unittitle>
+                            <physdesc>(1 item) </physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9090-00021" level="file">
+                    <did>
+                        <container label="Folder" type="folder">2</container>
+                        <unittitle>
+                            <unitdate normal="1870">1870</unitdate>
+                        </unittitle>
+                    </did>
+                    <c03 id="VAB9090-00022" level="file">
+                        <did>
+                            <unittitle>Archbishop Thompson</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00023" level="file">
+                        <did>
+                            <unittitle>Bazley, Thomas</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00024" level="file">
+                        <did>
+                            <unittitle>Beales, Edmond</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00025" level="file">
+                        <did>
+                            <unittitle>Broadley, A.H.H.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00026" level="file">
+                        <did>
+                            <unittitle>Farrar, John</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00027" level="file">
+                        <did>
+                            <unittitle>Hamilton, George</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00028" level="file">
+                        <did>
+                            <unittitle>Hick, John</unittitle>
+                            <physdesc>(1 item)  </physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00029" level="file">
+                        <did>
+                            <unittitle>Johnstone, Harcourt</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00030" level="file">
+                        <did>
+                            <unittitle>Manners, John</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00031" level="file">
+                        <did>
+                            <unittitle>Miall, Edward</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00032" level="file">
+                        <did>
+                            <unittitle>Patten, Wilson B.</unittitle>
+                            <physdesc>(2 items)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00033" level="file">
+                        <did>
+                            <unittitle>Rylands, D.</unittitle>
+                            <physdesc>(1 item) </physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9090-00034" level="file">
+                    <did>
+                        <container label="Folder" type="folder">3</container>
+                        <unittitle>
+                            <unitdate normal="1871">1871</unitdate>
+                        </unittitle>
+                    </did>
+                    <c03 id="VAB9090-00035" level="file">
+                        <did>
+                            <unittitle>Balfour, Clara Lucas</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00036" level="file">
+                        <did>
+                            <unittitle>Caine, William</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00037" level="file">
+                        <did>
+                            <unittitle>Charley, W. Thaddeus</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00038" level="file">
+                        <did>
+                            <unittitle>Grey, Lord</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00039" level="file">
+                        <did>
+                            <unittitle>Hargraves, Joseph</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00040" level="file">
+                        <did>
+                            <unittitle>James, John H.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00041" level="file">
+                        <did>
+                            <unittitle>Manners, John</unittitle>
+                            <physdesc>(1 item) </physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00042" level="file">
+                        <did>
+                            <unittitle>Martin, Baron</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00043" level="file">
+                        <did>
+                            <unittitle>Willes, Justice</unittitle>
+                            <physdesc>(1 item) </physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9090-00044" level="file">
+                    <did>
+                        <container label="Folder" type="folder">4</container>
+                        <unittitle>
+                            <unitdate normal="1872-03">March 1872</unitdate>
+                        </unittitle>
+                    </did>
+                    <c03 id="VAB9090-00045" level="file">
+                        <did>
+                            <unittitle>Broadley, A. H. H.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00046" level="file">
+                        <did>
+                            <unittitle>Crawford, Edward</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00047" level="file">
+                        <did>
+                            <unittitle>Walpole, J.</unittitle>
+                            <physdesc>(1 item) </physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9090-00048" level="file">
+                    <did>
+                        <container label="Folder" type="folder">5</container>
+                        <unittitle>
+                            <unitdate normal="1872-04/1872-05" type="inclusive">April-May
+                                1872</unitdate>
+                        </unittitle>
+                    </did>
+                    <c03 id="VAB9090-00049" level="file">
+                        <did>
+                            <unittitle>Bar, R. B. Wingfield</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00050" level="file">
+                        <did>
+                            <unittitle>Brassey, Lord Thomas</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00051" level="file">
+                        <did>
+                            <unittitle>Brocklehurst, William</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00052" level="file">
+                        <did>
+                            <unittitle>DuPre, Caledon G.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00053" level="file">
+                        <did>
+                            <unittitle>Egerton, Algernon</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00054" level="file">
+                        <did>
+                            <unittitle>Egerton, Lord Wilbraham</unittitle>
+                            <physdesc>(2 items)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00055" level="file">
+                        <did>
+                            <unittitle>F. A. Stanley A. D. C.</unittitle>
+                            <physdesc>(1 item) </physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00056" level="file">
+                        <did>
+                            <unittitle>Fields, Joshua</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00057" level="file">
+                        <did>
+                            <unittitle>Hadfield, George</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00058" level="file">
+                        <did>
+                            <unittitle>Henry, John Snowdon</unittitle>
+                            <physdesc>(2 items)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00059" level="file">
+                        <did>
+                            <unittitle>Hornby, G. K.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00060" level="file">
+                        <did>
+                            <unittitle>Mirry, James</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00061" level="file">
+                        <did>
+                            <unittitle>Powell, Francis Sharp</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00062" level="file">
+                        <did>
+                            <unittitle>Rathbone, William</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00063" level="file">
+                        <did>
+                            <unittitle>Stevenson, A.G.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00064" level="file">
+                        <did>
+                            <unittitle>Tollemache, Wilbraham Frederick</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00065" level="file">
+                        <did>
+                            <unittitle>Woods, H.</unittitle>
+                            <physdesc>(2 items) </physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9090-00066" level="file">
+                    <did>
+                        <container label="Folder" type="folder">6</container>
+                        <unittitle><unitdate normal="1880/1885" type="inclusive"
+                                >1880-1885</unitdate>Undated Letters.</unittitle>
+                    </did>
+                    <c03 id="VAB9090-00067" level="file">
+                        <did>
+                            <unittitle>Bright, John</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00068" level="file">
+                        <did>
+                            <unittitle>Dawson, George</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00069" level="file">
+                        <did>
+                            <unittitle>Cecil, Lord Eustace</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00070" level="file">
+                        <did>
+                            <unittitle>Grossmith, W.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00071" level="file">
+                        <did>
+                            <unittitle>Yorke, Charles Philip, 5th Earl of Hardwicke</unittitle>
+                            <physdesc>(1 item) </physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9090-00072" level="file">
+                    <did>
+                        <container label="Folder" type="folder">7</container>
+                        <unittitle>Letter Fragments</unittitle>
+                    </did>
+                    <c03 id="VAB9090-00073" level="file">
+                        <did>
+                            <unittitle>Bagley, Thomas</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00074" level="file">
+                        <did>
+                            <unittitle>Clegg, Thomas</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00075" level="file">
+                        <did>
+                            <unittitle>Coke, William</unittitle>
+                            <physdesc>(1 item) </physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00076" level="file">
+                        <did>
+                            <unittitle>Cook, Thomas</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00077" level="file">
+                        <did>
+                            <unittitle>Daines, Edwin</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00078" level="file">
+                        <did>
+                            <unittitle>Hewlett, E.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00079" level="file">
+                        <did>
+                            <unittitle>Home, D. D.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00080" level="file">
+                        <did>
+                            <unittitle>Jackson, J.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00081" level="file">
+                        <did>
+                            <unittitle>Jones, Joseph</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00082" level="file">
+                        <did>
+                            <unittitle>Moel, Leland</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00083" level="file">
+                        <did>
+                            <unittitle>Morgan, J.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00084" level="file">
+                        <did>
+                            <unittitle>Mosley, S.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00085" level="file">
+                        <did>
+                            <unittitle>Patten, Wilson</unittitle>
+                            <physdesc>(1 item) </physdesc>
+                        </did>
+                    </c03>
+                </c02>
+
+            </c01>
+            <c01 id="VAB9090-00086" level="series">
+                <did>
+                    <container label="Folder" type="folder">8</container>
+                    <unittitle>Signatures</unittitle>
+                </did>
+                <arrangement>
+                    <p>Arranged alphabetically.</p>
+                </arrangement>
+                <c02 id="VAB9090-00087" level="file">
+                    <did>
+
+                        <unittitle>Signatures (A-I)</unittitle>
+                    </did>
+                    <c03 id="VAB9090-00088" level="file">
+                        <did>
+                            <unittitle>Ackroyd, Edward</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00089" level="file">
+                        <did>
+                            <unittitle>Ashworth, John</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00090" level="file">
+                        <did>
+                            <unittitle>Balfour, Clara Lucas</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00091" level="file">
+                        <did>
+                            <unittitle>Binley, Hugh</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00092" level="file">
+                        <did>
+                            <unittitle>Cecil, Lord Eustace</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00093" level="file">
+                        <did>
+                            <unittitle>Bright, John</unittitle>
+                            <physdesc>(2 items)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00094" level="file">
+                        <did>
+                            <unittitle>Brocklehurst, William</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00095" level="file">
+                        <did>
+                            <unittitle>Brown, Hugh Stowell</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00096" level="file">
+                        <did>
+                            <unittitle>Caine, William</unittitle>
+                            <physdesc>(1 item) </physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00097" level="file">
+                        <did>
+                            <unittitle>Charley, W. T.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00098" level="file">
+                        <did>
+                            <unittitle>Close, Dean</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00099" level="file">
+                        <did>
+                            <unittitle>Corbett</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00100" level="file">
+                        <did>
+                            <unittitle>Crawford, Edward S.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00101" level="file">
+                        <did>
+                            <unittitle>Dawson, George</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00102" level="file">
+                        <did>
+                            <unittitle>DuPre, Caledon, G.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00103" level="file">
+                        <did>
+                            <unittitle>Eardley, Robert</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00104" level="file">
+                        <did>
+                            <unittitle>Edwards, Dr.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00105" level="file">
+                        <did>
+                            <unittitle>Egerton, Wilbraham</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00106" level="file">
+                        <did>
+                            <unittitle>Farson, Rev. John</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00107" level="file">
+                        <did>
+                            <unittitle>Fielden, Joshua</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00108" level="file">
+                        <did>
+                            <unittitle>Gladstone, William Edwart</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00109" level="file">
+                        <did>
+                            <unittitle>Lord Grey</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00110" level="file">
+                        <did>
+                            <unittitle>Hannah, John</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00111" level="file">
+                        <did>
+                            <unittitle>Hargraves, Joseph</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00112" level="file">
+                        <did>
+                            <unittitle>Marquis of Hartingon</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00113" level="file">
+                        <did>
+                            <unittitle>Henry, Fitz</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00114" level="file">
+                        <did>
+                            <unittitle>Holt, James Maden</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00115" level="file">
+                        <did>
+                            <unittitle>Home, D.D.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00116" level="file">
+                        <did>
+                            <unittitle>Hornby, G. K.</unittitle>
+                            <physdesc>(1 item) </physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9090-00117" level="file">
+                    <did>
+                        <container label="Folder" type="folder">9</container>
+                        <unittitle>Signatures (J-Q)</unittitle>
+                    </did>
+                    <c03 id="VAB9090-00118" level="file">
+                        <did>
+                            <unittitle>Johnstone, Harcourt</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00119" level="file">
+                        <did>
+                            <unittitle>Lelegg, Thomas</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00120" level="file">
+                        <did>
+                            <unittitle>The Bishop of Lincoln</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00121" level="file">
+                        <did>
+                            <unittitle>Lubbock, Sir John</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00122" level="file">
+                        <did>
+                            <unittitle>The Bishop of Manchester</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00123" level="file">
+                        <did>
+                            <unittitle>Mandella, A.J.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00124" level="file">
+                        <did>
+                            <unittitle>Manners, Lord John</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00125" level="file">
+                        <did>
+                            <unittitle>Manning, H. E.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00126" level="file">
+                        <did>
+                            <unittitle>Martin, Baron</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00127" level="file">
+                        <did>
+                            <unittitle>McKerrow, Dr.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00128" level="file">
+                        <did>
+                            <unittitle>Merry, James</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00129" level="file">
+                        <did>
+                            <unittitle>Meyrich, Thomas C.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00130" level="file">
+                        <did>
+                            <unittitle>Miall, Edward</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00131" level="file">
+                        <did>
+                            <unittitle>Mosley, Sam</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00132" level="file">
+                        <did>
+                            <unittitle>The Bishop of Oxford</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00133" level="file">
+                        <did>
+                            <unittitle>The Bishop of Peterborough</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00134" level="file">
+                        <did>
+                            <unittitle>Potter, Thomas B.</unittitle>
+                            <physdesc>(2 items)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00135" level="file">
+                        <did>
+                            <unittitle>Powell, Francis S.</unittitle>
+                            <physdesc>(1 item)   </physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9090-00136" level="file">
+                    <did>
+                        <container label="Folder" type="folder">10</container>
+                        <unittitle>Signatures (R-Z)</unittitle>
+                    </did>
+                    <c03 id="VAB9090-00137" level="file">
+                        <did>
+                            <unittitle>Rathbone, William</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00138" level="file">
+                        <did>
+                            <unittitle>Rylands, Peter</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00139" level="file">
+                        <did>
+                            <unittitle>Sandley, C.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00140" level="file">
+                        <did>
+                            <unittitle>Selby, W. G.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00141" level="file">
+                        <did>
+                            <unittitle>Shan, Richard</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00142" level="file">
+                        <did>
+                            <unittitle>Spurgeon, Rev. L. A.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00143" level="file">
+                        <did>
+                            <unittitle>Stevenson, A. G.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00144" level="file">
+                        <did>
+                            <unittitle>Thompson, George</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00145" level="file">
+                        <did>
+                            <unittitle>Tollemache, W. F.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00146" level="file">
+                        <did>
+                            <unittitle>Vivian, Arthur Pendarves</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00147" level="file">
+                        <did>
+                            <unittitle>Walpole, J.</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00148" level="file">
+                        <did>
+                            <unittitle>The Marquis of Westminster</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00149" level="file">
+                        <did>
+                            <unittitle>Willes, Justice</unittitle>
+                            <physdesc>(1 item)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00150" level="file">
+                        <did>
+                            <unittitle>The Archbishop of York</unittitle>
+                            <physdesc>(1 item) </physdesc>
+                        </did>
+                    </c03>
+                </c02>
+
+            </c01>
+            <c01 id="VAB9090-00151" level="series">
+                <did>
+                    <container label="Folder" type="folder">11</container>
+                    <unittitle>Other</unittitle>
+                </did>
+                <c02 id="VAB9090-00152" level="file">
+                    <did>
+
+                        <unittitle>Binding</unittitle>
+                    </did>
+                    <c03 id="VAB9090-00153" level="file">
+                        <did>
+                            <unittitle>Front and back boards only. Purple-grey cloth, black leather
+                                at top and bottom corners</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9090-00154" level="file">
+                    <did>
+                        <container label="Folder" type="folder">12</container>
+                        <unittitle>Images and Miscellaneous</unittitle>
+                    </did>
+                    <c03 id="VAB9090-00155" level="file">
+                        <did>
+                            <unittitle>Dean Close</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00156" level="file">
+                        <did>
+                            <unittitle><emph render="doublequote">Rev. Dr. Crowther, Bishop of the
+                                    Niger, England’s First Black Bishop.</emph></unittitle>
+                            <note>
+                                <p>Bishop Crowther was the first African bishop in the Anglican
+                                    Church.</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9090-00157" level="file">
+                        <did>
+                            <unittitle>Rev. Samuel Romilly Hall, President of the Wesleyan
+                                Conference. </unittitle>
+                        </did>
+                    </c03>
+                </c02>
+
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
