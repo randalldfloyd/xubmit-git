@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAB8872">InU-Li-VAB8872</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Scott mss. II, <date normal="1854/1906"
+                        >1854-1906</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2010" type="publication">© 2010</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2010">© 2010</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                    <lb/><date normal="2010" type="source">2010</date>
+                <lb/>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2010-03-02">March 2, 2010</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2010-03-02"/>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Scott, Emmet Hoyt,
+                    1842-1924</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Scott mss. II</unittitle>
+            <unitdate encodinganalog="245$f" normal="1854/1906" type="inclusive"
+                >1854-1906</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2114</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>1,521 items</extent>
+            </physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Scott mss. II, 1854-1906, are papers
+                of Emmet Hoyt Scott, 1842-1924, railroadman, lumberman, manufacturer, and mayor of
+                LaPorte, Indiana, and his brother, Arthur Lee Scott, 1845-1878,
+                businessman.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+
+            <p>Career of Emmet Hoyt Scott: born Broome County, New York, July 20, 1842; son of Wiley
+                Huntington and Aseneth (Locke) Scott; taught school, Oswego, New York, December
+                1862-February 1863; employee in joint express office of the Adams &amp; American
+                Express Company, Centralia, Illinois, March-September, 1863; assisted father,
+                September 1863-August 1864; construction department, Albany and Susquehanna
+                Railroad, August 1864-February 1867; superintendent, construction and operating
+                departments, Chicago, Cincinnati and Louisville Railroad Company, building a line
+                from LaPorte to Peru, Indiana, 1867-1869; lumber industry, East Saginaw, Michigan,
+                1869-1887; partner, Niles &amp; Scott, manufacturers of wheels for agricultural
+                implements and vehicles, 1876-1902; secretary-treasurer of Saginaw land, brown
+                stone, and copper mining company; and the Saginaw Copper Company, 1877; president of
+                the Lac La Belle Company, Munising, Michigan, organized to buy, manufacture and
+                dispose of timber and products thereof, and to purchase, hold, or sell the lands
+                connected therewith, 1894-1906; began development of Munising, Michigan, and was
+                general manager of the Munising Railway built from Munising to Little Lake to
+                connect with the Chicago and Northwestern Railroad, 1895; president of the Island
+                Coal Company, 1897; mayor of LaPorte, Indiana, 1889-1894; toured South America,
+                January-March, 1911; on European agricultural tour, June-August, 1912; visited
+                Central America, January-March, 1922; owned real estate and farms in Indiana and
+                Michigan; died on June 20, 1924, at LaPorte, Indiana.</p>
+            <p>Career of Arthur Lee Scott: Born Nineveh, New York, August 17, 1845; son of Wiley
+                Huntington Scott and Aseneth (Locke) Scott; served in 27th New York Regiment,
+                1861-1863; attended Cooperstown Seminary, Cooperstown, New York, August 1865-March
+                1866; messenger and agent of American Express Company, Chicago and Pana, Illinois,
+                1866-1871; partner in Scott Brothers brewing firm, 1871-1872; served in 5th U.S.
+                Artillery, Company C, 1872-1877; employee of Saginaw Copper Company, 1877-1878.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Correspondence; II.
+                Accounts; III. Printed; and, IV. Miscellaneous.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Scott mss. II, 1854-1906, are papers of Emmet Hoyt Scott, 1842-1924, railroadman,
+                lumberman, manufacturer, and mayor of LaPorte, Indiana, and his brother, Arthur Lee
+                Scott, 1845-1878, businessman. The collection consists of business, personal, and
+                family correspondence of Emmet Hoyt Scott and Arthur Lee Scott; contracts and
+                statements of accounts between tenants and Mary Relief Scott, wife of Emmet Hoyt
+                Scott; maps of Fulton County, Indiana; an autograph book of Arthur Lee Scott while
+                at Cooperstown Seminary; compositions written by Arthur Lee Scott while at
+                Cooperstown Seminary; and a messenger's log book, diary, and receipt book of Arthur
+                Lee Scott. Letters from Maria Amelia Scott, 1834-1889, who kept her father's hotel
+                at Nineveh, New York, to her brothers Emmet Hoyt and Arthur Lee Scott comment
+                extensively on contemporary social events as well as family matters. Correspondents
+                represented in the collection include: W.C. Attix, C.H. Board, Charles Printy
+                Drummond, Robert Holland Duell, John S. Gaylord, John W. Houghton, Samuel Franklin
+                Miller, William B. Niles, Arthur Lee Scott, Edwin Wiley Scott, Emmet Hoyt Scott,
+                Maria Amelia Scott, Jefferson Shafer, Milo R. Smith, and Horatio Governeur Wright.
+                Consult the Manuscripts Index in the Library for dates of letters of individual
+                correspondents.</p>
+            <p>Printed matter in the collection includes programs from the Artillery School, U.S.A.,
+                1873 and 1874; miscellaneous brochures and advertisements dealing with the brewing
+                industry. Miscellaneous items include pieces about ditches, fencing and
+                knitting.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/scott+emmet+hoyt+1842-1924">
+                            <persname encodinganalog="100" source="lcnaf">Scott, Emmet Hoyt,
+                                1842-1924. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/scott+emmet+hoyt+1842-1924">
+                            <persname encodinganalog="600" source="lcnaf">Scott, Emmet Hoyt,
+                                1842-1924--Correspondence. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/scott+arthur+lee+1845-1878">
+                            <persname encodinganalog="700" source="lcnaf">Scott, Arthur Lee,
+                                1845-1878. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/scott+arthur+lee+1845-1878">
+                            <persname encodinganalog="600" source="lcnaf">Scott, Arthur Lee,
+                                1845-1878--Correspondence. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/scott+maria+amelia+1834-1889">
+                            <persname encodinganalog="700" source="lcnaf">Scott, Maria Amelia,
+                                1834-1889. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/scott+maria+amelia+1834-1889">
+                            <persname encodinganalog="600" source="lcnaf">Scott, Maria Amelia,
+                                1834-1889--Correspondence. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/scott+mary+relief">
+                            <persname encodinganalog="700" source="lcnaf">Scott, Mary Relief.
+                            </persname>
+                        </extref>
+                    </item>
+
+
+                </list>
+
+            </controlaccess>
+            <controlaccess>
+                <head>Subjects</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/agriculture+indiana{su}">
+                            <subject encodinganalog="650" source="lcnaf">Agriculture--Indiana.
+                            </subject>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Places</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/fulton+county+ind.+maps{su}">
+                            <geogname encodinganalog="651" source="lcnaf">Fulton County
+                                (Ind.)--Maps. </geogname>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+        </controlaccess>
+
+
+
+        <!-- optional, if applicable -->
+        <relatedmaterial encodinganalog="544 1">
+            <head>Related Material</head>
+            <p>Scott mss.; also located at the Lilly Library, Indiana University, Bloomington,
+                Indiana.</p>
+        </relatedmaterial>
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired 1981</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>Scott II mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAB8872-00001" level="series">
+                <did>
+                    <!-- optional -->
+                    <container label="Box" type="box">1</container>
+
+
+                    <unittitle>I. Correspondence</unittitle>
+
+
+                </did>
+                <c02 id="VAB8872-00002" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1857/1892" type="inclusive">1857-1892.</unitdate>
+                        </unittitle>
+                        <physdesc>(42 folders)</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Includes diary, autograph book, and receipt book of Arthur Lee Scott</p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAB8872-00003" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>
+                            <unitdate normal="1893/1906" type="inclusive">1893/1906</unitdate>
+                        </unittitle>
+                        <physdesc>(10 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB8872-00004" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1854/1906" type="inclusive">undated</unitdate>
+                        </unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAB8872-00005" level="series">
+                <did>
+                    <container label="Box" type="box">2</container>
+                    <unittitle>II. Accounts</unittitle>
+                </did>
+                <c02 id="VAB8872-00006" level="file">
+                    <did>
+                        <unittitle>Baldwin, George</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8872-00007" level="file">
+                    <did>
+                        <unittitle>Bisel, J.W.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8872-00008" level="file">
+                    <did>
+                        <unittitle>Bowman, Gideon</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8872-00009" level="file">
+                    <did>
+                        <unittitle>Brady, Thomas J.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8872-00010" level="file">
+                    <did>
+                        <unittitle>Brackett, Lyman M.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8872-00011" level="file">
+                    <did>
+                        <unittitle>Clemens, Floyd</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8872-00012" level="file">
+                    <did>
+                        <unittitle>Crabill, J.W.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8872-00013" level="file">
+                    <did>
+                        <unittitle>Eisenmann, Fred G.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8872-00014" level="file">
+                    <did>
+                        <unittitle>Eisenmann, George</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8872-00015" level="file">
+                    <did>
+                        <unittitle>Engel, Jacob</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8872-00016" level="file">
+                    <did>
+                        <unittitle>Fagan, Henry C.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8872-00017" level="file">
+                    <did>
+                        <unittitle>Felder &amp; Sons</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8872-00018" level="file">
+                    <did>
+                        <unittitle>Felder &amp; Bro.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8872-00019" level="file">
+                    <did>
+                        <unittitle>Ford, Christopher</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8872-00020" level="file">
+                    <did>
+                        <unittitle>Hunter, Jefferson</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8872-00021" level="file">
+                    <did>
+                        <unittitle>Hunter &amp; Son</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8872-00022" level="file">
+                    <did>
+                        <unittitle>Jackson, Henry</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8872-00023" level="file">
+                    <did>
+                        <unittitle>Latchaw, George</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8872-00024" level="file">
+                    <did>
+                        <unittitle>Morrill, R.M.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8872-00025" level="file">
+                    <did>
+                        <unittitle>Rafeldt, Fred</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8872-00026" level="file">
+                    <did>
+                        <unittitle>Rice, O.H.P.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8872-00027" level="file">
+                    <did>
+                        <unittitle>Rice, S.A.D.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8872-00028" level="file">
+                    <did>
+                        <unittitle>Rice &amp; Rice</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8872-00029" level="file">
+                    <did>
+                        <unittitle>Scott, A.S.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8872-00030" level="file">
+                    <did>
+                        <unittitle>Wright, James</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAB8872-00031" level="series">
+                <did>
+                    <container label="Box" type="box">2</container>
+                    <unittitle>III. Printed</unittitle>
+                </did>
+                <c02 id="VAB8872-00032" level="file">
+                    <did>
+                        <unittitle>Brewing</unittitle>
+                    </did>
+                    <scopecontent>
+                        <p>Includes price list and advertisements for brewing supplies, ca. 1872</p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAB8872-00033" level="file">
+                    <did>
+                        <unittitle>Miscellaneous</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p> Includes newspaper clippings; New York Herald Almanac, 1875; Schenck's
+                            Almanac, 1875, 1876; Business cards; items from Artillery School, U.S.A,
+                            1873-1874, and Cooperstown Seminary, 1865 and undated; illustrations
+                            removed from a bound volume; railway literature; product advertisements;
+                            The Daily Herald (La Porte, IN), May 6, 1889; Sunday School Advocate,
+                            Vol. XIII, no. 21, July 22, 1854</p>
+                    </scopecontent>
+                </c02>
+            </c01>
+            <c01 id="VAB8872-00034" level="series">
+                <did>
+                    <container label="Box" type="box">2</container>
+                    <unittitle>IV. Miscellaneous</unittitle>
+                </did>
+                <c02 id="VAB8872-00035" level="file">
+                    <did>
+                        <unittitle>Ditches and fences.</unittitle>
+                    </did>
+                    <scopecontent>
+                        <p>Includes plaintiff's claims concerning the location of ditches and fences
+                            on E.H. Scott's land</p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAB8872-00036" level="file">
+                    <did>
+                        <unittitle>Envelopes addressed to Arthur Lee Scott</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8872-00037" level="file">
+                    <did>
+                        <unittitle>Fragments.</unittitle>
+                    </did>
+                    <scopecontent>
+                        <p>Includes notes on scrap paper, blank American Express checks and an
+                            I.O.U.</p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAB8872-00038" level="file">
+                    <did>
+                        <unittitle>Knitting.</unittitle>
+                    </did>
+                    <scopecontent>
+                        <p>Contains knitting patterns</p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAB8872-00039" level="file">
+                    <did>
+                        <unittitle> Scott, Arthur Lee. School Essays </unittitle>
+                    </did>
+                    <scopecontent>
+                        <p>Includes essays and notes from Cooperstown Seminary, 1865-1866</p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAB8872-00040" level="file">
+                    <did>
+                        <container label="Oversize" type="box"/>
+                        <unittitle>Certificates, clippings, contract, maps, etc.</unittitle>
+                    </did>
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
