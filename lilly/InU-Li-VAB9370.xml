@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAB9370">InU-Li-VAB9370</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Aristotle mss., <date normal="1603/1704">ca.
+                        1603-1704</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2010" type="publication">© 2010</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2010">© 2010</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                    <lb/><date normal="2010" type="source">2010</date>
+                <lb/>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2010-06-09">June 29, 2010</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2010-06-29"/>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Aristotle mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1603/1704" type="inclusive"
+                >1603-1704</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1034</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>34 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="lat">Latin.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Aristotle mss., ca. 1603-1704,
+                consists of commentaries on the works of Aristotle. At least half of the volumes
+                concentrate on logic, but other subjects are covered as well, including physics and
+                general philosophy.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+
+
+
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Aristotle mss., ca. 1603-1704, consists of commentaries on the works of
+                Aristotle. At least half of the volumes concentrate on logic, but other subjects are
+                covered as well, including physics and general philosophy.</p>
+            <p>A majority of the manuscripts that have identified authors were written by Jesuits:
+                Maur Altomar, Pierre Baron, Jakob Bidermann, Christoph Brandis, Jean de Horion,
+                Nicolas Mohr, Francois Noghera, Jean-Baptiste Weiss, and Joseph Zwinger. A few were
+                written by Benedictines: Ludwig Babenstuber, Simon Fürbas, and Maurus Oberascher.
+                The other authors are Nicolas Chaumorat, Henrich Drophuysen, Andreas Guetmair,
+                Bernhard Ruedorffer, and Eustach Strenzi. Fourteen of the manuscripts do not have
+                named authors.</p>
+            <p>The commentaries are in Latin, and on occasion include sketches or diagrams. The
+                Baron volume contains a number of portraits, including St. Augustine and Aristotle
+                himself. Each of the two Oberascher volumes contains a copy of the same printed
+                commentary, although the manuscripts themselves are not identical. The manuscript
+                    <title render="italic">Logica Actualis...</title> (#165) contains not only
+                sketches, but also a Philosophical Family Tree. Another volume, <title
+                    render="italic">In Universam Aristotelis Logicam</title> (#96) has two
+                unidentified red seals on the verso of one of its final pages.</p>
+            <p/>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/bidermann+jakob+1577+or+8-1639{su}">
+                            <persname encodinganalog="700" source="lcnaf">Bidermann, Jakob, 1577 or
+                                8-1639. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/oberascher+maurus+d+1697">
+                            <persname encodinganalog="700" source="lcnaf">Oberascher, Maurus, d.
+                                1697. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/baron+pierre+16/17th+cent">
+                            <persname encodinganalog="700" source="lcnaf">Baron, Pierre, 16/17th
+                                cent. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/aristotle{su}">
+                            <persname encodinganalog="600" source="lcnaf">Aristotle. </persname>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+
+            <!-- <persname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="110" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+
+
+        <!-- optional, if applicable -->
+        <relatedmaterial encodinganalog="544 1">
+            <head>Related Material</head>
+            <p>Printed commentaries purchased by the library in the same collection are cataloged
+                separately and records for them can be found in the Lilly Library catalog.</p>
+        </relatedmaterial>
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired 1953</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>Aristotle mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAB9370-00001" level="series">
+                <did>
+                    <unittitle>Alphabetical list of items</unittitle>
+                </did>
+                <c02 id="VAB9370-00002" level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <unittitle>37. Altomar, Maur. <title render="italic">In un[iver]sam
+                                Aristotelis logicam tractatus et quaestiones</title>. <unitdate
+                                normal="1638">1638</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00003" level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <unittitle>296. Babenstuber, [Ludwig], O.S.B., 1660-1726. <title
+                                render="italic">ITractatus in Physicam Thomistico-Aristotelicam
+                                Aristotelico-Thomisticam</title>. <unitdate normal="1695"
+                                >1695</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00004" level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <unittitle>53. Baron, Pierre, d.1707. <title render="italic">In Universam
+                                Aristotelis Philosophiam</title>. <unitdate normal="1683"
+                                >1683</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00005" level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <unittitle>17. Bidermann, Jakob, 1577/8-1639. <title render="italic"
+                                >Commentarius in libros Aristotelis de coelo meteoris et
+                                generatione</title>. <unitdate normal="1617"
+                            >1617</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00006" level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <unittitle>65. Brandis, Christoph . <title render="italic">Compendium totius
+                                commentary in universam Aristotelis logicam</title>. <unitdate
+                                normal="1609">1609</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00007" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>97. Chaumorat, Nicol[as]. <title render="italic">Axiomata ex
+                                Abditissimia Ph[ilosoph]ia Arist[totelis]</title>. <unitdate
+                                normal="1610">1610</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00008" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>106. Drophuysen, Henrico. <title render="italic">Commentaria in
+                                Aristotelis logicam</title>. <unitdate normal="1645"
+                            >1645</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00009" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>121. Fürbas, Simon, O.S.B. <title render="italic">Com[m]entarius
+                                in octo lib[ros] physic[orum] Aristotelis</title>. <unitdate
+                                normal="1629">1629</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00010" level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <unittitle>92. [Fürbas, Simon, O.S.B.] <title render="italic">Organum
+                                Aristo[telis]</title>. <unitdate normal="1629"
+                            >1629</unitdate></unittitle>
+                        <note>
+                            <p>Lacks title page; title from spine, date from front cover</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00011" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>126. Glaeren. <title render="italic">Dialectica ad mentem
+                                Aristotelis</title>. <unitdate normal="1743"
+                            >1743</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00012" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>133. Guetmair, Andreas. [<title render="italic">Commentarius in
+                                Aristotelis logicam</title>]. <unitdate normal="1613"
+                                >1613</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00013" level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <unittitle>20. Horion, Jean de, 1573-1641. <title render="italic">Apparatus
+                                ad scientas:</title> ITEM, in <title render="italic">VIII
+                                Auscultationis [Physicorum Aristotelis] Libros
+                            Disputationes</title>. <unitdate normal="1607"
+                            >[1607]</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00014" level="file">
+                    <did>
+                        <container label="Box" type="box">3</container>
+                        <unittitle>187. Mohr, [Nicolas], 1623-1689. <title render="italic"
+                                >Compendium Breve Totius Cursus Philosophici</title>. <unitdate
+                                normal="1661">1661</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00015" level="file">
+                    <did>
+                        <container label="Box" type="box">3</container>
+                        <unittitle>203. Noghera, Francois, 1572-1609. <title render="italic"
+                                >[Commentaria] in Octo Libros Physicoru[m] Arist[otelis]</title>.
+                                <unitdate normal="1603/1704" type="inclusive"
+                            >n.d.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00016" level="file">
+                    <did>
+                        <container label="Box" type="box">4</container>
+                        <unittitle>205. Oberascher, Maurus, O.S.B., d.1697. <title render="italic"
+                                >Commentarius in Universam Aristotelis L[o]g[icam]</title>.
+                                <unitdate normal="1658">[ca.1658]</unitdate></unittitle>
+                        <note>
+                            <p>Printed section at beginning of volume (Lilly PA3907.O12 c.2)
+                                identical to that at end of #204</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00017" level="file">
+                    <did>
+                        <container label="Box" type="box">4</container>
+                        <unittitle>204. Oberascher, Maurus, O.S.B., d.1697. <title render="italic"
+                                >Tractatus in u[nive]rsam Logicam Ar[istote]lis</title>. <unitdate
+                                normal="1658">1658</unitdate></unittitle>
+                        <note>
+                            <p>Printed section at end of volume (Lilly PA3907.O12 c.1) same as that
+                                at beginning of #205</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00018" level="file">
+                    <did>
+                        <container label="Box" type="box">4</container>
+                        <unittitle>241. Ruedorffer, Bern[hard R.], 1620-1679. <title render="italic"
+                                >Commentarii in duos libros Aristotelis</title>. <unitdate
+                                normal="1648">1648</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00019" level="file">
+                    <did>
+                        <container label="Box" type="box">4</container>
+                        <unittitle>249. [Strenzi, Eustach. <title render="italic">Philosophiae Pars
+                                Prima</title>. <unitdate normal="1708">1708]</unitdate></unittitle>
+                        <note>
+                            <p>Lacks opening text; begins page II</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00020" level="file">
+                    <did>
+                        <container label="Box" type="box">4</container>
+                        <unittitle>281. [Weiss, Jean-Baptiste], 1620-1692. <title render="italic"
+                                >Philosophia Aristotelica</title>. <unitdate normal="1654"
+                                >1654</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00021" level="file">
+                    <did>
+                        <container label="Box" type="box">4</container>
+                        <unittitle>289. Zwinger, [Joseph], 1705-1772. <title render="italic"
+                                >Disputationes in Organum Aristotelis</title>. <unitdate
+                                normal="1603/1704" type="inclusive">n.d.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00022" level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <unittitle>93. <title render="italic">Commentaria in Octo Libros Physicorum
+                                Aristotelis</title>. <unitdate normal="1650"
+                            >[1650]</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00023" level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <unittitle>94. [<title render="italic">Commentarius in Aristotelis Organum
+                                et Acroamata</title>]. <unitdate normal="1660">[ca.
+                            1660]</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00024" level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <unittitle>95. <title render="italic">Commentarius in Universam Aristotelis
+                                Logicam</title>. <unitdate normal="1604">1604</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00025" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>105. <title render="italic">Disputa[tion]es in Sc[ient]iam
+                                Na[tur]alem Seu Physicam Aristotelis</title>. <unitdate
+                                normal="1603/1704" type="inclusive">n.d.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00026" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>104. <title render="italic">Disputa[tion]es in Sci[enti]am Seu
+                                Ar[istote]lis Lo[gic]am</title>. <unitdate normal="1603/1704"
+                                type="inclusive">n.d.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00027" level="file">
+                    <did>
+                        <container label="Box" type="box">3</container>
+                        <unittitle>149. <title render="italic">In Universam Aristotelis
+                                Logicam</title>. <unitdate normal="1603/1704" type="inclusive"
+                                >n.d.</unitdate></unittitle>
+                        <note>
+                            <p>Two seals on verso of p.593</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00028" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>96. <title render="italic">In Universam Logicam</title>.
+                                <unitdate normal="1637">1637</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00029" level="file">
+                    <did>
+                        <container label="Box" type="box">3</container>
+                        <unittitle>147. <title render="italic">Institutiones Dialectica</title>.
+                                <unitdate normal="1690">[1690]</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00030" level="file">
+                    <did>
+                        <container label="Box" type="box">3</container>
+                        <unittitle>148. <title render="italic">Institutiones Logicae</title>.
+                                <unitdate normal="1661">[1661]</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00031" level="file">
+                    <did>
+                        <container label="Box" type="box">3</container>
+                        <unittitle>165. <title render="italic">Logica Actualis....</title>
+                            <unitdate normal="1733">[1733]</unitdate></unittitle>
+                        <note>
+                            <p>Sketch: Tree of Philosophy, precedes first page of text</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00032" level="file">
+                    <did>
+                        <container label="Box" type="box">4</container>
+                        <unittitle>221. <title render="italic">Philosophia Aristotelicae</title>.
+                                <unitdate normal="1720">1720</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00033" level="file">
+                    <did>
+                        <container label="Box" type="box">4</container>
+                        <unittitle>233. <title render="italic">Quaestiones in Octo Libros Physicos
+                                Aristotelis</title>. <unitdate normal="1734"
+                            >1734</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00034" level="file">
+                    <did>
+                        <container label="Box" type="box">4</container>
+                        <unittitle>250. <title render="italic">Sum[m]ula Dialecticae</title>.
+                                <unitdate normal="1720">[ca. 1720]</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9370-00035" level="file">
+                    <did>
+                        <container label="Box" type="box">4</container>
+                        <unittitle>234. <title render="italic">Tractatus in Libros Physicos</title>.
+                                <unitdate normal="1603/1704" type="inclusive"
+                            >n.d.</unitdate></unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
