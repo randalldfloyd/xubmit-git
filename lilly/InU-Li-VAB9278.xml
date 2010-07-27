@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAB9278">InU-Li-VAB9278</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Miller mss., <date normal="1890/1990"
+                        >1890-1990</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2010" type="publication">© 2010</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2010">© 2010</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                    <lb/><date normal="2010" type="source">2010</date>
+                <lb/>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2010-06-02">June 2, 2010</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2010-06-02"/>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Miller, Delbert Charles, 1913-
+                </persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Miller mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1890/1990" type="inclusive"
+                >1890-1990</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1865</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>443 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Miller mss., 1890-1990, consists of
+                the papers of Indiana University professor of sociology and business administration
+                Delbert Charles Miller, 1913-1998.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+
+            <p>Delbert Charles Miller, 1913-1998, was a professor of sociology and business
+                administration at Indiana University.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Biographical; II. Writings;
+                III. Correspondence; IV. Mitchell Hall; and, V. Miscellaneous.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Miller mss., 1890-1990, consists of the papers of Indiana University professor of
+                sociology and business administration Delbert Charles Miller, 1913-1998. Writings by
+                Miller include <title render="italic">Industrial Sociology</title> (1951) and <title
+                    render="italic">Industry, Labor, and Community</title> (1960) , co-written with
+                William H. Form; and <title render="italic">Community Power Structures: Comparative
+                    Studies of Four World Cities</title> (1970) and <title render="italic"
+                    >Leadership and Power in the BOS-WASH Megalopolis</title> (1975), by Miller.</p>
+            <p>Outlines, drafts, typescripts, and reviews are present in the writings section. Also
+                included are lectures on industrial sociology delivered by Miller at the University
+                of San Marcos in Lima, Peru in 1965 as a Fulbright professor, correspondence mostly
+                with his editors, and papers concerning the preservation of Mitchell Hall on the
+                Indiana University campus, Bloomington.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/miller+delbert+charles+1913-{su}">
+                            <persname encodinganalog="600" source="lcnaf">Miller, Delbert Charles,
+                                1913- --Correspondence. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/form+william+humbert+1917-{su}">
+                            <persname encodinganalog="700" source="lcnaf">Form, William Humbert,
+                                1917- </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/indiana+university+faculty+archives{su}">
+                            <corpname encodinganalog="610" source="lcnaf">Indiana University
+                                --Faculty --Archives. </corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/mitchell+hall+indiana+university+bloomington{su}">
+                            <corpname encodinganalog="610" source="lcnaf">Mitchell Hall (Indiana
+                                University, Bloomington) </corpname>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/sociologists+united+states+archives{su}">
+                            <subject encodinganalog="650" source="lcsh">Sociologists --United States
+                                --Archives. </subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/industrial+sociology{su}">
+                            <subject encodinganalog="650" source="lcsh">Industrial sociology.
+                            </subject>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="110" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+        <!-- required, if appropriate -->
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired 1975, 1976, 1980, 1983, 1985, 1988, 1989</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>Miller mss., Lilly Library, Indiana University, Bloomington, Indiana. </p>
+            </prefercite>
+
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAB9278-00001" level="series">
+                <did>
+                    <!-- optional -->
+                    <container label="Box" type="box">1</container>
+
+
+                    <unittitle>I. Biographical</unittitle>
+
+
+                </did>
+                <c02 id="VAB9278-00002" level="file">
+                    <did>
+                        <unittitle>Two versions of vita</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00003" level="file">
+                    <did>
+                        <unittitle>Brief career history</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00004" level="file">
+                    <did>
+                        <unittitle>Publications record</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAB9278-00005" level="series">
+                <did>
+                    <container label="Box" type="box">1</container>
+                    <unittitle>II. Writings</unittitle>
+                </did>
+                <c02 id="VAB9278-00006" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1945">1945.</unitdate>Writing outlines for
+                                <title render="italic">Industrial Sociology</title>, 1st
+                            ed.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00007" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1951/1953" type="inclusive"
+                                >1951-1953.</unitdate>Book Reviews for <title render="italic"
+                                >Industrial Sociology</title></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00008" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1956">1956.</unitdate>Writing outline for
+                                <title render="italic">Industry, Labor, and
+                            Community</title></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00009" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1964">1964.</unitdate><title render="italic"
+                                >Industrial Sociology</title>, 2nd ed.</unittitle>
+                        <physdesc>(10 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00010" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1965">1965.</unitdate> Lectures, Lima
+                            Peru.</unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                        <note>
+                            <p>In Spanish.</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00011" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1970">1970.</unitdate><title render="italic"
+                                >International Community Power Structures</title></unittitle>
+                        <physdesc>(5 folders)</physdesc>
+                    </did>
+                </c02>
+
+                <c02 id="VAB9278-00012" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle><unitdate normal="1975">1975</unitdate><title render="italic"
+                                >Leadership and Power in the BOS-WASH Megapolis</title></unittitle>
+                        <physdesc>(8 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00013" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1890/1990" type="inclusive"
+                                >undated.</unitdate><title render="italic">Industrial
+                                Sociology</title>, 3rd ed.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00014" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1973">1973.</unitdate>Review of <title
+                                render="italic">Industrial Sociology</title>, revised.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00015" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1983">1983.</unitdate><title render="italic"
+                                >Handbook of Research Design and Social
+                            Measurement</title></unittitle>
+                        <physdesc>(7 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00016" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1890/1990" type="inclusive"
+                                >undated.</unitdate><title render="italic">Fugitive Leaves in the
+                                Life of Delbert C. Miller</title></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00017" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1982/1984" type="inclusive"
+                                >1982-1984.</unitdate>Musings and Ruminations - Collection I: <title
+                                render="italic">On Taking Things for Granted and Other
+                                Essays</title></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00018" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1958-04-26/1958-04-27" type="inclusive">1958,
+                                Apr. 26-27.</unitdate>Harvard community power conference
+                            notes</unittitle>
+                    </did>
+                    <c03 id="VAB9278-00019" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1890/1990" type="inclusive"
+                                    >undated.</unitdate>Essay mss.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9278-00020" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1890/1990" type="inclusive"
+                                    >undated.</unitdate><title render="italic">In Honor of Two
+                                    Musicians Named Merrill.</title></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9278-00021" level="file">
+                    <did>
+                        <unittitle>Histories</unittitle>
+                    </did>
+                    <c03 id="VAB9278-00022" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1979/1980" type="inclusive">1979,
+                                    1980.</unitdate>James Capshew and Eliot Heagt. <title
+                                    render="italic">Psychology at Indiana University : From Bryan to
+                                    Skinner</title></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9278-00023" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1984">1984.</unitdate>Kristelli, John.
+                                    <title render="italic">History of Mathers Museum ,
+                                    1870-1983</title>; <unitdate normal="1967"
+                                >1967.</unitdate>Merriam, Alan P. <title render="italic">History of
+                                    Anthropology at Indiana University </title></unittitle>
+                        </did>
+                        <c04 id="VAB9278-00024" level="file">
+                            <did>
+                                <unittitle><unitdate normal="1890/1990" type="inclusive"
+                                        >undated.</unitdate><title render="italic">One Hundred
+                                        Years: The History of the Dept. of Sociology at Indiana
+                                        University , 1885-1985.</title></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAB9278-00025" level="file">
+                            <did>
+                                <unittitle><unitdate normal="1890/1990" type="inclusive"
+                                        >undated.</unitdate>Bibliography. <title render="italic"
+                                        >History of social sciences, social work and History at
+                                        Indiana University , 1820-1990</title></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAB9278-00026" level="file">
+                            <did>
+                                <unittitle><unitdate normal="1890/1990" type="inclusive"
+                                        >undated.</unitdate>Rogers, Helen Cintilda. <title
+                                        render="italic">Seventy Years of Social Work Education at
+                                        Indiana University</title></unittitle>
+                            </did>
+                        </c04>
+                    </c03>
+                </c02>
+                <c02 id="VAB9278-00027" level="file">
+                    <did>
+                        <container label="Box" type="box">4</container>
+                        <unittitle>Histories</unittitle>
+                    </did>
+                    <c03 id="VAB9278-00028" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1890">1890.</unitdate>Wylie, Theophilus A.
+                                    <title render="italic">Indiana University and Its History from
+                                    1820, When Founded, to 1890.</title></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9278-00029" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1940">1940.</unitdate>Woodburn, James
+                                Albert. <title render="italic">History of Indiana University,
+                                    1820-1902</title></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9278-00030" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1983">1983.</unitdate><title
+                                    render="italic">Handbook of Research Design and Social
+                                    Measurement.</title> 4th ed.</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+
+            </c01>
+            <c01 id="VAB9278-00031" level="series">
+                <did>
+                    <container label="Box" type="box">3</container>
+                    <unittitle>III. Correspondence</unittitle>
+                </did>
+                <c02 id="VAB9278-00032" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1969/1978" type="inclusive"
+                                >1969-1978.</unitdate>Regarding Industrial Sociology, 3rd ed.
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00033" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1972/1979" type="inclusive"
+                                >1972-1979.</unitdate>Regarding translations of Miller's
+                            work.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00034" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1979/1980" type="inclusive"
+                                >1979-1980.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00035" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1977/1980" type="inclusive"
+                                >1977-1980.</unitdate>Harper &amp; Row </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00036" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1981/1982" type="inclusive"
+                                >1981-1982.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00037" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1982/1984" type="inclusive"
+                                >1982-1984.</unitdate>U.S. Travel Guide. Regarding Miller's proposed
+                            U.S. travel guide for magicians and magic fans.</unittitle>
+                    </did>
+                    <c03 id="VAB9278-00038" level="file">
+                        <did>
+                            <unittitle><unitdate normal="1890/1990" type="inclusive"
+                                    >undated.</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+
+            </c01>
+            <c01 id="VAB9278-00039" level="series">
+                <did>
+                    <container label="Box" type="box">3</container>
+                    <unittitle>IV. Mitchell Hall</unittitle>
+                </did>
+                <c02 id="VAB9278-00040" level="file">
+                    <did>
+                        <unittitle>Pros and Cons of Historic Preservation of Mitchell
+                            Hall</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00041" level="file">
+                    <did>
+                        <unittitle>Petitions</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00042" level="file">
+                    <did>
+                        <unittitle>Correspondence, <unitdate normal="1990"
+                            >1990</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00043" level="file">
+                    <did>
+                        <unittitle>Art in Mitchell</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00044" level="file">
+                    <did>
+                        <unittitle>Music in Mitchell</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00045" level="file">
+                    <did>
+                        <unittitle>Tour History</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00046" level="file">
+                    <did>
+                        <unittitle>Original copy of pros and cons</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00047" level="file">
+                    <did>
+                        <unittitle>Future of Mitchell</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00048" level="file">
+                    <did>
+                        <unittitle>Grant information</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00049" level="file">
+                    <did>
+                        <unittitle>Letter file</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00050" level="file">
+                    <did>
+                        <unittitle>Mitchell plight</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00051" level="file">
+                    <did>
+                        <unittitle>Pictures and diagrams</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00052" level="file">
+                    <did>
+                        <unittitle>Newspapers</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00053" level="file">
+                    <did>
+                        <unittitle>Evaluations</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00054" level="file">
+                    <did>
+                        <unittitle>Friends of Mitchell Hall</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00055" level="file">
+                    <did>
+                        <unittitle>List of History of Mitchell Hall recipients</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00056" level="file">
+                    <did>
+                        <unittitle>Audio visual</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00057" level="file">
+                    <did>
+                        <unittitle>Indiana Daily Student stories</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00058" level="file">
+                    <did>
+                        <unittitle>Mitchell Letter</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00059" level="file">
+                    <did>
+                        <unittitle>History of Mitchell Hall</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAB9278-00060" level="series">
+                <did>
+                    <container label="Box" type="box">4</container>
+                    <unittitle>V. Miscellaneous</unittitle>
+                </did>
+                <c02 id="VAB9278-00061" level="file">
+                    <did>
+                        <unittitle>Oral History Interviews <unitdate normal="1984-10">(Oct.
+                                1984)</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00062" level="file">
+                    <did>
+                        <unittitle>Book Collection of Delbert C. Miller</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00063" level="file">
+                    <did>
+                        <unittitle>Photographs</unittitle>
+                        <physdesc>(18 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00064" level="file">
+                    <did>
+                        <unittitle>Charts and diagrams</unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9278-00065" level="file">
+                    <did>
+                        <unittitle>Sarkes Tarzian</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
