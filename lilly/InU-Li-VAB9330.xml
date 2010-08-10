@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAB9330">InU-Li-VAB9330</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Mitchell mss., <date normal="1917/1966"
+                        >1917-1966</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2010" type="publication">© 2010</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2010">© 2010</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                    <lb/><date normal="2010" type="source">2010</date>
+                <lb/>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2010-06-09">June 9, 2010</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2010-06-09"/>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Mitchell, Ruth Crawford, 1890-
+                </persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Mitchell mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1917/1966" type="inclusive"
+                >1917-1966</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1875</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>1983 items</extent>
+            </physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">Consists of the papers of Ruth
+                (Crawford) Mitchell.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+
+            <p>Career: born June 2, 1890, Atlantic Heights, New Jersey; daughter of Stanford and
+                Gertrude (Smith) Crawford; B.A. Vassar, 1912; M.A. Washington University, 1915;
+                married LeRoy Bradley Mitchell, November 27, 1923. Activities and honors include
+                Social Survey of Prague sponsored by War Council of the Y.W.C.A., U.S.A.;
+                Czech-American Summer Training School for Social Workers; return trips in 1925,
+                1936, 1946, 1961, 1965, 1967, 1969; Treasurer, Masaryk Publications Trust, 1959- ;
+                The Cross of Knight of the Order of White Lion, presented by President Liberator
+                Tom? G. Masaryk; decorated by the Yugoslav, French, Polish, and Italian governments;
+                David Glick Award for distinguished service in the field of International Affairs
+                from World Affairs Council of Pittsburgh, 1966; Women's Press Club of Pittsburgh
+                Award for distinguished service in field of International Affairs, 1966; Honorary
+                degree of doctor of humanities, University of Pittsburgh, 1966; Honorary Benedictine
+                Oblate, Basilica of St. Justina, Padua, Italy, 1969.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Correspondence; II. Notes;
+                III. Photographs; IV. Printed; V. Writings; and, VI. Miscellaneous.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>Consists of the papers of Ruth (Crawford) Mitchell. Contains letters between Mitchell
+                and her family, correspondence with Alice Garrigue Masaryk and Mrs. Olga (Masaryk)
+                Revilliod; notebooks; photographs; and information about Czechoslovakia.</p>
+            <p>The correspondence consists chiefly of letters to her family, 1919; correspondence
+                with Alice Garrigue Masaryk, 1879-1966, sociologist; and Olga (Masaryk) Revilliod,
+                1891-1978, between 1920 and 1966. Other correspondents include Hana (Vlcková)
+                Benešová, Karel Cervenka, Marcia (Gluck) Davenport, John Huntley Dupre, Zdenek
+                Fierlinger, Ludmila (Kucharová) Foxlee, J. Gardavský, John Palmer Gavit, Gustav
+                Haberman, Vladimir Haering, Fjeril Hess, Edward Bering Hitchcock, Vladimir Hurban,
+                Mary Emerson Hurlbutt, Paul Underwood Kellogg, Kyra Klinderová, Julia Clifford
+                Lathrop, Mary Eliza McDowell, Marie Markov?, Alice Garrigue Masaryk, Jan Garrigue
+                Masaryk, Tomáš Garrigue Masaryk, Herberta Poche Masaryková, Kenneth Dexter Miller,
+                Pavla Molnárová, Elinor (Fatman) Morgenthau, Vladimir Palic, Ján Papánek, Betka
+                Papánková, Františka Plaminková, Philip Skinner Platt, Albin Polasek, Olga (Masaryk)
+                Revilliod, Charles Wood Riley, Karel Šimek, Iva (Neubauerová) Šmakalová, Esther
+                Allison Tiffany, Ralph G. Wright. Consult the Manuscripts Index in the Library for
+                dates of letters of individual correspondents.</p>
+            <p>The collection also contains reports to the overseas committee in the United States
+                from the Y.W.C.A. Unit in Prague, 1919; diaries, April 19 to October 28, 1919,
+                describing the journey from the United States to Prague with visits in London and
+                Paris and the stay in Czechoslovakia during her service as director of the American
+                Y.W.C.A. unit in charge of the survey in Prague; notebooks on Czechoslovakia,
+                1919-1920, 1946; notebook on London, February 1946; and a notebook on a conference
+                in 1955 relating to the death of Jan Garrigue Masaryk; reports of Elinor (Prudden)
+                Burns on the Y.W.C.A. in Prague, 1920-1922; carbon copy of the constitution of the
+                Czechoslovak Republic, 1920; minutes of the Allegheny County, Pennsylvania and
+                Pittsburgh chapters of the American Relief for Czechoslovakia, 1944-1949; carbon
+                copy of the recreation survey of Prague by Anne Rylance Smith; social aspects of the
+                schools in Prague by Fjeril Hess; and the occupations of women in greater Prague, by
+                Alpha Beatrice Buse, all in 1920; letters on the death of Jan Garrigue Masaryk,
+                March, 1948; letters in behalf of Alice Garrigue Masaryk who sought asylum in the
+                United States from communist rule in Czechoslovakia, 1954; letters and reports on
+                the Communist Party, 1946-1948; letters and articles on the Czechoslovak Republic,
+                1919-1949; report on emigration in Czechoslovakia, 1919; international student
+                situation in Prague, 1927; Polish refugees, 1948; and Czechoslovakian Red Cross,
+                1938. </p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/mitchell+ruth+crawford+1890-{su}">
+                            <persname encodinganalog="600" source="lcnaf">Mitchell, Ruth Crawford,
+                                1890- --Correspondence. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/masaryk+alice+garrigue+1879-1966">
+                            <persname encodinganalog="600" source="lcnaf">Masaryk, Alice Garrigue,
+                                1879-1966--Correspondence. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/masaryk+jan+1886-1948{su}">
+                            <persname encodinganalog="600" source="lcnaf">Masaryk, Jan, 1886-1948.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/masaryk+alice+garrigue+1879-1966">
+                            <persname encodinganalog="700" source="lcnaf">Masaryk, Alice Garrigue,
+                                1879-1966. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/revilliod+olga+masaryk{su}">
+                            <persname encodinganalog="700" source="lcnaf">Revilliod, Olga Masaryk.
+                            </persname>
+                        </extref>
+                    </item>
+
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/hess+fjeril+1893-">
+                            <persname encodinganalog="700" source="lcnaf">Hess, Fjeril, 1893-
+                            </persname>
+                        </extref>
+                    </item>
+
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/*Ceskoslovensk%FD+*cerven%FD+k*r%ED*z.">
+                            <corpname encodinganalog="610" source="lcnaf">*Ceskoslovenský *cervený
+                                k*rí*z. </corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/Komunistick%E1+strana+*Ceskoslovenska{su}">
+                            <corpname encodinganalog="610" source="lcnaf">Komunistická strana
+                                *Ceskoslovenska. </corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/league+of+nations{su}">
+                            <corpname encodinganalog="610" source="lcnaf">League of Nations.
+                            </corpname>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/young+womens+christian+associations+czech+republic+prague{su}">
+                            <subject encodinganalog="650" source="lcsh">Young Women's Christian
+                                associations--Czech Republic--Prague. </subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/economic+assistance+american+czech+republic{su}">
+                            <subject encodinganalog="650" source="lcsh">Economic assistance,
+                                American--Czech Republic. </subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/recreation+czech+republic+prague{su}">
+                            <subject encodinganalog="650" source="lcsh">Recreation--Czech
+                                Republic--Prague. </subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/schools+czech+republic+prague{su}">
+                            <subject encodinganalog="650" source="lcsh">Schools--Czech
+                                Republic--Prague. </subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/women+employment+czech+republic+prague{su}">
+                            <subject encodinganalog="650" source="lcsh">Women--Employment--Czech
+                                Republic--Prague. </subject>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Places</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/czechoslovakia+history{su}">
+                            <geogname encodinganalog="651" source="lcsh">Czechoslovakia--History.
+                            </geogname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/czechoslovakia+politics+and+government+20th+century{su}">
+                            <geogname encodinganalog="651" source="lcsh">Czechoslovakia--Politics
+                                and government--20th century. </geogname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/prague+czech+republic+description+and+travel{su}">
+                            <geogname encodinganalog="651" source="lcsh">Prague (Czech
+                                Republic)--Description and travel. </geogname>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="110" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+
+
+        <!-- optional, if applicable -->
+        <relatedmaterial encodinganalog="544 1">
+            <head>Related Material</head>
+            <p>Mitchell mss. II; also located at the Lilly Library, Indiana University, Bloomington,
+                Indiana.</p>
+        </relatedmaterial>
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired 1963, 1965, 1967, 1968, 1969, 1980</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>Mitchell mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAB9330-00001" level="series">
+                <did>
+                    <!-- optional -->
+                    <container label="Box" type="box">1</container>
+
+                    <unittitle>I. Correspondence</unittitle>
+
+
+                </did>
+                <c02 id="VAB9330-00002" level="file">
+                    <did>
+
+                        <unittitle>
+                            <unitdate normal="1919/1950" type="inclusive">1919-1950</unitdate>
+                        </unittitle>
+                        <note>
+                            <p>Includes a copy of Mitchell's The Coup d'Etat in Prague (1949)</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 id="VAB9330-00003" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>
+                            <unitdate normal="1955/1968-04" type="inclusive">1955-1968,
+                                Apr.</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9330-00004" level="file">
+                    <did>
+                        <container label="Box" type="box">3</container>
+                        <unittitle>
+                            <unitdate normal="1968-05/1977" type="inclusive">1968,
+                                May-1977</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAB9330-00005" level="series">
+                <did>
+                    <container label="Box" type="box">3</container>
+                    <unittitle>II. Notes</unittitle>
+                </did>
+                <c02 id="VAB9330-00006" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1919/1920" type="inclusive">1919-1920</unitdate>
+                        </unittitle>
+                        <note>
+                            <p>Czechoslovakia notebook</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 id="VAB9330-00007" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1925-08-16/1925-09-24" type="inclusive">1925, Aug.
+                                16-Sept. 24</unitdate>
+                        </unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                        <note>
+                            <p>Notes made on first return visit to Czechoslovakia</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 id="VAB9330-00008" level="file">
+                    <did>
+                        <container label="Box" type="box">4</container>
+                        <unittitle>
+                            <unitdate normal="1926/1946" type="inclusive">1926-1946</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9330-00009" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1945/1946" type="inclusive">1945-1946</unitdate>
+                        </unittitle>
+                        <note>
+                            <p>Notebooks on London (1945) and Czechoslovakia (June-July, 1946)</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 id="VAB9330-00010" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1946-06/1946-12" type="inclusive">1946,
+                                June-Dec.</unitdate>
+                        </unittitle>
+                        <note>
+                            <p>Notebook on Czechoslovakia</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 id="VAB9330-00011" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1946/1955" type="inclusive">1946-1955</unitdate>
+                        </unittitle>
+                        <note>
+                            <p>Notebook on conference relating to Jan Masaryk's death.</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 id="VAB9330-00012" level="file">
+                    <did>
+                        <unittitle>Miscellaneous</unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAB9330-00013" level="series">
+                <did>
+                    <container label="Box" type="box">4</container>
+                    <unittitle>III. Photographs</unittitle>
+                </did>
+                <c02 id="VAB9330-00014" level="file">
+                    <did>
+                        <unittitle>Negatives</unittitle>
+                        <physdesc>(196 negatives)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9330-00015" level="file">
+                    <did>
+                        <unittitle>American relief for Czechoslovakia</unittitle>
+                        <physdesc>(21 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9330-00016" level="file">
+                    <did>
+                        <unittitle>Czech camp on Borglum estate in Connecticut, <unitdate
+                                normal="1917/1918" type="inclusive">1917-1918</unitdate></unittitle>
+                        <physdesc>(5 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9330-00017" level="file">
+                    <did>
+                        <unittitle>Czechoslovakia:</unittitle>
+                    </did>
+                    <c03 id="VAB9330-00018" level="file">
+                        <did>
+                            <unittitle>
+                                <unitdate normal="1919/1920" type="inclusive">ca.
+                                    1919-1920</unitdate>
+                            </unittitle>
+                            <physdesc>(96 folders)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9330-00019" level="file">
+                        <did>
+                            <unittitle>
+                                <unitdate normal="1920/1948" type="inclusive">ca.
+                                    1920-1948</unitdate>
+                            </unittitle>
+                            <physdesc>(49 photographs)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9330-00020" level="file">
+                        <did>
+                            <unittitle>
+                                <unitdate normal="1920">ca. 1920</unitdate>
+                            </unittitle>
+                            <physdesc>(25 photographs)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9330-00021" level="file">
+                        <did>
+                            <unittitle>General</unittitle>
+                            <physdesc>(34 photographs)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9330-00022" level="file">
+                        <did>
+                            <unittitle>Postcard view and prints</unittitle>
+                            <physdesc>(22 pictures)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9330-00023" level="file">
+                        <did>
+                            <unittitle>
+                                <unitdate normal="1917/1966" type="inclusive">undated</unitdate>
+                            </unittitle>
+                            <physdesc>(3 photographs)</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9330-00024" level="file">
+                    <did>
+                        <unittitle>Marblehead Labor Day Picnic, <unitdate normal="1921"
+                                >1921</unitdate></unittitle>
+                        <physdesc>(9 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9330-00025" level="file">
+                    <did>
+                        <unittitle>People</unittitle>
+                    </did>
+                    <c03 id="VAB9330-00026" level="file">
+                        <did>
+                            <unittitle>A - M</unittitle>
+                            <physdesc>(6 photographs)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9330-00027" level="file">
+                        <did>
+                            <unittitle>Masaryk, Alice Garrigue</unittitle>
+                            <physdesc>(47 photographs)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9330-00028" level="file">
+                        <did>
+                            <unittitle>Masaryk, Charlotte Garrigue</unittitle>
+                            <physdesc>(3 photographs)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9330-00029" level="file">
+                        <did>
+                            <unittitle>Masaryk, Herberta</unittitle>
+                            <physdesc>(5 photographs)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9330-00030" level="file">
+                        <did>
+                            <unittitle>Masaryk, Jan</unittitle>
+                            <physdesc>(8 photographs)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9330-00031" level="file">
+                        <did>
+                            <unittitle>Masaryk, Jan and Francis (Crane) Leatherby. Wedding,
+                                    <unitdate normal="1924-12-28">Dec. 28,
+                                1924</unitdate></unittitle>
+                            <physdesc>(2 photographs)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9330-00032" level="file">
+                        <did>
+                            <unittitle>Masaryk, Tomáš Garrigue</unittitle>
+                            <physdesc>(54 photographs)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9330-00033" level="file">
+                        <did>
+                            <unittitle>Mitchell, Ruth Crawford</unittitle>
+                            <physdesc>(4 photographs)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9330-00034" level="file">
+                        <did>
+                            <unittitle>N - Z</unittitle>
+                            <physdesc>(15 photographs)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9330-00035" level="file">
+                        <did>
+                            <unittitle>Miscellaneous and unidentified</unittitle>
+                            <physdesc>(14 photographs)</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9330-00036" level="file">
+                    <did>
+                        <unittitle>Photo Album</unittitle>
+                    </did>
+                    <c03 id="VAB9330-00037" level="file">
+                        <did>
+                            <unittitle>Czechoslovakia, <unitdate normal="1919">ca.
+                                1919</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9330-00038" level="file">
+                        <did>
+                            <unittitle>Czechoslovakia, <unitdate normal="1925">ca.
+                                1925</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9330-00039" level="file">
+                    <did>
+                        <container label="Oversize" type="box">1</container>
+                        <unittitle>Urban and country views </unittitle>
+                        <physdesc>(7 photographs)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9330-00040" level="file">
+                    <did>
+
+                        <unittitle>Photograph of Charlotte Garrigue Masaryk portrait </unittitle>
+
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAB9330-00041" level="series">
+                <did>
+                    <container label="Box" type="box">4</container>
+                    <unittitle>IV. Printed</unittitle>
+                </did>
+                <c02 id="VAB9330-00042" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1918/1920" type="inclusive">1918-1920</unitdate>
+                        </unittitle>
+                        <note>
+                            <p>Czech Declaration of Independence and Constitution</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 id="VAB9330-00043" level="file">
+                    <did>
+                        <unittitle>
+                            <unitdate normal="1920/1968" type="inclusive">1920-1968</unitdate>
+                        </unittitle>
+                        <note>
+                            <p>Contains Czech brochures, clippings, literature from American Relief
+                                for Czechoslovakia Inc., magazine articles</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 id="VAB9330-00044" level="file">
+                    <did>
+                        <unittitle>Mitchell, Ruth (Crawford)</unittitle>
+                        <note>
+                            <p>Includes newspaper and magazine clippings, programs, announcements
+                                from American Relief for Czechoslovakia, Inc.</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 id="VAB9330-00045" level="file">
+                    <did>
+                        <unittitle>Map of war zone in Central Europe, <unitdate normal="1919">ca.
+                                1919</unitdate></unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAB9330-00046" level="series">
+                <did>
+                    <container label="Box" type="box">3</container>
+                    <unittitle>V. Writings</unittitle>
+                </did>
+                <c02 id="VAB9330-00047" level="file">
+                    <did>
+                        <unittitle>Diaries, <unitdate normal="1919-04-19/1919-10-28"
+                                type="inclusive">April 19 to October 28, 1919</unitdate></unittitle>
+                        <physdesc>(12 folders)</physdesc>
+                        <note>
+                            <p>Original, extracts, first and second drafts</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 id="VAB9330-00048" level="file">
+                    <did>
+                        <container label="Box" type="box">5</container>
+                        <unittitle>Hess, Fjeril. The Czechoslovaks in Europe and America, <unitdate
+                                normal="1918-08-14">Aug. 14, 1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9330-00049" level="file">
+                    <did>
+                        <unittitle>Mitchell, Ruth (Crawford)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9330-00050" level="file">
+                    <did>
+                        <unittitle>Czechoslovakia today (radio talk), <unitdate normal="1946-11-28"
+                                >Nov. 28, 1946</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9330-00051" level="file">
+                    <did>
+                        <unittitle>James Harvey Gaul, 1911-1945, <unitdate normal="1917/1966"
+                                type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9330-00052" level="file">
+                    <did>
+                        <unittitle>Pittsburgh and the First Czechoslovak Republic, 1919-1939,
+                                <unitdate normal="1917/1966" type="inclusive"
+                            >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9330-00053" level="file">
+                    <did>
+                        <unittitle>Unveiling of Jan Hus Window, <unitdate normal="1957-01-13">Jan.
+                                13, 1957</unitdate></unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAB9330-00054" level="series">
+                <did>
+                    <container label="Box" type="box">5</container>
+                    <unittitle>VI. Miscellaneous</unittitle>
+                </did>
+                <c02 id="VAB9330-00055" level="file">
+                    <did>
+                        <unittitle>Elinor Pruden Reports on YWCA in Prague, <unitdate
+                                normal="1920/1922" type="inclusive">1920-1922</unitdate></unittitle>
+                        <physdesc>(5 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAB9330-00056" level="file">
+                    <did>
+                        <unittitle>Passport Case</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9330-00057" level="file">
+                    <did>
+                        <unittitle>Citation</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9330-00058" level="file">
+                    <did>
+                        <unittitle>Copper plate portrait on wood block</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9330-00059" level="file">
+                    <did>
+                        <container label="Oversize" type="box">2</container>
+                        <unittitle>Survey of Prague, <unitdate normal="1919/1921" type="inclusive"
+                                >1919-1921</unitdate></unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
