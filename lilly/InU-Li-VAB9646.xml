@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAB9646">InU-Li-VAB9646</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Jansen, Peter K. mss., <date normal="1836/2005"
+                        >1836-2005</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2010" type="publication">© 2010</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2010">© 2010</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                    <lb/><date normal="2010" type="source">2010</date>
+                <lb/>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2010-08-24">August 24, 2010</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2010-08-24"/>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Jansen, Peter K.</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Jansen, Peter K. mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1836/2005" type="inclusive"
+                >1836-2005</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2704</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>ca. 350 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Jansen, Peter K. mss., 1836–2005,
+                consists primarily of manuscripts, drafts, correspondence and other material
+                relating to translations into English from the German made by Peter K. Jansen
+                (1934–2007) over the course of his career.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+
+            <p> Peter K. Jansen, born in Essen, Germany, completed his M.A. and Ph.D at the
+                University of Illinois. After working both at the University of Illinois and Indiana
+                University, he joined the faculty of the University of Chicago in 1968, where he
+                remained until his retirement in 1999. In addition to his scholarship, Jansen was an
+                accomplished literary translator, and taught the theory and practice of translation
+                at Chicago.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Correspondence; II. Essays;
+                III; Translations; IV. Miscellaneous.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Jansen, Peter K. mss., 1836–2005, consists primarily of manuscripts, drafts,
+                correspondence and other material relating to translations into English from the
+                German made by Peter K. Jansen (1934–2007) over the course of his career. Included
+                with his papers are extensive correspondence relating to his family in Germany from
+                the mid–19th well into the twentieth century.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/jansen+peter+k">
+                            <persname encodinganalog="600" source="lcnaf">Jansen, Peter K.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/jansen+peter+k">
+                            <persname encodinganalog="600" source="lcnaf">Jansen, Peter K.
+                                --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/indiana+university+faculty+archives">
+                            <corpname encodinganalog="610" source="lcnaf">Indiana University
+                                --Faculty --Archives. </corpname>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/translators{su}">
+                            <subject encodinganalog="650" source="lcsh">Translators
+                                --Correspondence. </subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/universities+and+colleges+faculty+manuscripts{su}">
+                            <subject encodinganalog="650" source="lcsh">Universities and colleges
+                                --Faculty --Manuscripts. </subject>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="110" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 2009</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>Jansen, Peter K. mss., Lilly Library, Indiana University, Bloomington, Indiana.
+                </p>
+            </prefercite>
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Craig S. Simpson.</p>
+                <p>Completed in <date normal="2010">2010.</date></p>
+
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+         
+                <c01 id="VAB9646-00002" level="series">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <unittitle>I. Correspondence</unittitle>
+
+                    </did>
+                    <arrangement>
+                        <p>Arranged chronologically by correspondent.</p>
+                    </arrangement>
+                    <c02 id="VAB9646-00003" level="file">
+                        <did>
+                            <container label="Folder" type="folder">1-3</container>
+                            <unittitle>Family correspondence: <unitdate normal="1856/1959"
+                                    type="inclusive">1856–1959</unitdate></unittitle>
+                            <physdesc>(ca. 200 letters)</physdesc>
+                        </did>
+                    </c02>
+                    <c02 id="VAB9646-00004" level="file">
+                        <did>
+                            <container label="Folder" type="folder">4</container>
+                            <unittitle>Other correspondence: <unitdate normal="1990/1996"
+                                    type="inclusive">1990–1996</unitdate></unittitle>
+                        </did>
+                        <note>
+                            <p> (2 letters and 1 postcard, Vinzinczey, Stephen; 1 letter, Wolf,
+                                Christa)</p>
+                        </note>
+                    </c02>
+
+                </c01>
+                <c01 id="VAB9646-00005" level="series">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <unittitle>II. Essays</unittitle>
+                    </did>
+                    <arrangement>
+                        <p>All essays by Peter Jansen, arranged alphabetically by title.</p>
+                    </arrangement>
+                    <c02 id="VAB9646-00006" level="file">
+                        <did>
+                            <container label="Folder" type="folder">5</container>
+                            <unittitle><title render="doublequote">Heinrich Leopold Wagner: A
+                                    Re-evaluation</title></unittitle>
+                        </did>
+                    </c02>
+                    <c02 id="VAB9646-00007" level="file">
+                        <did>
+                            <container label="Folder" type="folder">6</container>
+                            <unittitle><title render="doublequote">Henry James and Mark Twain's
+                                        <emph render="italic">A Connecticut Yankee in King Arthur's
+                                        Court</emph></title></unittitle>
+                        </did>
+                    </c02>
+                    <c02 id="VAB9646-00008" level="file">
+                        <did>
+                            <container label="Folder" type="folder">7</container>
+                            <unittitle><title render="doublequote">Hochmut kommt vor dem Fall: Zu
+                                    Balladen von Ludwig Uhland und Bertolt
+                                Brecht</title></unittitle>
+                        </did>
+                    </c02>
+                    <c02 id="VAB9646-00009" level="file">
+                        <did>
+                            <container label="Folder" type="folder">8</container>
+                            <unittitle><title render="doublequote">The Pleasures and Pain of
+                                    Translating Thomas Bernhard</title></unittitle>
+                        </did>
+                    </c02>
+                    <c02 id="VAB9646-00010" level="file">
+                        <did>
+                            <container label="Folder" type="folder">9</container>
+                            <unittitle><title render="doublequote">You Can't Get There From Here:
+                                    The Limits of Translatability and the Triumph of Translation,
+                                    or: Confessions of a Reluctant Translator</title></unittitle>
+                        </did>
+                    </c02>
+
+                </c01>
+                <c01 id="VAB9646-00011" level="series">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <unittitle>III. Translations</unittitle>
+
+                    </did>
+                    <arrangement>
+                        <p>All translations by Peter Jansen, arranged alphabetically by original
+                            author, unless noted otherwise.</p>
+                    </arrangement>
+                    <c02 id="VAB9646-00012" level="file">
+                        <did>
+                            <container label="Folder" type="folder">10</container>
+                            <unittitle>Andriopoulos, Stefan: <title render="italic">Besessene
+                                    Körper</title></unittitle>
+                            <note>
+                                <p>Includes correspondence with publishers, and annotated vetting by
+                                    Kenneth Northcott of Jansen's translation sample</p>
+                            </note>
+                        </did>
+                    </c02>
+                    <c02 id="VAB9646-00013" level="file">
+                        <did>
+                            <container label="Folder" type="folder">11-13</container>
+                            <unittitle>Benn, Gottfried: <title render="doublequote">Essays</title>;
+                                    <title render="doublequote">Poems</title>; <title
+                                    render="doublequote">Prose</title></unittitle>
+                        </did>
+                    </c02>
+                    <c02 id="VAB9646-00014" level="file">
+                        <did>
+                            <container label="Folder" type="folder">14-17</container>
+                            <unittitle>Bernhard, Thomas: <title render="italic"
+                                >Amras</title></unittitle>
+                            <note>
+                                <p>Includes correspondence with publisher, and contract; first
+                                    draft; penultimate draft; second draft</p>
+                            </note>
+                        </did>
+                    </c02>
+                    <c02 id="VAB9646-00015" level="file">
+                        <did>
+                            <container label="Folder" type="folder">18</container>
+                            <unittitle>Gauss, Karl–Markus: <title render="italic">Die Hundeesser von
+                                    Svinia</title></unittitle>
+                        </did>
+                    </c02>
+                    <c02 id="VAB9646-00016" level="file">
+                        <did>
+                            <container label="Folder" type="folder">19</container>
+                            <unittitle>Haller, Christian: <title render="italic">Das schwarze
+                                    Eisen</title></unittitle>
+                            <note>
+                                <p>(German text only)</p>
+                            </note>
+                        </did>
+                    </c02>
+                    <c02 id="VAB9646-00017" level="file">
+                        <did>
+                            <container label="Folder" type="folder">20</container>
+                            <unittitle>Jansen, Sarah: <title render="italic"
+                                >Schādlinge</title>Includes correspondence with
+                                publishers</unittitle>
+                        </did>
+                    </c02>
+                    <c02 id="VAB9646-00018" level="file">
+                        <did>
+                            <container label="Folder" type="folder">21</container>
+                            <unittitle>Klüssendorf, Angelika: <title render="doublequote">Yvette
+                                    Intim,</title> from <title render="italic">Alle leben
+                                so</title></unittitle>
+                        </did>
+                    </c02>
+                    <c02 id="VAB9646-00019" level="file">
+                        <did>
+                            <container label="Folder" type="folder">22</container>
+                            <unittitle>Strauss, Botho: <title render="italic">Seven
+                                Doors</title></unittitle>
+                        </did>
+                    </c02>
+                    <c02 id="VAB9646-00020" level="file">
+                        <did>
+                            <container label="Folder" type="folder">23</container>
+                            <unittitle>Vertlib, Vladimir: <title render="doublequote">A Jew, how
+                                    interesting!</title></unittitle>
+                        </did>
+                    </c02>
+                    <c02 id="VAB9646-00021" level="file">
+                        <did>
+                            <container label="Folder" type="folder">24</container>
+                            <unittitle>Various authors: <title render="italic">Berlin im Lichte der
+                                    Nacht</title></unittitle>
+                            <note>
+                                <p>(Grube, Dieter, ed.)</p>
+                            </note>
+                        </did>
+                    </c02>
+                    <c02 id="VAB9646-00022" level="file">
+                        <did>
+                            <container label="Folder" type="folder">25</container>
+                            <unittitle>Unidentified author: <title render="doublequote">The Duck in
+                                    the Bottle</title></unittitle>
+                        </did>
+                    </c02>
+
+                </c01>
+                <c01 id="VAB9646-00023" level="series">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <unittitle>IV. Miscellaneous</unittitle>
+
+                    </did>
+                    <c02 id="VAB9646-00024" level="file">
+                        <did>
+                            <container label="Folder" type="folder">26</container>
+                            <unittitle>Helen and Kurt Wolff Prize material</unittitle>
+                        </did>
+                    </c02>
+                    <c02 id="VAB9646-00025" level="file">
+                        <did>
+                            <container label="Folder" type="folder">27</container>
+                            <unittitle>Reviews of English–language theater productions</unittitle>
+                        </did>
+                    </c02>
+                    <c02 id="VAB9646-00026" level="file">
+                        <did>
+                            <container label="Folder" type="folder">28</container>
+                            <unittitle>Vetting of Kenneth Northcott's translation of Siegfried
+                                Unseld's <title render="italic">Goethe und der
+                                Ginko</title></unittitle>
+                        </did>
+                    </c02>
+
+                </c01>
+        </dsc>
+    </archdesc>
+</ead>
