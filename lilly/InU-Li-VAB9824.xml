@@ -1,0 +1,2333 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAB9824">InU-Li-VAB9824</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Harvey mss., <date normal="1928/2002"
+                        >1928-2002</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2010" type="publication">© 2010</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2010">© 2010</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                    <lb/><date normal="2010" type="source">2010</date>
+                <lb/>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2010-08-30">August 30, 2010</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2010-08-30"/>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Harvey, Anthony, 1931- </persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Harvey mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1928/2002" type="inclusive"
+                >1928-2002</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1474</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>ca. 1750 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Harvey mss., 1928-2002, consists of
+                the papers of film editor and director Anthony Kesteven Harvey, 1930- .</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+            <p>Harvey was born in London and educated in prep schools. His introduction to film was
+                as an actor, playing younger brother, Ptolemy to Vivien Leigh's Cleopatra in <title
+                    render="italic">Caesar and Cleopatra</title> (1945). He won a scholarship to the
+                Royal Academy of Dramatic Arts, but soon realized that acting would not be his
+                calling. His break came at the Shepperton Studios as assistant editor and later
+                editor for filmmakers John and Roy Boulting. By the 1960s he was editing for such
+                directors as Bryan Forbes and Stanley Kubrick. After editing <title render="italic"
+                    >Lolita</title> (1962) and <title render="italic">Dr. Strangelove</title>
+                (1964), Kubrick asked Harvey to edit <title render="italic">2001: A Space
+                    Odyssey</title>, but Harvey declined in order to direct his first film <title
+                    render="italic">Dutchman</title>, based on the Amiri Baraka play. The
+                controversial film made in 1966 garnered much attention and won the Golden Lion
+                award at the Venice Film Festival. His directorial debut also attracted the interest
+                of actor Peter O'Toole who insisted on Harvey directing his next film <title
+                    render="italic">The Lion in Winter</title> (1968). <title render="italic"
+                    >Lion</title> was a huge success earning Harvey the Directors' Guild Award, as
+                well as Oscars for best actress for Katharine Hepburn, best screenplay, and best
+                score. Harvey went on to direct such feature films as <title render="italic">They
+                    Might be Giants</title> (1971) starring George C. Scott and Joanne Woodward and
+                    <title render="italic">The Abdication</title> (1974) with Liv Ullmann. His
+                television films include <title render="italic">The Glass Menagerie</title> (1973),
+                again with Hepburn, <title render="italic">The Abduction of Aimee</title> (1976)
+                with Faye Dunaway, and <title render="italic">Svengali</title> (1983) starring Peter
+                O'Toole and Jodie Foster.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Correspondence; II. Films;
+                and, III. People .</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Harvey mss., 1928-2002, consists of the papers of film editor and director
+                Anthony Kesteven Harvey, 1930- . The collection includes correspondence, photographs
+                and stills relating to his films. Also included are promotional material, posters,
+                and clippings. Of particular interest is Stanley Kubrick's notebook containing scene
+                variants for his film <title render="italic">Lolita.</title></p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/harvey+anthony+1931-{su}">
+                            <persname encodinganalog="600" source="lcnaf">Harvey, Anthony, 1931-
+                                --Manuscripts.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/kubrick+stanley{su}">
+                            <persname encodinganalog="600" source="lcnaf">Kubrick, Stanley
+                                --Manuscripts. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/attenborough+richard{su}">
+                            <persname encodinganalog="700" source="lcnaf">Attenborough, Richard.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/bogarde+dirk+1921-1999{su}">
+                            <persname encodinganalog="700" source="lcnaf">Bogarde, Dirk, 1921-1999.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/boulting+roy">
+                            <persname encodinganalog="700" source="lcnaf">Boulting, Roy. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/forbes+bryan+1926-{su}">
+                            <persname encodinganalog="700" source="lcnaf">Forbes, Bryan, 1926-
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/hepburn+katharine+1907-2003{su}">
+                            <persname encodinganalog="700" source="lcnaf">Hepburn, Katharine,
+                                1907-2003. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/le+carre+john+1931-{su}">
+                            <persname encodinganalog="700" source="lcnaf">Le Carré, John, 1931-
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/macgraw+ali{su}">
+                            <persname encodinganalog="700" source="lcnaf">MacGraw, Ali. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/pintoff+ernest">
+                            <persname encodinganalog="700" source="lcnaf">Pintoff, Ernest.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/ullman+liv">
+                            <persname encodinganalog="700" source="lcnaf">Ullmann, Liv.</persname>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/lolita+motion+picture+1962{su}">
+                            <subject encodinganalog="650" source="lcsh">Lolita (Motion picture :
+                                1962) --Manuscripts. </subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/motion+picture+producers+and+directors+united+states+manuscripts{su}">
+                            <subject encodinganalog="650" source="lcsh">Motion picture producers and
+                                directors --United States --Manuscripts. </subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/motion+picture+editors+manuscripts{su}">
+                            <subject encodinganalog="650" source="lcsh">Motion picture editors
+                                --Manuscripts. </subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/motion+picture+actors+and+actresses+correspondence{su}">
+                            <subject encodinganalog="650" source="lcsh">Motion picture actors and
+                                actresses --Correspondence.</subject>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="110" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 2003</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>Harvey mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+
+           
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAB9824-00001" level="series">
+                <did>
+                    <!-- optional -->
+                    <container label="Box" type="box">1</container>
+
+
+                    <unittitle>I. Correspondence</unittitle>
+
+
+                </did>
+                <arrangement>
+                    <p>Arranged alphabetically by author, then date of letter, telegram, postcard,
+                        etc. All correspondence is to Anthony Harvey, unless otherwise
+                        indicated.</p>
+                </arrangement>
+                <c02 id="VAB9824-00002" level="file">
+                    <did>
+                        <container label="Folder" type="folder">1</container>
+                        <unittitle>Addison, John. <unitdate normal="1984-05-02">1984, May
+                                2,</unitdate><unitdate normal="1984-06-18">June
+                            18</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00003" level="file">
+                    <did>
+                        <container label="Folder" type="folder">2</container>
+                        <unittitle>Allen, Lewis. <unitdate normal="1969-04-25">1969, Apr.
+                                25,</unitdate><unitdate normal="1969-05-07">May
+                                7,</unitdate><unitdate normal="1969-06-09">June
+                            9</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00004" level="file">
+                    <did>
+                        <container label="Folder" type="folder">3</container>
+                        <unittitle>Anderson, Lindsay. <unitdate normal="1969-10-21">1969, Oct.
+                                21</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00005" level="file">
+                    <did>
+                        <container label="Folder" type="folder">4</container>
+                        <unittitle>Anouilh, Jean. <unitdate normal="1928/2002" type="inclusive"
+                                >Undated</unitdate></unittitle>
+                        <note>
+                            <p>letter and note</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00006" level="file">
+                    <did>
+                        <container label="Folder" type="folder">5</container>
+                        <unittitle>Ardrey, Robert. <unitdate normal="1970-03-08">1970, Mar.
+                                8</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00007" level="file">
+                    <did>
+                        <container label="Folder" type="folder">6</container>
+                        <unittitle>Attenborough, Richard. <unitdate normal="1960-03-13">1960, Mar.
+                                13;</unitdate><unitdate normal="1964-10-21">1964, Oct.
+                                21;</unitdate><unitdate normal="1965-03-23">1965, Mar.
+                                23,</unitdate><unitdate normal="1965-04-05">Apr.
+                                5;</unitdate><unitdate normal="1967-06-16">1967, June
+                                16;</unitdate><unitdate normal="1968-04-12">1968, Apr.
+                                12;</unitdate><unitdate normal="1972-07-20">1972, July
+                                20;</unitdate><unitdate normal="1976-03-24">1976, Mar.
+                                24;</unitdate><unitdate normal="1983-07-22">1983, July
+                                22;</unitdate><unitdate normal="1994">1994</unitdate>(Christmas
+                            card); <unitdate normal="1928/2002">undated
+                            letter</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00008" level="file">
+                    <did>
+                        <container label="Folder" type="folder">7</container>
+                        <unittitle>Audran, Stephane. <unitdate normal="1969-08-16">1969, Aug.
+                                16;</unitdate><unitdate normal="1980-02-21">1980, Feb.
+                                21;</unitdate><unitdate normal="1928/2002" type="inclusive">four
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00009" level="file">
+                    <did>
+                        <container label="Folder" type="folder">8</container>
+                        <unittitle>Bancroft, Anne and Mel Brooks. <unitdate normal="1970-04-10"
+                                >1970, Apr. 10,</unitdate><unitdate normal="1970-06-25">June
+                                25,</unitdate><unitdate normal="1970-08-24">Aug.
+                            24;</unitdate></unittitle>
+                        <note>
+                            <p>one undated photocopy of letter to <emph render="doublequote"
+                                    >Robbie</emph></p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00010" level="file">
+                    <did>
+                        <container label="Folder" type="folder">9</container>
+                        <unittitle>Baraka, Imamu Amiri. <unitdate normal="1966"
+                            >1966</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00011" level="file">
+                    <did>
+                        <container label="Folder" type="folder">10</container>
+                        <unittitle>Barnes, Bill. <unitdate normal="1973">1973</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00012" level="file">
+                    <did>
+                        <container label="Folder" type="folder">11</container>
+                        <unittitle>Begelman, David. <unitdate normal="1969-12-26">1969, Dec.
+                                26</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00013" level="file">
+                    <did>
+                        <container label="Folder" type="folder">12</container>
+                        <unittitle>Bennett, Michael. <unitdate normal="1972-07-18">1972, July
+                                18</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00014" level="file">
+                    <did>
+                        <container label="Folder" type="folder">13</container>
+                        <unittitle>Benthall, Michael. <unitdate normal="1928/2002" type="inclusive"
+                                >Undated letter</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00015" level="file">
+                    <did>
+                        <container label="Folder" type="folder">14</container>
+                        <unittitle>Bergman, Ingrid. <unitdate normal="1969-04-26">1969, Apr.
+                                26</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00016" level="file">
+                    <did>
+                        <container label="Folder" type="folder">15</container>
+                        <unittitle>Black, Don. <unitdate normal="1982-02-28">1982, Feb.
+                                28</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00017" level="file">
+                    <did>
+                        <container label="Folder" type="folder">16</container>
+                        <unittitle>Bloom, Claire. <unitdate normal="1928/2002" type="inclusive"
+                                >Undated letter</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00018" level="file">
+                    <did>
+                        <container label="Folder" type="folder">17</container>
+                        <unittitle>Bogarde, Dirk. <unitdate normal="1965-01-15">1965, Jan.
+                                15;</unitdate>
+                            <unitdate normal="1967-06-09">1967, June 9;</unitdate>
+                            <unitdate normal="1968-04-13">1968, Apr. 13,</unitdate>
+                            <unitdate normal="1968-05-04">May 4,</unitdate>
+                            <unitdate normal="1968-08-29">Aug. 29,</unitdate>
+                            <unitdate normal="1968-11-22">Nov. 22,</unitdate>
+                            <unitdate normal="1968-12-21">Dec. 21;</unitdate>
+                            <unitdate normal="1969-03-16">1969, Mar. 16,</unitdate>
+                            <unitdate normal="1969-06-07">June 7;</unitdate>
+                            <unitdate normal="1970-02-28">1970, Feb. 28,</unitdate>
+                            <unitdate normal="1970-04-14">Apr. 14,</unitdate>
+                            <unitdate normal="1970-06-02">June 2;</unitdate>
+                            <unitdate normal="1981-02-22">1981, Feb. 22,</unitdate>
+                            <unitdate normal="1981-02-27">Feb. 27,</unitdate>
+                            <unitdate normal="1981-03-10">Mar. 10,</unitdate>
+                            <unitdate normal="1981-04-10">Apr. 10,</unitdate>
+                            <unitdate normal="1981-04-11">Apr. 11,</unitdate>
+                            <unitdate normal="1981-05-14">May 14,</unitdate>
+                            <unitdate normal="1981-12-05">Dec. 5,</unitdate>
+                            <unitdate normal="1981-12-18">Dec. 18;</unitdate>
+                            <unitdate normal="1982-01-04">1982, Jan. 4,</unitdate>
+                            <unitdate normal="1982-02-04">Feb. 4;</unitdate>
+                            <unitdate normal="1984-05-26">1984, May 26;</unitdate>
+                            <unitdate normal="1986-02-03">1986, Feb. 3,</unitdate>
+                            <unitdate normal="1986-03-18">Mar. 18;</unitdate>
+                            <unitdate normal="1991-05-10">1991, May 10;</unitdate>
+                            <unitdate normal="1928/2002" type="inclusive">nine undated</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00019" level="file">
+                    <did>
+                        <container label="Folder" type="folder">18</container>
+                        <unittitle>Boulting, Roy and John Boulting. <unitdate normal="1955"
+                                >1955;</unitdate>
+                            <unitdate normal="1956-02-14">1956, Feb. 14;</unitdate>
+                            <unitdate normal="1958-09-01">1958, Sept. 1,</unitdate>
+                            <unitdate normal="1958-12-23">Dec. 23;</unitdate>
+                            <unitdate normal="1959-09-14">1959, Sept. 14;</unitdate>
+                            <unitdate normal="1966-03-29">1966, Mar. 29;</unitdate>
+                            <unitdate normal="1967-12-20">1967, Dec. 20;</unitdate>
+                            <unitdate normal="1969-12-09">1969, Dec. 9;</unitdate>
+                            <unitdate normal="1970-09-01">1970, Sept. 1;</unitdate>
+                            <unitdate normal="1971-06-24">1971, June 24;</unitdate>
+                            <unitdate normal="1972-01-04">1972, Jan. 4;</unitdate>
+                            <unitdate normal="1975-06-01">1975, June 1;</unitdate>
+                            <unitdate normal="1976-09-16">1976, Sept. 16;</unitdate>
+                            <unitdate normal="1977-01-11">1977, Jan. 11,</unitdate>
+                            <unitdate normal="1977-01-21">Jan. 21,</unitdate>
+                            <unitdate normal="1977-04-18">Apr. 18;</unitdate>
+                            <unitdate normal="1982-05-26">1982, May 26,</unitdate>
+                            <unitdate normal="1982-08-26">Aug. 26;</unitdate>
+                            <unitdate normal="1985-10-11">1985, Oct. 11 (2);</unitdate>
+                            <unitdate normal="1988-07-07">1988, July 7,</unitdate>
+                            <unitdate normal="1988-11-28">Nov. 28;</unitdate>
+                            <unitdate normal="1989-12-08">1989, Dec. 8;</unitdate>
+                            <unitdate normal="1992-12">1992, Dec.;</unitdate>
+                            <unitdate normal="1993-02-09">1993, Feb. 9;</unitdate>
+                            <unitdate normal="1996-06-12">1996, June 12;</unitdate>
+                            <unitdate normal="1999-09-04">1999, Sept. 4;</unitdate>
+                            <unitdate normal="1928/2002" type="inclusive">four undated;</unitdate>
+                            <unitdate normal="1965-08-23">1965, Aug. 23</unitdate>letter from John
+                            Boulting to M. Frankovitch </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00020" level="file">
+                    <did>
+                        <container label="Folder" type="folder">19</container>
+                        <unittitle>Bricusse, Leslie. <unitdate normal="1969-03-12">1969, Mar.
+                                12;</unitdate><unitdate normal="1928/2002" type="inclusive">two
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00021" level="file">
+                    <did>
+                        <container label="Folder" type="folder">20</container>
+                        <unittitle>British Board of Censors. <unitdate normal="1966-07-28">1966,
+                                July 28;</unitdate><unitdate normal="1967-11-06">1967, Nov.
+                                6</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00022" level="file">
+                    <did>
+                        <container label="Folder" type="folder">21</container>
+                        <unittitle>Byron, Kathleen. <unitdate normal="1928/2002" type="inclusive"
+                                >One undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00023" level="file">
+                    <did>
+                        <container label="Folder" type="folder">22</container>
+                        <unittitle>Caldwell, Zoe and Bob Whitehead. <unitdate normal="1993-06-30"
+                                >1993, June 30;</unitdate><unitdate normal="1997-08-09">1997, Aug.
+                                9;</unitdate><unitdate normal="2001-08-18">2001, Aug.
+                                18;</unitdate><unitdate normal="2002-08-01">2002, Aug.
+                                1;</unitdate><unitdate normal="1928/2002" type="inclusive">one
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00024" level="file">
+                    <did>
+                        <container label="Folder" type="folder">23</container>
+                        <unittitle>Carpenter, Constance. <unitdate normal="1983-09-01">1983, Sept.
+                                1</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00025" level="file">
+                    <did>
+                        <container label="Folder" type="folder">24</container>
+                        <unittitle>Carr, Allan. <unitdate normal="1968-04-16">1968, Apr.
+                                16</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00026" level="file">
+                    <did>
+                        <container label="Folder" type="folder">25</container>
+                        <unittitle>Coca, Imogene. <unitdate normal="1928/2002" type="inclusive">One
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00027" level="file">
+                    <did>
+                        <container label="Folder" type="folder">26</container>
+                        <unittitle>Cochran, Charles B. To Morris Harvey. <unitdate
+                                normal="1941-10-20">1941, Oct. 20</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00028" level="file">
+                    <did>
+                        <container label="Folder" type="folder">27</container>
+                        <unittitle>Comden, Betty and Adolph Green. <unitdate normal="1969-05-15"
+                                >1969, May 15</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00029" level="file">
+                    <did>
+                        <container label="Folder" type="folder">28</container>
+                        <unittitle>Cukor, George. <unitdate normal="1970-01-07">1970, Jan.
+                                7;</unitdate><unitdate normal="1973-02-05">1973, Feb.
+                                5;</unitdate><unitdate normal="1979-12-21">1979, Dec.
+                                21;</unitdate><unitdate normal="1983-03-08">1983, Mar.
+                                8;</unitdate><unitdate normal="1928/2002" type="inclusive">four
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00030" level="file">
+                    <did>
+                        <container label="Folder" type="folder">29</container>
+                        <unittitle>Cusack, Cyril. <unitdate normal="1993-08-25">1993, Aug.
+                                25</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00031" level="file">
+                    <did>
+                        <container label="Folder" type="folder">30</container>
+                        <unittitle>Davis, Bette. <unitdate normal="1982-04-15">1982, Apr.
+                                15;</unitdate><unitdate normal="1928/2002" type="inclusive">two
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00032" level="file">
+                    <did>
+                        <container label="Folder" type="folder">31</container>
+                        <unittitle>Day-Lewis, Daniel. <unitdate normal="1998-12-17">1998, Dec.
+                                17</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00033" level="file">
+                    <did>
+                        <container label="Folder" type="folder">32</container>
+                        <unittitle>Dehn, Paul. <unitdate normal="1965-09-26">1965, Sept.
+                                26</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00034" level="file">
+                    <did>
+                        <container label="Folder" type="folder">33</container>
+                        <unittitle>Delaney, Shelagh. <unitdate normal="1928/2002" type="inclusive"
+                                >Two undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00035" level="file">
+                    <did>
+                        <container label="Folder" type="folder">34</container>
+                        <unittitle>Dunaway, Faye. <unitdate normal="1976-08-30">1976, Aug.
+                                30</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00036" level="file">
+                    <did>
+                        <container label="Folder" type="folder">35</container>
+                        <unittitle>Dunn, Michael. <unitdate normal="1973-06-13">1973, June
+                                13;</unitdate>one from family, <unitdate normal="1973"
+                                >1973</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00037" level="file">
+                    <did>
+                        <container label="Folder" type="folder">36</container>
+                        <unittitle>Dunne, Dominick. <unitdate normal="1928/2002" type="inclusive"
+                                >One undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00038" level="file">
+                    <did>
+                        <container label="Folder" type="folder">37</container>
+                        <unittitle>Elkins, Hillard. <unitdate normal="1971-02-03">1971, Feb.
+                                3</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00039" level="file">
+                    <did>
+                        <container label="Folder" type="folder">38</container>
+                        <unittitle>Evans, Robert. <unitdate normal="1979-06-14">1979, June
+                                14</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00040" level="file">
+                    <did>
+                        <container label="Folder" type="folder">39</container>
+                        <unittitle>Feld, Eliot. <unitdate normal="1987-01-09">1987, Jan.
+                                9</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00041" level="file">
+                    <did>
+                        <container label="Folder" type="folder">40</container>
+                        <unittitle>Finch, Peter. <unitdate normal="1973-10-27">1973, Oct.
+                                27;</unitdate><unitdate normal="1974-02-22">1974, Feb.
+                                22;</unitdate><unitdate normal="1976-12">1976,
+                            Dec.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00042" level="file">
+                    <did>
+                        <container label="Folder" type="folder">41</container>
+                        <unittitle>Fine, Sylvia. <unitdate normal="1969-03-14">1969, Mar.
+                                14</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00043" level="file">
+                    <did>
+                        <container label="Folder" type="folder">42</container>
+                        <unittitle>Finney, Albert. <unitdate normal="1976-04-06">1976, Apr.
+                                6</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00044" level="file">
+                    <did>
+                        <container label="Folder" type="folder">43</container>
+                        <unittitle>Forbes, Bryan. <unitdate normal="1960-03-10">1960, Mar.
+                                10;</unitdate>
+                            <unitdate normal="1961-07-16">1961, July 16;</unitdate>
+                            <unitdate normal="1962-08-17">1962, Aug. 17;</unitdate>
+                            <unitdate normal="1964-01-21">1964, Jan. 21,</unitdate>
+                            <unitdate normal="1964-06-19">June 19,</unitdate>
+                            <unitdate normal="1964-10-18">Oct. 18;</unitdate>
+                            <unitdate normal="1966-05-07">1966, May 7;</unitdate>
+                            <unitdate normal="1967-11-21">1967, Nov. 21;</unitdate>
+                            <unitdate normal="1969-10-06">1969, Oct. 6;</unitdate>
+                            <unitdate normal="1971-10-11">1971, Oct. 11;</unitdate>
+                            <unitdate normal="1976-12-03">1976, Dec. 3;</unitdate>
+                            <unitdate normal="1928/2002">two undated</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00045" level="file">
+                    <did>
+                        <container label="Folder" type="folder">44</container>
+                        <unittitle>Foster, Jodie. <unitdate normal="1983-02-21">1983, Feb.
+                                21;</unitdate><unitdate normal="1983">1983
+                            (2)</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00046" level="file">
+                    <did>
+                        <container label="Folder" type="folder">45</container>
+                        <unittitle>Fowles, John. <unitdate normal="1974-12-29">1974, Dec.
+                                29</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00047" level="file">
+                    <did>
+                        <container label="Folder" type="folder">46</container>
+                        <unittitle>Friel, Brian. <unitdate normal="1972-01-10">1972, Jan.
+                                10,</unitdate><unitdate normal="1972-06-25">June
+                                25;</unitdate><unitdate normal="1973-05-23">1973, May
+                                23;</unitdate><unitdate normal="1928/2002" type="inclusive">six
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00048" level="file">
+                    <did>
+                        <container label="Folder" type="folder">47</container>
+                        <unittitle>Gelbart, Larry. <unitdate normal="1928/2002" type="inclusive">One
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00049" level="file">
+                    <did>
+                        <container label="Folder" type="folder">48</container>
+                        <unittitle>Gilford, Jack. <unitdate normal="1970-02-13">1970, Feb.
+                                13</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00050" level="file">
+                    <did>
+                        <container label="Folder" type="folder">49</container>
+                        <unittitle>Goldman, James A. <unitdate normal="1965-05-14">1965, May
+                                14;</unitdate>
+                            <unitdate normal="1968-05-14">1968, May 14;</unitdate>
+                            <unitdate normal="1970-06-06">1970, June 6,</unitdate>
+                            <unitdate normal="1970-08-23">Aug. 23,</unitdate>
+                            <unitdate normal="1970-12-23">Dec. 23;</unitdate>
+                            <unitdate normal="1972-07-02">1972, July 2;</unitdate>
+                            <unitdate normal="1928/2002">12 undated </unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00051" level="file">
+                    <did>
+                        <container label="Folder" type="folder">50</container>
+                        <unittitle>Gordon, Ruth. <unitdate normal="1969-05-07">1969, May
+                                7</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00052" level="file">
+                    <did>
+                        <container label="Folder" type="folder">51</container>
+                        <unittitle>Grey, Joel. <unitdate normal="1972">1972,</unitdate><unitdate
+                                normal="1973-11-19">Nov. 19; 1973,</unitdate><unitdate
+                                normal="1973-04-25">Apr. 25</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00053" level="file">
+                    <did>
+                        <container label="Folder" type="folder">52</container>
+                        <unittitle>Grimes, Tammy. <unitdate normal="1978-07-01">1978, July
+                                1;</unitdate><unitdate normal="1983-08-21">1983, Aug.
+                                21;</unitdate><unitdate normal="1988-06-11">1988, June
+                                11;</unitdate><unitdate normal="1928/2002" type="inclusive">two
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00054" level="file">
+                    <did>
+                        <container label="Folder" type="folder">53</container>
+                        <unittitle>Halmi, Robert. <unitdate normal="1928/2002" type="inclusive">One
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00055" level="file">
+                    <did>
+                        <container label="Folder" type="folder">54</container>
+                        <unittitle>Hamilton, Nancy. <unitdate normal="1983-07-18">1983, July
+                                18;</unitdate><unitdate normal="1928/2002" type="inclusive">two
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00056" level="file">
+                    <did>
+                        <container label="Folder" type="folder">55</container>
+                        <unittitle>Harris, Julie. <unitdate normal="1968-09-22">1968, Sept.
+                                22;</unitdate><unitdate normal="1969-10-12">1969, Oct.
+                                12;</unitdate><unitdate normal="2000-03-06">2000, Mar.
+                                6;</unitdate><unitdate normal="2001-01-01">2001, Jan.
+                                1;</unitdate><unitdate normal="2002-01-05">2002, Jan.
+                            5</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00057" level="file">
+                    <did>
+                        <container label="Folder" type="folder">56</container>
+                        <unittitle>Helpmann, Sir Robert Murray. <unitdate normal="1968-11-29">1968,
+                                Nov. 29;</unitdate><unitdate normal="1928/2002" type="inclusive">two
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00058" level="file">
+                    <did>
+                        <container label="Folder" type="folder">57</container>
+                        <unittitle>Hepburn, Audrey. <unitdate normal="1974-01-18">1974, Jan.
+                                18;</unitdate><unitdate normal="1928/2002" type="inclusive">one
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00059" level="file">
+                    <did>
+                        <container label="Folders" type="folder">58-59</container>
+                        <unittitle>Hepburn, Katharine. <unitdate normal="1969-06-12">1969, June
+                                12,</unitdate>
+                            <unitdate normal="1969-11-14">Nov. 14,</unitdate>
+                            <unitdate normal="1969-12-27">Dec. 27;</unitdate>
+                            <unitdate normal="1970-05-25">1970, May 25;</unitdate>
+                            <unitdate normal="1981-11-19">1981, Nov. 19;</unitdate>
+                            <unitdate normal="1982-01-18">1982, Jan. 18,</unitdate>
+                            <unitdate normal="1982-04-07">Apr. 7,</unitdate>
+                            <unitdate normal="1982-04-11">Apr. 11,</unitdate>
+                            <unitdate normal="1982-04-15">Apr. 15</unitdate>
+                            <unitdate normal="1982-04-17">Apr. 17,</unitdate>
+                            <unitdate normal="1982-04-20">Apr. 20,</unitdate>
+                            <unitdate normal="1982-04-22">Apr. 22;</unitdate>
+                            <unitdate normal="1984-09-12">1984, Sept. 12,</unitdate>
+                            <unitdate normal="1984-09-18">Sept. 18;</unitdate>
+                            <unitdate normal="1985-07-17">1985, July 17;</unitdate>
+                            <unitdate normal="1990-02-14">1990, Feb. 14;</unitdate>
+                            <unitdate normal="1991-12-10">1991, Dec. 10;</unitdate>
+                            <unitdate normal="1928/2002" type="inclusive">15 undated;</unitdate>
+                            <unitdate normal="1928/2002" type="inclusive">one
+                            undated</unitdate>letter to Peter Lang </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00060" level="file">
+                    <did>
+                        <container label="Folder" type="folder">60</container>
+                        <unittitle>Herbert, Alan. <unitdate normal="1928/2002" type="inclusive">One
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00061" level="file">
+                    <did>
+                        <container label="Folder" type="folder">61</container>
+                        <unittitle>Hopkins, Anthony. <unitdate normal="1989-06-20">1989, June
+                                20</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00062" level="file">
+                    <did>
+                        <container label="Folder" type="folder">62</container>
+                        <unittitle>Isherwood, Christopher. <unitdate normal="1969-06-09">1969, June
+                                9</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00063" level="file">
+                    <did>
+                        <container label="Folder" type="folder">63</container>
+                        <unittitle>Jackson, Glenda. <unitdate normal="1969-04-24">1969, Apr
+                                24;</unitdate><unitdate normal="1971">1971 (2);</unitdate><unitdate
+                                normal="1975-01-04">1975, Jan. 4;</unitdate><unitdate
+                                normal="1976-08">1976, Aug.;</unitdate><unitdate normal="1928/2002"
+                                type="inclusive">one undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00064" level="file">
+                    <did>
+                        <container label="Folder" type="folder">64</container>
+                        <unittitle>Johnson, Claudia Alta (Taylor) (Lady Bird). <unitdate
+                                normal="1993-02-08">1993, Feb. 8</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00065" level="file">
+                    <did>
+                        <container label="Folder" type="folder">65</container>
+                        <unittitle>Jones, Mervyn. <unitdate normal="1928/2002" type="inclusive">One
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00066" level="file">
+                    <did>
+                        <container label="Folder" type="folder">66</container>
+                        <unittitle>Jones, Tom. <unitdate normal="1967-02-27">1967, Feb.
+                                27;</unitdate><unitdate normal="1969-06-16">1969, June
+                            16</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00067" level="file">
+                    <did>
+                        <container label="Folder" type="folder">67</container>
+                        <unittitle>Kanin, Garson. <unitdate normal="1993-03-23">1993, Mar.
+                                23</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00068" level="file">
+                    <did>
+                        <container label="Folder" type="folder">68</container>
+                        <unittitle>Kennedy (family). <unitdate normal="1995-01">1995,
+                                Jan.;</unitdate><unitdate normal="1999-07">1999,
+                            July</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00069" level="file">
+                    <did>
+                        <container label="Folder" type="folder">69</container>
+                        <unittitle>Kirkwood, James. <unitdate normal="1965-03-11">1965, Mar.
+                                11,</unitdate><unitdate normal="1965-06-10">June
+                                10;</unitdate><unitdate normal="1978-02-19">1978, Feb.
+                            19</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00070" level="file">
+                    <did>
+                        <container label="Folder" type="folder">70</container>
+                        <unittitle>Knight, Hilary. <unitdate normal="1994-02-16">1994, Feb.
+                                16;</unitdate><unitdate normal="1999">1999</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00071" level="file">
+                    <did>
+                        <container label="Folder" type="folder">71</container>
+                        <unittitle>Kubrick, Stanley. <unitdate normal="1961-10-03">1961, Oct.
+                                3,</unitdate>
+                            <unitdate normal="1961-10-17">Oct. 17,</unitdate>
+                            <unitdate normal="1961-11-15">Nov. 15,</unitdate>
+                            <unitdate normal="1961-12-01">Dec. 1,</unitdate>
+                            <unitdate normal="1961-12-08">Dec. 8,</unitdate>
+                            <unitdate normal="1961-12-19">Dec. 19;</unitdate>
+                            <unitdate normal="1962-07-27">1962, July 27,</unitdate>
+                            <unitdate normal="1962-08-09">Aug. 9,</unitdate>
+                            <unitdate normal="1962-08-22">Aug. 22,</unitdate>
+                            <unitdate normal="1962-09-25">Sept. 25,</unitdate>
+                            <unitdate normal="1962-10-03">Oct. 3;</unitdate>
+                            <unitdate normal="1964-11-28">1964, Nov. 28;</unitdate>
+                            <unitdate normal="1965-06-07">1965, June 7;</unitdate>
+                            <unitdate normal="1968-11-27">1968, Nov. 27;</unitdate>
+                            <unitdate normal="1928/2002" type="inclusive">one undated</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00072" level="file">
+                    <did>
+                        <container label="Folder" type="folder">72</container>
+                        <unittitle>Lansbury, Angela. <unitdate normal="1973-08-08">1973, Aug.
+                                8</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00073" level="file">
+                    <did>
+                        <container label="Folder" type="folder">73</container>
+                        <unittitle>Lapierre, Dominique. <unitdate normal="1985-01-06">1985, Jan.
+                                6;</unitdate><unitdate normal="1986-03-06">1986, Mar.
+                            6</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00074" level="file">
+                    <did>
+                        <container label="Folder" type="folder">74</container>
+                        <unittitle>Lazar, Irving Paul. <unitdate normal="1969-04-08">1969, Apr.
+                                8</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00075" level="file">
+                    <did>
+                        <container label="Folder" type="folder">75</container>
+                        <unittitle>Lean, David. <unitdate normal="1928/2002" type="inclusive">Three
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00076" level="file">
+                    <did>
+                        <container label="Folder" type="folder">76</container>
+                        <unittitle>LeCarré, John. <unitdate normal="1965-07-24">1965, July
+                                24;</unitdate>
+                            <unitdate normal="1968-12-17">1968, Dec. 17;</unitdate>
+                            <unitdate normal="1969-06-06">1969, June 6,</unitdate>
+                            <unitdate normal="1969-07-22">July 22;</unitdate>
+                            <unitdate normal="1970-09-23">1970, Sept. 23;</unitdate>
+                            <unitdate normal="1971-07-12">1971, July 12,</unitdate>
+                            <unitdate normal="1971-12-19">Dec. 19;</unitdate>
+                            <unitdate normal="1928/2002" type="inclusive">four undated</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00077" level="file">
+                    <did>
+                        <container label="Folder" type="folder">77</container>
+                        <unittitle>Leigh, Vivien. <unitdate normal="1951-04-02">1951, Apr.
+                                2;</unitdate><unitdate normal="1966">1966</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00078" level="file">
+                    <did>
+                        <container label="Folder" type="folder">78</container>
+                        <unittitle>Lerner, Alan Jay. <unitdate normal="1970-01-06">1970, Jan.
+                                6</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00079" level="file">
+                    <did>
+                        <container label="Folder" type="folder">79</container>
+                        <unittitle>Levine, Joseph, G. <unitdate normal="1967-12-02">1967, Dec.
+                                2,</unitdate>
+                            <unitdate normal="1967-12-05">Dec. 5;</unitdate>
+                            <unitdate normal="1968-02-22">1968, Feb. 22,</unitdate>
+                            <unitdate normal="1968-05-23">May 23,</unitdate>
+                            <unitdate normal="1968-06-25">June 25,</unitdate>
+                            <unitdate normal="1968-07-16">July 16,</unitdate>
+                            <unitdate normal="1968-10-16">Oct. 16;</unitdate>
+                            <unitdate normal="1969-02-26">1969, Feb. 26;</unitdate>
+                            <unitdate normal="1975-12-11">1975, Dec. 11;</unitdate>
+                            <unitdate normal="1982-12-19">1982, Apr. 19</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00080" level="file">
+                    <did>
+                        <container label="Folder" type="folder">80</container>
+                        <unittitle>Lindsay, John V. <unitdate normal="1970-03-06">1970, Mar.
+                                6</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00081" level="file">
+                    <did>
+                        <container label="Folder" type="folder">81</container>
+                        <unittitle>McCarthy, Frank. <unitdate normal="1971-10-11">1971, Oct.
+                                11,</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00082" level="file">
+                    <did>
+                        <container label="Folder" type="folder">82</container>
+                        <unittitle>McDowall, Roddy. <unitdate normal="1997-11-28">1997, Nov.
+                                28</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00083" level="file">
+                    <did>
+                        <container label="Folders" type="folder">83-84</container>
+                        <unittitle>MacGraw, Ali. <unitdate normal="1976">1976;</unitdate>
+                            <unitdate normal="1978-12">1978, Dec.;</unitdate>
+                            <unitdate normal="1981-12">1981, Dec.;</unitdate>
+                            <unitdate normal="1983-03-21">1983, Mar. 21;</unitdate>
+                            <unitdate normal="1985-05-01">1985, May 1,</unitdate>
+                            <unitdate normal="1985-07-15">July 15;</unitdate>
+                            <unitdate normal="1988-07-06">1988, July 6;</unitdate>
+                            <unitdate normal="1992-07-08">1992, July 8;</unitdate>
+                            <unitdate normal="1993-01-01">1993, Jan. 1,</unitdate>
+                            <unitdate normal="1993-07-21">July 21;</unitdate>
+                            <unitdate normal="1928/2002">six undated;</unitdate>ten hand-made cards
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00084" level="file">
+                    <did>
+                        <container label="Folder" type="folder">85</container>
+                        <unittitle>Marlowe, Derek. <unitdate normal="1979-07-30">1979, July
+                                30</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00085" level="file">
+                    <did>
+                        <container label="Folder" type="folder">86</container>
+                        <unittitle>Martin, Dean Paul (family). <unitdate normal="1987-03">1987,
+                                Mar.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00086" level="file">
+                    <did>
+                        <container label="Folder" type="folder">87</container>
+                        <unittitle>Massey, Daniel. <unitdate normal="1928/2002" type="inclusive"
+                                >Four undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00087" level="file">
+                    <did>
+                        <container label="Folder" type="folder">88</container>
+                        <unittitle>Mills, Hayley. <unitdate normal="1928/2002" type="inclusive">One
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00088" level="file">
+                    <did>
+                        <container label="Folder" type="folder">89</container>
+                        <unittitle>Moore, Brian. <unitdate normal="1971-10-10">1971, Oct.
+                                10,</unitdate>
+                            <unitdate normal="1971-10-22">Oct. 22,</unitdate>
+                            <unitdate normal="1971-10-27">Oct. 27,</unitdate>
+                            <unitdate normal="1971-12-07">Dec. 7,</unitdate>
+                            <unitdate normal="1971-12-27">Dec. 27;</unitdate>
+                            <unitdate normal="1972-01-06">1972, Jan. 6,</unitdate>
+                            <unitdate normal="1972-04-05">Apr. 5,</unitdate>
+                            <unitdate normal="1972-04-25">Apr. 25,</unitdate>
+                            <unitdate normal="1972-07-15">July 15,</unitdate>
+                            <unitdate normal="1972-09-08">Sept. 8</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00089" level="file">
+                    <did>
+                        <container label="Folder" type="folder">90</container>
+                        <unittitle>Moore, Julianne. <unitdate normal="1999-10-29">1999, Oct.
+                                29</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00090" level="file">
+                    <did>
+                        <container label="Folder" type="folder">91</container>
+                        <unittitle>Mortimer, John Clifford. <unitdate normal="1968-03-04">1968, Mar.
+                                4,</unitdate><unitdate normal="1968-05-07">May
+                            7</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00091" level="file">
+                    <did>
+                        <container label="Folder" type="folder">92</container>
+                        <unittitle>Newman, Paul. <unitdate normal="1970-08-04">1970, Aug.
+                                4</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00092" level="file">
+                    <did>
+                        <container label="Folder" type="folder">93</container>
+                        <unittitle>Newman, Phyllis. <unitdate normal="1928/2002" type="inclusive"
+                                >One undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00093" level="file">
+                    <did>
+                        <container label="Folder" type="folder">94</container>
+                        <unittitle>Nolte, Nick. <unitdate normal="1985-12">1985,
+                            Dec.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00094" level="file">
+                    <did>
+                        <container label="Folder" type="folder">95</container>
+                        <unittitle>Olivier, Lawrence. <unitdate normal="1976-09-16">1976, Sept.
+                                16</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00095" level="file">
+                    <did>
+                        <container label="Folder" type="folder">96</container>
+                        <unittitle>O'Toole, Peter. <unitdate normal="1982-02-25">1982, Feb.
+                                25;</unitdate><unitdate normal="1928/2002" type="inclusive">two
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00096" level="file">
+                    <did>
+                        <container label="Folder" type="folder">97</container>
+                        <unittitle>Pakula, Alan J. (family). <unitdate normal="1999-03-05">1999,
+                                Mar. 5</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00097" level="file">
+                    <did>
+                        <container label="Folder" type="folder">98</container>
+                        <unittitle>Parini, Jay. <unitdate normal="1928/2002" type="inclusive">One
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00098" level="file">
+                    <did>
+                        <container label="Folder" type="folder">99</container>
+                        <unittitle>Peck, Gregory. <unitdate normal="1969-06-23">1969, June
+                                23,</unitdate><unitdate normal="1969-08-07">Aug.
+                            7</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00099" level="file">
+                    <did>
+                        <container label="Folder" type="folder">100</container>
+                        <unittitle>Phillips, Siân. <unitdate normal="1994-03-08">1994, Mar.
+                                8;</unitdate><unitdate normal="1999-04-15">1999, Apr.
+                                19;</unitdate><unitdate normal="1928/2002" type="inclusive">four
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00100" level="file">
+                    <did>
+                        <container label="Folder" type="folder">101</container>
+                        <unittitle>Pintoff, Ernest. <unitdate normal="1964-08-13">1964, Aug.
+                                13;</unitdate>
+                            <unitdate normal="1964-12-10">1964, Dec. 10;</unitdate>
+                            <unitdate normal="1965-12-28">1965, Dec. 28,</unitdate>
+                            <unitdate normal="1965">1965 (4);</unitdate>
+                            <unitdate normal="1966-01-31">1966, Jan. 31,</unitdate>
+                            <unitdate normal="1966-02-21">Feb. 21,</unitdate>
+                            <unitdate normal="1966-04-26">Apr. 26,</unitdate>
+                            <unitdate normal="1966-12-16">Dec. 16;</unitdate>
+                            <unitdate normal="1928/2002">two undated</unitdate>drawings; <unitdate
+                                normal="1964-07-27">1964, July 27</unitdate>letter from Pintoff to
+                            Robert Lawrence </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00101" level="file">
+                    <did>
+                        <container label="Folder" type="folder">102</container>
+                        <unittitle>Priestley, J.B. <unitdate normal="1948-07-01">1948, July
+                                1</unitdate>letter to Mrs. Harvey</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00102" level="file">
+                    <did>
+                        <container label="Folder" type="folder">103</container>
+                        <unittitle>Pryce-Jones, Adrian. <unitdate normal="1967-11-01">1967, Nov.
+                                1</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00103" level="file">
+                    <did>
+                        <container label="Folder" type="folder">104</container>
+                        <unittitle>Purdy, James. <unitdate normal="1979-12-06">1979, Dec.
+                                6;</unitdate><unitdate normal="1986-10-18">1986, Oct.
+                                18;</unitdate><unitdate normal="1928/2002" type="inclusive">four
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00104" level="file">
+                    <did>
+                        <container label="Folder" type="folder">105</container>
+                        <unittitle>Quinn, Anthony. <unitdate normal="1997-12">1997,
+                                Dec.;</unitdate><unitdate normal="1928/2002" type="inclusive">two
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00105" level="file">
+                    <did>
+                        <container label="Folder" type="folder">106</container>
+                        <unittitle>Rains, Claude. <unitdate normal="1944"
+                            >1944</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00106" level="file">
+                    <did>
+                        <container label="Folder" type="folder">107</container>
+                        <unittitle>Raphael, Frederic. <unitdate normal="1989-12">1989,
+                                Dec.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00107" level="file">
+                    <did>
+                        <container label="Folder" type="folder">108</container>
+                        <unittitle>Raucher, Herman. <unitdate normal="1979-06-13">1979, June
+                                13</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00108" level="file">
+                    <did>
+                        <container label="Folder" type="folder">109</container>
+                        <unittitle>Redgrave, Michael. <unitdate normal="1970-03-17">1970, Mar.
+                                17</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00109" level="file">
+                    <did>
+                        <container label="Folder" type="folder">110</container>
+                        <unittitle>Reisz, Betsy (aka Blair, Betsy). <unitdate normal="1928/2002"
+                                type="inclusive">One undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00110" level="file">
+                    <did>
+                        <container label="Folder" type="folder">111</container>
+                        <unittitle>Ritt, Martin. <unitdate normal="1965-07-12">1965, July
+                                12;</unitdate>
+                            <unitdate normal="1966-01-28">1966, Jan. 28,</unitdate>
+                            <unitdate normal="1966-04-25">Apr. 25;</unitdate>
+                            <unitdate normal="1967-02-06">1967, Feb. 6,</unitdate>
+                            <unitdate normal="1967-05-15">May 15;</unitdate>
+                            <unitdate normal="1972-10-30">1972, Oct. 30;</unitdate>
+                            <unitdate normal="1928/2002" type="inclusive">two undated</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00111" level="file">
+                    <did>
+                        <container label="Folder" type="folder">112</container>
+                        <unittitle>Robey, Sir George. <unitdate normal="1928/2002" type="inclusive"
+                                >One undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00112" level="file">
+                    <did>
+                        <container label="Folder" type="folder">113</container>
+                        <unittitle>Rogers, Paul. <unitdate normal="1973-11-06">1973, Nov.
+                                6</unitdate><unitdate normal="1975-11-14">1975, Nov.
+                            14</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00113" level="file">
+                    <did>
+                        <container label="Folder" type="folder">114</container>
+                        <unittitle>Rota, Nino. <unitdate normal="1974-02-10">1974, Feb.
+                                10;</unitdate><unitdate normal="1928/2002" type="inclusive">one
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00114" level="file">
+                    <did>
+                        <container label="Folder" type="folder">115</container>
+                        <unittitle>Saint-Subber, Arnold. <unitdate normal="1928/2002"
+                                type="inclusive">One undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00115" level="file">
+                    <did>
+                        <container label="Folder" type="folder">116</container>
+                        <unittitle>Salter, James. <unitdate normal="1964-07-20">1964, July
+                                20;</unitdate><unitdate normal="1965-01-21">1965, Jan.
+                                21,</unitdate><unitdate normal="1965-02-19">Feb.
+                                19,</unitdate><unitdate normal="1965-03-09">Mar.
+                                9,</unitdate><unitdate normal="1965-04-02">Apr.
+                            2</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00116" level="file">
+                    <did>
+                        <container label="Folder" type="folder">117</container>
+                        <unittitle>Schlesinger, John. <unitdate normal="1964-02-23">1964, Feb.
+                                23,</unitdate><unitdate normal="1964-09-15">Sept.
+                            15</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00117" level="file">
+                    <did>
+                        <container label="Folder" type="folder">118</container>
+                        <unittitle>Schmidt, Harvey. <unitdate normal="1964-12-14">1964, Dec.
+                                14,</unitdate><unitdate normal="1964-12">Dec.;</unitdate><unitdate
+                                normal="1968-03-28">1968, Mar. 28</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00118" level="file">
+                    <did>
+                        <container label="Folder" type="folder">119</container>
+                        <unittitle>Segal, Erich. <unitdate normal="1928/2002" type="inclusive">One
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00119" level="file">
+                    <did>
+                        <container label="Folder" type="folder">120</container>
+                        <unittitle>Sellers, Peter. <unitdate normal="1966-08-15">1966, Aug.
+                                15;</unitdate><unitdate normal="1928/2002" type="inclusive">four
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00120" level="file">
+                    <did>
+                        <container label="Folder" type="folder">121</container>
+                        <unittitle>Sheen, Martin. <unitdate normal="1979-10-16">1979, Oct.
+                                16,</unitdate><unitdate normal="1979-12-21">Dec.
+                                21;</unitdate><unitdate normal="1928/2002" type="inclusive">one
+                                undated;</unitdate><unitdate normal="1979-10-16">1979, Oct.
+                                16</unitdate>telegram, Sheen to The Rolling Stone editor</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00121" level="file">
+                    <did>
+                        <container label="Folder" type="folder">122</container>
+                        <unittitle>Short, Bobby. <unitdate normal="1928/2002" type="inclusive">One
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00122" level="file">
+                    <did>
+                        <container label="Folder" type="folder">123</container>
+                        <unittitle>Skinner, George. <unitdate normal="1928/2002" type="inclusive"
+                                >One undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00123" level="file">
+                    <did>
+                        <container label="Folder" type="folder">124</container>
+                        <unittitle>Slade, Julian Penkivil. <unitdate normal="1928/2002"
+                                type="inclusive">Two undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00124" level="file">
+                    <did>
+                        <container label="Folder" type="folder">125</container>
+                        <unittitle>Smith, Jean Kennedy. <unitdate normal="1993-03-24">1993, Mar.
+                                24</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00125" level="file">
+                    <did>
+                        <container label="Folder" type="folder">126</container>
+                        <unittitle>Smith, Maggie. <unitdate normal="1961-04-10">1961, Apr.
+                                10;</unitdate><unitdate normal="1928/2002" type="inclusive">three
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00126" level="file">
+                    <did>
+                        <container label="Folder" type="folder">127</container>
+                        <unittitle>Sondheim, Stephen. <unitdate normal="1971-04-14">1971, Apr.
+                                14</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00127" level="file">
+                    <did>
+                        <container label="Folder" type="folder">128</container>
+                        <unittitle>Spiegel, Sam. <unitdate normal="1969-11-05">1969, Nov.
+                                5,</unitdate><unitdate normal="1969-12-09">Dec.
+                            9</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00128" level="file">
+                    <did>
+                        <container label="Folder" type="folder">129</container>
+                        <unittitle>Streisand, Barbra. <unitdate normal="1969-11-13">1969, Nov.
+                                13;</unitdate><unitdate normal="1928/2002" type="inclusive">one
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00129" level="file">
+                    <did>
+                        <container label="Folder" type="folder">130</container>
+                        <unittitle>Styne, Jule. <unitdate normal="1969-07-30">1969, July
+                                30;</unitdate><unitdate normal="1928/2002" type="inclusive">two
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00130" level="file">
+                    <did>
+                        <container label="Folder" type="folder">131</container>
+                        <unittitle>Swinnerton, Frank. <unitdate normal="1952-09-11">1952, Sept.
+                                11</unitdate>letter to Mrs. Stanton-Clarke</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00131" level="file">
+                    <did>
+                        <container label="Folder" type="folder">132</container>
+                        <unittitle>Taylor, Noel. <unitdate normal="1928/2002" type="inclusive">One
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00132" level="file">
+                    <did>
+                        <container label="Folder" type="folder">133</container>
+                        <unittitle>Thomson, Virgil. <unitdate normal="1928/2002" type="inclusive"
+                                >One undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00133" level="file">
+                    <did>
+                        <container label="Folder" type="folder">134</container>
+                        <unittitle>Turman, Lawrence. <unitdate normal="1928/2002" type="inclusive"
+                                >One undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00134" level="file">
+                    <did>
+                        <container label="Folder" type="folder">135</container>
+                        <unittitle>Ullmann, Liv. <unitdate normal="1974">1974 (2);</unitdate>
+                            <unitdate normal="1975-06-05">1975, June 5,</unitdate>
+                            <unitdate normal="1975-06-28">June 28,</unitdate>
+                            <unitdate normal="1975-09-04">Sept. 4,</unitdate>
+                            <unitdate normal="1975-11-28">Nov. 28;</unitdate>
+                            <unitdate normal="1976-03-27">1976, Mar. 27;</unitdate>
+                            <unitdate normal="1978-10-27">1978, Oct. 27;</unitdate>
+                            <unitdate normal="1987-10-06">1987, Oct. 6,</unitdate>
+                            <unitdate normal="1987-12-01">Dec. 1;</unitdate>
+                            <unitdate normal="1994-03-19">1994, Mar. 19;</unitdate>
+                            <unitdate normal="1928/2002" type="inclusive">seven undated</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00135" level="file">
+                    <did>
+                        <container label="Folder" type="folder">136</container>
+                        <unittitle>Valenti, Jack. <unitdate normal="1969-02-28">1969, Feb.
+                                28</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00136" level="file">
+                    <did>
+                        <container label="Folder" type="folder">137</container>
+                        <unittitle>Vaughan, Keith. <unitdate normal="1928/2002" type="inclusive">One
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00137" level="file">
+                    <did>
+                        <container label="Folder" type="folder">138</container>
+                        <unittitle>Vidor, King and William Wyler. <unitdate normal="1969-04-10"
+                                >1969, Apr. 10</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00138" level="file">
+                    <did>
+                        <container label="Folder" type="folder">139</container>
+                        <unittitle>Vilas, Guillermo. <unitdate normal="1979"
+                                >1979;</unitdate><unitdate normal="1928/2002" type="inclusive">three
+                                undated poems</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00139" level="file">
+                    <did>
+                        <container label="Folder" type="folder">140</container>
+                        <unittitle>Walker, Alexander. <unitdate normal="1972-02-18">1972, Feb.
+                                18;</unitdate><unitdate normal="1928/2002" type="inclusive">one
+                                undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00140" level="file">
+                    <did>
+                        <container label="Folder" type="folder">141</container>
+                        <unittitle>Wallace, Edgar. <unitdate normal="1928-09-26">1928, Sept.
+                                26</unitdate>letter to Morris Harvey</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00141" level="file">
+                    <did>
+                        <container label="Folder" type="folder">142</container>
+                        <unittitle>Waterston, Sam. <unitdate normal="1973-06-19">1973, June
+                                19;</unitdate><unitdate normal="1977-11-22">1977, Nov.
+                            22</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00142" level="file">
+                    <did>
+                        <container label="Folder" type="folder">143</container>
+                        <unittitle>Whitelaw, Billie. <unitdate normal="1965-02-11">1965, Feb.
+                                11;</unitdate><unitdate normal="1966">1966;</unitdate><unitdate
+                                normal="1992-05-18">1992, May 18;</unitdate><unitdate
+                                normal="1928/2002" type="inclusive">seven
+                            undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00143" level="file">
+                    <did>
+                        <container label="Folder" type="folder">144</container>
+                        <unittitle>Wise, Robert. <unitdate normal="1965-07-30">1965, July
+                                30</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00144" level="file">
+                    <did>
+                        <container label="Folder" type="folder">145</container>
+                        <unittitle>Woolf, James. <unitdate normal="1962-11-07">1962, Nov.
+                                7</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00145" level="file">
+                    <did>
+                        <container label="Folder" type="folder">146</container>
+                        <unittitle>Zanuck, Richard D. and David Brown. <unitdate normal="1974-04-05"
+                                >1974, Apr. 5</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00146" level="file">
+                    <did>
+                        <container label="Folder" type="folder">147</container>
+                        <unittitle>Zipprodt, Patricia. <unitdate normal="1973-06-15">1973, June
+                                15</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB9824-00147" level="file">
+                    <did>
+                        <container label="Folder" type="folder">148</container>
+                        <unittitle>unidentified (11)</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAB9824-00148" level="series">
+                <did>
+                    <container label="Box" type="box">1</container>
+                    <unittitle>II. Films</unittitle>
+                </did>
+                <arrangement>
+                    <p>Arranged alphabetically by title of film.</p>
+                </arrangement>
+                <c02 id="VAB9824-00149" level="file">
+                    <did>
+                        <unittitle>The Abdication <unitdate normal="1974"
+                            >(1974)</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAB9824-00150" level="file">
+                        <did>
+                            <container label="Folder" type="folder">149</container>
+                            <unittitle>34 photographs/production stills</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00151" level="file">
+                        <did>
+                            <container label="Folder" type="folder">150</container>
+                            <unittitle>Proposed layout <emph render="doublequote">Ext. Palace -
+                                    Parade Ground</emph></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00152" level="file">
+                        <did>
+                            <container label="Folder" type="folder">151</container>
+                            <unittitle>Clippings</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00153" level="file">
+                        <did>
+                            <container label="Oversize" type="box">2</container>
+                            <unittitle>Clippings</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00154" level="file">
+                        <did>
+                            <container label="Oversize" type="box">3</container>
+                            <unittitle>Production/press kit material</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00155" level="file">
+                        <did>
+                            <container label="Oversize" type="box">5</container>
+                            <unittitle>20 stills and clippings</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9824-00156" level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <unittitle>Caesar and Cleopatra (1945)</unittitle>
+                    </did>
+                    <c03 id="VAB9824-00157" level="file">
+                        <did>
+                            <container label="Folder" type="folder">152</container>
+                            <unittitle>Two stills: Vivien Leigh as Cleopatra; Anthony Harvey as King
+                                Ptolemy</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9824-00158" level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <unittitle>The Disappearance of Aimee (TV - 1976)</unittitle>
+                    </did>
+                    <c03 id="VAB9824-00159" level="file">
+                        <did>
+                            <container label="Folder" type="folder">153</container>
+                            <unittitle>Two photographs</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00160" level="file">
+                        <did>
+                            <container label="Folder" type="folder">154</container>
+                            <unittitle>Clippings</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9824-00161" level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <unittitle>Dutchman (1966)</unittitle>
+                    </did>
+                    <c03 id="VAB9824-00162" level="file">
+                        <did>
+                            <container label="Folder" type="folder">155</container>
+                            <unittitle>Script</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00163" level="file">
+                        <did>
+                            <container label="Folder" type="folder">156</container>
+                            <unittitle>17 photographs</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00164" level="file">
+                        <did>
+                            <container label="Folder" type="folder">157</container>
+                            <unittitle>Promotional material; 1967 Cannes Film Festival pass; program
+                                for Edinburgh Film Festival</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00165" level="file">
+                        <did>
+                            <container label="Folders" type="folder">158-161</container>
+                            <unittitle>Clippings</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00166" level="file">
+                        <did>
+                            <container label="Oversize" type="box">2</container>
+                            <unittitle>Clippings</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00167" level="file">
+                        <did>
+                            <container label="Oversize" type="box">3</container>
+                            <unittitle>Production/press kit material; poster</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9824-00168" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>Eagle's Wing (1979)</unittitle>
+                    </did>
+                    <c03 id="VAB9824-00169" level="file">
+                        <did>
+                            <container label="Folder" type="folder">1</container>
+                            <unittitle>13 photographs</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00170" level="file">
+                        <did>
+                            <container label="Folder" type="folder">2</container>
+                            <unittitle>Cambridge Film Festival program; ticket for world premiere;
+                                cast and crew list</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00171" level="file">
+                        <did>
+                            <container label="Folder" type="folder">3</container>
+                            <unittitle>Clippings</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00172" level="file">
+                        <did>
+                            <container label="Oversize" type="box">2</container>
+                            <unittitle>Clippings</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00173" level="file">
+                        <did>
+                            <container label="Oversize" type="box">3</container>
+                            <unittitle>Production/press kit material</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9824-00174" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>The Glass Menagerie (TV - 1973)</unittitle>
+                    </did>
+                    <c03 id="VAB9824-00175" level="file">
+                        <did>
+                            <container label="Folder" type="folder">4</container>
+                            <unittitle>One photograph</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00176" level="file">
+                        <did>
+                            <container label="Folder" type="folder">5</container>
+                            <unittitle>Press release; promotional material</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00177" level="file">
+                        <did>
+                            <container label="Folder" type="folder">6</container>
+                            <unittitle>Clippings</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00178" level="file">
+                        <did>
+                            <container label="Oversize" type="box">1</container>
+                            <unittitle>Four stills</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00179" level="file">
+                        <did>
+                            <container label="Oversize" type="box">2</container>
+                            <unittitle>Clippings</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00180" level="file">
+                        <did>
+                            <container label="Oversize" type="box">5</container>
+                            <unittitle>13 stills and clippings</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9824-00181" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>The Lion in Winter (1968)</unittitle>
+                    </did>
+                    <c03 id="VAB9824-00182" level="file">
+                        <did>
+                            <container label="Folder" type="folder">7</container>
+                            <unittitle>Rehearsal script</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00183" level="file">
+                        <did>
+                            <container label="Folders" type="folder">8-9</container>
+                            <unittitle>51 photographs</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00184" level="file">
+                        <did>
+                            <container label="Folder" type="folder">10</container>
+                            <unittitle>Includes: promotional material; ticket to Board of Governors
+                                Ball, Academy of Motion Picture Arts and Sciences, Apr. 14, 1969;
+                                ticket to world premiere; ticket to European premiere</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00185" level="file">
+                        <did>
+                            <container label="Folders" type="folder">11-16</container>
+                            <unittitle>Clippings</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00186" level="file">
+                        <did>
+                            <container label="Oversize" type="box">1</container>
+                            <unittitle>47 stills</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00187" level="file">
+                        <did>
+                            <container label="Oversize" type="box">2</container>
+                            <unittitle>Clippings</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00188" level="file">
+                        <did>
+                            <container label="Oversize" type="box">3</container>
+                            <unittitle>Production/press kit material; poster for Le Lion en
+                                Hiver</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9824-00189" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>The Patricia Neal Story (TV - 1981) (aka The Miracle of
+                            Love)</unittitle>
+                    </did>
+                    <c03 id="VAB9824-00190" level="file">
+                        <did>
+                            <container label="Folder" type="folder">17</container>
+                            <unittitle>5 photographs</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00191" level="file">
+                        <did>
+                            <container label="Folder" type="folder">18</container>
+                            <unittitle>The Christopher Awards program, <unitdate normal="1982-02-25"
+                                    >Feb. 25, 1982</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00192" level="file">
+                        <did>
+                            <container label="Folder" type="folder">19</container>
+                            <unittitle>Clipping</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00193" level="file">
+                        <did>
+                            <container label="Oversize" type="box">2</container>
+                            <unittitle>Clippings</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9824-00194" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>Players (1979)</unittitle>
+                    </did>
+                    <c03 id="VAB9824-00195" level="file">
+                        <did>
+                            <container label="Folders" type="folder">20-21</container>
+                            <unittitle>40 photographs</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00196" level="file">
+                        <did>
+                            <container label="Folder" type="folder">22</container>
+                            <unittitle>Clippings</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00197" level="file">
+                        <did>
+                            <container label="Oversize" type="box">2</container>
+                            <unittitle>Clippings</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9824-00198" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>Richard's Things (1980)</unittitle>
+                    </did>
+                    <c03 id="VAB9824-00199" level="file">
+                        <did>
+                            <container label="Folder" type="folder">23</container>
+                            <unittitle>Two photographs</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00200" level="file">
+                        <did>
+                            <container label="Folder" type="folder">24</container>
+                            <unittitle>London Film Festival program; reviews</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00201" level="file">
+                        <did>
+                            <container label="Folder" type="folder">25</container>
+                            <unittitle>Clippings</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00202" level="file">
+                        <did>
+                            <container label="Oversize" type="box">2</container>
+                            <unittitle>Clippings</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9824-00203" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>Svengali (TV - 1983)</unittitle>
+                    </did>
+                    <c03 id="VAB9824-00204" level="file">
+                        <did>
+                            <container label="Folder" type="folder">26</container>
+                            <unittitle>Review</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00205" level="file">
+                        <did>
+                            <container label="Folder" type="folder">27</container>
+                            <unittitle>Clippings</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9824-00206" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>They Might Be Giants (1971)</unittitle>
+                    </did>
+                    <c03 id="VAB9824-00207" level="file">
+                        <did>
+                            <container label="Folders" type="folder">28-29</container>
+                            <unittitle>59 photographs</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00208" level="file">
+                        <did>
+                            <container label="Folder" type="folder">30</container>
+                            <unittitle>Reviews</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00209" level="file">
+                        <did>
+                            <container label="Folder" type="folder">31</container>
+                            <unittitle>Clippings</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00210" level="file">
+                        <did>
+                            <container label="Oversize" type="box">2</container>
+                            <unittitle>Clippings</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00211" level="file">
+                        <did>
+                            <container label="Oversize" type="box">5</container>
+                            <unittitle>Two stills and clippings</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9824-00212" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>This Can't Be Love (TV - 1994)</unittitle>
+                    </did>
+                    <c03 id="VAB9824-00213" level="file">
+                        <did>
+                            <container label="Folder" type="folder">32</container>
+                            <unittitle>Photograph</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9824-00214" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>The Ultimate Solution of Grace Quigley (1984) (aka Grace
+                            Quigley)</unittitle>
+                    </did>
+                    <c03 id="VAB9824-00215" level="file">
+                        <did>
+                            <container label="Folder" type="folder">33</container>
+                            <unittitle>43 photographs</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00216" level="file">
+                        <did>
+                            <container label="Oversize" type="box">1</container>
+                            <unittitle>3 stills</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00217" level="file">
+                        <did>
+                            <container label="Oversize" type="box">2</container>
+                            <unittitle>Clippings</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9824-00218" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>Women in Love</unittitle>
+                    </did>
+                    <c03 id="VAB9824-00219" level="file">
+                        <did>
+                            <container label="Folder" type="folder">34</container>
+                            <unittitle>7 photographs</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9824-00220" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>Unidentified</unittitle>
+                    </did>
+                    <c03 id="VAB9824-00221" level="file">
+                        <did>
+                            <container label="Folder" type="folder">35</container>
+                            <unittitle>photograph of scene in cemetery</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+
+            </c01>
+            <c01 id="VAB9824-00222" level="series">
+                <did>
+                    <container label="Box" type="box">2</container>
+                    <unittitle>III. People</unittitle>
+                </did>
+                <arrangement>
+                    <p>Arranged alphabetically by subject.</p>
+                </arrangement>
+                <c02 id="VAB9824-00223" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>Chaplin, Charles</unittitle>
+                    </did>
+                    <c03 id="VAB9824-00224" level="file">
+                        <did>
+                            <container label="Folder" type="folder">36</container>
+                            <unittitle>One photograph and signed note, dated <unitdate normal="1942"
+                                    >1942</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9824-00225" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>Fields, Grace</unittitle>
+                    </did>
+                    <c03 id="VAB9824-00226" level="file">
+                        <did>
+                            <container label="Folder" type="folder">37</container>
+                            <unittitle>One signed photograph, <unitdate normal="1932"
+                                    >1932</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9824-00227" level="file">
+                    <did>
+                        <container label="Oversize" type="box">4</container>
+                        <unittitle>Garland, Judy</unittitle>
+                    </did>
+                    <c03 id="VAB9824-00228" level="file">
+                        <did>
+                            
+                            <unittitle>Judy at Carnegie Hall (33 1/3 LP) - signed</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9824-00229" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>Harvey, Anthony</unittitle>
+                    </did>
+                    <c03 id="VAB9824-00230" level="file">
+                        <did>
+                            <container label="Folder" type="folder">38-39</container>
+                            <unittitle>28 photographs and one contact sheet</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00231" level="file">
+                        <did>
+                            <container label="Folder" type="folder">40</container>
+                            <unittitle>Films in Review, <unitdate normal="1983-05">May
+                                    1983</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00232" level="file">
+                        <did>
+                            <container label="Oversize" type="box">1</container>
+                            <unittitle>Two photographs - one with Ali McGraw</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00233" level="file">
+                        <did>
+                            <container label="Oversize" type="box">3</container>
+                            <unittitle>Photograph with Katharine Hepburn and Robert
+                                Helpmann</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9824-00234" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>Harvey, Laurence</unittitle>
+                    </did>
+                    <c03 id="VAB9824-00235" level="file">
+                        <did>
+                            <container label="Folder" type="folder">41</container>
+                            <unittitle>One still from unidentified film</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9824-00236" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>Harvey, Michael Martin and John Mills</unittitle>
+                    </did>
+                    <c03 id="VAB9824-00237" level="file">
+                        <did>
+                            <container label="Folder" type="folder">42</container>
+                            <unittitle>One still from The Long Memory</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9824-00238" level="file">
+                    <did>
+                        <container label="Oversize" type="box">3</container>
+                        <unittitle>Helpmann, Robert</unittitle>
+                    </did>
+                    <c03 id="VAB9824-00239" level="file">
+                        <did>
+                            
+                            <unittitle>Photograph with Katharine Hepburn and Harvey</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9824-00240" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>Hepburn, Katharine</unittitle>
+                    </did>
+                    <c03 id="VAB9824-00241" level="file">
+                        <did>
+                            <container label="Folder" type="folder">44</container>
+                            <unittitle>Two photographs - one signed on mat</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAB9824-00242" level="file">
+                        <did>
+                            <container label="Oversize" type="box">3</container>
+                            <unittitle>Two photographs - one signed on mat, one with Anthony Harvey
+                                and Robert Helpmann</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9824-00243" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>Kubrick, Stanley</unittitle>
+                    </did>
+                    <c03 id="VAB9824-00244" level="file">
+                        <did>
+                            <container label="Folder" type="folder">45</container>
+                            <unittitle>Notebook containing scene variants for his film
+                                Lolita</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9824-00245" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>Leon, Arthur Alexander</unittitle>
+                    </did>
+                    <c03 id="VAB9824-00246" level="file">
+                        <did>
+                            <container label="Folder" type="folder">45</container>
+                            <unittitle>One carte-de-visite</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9824-00247" level="file">
+                    <did>
+                        <container label="Oversize" type="box">1</container>
+                        <unittitle>MacGraw, Ali</unittitle>
+                    </did>
+                    <c03 id="VAB9824-00248" level="file">
+                        <did>
+                            
+                            <unittitle>Photograph with Harvey</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9824-00249" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>Nolte, Nick</unittitle>
+                    </did>
+                    <c03 id="VAB9824-00250" level="file">
+                        <did>
+                            <container label="Folder" type="folder">46</container>
+                            <unittitle>Signed photograph</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9824-00251" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>Rains, Claude</unittitle>
+                    </did>
+                    <c03 id="VAB9824-00252" level="file">
+                        <did>
+                            <container label="Folder" type="folder">47</container>
+                            <unittitle>Signed photograph</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9824-00253" level="file">
+                    <did>
+                        <container label="Oversize" type="box">4</container>
+                        <unittitle>Rota, Nino</unittitle>
+                    </did>
+                    <c03 id="VAB9824-00254" level="file">
+                        <did>
+                            
+                            <unittitle>Rota Tutti I Film di Fellini (33 1/3 LP) - signed</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9824-00255" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>Ullmann, Liv</unittitle>
+                    </did>
+                    <c03 id="VAB9824-00256" level="file">
+                        <did>
+                            <container label="Folder" type="folder">48</container>
+                            <unittitle>Signed photograph</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAB9824-00257" level="file">
+                    <did>
+                        <container label="Box" type="box">2</container>
+                        <unittitle>Unidentified</unittitle>
+                    </did>
+                    <c03 id="VAB9824-00258" level="file">
+                        <did>
+                            <container label="Folder" type="folder">49</container>
+                            <unittitle>Six photographs and one photocopy of photograph</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
