@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAC0095">InU-Li-VAC0095</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Cott mss., <date normal="1977/1985">ca.
+                        1977-1985</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2010" type="publication">© 2010</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2010">© 2010</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                    <lb/><date normal="2010" type="source">2010</date>
+                <lb/>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2010-10-04">October 4, 2010</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2010-10-04">October 4, 2010</date>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Cott, Jonathan</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Cott mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1977/1985" type="inclusive">ca.
+                1977-1985</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2593</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>ca. 55 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Cott mss., ca. 1977-1985, consists
+                of correspondence and other materials relating to Jonathan Cott's book <title
+                    render="italic">Pipers at the Gates of Dawn: the Wisdom of Children's
+                    Literature</title> (Random House, 1983).</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+
+            <p>Writer, editor and poet Jonathan Cott, was born in 1942, the day before Christmas, in
+                New York City. He attended Columbia University for his undergraduate work, received
+                an M.A. from the University of California, Berkeley in 1966 and studied at the
+                University of Essex, England as a Fulbright fellow, 1967-1969. Returning to the
+                United States in 1970 he became an editor at <title render="italic">Rolling
+                    Stone</title> until 1975 when he returned to New York to be executive editor of
+                Stonehill Publishing Company. In 1976 Cott wrote a long piece on Maurice Sendak
+                based on extensive interviews with the author, that was published in <title
+                    render="italic">Rolling Stone</title> in December 1976. The success of that
+                article led Cott to consider interviewing other <emph render="doublequote"
+                    >giants</emph> of children's literature for a full-length book. <title
+                    render="italic">Pipers at the Gates of Dawn</title> was the result.</p>
+
+        </bioghist>
+
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Cott mss., ca. 1977-1985, consists of correspondence and other materials relating
+                to Jonathan Cott's book <title render="italic">Pipers at the Gates of Dawn: the
+                    Wisdom of Children's Literature</title> (Random House, 1983). Present in the
+                collection are files for five of the seven authors that Cott interviewed for this
+                book: Theodore Geisel, Astrid Lindgren, Iona and Peter Opie, William Steig, and P.L.
+                Travers. The two interviewees not represented are Chinua Achebe with whom Cott
+                apparently dealt in person or by telephone, and Maurice Sendak as the chapter in the
+                book is a reprint of the original <title render="italic">Rolling Stone</title>
+                piece.</p>
+            <p>Also present in the collection are three periodical issues: <title render="italic"
+                    >Rolling Stone</title> dated December 30, 1983 containing Cott's article on
+                Maurice Sendak, <title render="doublequote">King of All the Wild Things,</title> and
+                the two issues of <title render="italic">The New Yorker</title> magazine containing
+                pre-publication versions of the Lindgren (February 8, 1983) and Opie (April 4, 1983)
+                profiles.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/cott+jonathan{su}">
+                            <persname encodinganalog="600" source="lcnaf">Cott, Jonathan.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/cott+jonathan+pipers+at+the+gates+of+dawn{su}">
+                            <persname encodinganalog="600" source="lcnaf">Cott, Jonathan. Pipers at
+                                the gates of dawn.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/opie+iona+archibald{su}">
+                            <persname encodinganalog="600" source="lcnaf">Opie, Iona Archibald
+                                --Interviews. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/opie+peter{su}">
+                            <persname encodinganalog="600" source="lcnaf">Opie, Peter --Interviews.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/seuss+dr{su}">
+                            <persname encodinganalog="600" source="lcnaf">Seuss, Dr. --Interviews.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/lindgren+astrid+1907-2002{su}">
+                            <persname encodinganalog="600" source="lcnaf">Lindgren, Astrid,
+                                1907-2002 --Interviews. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/steig+william+1907-2003{su}">
+                            <persname encodinganalog="600" source="lcnaf">Steig, William, 1907-2003
+                                --Interviews. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/travers+p+l+pamela+lyndon+1899-1996{su}">
+                            <persname encodinganalog="600" source="lcnaf">Travers, P. L. (Pamela
+                                Lyndon), 1899-1996 --Interviews. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/sendak+maurice{su}">
+                            <persname encodinganalog="600" source="lcnaf">Sendak, Maurice
+                                --Interviews. </persname>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/authors+american{su}">
+                            <subject encodinganalog="650" source="lcsh">Authors, American.
+                            </subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/children's+literature+american{su}">
+                            <subject encodinganalog="650" source="lcsh">Children's literature,
+                                American. </subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/illustrated+children's+books+united+states{su}">
+                            <subject encodinganalog="650" source="lcsh">Illustrated children's books
+                                --United States. </subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/childrens+books+publishing+united+states{su}">
+                            <subject encodinganalog="650" source="lcsh">Children's books
+                                --Publishing --United States. </subject>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="110" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 2007</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>Cott mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAC0095-00001" level="series">
+                <did>
+                    <!-- optional -->
+
+
+
+                    <unittitle>Collection</unittitle>
+
+
+                </did>
+                <c02 id="VAC0095-00002" level="file">
+                    <did>
+                        <container label="Folder" type="folder">1</container>
+                        <unittitle>Theodor Geisel (<emph render="doublequote">Dr.
+                            Seuss</emph>)</unittitle>
+                    </did>
+                    <c03 id="VAC0095-00003" level="file">
+                        <did>
+                            <unittitle>Two letters to Jonathan Cott: <unitdate normal="1981-01-19"
+                                    >1981, Jan. 19,</unitdate>TLS, 1 p.;<unitdate normal="1977/1985"
+                                    type="inclusive">undated but probably 1982,</unitdate>ALS, 2
+                                p.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0095-00004" level="file">
+                        <did>
+                            <unittitle>Geisel: Commencement Address Lake Forest College, <unitdate
+                                    normal="1977-06-04">June 4, 1977.</unitdate></unittitle>
+                            <note>
+                                <p>T(copy)DS. 1 p. signed Dr. Seuss</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0095-00005" level="file">
+                        <did>
+                            <unittitle><emph render="doublequote">Wilder Award Acceptance Speech by
+                                    Dr. Seuss.</emph><unitdate normal="1977/1985" type="inclusive"
+                                    >undated.</unitdate></unittitle>
+                            <note>
+                                <p>T(copy)D. 3 p.</p>
+                            </note>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAC0095-00006" level="file">
+                    <did>
+                        <container label="Folder" type="folder">2</container>
+                        <unittitle>Astrid Lindgren</unittitle>
+                    </did>
+                    <c03 id="VAC0095-00007" level="file">
+                        <did>
+                            <unittitle>Letters to Jonathan Cott<unitdate normal="1981-02-06">1981,
+                                    Feb. 6;</unitdate><unitdate normal="1981-03-30">Mar.
+                                    30;</unitdate><unitdate normal="1981-04-01">Apr.
+                                    10;</unitdate><unitdate normal="1981-06-09">June
+                                9</unitdate>(enclosure).</unittitle>
+                            <note>
+                                <p>All TLS's. 1983, Mar. 8 TLS 1p.; 1985, Jan. 4 TLS, 1 p.</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0095-00008" level="file">
+                        <did>
+                            <unittitle>Shawn, William. To Jonathan Cott, <unitdate
+                                    normal="1982-05-11">1982, May 11.</unitdate></unittitle>
+                            <note>
+                                <p>TLS, 1 p. Sends check for the Lindgren profile published in
+                                        <title render="italic">The New Yorker</title></p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0095-00009" level="file">
+                        <did>
+                            <unittitle><title render="doublequote">Dear Girls and Boys.</title> by
+                                Lindgren.</unittitle>
+                            <note>
+                                <p>Form letter on Puffin Books stationery explaining how <title
+                                        render="doublequote">Pippi Longstocking</title> came to be
+                                    written.</p>
+                            </note>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0095-00010" level="file">
+                        <did>
+                            <unittitle>Portrait photograph of Lindgren. <unitdate normal="1977/1985"
+                                    type="inclusive">undated</unitdate></unittitle>
+                            <physdesc>Black &amp; white, 4.25 in. x 5.75 in.</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAC0095-00011" level="file">
+                    <did>
+                        <container label="Folder" type="folder">3</container>
+                        <unittitle>Opie, Iona and Peter^(all in a single chronological
+                            file)</unittitle>
+                    </did>
+                    <c03 id="VAC0095-00012" level="file">
+                        <did>
+                            <unittitle>Letters to Jonathan Cott from Iona Opie: <unitdate
+                                    normal="1981-07-03">1981, July 3</unitdate>(enclosures);
+                                    <unitdate normal="1982-04-19">1982, Apr. 19,</unitdate><unitdate
+                                    normal="1982-05-12">May 12,</unitdate><unitdate
+                                    normal="1982-10-02">Oct. 2;</unitdate><unitdate
+                                    normal="1983-06-16">1983, June 16;</unitdate><unitdate
+                                    normal="1983">1983?</unitdate>all ALSs from Peter Opie:
+                                    <unitdate normal="1979-08-21">1979, Aug. 21;</unitdate>Season's
+                                Greetings: <unitdate normal="1980-01-28">1980, Jan.
+                                    28;</unitdate><unitdate normal="1981-02-03">1981, Feb.
+                                    3,</unitdate><unitdate normal="1981-04-07">Apr. 7</unitdate>All
+                                ALSs from Nancy Franklin (<title render="italic">The New
+                                    Yorker</title> letterhead) <unitdate normal="1983-04-13">1983,
+                                    Apr. 13</unitdate>TLS (enclosing a copy of a letter from Iona
+                                Opie to Franklin, 1983, Apr. 6.) from William Shawn: <unitdate
+                                    normal="1982-06-08"> 1982, June 8</unitdate>TLS, 1p. Sends check
+                                for the Opie profile</unittitle>
+                        </did>
+                    </c03>
+
+                </c02>
+                <c02 id="VAC0095-00013" level="file">
+                    <did>
+                        <container label="Folder" type="folder">4</container>
+                        <unittitle>William Steig</unittitle>
+                    </did>
+                    <c03 id="VAC0095-00014" level="file">
+                        <did>
+                            <unittitle>Letters to Jonathan Cott: <unitdate normal="1980-01-26">1980,
+                                    Jan. 26,</unitdate> 2 p.; <unitdate normal="1981-11-19">1981,
+                                    Nov. 19;</unitdate><unitdate normal="1982-04-16">1982, Apr.
+                                    16,</unitdate><unitdate normal="1982-12-13">Dec.
+                                    13;</unitdate><unitdate normal="1983-01-14"> 1983, Jan.
+                                    14,</unitdate><unitdate normal="1983-01-28"
+                                    >28,</unitdate><unitdate normal="1983-02-28">Feb.
+                                    28,</unitdate><unitdate normal="1983-05-21">May
+                                21.</unitdate>All ALSs</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAC0095-00015" level="file">
+                    <did>
+                        <container label="Folder" type="folder">5</container>
+                        <unittitle>P.L. Travers</unittitle>
+                    </did>
+                    <c03 id="VAC0095-00016" level="file">
+                        <did>
+                            <unittitle>Letters to Jonathan Cott: <unitdate normal="1979-05-18">1979,
+                                    May 18,</unitdate><unitdate normal="1979-06-08">June
+                                    8,</unitdate><unitdate normal="1979-11-23">Nov.
+                                    23,</unitdate><unitdate normal="1979-12-06">Dec.
+                                    6,</unitdate><unitdate normal="1979-12-15"
+                                >15</unitdate>(enclosing 2 poems). <unitdate normal="1980-01-19"
+                                    >1980, Jan. 19,</unitdate>
+                                <unitdate normal="1980-01-24">24,</unitdate>
+                                <unitdate normal="1980-03-24">Mar. 24,</unitdate>
+                                <unitdate normal="1980-04-26">Apr. 26,</unitdate>
+                                <unitdate normal="1980-07-10">July 10,</unitdate>
+                                <unitdate normal="1980-12-08">Dec. 8;</unitdate>
+                                <unitdate normal="1981-05-06">1981, May 6,</unitdate>
+                                <unitdate normal="1981-11-15">Nov. 15;</unitdate>
+                                <unitdate normal="1982-05-12">1982, May 12;</unitdate>
+                                <unitdate normal="1983-04-22">1983, Apr. 22;</unitdate>
+                                <unitdate normal="1984-10-28">1984, Oct. 28;</unitdate>
+                                <unitdate normal="1985-12-14">1985, Dec. 14.</unitdate>Mixture of
+                                ALSs and TLSs </unittitle>
+                        </did>
+
+                    </c03>
+                </c02>
+                <c02 id="VAC0095-00017" level="file">
+                    <did>
+                        <container label="Folder" type="folder">6</container>
+                        <unittitle>P.L. Travers</unittitle>
+                    </did>
+                    <c03 id="VAC0095-00018" level="file">
+                        <did>
+                            <unittitle>Cott, Jonathan. <title render="doublequote">The Wisdom of
+                                    Mary Poppins: Afternoon Tea with P.L.
+                                Travers</title></unittitle>
+                            <note>
+                                <p>T(copy)D, 28cm. 65 p. Heavily annotated and corrected in Travers
+                                    hand.</p>
+                            </note>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAC0095-00019" level="file">
+                    <did>
+                        <container label="Folder" type="folder">7</container>
+                        <unittitle><title render="italic">The New Yorker.</title>
+                            <unitdate normal="1983-02-28">February 28, 1983.</unitdate></unittitle>
+                        <note>
+                            <p><title render="doublequote">Profiles</title> (Astrid Lindgren) p.
+                                46</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 id="VAC0095-00020" level="file">
+                    <did>
+                        <container label="Folder" type="folder">8</container>
+                        <unittitle><title render="italic">The New Yorker.</title>
+                            <unitdate normal="1983-04-04">April 4, 1983.</unitdate></unittitle>
+                        <note>
+                            <p><title render="doublequote">Profiles</title> (Iona and Peter Opie) p.
+                                47</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 id="VAC0095-00021" level="file">
+                    <did>
+                        <container label="Folder" type="folder">9</container>
+                        <unittitle><title render="italic">Rolling Stone.</title>
+                            <unitdate normal="1976-12-30">December 30, 1976.</unitdate></unittitle>
+                        <note>
+                            <p><title render="doublequote">Maurice Sendak - King of all the Wild
+                                    Things</title> p. 48</p>
+                        </note>
+                    </did>
+                </c02>
+
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
