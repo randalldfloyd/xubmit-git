@@ -1,0 +1,2215 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAC0200">InU-Li-VAC0200</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Archipelago Books mss., <date normal="1981/2010"
+                        >1981-2010</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2010" type="publication">© 2010</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2010">© 2010</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                    <lb/><date normal="2010" type="source">2010</date>
+                <lb/>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2010-10-25">October 25, 2010</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2010-10-25">October 25, 2010</date>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <corpname encodinganalog="110" source="lcnaf">Archipelago Books</corpname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Archipelago Books mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1981/2010" type="inclusive"
+                >1981-2010</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2542</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>ca. 1160 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Archipelago Books mss., 1981-2010,
+                consists of the papers of the firm, including correspondence with authors,
+                translators and advertisers; typescripts and manuscripts of books published; proof
+                copies; and dust-jackets.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+            <p>Founded by Jill Schoolman, Archipelago Books is a not-for-profit press devoted to
+                publishing excellent translations of classic and contemporary world literature. In
+                its first five years, Archipelago published over forty-five books in nearly twenty
+                languages.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Correspondence; II.
+                Catalogs; III. Periodicals and Other Printed Materials; IV. Business Materials; V.
+                Writings; VI. Additions.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Archipelago Books mss., 1981-2010, consists of the papers of the firm, including
+                correspondence with authors, translators and advertisers; typescripts and
+                manuscripts of books published; proof copies; and dust-jackets.</p>
+            <p>International authors represented in the collection include: Breyten Breytenbach;
+                Ahmet Hamdi Tanpinar; Francis Ponge; Julio Cortázar; Tadeusz Rozewicz; Marguerite
+                Duras; Robert Musil; Henri Michaux; Elias Khoury; João Cabral de Melo Neto; Witold
+                Gombrowicz; and Jean Giono. Translators represented include: Michael Henry Heim;
+                Richard Sieburth; Richard Zenith; Lee Fahenstock; Bill Johnston; Peter Wortsman;
+                Daniel Slager; Robert Bonono; and Peter Theroux.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/schoolman+jill">
+                            <persname encodinganalog="700" source="lcnaf">Schoolman, Jill.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/altenberg+peter+1859-1919">
+                            <persname encodinganalog="700" source="lcnaf">Altenberg, Peter,
+                                1859-1919. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/khuri+ilyas">
+                            <persname encodinganalog="700" source="lcnaf">Kh¯ur¯i, Ily¯as.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/breytenbach+breyten">
+                            <persname encodinganalog="700" source="lcnaf">Breytenbach, Breyten.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/cortazar+julio">
+                            <persname encodinganalog="700" source="lcnaf">Cortázar, Julio.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/darwish+mahmud">
+                            <persname encodinganalog="700" source="lcnaf">Darw¯ish, Ma·hm¯ud.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/gombrowicz+witold">
+                            <persname encodinganalog="700" source="lcnaf">Gombrowicz, Witold.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/nerval+gerard+de+1808-1855">
+                            <persname encodinganalog="700" source="lcnaf">Nerval, Gérard de,
+                                1808-1855. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/ponge+francis">
+                            <persname encodinganalog="700" source="lcnaf">Ponge, Francis.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/rytkheu+iurii+1930-2008">
+                            <persname encodinganalog="700" source="lcnaf">Rytkh·eu, ´I`Urii,
+                                1930-2008. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/tanpinar+ahmet+hamdi">
+                            <persname encodinganalog="700" source="lcnaf">Tanpinar, Ahmet Hamdi.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/tulli+magdalena">
+                            <persname encodinganalog="700" source="lcnaf">Tulli, Magdalena.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/heim+michael+henry">
+                            <persname encodinganalog="700" source="lcnaf">Heim, Michael Henry.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/sieburth+richard">
+                            <persname encodinganalog="700" source="lcnaf">Sieburth, Richard.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/zenith+richard">
+                            <persname encodinganalog="700" source="lcnaf">Zenith, Richard.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/fahenstock+lee">
+                            <persname encodinganalog="700" source="lcnaf">Fahenstock, Lee.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/johnston+bill">
+                            <persname encodinganalog="700" source="lcnaf">Johnston, Bill.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/wortsman+peter">
+                            <persname encodinganalog="700" source="lcnaf">Wortsman, Peter.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/slager+daniel">
+                            <persname encodinganalog="700" source="lcnaf">Slager, Daniel.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/bonono+robert">
+                            <persname encodinganalog="700" source="lcnaf">Bonono, Robert.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/theroux+peter">
+                            <persname encodinganalog="700" source="lcnaf">Theroux, Peter.
+                            </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/stinehour+press">
+                            <persname encodinganalog="710" source="lcnaf">Stinehour Press.
+                            </persname>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/publishers+and+publishing+new+york+state+new+york{su}">
+                            <subject encodinganalog="650" source="lcsh">Publishers and
+                                publishing--New York(State)--New York. </subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/translations+publishing+united+states{su}">
+                            <subject encodinganalog="650" source="lcsh"
+                                >Translations--Publishing--United States. </subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/literature+translations+into+english{su}">
+                            <subject encodinganalog="650" source="lcsh">Literature--Translations
+                                into English. </subject>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="110" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 2005-2010</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>Archipelago Books mss., Lilly Library, Indiana University, Bloomington,
+                    Indiana.</p>
+            </prefercite>
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Mary Dunn and Craig Simpson.</p>
+                <p>Completed in <date normal="2010">2010</date></p>
+                
+            </processinfo>
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAC0200-00001" level="series">
+                <did>
+                    <!-- optional -->
+                    <container label="Box" type="box">1</container>
+
+
+                    <unittitle>I. Correspondence</unittitle>
+
+
+                </did>
+                <c02 id="VAC0200-00002" level="file">
+                    <did>
+                        <container label="Folders" type="folder">1-4</container>
+                        <unittitle>Archipelago Books, <unitdate normal="2001/2009" type="inclusive"
+                                >2001-2009</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAC0200-00003" level="series">
+                <did>
+                    <container label="Box" type="box">1</container>
+                    <unittitle>II. Catalogs</unittitle>
+                </did>
+                <c02 id="VAC0200-00004" level="file">
+                    <did>
+                        <container label="Folders" type="folder">5–12</container>
+                        <unittitle><unitdate normal="2003/2010" type="inclusive"
+                                >2003-2010</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00005" level="file">
+                    <did>
+                        <container label="Folder" type="folder">13</container>
+                        <unittitle>The Stinehour Press</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00006" level="file">
+                    <did>
+                        <container label="Folders" type="folder">14–15</container>
+                        <unittitle>Foreign publishers, <unitdate normal="2003/2007" type="inclusive"
+                                >2003-2007</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00007" level="file">
+                    <did>
+                        <container label="Folder" type="folder">16</container>
+                        <unittitle>Publicity</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAC0200-00008" level="series">
+                <did>
+                    <container label="Box" type="box">1</container>
+                    <unittitle>III. Periodicals and Other Printed Materials</unittitle>
+                </did>
+                <c02 id="VAC0200-00009" level="file">
+                    <did>
+                        <container label="Folders" type="folder">17–20</container>
+                        <unittitle>The Bloomsbury Review, <unitdate normal="1981/1983"
+                                type="inclusive">1981–1983,</unitdate><unitdate normal="2005"
+                                >2005</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00010" level="file">
+                    <did>
+                        <container label="Folder" type="folder">21</container>
+                        <unittitle>ALTA, conference schedule, <unitdate normal="2004"
+                                >2004</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00011" level="file">
+                    <did>
+                        <container label="Folder" type="folder">22</container>
+                        <unittitle>IIML, annual report with accompanying articles, <unitdate
+                                normal="2002">2002</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00012" level="file">
+                    <did>
+                        <container label="Folder" type="folder">23</container>
+                        <unittitle>LTI Korea, newsletter, <unitdate normal="2005"
+                            >2005</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00013" level="file">
+                    <did>
+                        <container label="Folder" type="folder">24</container>
+                        <unittitle>Book Fair, directories, <unitdate normal="2004"
+                            >2004</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00014" level="file">
+                    <did>
+                        <container label="Folder" type="folder">25</container>
+                        <unittitle>PEN World Voices, program</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00015" level="file">
+                    <did>
+                        <container label="Folder" type="folder">26</container>
+                        <unittitle>World Literature Today, booklet</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00016" level="file">
+                    <did>
+                        <container label="Folder" type="folder">27</container>
+                        <unittitle>NBCC Finalists Award, program</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAC0200-00017" level="series">
+                <did>
+                    <container label="Box" type="box">1</container>
+                    <unittitle>IV. Business Materials</unittitle>
+                </did>
+                <c02 id="VAC0200-00018" level="file">
+                    <did>
+                        <container label="Folder" type="folder">28</container>
+                        <unittitle>Archipelago Books, marketing information</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00019" level="file">
+                    <did>
+                        <container label="Folder" type="folder">29</container>
+                        <unittitle>Archipelago Books, business materials</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00020" level="file">
+                    <did>
+                        <container label="Folder" type="folder">30</container>
+                        <unittitle>The Maple–Vail Book Manufacturing Group, business
+                            materials</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00021" level="file">
+                    <did>
+                        <container label="Folder" type="folder">31</container>
+                        <unittitle>The Stinehour Press, business materials</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00022" level="file">
+                    <did>
+                        <container label="Folder" type="folder">32</container>
+                        <unittitle>Thomson–Shore, Inc., business materials</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAC0200-00023" level="series">
+                <did>
+                    <container label="Box" type="box">2</container>
+                    <unittitle>V. Writings</unittitle>
+                </did>
+                <c02 id="VAC0200-00024" level="file">
+                    <did>
+                        <container label="Folder" type="folder">1</container>
+                        <unittitle>Abu Gleil, Hamdy: <title render="italic">Thieves in
+                                Retirement,</title> text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00025" level="file">
+                    <did>
+                        <container label="Folder" type="folder">2–4</container>
+                        <unittitle>Akutagawa, Ryunosuke: <title render="italic">Mandarins,</title>
+                            text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00026" level="file">
+                    <did>
+                        <container label="Folders" type="folder">5–10</container>
+                        <unittitle>Akutagawa, Ryunosuke: <title render="italic">Mandarins,</title>
+                            page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00027" level="file">
+                    <did>
+                        <container label="Folder" type="folder">11</container>
+                        <unittitle>Akutagawa, Ryunosuke: <title render="italic">Mandarins,</title>
+                            cover proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00028" level="file">
+                    <did>
+                        <container label="Folder" type="folder">12</container>
+                        <unittitle>Alexievich, Svetalena: <title render="italic">The War's Unwomanly
+                                Face,</title> text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00029" level="file">
+                    <did>
+                        <container label="Folder" type="folder">13</container>
+                        <unittitle>Al–Saadawi, Nawal: <title render="italic">Noel,</title> page
+                            proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00030" level="file">
+                    <did>
+                        <container label="Folder" type="folder">14</container>
+                        <unittitle>Al–Saadawi, Nawal: <title render="italic">Hot Spring,</title>
+                            page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00031" level="file">
+                    <did>
+                        <container label="Box" type="box">3</container>
+                        <container label="Folders" type="folder">1–2</container>
+                        <unittitle>Altenberg, Peter: <title render="italic">Telegrams of the
+                                Soul,</title> text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00032" level="file">
+                    <did>
+                        <container label="Folders" type="folder">3–5</container>
+                        <unittitle>Altenberg, Peter: <title render="italic">Telegrams of the
+                                Soul,</title> page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00033" level="file">
+                    <did>
+                        <container label="Folder" type="folder">6</container>
+                        <unittitle>Altenberg, Peter: <title render="italic">Telegrams of the
+                                Soul,</title> design sample pages</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00034" level="file">
+                    <did>
+                        <container label="Folder" type="folder">7</container>
+                        <unittitle>Altenberg, Peter: <title render="italic">Telegrams of the
+                                Soul,</title> cover proof</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00035" level="file">
+                    <did>
+                        <container label="Folder" type="folder">8</container>
+                        <unittitle>Altenberg, Peter: <title render="italic">Telegrams of the
+                                Soul,</title> correspondence and publicity</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00036" level="file">
+                    <did>
+                        <container label="Folders" type="folder">9–12</container>
+                        <unittitle>Bakker, Gerbrand: <title render="italic">The Twin,</title>
+                            text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00037" level="file">
+                    <did>
+                        <container label="Folders" type="folder">13–14</container>
+                        <unittitle>Bakker, Gerbrand: <title render="italic">The Twin,</title> page
+                            proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00038" level="file">
+                    <did>
+                        <container label="Folder" type="folder">15</container>
+                        <unittitle>Bakker, Gerbrand: <title render="italic">The Twin,</title> cover
+                            proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00039" level="file">
+                    <did>
+                        <container label="Folder" type="folder">16</container>
+                        <unittitle>Bakker, Gerbrand: <title render="italic">The Twin,</title> proof
+                            book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00040" level="file">
+                    <did>
+                        <container label="Folder" type="folder">17</container>
+                        <unittitle>Barnstone, Willis: <title render="italic">ABC of
+                                Translation,</title> text and book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00041" level="file">
+                    <did>
+                        <container label="Folder" type="folder">18</container>
+                        <unittitle>Barnstone, Willis: <title render="italic">ABC of
+                                Translation,</title> page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00042" level="file">
+                    <did>
+                        <container label="Folders" type="folder">19–20</container>
+                        <unittitle>Bartis, Attila: <title render="italic">Tranquility,</title>
+                            text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00043" level="file">
+                    <did>
+                        <container label="Folders" type="folder">21–23</container>
+                        <unittitle>Bartis, Attila: <title render="italic">Tranquility,</title> page
+                            proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00044" level="file">
+                    <did>
+                        <container label="Box" type="box">4</container>
+                        <container label="Folder" type="folder">1</container>
+                        <unittitle>Bartis, Attila: <title render="italic">Tranquility,</title> cover
+                            proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00045" level="file">
+                    <did>
+                        <container label="Folder" type="folder">2</container>
+                        <unittitle>Bartis, Attila: <title render="italic">Tranquility,</title> proof
+                            book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00046" level="file">
+                    <did>
+                        <container label="Folder" type="folder">3</container>
+                        <unittitle>Bochorishvili, Elena: <title render="italic">Ucmopua
+                                Poana,</title> text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00047" level="file">
+                    <did>
+                        <container label="Folder" type="folder">4</container>
+                        <unittitle>Bononno, Robert: <title render="italic">My Body,</title> page
+                            proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00048" level="file">
+                    <did>
+                        <container label="Folders" type="folder">5–6</container>
+                        <unittitle>Breytenbach, Breyten: <title render="italic">All One
+                                Horse,</title> page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00049" level="file">
+                    <did>
+                        <container label="Folder" type="folder">7</container>
+                        <unittitle>Breytenbach, Breyten: <title render="italic">All One
+                                Horse,</title> cover proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00050" level="file">
+                    <did>
+                        <container label="Folder" type="folder">8</container>
+                        <unittitle>Breytenbach, Breyten: <title render="italic">All One
+                                Horse,</title> proof book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00051" level="file">
+                    <did>
+                        <container label="Folders" type="folder">9–12</container>
+                        <unittitle>Breytenbach, Breyten: <title render="italic">Intimate
+                                Stranger,</title> page proofs, 1st and 2ne passes</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00052" level="file">
+                    <did>
+                        <container label="Folder" type="folder">13</container>
+                        <unittitle>Breytenbach, Breyten: <title render="italic">Intimate
+                                Stranger,</title> cover proof</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00053" level="file">
+                    <did>
+                        <container label="Folder" type="folder">14</container>
+                        <unittitle>Breytenbach, Breyten: <title render="italic">Intimate
+                                Stranger,</title> proof book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00054" level="file">
+                    <did>
+                        <container label="Folders" type="folder">15–17</container>
+                        <unittitle>Breytenbach, Breyten: <title render="italic">Mouroir,</title>
+                            page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00055" level="file">
+                    <did>
+                        <container label="Folder" type="folder">18</container>
+                        <unittitle>Breytenbach, Breyten: <title render="italic">Mouroir,</title>
+                            cover proof</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00056" level="file">
+                    <did>
+                        <container label="Folder" type="folder">19</container>
+                        <unittitle>Breytenbach, Breyten: <title render="italic">Mouroir,</title>
+                            proof book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00057" level="file">
+                    <did>
+                        <container label="Folder" type="folder">20</container>
+                        <unittitle>Buchner, Georg: <title render="italic">Lenz,</title>
+                            correspondence</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00058" level="file">
+                    <did>
+                        <container label="Folders" type="folder">21–22</container>
+                        <unittitle>Buchner, Georg: <title render="italic">Lenz,</title> text in
+                            German</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00059" level="file">
+                    <did>
+                        <container label="Folders" type="folder">23–24</container>
+                        <unittitle>Buchner, Georg: <title render="italic">Lenz,</title> text in
+                            English</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00060" level="file">
+                    <did>
+                        <container label="Folders" type="folder">25–27</container>
+                        <unittitle>Buchner, Georg: <title render="italic">Lenz,</title> page proofs,
+                            1st pass</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00061" level="file">
+                    <did>
+                        <container label="Box" type="box">5</container>
+                        <container label="Folders" type="folder">1–2</container>
+                        <unittitle>Buchner, Georg: <title render="italic">Lenz,</title> page proofs,
+                            2nd pass</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00062" level="file">
+                    <did>
+                        <container label="Folder" type="folder">3</container>
+                        <unittitle>Buchner, Georg: <title render="italic">Lenz,</title>
+                            notes</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00063" level="file">
+                    <did>
+                        <container label="Folder" type="folder">4</container>
+                        <unittitle>Buchner, Georg: <title render="italic">Lenz,</title>
+                            corrections</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00064" level="file">
+                    <did>
+                        <container label="Folder" type="folder">5</container>
+                        <unittitle>Buchner, Georg: <title render="italic">Lenz,</title> design
+                            sample pages</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00065" level="file">
+                    <did>
+                        <container label="Folder" type="folder">6</container>
+                        <unittitle>Buchner, Georg: <title render="italic">Lenz,</title> unbound
+                            gatherings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00066" level="file">
+                    <did>
+                        <container label="Folder" type="folder">7</container>
+                        <unittitle>Buchner, Georg: <title render="italic">Lenz,</title> photocopy of
+                            German text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00067" level="file">
+                    <did>
+                        <container label="Folder" type="folder">8</container>
+                        <unittitle>Buchner, Georg: <title render="italic">Lenz,</title>
+                            review</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00068" level="file">
+                    <did>
+                        <container label="Folders" type="folder">9–11</container>
+                        <unittitle>Cabral, Joao: <title render="italic">Education by Stone,</title>
+                            text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00069" level="file">
+                    <did>
+                        <container label="Folders" type="folder">12–13</container>
+                        <unittitle>Cabral, Joao: <title render="italic">Education by Stone,</title>
+                            page proofs, 1st pass</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00070" level="file">
+                    <did>
+                        <container label="Folder" type="folder">14</container>
+                        <unittitle>Cabral, Joao: <title render="italic">Education by Stone,</title>
+                            design sample pages</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00071" level="file">
+                    <did>
+                        <container label="Folder" type="folder">15</container>
+                        <unittitle>Chevillard, Eric: <title render="italic">Palafox,</title>
+                            correspondence and text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00072" level="file">
+                    <did>
+                        <container label="Folders" type="folder">16–17</container>
+                        <unittitle>Chevillard, Eric: <title render="italic">Palafox,</title> page
+                            proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00073" level="file">
+                    <did>
+                        <container label="Folder" type="folder">18</container>
+                        <unittitle>Chevillard, Eric: <title render="italic">Palafox,</title> unbound
+                            gatherings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00074" level="file">
+                    <did>
+                        <container label="Folder" type="folder">19</container>
+                        <unittitle>Chevillard, Eric: <title render="italic">Palafox,</title> advance
+                            reading copy</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00075" level="file">
+                    <did>
+                        <container label="Folders" type="folder">20–22</container>
+                        <unittitle>Claus, Hugo: <title render="italic">Wonder,</title>
+                            text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00076" level="file">
+                    <did>
+                        <container label="Folders" type="folder">23–27</container>
+                        <unittitle>Claus, Hugo: <title render="italic">Wonder,</title> page
+                            proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00077" level="file">
+                    <did>
+                        <container label="Folder" type="folder">28</container>
+                        <unittitle>Claus, Hugo: <title render="italic">Wonder,</title> cover
+                            proof</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00078" level="file">
+                    <did>
+                        <container label="Folder" type="folder">29</container>
+                        <unittitle>Claus, Hugo: <title render="italic">Wonder,</title> proof
+                            book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00079" level="file">
+                    <did>
+                        <container label="Folder" type="folder">30</container>
+                        <unittitle>Claus, Hugo: <title render="italic">Wonder,</title>
+                            publicity</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00080" level="file">
+                    <did>
+                        <container label="Box" type="box">6</container>
+                        <container label="Folders" type="folder">1–2</container>
+                        <unittitle>Cortazar, Julio: <title render="italic">Diary of Andres
+                                Fava,</title> text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00081" level="file">
+                    <did>
+                        <container label="Folders" type="folder">3–4</container>
+                        <unittitle>Cortazar, Julio: <title render="italic">Diary of Andres
+                                Fava,</title> page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00082" level="file">
+                    <did>
+                        <container label="Folder" type="folder">5</container>
+                        <unittitle>Cortazar, Julio: <title render="italic">Diary of Andres
+                                Fava,</title> changes</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00083" level="file">
+                    <did>
+                        <container label="Folder" type="folder">6</container>
+                        <unittitle>Cortazar, Julio: <title render="italic">Diary of Andres
+                                Fava,</title> design sample pages</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00084" level="file">
+                    <did>
+                        <container label="Folders" type="folder">7–9</container>
+                        <unittitle>Cortazar, Julio: <title render="italic">Autonauts of the
+                                Cosmoroute,</title> text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00085" level="file">
+                    <did>
+                        <container label="Folders" type="folder">10–21</container>
+                        <unittitle>Cortazar, Julio: <title render="italic">Autonauts of the
+                                Cosmoroute,</title> page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00086" level="file">
+                    <did>
+                        <container label="Folder" type="folder">22</container>
+                        <unittitle>Cortazar, Julio: <title render="italic">Autonauts of the
+                                Cosmoroute,</title> CD–ROM, 4th pass</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00087" level="file">
+                    <did>
+                        <container label="Folder" type="folder">23</container>
+                        <unittitle>Cortazar, Julio: <title render="italic">Autonauts of the
+                                Cosmoroute,</title> corrections</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00088" level="file">
+                    <did>
+                        <container label="Folder" type="folder">24</container>
+                        <unittitle>Crevel, Rene: <title render="italic">My Body and I,</title>
+                            text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00089" level="file">
+                    <did>
+                        <container label="Folders" type="folder">25–26</container>
+                        <unittitle>Crevel, Rene: <title render="italic">My Body and I,</title> page
+                            proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00090" level="file">
+                    <did>
+                        <container label="Folder" type="folder">27</container>
+                        <unittitle>Crevel, Rene: <title render="italic">My Body and I,</title>
+                            design sample pages</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00091" level="file">
+                    <did>
+                        <container label="Folder" type="folder">28</container>
+                        <unittitle>Crevel, Rene: <title render="italic">My Body and I,</title>
+                            corrections</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00092" level="file">
+                    <did>
+                        <container label="Box" type="box">7</container>
+                        <container label="Folders" type="folder">1–3</container>
+                        <unittitle>Coulson, Joseph: <title render="italic">The Vanishing
+                                Moon,</title> text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00093" level="file">
+                    <did>
+                        <container label="Folder" type="folder">4</container>
+                        <unittitle>Coulson, Joseph: <title render="italic">The Vanishing
+                                Moon,</title> cover proof</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00094" level="file">
+                    <did>
+                        <container label="Folders" type="folder">5–7</container>
+                        <unittitle>Coulson, Joseph: <title render="italic">Of Song and
+                                Water,</title> text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00095" level="file">
+                    <did>
+                        <container label="Folder" type="folder">8</container>
+                        <unittitle>Coulson, Joseph: <title render="italic">Of Song and
+                                Water,</title> CD–ROM and page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00096" level="file">
+                    <did>
+                        <container label="Folder" type="folder">9</container>
+                        <unittitle>Coulson, Joseph: <title render="italic">Of Song and
+                                Water,</title> proof book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00097" level="file">
+                    <did>
+                        <container label="Folder" type="folder">10</container>
+                        <unittitle>Darwish, Mahmoud: <title render="italic">A River Dies of
+                                Thirst,</title> page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00098" level="file">
+                    <did>
+                        <container label="Folder" type="folder">11</container>
+                        <unittitle>Darwish, Mahmoud: <title render="italic">A River Dies of
+                                Thirst,</title> cover proof</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00099" level="file">
+                    <did>
+                        <container label="Folder" type="folder">12</container>
+                        <unittitle>Darwish, Mahmoud: <title render="italic">Why Did You Leave the
+                                Horse Alone,</title> correspondence</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00100" level="file">
+                    <did>
+                        <container label="Folder" type="folder">13</container>
+                        <unittitle>Darwish, Mahmoud: <title render="italic">Why Did You Leave the
+                                Horse Alone,</title> printing proposal</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00101" level="file">
+                    <did>
+                        <container label="Folders" type="folder">14–17</container>
+                        <unittitle>Darwish, Mahmoud: <title render="italic">Why Did You Leave the
+                                Horse Alone,</title> text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00102" level="file">
+                    <did>
+                        <container label="Folders" type="folder">18–19</container>
+                        <unittitle>Darwish, Mahmoud: <title render="italic">Why Did You Leave the
+                                Horse Alone,</title> page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00103" level="file">
+                    <did>
+                        <container label="Folder" type="folder">20</container>
+                        <unittitle>Darwish, Mahmoud: <title render="italic">Why Did You Leave the
+                                Horse Alone,</title> cover proof</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00104" level="file">
+                    <did>
+                        <container label="Folder" type="folder">21</container>
+                        <unittitle>Demetz, P.: <title render="italic">Eine Reise,</title> book
+                            proposal with reviews</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00105" level="file">
+                    <did>
+                        <container label="Folder" type="folder">22</container>
+                        <unittitle>Duras, Marguerite: Y<title render="italic">ann Andrea
+                                Steiner,</title> test</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00106" level="file">
+                    <did>
+                        <container label="Folders" type="folder">23–26</container>
+                        <unittitle>Duras, Marguerite: <title render="italic">Yann Andrea
+                                Steiner,</title> page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00107" level="file">
+                    <did>
+                        <container label="Folders" type="folder">27–29</container>
+                        <unittitle>Elorriaga, Unai: <title render="italic">Plants Don't Drink
+                                Coffee,</title> text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00108" level="file">
+                    <did>
+                        <container label="Folders" type="folder">30–31</container>
+                        <unittitle>Elorriaga, Unai: <title render="italic">Plants Don't Drink
+                                Coffee,</title> page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00109" level="file">
+                    <did>
+                        <container label="Folder" type="folder">32</container>
+                        <unittitle>Elorriaga, Unai: <title render="italic">Plants Don't Drink
+                                Coffee,</title> cover proof</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00110" level="file">
+                    <did>
+                        <container label="Folder" type="folder">33</container>
+                        <unittitle>Elorriaga, Unai: <title render="italic">lants Don't Drink
+                                Coffee,</title> proof book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00111" level="file">
+                    <did>
+                        <container label="Box" type="box">8</container>
+                        <container label="Folder" type="folder">1</container>
+                        <unittitle>Ertai, Gao: Sunset <title render="italic">Over Barren
+                                Mountains,</title> text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00112" level="file">
+                    <did>
+                        <container label="Folder" type="folder">2</container>
+                        <unittitle>Fabre, Dominique: <title render="italic">The Waitress Was
+                                New,</title> text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00113" level="file">
+                    <did>
+                        <container label="Folder" type="folder">3</container>
+                        <unittitle>Fabre, Dominique: <title render="italic">The Waitress Was
+                                New,</title> corrections</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00114" level="file">
+                    <did>
+                        <container label="Folder" type="folder">4</container>
+                        <unittitle>Gelassimov, Andrei: <title render="italic">Thirst,</title> text
+                            in French</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00115" level="file">
+                    <did>
+                        <container label="Folder" type="folder">5</container>
+                        <unittitle>Gombrowicz, Witold: Correspondence</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00116" level="file">
+                    <did>
+                        <container label="Folders" type="folder">6–7</container>
+                        <unittitle>Gombrowicz, Witold: <title render="italic">Baccay,</title>
+                            text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00117" level="file">
+                    <did>
+                        <container label="Folders" type="folder">8–11</container>
+                        <unittitle>Gombrowicz, Witold: <title render="italic">Baccay,</title> page
+                            proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00118" level="file">
+                    <did>
+                        <container label="Folder" type="folder">12</container>
+                        <unittitle>Gombrowicz, Witold: <title render="italic">Baccay,</title>
+                            unbound book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00119" level="file">
+                    <did>
+                        <container label="Folder" type="folder">13</container>
+                        <unittitle>Gombrowicz, Witold: <title render="italic">Baccay,</title> cover
+                            proof</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00120" level="file">
+                    <did>
+                        <container label="Folder" type="folder">14</container>
+                        <unittitle>Hartley, Christine Schwartz: <title render="italic">Sample
+                                Translations from French,</title> text and
+                            correspondence</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00121" level="file">
+                    <did>
+                        <container label="Folders" type="folder">15–16</container>
+                        <unittitle>Heine, Heinrich: <title render="italic">Travel Pictures,</title>
+                            text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00122" level="file">
+                    <did>
+                        <container label="Folders" type="folder">17–18</container>
+                        <unittitle>Heine, Heinrich: <title render="italic">Travel Pictures,</title>
+                            page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00123" level="file">
+                    <did>
+                        <container label="Folder" type="folder">19</container>
+                        <unittitle>Hilbig, Wolfgang: Correspondence</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00124" level="file">
+                    <did>
+                        <container label="Folder" type="folder">20</container>
+                        <unittitle>Hilbig, Wolfgang: Examples of his work</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00125" level="file">
+                    <did>
+                        <container label="Folder" type="folder">21</container>
+                        <unittitle>Hinton, David: <title render="italic">Site,</title>
+                            correspondence and text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00126" level="file">
+                    <did>
+                        <container label="Folder" type="folder">22</container>
+                        <unittitle>Hofer, Jen: Sample translations</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00127" level="file">
+                    <did>
+                        <container label="Folders" type="folder">23–24</container>
+                        <unittitle>Holderlin, Friedrich: <title render="italic">Hyperion,</title>
+                            page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00128" level="file">
+                    <did>
+                        <container label="Folder" type="folder">25</container>
+                        <unittitle>Hrabal, Bohumil: <title render="italic">Harlequin's
+                                Millions,</title> excerpts</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00129" level="file">
+                    <did>
+                        <container label="Folder" type="folder">26</container>
+                        <unittitle>Jergovic, Miljenko: <title render="italic">Sarajevo
+                                Marlboro,</title> cover proof</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00130" level="file">
+                    <did>
+                        <container label="Folder" type="folder">27</container>
+                        <unittitle>Khoury, Elias: US/Canada visit program, itinerary</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00131" level="file">
+                    <did>
+                        <container label="Folder" type="folder">28</container>
+                        <unittitle>Khoury, Elias: <title render="italic">Bab El Shams, Gate of the
+                                Sun,</title> correspondence</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00132" level="file">
+                    <did>
+                        <container label="Box" type="box">9</container>
+                        <container label="Folder" type="folder">29</container>
+                        <unittitle>Khoury, Elias: <title render="italic">Bab El Shams, Gate of the
+                                Sun,</title> maps</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00133" level="file">
+                    <did>
+                        <container label="Folders" type="folder">1–10</container>
+                        <unittitle>Khoury, Elias: <title render="italic">Bab El Shams, Gate of the
+                                Sun,</title> text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00134" level="file">
+                    <did>
+                        <container label="Folders" type="folder">11–20</container>
+                        <unittitle>Khoury, Elias: <title render="italic">Bab El Shams, Gate of the
+                                Sun,</title> page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00135" level="file">
+                    <did>
+                        <container label="Box" type="box">10</container>
+                        <container label="Folders" type="folder">1–4</container>
+                        <unittitle>Khoury, Elias: <title render="italic">Bab El Shams, Gate of the
+                                Sun,</title> page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00136" level="file">
+                    <did>
+                        <container label="Folder" type="folder">5</container>
+                        <unittitle>Khoury, Elias: <title render="italic">Bab El Shams, Gate of the
+                                Sun,</title> corrections</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00137" level="file">
+                    <did>
+                        <container label="Folder" type="folder">6</container>
+                        <unittitle>Khoury, Elias: <title render="italic">Bab El Shams, Gate of the
+                                Sun,</title> sample pages</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00138" level="file">
+                    <did>
+                        <container label="Folder" type="folder">7</container>
+                        <unittitle>Khoury, Elias: <title render="italic">Bab El Shams, Gate of the
+                                Sun,</title> review</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00139" level="file">
+                    <did>
+                        <container label="Folders" type="folder">8–9</container>
+                        <unittitle>Khoury, Elias: <title render="italic">Yalo,</title>
+                            text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00140" level="file">
+                    <did>
+                        <container label="Folders" type="folder">10–15</container>
+                        <unittitle>Khoury, Elias: <title render="italic">Yalo,</title> page
+                            proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00141" level="file">
+                    <did>
+                        <container label="Folder" type="folder">16</container>
+                        <unittitle>Khoury, Elias: <title render="italic">Yalo,</title>
+                            text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00142" level="file">
+                    <did>
+                        <container label="Folder" type="folder">17</container>
+                        <unittitle>Kleist, Heinrich von: <title render="italic">The Earthquake in
+                                Chile,</title> text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00143" level="file">
+                    <did>
+                        <container label="Folders" type="folder">18–21</container>
+                        <unittitle>Kleist, Heinrich von: <title render="italic">Selected
+                                Prose,</title> page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00144" level="file">
+                    <did>
+                        <container label="Folder" type="folder">22</container>
+                        <unittitle>Kleist, Heinrich von: <title render="italic">Selected
+                                Prose,</title> corrections</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00145" level="file">
+                    <did>
+                        <container label="Folder" type="folder">23</container>
+                        <unittitle>Kleist, Heinrich von: <title render="italic">Selected
+                                Prose,</title> cover proof</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00146" level="file">
+                    <did>
+                        <container label="Folder" type="folder">24</container>
+                        <unittitle>Knausgaard, Karl O.: <title render="italic">A Time for
+                                Everything,</title> text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00147" level="file">
+                    <did>
+                        <container label="Box" type="box">11</container>
+                        <container label="Folders" type="folder">1–3</container>
+                        <unittitle>Knausgaard, Karl O.: <title render="italic">A Time for
+                                Everything,</title> text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00148" level="file">
+                    <did>
+                        <container label="Folders" type="folder">4–6</container>
+                        <unittitle>Knausgaard, Karl O.: <title render="italic">A Time for
+                                Everything,</title> page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00149" level="file">
+                    <did>
+                        <container label="Folder" type="folder">7</container>
+                        <unittitle>Knausgaard, Karl O.: <title render="italic">A Time for
+                                Everything,</title> cover proof</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00150" level="file">
+                    <did>
+                        <container label="Folder" type="folder">8</container>
+                        <unittitle>Kratochvil, Jiri: <title render="italic">Au milieu des nuits un
+                                chant,</title> photocopy excerpt</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00151" level="file">
+                    <did>
+                        <container label="Folders" type="folder">9–18</container>
+                        <unittitle>Laxness, Halldor: <title render="italic">Great Weaver from
+                                Kashmir,</title> page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00152" level="file">
+                    <did>
+                        <container label="Box" type="box">12</container>
+                        <container label="Folders" type="folder">1–3</container>
+                        <unittitle>Laxness, Halldor: <title render="italic">Great Weaver from
+                                Kashmir,</title> page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00153" level="file">
+                    <did>
+                        <container label="Folder" type="folder">4</container>
+                        <unittitle>Laxness, Halldor: <title render="italic">Great Weaver of
+                                Kashmir,</title> proof book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00154" level="file">
+                    <did>
+                        <container label="Folder" type="folder">5</container>
+                        <unittitle>Laxness, Halldor: <title render="italic">Great Weaver of
+                                Kashmir,</title> corrections</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00155" level="file">
+                    <did>
+                        <container label="Folder" type="folder">6</container>
+                        <unittitle>Laxness, Halldor: <title render="italic">Great Weaver of
+                                Kashmir,</title> cover proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00156" level="file">
+                    <did>
+                        <container label="Folders" type="folder">7–8</container>
+                        <unittitle>Meng Hao–Jan: <title render="italic">The Mountain Poems,</title>
+                            text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00157" level="file">
+                    <did>
+                        <container label="Folder" type="folder">9</container>
+                        <unittitle>Meng Hao–Jan: <title render="italic">The Mountain Poems,</title>
+                            excerpts</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00158" level="file">
+                    <did>
+                        <container label="Folders" type="folder">10–11</container>
+                        <unittitle>Michaux, Henri: <title render="italic">Stroke by Stroke,</title>
+                            page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00159" level="file">
+                    <did>
+                        <container label="Folder" type="folder">12</container>
+                        <unittitle>Jeong Mi–Kyeong: <title render="italic">Memories of Lily–Colored
+                                Photographs,</title> text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00160" level="file">
+                    <did>
+                        <container label="Folder" type="folder">13</container>
+                        <unittitle>Morales, Harry: <title render="italic">Sample
+                                Translations,</title> correspondence</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00161" level="file">
+                    <did>
+                        <container label="Folder" type="folder">14</container>
+                        <unittitle>Musil, Robert: <title render="italic">Posthumous Papers of a
+                                Living Author,</title> text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00162" level="file">
+                    <did>
+                        <container label="Folder" type="folder">15</container>
+                        <unittitle>Musil, Robert: <title render="italic">Posthumous Papers of a
+                                Living Author,</title> proof book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00163" level="file">
+                    <did>
+                        <container label="Folder" type="folder">16</container>
+                        <unittitle>Musil, Robert: <title render="italic">Posthumous Papers of a
+                                Living Author,</title> cover proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00164" level="file">
+                    <did>
+                        <container label="Folder" type="folder">17</container>
+                        <unittitle>Nassar, Raduan: <title render="italic">Lavoura Arcaica,</title>
+                            text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00165" level="file">
+                    <did>
+                        <container label="Folder" type="folder">18</container>
+                        <unittitle>Naughton, James: <title render="italic">Sample
+                                Translations,</title> text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00166" level="file">
+                    <did>
+                        <container label="Folders" type="folder">19–22</container>
+                        <unittitle>Nerval, Gerard de: <title render="italic">The Salt
+                                Smugglers,</title> text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00167" level="file">
+                    <did>
+                        <container label="Folders" type="folder">23–24</container>
+                        <unittitle>Nerval, Gerard de: <title render="italic">The Salt
+                                Smugglers,</title> page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00168" level="file">
+                    <did>
+                        <container label="Box" type="box">13</container>
+                        <container label="Folders" type="folder">1–2</container>
+                        <unittitle>Nerval, Gerard de: <title render="italic">The Salt
+                                Smugglers,</title> page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00169" level="file">
+                    <did>
+                        <container label="Folder" type="folder">3</container>
+                        <unittitle>Nerval, Gerard de: <title render="italic">The Salt
+                                Smugglers,</title> final proof</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00170" level="file">
+                    <did>
+                        <container label="Folder" type="folder">4</container>
+                        <unittitle>Nerval, Gerard de: <title render="italic">The Salt
+                                Smugglers,</title> cover proof</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00171" level="file">
+                    <did>
+                        <container label="Folder" type="folder">5</container>
+                        <unittitle>Nerval, Gerard de: <title render="italic">The Salt
+                                Smugglers,</title> proof book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00172" level="file">
+                    <did>
+                        <container label="Folder" type="folder">6</container>
+                        <unittitle>Novalis: <title render="italic">The Novices of Sais,</title>
+                            text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00173" level="file">
+                    <did>
+                        <container label="Folders" type="folder">7–10</container>
+                        <unittitle>Pea, Enrico: <title render="italic">Moscardino,</title>
+                            text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00174" level="file">
+                    <did>
+                        <container label="Folder" type="folder">11</container>
+                        <unittitle>Pea, Enrico: <title render="italic">Moscardino,</title> design
+                            sample pages</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00175" level="file">
+                    <did>
+                        <container label="Folder" type="folder">12</container>
+                        <unittitle>Pea, Enrico: <title render="italic">Moscardino,</title>
+                            corrections</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00176" level="file">
+                    <did>
+                        <container label="Folder" type="folder">13</container>
+                        <unittitle>Perec, Georges: <title render="italic">Best Wishes,</title>
+                            text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00177" level="file">
+                    <did>
+                        <container label="Folder" type="folder">14</container>
+                        <unittitle>Ponge, Francis: <title render="italic">Mute Objects of
+                                Expression,</title> text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00178" level="file">
+                    <did>
+                        <container label="Folders" type="folder">15–16</container>
+                        <unittitle>Ponge, Francis: <title render="italic">Mute Objects of
+                                Expression,</title> page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00179" level="file">
+                    <did>
+                        <container label="Folder" type="folder">17</container>
+                        <unittitle>Ponge, Francis: <title render="italic">The Wasp,</title>
+                            text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00180" level="file">
+                    <did>
+                        <container label="Folder" type="folder">18</container>
+                        <unittitle>Ponge, Francis: <title render="italic">Spring Tides,</title>
+                            text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00181" level="file">
+                    <did>
+                        <container label="Folder" type="folder">19</container>
+                        <unittitle>Ponge, Francis: <title render="italic">Spring Tides,</title> page
+                            proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00182" level="file">
+                    <did>
+                        <container label="Folder" type="folder">20</container>
+                        <unittitle>Ponge, Francis: <title render="italic">Spring Tides,</title>
+                            unbound gatherings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00183" level="file">
+                    <did>
+                        <container label="Folder" type="folder">21</container>
+                        <unittitle>Ponge, Francis: <title render="italic">Spring Tides,</title>
+                            cover proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00184" level="file">
+                    <did>
+                        <container label="Folders" type="folder">22–23</container>
+                        <unittitle>Poulin, Jacques: <title render="italic">Translation is a Love
+                                Affair,</title> text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00185" level="file">
+                    <did>
+                        <container label="Folder" type="folder">24</container>
+                        <unittitle>Poulin, Jacques: <title render="italic">Translation is a Love
+                                Affair,</title> page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00186" level="file">
+                    <did>
+                        <container label="Folder" type="folder">25</container>
+                        <unittitle>Poulin, Jacques: <title render="italic">Translation is a Love
+                                Affair,</title> cover proof</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00187" level="file">
+                    <did>
+                        <container label="Folder" type="folder">26</container>
+                        <unittitle>Rilke, Rainer Maria: <title render="italic">Auguste
+                                Rodin,</title> CD and cover proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00188" level="file">
+                    <did>
+                        <container label="Folder" type="folder">27</container>
+                        <unittitle>Rilke, Rainer Maria: <title render="italic">Auguste
+                                Rodin,</title> book cover</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00189" level="file">
+                    <did>
+                        <container label="Folder" type="folder">28</container>
+                        <unittitle>Rondoni, Davide: <title render="italic">Il Bar del Tempo,</title>
+                            text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00190" level="file">
+                    <did>
+                        <container label="Box" type="box">14</container>
+                        <container label="Folder" type="folder">1</container>
+                        <unittitle>Rozewicz, Tadeusz: Memorandum of agreement</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00191" level="file">
+                    <did>
+                        <container label="Folder" type="folder">2</container>
+                        <unittitle>Rozewicz, Tadeusz: <title render="italic">New Poems,</title>
+                            text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00192" level="file">
+                    <did>
+                        <container label="Folders" type="folder">3–4</container>
+                        <unittitle>Rozewicz, Tadeusz: <title render="italic">New Poems,</title> page
+                            proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00193" level="file">
+                    <did>
+                        <container label="Folder" type="folder">5</container>
+                        <unittitle>Rozewicz, Tadeusz: <title render="italic">New Poems,</title>
+                            proof book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00194" level="file">
+                    <did>
+                        <container label="Folders" type="folder">6–8</container>
+                        <unittitle>Rynell, Elisabeth: <title render="italic">To Mervas,</title>
+                            text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00195" level="file">
+                    <did>
+                        <container label="Folders" type="folder">9–12</container>
+                        <unittitle>Rytkheu, Yuri: <title render="italic">A Dream in Polar
+                                Fog,</title> text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00196" level="file">
+                    <did>
+                        <container label="Folders" type="folder">13–17</container>
+                        <unittitle>Rytkheu, Yuri: <title render="italic">A Dream in Polar
+                                Fog,</title> page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00197" level="file">
+                    <did>
+                        <container label="Box" type="box">15</container>
+                        <container label="Folders" type="folder">1–2</container>
+                        <unittitle>Rytkheu, Yuri: <title render="italic">A Dream in Polar
+                                Fog,</title> page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00198" level="file">
+                    <did>
+                        <container label="Folder" type="folder">3</container>
+                        <unittitle>Rytkheu, Yuri: <title render="italic">A Dream in Polar
+                                Fog,</title> design sample pages</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00199" level="file">
+                    <did>
+                        <container label="Folder" type="folder">4</container>
+                        <unittitle>Rytkheu, Yuri: <title render="italic">A Dream in Polar
+                                Fog,</title> cover proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00200" level="file">
+                    <did>
+                        <container label="Folder" type="folder">5</container>
+                        <unittitle>Rytkheu, Yuri: <title render="italic">A Dream in Polar
+                                Fog,</title> publicity</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00201" level="file">
+                    <did>
+                        <container label="Folder" type="folder">6</container>
+                        <unittitle>Sachtouris, Milton: <title render="italic">Poems,</title>
+                            text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00202" level="file">
+                    <did>
+                        <container label="Folder" type="folder">7</container>
+                        <unittitle>Sarduy, Severo: <title render="italic">Pajaros de la
+                                Playa,</title> project statement</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00203" level="file">
+                    <did>
+                        <container label="Folder" type="folder">8</container>
+                        <unittitle>Sarotar, Dusan: <title render="italic">The Blind Spot,</title>
+                            text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00204" level="file">
+                    <did>
+                        <container label="Folder" type="folder">9</container>
+                        <unittitle>Sceve, Maurice: <title render="italic">Emblems of Desire,</title>
+                            text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00205" level="file">
+                    <did>
+                        <container label="Folders" type="folder">10–11</container>
+                        <unittitle>Sceve, Maurice: <title render="italic">Emblems of Desire,</title>
+                            page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00206" level="file">
+                    <did>
+                        <container label="Folders" type="folder">12–14</container>
+                        <unittitle>Schmahmann, David R.: <title render="italic">Ivory from
+                                Paradise,</title> text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00207" level="file">
+                    <did>
+                        <container label="Folder" type="folder">15</container>
+                        <unittitle>Schofield, Dan: Correspondence</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00208" level="file">
+                    <did>
+                        <container label="Folder" type="folder">16</container>
+                        <unittitle>Sherifi, Skender: <title render="italic">Oxygene,</title> text in
+                            French</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00209" level="file">
+                    <did>
+                        <container label="Folder" type="folder">17</container>
+                        <unittitle>Sherifi, Skender: <title render="italic">Oxygene,</title> design
+                            sample pages and proof book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00210" level="file">
+                    <did>
+                        <container label="Folders" type="folder">18–19</container>
+                        <unittitle>Skabardonis, Yiorgos: <title render="italic">Aging
+                                Gracefully,</title> text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00211" level="file">
+                    <did>
+                        <container label="Folder" type="folder">20</container>
+                        <unittitle>Solstad, Dag: <title render="italic">Shyness &amp;
+                                Dignity,</title> text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00212" level="file">
+                    <did>
+                        <container label="Folders" type="folder">21–23</container>
+                        <unittitle>Song Yong: <title render="italic">Room of One's Own,</title>
+                            text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00213" level="file">
+                    <did>
+                        <container label="Folders" type="folder">24–25</container>
+                        <unittitle>Sotiropoulos, Ersi: <title render="italic">Zigzag Through the
+                                Bitter Orange Trees,</title> text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00214" level="file">
+                    <did>
+                        <container label="Folder" type="folder">26</container>
+                        <unittitle>Syed, Afzal Ahmed: <title render="italic">Parables,</title>
+                            text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00215" level="file">
+                    <did>
+                        <container label="Folders" type="folder">27–29</container>
+                        <unittitle>Tanpinar, Ahmet Hamdi: <title render="italic">A Mind at
+                                Peace,</title> text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00216" level="file">
+                    <did>
+                        <container label="Box" type="box">16</container>
+                        <container label="Folders" type="folder">1–3</container>
+                        <unittitle>Tanpinar, Ahmet Hamdi: <title render="italic">A Mind at
+                                Peace,</title> text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00217" level="file">
+                    <did>
+                        <container label="Folders" type="folder">4–10</container>
+                        <unittitle>Tanpinar, Ahmet Hamdi: <title render="italic">A Mind at
+                                Peace,</title> page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00218" level="file">
+                    <did>
+                        <container label="Folder" type="folder">11</container>
+                        <unittitle>Tanpinar, Ahmet Hamdi: <title render="italic">A Mind at
+                                Peace,</title> cover proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00219" level="file">
+                    <did>
+                        <container label="Folder" type="folder">12</container>
+                        <unittitle>Tanpinar, Ahmet Hamdi: <title render="italic">A Mind at
+                                Peace,</title> proof book</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00220" level="file">
+                    <did>
+                        <container label="Folder" type="folder">13</container>
+                        <unittitle>Tellegen, Toon: <title render="italic">About Love and About
+                                Nothing Else,</title> text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00221" level="file">
+                    <did>
+                        <container label="Folder" type="folder">14</container>
+                        <unittitle>Tulli, Magdalena: <title render="italic">Skaza,</title>
+                            memorandum of agreement</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00222" level="file">
+                    <did>
+                        <container label="Folders" type="folder">15–16</container>
+                        <unittitle>Tulli, Magdalena: <title render="italic">Dreams and
+                                Stones,</title> text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00223" level="file">
+                    <did>
+                        <container label="Folder" type="folder">17</container>
+                        <unittitle>Tulli, Magdalena: <title render="italic">Dreams and
+                                Stones,</title> design sample pages</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00224" level="file">
+                    <did>
+                        <container label="Folder" type="folder">18</container>
+                        <unittitle>Tulli, Magdalena: <title render="italic">Dreams and
+                                Stones,</title> unbound gatherings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00225" level="file">
+                    <did>
+                        <container label="Folder" type="folder">19</container>
+                        <unittitle>Tulli, Magdalena: <title render="italic">Dreams and
+                                Stones,</title> publicity</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00226" level="file">
+                    <did>
+                        <container label="Folder" type="folder">20</container>
+                        <unittitle>Tulli, Magdalena: <title render="italic">Moving Parts,</title>
+                            text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00227" level="file">
+                    <did>
+                        <container label="Folder" type="folder">21</container>
+                        <unittitle>Tulli, Magdalena: <title render="italic">Moving Parts,</title>
+                            page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00228" level="file">
+                    <did>
+                        <container label="Folder" type="folder">22</container>
+                        <unittitle>Tulli, Magdalena: <title render="italic">Moving Parts,</title>
+                            correspondence</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00229" level="file">
+                    <did>
+                        <container label="Folder" type="folder">23</container>
+                        <unittitle>Tulli, Magdalena: <title render="italic">Moving Parts,</title>
+                            cover proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00230" level="file">
+                    <did>
+                        <container label="Box" type="box">17</container>
+                        <container label="Folders" type="folder">1–2</container>
+                        <unittitle>Tulli, Magdalena: Parts of Speech, text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00231" level="file">
+                    <did>
+                        <container label="Folder" type="folder">3</container>
+                        <unittitle>Tulli, Magdalena: Parts of Speech, excerpt</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00232" level="file">
+                    <did>
+                        <container label="Folder" type="folder">4</container>
+                        <unittitle>Tulli, Magdalena: Parts of Speech, sample design
+                            pages</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00233" level="file">
+                    <did>
+                        <container label="Folder" type="folder">5</container>
+                        <unittitle>Tulli, Magdalena: <title render="italic">Flaw,</title> page
+                            proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00234" level="file">
+                    <did>
+                        <container label="Folder" type="folder">6</container>
+                        <unittitle>Tulli, Magdalena: <title render="italic">Flaw,</title>
+                            corrections</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00235" level="file">
+                    <did>
+                        <container label="Folder" type="folder">7</container>
+                        <unittitle>Ursu, Liliana: <title render="italic">A Path to the Sea,</title>
+                            text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00236" level="file">
+                    <did>
+                        <container label="Folder" type="folder">8</container>
+                        <unittitle>Vincent, Paul: <title render="italic">Sample Translation,</title>
+                            text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00237" level="file">
+                    <did>
+                        <container label="Folder" type="folder">9</container>
+                        <unittitle>Waberi, Abdourahman: <title render="italic">Aux Etats Unis
+                                d'Afrique,</title> publicity</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00238" level="file">
+                    <did>
+                        <container label="Folder" type="folder">10</container>
+                        <unittitle>Weihe, Richard: <title render="italic">Sea of Ink,</title> text
+                            and accompanying materials</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00239" level="file">
+                    <did>
+                        <container label="Folders" type="folder">11–13</container>
+                        <unittitle>Weiss, Ernst: <title render="italic">Georg Letham,</title>
+                            text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00240" level="file">
+                    <did>
+                        <container label="Folders" type="folder">14–18</container>
+                        <unittitle>Weiss, Ernst: <title render="italic">Georg Letham,</title> page
+                            proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00241" level="file">
+                    <did>
+                        <container label="Folder" type="folder">19</container>
+                        <unittitle>Weiss, Ernst: <title render="italic">Georg Letham,</title> cover
+                            proof</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00242" level="file">
+                    <did>
+                        <container label="Folder" type="folder">20</container>
+                        <unittitle>Wortsman, Peter: sample translations</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00243" level="file">
+                    <did>
+                        <container label="Folder" type="folder">21</container>
+                        <unittitle>Yilmaz, Levent: <title render="italic">The Last Country,</title>
+                            excerpts</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00244" level="file">
+                    <did>
+                        <container label="Folders" type="folder">22–26</container>
+                        <unittitle>Yom, Sang–Seop: <title render="italic">Three Generations,</title>
+                            text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00245" level="file">
+                    <did>
+                        <container label="Box" type="box">18</container>
+                        <container label="Folders" type="folder">1–7</container>
+                        <unittitle>Yom Sang–Seop: <title render="italic">Three Generations,</title>
+                            text</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00246" level="file">
+                    <did>
+                        <container label="Folder" type="folder">8</container>
+                        <unittitle>Yom Sang–Seop: <title render="italic">Three Generations,</title>
+                            cover proof</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00247" level="file">
+                    <did>
+                        <container label="Folder" type="folder">9</container>
+                        <unittitle>Yom Sang–Seop: <title render="italic">Three Generations,</title>
+                            advance copy</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00248" level="file">
+                    <did>
+                        <container label="Folder" type="folder">10</container>
+                        <unittitle>Zeromski, Stefan: <title render="italic">The Coming
+                                Spring,</title> excerpt</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00249" level="file">
+                    <did>
+                        <container label="Folder" type="folder">11</container>
+                        <unittitle>Unidentified French excerpt, pp. 93–261</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00250" level="file">
+                    <did>
+                        <container label="Folder" type="folder">12</container>
+                        <unittitle>Miscellaneous Russian/Slavic Works</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00251" level="file">
+                    <did>
+                        <container label="Folder" type="folder">13</container>
+                        <unittitle><title render="italic">The Butterfly Effect,</title>
+                            excerpt</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00252" level="file">
+                    <did>
+                        <container label="Folder" type="folder">14</container>
+                        <unittitle>Unidentified poetry, excerpts</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00253" level="file">
+                    <did>
+                        <container label="Folder" type="folder">15</container>
+                        <unittitle>Miscellaneous excerpts, correspondence, itineraries</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAC0200-00254" level="series">
+                <did>
+                    <container label="Box" type="box">19</container>
+                    <unittitle>VI. Additions</unittitle>
+                </did>
+                <c02 id="VAC0200-00255" level="file">
+                    <did>
+                        <container label="Folder" type="folder">1</container>
+                        <unittitle>Additional Correspondence, <unitdate normal="2010"
+                                >2010</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00256" level="file">
+                    <did>
+                        <container label="Folder" type="folder">2</container>
+                        <unittitle>Coulson, Joseph: <title render="italic">Of Song and
+                                Water,</title> page proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00257" level="file">
+                    <did>
+                        <container label="Folder" type="folder">3</container>
+                        <unittitle>Jergovic, Mlijenko: <title render="italic">Sarajevo
+                                Marlboro,</title> page proofs, English translation</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00258" level="file">
+                    <did>
+                        <container label="Folders" type="folder">4–6</container>
+                        <unittitle>Khoury, Elias: <title render="italic">White Masks,</title> page
+                            proofs, English translation</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00259" level="file">
+                    <did>
+                        <container label="Folder" type="folder">7</container>
+                        <unittitle>Khoury, Elias: <title render="italic">White Masks,</title>
+                            typescript, English translation</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC0200-00260" level="file">
+                    <did>
+                        <container label="Folders" type="folder">8–9</container>
+                        <unittitle>Ponge, Francis: <title render="italic">Mute Objects of
+                                Expression,</title> typescript, 1st and 2nd drafts, English
+                            translation</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
