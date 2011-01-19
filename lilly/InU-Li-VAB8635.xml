@@ -2,9 +2,15 @@
     revised 2004-09-15 JLR; 
     revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
     added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
---><ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
-    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external" countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924" relatedencoding="dublincore" findaidstatus="edited-full-draft">
-        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li" identifier="InU-Li-VAB8635">InU-Li-VAB8635</eadid>
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader audience="external" langencoding="iso639-2b" repositoryencoding="iso15511"
+        countryencoding="iso3166-1" dateencoding="iso8601" relatedencoding="dublincore"
+        scriptencoding="iso15924" findaidstatus="edited-full-draft">
+        <eadid encodinganalog="identifier" countrycode="US" mainagencycode="InU-Li"
+            identifier="InU-Li-VAB8635">InU-Li-VAB8635</eadid>
         <!-- The value of eadid should follow the pattern of archive or library code, and then a 
 unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
         <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
@@ -18,7 +24,8 @@ original finding aid or the collection -->
 Papers of John Doe, 1919-1965" to eliminate 
                 potential confusion about the meaning of the dates -->
             <titlestmt>
-                <titleproper encodinganalog="title">Winther mss., <date normal="1934/1964">1934-1964</date></titleproper>
+                <titleproper encodinganalog="title">Winther mss., <date normal="1934/1964"
+                        >1934-1964</date></titleproper>
 
             </titlestmt>
             <publicationstmt>
@@ -39,12 +46,13 @@ Papers of John Doe, 1919-1965" to eliminate
         </filedesc>
         <profiledesc>
             <creation> XML finding aid derived from HTML version through cutting and pasting
-                    <lb></lb><date normal="2010" type="source">2010</date>
-                <lb></lb>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <lb/><date normal="2010" type="source">2010</date>
+                <lb/>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
                     <date normal="2010-01-20">Jan. 20, 2010</date>
             </creation>
 
-            <langusage>Description is in <language encodinganalog="language" langcode="eng">English.</language></langusage>
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
         </profiledesc>
 
         <!-- revisiondesc is required -->
@@ -53,20 +61,24 @@ with subsequent changes
 listed below the first -->
         <revisiondesc>
             <change audience="internal">
-                <date normal="2010-01-19"></date>
+                <date normal="2010-01-19">January 19, 2010</date>
                 <item>This is the first version of the encoded finding aid.</item>
             </change>
-
+            <change audience="internal">
+                <date normal="2011-01-18">January 18, 2011</date>
+                <item>Updated descriptive information and container list.</item>
+            </change>
         </revisiondesc>
     </eadheader>
 
 
-    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+    <archdesc level="collection" audience="external" type="inventory" relatedencoding="marc21">
         <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
         <did>
             <head>Summary Information</head>
             <repository id="lilly" encodinganalog="852" label="Repository">
-                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
                 <address> 
                     <addressline>Lilly Library</addressline> 
                     <addressline>Indiana University</addressline> 
@@ -76,7 +88,6 @@ listed below the first -->
                     <addressline>Fax: 812-855-3143</addressline> 
                     <addressline>Email: liblilly@indiana.edu</addressline> 
                 </address>
-
             </repository>
             <origination label="Creator">
                 <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
@@ -86,7 +97,8 @@ listed below the first -->
             <!-- per RLG guidelines recommendation, do not nest unitdate element within
 unittitle element -->
             <unittitle encodinganalog="245$a" label="Title">Winther mss.</unittitle>
-            <unitdate encodinganalog="245$f" normal="1934/1964" type="inclusive">1934-1964</unitdate>
+            <unitdate encodinganalog="245$f" normal="1934/1964" type="inclusive"
+                >1934-1964</unitdate>
 
             <!-- do not include separating punctuation between the unit title and the unit
 date.  The stylesheets will supply a comma where appropriate. -->
@@ -97,19 +109,20 @@ date.  The stylesheets will supply a comma where appropriate. -->
             <unitid encodinganalog="099" label="Collection No.">LMC 2333</unitid>
 
             <physdesc encodinganalog="300" label="Extent">
-                <extent>45 items</extent>
+                <extent>ca. 45 items</extent>
             </physdesc>
             <!-- if both linear feet and number of items included, repeat extent-->
 
 
             <!-- if collection includes signinficant non-english material add code to
 langmaterial element -->
-            <langmaterial encodinganalog="546" label="Language">Materials are in <language langcode="eng">English.</language>
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
             </langmaterial>
 
             <abstract encodinganalog="520" label="Abstract">The Winther mss., 1934-1964, consists of
-                the letters and papers of Sophus Keith Winther, 1893-1983, professor and
-                novelist.</abstract>
+                the papers of novelist and literary scholar Sophus Keith Winther,
+                1893-1983.</abstract>
         </did>
 
         <!-- required even if unrestricted -->
@@ -125,22 +138,29 @@ langmaterial element -->
             <head>Biographical Note</head>
 
 
-            <p>Career: born in Søby, Denmark, June 24, 1893, son of Anton Winther and Sene (Lund)
-                Winther; came to United States in 1897 and was naturalized in 1900; B.S., University
-                of Oregon, 1918; M.A., 1919; Ph.D., University of Washington, 1927; married Eline
-                Peterson in 1925. Instructor of English at University of Washington, 1927-1930;
-                assistant professor, 1930-1934; associate professor, 1934-1940; professor since
-                1940.</p>
-            <p>Author of: <title render="italic">The Realistic War Novel,</title> 1930; <title render="italic">Eugene O'Neill: A Critical Study,</title> 1934; <title render="italic">Take All to Nebraska,</title> 1936; <title render="italic">Mortgage Your Heart,</title> 1937; <title render="italic">This Passion Never
-                    Dies,</title> 1939; <title render="italic">Beyond the Garden Gate,</title>
-                1946.</p>
+            <p>Sophus Winther was born in Søby, Denmark, June 24, 1893. Sophus, his parents Anton
+                and Sine and his two brothers Rasmus and Søren came to the United States on April
+                16, 1895, and he was naturalized in 1900. He earned a B.S. from the University of
+                Oregon in 1918, as well as an M.A. (1919) and a Ph.D (1927) from the University of
+                Washington. Winter taught English at University of Washington for the rest of his
+                career: as an instructor, 1927-1930; assistant professor, 1930-1934; associate
+                professor, 1934-1940; and professor after 1940. He married one of his students,
+                Eline Peterson, in 1925.</p>
+            <p>Winther’s novels include <title render="italic">The Realistic War Novel</title>
+                (1930) and <title render="italic">Beyond the Garden Gate </title> (1946). Three
+                more, <title render="italic">Take All to Nebraska</title> (1936), <title
+                    render="italic">Mortgage Your Heart </title> (1937), and <title render="italic"
+                    >This Passion Never Dies</title> (1939), form a trilogy about the life of an
+                immigrant Danish family in Nebraska. Additionally, Winther was a scholar on the
+                works of Eugene O’Neill (whom he befriended), and wrote <title render="italic"
+                    >Eugene O'Neill: A Critical Study, </title> in 1934.</p>
         </bioghist>
 
         <!--optional -->
         <arrangement encodinganalog="351">
             <head>Arrangement</head>
             <p>The collection is organized into the following series: I. Correspondence; II.
-                Writings; III. Miscellaneous materials.</p>
+                Writings; III. Miscellaneous Materials.</p>
 
         </arrangement>
 
@@ -148,18 +168,12 @@ langmaterial element -->
         <scopecontent encodinganalog="520">
 
             <head>Scope and Content Note</head>
-            <p>The Winther mss., 1934-1964, consists of the letters and papers of Sophus Keith
-                Winther, 1893-1983, professor and novelist. The correspondence is primarily
-                concerned with Winther's writings. Correspondents represented include Mary W.
-                Barnes, Herbert Crombie Howe, Glenn Arthur Hughes, Ruth (Bryan) Rohde, and Lee Paul
-                Sieg. The writings include books, short stories, articles, and unfinished works.
-                Three of the novels, <title render="italic">Take all to Nebraska,</title>
-                <title render="italic">Mortgage your heart,</title> and <title render="italic">This
-                    passion never dies,</title> constitute a trilogy dealing with the life of an
-                immigrant Danish family in Nebraska. Included with the writings is a typescript of a
-                poem by Read Bain, signed by him. Miscellaneous materials include photographs of
-                Winther, inscribed photographs of Eugene and Carlotta O'Neill, and newspaper
-                clippings.</p>
+            <p>The Winther mss., 1934-1964, consists of the papers of novelist and literary scholar
+                Sophus Keith Winther, 1893-1983. Correspondents include Mary W. Barnes, Herbert
+                Crombie Howe, Glenn Arthur Hughes, Ruth (Bryan) Owen, and Lee Paul Sieg. Writings
+                include manuscripts of books, short stories, articles, and unfinished works.
+                Included with the writings is a typescript of a poem written and signed by Read
+                Bain.</p>
         </scopecontent>
 
         <!-- recommended; this information would be included for marc amc record -->
@@ -170,13 +184,15 @@ langmaterial element -->
                 <head>Names</head>
                 <list>
                     <item>
-                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/winther+sophus+keith+1893-1983">
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/winther+sophus+keith+1893-1983">
                             <persname encodinganalog="600" source="lcnaf">Winther, Sophus Keith,
                                 1893-1983 --Correspondence.</persname>
                         </extref>
                     </item>
                     <item>
-                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/o'neill+eugene+1888-1953">
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/o'neill+eugene+1888-1953">
                             <persname encodinganalog="600" source="lcnaf">O'Neill, Eugene,
                                 1888-1953.</persname>
                         </extref>
@@ -187,7 +203,8 @@ langmaterial element -->
                 <head>Topics</head>
                 <list>
                     <item>
-                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/authors+american+correspondence{su}">
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/authors+american+correspondence{su}">
                             <subject encodinganalog="650" source="lcnaf">Authors, American
                                 --Correspondence.</subject>
                         </extref>
@@ -245,7 +262,8 @@ langmaterial element -->
                 <c02 id="VAB8635-00002" level="file">
                     <did>
                         <container label="Folder" type="folder">1</container>
-                        <unittitle>Correspondence, <unitdate normal="1934/1955" type="inclusive">1934-1955</unitdate></unittitle>
+                        <unittitle>Correspondence, <unitdate normal="1934/1955" type="inclusive"
+                                >1934-1955</unitdate></unittitle>
                     </did>
                 </c02>
 
@@ -258,74 +276,81 @@ langmaterial element -->
                 </did>
                 <c02 id="VAB8635-00004" level="file">
                     <did>
-                        <unittitle>Folders 2-3: Beyond the Garden Gate. T(carbon)D. 312p. some
-                            holograph changes and corrections.</unittitle>
+                        <unittitle>Folders 2-3: <title render="italic">Beyond the Garden
+                                Gate.</title> T(carbon)D. 312p. some holograph changes and
+                            corrections.</unittitle>
                     </did>
                 </c02>
                 <c02 id="VAB8635-00005" level="file">
                     <did>
-                        <unittitle>Folder 4: [Class Four A Novel in Four Acts] A.D. 178p. in
-                            pencil</unittitle>
+                        <unittitle>Folder 4: [<title render="italic">Class Four: A Novel in Four
+                                Acts</title>] A.D. 178p. in pencil</unittitle>
                     </did>
                 </c02>
                 <c02 id="VAB8635-00006" level="file">
                     <did>
-                        <unittitle>Folder 5: Class Four. A Novel in Four Acts. T.D.</unittitle>
+                        <unittitle>Folder 5: <title render="italic">Class Four: A Novel in Four
+                                Acts.</title> T.D.</unittitle>
                     </did>
                 </c02>
                 <c02 id="VAB8635-00007" level="file">
                     <did>
-                        <unittitle>Folder 6: [Eugene O'Neill] drafts of chapter titled <title render="doublequote">The Sickness of Today</title>
-                            A.&amp;T.D.</unittitle>
+                        <unittitle>Folder 6: [<title render="italic">Eugene O'Neill: A Critical
+                                Study</title>] drafts of chapter titled <title render="doublequote"
+                                >The Sickness of Today</title> A.&amp;T.D.</unittitle>
                     </did>
                 </c02>
                 <c02 id="VAB8635-00008" level="file">
                     <did>
-                        <unittitle>Folder 7: Eugene O'Neill, A Critical Study. T(carbon)D. bound.
-                            [lacks chapter <title render="doublequote">The Sickness of
-                            Today</title>]</unittitle>
+                        <unittitle>Folder 7: <title render="italic">Eugene O'Neill, A Critical
+                                Study.</title> T(carbon)D. bound. [lacks chapter <title
+                                render="doublequote">The Sickness of Today</title>]</unittitle>
                     </did>
                 </c02>
                 <c02 id="VAB8635-00009" level="file">
                     <did>
-                        <unittitle>Folder 8: Eugene O'Neill, A Critical Study. New York: Random
-                            House, c1934. galley proofs <title render="doublequote">Duplicate Proofs
-                                for Index</title></unittitle>
+                        <unittitle>Folder 8: <title render="italic">Eugene O'Neill, A Critical
+                                Study.</title> New York: Random House, c1934. galley proofs <title
+                                render="doublequote">Duplicate Proofs for Index</title></unittitle>
                     </did>
                 </c02>
                 <c02 id="VAB8635-00010" level="file">
                     <did>
-                        <unittitle>Folders 9-10: The Fabric of Modern Literature. 2 drafts: T.D.
-                            220p.; T(carbon).D. 220p. Cover label on carbon copy carries holograph
-                            note <emph render="doublequote">unpublished</emph> in red
-                            ink</unittitle>
+                        <unittitle>Folders 9-10: <title render="italic">The Fabric of Modern
+                                Literature.</title> 2 drafts: T.D. 220p.; T(carbon).D. 220p. Cover
+                            label on carbon copy carries holograph note <emph render="doublequote"
+                                >unpublished</emph> in red ink</unittitle>
                     </did>
                 </c02>
                 <c02 id="VAB8635-00011" level="file">
                     <did>
-                        <unittitle>Folders 11-12: Mortgage Your Heart. A.D. 414p.</unittitle>
+                        <unittitle>Folders 11-12: <title render="italic">Mortgage Your
+                                Heart.</title> A.D. 414p.</unittitle>
                     </did>
                 </c02>
                 <c02 id="VAB8635-00012" level="file">
                     <did>
-                        <unittitle>Folders 13-14: Mortgage Your Heart. T(carbon)D. 285p.</unittitle>
+                        <unittitle>Folders 13-14: <title render="italic">Mortgage Your
+                                Heart.</title> T(carbon)D. 285p.</unittitle>
                     </did>
                 </c02>
                 <c02 id="VAB8635-00013" level="file">
                     <did>
-                        <unittitle>Folder 15: [Sleep Quietly] <emph render="doublequote">not
-                                published</emph> T.D. 86p.</unittitle>
+                        <unittitle>Folder 15: [<title render="italic">Sleep Quietly</title>] <emph
+                                render="doublequote">not published</emph> T.D. 86p.</unittitle>
                     </did>
                 </c02>
                 <c02 id="VAB8635-00014" level="file">
                     <did>
-                        <unittitle>Folders 16-18: [Take All To Nebraska] Nebraska is My Home.
+                        <unittitle>Folders 16-18: [<title render="italic">Take All To
+                                Nebraska</title>] <emph render="italic">Nebraska is My Home.</emph>
                             T.&amp;A.D.S.</unittitle>
                     </did>
                 </c02>
                 <c02 id="VAB8635-00015" level="file">
                     <did>
-                        <unittitle>Folder 19: Take All To Nebraska. T(carbon)D. p.1-137</unittitle>
+                        <unittitle>Folder 19: <title render="italic">Take All To Nebraska.</title>
+                            T(carbon)D. p.1-137</unittitle>
                     </did>
                 </c02>
 
@@ -333,30 +358,33 @@ langmaterial element -->
                     <did>
                         <container label="Box" type="box">2</container>
 
-                        <unittitle>Folder 1: Take All To Nebraska, cont. T(carbon)D.
-                            p.138-285.</unittitle>
+                        <unittitle>Folder 1: <title render="italic">Take All To Nebraska,</title>
+                            cont. T(carbon)D. p.138-285.</unittitle>
                     </did>
                 </c02>
                 <c02 id="VAB8635-00017" level="file">
                     <did>
-                        <unittitle>Folder 2: Take All To Nebraska. proofs.</unittitle>
+                        <unittitle>Folder 2: <title render="italic">Take All To Nebraska.</title>
+                            proofs.</unittitle>
                     </did>
                 </c02>
                 <c02 id="VAB8635-00018" level="file">
                     <did>
-                        <unittitle>Folders 3-6: That Lonesome Road. T.D. 417p. originally titled
-                            Conquer We Must</unittitle>
+                        <unittitle>Folders 3-6: <title render="italic">That Lonesome Road.</title>
+                            T.D. 417p. originally titled <title render="italic">Conquer We
+                                Must</title></unittitle>
                     </did>
                 </c02>
                 <c02 id="VAB8635-00019" level="file">
                     <did>
-                        <unittitle>Folders 7-8: This Passion Never Dies. A.D. p.1-258.</unittitle>
+                        <unittitle>Folders 7-8: <title render="italic">This Passion Never
+                                Dies.</title> A.D. p.1-258.</unittitle>
                     </did>
                 </c02>
                 <c02 id="VAB8635-00020" level="file">
                     <did>
-                        <unittitle>Folder 9: This Passion Never Dies, cont. A.D.
-                            p.259-433.</unittitle>
+                        <unittitle>Folder 9: <title render="italic">This Passion Never Dies,</title>
+                            cont. A.D. p.259-433.</unittitle>
                     </did>
                 </c02>
                 <c02 id="VAB8635-00021" level="file">
@@ -371,14 +399,13 @@ langmaterial element -->
                 </c02>
                 <c02 id="VAB8635-00023" level="file">
                     <did>
-                        <unittitle>Folder 12: Notebook for Civil War novel.
-                            A&amp;T.D.</unittitle>
+                        <unittitle>Folder 12: Notebook for Civil War novel. A&amp;T.D.</unittitle>
                     </did>
                 </c02>
                 <c02 id="VAB8635-00024" level="file">
                     <did>
-                        <unittitle>Folder 13: [Waiting for the dam - Andersonville section of Civil
-                            War novel] T.D. p.412-531.</unittitle>
+                        <unittitle>Folder 13: [<emph render="doublequote">Waiting for the dam</emph>
+                            - Andersonville section of Civil War novel] T.D. p.412-531.</unittitle>
                     </did>
                 </c02>
                 <c02 id="VAB8635-00025" level="file">
@@ -414,24 +441,33 @@ langmaterial element -->
                 </c02>
                 <c02 id="VAB8635-00030" level="file">
                     <did>
-                        <unittitle>Folders 18-19: Newspaper clippings, <unitdate normal="1936/1964" type="inclusive">ca. 1936-1964</unitdate></unittitle>
+                        <unittitle>Folders 18-19: Newspaper clippings, <unitdate normal="1936/1964"
+                                type="inclusive">ca. 1936-1964</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8635-00034" level="file">
+                    <did>
+
+                        <unittitle>Folder 20: Scrapbook of clippings</unittitle>
                     </did>
                 </c02>
                 <c02 id="VAB8635-00031" level="file">
                     <did>
-                        <container label="Folio" type="folio"></container>
-                        <unittitle>Inscribed photograph of Carlotta O'Neill, <unitdate normal="1933-10">Oct. 1933</unitdate></unittitle>
+                        <container label="Box" type="folio">3 (Oversize folio)</container>
+                        <unittitle>Inscribed photograph of Carlotta O'Neill, <unitdate
+                                normal="1933-10">Oct. 1933</unitdate></unittitle>
                     </did>
                 </c02>
                 <c02 id="VAB8635-00032" level="file">
                     <did>
 
-                        <unittitle>Inscribed photograph of Eugene O'Neill, <unitdate normal="1933-11">Nov. 1933</unitdate></unittitle>
+                        <unittitle>Inscribed photograph of Eugene O'Neill, <unitdate
+                                normal="1933-11">Nov. 1933</unitdate></unittitle>
                     </did>
                 </c02>
                 <c02 id="VAB8635-00033" level="file">
                     <did>
-                        <unittitle><emph render="underline">To Carlotta</emph> (inscription to final
+                        <unittitle>To Carlotta (inscription to final
                             longhand script, <emph render="doublequote">Mourning Becomes
                                 Electra</emph>) facsimile, no. 30. Inscribed by Carlotta Monterey
                             O'Neill to Sophus Keith Winther.</unittitle>
