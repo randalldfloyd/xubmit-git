@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAC0948">InU-Li-VAC0948</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Hammett, Dashiell mss., <date normal="1949/1952"
+                        >1949-1952</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2010" type="publication">© 2010</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2010">© 2010</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                    <lb/><date normal="2011" type="source">2011</date>
+                <lb/>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2011-03-21">March 21, 2011</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2011-03-21"/>
+                <item>Finding aid started.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Hammett, Dashiell,
+                    1894-1961</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Hammett, Dashiell mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1949/1952" type="inclusive"
+                >1949-1952</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2706</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>ca. 60 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Hammett, Dashiell mss., 1949–1952,
+                consists of correspondence between author Dashiell Hammett and his secretary Muriel
+                Alexander.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+            <p>Dashiell Hammett, 1894–1961, was born in St. Mary's County, MD and raised in
+                Philadelphia and Baltimore. After enlisting in the Army Ambulance Corps during the
+                First World War (where he contracted tuberculosis) and getting various stints of
+                employment across the country for the Pinkerton Detective Agency, Hammett began
+                writing short stories for publications such as <title render="italic">The Smart
+                    Set</title> and <title render="italic">The Black Mask,</title> the latter of
+                which, in particular, shaped his reputation as a writer of hard-boiled crime
+                fiction. </p>
+            <p>Hammett went on to write five novels: <title render="italic">Red Harvest</title>
+                (1929); <title render="italic">The Dain Curse</title> (1929); <title render="italic"
+                    >The Maltese Falcon</title> (1930), featuring iconic private eye Sam Spade;
+                    <title render="italic">The Glass Key</title> (1931); and <title render="italic"
+                    >The Thin Man</title> (1934), featuring married detectives Nick and Nora
+                Charles. Hammett spent the rest of his career writing screenplays and <emph
+                    render="doublequote">doctoring</emph> scripts for movies, television, and radio.
+                Despite ill health, Hammett enlisted again in the Army during the Second World War,
+                where he edited a military newspaper; and he was deeply involved in left-wing
+                political activism before and after the WWII era. As president of the Civil Rights
+                Congress in New York (labeled a communist front group by the Office of the Attorney
+                General of the United States), Hammett in 1949 posted bail for eleven men accused of
+                communist conspiracy and in 1951 refused to identify the contributors to the bail
+                fund during testimony before a U.S. District Court. After taking the Fifth
+                Amendment, he was found in contempt of court and sentenced to five months
+                imprisonment. Upon release, the IRS charged him with over $100,000 in back taxes. In
+                1953, Hammett once more refused to cooperate during testimony, this time before the
+                House of Un-American Activities Committee (HUAC), and was subsequently blacklisted.
+                He lived the remaining years of his life in rural New York State before dying of
+                lung cancer in New York, NY. </p>
+        </bioghist>
+
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The correspondence between Dashiell Hammett (twenty-two letters) and his <emph
+                    render="doublequote">new</emph> secretary Muriel Alexander (thirty-eight
+                letters) overlaps some of Hammett's political and financial troubles, much of it
+                exchanged while Hammett was in Hollywood writing a screenplay (titled <title
+                    render="italic">Detective Story</title>) and Alexander remained back East
+                tending to his finances and other affairs. </p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/alexander+muriel">
+                            <persname encodinganalog="700" source="lcnaf">Alexander,
+                                Muriel</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/hammett+dashiell+1894-1961{su}">
+                            <persname encodinganalog="600" source="lcnaf">Hammett, Dashiell,
+                                1894-1961--Correspondence</persname>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/authors+american+20th+century{su}">
+                            <subject encodinganalog="650" source="lcsh">Authors, American--20th
+                                century--Correspondence</subject>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="110" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired 2010</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>Hammett, Dashiell mss., Lilly Library, Indiana University, Bloomington,
+                    Indiana.</p>
+            </prefercite>
+
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAC0948-00001" level="series">
+                <did>
+                    <!-- optional -->
+                    <container label="Box" type="box">1</container>
+
+
+                    <unittitle>Correspondence</unittitle>
+
+                </did>
+                <arrangement>
+                    <p>Arranged chronologically.</p>
+                </arrangement>
+                <note>
+                    <p>TLS=Typed Letter Signed; ALS=Autograph Letter Signed; AN=Autograph Note;
+                        Cc=Carbon copy. </p>
+                </note>
+                <c02 id="VAC0948-00002" level="file">
+                    <did>
+                        <container label="Folder" type="folder">1</container>
+                        <unittitle>From Dashiell Hammett to Muriel Alexander, <unitdate
+                                normal="1949/1952" type="inclusive">1949-1952</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAC0948-00003" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1949-10-16">16 October,
+                                1949</unitdate></unittitle>
+                            <physdesc>TLS, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00004" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-01-14">14 January,
+                                1950</unitdate></unittitle>
+                            <physdesc>TLS, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00005" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-01-16">16 January,
+                                1950</unitdate></unittitle>
+                            <physdesc>ALS, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00006" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-01-18">18 January,
+                                1950</unitdate></unittitle>
+                            <physdesc>TLS, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00007" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-01-20">20 January,
+                                1950</unitdate></unittitle>
+                            <physdesc>TLS, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00008" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-01-23">23 January,
+                                1950</unitdate></unittitle>
+                            <physdesc>TLS, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00009" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-01-27">27 January,
+                                1950</unitdate></unittitle>
+                            <physdesc>TLS, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00010" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-01-31">31 January,
+                                1950</unitdate></unittitle>
+                            <physdesc>TLS, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00011" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-02-02">2 February,
+                                1950</unitdate></unittitle>
+                            <physdesc>TLS, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00012" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-02-06">6 February,
+                                1950</unitdate></unittitle>
+                            <physdesc>TLS, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00013" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-02-08">8 February,
+                                1950</unitdate></unittitle>
+                            <physdesc>TLS, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00014" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-02-10">10 February,
+                                1950</unitdate></unittitle>
+                            <physdesc>TLS, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00015" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-02-12">12 February,
+                                1950</unitdate></unittitle>
+                            <physdesc>TLS, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00016" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-02-15">15 February,
+                                1950</unitdate></unittitle>
+                            <physdesc>TLS, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00017" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-02-18">18 February,
+                                1950</unitdate></unittitle>
+                            <physdesc>TLS, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00018" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-02-22">22 February,
+                                1950</unitdate></unittitle>
+                            <physdesc>TLS, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00019" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-06-07">7 June,
+                                1950</unitdate></unittitle>
+                            <physdesc>TLS, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00020" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-06-11">11 June,
+                                1950</unitdate></unittitle>
+                            <physdesc>TLS, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00021" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-09-03">3 September,
+                                1950</unitdate></unittitle>
+                            <physdesc>TLS, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00022" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-09-09">9 September,
+                                1950</unitdate></unittitle>
+                            <physdesc>AN, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00023" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1951-05-20">20 May,
+                                1951</unitdate></unittitle>
+                            <physdesc>TLS, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00024" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1952-01-29">29 January,
+                                1952</unitdate></unittitle>
+                            <physdesc>TLS, 1p.</physdesc>
+                        </did>
+                    </c03>
+
+                </c02>
+                <c02 id="VAC0948-00025" level="file">
+                    <did>
+                        <container label="Folder" type="folder">2</container>
+                        <unittitle>From Muriel Alexander to Dashiell Hammett, <unitdate
+                                normal="1950/1951" type="inclusive">1950-1951</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAC0948-00026" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-01-20">20 [January,
+                                1950],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00027" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-01-21">21 [January
+                                1950],</unitdate></unittitle>
+                            <physdesc>Cc, 2p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00028" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-01-23">23 [January,
+                                1950],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00029" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-01-24">24 [January,
+                                1950],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00030" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-01-25">25 [January,
+                                1950],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00031" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-01-26">26 [January,
+                                1950],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00032" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-01-28">28 [January,
+                                1950],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00033" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-01-31">31 [January,
+                                1950],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00034" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-02-01">1 [February,
+                                1950],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00035" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-02-03">3 [February,
+                                1950],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00036" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-02-06">6 [February,
+                                1950],</unitdate></unittitle>
+                            <physdesc>Cc, 2p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00037" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-02-07">7 [February,
+                                1950],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00038" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-02-08">8 [February,
+                                1950],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00039" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-02-10">10 [February,
+                                1950],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00040" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-02-13">13 February,
+                                [1950],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00041" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-02-15">15 [February,
+                                1950],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00042" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-02-16">16 [February,
+                                1950],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00043" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-02-20">20 [February,
+                                1950],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00044" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-02-22">22 [February,
+                                1950],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00045" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-02-24">24 [February,
+                                1950],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00046" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-02-27">27 [February,
+                                1950],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00047" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-03-02">2 March,
+                                [1950],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00048" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-06-02">2 [June,
+                                1950],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00049" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-06-05">5 June,
+                                [1950],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00050" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-06-06">6 June,
+                                [1950],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00051" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1950-06-09">9 June,
+                                [1950],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00052" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1951-05-14">14 May,
+                                [1951],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00053" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1951-05-15">15 May,
+                                [1951],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00054" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1951-05-16">16 [May,
+                                1951],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00055" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1951-05-17">17 May,
+                                [1951],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00056" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1951-05-18">18 May,
+                                [1951],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00057" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1951-05-21">21 May,
+                                [1951],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00058" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1951-05-22">22 May,
+                                [1951],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00059" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1951-05-23">23 [May,
+                                1951],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00060" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1951-05-24">24 May,
+                                [1951],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00061" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1951-05-28">28 May,
+                                [1951],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00062" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1951-05-29">29 May,
+                                [1951],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC0948-00063" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1951-06-08">8 June,
+                                [1951],</unitdate></unittitle>
+                            <physdesc>Cc, 1p.</physdesc>
+                        </did>
+                    </c03>
+
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
