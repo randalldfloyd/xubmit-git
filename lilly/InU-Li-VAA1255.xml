@@ -1,15 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Lilly Library, Indiana University, EAD template, 2003-02-21  -->
-<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+<?xml version="1.0" encoding="UTF-8"?><!-- Lilly Library, Indiana University, EAD template, 2003-02-21  --><ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
 	<!-- value of @findaidstatus should be 'originaldraft', 'inprogressdraft', 'editinprogress', or 'editedfulldraft' -->
-	<eadheader audience="internal" langencoding="iso639-2b" scriptencoding="iso15924"
-		repositoryencoding="iso15511" countryencoding="iso3166-1" dateencoding="iso8601"
-		findaidstatus="originaldraft">
+	<eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="internal" countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924" findaidstatus="originaldraft">
 		<!-- replace [uniqueid] with collection LMC number -->
-		<eadid encodinganalog="identifier" identifier="InU-Li-VAA1255" countrycode="US"
-			mainagencycode="InU-Li">InU-Li-VAA1255</eadid>
+		<eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li" identifier="InU-Li-VAA1255">InU-Li-VAA1255</eadid>
 		<filedesc>
 			<!-- This is a description of the electronic finding aid, not the original finding aid or the collection -->
 			<!-- Make title "xxxx mss., yyyy-yyyy"-->
@@ -33,12 +26,11 @@
 [paper by means of scanning and OCR] [OCR file edited for typographical errors before encoding]
 [typescript by rekeying] [word processing program and version number]
 [<extref href="" linktype="simple" title="" actuate="onrequest" show="new">HTML collection description</extref>]. -->
-				<lb/>[date of source: <lb/>Finding aid encoded by Beth Benda, Lilly Library, Indiana
+				<lb></lb>[date of source: <lb></lb>Finding aid encoded by Beth Benda, Lilly Library, Indiana
 				University, <date normal="2004-06-03">June 3, 2004</date>
 			</creation>
 			<!-- iso three-digit 639-2 value for @langcode can be found at http://www.loc.gov/standards/iso639-2/langcodes.html -->
-			<langusage>Description is in <language encodinganalog="language" langcode="eng"
-					scriptcode="Latn">English.</language></langusage>
+			<langusage>Description is in <language scriptcode="Latn" encodinganalog="language" langcode="eng">English.</language></langusage>
 		</profiledesc>
 		<!-- revisiondesc is required -->
 		<!-- record when the finding aid is initiated in first 'change' element, with subsequent changes listed below the first, and the final 'change' element indicating date finding aid completed -->
@@ -74,15 +66,14 @@ using a finding aid. -->
 			<p>© 2004 Trustees of Indiana University. All rights reserved.</p>
 		</titlepage>
 	</frontmatter>
-	<archdesc level="collection" audience="external" type="inventory" relatedencoding="marc">
+	<archdesc audience="external" level="collection" type="inventory" relatedencoding="marc">
 		<!-- @type value may alternatively be 'bulk' -->
 		<!-- use the label attribute for these elements to determine what label is displayed -->
 		<did>
 			<head>Summary Information</head>
 			<!-- record the name of the repository even if its display is to be suppressed -->
-			<repository encodinganalog="852" label="Repository:" id="lilly">
-				<corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
-					>Lilly Library (Indiana University, Bloomington)</corpname>
+			<repository id="lilly" encodinganalog="852" label="Repository:">
+				<corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
 				<address> 
 			 <addressline>Indiana University</addressline> 
 			 <addressline>1200 E. Seventh St.</addressline> 
@@ -91,27 +82,24 @@ using a finding aid. -->
 			 <addressline>Fax: 812-855-3143</addressline> 
 			 <addressline>Email: liblilly@indiana.edu</addressline> 
 		  </address>
-				<lb/>
-				<extref xlink:href="http://www.indiana.edu/~liblilly"
-					>http://www.indiana.edu/~liblilly</extref>
+				<lb></lb>
+				<extref xlink:href="http://www.indiana.edu/~liblilly">http://www.indiana.edu/~liblilly</extref>
 			</repository>
 			
 			<!-- per RLG guidelines recommendation, do not nest unitdate element within unittitle element -->
-			<unittitle label="Title:" encodinganalog="245$a">French Literature mss.,</unittitle>
-			<unitdate normal="1750/1977" type="inclusive" encodinganalog="245$f">ca.
+			<unittitle encodinganalog="245$a" label="Title:">French Literature mss.,</unittitle>
+			<unitdate encodinganalog="245$f" normal="1750/1977" type="inclusive">ca.
 				1750-1977</unitdate>
 			<!-- do not include separating punctuation between the unit title and the unit date - the stylesheets will supply a comma where appropriate. -->
 			<!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
 			<!-- record the type of date - bulk or inclusive - in the type attribute. -->
 			<!-- recommended -->
-			<unitid label="Collection No." encodinganalog="099" countrycode="US"
-				repositorycode="US-InU-Li">LMC 1391</unitid>
+			<unitid repositorycode="US-InU-Li" countrycode="US" encodinganalog="099" label="Collection No.">LMC 1391</unitid>
 
 			<!-- langmaterial element replaces langmaterial attribute on eadheader element in 2002 DTD -->
 			<!-- if collection includes significant non-english material add code to langmaterial element -->
-			<langmaterial encodinganalog="546">Materials are in <language langcode="fre"
-					encodinganalog="008/35-37">French.</language></langmaterial>
-			<abstract label="Abstract:" encodinganalog="520$a">Consists of individual items acquired
+			<langmaterial encodinganalog="546">Materials are in <language encodinganalog="008/35-37" langcode="fre">French.</language></langmaterial>
+			<abstract encodinganalog="520$a" label="Abstract:">Consists of individual items acquired
 				separately either as a gift or purchased from a variety of sources, relating to or
 				by French literary figures. Additions continue to be made.</abstract>
 		</did>
@@ -246,7 +234,7 @@ using a finding aid. -->
 		<dsc type="in-depth">
 			<!-- unittitle is the only required element within component -->
 			<!-- possible values for @level include: class, collection, file, fonds, item, otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
-			<c01 level="collection">
+			<c01 id="VAA1255-00001" level="collection">
 				<did>
 					<unittitle> French Literature mss.</unittitle>
 				</did>
@@ -254,10 +242,10 @@ using a finding aid. -->
 					<p>Arranged chronologically at the item level, undated items are further
 						arranged alphabetically</p>
 				</scopecontent>
-				<c02 level="file">
+				<c02 id="VAA1255-00002" level="file">
 					<did>
 						<unittitle>
-							<unitdate type="inclusive" normal="1752">1752.</unitdate>
+							<unitdate normal="1752" type="inclusive">1752.</unitdate>
 							<persname>Voltaire, François Marie Aroutet, 1694-1778,
 								author.</persname> La Religion naturelle. Poème en 4 chants par M.
 							de Voltaire. A.D.S. </unittitle>
@@ -279,10 +267,10 @@ using a finding aid. -->
 						<p>Purchase. <date normal="1989">1989</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00003" level="file">
 					<did>
 						<unittitle>
-							<unitdate type="inclusive" normal="1759">1759.</unitdate>
+							<unitdate normal="1759" type="inclusive">1759.</unitdate>
 							<persname>Voltaire, François Marie Aroutet, 1694-1778,
 								author.</persname> To "mon divin ange" Charles Augustin de Ferriol,
 							comte d’Argental. Complains that troubles encountered through recent
@@ -292,16 +280,14 @@ using a finding aid. -->
 							<extent>1 p. 15.6 cm.</extent>
 						</physdesc>
 						<note>
-							<p>Published with commentary by Henry H.H. Remak in <title
-									render="italic">Modern Language Notes,</title> LXI, <unitdate
-									normal="1941-11-07">7, Nov 1941.</unitdate></p>
+							<p>Published with commentary by Henry H.H. Remak in <title render="italic">Modern Language Notes,</title> LXI, <unitdate normal="1941-11-07">7, Nov 1941.</unitdate></p>
 						</note>
 					</did>
 					<acqinfo>
 						<p>Gift. <date normal="1982">1982</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00004" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1769-07-16">1769 July 16.</unitdate>
@@ -320,7 +306,7 @@ using a finding aid. -->
 						<p>Gift. <date normal="1984">1984</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00005" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1769-12-27">1769 Dec 27.</unitdate>
@@ -340,7 +326,7 @@ using a finding aid. -->
 						<p>Gift. <date normal="1984">1984</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00006" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1778-06-26">1778 Jun 26.</unitdate>
@@ -357,7 +343,7 @@ using a finding aid. -->
 						</note>
 					</did>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00007" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1786-06-14">1786 Jun 14.</unitdate>
@@ -376,10 +362,10 @@ using a finding aid. -->
 						<p>Purchase. <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00008" level="file">
 					<did>
 						<unittitle>
-							<unitdate type="inclusive" normal="1700/1799">18th cent.</unitdate>
+							<unitdate normal="1700/1799" type="inclusive">18th cent.</unitdate>
 							Commonplace book of French verse recorded by an unknown writer. A.D. </unittitle>
 						<physdesc>
 							<extent>159 p. 10 cm. Bound. </extent>
@@ -396,7 +382,7 @@ using a finding aid. -->
 						<p>Gift. <date normal="1973">1973</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00009" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1700/1799" type="inclusive">18th cent.</unitdate>
@@ -417,7 +403,7 @@ using a finding aid. -->
 							(Lilly PR18178 .L47S3). <date normal="1974">1974</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00010" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1820-03-01">1820 Mar 1.</unitdate>
@@ -438,7 +424,7 @@ using a finding aid. -->
 						<p>Gift. <date normal="1983">1983</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00011" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1822-04-03">1822 Apr 3.</unitdate>
@@ -456,13 +442,12 @@ using a finding aid. -->
 						</note>
 					</did>
 					<acqinfo>
-						<p>Removed from Academie des Jeux Floraux, Toulouse, <title render="italic"
-								>Recuiel de l’Academie des jeux floraux.</title> Toulouse, M.-J.
+						<p>Removed from Academie des Jeux Floraux, Toulouse, <title render="italic">Recuiel de l’Academie des jeux floraux.</title> Toulouse, M.-J.
 							Dalles, <date normal="1818/1821">1818-1821</date> (Lilly PQ 3807
 							.T7A32). <date normal="1973">1973</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00012" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1829-09-16">1829 Sept 16?.</unitdate>
@@ -476,13 +461,11 @@ using a finding aid. -->
 						</physdesc>
 					</did>
 					<acqinfo>
-						<p>Removed from Fourier, François Marie Charles, <emph render="italic"
-								>Traité de l’association demestique-agriocle</emph>, Paris: Bossage,
-								<date normal="1822">1822</date> (Lilly HX704 .F775T7). <date
-								normal="1977">1977</date></p>
+						<p>Removed from Fourier, François Marie Charles, <emph render="italic">Traité de l’association demestique-agriocle</emph>, Paris: Bossage,
+								<date normal="1822">1822</date> (Lilly HX704 .F775T7). <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00013" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1839-09-25">1839 Sept 25.</unitdate>
@@ -503,7 +486,7 @@ using a finding aid. -->
 						<p>Purchase. <date normal="1972">1972</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00014" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1835/1845">ca. 1840.</unitdate>
@@ -520,11 +503,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Dumas, <title render="italic">Antony:</title>… Paris: A.
-							Auffray, <date normal="1831">1831</date> (Lilly PQ2225 .A7). <date
-								normal="1980">1980</date></p>
+							Auffray, <date normal="1831">1831</date> (Lilly PQ2225 .A7). <date normal="1980">1980</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00015" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1841-12">1841 Dec ?.</unitdate>
@@ -537,19 +519,17 @@ using a finding aid. -->
 						<note>
 							<p>Letter signed as from "de Bc."</p>
 							<p>Letter is undated but has been assigned a probable date of Dec. 1841
-								or Jan 1842 in its publication in Balzac, <title render="italic"
-									>Correspondence,</title> Tome IV, 1840-Avril 1845, Paris,
+								or Jan 1842 in its publication in Balzac, <title render="italic">Correspondence,</title> Tome IV, 1840-Avril 1845, Paris,
 								Editions Garnier Fréres, <date normal="1966">1966</date> (PQ2179 .A2
 								1960 V.4), page 373.</p>
 						</note>
 					</did>
 					<acqinfo>
 						<p>Removed from Balzac, <title render="italic">Une Tenebreuse
-								affaire,</title> Paris, M. Hippolyte Souverain, <date normal="1842"
-								>1842</date> (Lilly PQ2173 .T2). <date normal="1973">1973</date></p>
+								affaire,</title> Paris, M. Hippolyte Souverain, <date normal="1842">1842</date> (Lilly PQ2173 .T2). <date normal="1973">1973</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00016" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1845-07-07">1845 Jul 7.</unitdate>
@@ -569,7 +549,7 @@ using a finding aid. -->
 						<p>Purchase. <date normal="1973">1973</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00017" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1847-07-28">1847 Jul 28.</unitdate>
@@ -588,11 +568,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Bound in Hugo, <title render="italic">L’Aumône.</title> Rouen, Nicetas
-							Periaux, <date normal="1830">1830</date> (Lilly PQ2285 .A9). <date
-								normal="1980">1980</date></p>
+							Periaux, <date normal="1830">1830</date> (Lilly PQ2285 .A9). <date normal="1980">1980</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00018" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1848-12-22">1848 Dec 22.</unitdate>
@@ -609,19 +588,15 @@ using a finding aid. -->
 						</note>
 					</did>
 					<acqinfo>
-						<p>Tipped in between half title and title page of Barbier, <title
-								render="italic">Iambes et poèmes.</title> Paris: Paul Masgana, <date
-								normal="1841">1841</date> (Lilly PQ2189 .B33 I13 1841). <date
-								normal="1985">1985.</date></p>
+						<p>Tipped in between half title and title page of Barbier, <title render="italic">Iambes et poèmes.</title> Paris: Paul Masgana, <date normal="1841">1841</date> (Lilly PQ2189 .B33 I13 1841). <date normal="1985">1985.</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00019" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1852-08-27">1852 Aug 27.</unitdate>
 							<persname>Renan, Ernest, 1823-1892, philosopher.</persname> Paris,
-							France. To Auguste Morel. Writes of criticisms on his book, <title
-								render="italic">Averroes…,</title> of working at the library, and of
+							France. To Auguste Morel. Writes of criticisms on his book, <title render="italic">Averroes…,</title> of working at the library, and of
 							taking a vacation in the near future. A.L.S.</unittitle>
 						<physdesc>
 							<extent>3 p. 21 cm.</extent>
@@ -629,12 +604,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Ernest Renan, <title render="italic">Averroes et
-								l’averroisme: essai historique,</title> Paris: Auguste Durand, <date
-								normal="1982">1852</date> (Lilly B749 .Z7r4). <date normal="1978"
-								>1978</date></p>
+								l’averroisme: essai historique,</title> Paris: Auguste Durand, <date normal="1982">1852</date> (Lilly B749 .Z7r4). <date normal="1978">1978</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00020" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1853-01-14">1853 Jan 14.</unitdate>
@@ -649,7 +622,7 @@ using a finding aid. -->
 						<p>Purchase. <date normal="1973">1973</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00021" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1853-02-15">1853 Feb 15.</unitdate>
@@ -669,7 +642,7 @@ using a finding aid. -->
 								<date normal="1975">1975</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00022" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1854-04-18">1854 Apr 18.</unitdate>
@@ -687,11 +660,10 @@ using a finding aid. -->
 					<acqinfo>
 						<p>Removed from Edmond et Jules de Goncourt, <title render="italic">Histoire
 								de la société française pendant la Révolution.</title> Paris: E.
-							Dentu, <date normal="1854">1854</date> (Lilly DC33.5 .G63 Vault). <date
-								normal="1977">1977</date></p>
+							Dentu, <date normal="1854">1854</date> (Lilly DC33.5 .G63 Vault). <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00023" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1854-12-11">1854 Dec 11.</unitdate>
@@ -710,7 +682,7 @@ using a finding aid. -->
 						<p>Gift. <date normal="1984">1984</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00024" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1856-12-19">1856 Dec 19.</unitdate>
@@ -731,7 +703,7 @@ using a finding aid. -->
 						<p>Purchase. <date normal="1973">1973</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00025" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1857" type="inclusive">1857.</unitdate>
@@ -748,11 +720,10 @@ using a finding aid. -->
 						</note>
 					</did>
 					<acqinfo>
-						<p>From the library of Josiah Kirby Lilly, Jr., Indianapolis, IN. <date
-								normal="1956">1956</date></p>
+						<p>From the library of Josiah Kirby Lilly, Jr., Indianapolis, IN. <date normal="1956">1956</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00026" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1858-05-08">1858 May 8.</unitdate>
@@ -769,12 +740,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Tipped in before half title page of Brizeux, <emph render="italic">Les
-								Bretons</emph>. Paris: Paul Masgana, <date normal="1845"
-								>1845.</date> (Lilly PQ2201 .B67 B84 1845) <date normal="1991"
-								>1991</date></p>
+								Bretons</emph>. Paris: Paul Masgana, <date normal="1845">1845.</date> (Lilly PQ2201 .B67 B84 1845) <date normal="1991">1991</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00027" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1859-06" type="inclusive">1859 June.</unitdate>
@@ -811,7 +780,7 @@ using a finding aid. -->
 						<p>Purchase. <date normal="1976">1976</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00028" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1859/1902" type="inclusive">1859-1902.</unitdate>Notes
@@ -833,12 +802,10 @@ using a finding aid. -->
 					<acqinfo>
 						<p>Removed from Ulrich, <title render="italic">Recueil de pièces
 								authentiques servant a l‘historire de la révolution à
-								Strasbourg…</title> Strasbourg, Chez André Ulrich, <date
-								normal="1795">1795</date> (Lilly DC195 .S8U45 1795). <date
-								normal="1978">1978</date></p>
+								Strasbourg…</title> Strasbourg, Chez André Ulrich, <date normal="1795">1795</date> (Lilly DC195 .S8U45 1795). <date normal="1978">1978</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00029" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1863-12-05">1863 Dec 5 [?].</unitdate>
@@ -851,11 +818,10 @@ using a finding aid. -->
 					<acqinfo>
 						<p>Removed from Vol. I of Jean Lebeuf, <emph render="italic">Histoire de la
 								Ville et de Tout le Diocèse de Paris</emph>. Paris, Auguste Durand,
-								<date normal="1863">1863</date> (DC707 .L44). <date normal="1955"
-								>1955</date></p>
+								<date normal="1863">1863</date> (DC707 .L44). <date normal="1955">1955</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00030" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1866-08-03">1866 Aug 3.</unitdate>
@@ -877,7 +843,7 @@ using a finding aid. -->
 							(Lilly PQ2386 .R37A6). <date normal="1978">1978</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00031" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1867-05-22">1867 May 22.</unitdate>
@@ -892,11 +858,10 @@ using a finding aid. -->
 						</note>
 					</did>
 					<acqinfo>
-						<p>From the library of Josiah Kirby Lilly, Jr., Indianapolis, IN <date
-								normal="1956">1956</date></p>
+						<p>From the library of Josiah Kirby Lilly, Jr., Indianapolis, IN <date normal="1956">1956</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00032" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1870-11-28">1870 Nov 28.</unitdate>
@@ -910,13 +875,12 @@ using a finding aid. -->
 						<p>Gift. <date normal="1961">1961</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00033" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1873-03-06">1873 Mar 6.</unitdate>
 							<persname>Labiche, Eugène, 1815-1888, playwright.</persname> Note
-							authorizing Mr. Langneau to perform Labiche’s play, <title
-								render="italic">L'affaire de la rue de Louricine</title>
+							authorizing Mr. Langneau to perform Labiche’s play, <title render="italic">L'affaire de la rue de Louricine</title>
 							A.D.S.</unittitle>
 						<physdesc>
 							<extent>1 p. 13.1 cm.</extent>
@@ -928,11 +892,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Labiche, <title render="italic">L'affaire de la rue de
-								Louricine</title>, Paris: Michel Lévy frères, <date normal="1857"
-								>1857</date> (Lilly PQ2321 .A67) <date normal="1991">1991</date></p>
+								Louricine</title>, Paris: Michel Lévy frères, <date normal="1857">1857</date> (Lilly PQ2321 .A67) <date normal="1991">1991</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00034" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1876-05-17">1876 May 17.</unitdate>
@@ -947,18 +910,15 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Jean Richepin, <title render="italic">La chanson des
-								gueux,</title> Paris: Librairie Illustrée, <date normal="1876"
-								>1876</date> (Lilly PQ2387 R4 C5). <date normal="1977"
-							>1977</date></p>
+								gueux,</title> Paris: Librairie Illustrée, <date normal="1876">1876</date> (Lilly PQ2387 R4 C5). <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00035" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1876-05-25">1876 May 25.</unitdate>
 							<persname>Richepin, Jean, 1849-1926, writer.</persname> To "Cher
-							Maitre." Thanks for writing a good review on his book, <emph
-								render="italic">La chanson des gueux</emph>, and complimentary
+							Maitre." Thanks for writing a good review on his book, <emph render="italic">La chanson des gueux</emph>, and complimentary
 							remarks. A.L.S.</unittitle>
 						<physdesc>
 							<extent>1 p. 21 cm.</extent>
@@ -966,12 +926,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Jean Richepin, <title render="italic">La chanson des
-								gueux,</title> Paris: Librairie Illustrée, <date normal="1876"
-								>[1876]</date> (Lilly PQ2387 R4 C5). <date normal="1977"
-							>1977</date></p>
+								gueux,</title> Paris: Librairie Illustrée, <date normal="1876">[1876]</date> (Lilly PQ2387 R4 C5). <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00036" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1881-06-14">1881 Jun 14.</unitdate>
@@ -989,12 +947,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Zola, <title render="italic">Nos auteurs
-								dramatiques.</title> Paris: Charpentier, <date normal="1881"
-								>1881</date> (Lilly PQ2511 .N55 copy 2). <date normal="1982"
-								>1982</date></p>
+								dramatiques.</title> Paris: Charpentier, <date normal="1881">1881</date> (Lilly PQ2511 .N55 copy 2). <date normal="1982">1982</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00037" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1882-12-23">1882 Dec 23.</unitdate>
@@ -1012,12 +968,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Spoelberch de Lovenjoul, <emph render="italic">Histoire des
-								oeuvres de H. de Balzac</emph>. Paris C. Lévy, <date normal="1888"
-								>1888</date> (Lilly PQ2181 .S7 1888). <date normal="1981"
-								>1981</date></p>
+								oeuvres de H. de Balzac</emph>. Paris C. Lévy, <date normal="1888">1888</date> (Lilly PQ2181 .S7 1888). <date normal="1981">1981</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00038" level="file">
 					<did>
 						<unittitle><unitdate normal="1884-10-18">1884 Oct. 18</unitdate>
 							<persname>Zola, Emile, 1840-1902, author. </persname>Medan. To "Mon cher
@@ -1027,19 +981,17 @@ using a finding aid. -->
 							<extent>2 p. 21 cm. </extent>
 						</physdesc>
 						<note>
-							<p>Addressee has been identified as Ernst Ziegler, translator of <emph
-									render="italic">Germinal</emph> for the German market. </p>
+							<p>Addressee has been identified as Ernst Ziegler, translator of <emph render="italic">Germinal</emph> for the German market. </p>
 						</note>
 					</did>
 					<acqinfo>
-						<p>From the library of Josiah Kirby Lilly, Jr. Indianapolis, Indiana <date
-								normal="1956">1956</date></p>
+						<p>From the library of Josiah Kirby Lilly, Jr. Indianapolis, Indiana <date normal="1956">1956</date></p>
 					</acqinfo>
 				</c02>
 
 
 
-				<c02 level="file">
+				<c02 id="VAA1255-00039" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1885-02-06">1885 Feb 6.</unitdate>
@@ -1058,7 +1010,7 @@ using a finding aid. -->
 								<date normal="1974">1974</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00040" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1885-05-04">1885 May 4.</unitdate>
@@ -1074,7 +1026,7 @@ using a finding aid. -->
 								<date normal="1975">1975</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00041" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1885-06-01">1885 June 1.</unitdate>
@@ -1098,11 +1050,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from the above named edition of <title render="italic">Nos
-								Enfants</title> (Lilly PQ2254 .N88). <date normal="1975"
-							>1975</date></p>
+								Enfants</title> (Lilly PQ2254 .N88). <date normal="1975">1975</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00042" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1885-06" type="inclusive">1885 June.</unitdate>
@@ -1122,7 +1073,7 @@ using a finding aid. -->
 							<date normal="1987">1987</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00043" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1886-02-04">1886 Feb 4.</unitdate>
@@ -1139,7 +1090,7 @@ using a finding aid. -->
 							.C27). <date normal="1974">1974</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00044" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1887-04-15">1887 Apr 15.</unitdate>
@@ -1162,7 +1113,7 @@ using a finding aid. -->
 							.B4 M62) <date normal="1974">1974</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00045" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1887-05" type="inclusive">1887 May.</unitdate>
@@ -1183,7 +1134,7 @@ using a finding aid. -->
 							1897). <date normal="1974">1974</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00046" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1888-01-01">1888 Jan 1.</unitdate>
@@ -1205,7 +1156,7 @@ using a finding aid. -->
 							E53). <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00047" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1888-02-24">1888 Feb 24.</unitdate>
@@ -1224,18 +1175,15 @@ using a finding aid. -->
 						</note>
 					</did>
 					<acqinfo>
-						<p>Bound in Coppée, Le Passant. Paris. Armand Magnier, <date normal="1897"
-								>1897</date> (Lilly PQ2211 .C3P28 1897). <date normal="1974"
-								>1974</date></p>
+						<p>Bound in Coppée, Le Passant. Paris. Armand Magnier, <date normal="1897">1897</date> (Lilly PQ2211 .C3P28 1897). <date normal="1974">1974</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00048" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1888-03-08">1888 Mar 8.</unitdate>
 							<persname>Cherrier, Henri, 1839- , bibliographer.</persname> 44, Rue du
-							Louvre, 44, Paris. To “mon cher collègue.” Explains that <title
-								render="italic">Les mariages de Paris</title> does not include a
+							Louvre, 44, Paris. To “mon cher collègue.” Explains that <title render="italic">Les mariages de Paris</title> does not include a
 							list of members of the firm because the book was printed before he was
 							informed that such a list is customary.</unittitle>
 						<note>
@@ -1250,7 +1198,7 @@ using a finding aid. -->
 								<date normal="1980">1980</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00049" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1889-08-25">1889 Aug 25.</unitdate>
@@ -1270,7 +1218,7 @@ using a finding aid. -->
 							.Z5B272). <date normal="1980">1980.</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00050" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1890-06-02">1890 Jun 2.</unitdate>
@@ -1281,12 +1229,10 @@ using a finding aid. -->
 						</physdesc>
 					</did>
 					<acqinfo>
-						<p>Mounted in Olivier’s… Avisol… Paris, Baudry et Cie, <date normal="1889"
-								>1889.</date> (Lilly TL 654 .O6A35) <date normal="1959"
-							>1959</date></p>
+						<p>Mounted in Olivier’s… Avisol… Paris, Baudry et Cie, <date normal="1889">1889.</date> (Lilly TL 654 .O6A35) <date normal="1959">1959</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00051" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1890-06-06">1890 Jun 6.</unitdate>
@@ -1305,7 +1251,7 @@ using a finding aid. -->
 						<p>Gift. <date normal="1939">1939</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00052" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1890-09-07">1890 Sept 7.</unitdate>
@@ -1321,7 +1267,7 @@ using a finding aid. -->
 						<p>Purchase. <date normal="1973">1973</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00053" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1893-12-25">1893 Dec 25.</unitdate>
@@ -1339,11 +1285,10 @@ using a finding aid. -->
 					<acqinfo>
 						<p>Removed from Edmond et Jules de Goncourt, <title render="italic">Préfaces
 								et manifestes littéraitres,</title> Paris: G. Charpentier et Cie.,
-								<date normal="1888">1888</date> (Lilly PQ 2261 .P923). <date
-								normal="1977">1977.</date></p>
+								<date normal="1888">1888</date> (Lilly PQ 2261 .P923). <date normal="1977">1977.</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00054" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1894-02-15">1894 Feb 15.</unitdate>
@@ -1364,7 +1309,7 @@ using a finding aid. -->
 						<p>Purchase. <date normal="1973">1973</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00055" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1894-10-28">1894 Oct 28.</unitdate>
@@ -1380,12 +1325,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Estaunié, <title render="italic">Le Silence dans la
-								campagne.</title> Paris, Perrin et cie, <date normal="1926"
-								>1926</date> (Lilly PQ2609 .S8S58). <date normal="1980"
-							>1980.</date></p>
+								campagne.</title> Paris, Perrin et cie, <date normal="1926">1926</date> (Lilly PQ2609 .S8S58). <date normal="1980">1980.</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00056" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1894-12-05">1894 Dec 5.</unitdate>
@@ -1400,11 +1343,10 @@ using a finding aid. -->
 					<acqinfo>
 						<p>Removed from Remy de Gourmont, <title render="italic">Phocas,</title>
 							Paris: L’Ymagier, <date normal="1895">1895</date> (Lilly PQ2266 .P574 3
-							copies) which is dedicated to Mirbeau. <date normal="1977"
-							>1977</date></p>
+							copies) which is dedicated to Mirbeau. <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00057" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1895-04-20">1895 Apr 20.</unitdate>
@@ -1425,7 +1367,7 @@ using a finding aid. -->
 							(Lilly PQ2625 .A954 C52). <date normal="1981">1981</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00058" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1897-07-25">1897 Jul 25.</unitdate>
@@ -1444,7 +1386,7 @@ using a finding aid. -->
 						<p>Purchase. <date normal="1972">1972</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00059" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1895/1905" type="inclusive">1899?.</unitdate>
@@ -1459,8 +1401,7 @@ using a finding aid. -->
 								leaf 163/4 may be missing. </p>
 							<p>Some poems with corrections. </p>
 							<p>Watermark: L.JDL&amp;Cie. </p>
-							<p>Published in Paris, Edition du Mercure de France, <date normal="1899"
-									>1899.</date></p>
+							<p>Published in Paris, Edition du Mercure de France, <date normal="1899">1899.</date></p>
 							<p>Formerly in the collection of Jules Marsan. </p>
 						</note>
 					</did>
@@ -1468,7 +1409,7 @@ using a finding aid. -->
 						<p>Purchase. <date normal="1980">1980</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00060" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1800/1899" type="inclusive">19th cent.</unitdate>
@@ -1483,12 +1424,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Banville, <title render="italic">Gringoire: Comédie en un
-								acte en prose.</title> Paris: Michel Lévy Frères, <date
-								normal="1866">1866</date> (Lilly PQ2187 .G86) <date normal="1994"
-								>1994</date></p>
+								acte en prose.</title> Paris: Michel Lévy Frères, <date normal="1866">1866</date> (Lilly PQ2187 .G86) <date normal="1994">1994</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00061" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1900-04-28">1900 Apr 28.</unitdate>
@@ -1504,7 +1443,7 @@ using a finding aid. -->
 						<p>Purchase. <date normal="1973">1973</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00062" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1900-10-05">1900 Oct 5.</unitdate>
@@ -1521,7 +1460,7 @@ using a finding aid. -->
 						<p>Purchase. <date normal="1967">1967</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00063" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1903-04-02">1903 Apr 2.</unitdate>
@@ -1538,12 +1477,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Paul Jean Toulet, <title render="italic">La jeune fille
-								verte,</title> Paris: Emile-Paul Frères, <date normal="1920"
-								>1920</date> (Lilly PQ2639 .O88J54). <date normal="1977"
-							>1977</date></p>
+								verte,</title> Paris: Emile-Paul Frères, <date normal="1920">1920</date> (Lilly PQ2639 .O88J54). <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00064" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1905-03-25">1905 Mar 25.</unitdate>
@@ -1561,12 +1498,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Chaudel, <title render="italic">L’Announce faite à
-								Marie,</title> Paris, Editions de la Nouvelle Revue François, <date
-								normal="1912">1912</date> (Lilly PQ2605 .L2A85). <date normal="1974"
-								>1974</date></p>
+								Marie,</title> Paris, Editions de la Nouvelle Revue François, <date normal="1912">1912</date> (Lilly PQ2605 .L2A85). <date normal="1974">1974</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00065" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1905-11-01">1905 Nov 1.</unitdate>
@@ -1583,11 +1518,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Maurras, L’avenir de l’intelligence. Paris: A. Fontemoing,
-								<date normal="1905">1905</date> (Lilly PQ2625 .A954 A94). <date
-								normal="1981">1981</date></p>
+								<date normal="1905">1905</date> (Lilly PQ2625 .A954 A94). <date normal="1981">1981</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00066" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1905-04-11">1905 Apr 11.</unitdate>
@@ -1611,7 +1545,7 @@ using a finding aid. -->
 						<p>Accessioned in Mss. Dept. in <date normal="1974">1974</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00067" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1905-06" type="inclusive">1905 June.</unitdate>
@@ -1633,12 +1567,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Gregh, <title render="italic">L’or des minutes:
-								poésies.</title> Paris, Bibliotheque-Charpentier, <date
-								normal="1905">1905</date> (Lilly PQ2613 .R4063). <date normal="1984"
-								>1984</date></p>
+								poésies.</title> Paris, Bibliotheque-Charpentier, <date normal="1905">1905</date> (Lilly PQ2613 .R4063). <date normal="1984">1984</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00068" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1906-01-15">1906 Jan 15.</unitdate>
@@ -1650,11 +1582,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Berger’s <title render="italic">Histoire de l’ecriture dans
-								l’aniquite…</title> Paris, Imprimerie nationale, <date normal="1891"
-								>1891</date>(Lilly P211 .B5). <date normal="1965">1965</date></p>
+								l’aniquite…</title> Paris, Imprimerie nationale, <date normal="1891">1891</date>(Lilly P211 .B5). <date normal="1965">1965</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00069" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1906-10-27">1906 Oct 27.</unitdate>
@@ -1673,12 +1604,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Prevost, <title render="italic">Monsieur et Madame
-								Moloch.</title> Paris: Alphonse Lemmerre, <date normal="1906"
-								>1906</date> (Lilly PQ2383 .P6M75). <date normal="1977"
-							>1977</date></p>
+								Moloch.</title> Paris: Alphonse Lemmerre, <date normal="1906">1906</date> (Lilly PQ2383 .P6M75). <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00070" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1906-09-19">1906 Sept. 19.</unitdate>
@@ -1699,7 +1628,7 @@ using a finding aid. -->
 								<date normal="1981">1981</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00071" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1907-01-18">1907 Jan 18.</unitdate>
@@ -1721,7 +1650,7 @@ using a finding aid. -->
 							(Lilly PQ2639 .H205 1917). <date normal="1959">1959</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00072" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1907-12-12">1907 Dec 12.</unitdate>
@@ -1738,12 +1667,11 @@ using a finding aid. -->
 					<acqinfo>
 						<p>Removed from Delisle’s <title render="italic">Recherches sur la Librairie
 								de Charles V (Extrait) Hommage a l’Académie des inscriptioins et
-								belles-lettres, 1857-1907.</title> Paris, <date normal="1907"
-								>1907.</date> (Lilly AS162 .P315) From the library of Coella Lindsay
+								belles-lettres, 1857-1907.</title> Paris, <date normal="1907">1907.</date> (Lilly AS162 .P315) From the library of Coella Lindsay
 							Ricketts, Chicago, Illinois. <date normal="1967">1967</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00073" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1908-05-12">1908 May 12.</unitdate>
@@ -1757,11 +1685,10 @@ using a finding aid. -->
 					<acqinfo>
 						<p>Removed from Charles Louis de Secondat, baron de La Brède et de
 							Montesquieu, ... <title render="italic">Montesquietu, Textes Choisis et
-								Commentés</title> par Fortunat Strowski. Paris, <date normal="1912"
-								>1912.</date> (PQ2011 .A17S9). <date normal="1951">1951</date></p>
+								Commentés</title> par Fortunat Strowski. Paris, <date normal="1912">1912.</date> (PQ2011 .A17S9). <date normal="1951">1951</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00074" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1908-06-01">1908 Jun 1.</unitdate>
@@ -1777,11 +1704,10 @@ using a finding aid. -->
 					<acqinfo>
 						<p>Removed from Charles Louis de Secondat, baron de La Brède et de
 							Montesquieu, ... <title render="italic"> Montesquieu, Textes Choisis et
-								Commentés</title> par Fortunat Strowski. Paris, <date normal="1912"
-								>1912.</date> (PQ2011 .A17S9). <date normal="1951">1951</date></p>
+								Commentés</title> par Fortunat Strowski. Paris, <date normal="1912">1912.</date> (PQ2011 .A17S9). <date normal="1951">1951</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00075" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1909-02-23">1909 Feb 23.</unitdate>
@@ -1802,7 +1728,7 @@ using a finding aid. -->
 							<date normal="1961">1961</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00076" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1909-04-21">1909 Apr 21.</unitdate>
@@ -1818,11 +1744,10 @@ using a finding aid. -->
 					<acqinfo>
 						<p>Removed from Henri Louis Bergson, <title render="italic">L’Énergie
 								spirituelle:</title> essais et conférences, Paris: Libraire Félix
-							Alcan, <date normal="1919">1919</date> (Lilly B2430 .B4 E47). <date
-								normal="1977">1977</date></p>
+							Alcan, <date normal="1919">1919</date> (Lilly B2430 .B4 E47). <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00077" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1909-05-16">1909 May 16.</unitdate>
@@ -1836,13 +1761,12 @@ using a finding aid. -->
 						</physdesc>
 					</did>
 					<acqinfo>
-						<p>Removed from François Antoine Boissy d’Anglas, <title render="italic"
-								>Louis XVII et ses descendants, au gouvernement de la republique
+						<p>Removed from François Antoine Boissy d’Anglas, <title render="italic">Louis XVII et ses descendants, au gouvernement de la republique
 								française,</title> Annonay: Elie Cellier (Lilly DC137.3 .B864).
 								<date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00078" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1909-06-16">1909 Jun 16.</unitdate>
@@ -1863,7 +1787,7 @@ using a finding aid. -->
 							<date normal="1961">1961</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00079" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1909-08-31">1909 Aug 31.</unitdate>
@@ -1880,7 +1804,7 @@ using a finding aid. -->
 						<p>Purchase. <date normal="1973">1973</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00080" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1910-11-27">1910 Nov 27.</unitdate>
@@ -1895,11 +1819,10 @@ using a finding aid. -->
 					<acqinfo>
 						<p>Removed from Charles Louis de Secondat, baron de La Brède et de
 							Montesquieu, … <title render="italic">Montesquieu, Textes Choisis et
-								Commentés</title> par Fortunat Strowski. Paris, <date normal="1912"
-								>1912.</date> (PQ2011 .A17S9). <date normal="1951">1951</date></p>
+								Commentés</title> par Fortunat Strowski. Paris, <date normal="1912">1912.</date> (PQ2011 .A17S9). <date normal="1951">1951</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00081" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1911-06-04">1911 Jun 4.</unitdate>
@@ -1916,11 +1839,10 @@ using a finding aid. -->
 					<acqinfo>
 						<p>Removed from Barrès, <title render="italic">Le Jardin de
 								Bérénice,</title> Paris, Librairie Academique Didier, Perrin et Cie,
-								<date normal="1891">1891</date> (Lilly PQ2603 .A7J32). <date
-								normal="1974">1974</date></p>
+								<date normal="1891">1891</date> (Lilly PQ2603 .A7J32). <date normal="1974">1974</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00082" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1912-11-21">1912 Nov 21.</unitdate>
@@ -1935,7 +1857,7 @@ using a finding aid. -->
 						<p>Purchase. <date normal="1973">1973</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00083" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1913-02-14">1913 Feb 14.</unitdate>
@@ -1948,12 +1870,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Carco, <title render="italic">Chansons
-								aigres-douces,</title> Paris, Collection des cinq, <date
-								normal="1913">1913</date> (Lilly PQ2605 .A55C45). <date
-								normal="1974">1974</date></p>
+								aigres-douces,</title> Paris, Collection des cinq, <date normal="1913">1913</date> (Lilly PQ2605 .A55C45). <date normal="1974">1974</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00084" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1913-04-06">1913 Apr 6.</unitdate>
@@ -1974,7 +1894,7 @@ using a finding aid. -->
 							F4). <date normal="1980">1980</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00085" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1913-10-01">1913 Oct 1.</unitdate> “adresse à M.
@@ -1995,7 +1915,7 @@ using a finding aid. -->
 								<date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00086" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1914" type="inclusive">1914.</unitdate>
@@ -2014,7 +1934,7 @@ using a finding aid. -->
 						<p>Purchase. <date normal="1982">1982</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00087" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1915-05-11/1916-09-17" type="inclusive">1915 May
@@ -2032,7 +1952,7 @@ using a finding aid. -->
 							PQ2611 .O78C6). <date normal="1963">1963</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00088" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1917" type="inclusive">1917.</unitdate>
@@ -2056,7 +1976,7 @@ using a finding aid. -->
 						<p>Purchase. <date normal="1974">1974</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00089" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1919-07-07">1919 Jul 7.</unitdate>
@@ -2074,11 +1994,10 @@ using a finding aid. -->
 					<acqinfo>
 						<p>Removed from Barres, <title render="italic">Colette Baudoch…,</title>
 							Paris, Societe d’Edition et de Publications, Librairie Felix Juven,
-								<date normal="1909">1909</date> (Lilly PQ2603 .A7C6). <date
-								normal="1974">1974</date></p>
+								<date normal="1909">1909</date> (Lilly PQ2603 .A7C6). <date normal="1974">1974</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00090" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1919-08-24">1919 Aug 24.</unitdate>
@@ -2099,7 +2018,7 @@ using a finding aid. -->
 						<p>Source unknown. <date normal="1973">1973</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00091" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1919-10-13">1919 Oct 13.</unitdate>
@@ -2120,14 +2039,13 @@ using a finding aid. -->
 							(Lilly PQ203. O9 M19 1899). <date normal="1991">1991</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00092" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1920-07-20">1920 Jul 20.</unitdate>
 							<persname>Grasset, Bernard, 1881-1955, publisher.</persname> 61 Rue des
 							Saints-Pères, Paris. To Alphonse de Châteaubriant. Piriac-sur-Mer (Loire
-							Inférieure), France. Expresses interest in publishing <title
-								render="italic">La brière.</title> Is willing to send a contract
+							Inférieure), France. Expresses interest in publishing <title render="italic">La brière.</title> Is willing to send a contract
 							based on the conditions set forth by Châteaubriant in an earlier letter.
 							T.L. </unittitle>
 						<physdesc>
@@ -2143,7 +2061,7 @@ using a finding aid. -->
 							B85). <date normal="1980">1980</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00093" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1920-10-06">1920 Oct 6.</unitdate>
@@ -2168,7 +2086,7 @@ using a finding aid. -->
 							.E56Z4). <date normal="1980">1980</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00094" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1920-10-20">1920 Oct 20.</unitdate>
@@ -2190,7 +2108,7 @@ using a finding aid. -->
 							.A56P7). <date normal="1974">1974</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00095" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1920-10" type="inclusive">1920 Oct.</unitdate>
@@ -2207,12 +2125,10 @@ using a finding aid. -->
 						</note>
 					</did>
 					<acqinfo>
-						<p>Bound in Barbusse, Pleureuses, Paris, Bibliothèque-Charpentier, <date
-								normal="1895">1895</date> (Lilly PQ2603 .A56P7). <date normal="1974"
-								>1974</date></p>
+						<p>Bound in Barbusse, Pleureuses, Paris, Bibliothèque-Charpentier, <date normal="1895">1895</date> (Lilly PQ2603 .A56P7). <date normal="1974">1974</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00096" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1920-10" type="inclusive">1920, Oct.</unitdate>
@@ -2233,7 +2149,7 @@ using a finding aid. -->
 							.A56P7). <date normal="1974">1974</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00097" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1920">1920?</unitdate>
@@ -2253,7 +2169,7 @@ using a finding aid. -->
 							<date normal="1986">1986</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00098" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1921-06" type="inclusive">1921 Jun.</unitdate>
@@ -2270,11 +2186,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Rosny, <title render="italic">Nell Horn de L’Armée du
-								salut.</title> Paris, E. Giraud et Cie, <date normal="1886"
-								>1886</date> (Lilly 3-3907). <date normal="1978">1978</date></p>
+								salut.</title> Paris, E. Giraud et Cie, <date normal="1886">1886</date> (Lilly 3-3907). <date normal="1978">1978</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00099" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1924-02-27">1924 Feb. 27.</unitdate>
@@ -2297,7 +2212,7 @@ using a finding aid. -->
 							PQ2607 .E37 A75). <date normal="1980">1980</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00100" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1924-12-14">1924 Dec 14.</unitdate>
@@ -2315,11 +2230,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Gourmont, <title render="italic">Muses
-								d’aujourd’hui.</title> Paris, Mercure de France, <date normal="1910"
-								>1910</date> (Lilly PQ443 .G6). <date normal="1985">1985</date></p>
+								d’aujourd’hui.</title> Paris, Mercure de France, <date normal="1910">1910</date> (Lilly PQ443 .G6). <date normal="1985">1985</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00101" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1924/1925" type="inclusive">1924-1925.</unitdate>
@@ -2343,12 +2257,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from the page proofs of Radiguet, <title render="italic">Le Bal
-								du Comte d’Orgel.</title> Paris, B. Grasset, <date normal="1924"
-								>1924</date> (Lilly PQ2635 .A25B17). <date normal="1984"
-							>1984</date></p>
+								du Comte d’Orgel.</title> Paris, B. Grasset, <date normal="1924">1924</date> (Lilly PQ2635 .A25B17). <date normal="1984">1984</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00102" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1926-02-02">1926 Feb 2.</unitdate>
@@ -2368,7 +2280,7 @@ using a finding aid. -->
 							(Lilly PQ2623 E14P48). <date normal="1974">1974</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00103" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1927-02-20">1927 Feb 20.</unitdate>
@@ -2389,7 +2301,7 @@ using a finding aid. -->
 						<p>Purchase. <date normal="1973">1973</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00104" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1928-03-24">1928 Mar 24.</unitdate>
@@ -2408,7 +2320,7 @@ using a finding aid. -->
 							PQ2643 .A38J58 1936). <date normal="1974">1974</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00105" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1929">1929?</unitdate>
@@ -2431,7 +2343,7 @@ using a finding aid. -->
 							<date normal="1986">1986</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00106" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1930-02-23">1930 Feb 23.</unitdate>
@@ -2450,12 +2362,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from William Blake, <title render="italic">Le mariage du ciel et
-								de l’enfer.</title> Paris: C. Aveline, <date normal="1926"
-								>1926</date> (Lilly PR4144 .M3214). <date normal="1981"
-							>1981</date></p>
+								de l’enfer.</title> Paris: C. Aveline, <date normal="1926">1926</date> (Lilly PR4144 .M3214). <date normal="1981">1981</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00107" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1930-03-21">1930 Mar 21.</unitdate>
@@ -2476,7 +2386,7 @@ using a finding aid. -->
 								<date normal="1981">1981</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00108" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1930-09-23">1930 Sept. 23?</unitdate>
@@ -2500,7 +2410,7 @@ using a finding aid. -->
 							PQ2607 .E37 A75). <date normal="1980">1980</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00109" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1931-01-15">1931 Jan 15.</unitdate>
@@ -2518,7 +2428,7 @@ using a finding aid. -->
 							copy 1). <date normal="1974">1974</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00110" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1933-02-26">1933 Feb 26.</unitdate>
@@ -2532,12 +2442,11 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Régnier, <title render="italic">Sept Médailles
-								amoureuses,</title> Paris, La Centaine, <date normal="1928"
-								>1928</date> (Lilly PQ2635 .E34S47) which is inscribed to “Camille
+								amoureuses,</title> Paris, La Centaine, <date normal="1928">1928</date> (Lilly PQ2635 .E34S47) which is inscribed to “Camille
 							Bizot.” <date normal="1973">1973</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00111" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1934">1934.</unitdate>
@@ -2561,7 +2470,7 @@ using a finding aid. -->
 							<date normal="1989">1989</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00112" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1935-07-01">1935 July 1</unitdate>
@@ -2588,11 +2497,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Gaston Louis Charles Picard’s <title render="italic">Hommage
-								à Victor Hugo…</title> Paris, La Caravelle, <date normal="1935"
-								>1935</date> (PQ2298 .P5). <date normal="1951">1951</date></p>
+								à Victor Hugo…</title> Paris, La Caravelle, <date normal="1935">1935</date> (PQ2298 .P5). <date normal="1951">1951</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00113" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1935-10-03">1935 Oct 3.</unitdate>
@@ -2612,7 +2520,7 @@ using a finding aid. -->
 								<date normal="1974">1974</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00114" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1937-05-27">1937 May 27.</unitdate>
@@ -2630,12 +2538,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Crommelynck, <title render="italic">Les amants
-								Puérils.</title> Paris: Aux Editions de la Sirène, <date
-								normal="1921">1921</date> (Lilly PQ2605 .R76A77). <date
-								normal="1983">1983</date></p>
+								Puérils.</title> Paris: Aux Editions de la Sirène, <date normal="1921">1921</date> (Lilly PQ2605 .R76A77). <date normal="1983">1983</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00115" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1937-07-03">1937 July 3.</unitdate>
@@ -2656,7 +2562,7 @@ using a finding aid. -->
 								<date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00116" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1941-08-15">1941 Aug 15.</unitdate>
@@ -2674,12 +2580,11 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from André Masson’s <title render="italic">Un Mécène Bordelais,
-								Nicolas Beaujon, 1718-1786…</title> Bordeaux, Delmas, <date
-								normal="1937">1937. </date>
+								Nicolas Beaujon, 1718-1786…</title> Bordeaux, Delmas, <date normal="1937">1937. </date>
 							<date normal="1951">1951</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00117" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1942-09-28">1942 Sept. 28.</unitdate>
@@ -2698,7 +2603,7 @@ using a finding aid. -->
 						<p>Gift. <date normal="1985">1985</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00118" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1944-02-29">1944 Feb. 29.</unitdate>
@@ -2720,7 +2625,7 @@ using a finding aid. -->
 							(Lilly PQ2623 .A679 Q5). <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00119" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1945-02-05">1945 Feb. 5.</unitdate>
@@ -2728,8 +2633,7 @@ using a finding aid. -->
 							Rue Michelet, Algiers. To [Pierre de Lanux]. “Au sujet de la publication
 							dans <title render="italic">Carrefour</title>…j’ai correspondon avec
 							Boutelleau … pour ce même <title render="italic">Carrefour,</title> un
-							article de Christian Megret…”; mention of his article <title
-								render="italic">Justice et Charité.</title> A.L.S. </unittitle>
+							article de Christian Megret…”; mention of his article <title render="italic">Justice et Charité.</title> A.L.S. </unittitle>
 						<physdesc>
 							<extent>1 p. 27 cm.</extent>
 						</physdesc>
@@ -2738,12 +2642,10 @@ using a finding aid. -->
 						</note>
 					</did>
 					<acqinfo>
-						<p>Removed from Gide, Journal, 1939-1942… Paris, Gallimard, <date
-								normal="1946">1946</date> (Lilly PQ2613 .I2Z53 1946). <date
-								normal="1975">1975</date></p>
+						<p>Removed from Gide, Journal, 1939-1942… Paris, Gallimard, <date normal="1946">1946</date> (Lilly PQ2613 .I2Z53 1946). <date normal="1975">1975</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00120" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1946-01-06">1946 Jan 6.</unitdate>
@@ -2759,12 +2661,10 @@ using a finding aid. -->
 					</did>
 
 					<acqinfo>
-						<p>Removed from Giono, Les Âmes Fortes. Paris, Gallimard, <date
-								normal="1949">1949</date> (Lilly PQ2613 .I57A52). <date
-								normal="1983">1983</date></p>
+						<p>Removed from Giono, Les Âmes Fortes. Paris, Gallimard, <date normal="1949">1949</date> (Lilly PQ2613 .I57A52). <date normal="1983">1983</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00121" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1946-02-24">1946 Feb 24.</unitdate>
@@ -2784,7 +2684,7 @@ using a finding aid. -->
 							(Lilly PQ2613 .I57R77). <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00122" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1947">1947?.</unitdate>
@@ -2797,16 +2697,14 @@ using a finding aid. -->
 							<p>Mimeo with extensive pencil corrections and annotations in an unknown
 								hand. </p>
 							<p>Title page has stamp of Frieda Fishbein, authors’ representative. </p>
-							<p>The Wolas version was first performed at New Stages Theatre, <date
-									normal="1948-02-09">Feb. 9, 1948.</date></p>
+							<p>The Wolas version was first performed at New Stages Theatre, <date normal="1948-02-09">Feb. 9, 1948.</date></p>
 						</note>
 					</did>
 					<acqinfo>
-						<p>Transfer. Book Department, Lilly Library. <date normal="1986"
-							>1986</date></p>
+						<p>Transfer. Book Department, Lilly Library. <date normal="1986">1986</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00123" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1950-01-06">1950 Jan 6.</unitdate>
@@ -2834,12 +2732,11 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Perruchot, <emph render="italic">Introduction à
-								l’Epipanisme</emph>. Paris, Le Sillage, <date normal="1949"
-								>1949</date> (Lilly B817 .P4) which is inscribed by Perruchot to
+								l’Epipanisme</emph>. Paris, Le Sillage, <date normal="1949">1949</date> (Lilly B817 .P4) which is inscribed by Perruchot to
 							Yves Breton. <date normal="1985">1985</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00124" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1950-06-17">1950 June 17.</unitdate>
@@ -2861,7 +2758,7 @@ using a finding aid. -->
 							(Lilly PQ2613 .I57R77). <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00125" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1950-10-01">1950 Oct 1.</unitdate>
@@ -2884,7 +2781,7 @@ using a finding aid. -->
 							(Lilly PQ2603 .O626D44). <date normal="1985">1985</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00126" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1951">1951?</unitdate>
@@ -2902,12 +2799,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Marcel Jouhandeau, <title render="italic">Élise
-								architecte,</title> Paris: B. Grasset, <date normal="1951"
-								>1951</date> (Lilly PQ2619 .O76 E42 1951). <date normal="1977"
-								>1977</date></p>
+								architecte,</title> Paris: B. Grasset, <date normal="1951">1951</date> (Lilly PQ2619 .O76 E42 1951). <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00127" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1952-07-25">1952 July 25.</unitdate>
@@ -2925,7 +2820,7 @@ using a finding aid. -->
 						<p>Purchase. <date normal="1970">1970</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00128" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1954-01-12">1954 Jan 12.</unitdate>
@@ -2942,11 +2837,10 @@ using a finding aid. -->
 					<acqinfo>
 						<p>Removed from Cauda, <emph render="italic">Domaine inachevé</emph>:
 							poemes. Paris: J. Aubanel et son Frère, <date normal="1954">1954</date>
-							(Lilly PQ2605 A.58 D66), no. 1 of 12 numbered copies. <date
-								normal="1977">1977</date></p>
+							(Lilly PQ2605 A.58 D66), no. 1 of 12 numbered copies. <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00129" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1963-09-25/1963-10-09" type="inclusive">1963 Sept.
@@ -2969,11 +2863,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Transferred from Lilly Library Book Department, acquired with the M.
-							Fontane purchase of 1982 from G. Sabbagh, Paris. <date normal="1985"
-								>1985</date></p>
+							Fontane purchase of 1982 from G. Sabbagh, Paris. <date normal="1985">1985</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00130" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1965-05-01">1965 May 1.</unitdate>
@@ -2992,7 +2885,7 @@ using a finding aid. -->
 							G34). <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00131" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1969-03-04">1969 Mar 4.</unitdate>
@@ -3013,7 +2906,7 @@ using a finding aid. -->
 							O63). <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00132" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1969-07-22">1969 July 22.</unitdate>
@@ -3034,7 +2927,7 @@ using a finding aid. -->
 							O63). <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00133" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1969">1969.</unitdate>
@@ -3044,8 +2937,7 @@ using a finding aid. -->
 							<extent>1 p. 27 cm.</extent>
 						</physdesc>
 						<note>
-							<p>Fifteen lines of verse published on page 58 of Autrand, <title
-									render="italic">La peine de vivre…</title>
+							<p>Fifteen lines of verse published on page 58 of Autrand, <title render="italic">La peine de vivre…</title>
 								<date>1969</date></p>
 						</note>
 					</did>
@@ -3055,7 +2947,7 @@ using a finding aid. -->
 							(Lilly PQ2661 .U85P37) <date normal="1974">1974</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00134" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1970-07-03">1970 July 3.</unitdate>
@@ -3073,12 +2965,10 @@ using a finding aid. -->
 
 					<acqinfo>
 						<p>Removed from Roger Peyrefitte, <title render="italic">La fin des
-								ambassades,</title> Paris: Flammarion, <date normal="1953"
-								>1953</date> (Lilly PQ2631 .E915 F49). <date normal="1977"
-								>1977</date></p>
+								ambassades,</title> Paris: Flammarion, <date normal="1953">1953</date> (Lilly PQ2631 .E915 F49). <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00135" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1975-02-25">1975 Feb 25.</unitdate>
@@ -3100,7 +2990,7 @@ using a finding aid. -->
 							(Lilly PQ2605 .O15Z5 1975). <date normal="1979">1979</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00136" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1975">1975?</unitdate>
@@ -3121,7 +3011,7 @@ using a finding aid. -->
 							.E6614 L83) <date normal="1987">1987</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00137" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1975">1975?</unitdate>
@@ -3144,7 +3034,7 @@ using a finding aid. -->
 							(Lilly PQ2662 .R556 H28). <date normal="1986">1986</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00138" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1976-03">1976 Mar.</unitdate>
@@ -3163,11 +3053,10 @@ using a finding aid. -->
 						<p>Removed from Clément, <title render="italic">À la fenêtre d’une
 								chicomancienne bègue.</title> Paris: Librairie Saint
 							Germain-des-Prés, <date normal="1974">1974</date> (Lilly PQ2663
-							.L55A12), no. 33 of 40 numbered copies. <date normal="1977"
-							>1977</date></p>
+							.L55A12), no. 33 of 40 numbered copies. <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00139" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1977-09-23">1977 Sept. 23.</unitdate>
@@ -3183,12 +3072,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Frédéric Zaborski, <title render="italic">Cercueil de
-								rêves,</title> Paris: Editions Saint-Germain-des-Prés, <date
-								normal="1974">1974</date> (Lilly PQ2686 .A15C42) <date normal="1977"
-								>1977</date></p>
+								rêves,</title> Paris: Editions Saint-Germain-des-Prés, <date normal="1974">1974</date> (Lilly PQ2686 .A15C42) <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00140" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3200,19 +3087,15 @@ using a finding aid. -->
 						</physdesc>
 					</did>
 					<acqinfo>
-						<p>Removed from, but not published in, Ackermann, <title render="italic"
-								>Poésies philosophiques.</title> Nice: Caisson et Mignon, <date
-								normal="1871">1871</date> (Lilly PQ2152 .A24 P74). <date
-								normal="1991">1991</date></p>
+						<p>Removed from, but not published in, Ackermann, <title render="italic">Poésies philosophiques.</title> Nice: Caisson et Mignon, <date normal="1871">1871</date> (Lilly PQ2152 .A24 P74). <date normal="1991">1991</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00141" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
 							<persname>Antoine, André, 1858-1943, theatre manager, author.</persname>
-							To Ernest Renan. Asks Renan to let him produce <title render="italic"
-								>L’abesse de Jouarre</title> as a play at the Theatre-Libre. Makes
+							To Ernest Renan. Asks Renan to let him produce <title render="italic">L’abesse de Jouarre</title> as a play at the Theatre-Libre. Makes
 							reference to Emile Zola, Théodore de Banville, Alphonse Daudet, comte
 							Tolstoi, Jean Richepin, Emile Bergerat, Henry Becque, and others. A.L.S. </unittitle>
 						<physdesc>
@@ -3225,12 +3108,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Ernest Renan, <title render="italic">L’abesse de
-								Jouarre,</title> Paris: Calmann Lévy, <date normal="1886"
-								>1886</date> (Lilly PQ2386 .R37A6). <date normal="1978"
-							>1978</date></p>
+								Jouarre,</title> Paris: Calmann Lévy, <date normal="1886">1886</date> (Lilly PQ2386 .R37A6). <date normal="1978">1978</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00142" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3246,12 +3127,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Augier, <title render="italic">Madame Caverlet: piece en
-								quatre actes, en prose.</title> Paris: Calmann Levy, <date
-								normal="1876">1876</date> (Lilly PQ2154 .A6 M17 1876). <date
-								normal="1991">1991</date></p>
+								quatre actes, en prose.</title> Paris: Calmann Levy, <date normal="1876">1876</date> (Lilly PQ2154 .A6 M17 1876). <date normal="1991">1991</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00143" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3270,7 +3149,7 @@ using a finding aid. -->
 								<date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00144" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3289,7 +3168,7 @@ using a finding aid. -->
 							P69). <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00145" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3309,7 +3188,7 @@ using a finding aid. -->
 							.B4E56). <date normal="1974">1974</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00146" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3328,7 +3207,7 @@ using a finding aid. -->
 							.B4E56). <date normal="1974">1974</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00147" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3347,7 +3226,7 @@ using a finding aid. -->
 							.B4E56). <date normal="1974">1974</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00148" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3367,7 +3246,7 @@ using a finding aid. -->
 						<p>Purchase. <date normal="1972">1972</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00149" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3380,7 +3259,7 @@ using a finding aid. -->
 						<p>Purchase. <date normal="1972">1972</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00150" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3400,7 +3279,7 @@ using a finding aid. -->
 							.E65V46). <date normal="1974">1974</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00151" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3415,12 +3294,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Berthollet’s <title render="italic">Essai de statique
-								chirnique</title> …Paris, Firmin Didot, <date normal="1803"
-								>1803.</date> 2v. (Lilly QD501 .B54). <date normal="1956"
-								>1956</date></p>
+								chirnique</title> …Paris, Firmin Didot, <date normal="1803">1803.</date> 2v. (Lilly QD501 .B54). <date normal="1956">1956</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00152" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3443,7 +3320,7 @@ using a finding aid. -->
 							.B18I16).</p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00153" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3465,7 +3342,7 @@ using a finding aid. -->
 						<p>Purchase. <date normal="1967">1967</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00154" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3486,12 +3363,11 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Cauda, <title render="italic">Domaine inachevé:
-								poèmes.</title> Paris: J. Aubanel et Son Frère, <date normal="1954"
-								>1954</date> (Lilly PQ2605 .A7973 D66), no. 1 of 12 numbered copies.
+								poèmes.</title> Paris: J. Aubanel et Son Frère, <date normal="1954">1954</date> (Lilly PQ2605 .A7973 D66), no. 1 of 12 numbered copies.
 								<date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00155" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3511,7 +3387,7 @@ using a finding aid. -->
 							S16), copy U of 26 copies. <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00156" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3525,7 +3401,7 @@ using a finding aid. -->
 						<p>Gift. <date normal="1961">1961</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00157" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3545,7 +3421,7 @@ using a finding aid. -->
 						<p>Purchase. <date normal="1979">1979</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00158" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3565,7 +3441,7 @@ using a finding aid. -->
 						<p>Purchase. <date normal="1979">1979</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00159" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3589,7 +3465,7 @@ using a finding aid. -->
 						<p>Purchase. <date normal="1979">1979</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00160" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3604,12 +3480,10 @@ using a finding aid. -->
 						</note>
 					</did>
 					<acqinfo>
-						<p>Removed from Colette, Sido, Paris, J. Ferenczi &amp; Fils, <date
-								normal="1930">1930</date> (Lilly PQ2605 O28S56 1930). <date
-								normal="1973">1973</date></p>
+						<p>Removed from Colette, Sido, Paris, J. Ferenczi &amp; Fils, <date normal="1930">1930</date> (Lilly PQ2605 O28S56 1930). <date normal="1973">1973</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00161" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3627,7 +3501,7 @@ using a finding aid. -->
 						<p>Purchase. <date normal="1973">1973</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00162" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3642,11 +3516,10 @@ using a finding aid. -->
 					<acqinfo>
 						<p>Removed from Coupon, <title render="italic">Appel à la lézarde.</title>
 							Paris, Éditions Saint Germain-des-Prés, <date normal="1974">1974</date>
-							(Lilly PQ2663 O83 A64), no. 11 of 40 numbered copies. <date
-								normal="1977">1977</date></p>
+							(Lilly PQ2663 O83 A64), no. 11 of 40 numbered copies. <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00163" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3662,12 +3535,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Courteline, <title render="italic">Les femmes
-								d’amis.</title> Paris: C. Marpon et E. Flammarion, <date
-								normal="1888">1888</date> (Lilly PQ2605 .O7677 F32). <date
-								normal="1982">1982</date></p>
+								d’amis.</title> Paris: C. Marpon et E. Flammarion, <date normal="1888">1888</date> (Lilly PQ2605 .O7677 F32). <date normal="1982">1982</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00164" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3684,7 +3555,7 @@ using a finding aid. -->
 							.E9 copy 2). <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00165" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3703,7 +3574,7 @@ using a finding aid. -->
 						<p>Gift. <date normal="1984">1984</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00166" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3726,7 +3597,7 @@ using a finding aid. -->
 							PQ2607 .E37 A75). <date normal="1980">1980</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00167" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3750,7 +3621,7 @@ using a finding aid. -->
 							PQ2607 .E37 A75). <date normal="1980">1980</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00168" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3775,7 +3646,7 @@ using a finding aid. -->
 							inscribed by Goncourt to Burty. <date normal="1982">1982</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00169" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3800,7 +3671,7 @@ using a finding aid. -->
 							(Lilly PQ2664 .E8P74). <date normal="1984">1984</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00170" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3822,7 +3693,7 @@ using a finding aid. -->
 							.U288I16). <date normal="1982">1982</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00171" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3839,12 +3710,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Alexandre Dumas, <title render="italic">Impressions de
-								voyage.</title> Paris, Revue des Deux Mondes, <date normal="1834"
-								>1834</date> (Lilly PQ2227 I4 1834). <date normal="1890"
-							>1980</date></p>
+								voyage.</title> Paris, Revue des Deux Mondes, <date normal="1834">1834</date> (Lilly PQ2227 I4 1834). <date normal="1890">1980</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00172" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3862,12 +3731,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Vol. 1 of Dumas, <emph render="italic">Théatre
-								Complet</emph>, 8 vols. Paris, Calmann Lévy, <date normal="1890"
-								>1890</date> (Lilly PQ2231 .A19 1890). <date normal="1979"
-								>1979</date></p>
+								Complet</emph>, 8 vols. Paris, Calmann Lévy, <date normal="1890">1890</date> (Lilly PQ2231 .A19 1890). <date normal="1979">1979</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00173" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3885,12 +3752,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Vol. 1 of Dumas, <title render="italic">Théatre
-								Complet,</title> 8 vols. Paris, Calmann Lévy, <date normal="1890"
-								>1890</date> (Lilly PQ2231 .A19 1890). <date normal="1979"
-								>1979</date></p>
+								Complet,</title> 8 vols. Paris, Calmann Lévy, <date normal="1890">1890</date> (Lilly PQ2231 .A19 1890). <date normal="1979">1979</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00174" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3906,12 +3771,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Vol. 1 of Dumas, <title render="italic">Théatre
-								Complet,</title> 8 vols. Paris, Calmann Lévy, <date normal="1890"
-								>1890</date> (Lilly PQ2231 .A19 1890). <date normal="1979"
-								>1979</date></p>
+								Complet,</title> 8 vols. Paris, Calmann Lévy, <date normal="1890">1890</date> (Lilly PQ2231 .A19 1890). <date normal="1979">1979</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00175" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3928,12 +3791,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Vol. 1 of Dumas, <title render="italic">Théatre
-								Complet,</title> 8 vols. Paris, Calmann Lévy, <date normal="1890"
-								>1890</date> (Lilly PQ2231 .A19 1890). <date normal="1979"
-								>1979</date></p>
+								Complet,</title> 8 vols. Paris, Calmann Lévy, <date normal="1890">1890</date> (Lilly PQ2231 .A19 1890). <date normal="1979">1979</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00176" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3956,7 +3817,7 @@ using a finding aid. -->
 							(Lilly PQ2609 .S8I43). <date normal="1985">1985</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00177" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3978,7 +3839,7 @@ using a finding aid. -->
 								<date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00178" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -3998,7 +3859,7 @@ using a finding aid. -->
 						<p>Purchase. <date>1972</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00179" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4019,7 +3880,7 @@ using a finding aid. -->
 						<p>Gift. <date normal="1957">1957</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00180" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4040,7 +3901,7 @@ using a finding aid. -->
 							.B772). <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00181" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4058,12 +3919,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Fromentin, <title render="italic">Un été dans le
-								Sahara.</title> Paris: M. Levy frères, <date normal="1857"
-								>1857</date> (Lilly DT333 .F931). <date normal="1980"
-							>1980</date></p>
+								Sahara.</title> Paris: M. Levy frères, <date normal="1857">1857</date> (Lilly DT333 .F931). <date normal="1980">1980</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00182" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4077,13 +3936,12 @@ using a finding aid. -->
 						</note>
 					</did>
 					<acqinfo>
-						<p>Removed from Jean-Louis Gault, <title render="italic"
-								>L’enfant-fleur,</title> Paris: Éditions Saint-Germain-des-Prés,
+						<p>Removed from Jean-Louis Gault, <title render="italic">L’enfant-fleur,</title> Paris: Éditions Saint-Germain-des-Prés,
 								<date normal="1974">1974</date> (Lilly PQ2667 .A9366 E56), no. 31 of
 							40 numbered copies. <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00183" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4102,11 +3960,10 @@ using a finding aid. -->
 						</note>
 					</did>
 					<acqinfo>
-						<p>Removed from the above title (Lilly PQ2613 .E46H37). <date normal="1974"
-								>1974</date></p>
+						<p>Removed from the above title (Lilly PQ2613 .E46H37). <date normal="1974">1974</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00184" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4127,13 +3984,12 @@ using a finding aid. -->
 						<p>Purchase. <date normal="1977">1977.</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00185" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
 							<persname>Glatigny, Joseph Albert, 1839-1873, poet.</persname> Hotel de
-							France, Menton. To François Coppée. Glatigny refers to <title
-								render="italic">Le Passant,</title> Mme Cruvilli, and his travels
+							France, Menton. To François Coppée. Glatigny refers to <title render="italic">Le Passant,</title> Mme Cruvilli, and his travels
 							from Nice to Menton to Monaco. A.L.S. </unittitle>
 						<physdesc>
 							<extent>2 leaves 21 cm.</extent>
@@ -4145,7 +4001,7 @@ using a finding aid. -->
 							1897). <date normal="1974">1974</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00186" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4161,13 +4017,10 @@ using a finding aid. -->
 						</note>
 					</did>
 					<acqinfo>
-						<p>Removed from Edmond &amp; Jules de Goncourt, <title render="italic"
-								>Manette Salomon.</title> Paris, Librairie Internationale… <date
-								normal="1867">1867</date> (Lilly PQ2261 .M275 copy 2). <date
-								normal="1984">1984</date></p>
+						<p>Removed from Edmond &amp; Jules de Goncourt, <title render="italic">Manette Salomon.</title> Paris, Librairie Internationale… <date normal="1867">1867</date> (Lilly PQ2261 .M275 copy 2). <date normal="1984">1984</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00187" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4185,12 +4038,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Remy de Gourmont, <title render="italic">Promenades
-								littéraires,</title> Paris: Société du Mercure de France, <date
-								normal="1904/1927">1904-1927</date> (Lilly PQ2266 .P965). <date
-								normal="1977">1977</date></p>
+								littéraires,</title> Paris: Société du Mercure de France, <date normal="1904/1927">1904-1927</date> (Lilly PQ2266 .P965). <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00188" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4207,12 +4058,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Remy de Gourmont, <title render="italic">Promenades
-								littéraires,</title> Paris: Société du Mercure de France, <date
-								normal="1904/1927">1904-1927</date> (Lilly PQ2266 .P965). <date
-								normal="1977">1977</date></p>
+								littéraires,</title> Paris: Société du Mercure de France, <date normal="1904/1927">1904-1927</date> (Lilly PQ2266 .P965). <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00189" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4226,12 +4075,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Remy de Gourmont, <title render="italic">Promenades
-								littéraires,</title> Paris: Société du Mercure de France, <date
-								normal="1904/1927">1904-1927</date> (Lilly PQ2266 .P965). <date
-								normal="1977">1977</date></p>
+								littéraires,</title> Paris: Société du Mercure de France, <date normal="1904/1927">1904-1927</date> (Lilly PQ2266 .P965). <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00190" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4249,12 +4096,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p> Removed from Remy de Gourmont, <title render="italic">Promenades
-								littéraires,</title> Paris: Société du Mercure de France, <date
-								normal="1904/1927">1904-1927</date> (Lilly PQ2266 .P965). <date
-								normal="1977">1977</date></p>
+								littéraires,</title> Paris: Société du Mercure de France, <date normal="1904/1927">1904-1927</date> (Lilly PQ2266 .P965). <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00191" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4264,18 +4109,16 @@ using a finding aid. -->
 							<extent>2 p. 18.5 cm.</extent>
 						</physdesc>
 						<note>
-							<p>Published on pages 7-9 of vol. 6, 1926, of Gourmont, <title
-									render="italic">Promenades littéraires.</title></p>
+							<p>Published on pages 7-9 of vol. 6, 1926, of Gourmont, <title render="italic">Promenades littéraires.</title></p>
 						</note>
 					</did>
 					<acqinfo>
-						<p>Bound in preceding pages 7-9 of vol. 6, 1926, of Gourmont, <title
-								render="italic">Promenades littéraires,</title> Paris: Société du
+						<p>Bound in preceding pages 7-9 of vol. 6, 1926, of Gourmont, <title render="italic">Promenades littéraires,</title> Paris: Société du
 							Mercure de France, <date normal="1904/1927">1904-1927</date> (Lilly
 							PQ2266 .P965). <date normal="1977">1977 </date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00192" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4288,12 +4131,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Remy de Gourmont, <title render="italic">Promenades
-								littéraires,</title> Paris: Société du Mercure de France, <date
-								normal="1904/1927">1904-1927</date> (Lilly PQ2266 .P965). <date
-								normal="1977">1977 </date></p>
+								littéraires,</title> Paris: Société du Mercure de France, <date normal="1904/1927">1904-1927</date> (Lilly PQ2266 .P965). <date normal="1977">1977 </date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00193" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4311,12 +4152,11 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Gozlan, <title render="italic">Les emotions de Polydore
-								Marasquin.</title> Paris: M. Levy Frères, <date normal="1857"
-								>1857</date> (Lilly PQ2268 .E54). <date normal="1980">1980
+								Marasquin.</title> Paris: M. Levy Frères, <date normal="1857">1857</date> (Lilly PQ2268 .E54). <date normal="1980">1980
 							</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00194" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4328,12 +4168,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Maurice Grandclaude’s <title render="italic">Étude Critique
-								sur les Livres des Assises de Jérusalem.</title> Paris, Jouve, <date
-								normal="1923">1923</date> (D183 .G7). <date normal="1951"
-								>1951</date></p>
+								sur les Livres des Assises de Jérusalem.</title> Paris, Jouve, <date normal="1923">1923</date> (D183 .G7). <date normal="1951">1951</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00195" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4359,7 +4197,7 @@ using a finding aid. -->
 							.U2J7 1894). <date normal="1977">1977 </date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00196" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4381,7 +4219,7 @@ using a finding aid. -->
 							<date normal="1972">1972</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00197" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4402,7 +4240,7 @@ using a finding aid. -->
 							<date normal="1972">1972 </date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00198" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4423,7 +4261,7 @@ using a finding aid. -->
 							<date normal="1972">1972 </date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00199" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4441,11 +4279,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Hugo, <title render="italic">John Brown.</title> Paris, E.
-							Dentu, <date normal="1861">1861</date> (Lilly PQ2304 .B87). <date
-								normal="1980">1980 </date></p>
+							Dentu, <date normal="1861">1861</date> (Lilly PQ2304 .B87). <date normal="1980">1980 </date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00200" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4458,12 +4295,11 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Hugo, <title render="italic">Les quatre vents de
-								l’esprit</title> … Paris, J. Hetzel, A. Quantin, <date normal="1881"
-								>1881</date> (Lilly PQ2289 .A2). <date normal="1972">1972
+								l’esprit</title> … Paris, J. Hetzel, A. Quantin, <date normal="1881">1881</date> (Lilly PQ2289 .A2). <date normal="1972">1972
 							</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00201" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4482,7 +4318,7 @@ using a finding aid. -->
 								<date normal="1974">1974 </date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00202" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4504,7 +4340,7 @@ using a finding aid. -->
 							.B25S26). <date normal="1985">1985</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00203" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4521,12 +4357,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p> Removed from Jammes, <title render="italic">Feuilles dans le
-								vent.</title> Paris: Mercure de France, <date normal="1913"
-								>1913</date> (Lilly PQ2619 .A5 F42 copy 1) <date normal="1981"
-								>1981</date></p>
+								vent.</title> Paris: Mercure de France, <date normal="1913">1913</date> (Lilly PQ2619 .A5 F42 copy 1) <date normal="1981">1981</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00204" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4537,18 +4371,15 @@ using a finding aid. -->
 						<note>
 							<p>Contents: 1) 4 heures, 10 lines; 2) Instantanée, 8 lines; 3) un coup
 								de pied [first line], 8 lines; 4) Un tiroir ouvert, 8 lines.
-								Published in Jacques Jandot, <title render="italic"
-									>Instantanées.</title></p>
+								Published in Jacques Jandot, <title render="italic">Instantanées.</title></p>
 						</note>
 					</did>
 					<acqinfo>
 						<p>Removed from Jacques Jandot, <title render="italic">Instantanées,</title>
-							[Paris]: Librairie Saint-Germain-des-Prés, <date normal="1974"
-								>1974</date> (Lilly PQ2670 .A55 I58) no. 36 of 40 copies. <date
-								normal="1977">1977 </date></p>
+							[Paris]: Librairie Saint-Germain-des-Prés, <date normal="1974">1974</date> (Lilly PQ2670 .A55 I58) no. 36 of 40 copies. <date normal="1977">1977 </date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00205" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4569,7 +4400,7 @@ using a finding aid. -->
 							J25). <date normal="1977">1977 </date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00206" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4586,12 +4417,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p> Removed from Jacques Lacretelle, <title render="italic">Le vie inquiète
-								de Jean Hermelin,</title> Paris: Bernard Grasset, <date
-								normal="1920">1920</date> (Lilly PQ2623 .A216 V65). <date
-								normal="1977">1977</date></p>
+								de Jean Hermelin,</title> Paris: Bernard Grasset, <date normal="1920">1920</date> (Lilly PQ2623 .A216 V65). <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00207" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4608,12 +4437,10 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Jéhan Van Langhenhoven, <title render="italic">Nuit
-								dérivée,</title> Paris: Éditions Saint-Germain-des-Prés, <date
-								normal="1974">1974</date> (Lilly PQ2672 .A28 N96). <date
-								normal="1977">1977 </date></p>
+								dérivée,</title> Paris: Éditions Saint-Germain-des-Prés, <date normal="1974">1974</date> (Lilly PQ2672 .A28 N96). <date normal="1977">1977 </date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00208" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4635,7 +4462,7 @@ using a finding aid. -->
 							(Lilly PQ2623 .A679 Q5). <date normal="1977">1977 </date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00209" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4652,7 +4479,7 @@ using a finding aid. -->
 						<p>Source unknown. <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00210" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4664,20 +4491,18 @@ using a finding aid. -->
 						</physdesc>
 						<note>
 							<p>Bever founded <title render="italic">L’Aube</title> in 1895 with
-								Pierre Guédy according to Paul Leautand in <title render="italic"
-									>Adolphe Van Bever,</title> Les Amis D’Edouard, No. 114 1927,
+								Pierre Guédy according to Paul Leautand in <title render="italic">Adolphe Van Bever,</title> Les Amis D’Edouard, No. 114 1927,
 								(Lilly PQ2623 .E14 A75) on page 15. </p>
 						</note>
 					</did>
 					<acqinfo>
 						<p>Mounted in Maeterlinck, <title render="italic">Le Trésor des
-								Humbles,</title> Paris: Société du Mercure de France, <date
-								normal="1896">1896</date> (Lilly PQ2625 .A5 T79) which is also
+								Humbles,</title> Paris: Société du Mercure de France, <date normal="1896">1896</date> (Lilly PQ2625 .A5 T79) which is also
 							inscribed by Maeterlinck, to Van Bever. <date normal="1985">1985
 							</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00211" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4694,12 +4519,11 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Maupassant, <title render="italic">La Maison
-								Tellier,</title> Paris, Victor Havard, <date normal="1881"
-								>1881</date> (Lilly PQ2349 .M232). <date normal="1975">1975
+								Tellier,</title> Paris, Victor Havard, <date normal="1881">1881</date> (Lilly PQ2349 .M232). <date normal="1975">1975
 							</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00212" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4715,7 +4539,7 @@ using a finding aid. -->
 							.C2 1846). <date normal="1973">1973 </date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00213" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4735,7 +4559,7 @@ using a finding aid. -->
 						<p> Purchase. <date normal="1974">1974</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00214" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4755,7 +4579,7 @@ using a finding aid. -->
 								<date normal="1980">1980</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00215" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4766,14 +4590,12 @@ using a finding aid. -->
 						</physdesc>
 					</did>
 					<acqinfo>
-						<p>Inscribed in ink on paper cover of the author’s <title render="italic"
-								>Poetes &amp; bibliophiles: les devises des vieux
-							poetes</title>… Paris: d. Morgand et C. Fatout, <date normal="1879"
-								>1879</date> (Lilly PN6312 .M929). <date normal="1976">1976
+						<p>Inscribed in ink on paper cover of the author’s <title render="italic">Poetes &amp; bibliophiles: les devises des vieux
+							poetes</title>… Paris: d. Morgand et C. Fatout, <date normal="1879">1879</date> (Lilly PN6312 .M929). <date normal="1976">1976
 							</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00216" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate> [Notes
@@ -4798,7 +4620,7 @@ using a finding aid. -->
 							1877). <date normal="1984">1984 </date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00217" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4815,7 +4637,7 @@ using a finding aid. -->
 							</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00218" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4832,17 +4654,15 @@ using a finding aid. -->
 					<acqinfo>
 						<p>Removed from Ponsard. <title render="italic">L’Honneur et
 								l’argent:</title> Comédie en cinq actes et en vers. Paris. Lévy
-							frères, <date normal="1853">1853</date> (Lilly PQ2382 .P7 H77) <date
-								normal="1994">1994 </date></p>
+							frères, <date normal="1853">1853</date> (Lilly PQ2382 .P7 H77) <date normal="1994">1994 </date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00219" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
 							<persname>Ramuz, Charles Ferdinand, 1878-1947, author.</persname> …il
-							faisait trés froid, ce soir-là [first line of leaf 86 from Ramuz, <emph
-								render="italic">La guerre dans le haut-pays</emph>] A.D.S. </unittitle>
+							faisait trés froid, ce soir-là [first line of leaf 86 from Ramuz, <emph render="italic">La guerre dans le haut-pays</emph>] A.D.S. </unittitle>
 						<physdesc>
 							<extent>1 leaf 21.5 cm.</extent>
 						</physdesc>
@@ -4852,12 +4672,11 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Ramuz, <title render="italic">La guerre dans le
-								haut-pays.</title> Lausanne: C. Tarin, <date normal="1915"
-								>1915</date> (Lilly PQ2635 .A35G94). <date normal="1977">1977
+								haut-pays.</title> Lausanne: C. Tarin, <date normal="1915">1915</date> (Lilly PQ2635 .A35G94). <date normal="1977">1977
 							</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00220" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4877,7 +4696,7 @@ using a finding aid. -->
 							PQ2386 .R37H52). <date normal="1978">1978 </date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00221" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4895,12 +4714,11 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Jean Richepin, <title render="italic">La chanson de
-								gueux,</title> Paris: Librarie Illustrée, <date normal="1876"
-								>1876</date> (Lilly PQ2387 .R4 C5). <date normal="1977">1977
+								gueux,</title> Paris: Librarie Illustrée, <date normal="1876">1876</date> (Lilly PQ2387 .R4 C5). <date normal="1977">1977
 							</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00222" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4919,7 +4737,7 @@ using a finding aid. -->
 						<p>Purchase. <date normal="1974">1974</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00223" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4939,7 +4757,7 @@ using a finding aid. -->
 							PQ2635 .O9618 H82). <date normal="1977">1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00224" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4958,7 +4776,7 @@ using a finding aid. -->
 						<p>Purchase. <date>1977</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00225" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4974,7 +4792,7 @@ using a finding aid. -->
 								<date normal="1981">1981</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00226" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -4998,7 +4816,7 @@ using a finding aid. -->
 							.S4Z48). <date normal="1981">1981 </date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00227" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -5018,7 +4836,7 @@ using a finding aid. -->
 							.S4Z48). <date normal="1981">1981 </date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00228" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -5039,7 +4857,7 @@ using a finding aid. -->
 						<p>Purchase. <date normal="1972">1972</date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00229" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -5063,7 +4881,7 @@ using a finding aid. -->
 							M1510 .H772A5). <date normal="1975">1975 </date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00230" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
@@ -5078,12 +4896,11 @@ using a finding aid. -->
 					</did>
 					<acqinfo>
 						<p>Removed from Jean Claude Villain, <title render="italic">Au creux de
-								l’oreille,</title> Paris: Librairie Saint-Germain-des-Prés, <date
-								normal="1974">1974</date> (Lilly PQ2682 .I38 A88), no. 26 of 40
+								l’oreille,</title> Paris: Librairie Saint-Germain-des-Prés, <date normal="1974">1974</date> (Lilly PQ2682 .I38 A88), no. 26 of 40
 							numberd copies. <date normal="1977">1977 </date></p>
 					</acqinfo>
 				</c02>
-				<c02 level="file">
+				<c02 id="VAA1255-00231" level="file">
 					<did>
 						<unittitle>
 							<unitdate normal="1750/1977" type="inclusive">undated.</unitdate>
