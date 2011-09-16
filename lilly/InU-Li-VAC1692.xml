@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAC1692">InU-Li-VAC1692</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Tynan, Kenneth mss., <date normal="1999/2001"
+                        >1939-2001</date></titleproper>
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2011" type="publication">© 2011</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2011">© 2011</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and
+                pasting.<lb/>date of source: <date normal="2011" type="source">2011</date>
+                <lb/>Finding aid encoded by Danielle Emerling, Lilly Library, Indiana University,
+                    <date normal="2011-09-06">September 6, 2011</date>
+            </creation>
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2011-09-06"/>
+                <item>Encoded finding aid begun.</item>
+            </change>
+        </revisiondesc>
+    </eadheader>
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Tynan, Kenneth, 1927-1980</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Tynan, Kenneth mss., </unittitle>
+            <unitdate encodinganalog="245$f" normal="1939/2001" type="inclusive"
+                >1939-2001</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2744</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>29 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">Consists of manuscript diaries of
+                director and theater personality Kenneth Tynan (1927-1980).</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+            <p>Director and theater critic Kenneth Tynan, born in Birmingham, England,
+                stuttered as a child but was highly precocious, and was already keeping a diary by
+                the age of six. A brilliant pupil at Kind Edward's School in Birmingham, Tynan won a
+                scholarship to Oxford at the end of WWII, where he became an intellectual and social
+                leader among the undergraduates. Noted for his flamboyant dress and extravagant
+                style, he wrote and edited Oxford college magazines, and was tutored by C. S. Lewis,
+                for whom he retained a life-long admiration.</p>
+            <p>Tynan's active career as a theater critic began in 1952, when he was hired by the
+                    <emph render="italic">London Evening Standard</emph>. Two years later he left
+                for <emph render="italic">The Observer</emph> and quickly rose to prominence,
+                championing the new realism in the theater of "The Angry Young Men" and playwrights
+                such as Samuel Beckett. In the late Fifties he became known in the United States
+                through a series of reviews in <emph render="italic">The New Yorker</emph>. In 1963
+                he was appointed Literary Manager of the British Royal National Theatre, where he
+                established a global reputation. Controversy marked Tynan's later career, and his
+                battles against censorship led to such works as the erotic revue <emph
+                    render="italic">Oh! Calcutta!</emph>, which became one of the most successful
+                theatre hits of all time. He remained at the National Theatre until 1973. From the
+                mid-1970s on, he worked on a series of projects exploring sexual themes, including
+                sadomasochism. Tynan died in Santa Monica, California in 1980 at the age of 53. The
+                publication of his diaries in 2001 led to renewed controversy due to their frank
+                discussion of sexuality and his personal life. The editor of the diaries noted in
+                his introduction that passages were omitted that the publishers thought might lead
+                to charges of slander. </p>
+        </bioghist>
+
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The collection consists of manuscript diaries of director and theater personality
+                Kenneth Tynan. The first series, Diaries 1970-1980, consists of twenty-five
+                individually bound handwritten diaries chronicling the last ten years of Tynan's
+                life, 1970-1980. The second series, Earlier Diaries, includes Tynan's unpublished
+                volumes from the years 1939 (when he was twelve) and 1941 (at the age of fourteen,
+                during the Second World War) and offers insights into this early period of his life.
+                The final series, Writings, features a proof typescript of The Diaries of Kenneth
+                Tynan, a book covering the aforementioned 1970-1980 period, edited by John Lahr, and
+                published by Bloomsbury in 2001. </p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/tynan+kenneth+1927+1980+diaries{su}">
+                            <persname encodinganalog="610" source="lcnaf" role="subject">Tynan,
+                                Kenneth, 1927-1980 --Diaries.</persname>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/theater+critics+diaries{su}">
+                            <subject encodinganalog="650" source="lcsh">Theater critics
+                                --Diaries.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/diaries{su}">
+                            <genreform encodinganalog="655" source="lcsh">Diaries.</genreform>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="110" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+        <descgrp>
+            <head>Administrative Information</head>
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 2011</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Tynan, Kenneth mss., Lilly Library, Indiana University, Bloomington,
+                    Indiana.</p>
+            </prefercite>
+
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Craig Simpson.</p>
+                <p>Completed in <date normal="2011">2011</date>.</p>
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAC1692-00001" level="series">
+                <did>
+                    <container label="Box" type="Box">1</container>
+                    <unittitle>Diaries, <unitdate normal="1970/1980" type="inclusive"
+                            >1970-1980</unitdate></unittitle>
+                </did>
+                <note>
+                    <p>Arranged chronologically and numbered 1-25. Note: diary entries have been
+                        written occasionally out of sequence within the individual volumes.</p>
+                </note>
+
+                <c02 id="VAC1692-00002" level="file">
+                    <did>
+                        <unittitle>No. 1-2: <unitdate normal="1970-11/1971-07-25" type="inclusive">
+                                1970, November-1971, July 25</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1692-00003" level="file">
+                    <did>
+                        <unittitle>No. 3-4: <unitdate normal="1971-08/1972-04-12" type="inclusive"
+                                >1971, August 3-1972, April 12</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1692-00004" level="file">
+                    <did>
+                        <unittitle>No. 5-6: <unitdate normal="1972-05-05/1973-02-06"
+                                type="inclusive">1972, May 5-1973, February 6</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1692-00005" level="file">
+                    <did>
+                        <unittitle>No. 7-8: <unitdate normal="1973-02-13/1973-09-11"
+                                type="inclusive">1973, February 13-September
+                            11</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1692-00006" level="file">
+                    <did>
+                        <unittitle>No. 9-10: <unitdate normal="1973-10-10/1974-02-23"
+                                type="inclusive">1973, October 10-1974, February
+                            23</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1692-00007" level="file">
+                    <did>
+                        <unittitle>No. 11-12: <unitdate normal="1974-04-03/1974-10-05"
+                                type="inclusive">1974, April 3-October 5</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1692-00008" level="file">
+                    <did>
+                        <unittitle>No. 13-14: <unitdate normal="1974-10-16/1975-02-09"
+                                type="inclusive">1974, October 16-1975, February
+                            9</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1692-00009" level="file">
+                    <did>
+                        <unittitle>No. 15-16: <unitdate normal="1975-02-10/1975-08-11"
+                                type="inclusive">1975, February 10-August 11</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1692-00010" level="file">
+                    <did>
+                        <unittitle>No. 17-18: <unitdate normal="1975-08-13/1975-12-21"
+                                type="inclusive">1975, August 13-December 21</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1692-00011" level="file">
+                    <did>
+                        <unittitle>No. 19-20: <unitdate normal="1975-12-31/1976-06-02"
+                                type="inclusive">1975, December 31-1976, June
+                            2</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1692-00012" level="file">
+                    <did>
+                        <unittitle>No. 21-22: <unitdate normal="1976-06-06/1977-06-05"
+                                type="inclusive">1976, June 6-1977, June 5</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1692-00013" level="file">
+                    <did>
+                        <unittitle>No. 23-24: <unitdate normal="1977-01-16/1979-01-03"
+                                type="inclusive">1977, January 16-1979, January
+                            3</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1692-00014" level="file">
+                    <did>
+                        <unittitle>No. 25: <unitdate normal="1979-08-13/1980-05-05" type="inclusive"
+                                >1979, August 13-1980, May 5</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAC1692-00015" level="series">
+                <did>
+                    <unittitle>Earlier Diaries</unittitle>
+                </did>
+                <c02 id="VAC1692-00016" level="file">
+                    <did>
+                        <unittitle>Diaries, bound: <unitdate normal="1939">1939,
+                                </unitdate><unitdate normal="1941">1941</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1692-00017" level="file">
+                    <did>
+                        <unittitle>Diary, fragment, <unitdate normal="1961-07-09/1961-10-28"
+                                type="inclusive">1961, July 9-October 28</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAC1692-00018" level="series">
+                <did>
+                    <unittitle>Writings</unittitle>
+                </did>
+                <c02 id="VAC1692-00019" level="otherlevel">
+                    <did>
+                        <unittitle>Manuscript, <emph render="italic">The Diaries of Kenneth
+                                Tynan</emph>, edited by John Lahr <unitdate normal="2001"
+                                >(2001)</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAC1692-00020" level="file">
+                        <did>
+                            <unittitle>Proof typescript, "Journal of Kenneth Tynan," pp. 1-150,
+                                    <unitdate normal="1939/2001" type="inclusive"
+                                >undated</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC1692-00021" level="file">
+                        <did>
+                            <unittitle>Proof typescript, "Journal of Kenneth Tynan," pp. 151-295,
+                                    <unitdate normal="1939/2001" type="inclusive"
+                                >undated</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
