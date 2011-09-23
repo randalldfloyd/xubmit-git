@@ -1,0 +1,1165 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAC1693">InU-Li-VAC1693</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Eisenberg mss., <date normal="1964/2006">ca.
+                        1964-2006</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2011" type="publication">© 2011</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2011">© 2011</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and
+                pasting.<lb/>date of source: <date normal="2011" type="source">2011</date>
+                <lb/>Finding aid encoded by Danielle Emerling, Lilly Library, Indiana University,
+                    <date normal="2011-09-02">September 2, 2011</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2011-09-06"/>
+                <item>Encoded finding aid begun.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Eisenberg, Deborah</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Eisenberg mss., </unittitle>
+            <unitdate encodinganalog="245$f" normal="1964/2006" type="inclusive"
+                >1964-2006</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2689</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>1,000 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">Consists of manuscript drafts, notes,
+                galley proofs, correspondence and other materials pertaining to author and
+                playwright Deborah Eisenberg (born 1945).</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+            <p>Deborah Eisenberg (born 1945) is the author of four highly-regarded collections of
+                stories: <emph render="italic">Transactions in a Foreign Currency</emph> (1986),
+                    <emph render="italic">Under the 82nd Airborne</emph> (1992), <emph
+                    render="italic">All Around Atlantis</emph> (1997), and <emph render="italic"
+                    >Twilight of the Superheroes</emph> (2006). Her first two story collections were
+                republished in one volume as <emph render="italic">The Work (So Far) of Deborah
+                    Eisenberg</emph> (1997). She has also written a play, <emph render="italic"
+                    >Pastorale</emph>, which was produced at Second Stage in New York City in 1982.
+                Eisenberg was awarded the Rea Award for the Short Story in 2000, a MacArthur
+                Fellowship in 2009, and the PEN/Faulkner Award for Fiction in 2011 (for <emph
+                    render="italic">The Collected Stories of Deborah Eisenberg</emph> (2010), a
+                compendium of her four previous collections). Her other honors include a Whiting
+                Writers' Award, a Guggenheim Fellowship, and three O. Henry Awards. She has written
+                for such magazines as <emph render="italic">The New York Review of Books</emph>,
+                    <emph render="italic">The New Yorker</emph>, and <emph render="italic">The Yale
+                    Review</emph>. Eisenberg taught creative writing at the University of Virginia
+                from 1994-2011, and announced in July 2011 that she will be joining the MFA Writing
+                Program faculty at Columbia University.</p>
+        </bioghist>
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Writings; II.
+                Correspondence; III. Biographical Materials; IV. Business Records; V.
+                Miscellaneous.</p>
+        </arrangement>
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The collection consists of manuscript drafts, notes, galley proofs, correspondence and
+                other materials pertaining to author and playwright Deborah Eisenberg. Writings
+                include notes, drafts, page proofs, and clippings related to Eisenberg's short
+                stories and story collections. Correspondents include James Atlas, Richard Avedon,
+                Ann Beattie, L. Rust Hills, Angela Himsel, Verity Lambert, Craig Lucas, Judith
+                Martin, Gregory Mosher, Michael Naumann, Ellen Neuwald, Nina Rosenwald, and Jason
+                Shinder.</p>
+            <p>Biographical Materials include a Woodstock Country School 1964 graduation booklet,
+                alumni correspondence and directory. Business Records pertain to publishing
+                contracts, readings, writing offers, and the <emph render="italic">Three Smiling
+                    Fools</emph> literary newsletter. Miscellaneous contains notes, clippings and
+                print-outs of artwork by Jennifer Bartlett.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/eisenberg+deborah+correspondence{su}">
+                            <persname encodinganalog="600$a" source="lcnaf" role="subject"
+                                >Eisenberg, Deborah --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/atlas+james">
+                            <persname encodinganalog="700$a" source="lcnaf" role="subject">Atlas,
+                                James.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/avedon+richard">
+                            <persname encodinganalog="700$a" source="lcnaf" role="subject">Avedon,
+                                Richard.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/beattie+ann">
+                            <persname encodinganalog="700$a" source="lcnaf" role="subject">Beattie,
+                                Ann.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/hills+l+rust">
+                            <persname encodinganalog="700$a" source="lcnaf" role="subject">Hills, L.
+                                Rust.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/himsel+angela">
+                            <persname encodinganalog="700$a" source="lcnaf" role="subject">Himsel,
+                                Angela.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/lambert+verity">
+                            <persname encodinganalog="700$a" source="lcnaf" role="subject">Lambert,
+                                Verity.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/lucas+craig">
+                            <persname encodinganalog="700$a" source="lcnaf" role="subject">Lucas,
+                                Craig.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/martin+judith">
+                            <persname encodinganalog="700$a" source="lcnaf" role="subject">Martin,
+                                Judith, 1938.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/mosher+gregory">
+                            <persname encodinganalog="700$a" source="lcnaf" role="subject">Mosher,
+                                Gregory.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/naumann+michael">
+                            <persname encodinganalog="700$a" source="lcnaf" role="subject">Naumann,
+                                Michael, 1941-.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/neuwald+ellen">
+                            <persname encodinganalog="700$a" source="lcnaf" role="subject">Neuwald,
+                                Ellen.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/rosenwald+nina">
+                            <persname encodinganalog="700$a" source="lcnaf" role="subject"
+                                >Rosenwald, Nina.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/shinder+jason">
+                            <persname encodinganalog="700$a" source="lcnaf" role="subject">Shinder,
+                                Jason, 1955-2008.</persname>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/authors+american+correspondence{su}">
+                            <subject encodinganalog="650" source="lcsh">Authors, American
+                                --Correspondence.</subject>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="110" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 2009</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Eisenberg mss., Lilly Library, Indiana University, Bloomington,
+                    Indiana.</p>
+            </prefercite>
+
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Danielle Emerling.</p>
+                <p>Completed in <date normal="2011">2011</date>.</p>
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAC1693-00001" level="series">
+                <did>
+                    <!-- optional -->
+                    <container label="Box" type="Box">1</container>
+                    <unittitle>Writings</unittitle>
+                </did>
+                <note>
+                    <p>Arranged alphabetically by title.</p>
+                </note>
+                <c02 id="VAC1693-00002" level="file">
+                    <did>
+                        <unittitle>"Across the Lake," drafts, clipping, <unitdate normal="1991/1993"
+                                type="inclusive">1991-1993</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00003" level="file">
+                    <did>
+                        <unittitle><emph render="italic">Air: 24 Hours</emph>, research materials,
+                                <unitdate normal="1964/2006" type="inclusive"/>undated</unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00004" level="file">
+                    <did>
+                        <unittitle><emph render="italic">Air: 24 Hours</emph>, draft, <unitdate
+                                normal="1992-03-15" type="inclusive">1992, March
+                            15</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00005" level="file">
+                    <did>
+                        <unittitle><emph render="italic">Air: 24 Hours</emph>, drafts, <unitdate
+                                normal="1993">1993, </unitdate><unitdate normal="1964/2006"
+                                type="inclusive">undated</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00006" level="file">
+                    <did>
+                        <unittitle><emph render="italic">Air: 24 Hours</emph>, art work, photographs
+                            and slides, <unitdate normal="1991/1992" type="inclusive"
+                                >1991-1992</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00007" level="file">
+                    <did>
+                        <unittitle><emph render="italic">All Around Atlantis</emph>, drafts,
+                                <unitdate normal="1996">1996</unitdate></unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00008" level="file">
+                    <did>
+                        <unittitle><emph render="italic">All Around Atlantis</emph>, page proofs,
+                                <unitdate normal="1997-04-08">1997, April 8</unitdate>
+                        </unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00009" level="file">
+                    <did>
+                        <container label="Box" type="Box">2</container>
+                        <unittitle><emph render="italic">Aperture Magazine</emph> essay, drafts,
+                                <unitdate normal="1987">1987</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00010" level="file">
+                    <did>
+                        <unittitle><emph render="italic">"Ashes and Diamonds</emph>," drafts,
+                            clippings, <unitdate normal="1995/2000" type="inclusive"
+                                >1995-2000</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00011" level="file">
+                    <did>
+                        <unittitle>Book Reviews, drafts, clippings, <unitdate normal="1999"
+                                >1999</unitdate>, <unitdate normal="1964/2006" type="inclusive"
+                                >undated</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00012" level="file">
+                    <did>
+                        <unittitle>"Broken Glass," draft, <unitdate normal="1985"
+                            >1985</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00013" level="file">
+                    <did>
+                        <unittitle>"A Cautionary Tale," drafts, proofs, <unitdate
+                                normal="1985-12/1986-01" type="inclusive">1985, December-1986,
+                                January</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00014" level="file">
+                    <did>
+                        <unittitle>"A Cautionary Tale," clippings, <unitdate normal="1987-03-23"
+                                >1987, March 23</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00015" level="file">
+                    <did>
+                        <unittitle>"The Custodian," drafts, <unitdate normal="1990">1990</unitdate>,
+                                <unitdate normal="1964/2006" type="inclusive"
+                            >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00016" level="file">
+                    <did>
+                        <unittitle>"The Custodian," proofs, clippings, <unitdate normal="1989"
+                                >1989</unitdate>, <unitdate normal="1990"
+                            >1990</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00017" level="file">
+                    <did>
+                        <unittitle>"Days," drafts, <unitdate normal="1964/2006" type="inclusive"
+                                >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00018" level="file">
+                    <did>
+                        <unittitle>"Days" screenplay, draft, <unitdate normal="1964/2006"
+                                type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00019" level="file">
+                    <did>
+                        <unittitle>"Diana Michener," draft, clipping, <unitdate normal="1996-03"
+                                type="inclusive">1996, March</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00020" level="file">
+                    <did>
+                        <unittitle>"The <emph render="italic">Essays</emph> of Montaigne," drafts,
+                                <unitdate normal="1964/2006" type="inclusive"
+                            >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00021" level="file">
+                    <did>
+                        <unittitle>"The Flaw in the Design," notebook, draft, <unitdate
+                                normal="2005">2005</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00022" level="file">
+                    <did>
+                        <unittitle>"The Flaw in the Design," drafts, 2005, <unitdate
+                                normal="1964/2006" type="inclusive">undated</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00023" level="file">
+                    <did>
+                        <unittitle>"Flotsam," page proofs, <unitdate normal="1964/2006"
+                                type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00024" level="file">
+                    <did>
+                        <unittitle>"Francine Prose," drafts, clipping, <unitdate normal="1993/1997"
+                                type="inclusive">1993-1997</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00025" level="file">
+                    <did>
+                        <unittitle>"The Girl Who Left Her Sock on the Floor," drafts, <unitdate
+                                normal="1994">1994</unitdate>, <unitdate normal="1964/2006"
+                                type="inclusive">undated</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00026" level="file">
+                    <did>
+                        <unittitle>"The Girl Who Left Her Sock on the Floor," page proofs, <unitdate
+                                normal="1994-05-04">1994, May 4</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00027" level="file">
+                    <did>
+                        <unittitle>"The Girl Who Left Her Sock on the Floor," clipping, <unitdate
+                                normal="1994-12-05">1994, Dec. 5</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00028" level="file">
+                    <did>
+                        <unittitle>"Holy Week," drafts, <unitdate normal="1990/1991"
+                                type="inclusive">1990-1991</unitdate>, <unitdate normal="1964/2006"
+                                type="inclusive">undated</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+
+                <c02 id="VAC1693-00029" level="file">
+                    <did>
+                        <container label="Box" type="Box">3</container>
+                        <unittitle>"In a Trance of Self," research materials, <unitdate
+                                normal="1997">1997</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00030" level="file">
+                    <did>
+                        <unittitle>"In a Trance of Self," drafts, <unitdate normal="1964/2006"
+                                type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00031" level="file">
+                    <did>
+                        <unittitle>"In a Trance of Self," page proofs, clipping, <unitdate
+                                normal="1997">1997</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00032" level="file">
+                    <did>
+                        <unittitle>"In the Station," notebook, <unitdate normal="1964/2006"
+                                type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00033" level="file">
+                    <did>
+                        <unittitle>"In the Station," drafts, <unitdate normal="1990"
+                            >1990</unitdate>, <unitdate normal="1964/2006" type="inclusive"
+                                >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00034" level="file">
+                    <did>
+                        <unittitle>"James Ivory and Ismail Merchant tell d. eisenberg all about
+                            their Wild Party with Raquel," drafts, clipping, <unitdate normal="1975"
+                                >1975</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00035" level="file">
+                    <did>
+                        <unittitle>"Katherine Mansfield," drafts, <unitdate normal="1992"
+                                >1992</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00036" level="file">
+                    <did>
+                        <unittitle><emph render="italic">"The Key</emph> by Junichiro Tanizaki,"
+                            drafts, <unitdate normal="1964/2006" type="inclusive"
+                            >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00037" level="file">
+                    <did>
+                        <unittitle>"Letter From New York," drafts, 1987, <unitdate
+                                normal="1964/2006" type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00038" level="file">
+                    <did>
+                        <unittitle>"Like It or Not," Notes, drafts, clippings, <unitdate
+                                normal="1998/2001" type="inclusive">1998-2001</unitdate>, <unitdate
+                                normal="1964/2006" type="inclusive">undated</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00039" level="file">
+                    <did>
+                        <unittitle>"The List," clipping, <unitdate normal="2003-02-14">2003,
+                                February 14</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00040" level="file">
+                    <did>
+                        <unittitle><emph render="italic">"Madness and Civilization: A History of
+                                Insanity in the Age of Reason</emph> by Michel Foucault," Drafts,
+                                <unitdate normal="1964/2006">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00041" level="file">
+                    <did>
+                        <unittitle>"Mary Antin," clipping, <unitdate normal="2003-12-28">2003,
+                                December 28</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00042" level="file">
+                    <did>
+                        <unittitle>"Mermaids," drafts, <unitdate normal="1994">1994</unitdate>,
+                                <unitdate normal="1964/2006" type="inclusive"
+                            >undated</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00043" level="file">
+                    <did>
+                        <unittitle><emph render="italic">"The Mill on the Floss</emph> by George
+                            Eliot," drafts, <unitdate normal="1964/2006"
+                            >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00044" level="file">
+                    <did>
+                        <unittitle>"Mrs. Duke's Millions," typescript, <unitdate normal="1964/2006"
+                                type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00045" level="file">
+                    <did>
+                        <unittitle>"Narrow Pieties," draft, clipping, <unitdate normal="1989"
+                                >1989</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00046" level="file">
+                    <did>
+                        <unittitle><emph render="italic">"The Night is Dark and I am Far From
+                                Home</emph> by Jonathan Kozol," drafts, <unitdate normal="1964/2006"
+                                type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00047" level="file">
+                    <did>
+                        <unittitle>"On <emph render="italic">Mrs. Dalloway</emph>," drafts, page
+                            proofs, <unitdate normal="2003">2003</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00048" level="file">
+                    <did>
+                        <unittitle><emph render="italic">Pastorale</emph>, drafts, clippings,
+                                <unitdate normal="1981-01-06">1981, January 6,</unitdate>
+                            <unitdate normal="1964/2006" type="inclusive"
+                            >undated</unitdate></unittitle>
+                        <physdesc>(5 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00049" level="file">
+                    <did>
+                        <unittitle>"The Poetry of George Herbert," drafts, <unitdate
+                                normal="1964/2006" type="inclusive"/>undated </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00050" level="file">
+                    <did>
+                        <unittitle>"Presents," notebooks, draft, clipping, <unitdate normal="1987"
+                                >1987</unitdate>, <unitdate normal="1964/2006" type="inclusive"
+                            />undated (2 folders)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00051" level="file">
+                    <did>
+                        <unittitle><emph render="italic">"The Private Language Problem – A
+                                Philosophical Dialogue</emph> by John Turk Saunders and Donald F.
+                            Henze," drafts, <unitdate normal="1964/2006" type="inclusive"/>undated
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00052" level="file">
+                    <did>
+                        <container label="Box" type="Box">4</container>
+                        <unittitle>"Rafe's Coat," drafts, <unitdate normal="1964/2006"
+                                type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00053" level="file">
+                    <did>
+                        <unittitle>"Resistance," drafts, page proofs, clippings, <unitdate
+                                normal="1999">1999</unitdate>, <unitdate normal="1964/2006"
+                                type="inclusive">undated</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00054" level="file">
+                    <did>
+                        <unittitle>"Revenge of the Dinosaurs," notes, drafts, proofs, <unitdate
+                                normal="2003">2003</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00055" level="file">
+                    <did>
+                        <unittitle>"The Robbery," drafts, clippings, <unitdate normal="1989"
+                                >1989</unitdate>, <unitdate normal="1964/2006" type="inclusive"
+                                >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00056" level="file">
+                    <did>
+                        <unittitle>"Rosie Gets a Soul," drafts, <unitdate normal="1995"
+                                >1995</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00057" level="file">
+                    <did>
+                        <unittitle>"Rosie Gets a Soul," page proofs, <unitdate normal="1996-04-04"
+                                >1996, April 4</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00058" level="file">
+                    <did>
+                        <unittitle>"Someone to Talk To," drafts, page proofs, clipping, <unitdate
+                                normal="1992/1993" type="inclusive">1992-1993</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00059" level="file">
+                    <did>
+                        <unittitle>"Some Other, Better Otto," notes, drafts, proofs, <unitdate
+                                normal="2001/2001" type="inclusive">2001–2002</unitdate>
+                        </unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00060" level="file">
+                    <did>
+                        <unittitle>"Summer Before the Election, Fragments From a Diary," draft,
+                                <unitdate normal="2004-07">2004, July</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00061" level="file">
+                    <did>
+                        <unittitle>"Symbol Systems," typescript, <unitdate normal="1969"
+                                >1969</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00062" level="file">
+                    <did>
+                        <unittitle>"Tlaloc's Paradise," drafts, clipping, <unitdate normal="1992"
+                                >1992</unitdate>, <unitdate normal="1964/2006" type="inclusive"
+                                >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00063" level="file">
+                    <did>
+                        <container label="Box" type="Box">5</container>
+                        <unittitle>"Transactions in a Foreign Currency," drafts, <unitdate
+                                normal="1985">1985</unitdate>, <unitdate normal="1964/2006"
+                                type="inclusive">undated</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00064" level="file">
+                    <did>
+                        <unittitle><emph render="italic">Transactions in a Foreign Currency</emph>,
+                            proofs, <unitdate normal="1985/1986" type="inclusive"
+                                >1985-1986</unitdate></unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00065" level="file">
+                    <did>
+                        <unittitle>"Twilight of the Superheroes," notebook, drafts, <unitdate
+                                normal="2002/2004" type="inclusive">2002-2004</unitdate>, <unitdate
+                                normal="1964/2006" type="inclusive">undated</unitdate></unittitle>
+                        <physdesc>(5 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00066" level="file">
+                    <did>
+                        <unittitle><emph render="italic">Twilight of the Superheroes</emph>, proofs,
+                                <unitdate normal="2005-05-03">2005, May 3</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00067" level="file">
+                    <did>
+                        <unittitle><emph render="italic">Twilight of the Superheroes</emph>, proofs,
+                                <unitdate normal="2005-08-09">2005, August 9</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00068" level="file">
+                    <did>
+                        <container label="Box" type="Box">6</container>
+                        <unittitle>"Under the 82nd Airborne," drafts, proofs, <unitdate
+                                normal="1988">1988</unitdate>, <unitdate normal="1964/2006"
+                                >undated</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00069" level="file">
+                    <did>
+                        <unittitle><emph render="italic">Under the 82nd Airborne</emph>, proofs,
+                                <unitdate normal="1991">1991</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00070" level="file">
+                    <did>
+                        <unittitle>Untitled Craig Lucas interview with Deborah Eisenberg, drafts,
+                                <unitdate normal="1989">1989</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00071" level="file">
+                    <did>
+                        <unittitle>Untitled, drafts, <unitdate normal="1996"
+                            >1996</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00072" level="file">
+                    <did>
+                        <unittitle>Untitled, drafts, <unitdate normal="1999"
+                            >1999</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00073" level="file">
+                    <did>
+                        <unittitle>Untitled, drafts, <unitdate normal="2001-09-26/2001-10-29"
+                                type="inclusive">2001, September 26-October
+                            29</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00074" level="file">
+                    <did>
+                        <unittitle>Untitled, drafts, <unitdate normal="2003-09-18">2003, September
+                                18</unitdate>, <unitdate normal="1964/2006" type="inclusive"
+                                >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00075" level="file">
+                    <did>
+                        <unittitle>Untitled, drafts, <unitdate normal="1964/2006" type="inclusive"
+                                >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00076" level="file">
+                    <did>
+                        <unittitle>Untitled, notes, <unitdate normal="1964/2006" type="inclusive"
+                                >undated</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00077" level="file">
+                    <did>
+                        <unittitle>Untitled, notebook, <unitdate normal="1995"
+                            >1995</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00078" level="file">
+                    <did>
+                        <unittitle>Untitled, notebook, <unitdate normal="2000/2002" type="inclusive"
+                                >2000-2002</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00079" level="file">
+                    <did>
+                        <unittitle>"Window," notes, drafts, proofs, <unitdate normal="2002/2004"
+                                type="inclusive">2002-2004</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAC1693-00080" level="series">
+                <did>
+                    <container label="Box" type="Box">7</container>
+                    <unittitle>Correspondence</unittitle>
+                </did>
+                <note>
+                    <p>Arranged alphabetically by correspondent or topic.</p>
+                </note>
+                <c02 id="VAC1693-00081" level="file">
+                    <did>
+                        <unittitle>Agents and Lawyers, <unitdate normal="1982/2000" type="inclusive"
+                                >1982-2000</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00082" level="file">
+                    <did>
+                        <unittitle>Agents and Publishers, <unitdate normal="1990/1995"
+                                type="inclusive">1990-1995</unitdate>, <unitdate normal="1964/2006"
+                                type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00083" level="file">
+                    <did>
+                        <unittitle>Alfred A. Knopf, Inc., <unitdate normal="1985/1987"
+                                type="inclusive">1985-1987</unitdate>, <unitdate normal="1964/2006"
+                                type="inclusive">undated</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00084" level="file">
+                    <did>
+                        <unittitle>Aperture Foundation, <unitdate normal="1987/1988"
+                                type="inclusive">1987-1988</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00085" level="file">
+                    <did>
+                        <unittitle><emph render="italic">Bomb</emph>, <unitdate normal="1995/1997"
+                                type="inclusive">1995-1997</unitdate>, <unitdate normal="1964/2006"
+                                type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00086" level="file">
+                    <did>
+                        <unittitle>Eisenberg-Bach, Susan, <unitdate normal="1989-10-17">1989,
+                                October 17</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00087" level="file">
+                    <did>
+                        <unittitle>Eisenberg, Deborah, <unitdate normal="1987/2001" type="inclusive"
+                                >1987-2001</unitdate>, <unitdate normal="1964/2006" type="inclusive"
+                                >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00088" level="file">
+                    <did>
+                        <unittitle>Farrar, Straus, Giroux, Inc., <unitdate normal="1983/1999"
+                                type="inclusive">1983-1999</unitdate>, <unitdate normal="1964/2006"
+                                type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00089" level="file">
+                    <did>
+                        <unittitle>Film and Theater, <unitdate normal="1981/2003" type="inclusive"
+                                >1981-2003</unitdate>, <unitdate normal="1964/2006" type="inclusive"
+                                >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00090" level="file">
+                    <did>
+                        <unittitle>Flothuis, Mea, <unitdate normal="1986-09-01/1989-12-26"
+                                type="inclusive">1986, September 1-1989, December
+                            26</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00091" level="file">
+                    <did>
+                        <unittitle>Friends and Students, <unitdate normal="1988/1999"
+                                type="inclusive">1988-1999</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00092" level="file">
+                    <did>
+                        <unittitle>Granta Books, <unitdate normal="1997/1999" type="inclusive"
+                                >1997-1999</unitdate>, <unitdate normal="1964/2006" type="inclusive"
+                                >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00093" level="file">
+                    <did>
+                        <unittitle>Greene, Elaine, <unitdate normal="1985/1995" type="inclusive"
+                                >1985-1995</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00094" level="file">
+                    <did>
+                        <unittitle>Howard, Richard, <unitdate normal="1999-08-18">1999, August
+                                18</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00095" level="file">
+                    <did>
+                        <unittitle>Journals and Magazines, <unitdate normal="1982/2006"
+                                type="inclusive">1982-2006</unitdate>, <unitdate normal="1964/2006"
+                                type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00096" level="file">
+                    <did>
+                        <unittitle>Kessel, Greer, <unitdate normal="1998-04-24/1998-05-15"
+                                type="inclusive">1998, April 24-May 15</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00097" level="file">
+                    <did>
+                        <unittitle>Lucas, Craig, <unitdate normal="1985-11-28/1994-05-02"
+                                type="inclusive">1985, November 28-1994, May
+                            2</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00098" level="file">
+                    <did>
+                        <unittitle>Murro, Alice and Others, <unitdate normal="1985-11-24/1986-06-21"
+                                type="inclusive">1985, November 24-1986, June 21</unitdate>,
+                                <unitdate normal="1964/2006" type="inclusive"
+                            >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00099" level="file">
+                    <did>
+                        <unittitle>Neuwald, Ellen, <unitdate normal="1984/1989" type="inclusive"
+                                >1984-1989</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00100" level="file">
+                    <did>
+                        <unittitle><emph render="italic">The New Yorker</emph>, <unitdate
+                                normal="1984/2000" type="inclusive">1984-2000</unitdate>, <unitdate
+                                normal="1964/2006" type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00101" level="file">
+                    <did>
+                        <unittitle><emph render="italic">Pastorale</emph>, <unitdate
+                                normal="1982/1993" type="inclusive">1982-1993</unitdate>, <unitdate
+                                normal="1964/2006" type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00102" level="file">
+                    <did>
+                        <unittitle>Personal, <unitdate normal="1985/2005" type="inclusive"
+                                >1985-2005</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00103" level="file">
+                    <did>
+                        <unittitle>Publishers and Agents, <unitdate normal="1982/2003"
+                                type="inclusive">1982-2003</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00104" level="file">
+                    <did>
+                        <unittitle>Publishers and Editors, <unitdate normal="1984/2000"
+                                type="inclusive">1984-2000</unitdate>, <unitdate normal="1964/2006"
+                                >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00105" level="file">
+                    <did>
+                        <unittitle>Reader Mail, <unitdate normal="1984/2004" type="inclusive"
+                                >1984-2004</unitdate>, <unitdate normal="1964/2006" type="inclusive"
+                                >undated</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00106" level="file">
+                    <did>
+                        <unittitle>Red Hen Press, <unitdate normal="1989/1999" type="inclusive"
+                                >1989-1999</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00107" level="file">
+                    <did>
+                        <unittitle>Rowohlt [Verlag], <unitdate normal="1988/1998" type="inclusive"
+                                >1988-1998</unitdate>, <unitdate normal="1964/2006" type="inclusive"
+                                >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00108" level="file">
+                    <did>
+                        <unittitle>The Three Penny Review, <unitdate normal="1992/2004"
+                                type="inclusive">1992-2004</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00109" level="file">
+                    <did>
+                        <unittitle><emph render="italic">Tin House Magazine</emph>, <unitdate
+                                normal="1999/2004" type="inclusive">1999-2004</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00110" level="file">
+                    <did>
+                        <unittitle><emph render="italic">The Yale Review</emph>, <unitdate
+                                normal="1992/2002" type="inclusive">1992-2002</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00111" level="file">
+                    <did>
+                        <unittitle>Unidentified, <unitdate normal="1964/2006" type="inclusive"
+                                >undated</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAC1693-00112" level="series">
+                <did>
+                    <container label="Box" type="Box">7</container>
+                    <unittitle>Biographical Materials</unittitle>
+                </did>
+                <c02 id="VAC1693-00113" level="item">
+                    <did>
+                        <unittitle>The Woodstock Country School <emph render="italic"
+                                >Symposium</emph>, <unitdate normal="1964"
+                            >1964</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAC1693-00114" level="series">
+                <did>
+                    <container label="Box" type="Box">8</container>
+                    <unittitle>Business Records</unittitle>
+                </did>
+                <note>
+                    <p>Includes proposals, bills, bank statements, and correspondence.</p>
+                </note>
+                <c02 id="VAC1693-00115" level="file">
+                    <did>
+                        <unittitle>Awards, Grants and Honors, <unitdate normal="1984/2003"
+                                type="inclusive">1984-2003</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00116" level="file">
+                    <did>
+                        <unittitle>Contracts, <unitdate normal="1982/2006" type="inclusive"
+                                >1982-2006</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00117" level="file">
+                    <did>
+                        <unittitle>The Rea Award, <unitdate normal="1992/1993" type="inclusive"
+                                >1992-1993</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00118" level="file">
+                    <did>
+                        <unittitle>Readings, <unitdate normal="2006">2006</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00119" level="file">
+                    <did>
+                        <unittitle><emph render="italic">Three Smiling Fools</emph>, <unitdate
+                                normal="1976/1977" type="inclusive">1976-1977</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC1693-00120" level="file">
+                    <did>
+                        <unittitle>Writing Offers, <unitdate normal="1986/2000" type="inclusive"
+                                >1986-2000</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAC1693-00121" level="series">
+                <did>
+                    <container label="Box" type="Box">8</container>
+                    <unittitle>Miscellaneous</unittitle>
+                    <note>
+                        <p>Miscellaneous clippings and notes</p>
+                    </note>
+                    <physdesc>(2 folders)</physdesc>
+                </did>
+
+            </c01>
+
+        </dsc>
+    </archdesc>
+</ead>
