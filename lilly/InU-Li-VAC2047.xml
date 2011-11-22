@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAC2047">InU-Li-VAC2047</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Great Britain. Royal Navy mss., <date
+                        normal="1812">1812</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2011" type="publication">© 2011</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2011">©2011</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <lb/>date of source: <date normal="2011" type="source"
+                    >2011</date>
+                <lb/>Finding aid encoded by Danielle Emerling, Lilly Library, Indiana University,
+                    <date normal="2011-11-18">November 18, 2011</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2011-11-18">November 18, 2011</date>
+                <item>Encoded finding aid begun.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <corpname encodinganalog="110" source="lcnaf">Great Britain. Royal Navy.</corpname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Gt. Brit. Navy mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1812" type="inclusive">1812</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1428</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>25 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">Consists of the logs for twelve ships of
+                the British Navy destined for Newfoundland.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>Consists of the logs for twelve ships of the British Navy destined for Newfoundland.
+                Hazard (Sloop), four parts -- Alert (Sloop) -- Electra (Sloop), two parts --
+                Hyperion (Frigate), two parts -- Jason (Frigate), two parts -- Pomone (Frigate),
+                three parts -- Avenger (Sloop), two parts -- Muros (Sloop) -- Adonis (Ship), three
+                parts -- Holly (Ship) -- Antelope (Brig), two parts -- Comet (Sloop), two parts.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/great+britain+royal+navy">
+                            <corpname encodinganalog="610" source="lcnaf" role="subject">Great
+                                Britain. Royal Navy.</corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/hazard+sloop+1794+1817">
+                            <corpname encodinganalog="610" source="lcnaf" role="subject">Hazard
+                                (Sloop : 1794-1817)</corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/alert+sloop+1804+1812">
+                            <corpname encodinganalog="610" source="lcnaf" role="subject">Alert
+                                (Sloop : 1804-1812)</corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/electra+sloop+1808+1816">
+                            <corpname encodinganalog="610" source="lcnaf" role="subject">Electra
+                                (Sloop : 1808-1816)</corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/hyperion+frigate+1807+1833">
+                            <corpname encodinganalog="610" source="lcnaf" role="subject">Hyperion
+                                (Frigate : 1807-1833</corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/jason+frigate+1804+1815">
+                            <corpname encodinganalog="610" source="lcnaf" role="subject">Jason
+                                (Frigate : 1804-1815)</corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/pomone+frigate+1811+1816">
+                            <corpname encodinganalog="610" source="lcnaf" role="subject">Pomone
+                                (Frigate : 1811-1816)</corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/avenger+sloop+1804+1812">
+                            <corpname encodinganalog="610" source="lcnaf" role="subject">Avenger
+                                (Sloop : 1804-1812)</corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/muros+sloop+1809+1822">
+                            <corpname encodinganalog="610" source="lcnaf" role="subject">Muros
+                                (Sloop: 1809-1822)</corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/adonis+ship">
+                            <corpname encodinganalog="610" source="lcnaf" role="subject">Adonis
+                                (Ship)</corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/holly+ship">
+                            <corpname encodinganalog="610" source="lcnaf" role="subject">Holly
+                                (Ship)</corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/antelope+brig+1793+1830">
+                            <corpname encodinganalog="610" source="lcnaf" role="subject">Antelope
+                                (Brig: 1793-1830)</corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/comet+sloop">
+                            <corpname encodinganalog="610" source="lcnaf" role="subject">Comet
+                                (Sloop)</corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/united+states+navy+history+war+1812">
+                            <corpname encodinganalog="610" source="lcnaf" role="subject">United
+                                States. Navy --History --War of 1812</corpname>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/united+states+history+war+1812">
+                            <subject encodinganalog="651" source="lcsh">United States --History
+                                --War of 1812.</subject>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="110" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 1951</p>
+            </acqinfo>
+
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Gt. Brit. Navy mss., Lilly Library, Indiana University,
+                    Bloomington, Indiana.</p>
+            </prefercite>
+
+
+        </descgrp>
+
+        <dsc type="combined">
+            <c01 id="VAC2047-00001" level="series">
+                <did>
+                    <container label="Box" type="Box">1</container>
+                    <unittitle>Collection</unittitle>
+                </did>
+                <c02 id="VAC2047-00002" level="file">
+                    <did>
+                        <unittitle>Hazard (Ship), <unitdate normal="1812-03-09/1812-10-21"
+                                type="inclusive">1812, March 9-October 21</unitdate></unittitle>
+                        <note>
+                            <p>Signed Jo[h]n Cockerley, commander</p>
+                        </note>
+                    </did>
+                    <c03 id="VAC2047-00003" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1812-03-09/1812-07-29" type="inclusive"
+                                    >1812, March 9-July 29</unitdate></unittitle>
+                            <physdesc>54 pages</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC2047-00004" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1812-07-31/1812-08-26" type="inclusive"
+                                    >1812, July 31-August 26</unitdate></unittitle>
+                            <physdesc>14 pages</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC2047-00005" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1812-08-29/1812-09-23" type="inclusive"
+                                    >1812, August 29-September 23</unitdate></unittitle>
+                            <physdesc>13 pages</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC2047-00006" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1812-09-25/1812-10-21" type="inclusive"
+                                    >1812, September 25-October 21</unitdate></unittitle>
+                            <physdesc>14 pages</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAC2047-00007" level="item">
+                    <did>
+                        <unittitle>Alert (Sloop), <unitdate normal="1812-03-22/1812-07-29"
+                                type="inclusive">1812, March 22-July 29</unitdate></unittitle>
+                        <note>
+                            <p>Signed T[homas] L[amb] P[olden] Laugharne, commander</p>
+                        </note>
+                        <physdesc>77 pages</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC2047-00008" level="file">
+                    <did>
+                        <unittitle>Electra (Ship), <unitdate normal="1812-04-20/1812-10-06"
+                                type="inclusive">1812, April 20-October 6</unitdate></unittitle>
+                        <note>
+                            <p>Signed W[illia]m Gregory, commander</p>
+                        </note>
+                    </did>
+                    <c03 id="VAC2047-00009" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1812-04-20/1812-09-03" type="inclusive"
+                                    >1812, April 20-September 3</unitdate></unittitle>
+                            <physdesc>69 pages</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC2047-00010" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1812-09-07/1812-10-06" type="inclusive"
+                                    >1812, September 7-October 6</unitdate></unittitle>
+                            <physdesc>15 pages</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAC2047-00011" level="file">
+                    <did>
+                        <unittitle>Hyperion (Frigate), <unitdate normal="1812-04-25/1812-10-12"
+                                type="inclusive">1812, April 25-October 12</unitdate></unittitle>
+                        <note>
+                            <p>Signed W[illia]m Pryce Cumby, captain</p>
+                        </note>
+                    </did>
+                    <c03 id="VAC2047-00012" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1812-04-25/1812-09-04" type="inclusive"
+                                    >1812, April 25-September 4</unitdate></unittitle>
+                            <physdesc>120 pages</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC2047-00013" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1812-09-09/1812-10-12" type="inclusive"
+                                    >1812, September 9-October 12</unitdate></unittitle>
+                            <physdesc>34 pages</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAC2047-00014" level="file">
+                    <did>
+                        <unittitle>Jason (Ship), <unitdate normal="1812-05-18/1812-09-27"
+                                type="inclusive">1812, May 18-September 27</unitdate></unittitle>
+                        <note>
+                            <p>Signed J[ames] W[illiam] King, captain</p>
+                        </note>
+                    </did>
+                    <c03 id="VAC2047-00015" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1812-05-18/1812-08-04" type="inclusive"
+                                    >1812, May 18-August 4</unitdate></unittitle>
+                            <physdesc>40 pages</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC2047-00016" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1812-08-06/1812-09-27" type="inclusive"
+                                    >1812, August 6-September 27</unitdate></unittitle>
+                            <physdesc>53 pages</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+
+                <c02 id="VAC2047-00017" level="file">
+                    <did>
+                        <unittitle>Pomone (Frigate), <unitdate normal="1812-05-19/1812-10-08"
+                                type="inclusive">1812, May 19-October 8</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAC2047-00018" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1812-05-19/1812-08-04" type="inclusive"
+                                    >1812, May 19-August 4</unitdate></unittitle>
+                            <note>
+                                <p>Signed F[rancis] W[illiam] Fane, captain</p>
+                            </note>
+                            <physdesc>74 pages</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC2047-00019" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1812-08-06/1812-09-24" type="inclusive"
+                                    >1812, August 6-September 24</unitdate></unittitle>
+                            <note>
+                                <p>Signed F[rancis] W[illiam] Fane, captain</p>
+                            </note>
+                            <physdesc>50 pages</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC2047-00020" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1812-09-26/1812-10-08" type="inclusive"
+                                    >1812, September 26-October 8</unitdate></unittitle>
+                            <note>
+                                <p>Signed [illegible], 2nd lieutenant</p>
+                            </note>
+                            <physdesc>13 pages</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAC2047-00021" level="file">
+                    <did>
+                        <unittitle>Avenger (Sloop), <unitdate normal="1812-05-19/1812-10-11"
+                                type="inclusive">1812, May 19-October 11</unitdate></unittitle>
+                        <note>
+                            <p>Signed Urry Johnson, commander</p>
+                        </note>
+                    </did>
+                    <c03 id="VAC2047-00022" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1812-05-19/1812-07-30" type="inclusive"
+                                    >1812, May 19-July 30</unitdate></unittitle>
+                            <physdesc>37 pages</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC2047-00023" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1812-08-03/1812-10-11" type="inclusive"
+                                    >1812, August 3-October 11</unitdate></unittitle>
+                            <physdesc>36 pages</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAC2047-00024" level="item">
+                    <did>
+                        <container label="Box" type="Box">2</container>
+                        <unittitle>Muros (Ship), <unitdate normal="1812-06-07/1812-07-22"
+                                type="inclusive">1812, June 7-July 22</unitdate></unittitle>
+                        <note>
+                            <p>Signed [illegible], captain</p>
+                        </note>
+                        <physdesc>23 pages</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC2047-00025" level="file">
+                    <did>
+                        <unittitle>Adonis (Schooner), <unitdate normal="1812-06-08/1812-10-10"
+                                type="inclusive">1812, June 8-October 10</unitdate></unittitle>
+                        <note>
+                            <p>Signed D[avid] Buchan, lietenant commander</p>
+                        </note>
+                    </did>
+                    <c03 id="VAC2047-00026" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1812-06-08/1812-09-08" type="inclusive"
+                                    >1812, June 8-September 8</unitdate></unittitle>
+                            <physdesc>32 pages</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC2047-00027" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1812-09-09/1812-09-21" type="inclusive"
+                                    >1812, September 9-21</unitdate></unittitle>
+                            <physdesc>6 pages</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC2047-00028" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1812-09-23/1812-10-10" type="inclusive"
+                                    >1812, September 23-October 10</unitdate></unittitle>
+                            <physdesc>6 pages</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAC2047-00029" level="item">
+                    <did>
+                        <unittitle>Holly (Schooner), <unitdate normal="1812-07-11/1812-10-11"
+                                type="inclusive">1812, July 11-October 11</unitdate></unittitle>
+                        <note>
+                            <p>Signed S[amuel] S[harpe] Treacher, lieutenant commander</p>
+                        </note>
+                        <physdesc>42 pages</physdesc>
+                    </did>
+
+                </c02>
+                <c02 id="VAC2047-00030" level="file">
+                    <did>
+                        <unittitle>Antelope (Ship), <unitdate normal="1812-07-21/1812-09-27"
+                                type="inclusive">1812, July 21-September 27</unitdate></unittitle>
+                        <note>
+                            <p>Signed James Carpenter, captain</p>
+                        </note>
+                    </did>
+                    <c03 id="VAC2047-00031" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1812-07-21/1812-08-15" type="inclusive"
+                                    >1812, July 21-August 15</unitdate></unittitle>
+                            <physdesc>26 pages</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC2047-00032" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1812-08-28/1812-09-27" type="inclusive"
+                                    >1812, August 29-September 27</unitdate></unittitle>
+                            <physdesc>30 pages</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAC2047-00033" level="file">
+                    <did>
+                        <unittitle>Comet (Ship), <unitdate normal="1812-07-31/1812-10-02"
+                                type="inclusive">1812, July 31-October 2</unitdate></unittitle>
+                        <note>
+                            <p>Signed G[eorge] W[illiam] Blamey, captain</p>
+                        </note>
+                    </did>
+                    <c03 id="VAC2047-00034" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1812-07-31/1812-09-13" type="inclusive"
+                                    >1812, July 31-September 13</unitdate></unittitle>
+                            <physdesc>32 pages</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC2047-00035" level="item">
+                        <did>
+                            <unittitle><unitdate normal="1812-09-17/1812-10-02" type="inclusive"
+                                    >1812, September 17-October 2</unitdate></unittitle>
+                            <physdesc>16 pages</physdesc>
+                        </did>
+                    </c03>
+                </c02>
+
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
