@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+--><ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external" countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924" relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li" identifier="InU-Li-VAC2147">InU-Li-VAC2147</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Polack mss., <date normal="1964/1999">1964-1999</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2011" type="publication">© 2011</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2011">© 2011</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2011" type="source">2011</date>
+                <lb></lb>Finding aid encoded by Danielle Emerling, Lilly Library, Indiana University,
+                    <date normal="2011-12-13">December 13, 2011</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng">English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2011-12-13">December 13, 2011</date>
+                <item>Encoded finding aid begun.</item>
+            </change>
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Polack, Philip.</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Polack mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1964/1999" type="inclusive">1964-1999</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2657</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>710 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">Collection consists of the papers of
+                translator Philip Polack.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+            <p>Philip Polack was a translator of Catalan and Spanish literature. His areas of specialization included Catalan and Spanish literature. His translations
+                offer penetrating insights into the translator's craft, tracing the
+                interrelationship of author, publisher and translator.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Correspondence; II.
+                Writings; III. Miscellaneous.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The collection consists of the papers of translator Philip Polack.Correspondents include Camilo José Cela, Margaret Jull Costa, Miguel Delibes,
+                Salvador Espriu, and various publishers. Also included among the correspondence are
+                letters to and from Polack and various correspondents regarding his translation of
+                Diálogo dos Montes. Writings include various drafts of Polack's translation of
+                Soledades, by Luis de Góngora, as well as drafts and proofs of works by Margaret
+                Jull Costa, Luis de Góngora, Rehuel Jessurun, Miquel Martí i Pol, Toni Turull,
+                Federico García Lorca, Maria del Mar, Ausiàs March, Eduard Mörilee, Joan Manuel
+                Serrat. Miscellaneous includes ideas for illustrations for works translated by
+                Polack, as well as obituary notices for Toni Turull.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/polack+philip+correspondence">
+                            <persname encodinganalog="600" source="lcnaf" role="subject">Polack,
+                                Philip --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/cela+camilo+jose">
+                            <persname encodinganalog="700" source="lcnaf" role="subject">Cela,
+                                Camilo José, 1916-2002.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/costa+margaret+jull">
+                            <persname encodinganalog="700" source="lcnaf" role="subject">Costa,
+                                Margaret Jull.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/delibes+miguel">
+                            <persname encodinganalog="700" source="lcnaf" role="subject">Delibes,
+                                Miguel.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/espriu+salvador">
+                            <persname encodinganalog="700" source="lcnaf" role="subject">Espriu,
+                                Salvador.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/bristol+classical+press">
+                            <corpname encodinganalog="710" source="lcnaf" role="subject">Bristol
+                                Classical Press.</corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/carcanet+press+manchester+england">
+                            <corpname encodinganalog="710" source="lcnaf" role="subject">Carcanet
+                                Press (Manchester, England)</corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/duckworth+firm">
+                            <corpname encodinganalog="710" source="lcnaf" role="subject">Duckworth
+                                (Firm).</corpname>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/translating+interpreting">
+                            <subject encodinganalog="650" source="lcsh">Translating and
+                                interpreting.</subject>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="110" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 2002, 2009</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Polack mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+
+
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Morgan McFall-Smith and Hiromi Yoshida.</p>
+                <p>Completed in <date normal="2011">2011</date></p>
+
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+
+            <c01 id="VAC2147-00001" level="series">
+                <did>
+                    <container label="Box" type="Box">1</container>
+                    <unittitle>Correspondence</unittitle>
+                </did>
+                <c02 id="VAC2147-00002" level="file">
+                    <did>
+                        <unittitle>Cela, Camilo José. <unitdate normal="1970-01/1970-02" type="inclusive">Jan.-Feb. 1970</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2147-00003" level="file">
+                    <did>
+                        <unittitle>Costa, Margaret Jull. <unitdate normal="1992-09/1992-11" type="inclusive">Sept.-Nov. 1992</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2147-00004" level="file">
+                    <did>
+                        <unittitle>Delibes, Miguel. <unitdate normal="1971">1971</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2147-00005" level="file">
+                    <did>
+                        <unittitle>Espriu, Salvador. <unitdate normal="1974">1974</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2147-00006" level="file">
+                    <did>
+                        <unittitle>Publishers. <unitdate normal="1981/2000" type="inclusive">1981-2000</unitdate> (letters from publishers including Bristol Classical Press, Carcanet Press Ltd./P.N. Review, and Duckworth General Publishers)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2147-00007" level="file">
+                    <did>
+                        <unittitle><emph render="italic">Diálogo dos Montes.</emph> <unitdate normal="1969/1971" type="inclusive">1969-1971</unitdate> (letters to and from Polack concerning Diálogo dos Montes)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2147-00008" level="file">
+                    <did>
+                        <unittitle><emph render="italic">Diálogo dos Montes.</emph> <unitdate normal="1974/2009" type="inclusive">1974-2009</unitdate> (Letters to and from Polack concerning Diálogo dos Montes)</unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAC2147-00009" level="series">
+                <did>
+                    <container label="Box" type="Box">1</container>
+                    <unittitle>Writings</unittitle>
+                </did>
+                <scopecontent>
+                    <p>Single-author folders contain notes and drafts with the exception of the one
+                        designated for Margaret Jull Costa, which contains essays written by Costa,
+                        together with articles pertaining to Luis de Góngora. The folder designated
+                        for various writings contains translations.</p>
+                </scopecontent>
+                <c02 id="VAC2147-00010" level="file">
+                    <did>
+                        <unittitle>Costa, Margaret Jull</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2147-00011" level="file">
+                    <did>
+                        <unittitle>Góngora, Luis de</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2147-00012" level="file">
+                    <did>
+                        <unittitle>Jessurun, Rehuel</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2147-00013" level="file">
+                    <did>
+                        <unittitle>Pol, Miquel Martí i</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2147-00014" level="file">
+                    <did>
+                        <unittitle>Turull, Toni</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2147-00015" level="file">
+                    <did>
+                        <unittitle>Various writings (Federico García Lorca, Maria del Mar, Ausiàs
+                            March, Eduard Mörilee, Joan Manuel Serrat)</unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAC2147-00016" level="series">
+                <did>
+                    <container label="Box" type="Box">1</container>
+                    <unittitle>Miscellaneous</unittitle>
+                </did>
+                <c02 id="VAC2147-00017" level="file">
+                    <did>
+                        <unittitle>Illustration ideas for works translated by Philip
+                            Polack</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2147-00018" level="file">
+                    <did>
+                        <unittitle>Obituaries for Toni Turull</unittitle>
+                    </did>
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>

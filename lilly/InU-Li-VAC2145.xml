@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+--><ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external" countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924" relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li" identifier="InU-Li-VAC2145">InU-Li-VAC2145</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Golden Age Sci-Fi mss., <date normal="1935/1956">1935-1956</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2011" type="publication">© 2011</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2011">© 2011</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2011" type="source">2011</date>
+                <lb></lb>Finding aid encoded by Danielle Emerling, Lilly Library, Indiana University,
+                    <date normal="2011-12-13">December 13, 2011</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng">English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2011-12-13">December 13, 2011</date>
+                <item>Encoded finding aid begun.</item>
+            </change>
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Golden Age Sci-Fi mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1935/1956" type="inclusive">1935-1956</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2742</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>50 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language langcode="eng">English</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">Collection consists of revised and
+                copy-edited typescripts, galley proofs, and correspondence for approximately fifty
+                original short stories and novellas from the "Golden Age of Science Fiction"
+                published in <emph render="italic">Galaxy,</emph>
+                <emph render="italic">Beyond Fantasy Fiction,</emph>
+                <emph render="italic">Other Worlds, Fantasy &amp; Science Fiction,</emph>
+                <emph render="italic">Unknown Worlds,</emph>
+                <emph render="italic">Universe Science Fiction,</emph>
+                <emph render="italic">IF,</emph> and other magazines.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Writings; II.
+                Transcripts--Radio; III. Correspondence.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>Writings contain drafts and proofs of stories and novellas by authors including: Poul
+                Anderson, Stephen Arr, E. B. Battles, Eando Binder, James Blish, Robert Bloch,
+                Anthony Boucher, Robin Brown (Robert Zacks), Algis Budrys, Cleve Cartmill, Alan
+                Cogan, Groff Conklin, William Crawford, George Damler, Charles V. De Vet, Miriam
+                Allen DeFord, Charles Dye, Daniel P. Galouye, Randall Garrett, D. V. Gilder, Harry
+                Harrison, Roy Hutchins, David Keller, Willy Ley, Edward W. Ludwig, Sam Merwin, Jr.,
+                William Morrison, Charles Munoz (as T. P. Caravan), Stanley I. Rowson, Rick Sargent,
+                Robert Sheckley, Walt Sheldon, Evelyn E. Smith, Ralph Spencer, Ian Watson, Edward
+                Wellen, Richard Wilson, and Donald Wollheim (as David Grinnell). Transcripts are
+                from radio broadcasts of science fiction tales from Poul Anderson and Charles Dye.
+                Correspondence includes exchanges of letters between Harry Harrison and Naomi
+                Mitchison, as well as between Harry Harrison and Claire M. Smith. The Miscellaneous
+                series contains galley proofs of a lengthy bibliography of science fiction
+                authors.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/anderson+poul">
+                            <persname encodinganalog="700" source="lcnaf" role="subject">Anderson,
+                                Poul, 1926-2001.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/block+robert">
+                            <persname encodinganalog="700" source="lcnaf" role="subject">Bloch,
+                                Robert.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/boucher+anthony">
+                            <persname encodinganalog="700" source="lcnaf" role="subject">Boucher,
+                                Anthony, 1911-1968.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/budrys+algis">
+                            <persname encodinganalog="700" source="lcnaf" role="subject">Budrys,
+                                Algis, 1931-2008</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/crawford+william+l">
+                            <persname encodinganalog="700" source="lcnaf" role="subject">Crawford,
+                                William L., 1911-1984</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/harrison+harry">
+                            <persname encodinganalog="700" source="lcnaf" role="subject">Harrison,
+                                Harry, 1925-</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/mitchison+naomi">
+                            <persname encodinganalog="700" source="lcnaf" role="subject">Mitchison,
+                                Naomi, 1897-1999</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/munoz+charles">
+                            <persname encodinganalog="700" source="lcnaf" role="subject">Muñoz,
+                                Charles, 1926-</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/sheckley+robert">
+                            <persname encodinganalog="700" source="lcnaf" role="subject">Sheckley,
+                                Robert, 1928-2005</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/smith+evelyn+e">
+                            <persname encodinganalog="700" source="lcnaf" role="subject">Smith,
+                                Evelyn E.</persname>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/science+fiction">
+                            <subject encodinganalog="650" source="lcsh">Science fiction.</subject>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="110" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 2010</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Golden Age Sci-Fi mss., Lilly Library, Indiana University, Bloomington,
+                    Indiana.</p>
+            </prefercite>
+
+
+
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Carey Beam and Rebecca Read.</p>
+                <p>Completed in <date normal="2011">2011</date></p>
+
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+            <c01 id="VAC2145-00001" level="series">
+                <did>
+                    <container label="Box" type="Box">1</container>
+                    <unittitle>Writings</unittitle>
+                </did>
+                <arrangement>
+                    <p>Divided into two subseries: Stories; and Novellas. Stories arranged
+                        alphabetically by title of publication, then title of story. Novellas
+                        arranged alphabetically by title of each novella.</p>
+                </arrangement>
+                <c02 id="VAC2145-00002" level="subseries">
+                    <did>
+                        <container label="Box" type="Box">1</container>
+                        <unittitle>Stories</unittitle>
+                    </did>
+                    <c03 id="VAC2145-00003" level="otherlevel">
+                        <did>
+                            <unittitle><emph render="italic">Beyond</emph></unittitle>
+                        </did>
+                        <c04 id="VAC2145-00004" level="file">
+                            <did>
+                                <unittitle>"Age Cannot Wither," by Cleve Cartmill, <unitdate normal="1955-01">Jan. 1955</unitdate> </unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00005" level="file">
+                            <did>
+                                <unittitle>"Dragon Lady," by Evelyn E. Smith, <unitdate normal="1955-01">Jan. 1955</unitdate> </unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00006" level="file">
+                            <did>
+                                <unittitle>"It's Colder Inside," by E. B. Battles, <unitdate normal="1955-01">Jan. 1955</unitdate> </unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00007" level="file">
+                            <did>
+                                <unittitle>"The Paynim's Flute," by Ralph Spencer, <unitdate normal="1955-01">Jan. 1955</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00008" level="file">
+                            <did>
+                                <unittitle>"Sizzlestick," by Sam Merwin, Jr., <unitdate normal="1955-01">Jan. 1955</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00009" level="file">
+                            <did>
+                                <unittitle>"Stream of Consciousness," by Roy Hutchins, <unitdate normal="1955-01">Jan. 1955</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00010" level="file">
+                            <did>
+                                <unittitle>"They," by D. V. Gilder, <unitdate normal="1955-01">Jan. 1955</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        
+                        
+                    </c03>
+                    <c03 id="VAC2145-00011" level="otherlevel">
+                        <did>
+                            <unittitle><emph render="italic">Fantasy and Science Fiction (F&amp;SF)</emph></unittitle>
+                        </did>
+                        <c04 id="VAC2145-00012" level="file">
+                            <did>
+                                <unittitle>"I've Got A Little List," by Randall Garrett, <unitdate normal="1955-11">Nov. 1955</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00013" level="file">
+                            <did>
+                                <unittitle>"The Lysenko Maze," by David Grinnell, <unitdate normal="1954-07">July 1954</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00014" level="file">
+                            <did>
+                                <unittitle>"Playground," by William Morrison, <unitdate normal="1955-07">July 1955</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00015" level="file">
+                            <did>
+                                <unittitle>"Sriberdegibit," by Anthony Boucher, <unitdate normal="1935/1956" type="inclusive">undated</unitdate></unittitle>
+                            </did>
+                        </c04>
+                       
+                    </c03>
+                    
+                    
+                    
+                    <c03 id="VAC2145-00016" level="otherlevel">
+                        <did>
+                            <unittitle><emph render="italic">Galaxy Monthly</emph></unittitle>
+                        </did>
+                        <c04 id="VAC2145-00017" level="file">
+                            <did>
+                                <unittitle>"The Amateurs," by Alan Cogan, <unitdate normal="1955-07">July 1955</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00018" level="file">
+                            <did>
+                                <unittitle>"Big Stupe," by Charles V. De Vet, <unitdate normal="1955-03">March 1955</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00019" level="file">
+                            <did>
+                                <unittitle>"Country Estate," by Daniel F. Galouye, <unitdate normal="1955-08">August 1955</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00020" level="file">
+                            <did>
+                                <unittitle>"Deadhead," by Robert Sheckley, <unitdate normal="1955-07">July 1955</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00021" level="file">
+                            <did>
+                                <unittitle>"Don't Shoot," by Robin Brown, <unitdate normal="1955-04">April 1955</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00022" level="file">
+                            <did>
+                                <unittitle>"For Your Information," by Willy Ley, <unitdate normal="1955-08">Aug. 1955</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00023" level="file">
+                            <did>
+                                <unittitle>"Galaxy's Five Star Shelf," by Groff Conklin, <unitdate normal="1955-07">July 1955</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00024" level="file">
+                            <did>
+                                <unittitle>"Inside Story," by Richard Wilson, <unitdate normal="1955-06">June 1955</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00025" level="file">
+                            <did>
+                                <unittitle>"Man's Best Friend," by Evelyn E. Smith, <unitdate normal="1955-04">April 1955</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00026" level="file">
+                            <did>
+                                <unittitle>"Mr. President," by Stephen Arr, <unitdate normal="1953-11">Nov. 1953</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00027" level="file">
+                            <did>
+                                <unittitle>"One Way," by Miriam Allen DeFord, <unitdate normal="1955-03">March 1955</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00028" level="file">
+                            <did>
+                                <unittitle>"Origins of Galactic Advice," by Edward Wellen, <unitdate normal="1955-04">April 1955</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00029" level="file">
+                            <did>
+                                <unittitle>"Princess and the Physicist," by Evelyn E. Smith, <unitdate normal="1955-04">April 1955</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00030" level="file">
+                            <did>
+                                <unittitle>"Spoken For," by William Morrison, <unitdate normal="1955-07">July 1955</unitdate></unittitle>
+                            </did>
+                        </c04>
+                    </c03>
+                    
+                    <c03 id="VAC2145-00031" level="otherlevel">
+                        <did>
+                            <unittitle><emph render="italic">IF</emph></unittitle>
+                        </did>
+                        <c04 id="VAC2145-00032" level="file">
+                            <did>
+                                <unittitle>"Watershed," by James Blish, <unitdate normal="1955-05">May 1955</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00033" level="file">
+                            <did>
+                                <unittitle>"Your Time is Up," by Walt Sheldon, <unitdate normal="1955-06">June 1955</unitdate></unittitle>
+                            </did>
+                        </c04>
+                    </c03>
+                    
+                    <c03 id="VAC2145-00034" level="otherlevel">
+                        <did>
+                            <unittitle><emph render="italic">Other Worlds</emph></unittitle>
+                        </did>
+                        <c04 id="VAC2145-00035" level="file">
+                            <did>
+                                <unittitle>"The Dog Who Wanted To Go Home," by Rick Sargent, <unitdate normal="1955-09">September, 1955</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00036" level="file">
+                            <did>
+                                <unittitle>"Man In the Moons," by Eando Binder, <unitdate normal="1955-09">September, 1955</unitdate> </unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00037" level="file">
+                            <did>
+                                <unittitle>"Politician," by Stanley I. Rowson, <unitdate normal="1955-09">September, 1955</unitdate> </unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00038" level="file">
+                            <did>
+                                <unittitle>"Proof-Load," by George Damler, <unitdate normal="1955-09">September, 1955</unitdate> </unittitle>
+                            </did>
+                        </c04>
+                    </c03>
+                    
+                    <c03 id="VAC2145-00039" level="otherlevel">
+                        <did>
+                            <unittitle>Unknown Publications</unittitle>
+                        </did>
+                        <c04 id="VAC2145-00040" level="file">
+                            <did>
+                                <unittitle>"Everything You Were Afraid to Know About/ Pournelle," by Robert Bloch, <unitdate normal="1935/1956" type="inclusive">undated</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00041" level="file">
+                            <did>
+                                <unittitle>"Fantastic Adventures with Amazing," by Robert Bloch, <unitdate normal="1935/1956" type="inclusive">undated</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00042" level="file">
+                            <did>
+                                <unittitle>"Ghost Lecturer," by Ian Watson, <unitdate normal="1935/1956" type="inclusive">undated</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00043" level="file">
+                            <did>
+                                <unittitle>"A Kiss For Uranus," by Elron Stuttered, <unitdate normal="1935/1956" type="inclusive">undated</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00044" level="file">
+                            <did>
+                                <unittitle>"The Laughing War," by David H. Keller, M.D., <unitdate normal="1935/1956" type="inclusive">undated</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00045" level="file">
+                            <did>
+                                <unittitle>"The Special Effectiveness of George Pal," by Robert Bloch, <unitdate normal="1935/1956" type="inclusive">undated</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00046" level="file">
+                            <did>
+                                <unittitle>"Songs of Gurre," by J. P. Jacobsen, translated from the Danish by Poul Anderson, <unitdate normal="1935/1956" type="inclusive">undated</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00047" level="file">
+                            <did>
+                                <unittitle>"The Turkish Barber," unidentified author, <unitdate normal="1935/1956" type="inclusive">undated</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC2145-00048" level="file">
+                            <did>
+                                <unittitle>"Why Artists Go But Grey," unidentified author, <unitdate normal="1935/1956" type="inclusive">undated</unitdate></unittitle>
+                            </did>
+                        </c04>
+                    </c03>
+                </c02>
+                
+                
+                <c02 id="VAC2145-00049" level="subseries">
+                    <did>
+                        <container label="Box" type="Box">1</container>
+                        <unittitle>Novellas</unittitle>
+                    </did>
+                    <c03 id="VAC2145-00050" level="file">
+                        <did>
+                            <unittitle><emph render="italic">Michaelmas,</emph> by Algis Budrys, <unitdate normal="1935/1956" type="inclusive">undated,</unitdate> (pp. 1-150)</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC2145-00051" level="file">
+                        <did>
+                            <unittitle><emph render="italic">Michaelmas,</emph> by Algis Budrys, <unitdate normal="1935/1956" type="inclusive">undated,</unitdate> (pp. 151-246)</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC2145-00052" level="file">
+                        <did>
+                            <unittitle><emph render="italic">Purple Chaos,</emph> by Frederick Van Cortlandt and William Crawford, ca. <unitdate normal="1935">1935</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC2145-00053" level="file">
+                        <did>
+                            <unittitle><emph render="italic">The 7 Shapes of Solomon Bean,</emph> by Edward W. Ludwig, <unitdate normal="1983">1983</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC2145-00054" level="file">
+                        <did>
+                            <unittitle><emph render="italic">The Shoemaker of Lan,</emph> by TP Caravan, <unitdate normal="1955">1955</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC2145-00055" level="file">
+                        <did>
+                            <unittitle><emph render="italic">Skyfall,</emph> by Harry Harrison, <unitdate normal="1935/1956" type="inclusive">undated,</unitdate> (pp.1-145)</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC2145-00056" level="file">
+                        <did>
+                            <unittitle><emph render="italic">Skyfall,</emph> by Harry Harrison, <unitdate normal="1935/1956" type="inclusive">undated,</unitdate> (pp.146-288)</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC2145-00057" level="file">
+                        <did>
+                            <unittitle><emph render="italic">Skyfall,</emph> by Harry Harrison, <unitdate normal="1935/1956" type="inclusive">undated,</unitdate> (pp.289-431)</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC2145-00058" level="file">
+                        <did>
+                            <unittitle><emph render="italic">Spawn,</emph> by Robert Bloch, <unitdate normal="1935/1956" type="inclusive">undated,</unitdate> (pp. 1-116)</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC2145-00059" level="file">
+                        <did>
+                            <unittitle><emph render="italic">Spawn,</emph> by Robert Bloch, <unitdate normal="1935/1956" type="inclusive">undated,</unitdate> (pp. 117-222)</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC2145-00060" level="file">
+                        <did>
+                            <unittitle><emph render="italic">Spawn,</emph> by Robert Bloch, <unitdate normal="1935/1956" type="inclusive">undated,</unitdate> (pp. 223-357)</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC2145-00061" level="file">
+                        <did>
+                            <unittitle><emph render="italic">Wheelworld,</emph> by Harry Harrison, <unitdate normal="1935/1956" type="inclusive">undated,</unitdate> (pp. 1-99)</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC2145-00062" level="file">
+                        <did>
+                            <unittitle><emph render="italic">Wheelworld,</emph> by Harry Harrison, <unitdate normal="1935/1956" type="inclusive">undated,</unitdate> (pp. 1-177)</unittitle>
+                        </did>
+                    </c03>
+                   
+                </c02>
+            </c01>
+            <c01 id="VAC2145-00063" level="series">
+                <did>
+                    <container label="Box" type="Box">1</container>
+                    <unittitle>Transcripts-Radio</unittitle>
+                </did>
+                <c02 id="VAC2145-00064" level="file">
+                    <did>
+                        <unittitle>"Inside Earth," by Poul Anderson (misspelled "Paul"), <unitdate normal="1953">1953</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2145-00065" level="file">
+                    <did>
+                        <unittitle>"Syndrome Johnny," by Charles Dye, <unitdate normal="1953">1953</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAC2145-00066" level="series">
+                <did>
+                    <container label="Box" type="Box">1</container>
+                    <unittitle>Correspondence</unittitle>
+                </did>
+                <c02 id="VAC2145-00067" level="file">
+                    <did>
+                        <unittitle>Harrison, Harry to Mitchison, Naomi, <unitdate normal="1968/1974" type="inclusive">1968-1974</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2145-00068" level="file">
+                    <did>
+                        <unittitle>Mitchison, Naomi to Harrison, Harry, including a few responses from Harry Harrison and Violet Williams, <unitdate normal="1968/1974" type="inclusive">1968-1974</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2145-00069" level="file">
+                    <did>
+                        <unittitle>Smith, Claire M. to Harrison, Harry, <unitdate normal="1969">1969</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAC2145-00070" level="series">
+                <did>
+                    <container label="Box" type="Box">2 (Oversize)</container>
+                    <unittitle>Miscellaneous</unittitle>
+                </did>
+                <c02 id="VAC2145-00071" level="file">
+                    <did>
+                        <unittitle>Bibliography, science fiction authors, galley proofs</unittitle>
+                    </did>
+                </c02>
+                        
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
