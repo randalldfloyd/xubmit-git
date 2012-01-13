@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+--><ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external" countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924" relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid encodinganalog="identifier" countrycode="US" mainagencycode="InU-Li" identifier="InU-Li-VAC2152">InU-Li-VAC2152</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Hebrew Translation Workshop mss., <date normal="1971/2006">1971-2006</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2011" type="publication">© 2011</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2011">© 2011</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2011" type="source">2011</date>
+                <lb></lb>Finding aid encoded by Danielle Emerling, Lilly Library, Indiana University,
+                    <date normal="2011-12-16">December 16, 2011.</date>
+            </creation>
+            <langusage>Description is in <language encodinganalog="language" langcode="eng">English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2011-11-22">November 22, 2011</date>
+                <item>Encoded finding aid begun.</item>
+            </change>
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <corpname encodinganalog="110" source="lcnaf">Hebrew Translation
+                    Workshop.</corpname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Hebrew Translation Workshop
+                mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1971/2006" type="inclusive">1971-2006</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2741</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>2,000 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language langcode="eng">English</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">Consists of papers relating to the
+                Hebrew Translation Workshop, which began in London in 1971 and was known initially
+                as the "Hebrew Poetry Workshop."</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Administrative History</head>
+
+            <p>The Workshop met twice yearly, mainly in London but sometimes in Cambridge or Yarton, near Oxford, until the death of one of its primary organizers, Risa Domb (1937-2007). Founded on the initiative of Professor Raphael Loewe of Cambridge, the Hebrew
+                Translation Workshop was run by Professor Nicholas de Lange and in later years by
+                the aforementioned Risa Domb, University Lecturer in Modern Hebrew at Cambridge
+                University and Life Fellow of Girton College. The Workshop provided a collegial
+                atmosphere in which the participants could discuss their own translations of texts
+                in both Hebrew and English, helping both to promote Israeli literature and raise the
+                level of literary translation from Hebrew. Early participants included among others
+                Bernard Lewis, David Daiches, Peter Jay, Peter Levi, Benjamin Tammuz, Leon Yudkin,
+                and Anthony Rudolf. Many of the translations were subsequently published.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Meeting Records; II.
+                Correspondence.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The collection consists of papers relating to the
+                Hebrew Translation Workshop, which began in London in 1971 and was known initially
+                as the "Hebrew Poetry Workshop. "Meeting Records consist mainly of notes, handouts, readings, and lists of attendees
+                of sessions held from 1971-2006; also included is a "Workshop Index" listing pieces
+                discussed at the 1971-1981 sessions. Correspondents include Nicholas de Lange, Ram
+                Evron, Raphael Loewe, M.J. Popplewell, and E. Silberschlag. Both English- and
+                Hebrew-language materials are in the collection.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/domb+risa">
+                            <persname encodinganalog="700" source="lcnaf" role="subject">Domb, Risa.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/de+lange+nicholas+robert+michael">
+                            <persname encodinganalog="700" source="lcnaf" role="subject">De Lange, N. R. M. (Nicholas Robert Michael), 1944- </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/evron+ram">
+                            <persname encodinganalog="700" source="lcnaf" role="subject">Evron, Ram.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/loewe+raphael">
+                            <persname encodinganalog="700" source="lcnaf" role="subject">Loewe, Raphael.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/popplewell+m+j">
+                            <persname encodinganalog="700" source="lcnaf" role="subject">Popplewell, M. J.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/silberschlag+s">
+                            <persname encodinganalog="700" source="lcnaf" role="subject">Silberschlag, S.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/hebrew+poetry+workshop">
+                            <corpname encodinganalog="710" source="lcnaf" role="subject">Hebrew Poetry Workshop.</corpname>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="110" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+            
+            
+            
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 2011</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+                
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Hebrew Translation Workshop mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+            
+            
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Rose Ann Hasty and Matthew Kruse.</p>
+                <p>Completed in <date normal="2011">2011</date></p>
+                
+            </processinfo>
+        </descgrp>
+        
+
+        <dsc type="combined">
+
+            <c01 id="VAC2152-00001" level="series">
+                <did>
+                   
+                    <container label="Box" type="Box">1</container>
+                    <unittitle>Meeting Records</unittitle>
+                </did>
+                <arrangement><p>Arranged chronologically. A few gaps exist in meeting records within the years 1990, 1996, and 1998-2001.</p></arrangement>
+                <c02 id="VAC2152-00002" level="file">
+                    <did>
+                        <unittitle>Workshop Index, <unitdate normal="1971/1981" type="inclusive">1971-1981</unitdate></unittitle>
+                    </did>
+                </c02> <c02 id="VAC2152-00003" level="file">
+                    <did>
+                        <unittitle>Meeting #1 <unitdate normal="1971-11-07">Nov. 7, 1971</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00004" level="file">
+                    <did>
+                        <unittitle>Meeting #2 <unitdate normal="1972-04-30">April 30, 1972</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00005" level="file">
+                    <did>
+                        <unittitle>Meeting #3 <unitdate normal="1972-11-12">Nov. 12, 1972</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00006" level="file">
+                    <did>
+                        <unittitle>Meeting #4 <unitdate normal="1974-05-27">May 27, 1974</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00007" level="file">
+                    <did>
+                        <unittitle>Meeting #5 <unitdate normal="1973-11-25">Nov. 25, 1973</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00008" level="file">
+                    <did>
+                        <unittitle>Meeting #6 <unitdate normal="1974-05-19">May 19, 1974</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00009" level="file">
+                    <did>
+                        <unittitle>Meeting #7 <unitdate normal="1974-12-01">Dec. 1, 1974</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00010" level="file">
+                    <did>
+                        <unittitle>Meeting #8 <unitdate normal="1975-06-15">June 15, 1975</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00011" level="file">
+                    <did>
+                        <unittitle>Meeting #9 <unitdate normal="1975-12-07">Dec. 7, 1975</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00012" level="file">
+                    <did>
+                        <unittitle>Meeting #10 <unitdate normal="1976-05-30">May 30, 1976</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00013" level="file">
+                    <did>
+                        <unittitle>Meeting #11 <unitdate normal="1976-12-05">Dec. 5, 1976</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00014" level="file">
+                    <did>
+                        <unittitle>Meeting #12 <unitdate normal="1977-07-12">July 12, 1977</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00015" level="file">
+                    <did>
+                        <unittitle>Meeting #13 <unitdate normal="1977-12-04">Dec. 4, 1977</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00016" level="file">
+                    <did>
+                        <unittitle>Meeting #14 <unitdate normal="1978-06-18">June 18, 1978</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00017" level="file">
+                    <did>
+                        <unittitle>Meeting #15 <unitdate normal="1978-12-03">Dec. 3, 1978</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00018" level="file">
+                    <did>
+                        <unittitle>Meeting #16 <unitdate normal="1979-06-10">June 10, 1979</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00019" level="file">
+                    <did>
+                        <unittitle>Meeting #17 <unitdate normal="1979-12-02">Dec. 2, 1979</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00020" level="file">
+                    <did>
+                        <unittitle>Meeting #18 <unitdate normal="1980-06-08">June 8, 1980</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00021" level="file">
+                    <did>
+                        <unittitle>Meeting #19 <unitdate normal="1980-12-07">Dec. 7, 1980</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00022" level="file">
+                    <did>
+                        <unittitle>Meeting #20 <unitdate normal="1981-06-07">June 7, 1981</unitdate></unittitle>
+                    </did>
+                </c02> <c02 id="VAC2152-00023" level="file">
+                    <did>
+                        <unittitle>Meeting #21 <unitdate normal="1981-11-29">Nov. 29, 1981</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00024" level="file">
+                    <did>
+                        <unittitle>Meeting #22 <unitdate normal="1982-06-06">June 6, 1982</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00025" level="file">
+                    <did>
+                        <unittitle>Meeting #23 <unitdate normal="1983-01-16">Jan. 16, 1983</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00026" level="file">
+                    <did>
+                        <unittitle>Meeting #24 <unitdate normal="1983-06-05">June 5, 1983</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00027" level="file">
+                    <did>
+                        <unittitle>Meeting #25 <unitdate normal="1984-01-15">Jan. 15, 1984</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00028" level="file">
+                    <did>
+                        <unittitle>Meeting #26 <unitdate normal="1986-06-03">June 3, 1986</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00029" level="file">
+                    <did>
+                        <unittitle>Meeting #27 <unitdate normal="1985-01-13">Jan. 13, 1985</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00030" level="file">
+                    <did>
+                        <unittitle>Meeting #28 <unitdate normal="1985-06-16">June 16, 1985</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00031" level="file">
+                    <did>
+                        <unittitle>Meeting #29 <unitdate normal="1985-12-15">Dec. 15, 1985</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00032" level="file">
+                    <did>
+                        <unittitle>Meeting #30 <unitdate normal="1986-06-15">June 15, 1986</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00033" level="file">
+                    <did>
+                        <unittitle>Meeting #31 <unitdate normal="1986-12-14">Dec. 14, 1986</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00034" level="file">
+                    <did>
+                        <unittitle>Meeting #32 <unitdate normal="1987-06-14">June 14, 1987</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00035" level="file">
+                    <did>
+                        <unittitle>Meeting #33 <unitdate normal="1988-01-10">Jan. 10, 1988</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00036" level="file">
+                    <did>
+                        <unittitle>Meeting #34 <unitdate normal="1988-06-19">June 19, 1988</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00037" level="file">
+                    <did>
+                        <unittitle>Meeting #35 <unitdate normal="1988-12-11">Dec. 11, 1988</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00038" level="file">
+                    <did>
+                        <unittitle>Meeting #36 <unitdate normal="1989-06-04">June 4, 1989</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00039" level="file">
+                    <did>
+                        <unittitle>Meeting #37 <unitdate normal="1990-01-07">Jan. 7, 1990</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00040" level="file">
+                    <did>
+                        <unittitle>Meeting #38 <unitdate normal="1990-06-10">June 10, 1990</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00041" level="file">
+                    <did>
+                        <unittitle>Meeting #40 <unitdate normal="1991-06-30">June 30, 1991</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00042" level="file">
+                    <did>
+                        <unittitle>Meeting #41 <unitdate normal="1992-01-12">Jan. 12, 1992</unitdate></unittitle>
+                    </did>
+                </c02> <c02 id="VAC2152-00043" level="file">
+                    <did>
+                        <unittitle>Meeting #42 <unitdate normal="1992-06-14">June 14, 1992</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00044" level="file">
+                    <did>
+                        <unittitle>Meeting #43 <unitdate normal="1993-01-10">Jan. 10, 1993</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00045" level="file">
+                    <did>
+                        <unittitle>Meeting #44 <unitdate normal="1993-06-13">June 13, 1993</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00046" level="file">
+                    <did>
+                        <unittitle>Meeting #45 <unitdate normal="1994-01-16">Jan. 16, 1994</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00047" level="file">
+                    <did>
+                        <unittitle>Meeting #46 <unitdate normal="1994-06-05">June 5, 1994</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00048" level="file">
+                    <did>
+                        <unittitle>Meeting #47 <unitdate normal="1995-01-15">Jan. 15, 1995</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00049" level="file">
+                    <did>
+                        <unittitle>Meeting #48 <unitdate normal="1995-06-11">June 11, 1995</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00050" level="file">
+                    <did>
+                        <unittitle>Meeting #49 <unitdate normal="1996-01-21">Jan. 21, 1996</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00051" level="file">
+                    <did>
+                        <unittitle>Meeting #51 <unitdate normal="1997-01-12">Jan. 12, 1997</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00052" level="file">
+                    <did>
+                        <unittitle>Meeting #52 <unitdate normal="1997-07-13">July 13, 1997</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00053" level="file">
+                    <did>
+                        <unittitle>Meeting #61 <unitdate normal="2002-01-20">Jan. 20, 2002</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00054" level="file">
+                    <did>
+                        <unittitle>Meeting #62 <unitdate normal="2002-06-16">June 16, 2002</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00055" level="file">
+                    <did>
+                        <unittitle>Meeting #63 <unitdate normal="2003-01-19">Jan. 19, 2003</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00056" level="file">
+                    <did>
+                        <unittitle>Meeting #64 <unitdate normal="2003-07-06">July 6, 2003</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00057" level="file">
+                    <did>
+                        <unittitle>Meeting #65 <unitdate normal="2004-01-18">Jan. 18, 2004</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00058" level="file">
+                    <did>
+                        <unittitle>Meeting #66 <unitdate normal="2004-06-13">June 13, 2004</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00059" level="file">
+                    <did>
+                        <unittitle>Meeting #67 <unitdate normal="2005-01-23">Jan. 23, 2005</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00060" level="file">
+                    <did>
+                        <unittitle>Meeting #68 <unitdate normal="2005-06-26">June 26, 2005</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00061" level="file">
+                    <did>
+                        <unittitle>Meeting #69 <unitdate normal="2006-01-26">Jan. 26, 2006</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2152-00062" level="file">
+                    <did>
+                        <unittitle>Unidentified meeting materials</unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAC2152-00063" level="series">
+                <did>
+                    
+                    <container label="Box" type="Box">2</container>
+                    <unittitle>Correspondence</unittitle>
+                </did>
+                <c02 id="VAC2152-00064" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1978-06-08/1980-01" type="inclusive">8 June 1978—Jan. 1980;</unitdate> <unitdate normal="1971/2006" type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
