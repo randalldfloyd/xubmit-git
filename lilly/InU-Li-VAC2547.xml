@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAC2547">InU-Li-VAC2547</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Leonard, Elmore mss., <date normal="1970/1988"
+                        >1970-1988</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2012" type="publication">© 2012</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2012">© 2012</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2011" type="source">2012</date>
+                <lb/>Finding aid encoded by Danielle Emerling, Lilly Library, Indiana University,
+                    <date normal="2012-01-18">January 18, 2012.</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2012-01-18">January 18, 2012</date>
+                <item>Encoded finding aid begun.</item>
+            </change>
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Leonard, Elmore, 1925-</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Leonard, Elmore mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1970/1988" type="inclusive"
+                >1970-1988</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2760</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>200 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">Consists of papers of author and
+                screenwriter Elmore “Dutch” Leonard (b. 1925).</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+            <p>Leonard was born in New Orleans, LA and settled eventually in Detroit, MI (a setting
+                for many of his novels). He graduated from the University of Detroit in 1950 and
+                spent the 1950s and 1960s writing pulp western stories and novels. (Two of those
+                    stories—<emph render="italic">The Tall T</emph> and <emph render="italic">3:10
+                    to Yuma</emph> and one of those novels—<emph render="italic">Hombre</emph>—were
+                adapted into movies.) Taking the advice of his agent, Harold “H.N.” Swanson
+                (1899-1991), to "forget the cowboy stuff and write stories with women in them,"
+                Leonard shifted to crime fiction. Novels like <emph render="italic">Mr.
+                    Majestyk</emph> (1974), <emph render="italic">52 Pick-Up</emph> (1974), <emph
+                    render="italic">Swag</emph> (1976), <emph render="italic">The Hunted</emph>
+                (1977), <emph render="italic">City Primeval</emph> (1980), <emph render="italic"
+                    >Stick</emph> (1983), <emph render="italic">LaBrava</emph> (Edgar Award winner
+                for Best Novel, 1984), <emph render="italic">Bandits</emph> (1987), and <emph
+                    render="italic">Freaky Deaky</emph> (1988) trace the evolution of Leonard’s
+                style from hard-boiled mystery-suspense to a seriocomic prose distinctively his own.
+                Many of these works also were adapted to the screen, sometimes by Leonard himself
+                (who was frequently dismayed by the results). Not turning his back completely on the
+                Western genre, he also wrote during this period the screenplay for <emph
+                    render="italic">Joe Kidd</emph> (1972), starring Clint Eastwood, and contributed
+                uncredited work for <emph render="italic">Posse</emph> (1975), starring and directed
+                by Kirk Douglas.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Correspondence; II.
+                Publishing Materials; III. Legal Documents.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>Correspondence consists mainly of letters from Elmore Leonard to H.N Swanson and
+                relate to Leonard’s writing career, pitches to publishers, and screenplay contracts.
+                Also included are photocopies of Leonard’s letters to various producers, managers,
+                and actors (such as Kirk Douglas, Clint Eastwood, and Burt Reynolds) involved in the
+                film adaptations of his novels. Correspondents include Jon Gibson, Marc Jaffe,
+                Eileen Kent, Paul Newman, and H.N. Swanson.</p>
+
+            <p>Publishing materials include Swanson’s copies of newspaper clippings, reviews, ad
+                copy, press releases, and typed revisions pertaining to writings by Elmore Leonard.
+                Legal documents consist of contracts, copyright assignments, and agreements
+                pertaining to novels and screenplays by Elmore Leonard. </p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/leonard+elmore">
+                            <persname encodinganalog="600" source="lcnaf" role="subject">Leonard, Elmore, 1925- --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/gibson+jon">
+                            <persname encodinganalog="700" source="lcnaf" role="subject">Gibson, Jon.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/jaffe+marc">
+                            <persname encodinganalog="700" source="lcnaf" role="subject">Jaffe, Marc.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/kent+eileen">
+                            <persname encodinganalog="700" source="lcnaf" role="subject">Kent, Eileen.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/newman+paul">
+                            <persname encodinganalog="700" source="lcnaf" role="subject">Newman, Paul, 1925-2008.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/swanson+h+n">
+                            <persname encodinganalog="700" source="lcnaf" role="subject">Swanson, H.N.</persname>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/authors+american+correspondence">
+                            <subject encodinganalog="650" source="lcsh">Authors, American --Correspondence.</subject>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="110" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+        <!-- required, if appropriate -->
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 2011</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Leonard, Elmore mss., Lilly Library, Indiana University, Bloomington,
+                    Indiana.</p>
+            </prefercite>
+
+
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Craig Simpson.</p>
+                <p>Completed in <date normal="2011">2011</date></p>
+
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+
+            <c01 id="VAC2547-00001" level="series">
+                <did>
+                    <container label="Box" type="Box">1</container>
+                    <unittitle>Correspondence</unittitle>
+                </did>
+                <c02 id="VAC2547-00002" level="file">
+                    <did>
+                        <unittitle><persname>Leonard, Elmore to Swanson, H.N.</persname> <unitdate
+                                normal="1970-01-15/1973-08-22" type="inclusive">Jan. 15, 1970-Aug.
+                                22, 1973</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2547-00003" level="file">
+                    <did>
+                        <unittitle><persname>Leonard, Elmore</persname> to <persname>Swanson, H.N.</persname> <unitdate
+                                normal="1974-06-03/1978-12-30" type="inclusive">Jun. 3, 1974-Dec.
+                                30, 1978</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2547-00004" level="file">
+                    <did>
+                        <unittitle><persname>Leonard, Elmore</persname> to <persname>Swanson, H.N.</persname> <unitdate
+                                normal="1980-01-24/1981-11-18" type="inclusive">Jan. 24, 1980-Nov.
+                                18, 1981</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2547-00005" level="file">
+                    <did>
+                        <unittitle><persname>Leonard, Elmore</persname> to <persname>Swanson, H.N.</persname> <unitdate
+                                normal="1982-08-26/1987-06-01" type="inclusive">Aug. 26, 1982-Jun.
+                                1, 1987</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2547-00006" level="file">
+                    <did>
+                        <unittitle><persname>Leonard, Elmore</persname> to <persname>Swanson, H.N.</persname> unidentified years</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2547-00007" level="file">
+                    <did>
+                        <unittitle><persname>Leonard, Elmore</persname> to <persname>Eastwood, Clint.</persname> <unitdate normal="1972-03-07"
+                                >Mar. 7, 1972</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2547-00008" level="file">
+                    <did>
+                        <unittitle><persname>Leonard, Elmore</persname> to <persname>Fries, Chuck.</persname> <unitdate
+                                normal="1975-07-30/1975-08-26" type="inclusive">Jul. 30, 1975-Aug.
+                                26, 1975</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2547-00009" level="file">
+                    <did>
+                        <unittitle><persname>Leonard, Elmore</persname> to <persname>Douglas, Kirk.</persname> <unitdate normal="1973-11-29"
+                                >Nov. 29, 1973</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2547-00010" level="file">
+                    <did>
+                        <unittitle><persname>Leonard, Elmore</persname> to <persname>Manby, Bob.</persname> <unitdate normal="1980-03-22">Mar.
+                                22, 1980</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2547-00011" level="file">
+                    <did>
+                        <unittitle><persname>Leonard, Elmore</persname> to <persname>Mirisch, Walter.</persname> <unitdate normal="1983-10-17"
+                                >Oct. 17, 1983</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2547-00012" level="file">
+                    <did>
+                        <unittitle><persname>Leonard, Elmore</persname> to <persname>Reynolds, Burt.</persname> <unitdate normal="1984-06-12"
+                                >Jun. 12, 1984</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2547-00013" level="file">
+                    <did>
+                        <unittitle><persname>Leonard, Elmore</persname> to <persname>"Barbara."</persname> <unitdate normal="1973-04-13">Ap.
+                                13, 1973</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2547-00014" level="file">
+                    <did>
+                        <unittitle><persname>Leonard, Elmore</persname> to <persname>"Ben."</persname> <unitdate
+                                normal="1981-09-26/1987-11-24" type="inclusive">Sept. 26, 1981-Nov.
+                                24, 1987</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2547-00015" level="file">
+                    <did>
+                        <unittitle><persname>Leonard, Elmore</persname> to <persname>"Joel."</persname> Nov. 29 [no year]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2547-00016" level="file">
+                    <did>
+                        <unittitle><persname>Swanson, H.N.</persname> to <persname>Leonard, Elmore</persname>. <unitdate
+                                normal="1970-09-04/1986-09-08" type="inclusive">Sept. 4, 1970-Sept.
+                                8, 1986</unitdate>; <unitdate normal="1970/1988" type="inclusive"
+                                >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2547-00017" level="file">
+                    <did>
+                        <unittitle><persname>Swanson, H.N.</persname> to various correspondents. <unitdate
+                                normal="1970-11-13/1987-01-07" type="inclusive">Nov. 13, 1970-Jan.
+                                7, 1987</unitdate>; <unitdate normal="1970/1988" type="inclusive"
+                                >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2547-00018" level="file">
+                    <did>
+                        <unittitle><persname>Newman, Paul</persname> to <persname>Brank, Tom.</persname> <unitdate normal="1979-06-14">Jun 14,
+                                1979</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2547-00019" level="file">
+                    <did>
+                        <unittitle>G-L; unidentified. <unitdate normal="1983-11-17/1988-08-25"
+                                type="inclusive">Nov. 17, 1983-Aug. 25, 1988</unitdate>; <unitdate
+                                normal="1970/1988" type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+
+            <c01 id="VAC2547-00020" level="series">
+                <did>
+                    <container label="Box" type="Box"/>
+                    <unittitle>Publishing Materials</unittitle>
+                </did>
+                <c02 id="VAC2547-00021" level="file">
+                    <did>
+                        <unittitle>Introduction to <title render="italic">Sprinkled with Ruby
+                                Dust</title>, by Elmore Leonard about H.N. Swanson. <unitdate
+                                normal="1988-09-08">Sept. 8, 1988</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2547-00022" level="file">
+                    <did>
+                        <unittitle>"<title>Keepers</title>," excerpt with Elmore Leonard
+                            synopsis</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2547-00023" level="file">
+                    <did>
+                        <unittitle>Ad copy</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2547-00024" level="file">
+                    <did>
+                        <unittitle>Press releases</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2547-00025" level="file">
+                    <did>
+                        <unittitle>Rejection notices</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC2547-00026" level="file">
+                    <did>
+                        <unittitle>Reviews and announcements</unittitle>
+                    </did>
+                </c02>
+
+
+            </c01>
+
+            <c01 id="VAC2547-00027" level="series">
+                <did>
+                    <container label="Box" type="Box"/>
+                    <unittitle>Legal Documents</unittitle>
+                </did>
+                <c02 id="VAC2547-00028" level="file">
+                    <did>
+                        <unittitle>Contracts, copyright assignments, agreements</unittitle>
+                    </did>
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
