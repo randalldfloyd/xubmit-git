@@ -1,0 +1,2403 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAC3119">InU-Li-VAC3119</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Hoosier State Press Association mss. <date
+                        normal="1969/1984">1969-1984</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2012" type="publication">© 2012</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2012">© 2012</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2012" type="source">2012</date>
+                <lb/>Finding aid encoded by Danielle Emerling, Lilly Library, Indiana University,
+                    <date normal="2012-03-15">March 15, 2012</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2012-03-15">March 15, 2012</date>
+                <item>Encoded finding aid begun.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <corpname encodinganalog="110" source="lcnaf">Hoosier State Press
+                    Association.</corpname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Hoosier State Press Association
+                mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1969/1984" type="inclusive"
+                >1969-1984</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2717</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>25,000 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">          
+            Consists of background materials for the HSPA, as well as Cardwell drafts of legislation and issues of public debate</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Administrative History</head>
+
+            <p>The Hoosier State Press Association mss., ca. 1969-1984, was created by Richard W.
+                Cardwell, General Counsel for the Hoosier State Press Association for twenty-five
+                years.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Subject Files; II. Open
+                Door Law Records; III. Juvenile Code Records; IV. Freedom of Information Records; V.
+                Current Case Files; VI. Miscellaneous.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The collection consists of background materials for the HSPA, as well as Cardwell
+                drafts of the following legislation and issues of public debate: Open Committees in
+                the General Assembly, 1969-1971; Juvenile Code, 1969-1979-; Open Door Law,
+                1975-1977; Public Record Law, 1976-1983; Governor's Commission on Individual
+                Privacy, 1976-1977; Obscenity, 1974-1975; and Access to Criminal Proceedings,
+                1981-1982. In addition, the collection includes clippings, articles, and the
+                association's files on legal developments affecting Indiana newspapers in thirty
+                categories of operations.</p>
+            <p>Subject Files contain correspondence, memoranda, notes, legal documents, newspaper
+                and magazine clippings, and government documents. Open Door Law contains
+                correspondence, memoranda, notes, legal documents, clippings from newspapers and
+                magazines, and government documents regarding House Bill 1022 &amp; Senate Bill 83,
+                House Bill 1237, Senate Bill 304, House Enrolled Act no. 1516, and Senate Enrolled
+                Act no. 83, all of which concern public meetings. (These are also commonly referred
+                to as "Sunshine Laws," "Sunshine Bills," "Open Records Laws," and "Open Meeting
+                Laws.") Juvenile Code Records contain correspondence, memoranda, notes, legal
+                documents, clippings from newspapers and magazines, and government documents.
+                Freedom of Information Records contain correspondence, memoranda, notes, legal
+                documents, clippings from newspapers and magazines, and government documents.
+                Current Case Files contain correspondence, memoranda, notes, legal documents,
+                clippings from newspapers and magazines, and government documents. Some subjects in
+                Current Case Files overlap with Subject Files. The last series, Miscellaneous Files,
+                contains various correspondence, memoranda, notes, legal documents, clippings from
+                newspapers and magazines, and government documents unrelated to any previous
+                series.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/hoosier+state+press+association">
+                            <corpname encodinganalog="610" source="lcnaf" role="subject">Hoosier
+                                State Press Association.</corpname>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/journalism+societies">
+                            <subject encodinganalog="650" source="lcsh">Journalism --Societies,
+                                etc.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/journalism+legal">
+                            <subject encodinganalog="650" source="lcsh">Journalism, Legal.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/freedom+of+the+press">
+                            <subject encodinganalog="650" source="lcsh">Freedom of the
+                                press.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/legislation+indiana+20th+century">
+                            <subject encodinganalog="650" source="lcsh">Legislation --Indiana --20th
+                                century.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/indiana+politics+government">
+                            <geogname encodinganalog="651" source="aacr2">Indiana --Politics and
+                                government.</geogname>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="110" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 2003</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Hoosier State Press Association mss., Lilly Library, Indiana University,
+                    Bloomington, Indiana.</p>
+            </prefercite>
+
+
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Erin Dobias.</p>
+                <p>Completed in <date normal="2012">2012</date></p>
+
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+
+            <c01 id="VAC3119-00001" level="series">
+                <did>
+                    <container label="Box" type="Box">1</container>
+                    <unittitle>Subject Files</unittitle>
+                </did>
+                <scopecontent>
+                    <p>Organized alphabetically by subject, some of which are further subdivided by
+                        topic. Dates range from <unitdate normal="1933/1973" type="inclusive"
+                            >1933–1973,</unitdate> with the bulk in the <unitdate normal="1950/1960"
+                            type="bulk">1950s and early 1960s.</unitdate></p>
+                </scopecontent>
+                <c02 id="VAC3119-00002" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Advertising Contracts, <unitdate
+                                normal="1944/1968" type="inclusive">1944-1968</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00003" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Anniversary Issue, Planning of, <unitdate
+                                normal="1957/1967" type="inclusive">1957-1967</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00004" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Anti-Price Advertising Laws, <unitdate
+                                normal="1944/1966" type="inclusive">1944-1966</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00005" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Bankrupt (Going Out of Business) Sales,
+                                <unitdate normal="1962">1962</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00006" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Budget Percentages, <unitdate
+                                normal="1961/1964" type="inclusive">1961-1964</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00007" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Clairvoyant and Fortune-telling, <unitdate
+                                normal="1961">1961</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00008" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Evaluation of Cost to Produce, <unitdate
+                                normal="1961/1963" type="inclusive">1961-1963</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00009" level="file">
+                    <did>
+                        <unittitle>Advertising (General). False Advertising, <unitdate
+                                normal="1956/1962" type="inclusive">1956-1962</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00010" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Federal Trade Commission, <unitdate
+                                normal="1947/1962" type="inclusive">1947-1962</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00011" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Firearms, <unitdate normal="1961/1962"
+                                type="inclusive">1961-1962</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00012" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Free Advertising (Marking of, Postal
+                            Regulations), <unitdate normal="1953/1960" type="inclusive"
+                                >1953-1960</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00013" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Government Contractors Federal, <unitdate
+                                normal="1961">1961</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00014" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Investment Advisors Federal, <unitdate
+                                normal="1961">1961</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00015" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Not a Contract, <unitdate normal="1960"
+                                >1960</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00016" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Nursing Homes, <unitdate normal="1960"
+                                >1960</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00017" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Order in writing, <unitdate normal="1949"
+                                >1949</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00018" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Parking Meters, <unitdate
+                                normal="1951/1963" type="inclusive">1951-1963</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00019" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Political Advertising (Marking of and Ban
+                            on Soliciting), <unitdate normal="1946/1964" type="inclusive"
+                                >1946-1964</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00020" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Price-fixing Laws, <unitdate
+                                normal="1946/1957" type="inclusive">1946-1957</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00021" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Restrictions on Generally and in Other
+                            States, <unitdate normal="1952/1963" type="inclusive"
+                                >1952-1963</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00022" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Restrictive Ordinances Telephone
+                            Solicitation, <unitdate normal="1958">1958</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00023" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Right of Ownership Copy, <unitdate
+                                normal="1958">1958</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00024" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Right to Advertise Law, <unitdate
+                                normal="1959/1962" type="inclusive">1959-1962</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00025" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Right to Censor Copy, <unitdate
+                                normal="1948/1964" type="inclusive">1948-1964</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00026" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Right to Refuse or Reject, <unitdate
+                                normal="1944/1965" type="inclusive">1944-1965</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00027" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Robinson-Patman Act, <unitdate
+                                normal="1941/1946" type="inclusive">1941-1946</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00028" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Study for Exposure to National Newspaper
+                            Advertising, c.<unitdate normal="1964">1964</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00029" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Tax, Deductibility of, <unitdate
+                                normal="1955/1959" type="inclusive">1955-1959</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00030" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Unfair Competition, <unitdate
+                                normal="1954">1954</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00031" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Unfair Competition Combination or Unit
+                            Advertising Structures Brief, <unitdate normal="1950/1963"
+                                type="inclusive">1950-1963</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00032" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Use of Flat, <unitdate normal="1960/1963"
+                                type="inclusive">1960-1963</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00033" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Use of Money Pictures of Prohibited,
+                                <unitdate normal="1959/1970" type="inclusive"
+                            >1959-1970</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00034" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Used Bedding Ads, <unitdate normal="1958"
+                                >1958</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00035" level="file">
+                    <did>
+                        <unittitle>Advertising (General). Used Car Advertising, <unitdate
+                                normal="1956">1956</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00036" level="file">
+                    <did>
+                        <unittitle>Appraisers, <unitdate normal="1943/1964" type="inclusive"
+                                >1943-1964</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00037" level="file">
+                    <did>
+                        <unittitle>Ballot Printing, <unitdate normal="1944"
+                            >1944</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00038" level="file">
+                    <did>
+                        <unittitle>Ban on Magazine Distribution, <unitdate normal="1948"
+                                >1948</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00039" level="file">
+                    <did>
+                        <unittitle>Better Business Bureau, <unitdate normal="1964/1968"
+                                type="inclusive">1964-1968</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00040" level="file">
+                    <did>
+                        <unittitle>Bonus Payments, <unitdate normal="1947/1952" type="inclusive"
+                                >1947-1952</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00041" level="file">
+                    <did>
+                        <unittitle>Central Publishing, <unitdate normal="1961/1969" type="inclusive"
+                                >1961-1969</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00042" level="file">
+                    <did>
+                        <unittitle>Child Labor, <unitdate normal="1937/1946" type="inclusive"
+                                >1937-1946</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00043" level="file">
+                    <did>
+                        <unittitle>Circulation. General File, <unitdate normal="1945/1962"
+                                type="inclusive">1945-1962</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00044" level="file">
+                    <did>
+                        <unittitle>Circulation. Misrepresentation of, <unitdate normal="1945/1965"
+                                type="inclusive">1945-1965</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00045" level="file">
+                    <did>
+                        <unittitle>Comic Book Ordinances, <unitdate normal="1955"
+                            >1955</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00046" level="file">
+                    <did>
+                        <unittitle>Compilation, Public Notice Laws of Indiana, <unitdate
+                                normal="1969/1984">Undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00047" level="file">
+                    <did>
+                        <unittitle>Contempt of Court. Newspapers, <unitdate normal="1942/1961"
+                                type="inclusive">1942-1961</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00048" level="file">
+                    <did>
+                        <unittitle>Correspondence with Newspapers, <unitdate normal="1957/1973"
+                                type="inclusive">1957-1973</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00049" level="file">
+                    <did>
+                        <unittitle>Depreciation: Equipment, <unitdate normal="1949/1968"
+                                type="inclusive">1949-1968</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00050" level="file">
+                    <did>
+                        <unittitle>Equipment, Evaluation of, <unitdate normal="1948/1961"
+                                type="inclusive">1948-1961</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00051" level="file">
+                    <did>
+                        <unittitle>False Information to Newspapers, <unitdate normal="1946/1964"
+                                type="inclusive">1946-1964</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00052" level="file">
+                    <did>
+                        <unittitle>Freedom of the Press, <unitdate normal="1942/1963"
+                                type="inclusive">1942-1963</unitdate></unittitle>
+                    </did>
+                </c02>
+
+
+
+                <c02 id="VAC3119-00053" level="file">
+                    <did>
+                        <container label="Box" type="Box">2</container>
+                        <unittitle>Independent Contractors. General File, <unitdate
+                                normal="1947/1963" type="inclusive">1947-1963</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00054" level="file">
+                    <did>
+                        <unittitle>Inserts, <unitdate normal="1961/1962" type="inclusive"
+                                >1961-1962</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00055" level="file">
+                    <did>
+                        <unittitle>Inserts. Supplements, <unitdate normal="1948/1972 "
+                                type="inclusive">1948-1972 </unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00056" level="file">
+                    <did>
+                        <unittitle>Labor Relations, <unitdate normal="1961/1968 " type="inclusive"
+                                >1961-1968 </unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00057" level="file">
+                    <did>
+                        <unittitle>Labor Relations. American Newspaper Guild, <unitdate
+                                normal="1944">1944</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00058" level="file">
+                    <did>
+                        <unittitle>Labor Relations. Labor Relations Board, <unitdate normal="1954"
+                                >1954</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00059" level="file">
+                    <did>
+                        <unittitle>Labor Relations. Right to Work and Agency Shop, Clauses,
+                                <unitdate normal="1961/1964" type="inclusive"
+                            >1961-1964</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00060" level="file">
+                    <did>
+                        <unittitle>Labor Relations. Taft-Hartley Act, <unitdate normal="1947/1962"
+                                type="inclusive">1947-1962</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00061" level="file">
+                    <did>
+                        <unittitle>Laws and Legislation (National), <unitdate normal="1943/1952"
+                                type="inclusive">1943-1952</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00062" level="file">
+                    <did>
+                        <unittitle>Laws and Legislation (State), <unitdate normal="1947/1961"
+                                type="inclusive">1947-1961</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00063" level="file">
+                    <did>
+                        <unittitle>Legal Advertising, <unitdate normal="1963/1967" type="inclusive"
+                                >1963-1967</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00064" level="file">
+                    <did>
+                        <unittitle>Legal Advertising. Annual School Report, <unitdate
+                                normal="1963/1965" type="inclusive">1963-1965</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00065" level="file">
+                    <did>
+                        <unittitle>Legal Advertising. Assessment of Real Estate Notice, <unitdate
+                                normal="1941">1941</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00066" level="file">
+                    <did>
+                        <unittitle>Legal Advertising. Birth Notice Publication, <unitdate
+                                normal="1943">1943</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00067" level="file">
+                    <did>
+                        <unittitle>Legal Advertising. Budget and Tax Levy Notice, <unitdate
+                                normal="1944/1965" type="inclusive">1944-1965</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00068" level="file">
+                    <did>
+                        <unittitle>Legal Advertising. Change of Name or Publication Site, <unitdate
+                                normal="1939/1965" type="inclusive">1939-1965</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00069" level="file">
+                    <did>
+                        <unittitle>Legal Advertising. Claim Form for Publishers, <unitdate
+                                normal="1957/1960" type="inclusive">1957-1960</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00070" level="file">
+                    <did>
+                        <unittitle>Legal Advertising. Claims &amp; Allowances, <unitdate
+                                normal="1963">1963</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00071" level="file">
+                    <did>
+                        <unittitle>Legal Advertising. Circulation as Basis, <unitdate
+                                normal="1939/1950" type="inclusive">1939-1950</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00072" level="file">
+                    <did>
+                        <unittitle>Legal Advertising. Construction of Term - "Newspaper" - Political
+                            Affiliation - Free Circulation, <unitdate normal="1933/1969"
+                                type="inclusive">1933-1969</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00073" level="file">
+                    <did>
+                        <unittitle>Legal Advertising. Court Decisions, Etc., <unitdate
+                                normal="1943/1966" type="inclusive">1943-1966</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00074" level="file">
+                    <did>
+                        <unittitle>Legal Advertising. Duties of Officials, <unitdate
+                                normal="1940/1953" type="inclusive">1940-1953</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00075" level="file">
+                    <did>
+                        <unittitle>Legal Advertising. Election Notices (empty)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00076" level="file">
+                    <did>
+                        <unittitle>Legal Advertising. Five Year Clause, <unitdate normal="1933/1966"
+                                type="inclusive">1933-1966</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00077" level="file">
+                    <did>
+                        <unittitle>Legal Advertising. Highway Department Notices, <unitdate
+                                normal="1950">1950</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00078" level="file">
+                    <did>
+                        <unittitle>Legal Advertising. Library Annual Report, <unitdate
+                                normal="1942/1946" type="inclusive">1942-1946</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00079" level="file">
+                    <did>
+                        <unittitle>Legal Advertising. Newspapers - Definition - Right to Publish
+                            Leg. Advertising, <unitdate normal="1957/1959" type="inclusive"
+                                >1957-1959</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00080" level="file">
+                    <did>
+                        <unittitle>Legal Advertising. Notice to Quiet Title, <unitdate normal="1946"
+                                >1946</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00081" level="file">
+                    <did>
+                        <unittitle>Legal Advertising. Price of Publication, <unitdate
+                                normal="1946/1964" type="inclusive">1946-1964</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00082" level="file">
+                    <did>
+                        <unittitle>Legal Advertising. Publication of Penalty Ordinances, <unitdate
+                                normal="1953/1965" type="inclusive">1953-1965</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00083" level="file">
+                    <did>
+                        <unittitle>Legal Advertising. Rates, <unitdate normal="1943/1963"
+                                type="inclusive">1943-1963</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00084" level="file">
+                    <did>
+                        <unittitle>Legal Advertising. Suspension of Paper, <unitdate normal="1963"
+                                >1963</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00085" level="file">
+                    <did>
+                        <unittitle>Legal Advertising. TWP Trustee Annual Report - New Law -
+                                <unitdate normal="1951">1951,</unitdate>
+                            <unitdate normal="1951/1954" type="inclusive"
+                            >1951-1954</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00086" level="file">
+                    <did>
+                        <unittitle>Liability of Employer for Employee, <unitdate normal="1948"
+                                >1948</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00087" level="file">
+                    <did>
+                        <unittitle>Libel, <unitdate normal="1940/1964 " type="inclusive">1940-1964
+                            </unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00088" level="file">
+                    <did>
+                        <unittitle>Licensing of Newspapers, <unitdate normal="1942/1961"
+                                type="inclusive">1942-1961</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00089" level="file">
+                    <did>
+                        <unittitle>Lotteries, <unitdate normal="1943/1968 " type="inclusive"
+                                >1943-1968 </unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00090" level="file">
+                    <did>
+                        <unittitle>Misrepresentation. Liability, <unitdate normal="1953"
+                                >1953</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00091" level="file">
+                    <did>
+                        <unittitle>Monopolies, <unitdate normal="1949">1949</unitdate></unittitle>
+                    </did>
+                </c02>
+
+
+
+                <c02 id="VAC3119-00092" level="file">
+                    <did>
+                        <container label="Box" type="Box">3</container>
+                        <unittitle>National Newspaperboy Day. Governor's Proclamation, <unitdate
+                                normal="1965">1965</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00093" level="file">
+                    <did>
+                        <unittitle>N.E.A. Bulletins. <unitdate normal="1961/1962" type="inclusive"
+                                >1961-1962</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00094" level="file">
+                    <did>
+                        <unittitle>Newspaper Cases. <unitdate normal="1938/1960" type="inclusive"
+                                >1938-1960</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00095" level="file">
+                    <did>
+                        <unittitle>Newspaper Institute of America. <unitdate normal="1951/1960"
+                                type="inclusive">1951-1960</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00096" level="file">
+                    <did>
+                        <unittitle>Newspaper Public Information Committee. <unitdate
+                                normal="1964/1967" type="inclusive">1964-1967</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00097" level="file">
+                    <did>
+                        <unittitle>Newspaper. Management, <unitdate normal="1951/1967"
+                                type="inclusive">1951-1967</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00098" level="file">
+                    <did>
+                        <unittitle>Newspapers. General Circulation, <unitdate normal="1933/1984"
+                                type="inclusive">Undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00099" level="file">
+                    <did>
+                        <unittitle>News Pictures. <unitdate normal="1946/1947" type="inclusive"
+                                >1946-1947</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00100" level="file">
+                    <did>
+                        <unittitle>Nuisance Newspapers. <unitdate normal="1930/1984"
+                                type="inclusive">Undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00101" level="file">
+                    <did>
+                        <unittitle>Offset. <unitdate normal="1961/1969" type="inclusive"
+                                >1961-1969</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00102" level="file">
+                    <did>
+                        <unittitle>Optometry Publicity. <unitdate normal="1949/1965"
+                                type="inclusive">1949-1965</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00103" level="file">
+                    <did>
+                        <unittitle>Ordinances. <unitdate normal="1940/1966" type="inclusive"
+                                >1940-1966</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00104" level="file">
+                    <did>
+                        <unittitle>Paper, History of. <unitdate normal="1962"
+                            >1962</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00105" level="file">
+                    <did>
+                        <unittitle>Pension and Profit Sharing Plan. <unitdate normal="1949/1968"
+                                type="inclusive">1949-1968</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00106" level="file">
+                    <did>
+                        <unittitle>Photography. <unitdate normal="1951/1963" type="inclusive"
+                                >1951-1963</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00107" level="file">
+                    <did>
+                        <unittitle>Plant Layout. <unitdate normal="1962">1962</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00108" level="file">
+                    <did>
+                        <unittitle>Pleadings, Contents of (Privilege). <unitdate normal="1947/1954"
+                                type="inclusive">1947-1954</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00109" level="file">
+                    <did>
+                        <unittitle>Postal Laws and Regulations. <unitdate normal="1939/1966 "
+                                type="inclusive">1939-1966 </unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00110" level="file">
+                    <did>
+                        <unittitle>Postal Sectional Centers. Comments on by Members, <unitdate
+                                normal="1965/1967" type="inclusive">1965-1967</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00111" level="file">
+                    <did>
+                        <unittitle>Public Records, Inspection of. <unitdate normal="1948/1968"
+                                type="inclusive">1948-1968</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00112" level="file">
+                    <did>
+                        <unittitle>Public Relations Brochures and Newspaper Promotion. <unitdate
+                                normal="1943/1966" type="inclusive">1943-1966</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00113" level="file">
+                    <did>
+                        <unittitle>Publishing in Case of Disaster. <unitdate normal="1957/1963"
+                                type="inclusive">1957-1963</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00114" level="file">
+                    <did>
+                        <unittitle>Questionable Concerns. <unitdate normal="1951/1969"
+                                type="inclusive">1951-1969</unitdate></unittitle>
+                    </did>
+                </c02>
+
+
+
+                <c02 id="VAC3119-00115" level="file">
+                    <did>
+                        <container label="Box" type="Box">4</container>
+                        <unittitle>Questionable Concerns (continued). <unitdate normal="1951/1969"
+                                type="inclusive">1951-1969</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00116" level="file">
+                    <did>
+                        <unittitle>Radio. General File, <unitdate normal="1943/1948"
+                                type="inclusive">1943-1948</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00117" level="file">
+                    <did>
+                        <unittitle>Readability of Newspapers. <unitdate normal="1947"
+                                >1947</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00118" level="file">
+                    <did>
+                        <unittitle>Robinson-Patman Act. <unitdate normal="1936/1937"
+                                type="inclusive">1936-1937</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00119" level="file">
+                    <did>
+                        <unittitle>Rural Correspondents, Independent Contractors. (Dearborn Pub.
+                            Col. &amp; Winemac Repub.), <unitdate normal="1939/1967"
+                                type="inclusive">1939-1967 </unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00120" level="file">
+                    <did>
+                        <unittitle>Sales Tax. Adjusted Gross Income Tax, <unitdate
+                                normal="1960/1964" type="inclusive">1960-1964</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00121" level="file">
+                    <did>
+                        <unittitle>Sales Tax. Dept. of Revenue Releases, Forms, etc., <unitdate
+                                normal="1963/1965" type="inclusive">1963-1965</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00122" level="file">
+                    <did>
+                        <unittitle>Sales Tax. General Information, <unitdate normal="1963"
+                                >1963</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00123" level="file">
+                    <did>
+                        <unittitle>Sales Tax. Industry Guidelines, <unitdate normal="1963"
+                                >1963</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00124" level="file">
+                    <did>
+                        <unittitle>Sales Tax. Newspapers. Sales Tax Returns, <unitdate normal="1963"
+                                >1963</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00125" level="file">
+                    <did>
+                        <unittitle>Sales Tax. Research, <unitdate normal="1960/1963"
+                                type="inclusive">1960-1963</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00126" level="file">
+                    <did>
+                        <unittitle>Sales Tax. Sales Tax Meeting, <unitdate normal="1963"
+                                >1963</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00127" level="file">
+                    <did>
+                        <unittitle>Sample Copies. <unitdate normal="1951"
+                            >1951</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00128" level="file">
+                    <did>
+                        <unittitle>Saturday Promotion. <unitdate normal="1955"
+                            >1955</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00129" level="file">
+                    <did>
+                        <unittitle>Selective Service and G. I. Bill. <unitdate normal="1944/1951"
+                                type="inclusive">1944-1951</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00130" level="file">
+                    <did>
+                        <unittitle>Severance Pay Policies. <unitdate normal="1930/1984"
+                                type="inclusive">Undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00131" level="file">
+                    <did>
+                        <unittitle>Sick Leave Policies on Pay. <unitdate normal="1953/1957"
+                                type="inclusive">1953-1957</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00132" level="file">
+                    <did>
+                        <unittitle>Social Security. Coverage, <unitdate normal="1951/1957"
+                                type="inclusive">1951-1957</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00133" level="file">
+                    <did>
+                        <unittitle>Social Security. Federalization, <unitdate normal="1950/1959"
+                                type="inclusive">195?</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00134" level="file">
+                    <did>
+                        <unittitle>Social Security. Old Age Benefits, <unitdate normal="1939/1968"
+                                type="inclusive">1939-1968</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00135" level="file">
+                    <did>
+                        <unittitle>Social Security. Records Inspection, <unitdate normal="1939"
+                                >1939</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00136" level="file">
+                    <did>
+                        <unittitle>Social Security. Unemployment Comp., <unitdate normal="1940/1951"
+                                type="inclusive">1940-1951</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00137" level="file">
+                    <did>
+                        <unittitle>State &amp; Federal Govt. Offices Dealing with Personnel
+                            Relations. Received Oct. <unitdate normal="1950">1950,
+                            1950?</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00138" level="file">
+                    <did>
+                        <unittitle>Suburban Newspapers. <unitdate normal="1961"
+                            >1961</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00139" level="file">
+                    <did>
+                        <unittitle>Syndicated Features. <unitdate normal="1963/1973"
+                                type="inclusive">1963-1973</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00140" level="file">
+                    <did>
+                        <unittitle>Taxation. Corporations. <unitdate normal="1949/1962"
+                                type="inclusive">1949-1962</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00141" level="file">
+                    <did>
+                        <unittitle>Taxation. State Property. <unitdate normal="1956/1967 "
+                                type="inclusive">1956-1967 </unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00142" level="file">
+                    <did>
+                        <unittitle>Taxation of Advertising. <unitdate normal="1963/1969"
+                                type="inclusive">1963-1969</unitdate></unittitle>
+                    </did>
+                </c02>
+
+
+
+                <c02 id="VAC3119-00143" level="file">
+                    <did>
+                        <container label="Box" type="Box">5</container>
+                        <unittitle>Taxes. Federal, <unitdate normal="1946/1967" type="inclusive"
+                                >1946-1967</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00144" level="file">
+                    <did>
+                        <unittitle>Taxes. Federal Withholding, <unitdate normal="1943"
+                                >1943</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00145" level="file">
+                    <did>
+                        <unittitle>Taxes. Gross Income, <unitdate normal="1933/1948"
+                                type="inclusive">1933-1948</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00146" level="file">
+                    <did>
+                        <unittitle>Taxes. Illinois Rental Tax, <unitdate normal="1961/1964"
+                                type="inclusive">1961-1964</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00147" level="file">
+                    <did>
+                        <unittitle>Taxes. License Taxes, <unitdate normal="1964/1969"
+                                type="inclusive">1964-1969</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00148" level="file">
+                    <did>
+                        <unittitle>Tax on Advertising . Iowa. <unitdate normal="1967/1970"
+                                type="inclusive">1967-1970</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00149" level="file">
+                    <did>
+                        <unittitle>Textbooks. <unitdate normal="1950">1950</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00150" level="file">
+                    <did>
+                        <unittitle>Trademarks. <unitdate normal="1946/1965" type="inclusive"
+                                >1946-1965</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00151" level="file">
+                    <did>
+                        <unittitle>Typography. <unitdate normal="1962/1967" type="inclusive"
+                                >1962-1967</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00152" level="file">
+                    <did>
+                        <unittitle>Unemployment Compensation. Law and Matters, <unitdate
+                                normal="1957/1966" type="inclusive">1957-1966</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00153" level="file">
+                    <did>
+                        <unittitle>Unfair Competition. <unitdate normal="1960/1963" type="inclusive"
+                                >1960-1963</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00154" level="file">
+                    <did>
+                        <unittitle>Unfair Competition and Violation of Copyright. <unitdate
+                                normal="1955/1964" type="inclusive">1955-1964</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00155" level="file">
+                    <did>
+                        <unittitle>Veterans. Administration. <unitdate normal="1948/1953"
+                                type="inclusive">1948-1953</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00156" level="file">
+                    <did>
+                        <unittitle>Veterans. General File. <unitdate normal="1945"
+                            >1945</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00157" level="file">
+                    <did>
+                        <unittitle>Wage-Hour Law. <unitdate normal="1943/1970 " type="inclusive"
+                                >1943-1970 </unitdate></unittitle>
+                        <physdesc>(5 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00158" level="file">
+                    <did>
+                        <unittitle>Wage-Hour Law. Amendments, <unitdate normal="1947/1963"
+                                type="inclusive">1947-1963</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00159" level="file">
+                    <did>
+                        <unittitle>Wage-Hour Law. Correspondence, <unitdate normal="1941/1955"
+                                type="inclusive">1941-1955</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00160" level="file">
+                    <did>
+                        <unittitle>Wage-Hour Law. Court &amp; Administrative Rulings, etc.,
+                                <unitdate normal="1938/1963" type="inclusive"
+                            >1938-1963</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00161" level="file">
+                    <did>
+                        <unittitle>Wage-Hour Law. Definitions &amp; Coverage, <unitdate
+                                normal="1939/1963" type="inclusive">1939-1963</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00162" level="file">
+                    <did>
+                        <unittitle>Wage-Hour Law. General File, <unitdate normal="1958/1964"
+                                type="inclusive">1958-1964</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00163" level="file">
+                    <did>
+                        <unittitle>Wage-Hour Law. Pertaining to Weeklies, <unitdate
+                                normal="1939/1942" type="inclusive">1939-1942</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00164" level="file">
+                    <did>
+                        <unittitle>Wage-Hour Law. "Printing," <unitdate normal="1951"
+                                >1951</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00165" level="file">
+                    <did>
+                        <unittitle>Wage-Hour Law. Suggested Payroll Record Forms, <unitdate
+                                normal="1939/1940" type="inclusive">1939-1940</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00166" level="file">
+                    <did>
+                        <unittitle>Welfare. Public and Social Security, <unitdate normal="1951"
+                                >1951</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00167" level="file">
+                    <did>
+                        <unittitle>Workmen's Compensation Insurance. <unitdate normal="1936/1965"
+                                type="inclusive">1936-1965</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAC3119-00168" level="series">
+                <did>
+                    <container label="Box" type="Box">6</container>
+                    <unittitle>Open Door Law Records</unittitle>
+                </did>
+                <scopecontent>
+                    <p>Dates range from <unitdate normal="1966/1979" type="inclusive"
+                            >1966-1979.</unitdate></p>
+                </scopecontent>
+                <c02 id="VAC3119-00169" level="file">
+                    <did>
+                        <unittitle>1977 - Access. H.B. 1022 &amp; S.B. 83, HSPA "Open Door Law,"
+                                <unitdate normal="1976/1977" type="inclusive"
+                            >1976-1977</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00170" level="file">
+                    <did>
+                        <unittitle>Models. <unitdate normal="1966/1979" type="inclusive"
+                                >1966-1979</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00171" level="file">
+                    <did>
+                        <unittitle>Revisions (1979). <unitdate normal="1979"
+                            >1979</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00172" level="file">
+                    <did>
+                        <unittitle>Survey. <unitdate normal="1978">1978</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00173" level="file">
+                    <did>
+                        <unittitle>Task Force. <unitdate normal="1975/1976" type="inclusive"
+                                >1975-1976</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00174" level="file">
+                    <did>
+                        <unittitle>Candidates' Responses. <unitdate normal="1976"
+                            >1976</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00175" level="file">
+                    <did>
+                        <unittitle>Examples of Secrecy. <unitdate normal="1975/1977"
+                                type="inclusive">1975-1977</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00176" level="file">
+                    <did>
+                        <unittitle>H.B. 1237 1976. Legislative History, <unitdate normal="1969/1977"
+                                type="inclusive">1969-1977</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00177" level="file">
+                    <did>
+                        <unittitle>H.B. 1237 1976. Newspaper Articles Related to It, <unitdate
+                                normal="1975/1976" type="inclusive">1975-1976</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00178" level="file">
+                    <did>
+                        <unittitle>Interim Study Committee (1976). <unitdate normal="1973/1976"
+                                type="inclusive">1973-1976</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAC3119-00179" level="series">
+                <did>
+                    <container label="Box" type="Box">6</container>
+                    <unittitle>Juvenile Code Records</unittitle>
+                </did>
+                <scopecontent>
+                    <p>Dates range from <unitdate normal="1965/1979" type="inclusive"
+                            >1965-1979.</unitdate></p>
+                </scopecontent>
+                <c02 id="VAC3119-00180" level="file">
+                    <did>
+                        <unittitle>Federation of Clubs - Attitudes Toward Juvenile Court
+                            Publications. <unitdate normal="1969">1969</unitdate> H.B. 1028.
+                                <unitdate normal="1977">1977</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00181" level="file">
+                    <did>
+                        <container label="Box" type="Box">7</container>
+                        <unittitle>H.B. 1028. Proposed Amendment, <unitdate normal="1979"
+                                >1979</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00182" level="file">
+                    <did>
+                        <unittitle>House Enrolled Acts 2107. <unitdate normal="1930/1984"
+                                type="inclusive">Undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00183" level="file">
+                    <did>
+                        <unittitle>Indiana Juvenile Code. <unitdate normal="1977"
+                            >1977</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00184" level="file">
+                    <did>
+                        <unittitle>Indiana Juvenile Code. Proposed Final Draft (September 1977),
+                                <unitdate normal="1977">1977</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00185" level="file">
+                    <did>
+                        <unittitle>Information About Juveniles - Indiana. <unitdate
+                                normal="1965/1979" type="inclusive">1965-1979</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00186" level="file">
+                    <did>
+                        <unittitle>Juvenile Records and Proceedings Access Survey, Replies.
+                                <unitdate normal="1973">1973</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00187" level="file">
+                    <did>
+                        <unittitle>Policies on Juveniles. <unitdate normal="1964/1977"
+                                type="inclusive">1964-1977</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00188" level="file">
+                    <did>
+                        <unittitle>Proposed Juvenile Code (1977-1978). <unitdate normal="1976/1978"
+                                type="inclusive">1976-1978</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00189" level="file">
+                    <did>
+                        <unittitle>Rules of Juvenile Procedure . Supreme Court of Indiana. <unitdate
+                                normal="1973/1974" type="inclusive">1973-1974</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00190" level="file">
+                    <did>
+                        <unittitle>S.B. 15 - Access to Information (1969). <unitdate normal="1969"
+                                >1969</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00191" level="file">
+                    <did>
+                        <unittitle>S.B. 15, S.B. 112, &amp; H.B. 1028. <unitdate normal="1969/1978"
+                                type="inclusive">1969-1978</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00192" level="file">
+                    <did>
+                        <unittitle>S.B. 112 . Access to Information (1971). <unitdate
+                                normal="1969/1971" type="inclusive">1969-1971</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAC3119-00193" level="series">
+                <did>
+                    <container label="Box" type="Box">7</container>
+                    <unittitle>Freedom of Information Records</unittitle>
+                </did>
+                <scopecontent>
+                    <p>Dates range from <unitdate normal="1954/1977" type="inclusive"
+                            >1954-1977.</unitdate></p>
+                </scopecontent>
+                <c02 id="VAC3119-00194" level="file">
+                    <did>
+                        <unittitle>Access to Police Records (1964-1974). <unitdate
+                                normal="1964/1976" type="inclusive">1964-1976</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00195" level="file">
+                    <did>
+                        <unittitle>Access to Police Records (1975-1977). <unitdate
+                                normal="1975/1977" type="inclusive">1975-1977</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00196" level="file">
+                    <did>
+                        <unittitle>Convention Legislative Speech (1969). <unitdate normal="1969"
+                                >1969</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00197" level="file">
+                    <did>
+                        <unittitle>Freedom of Information Center. <unitdate normal="1968/1975"
+                                type="inclusive">1968-1975</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00198" level="file">
+                    <did>
+                        <unittitle>Freedom of Information Center. Advisory Committee Meetings
+                            (1963), <unitdate normal="1963">1963</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00199" level="file">
+                    <did>
+                        <unittitle>Freedom of Information Center. Advisory Council Meeting (1967),
+                                <unitdate normal="1967">1967</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00200" level="file">
+                    <did>
+                        <unittitle>Freedom of Information Center. Advisory Council Meeting (Feb, 27,
+                            1970), <unitdate normal="1970">1970</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00201" level="file">
+                    <did>
+                        <container label="Box" type="Box">8</container>
+                        <unittitle>Freedom of Information Center. Advisory Council Memos, <unitdate
+                                normal="1961/1970" type="inclusive">1961-1970</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00202" level="file">
+                    <did>
+                        <unittitle>Freedom of Information Center. Conference (1966), <unitdate
+                                normal="1966">1966</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00203" level="file">
+                    <did>
+                        <unittitle>Freedom of Information Center. Consulting, <unitdate
+                                normal="1962/1963" type="inclusive">1962-1963</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00204" level="file">
+                    <did>
+                        <unittitle>Freedom of Information Center. Correspondence, <unitdate
+                                normal="1963/1971" type="inclusive">1963-1971</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00205" level="file">
+                    <did>
+                        <unittitle>Freedom of Information Center. General Materials, <unitdate
+                                normal="1958/1969" type="inclusive">1958-1969</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00206" level="file">
+                    <did>
+                        <unittitle>Freedom of Information Center. Information About, <unitdate
+                                normal="1963/1972" type="inclusive">1963-1972</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00207" level="file">
+                    <did>
+                        <unittitle>Freedom of Information Center. Information About Sustaining
+                            Members, <unitdate normal="1963/1966" type="inclusive"
+                                >1963-1966</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00208" level="file">
+                    <did>
+                        <unittitle>Freedom of Information Center. Keeping the Press Free, <unitdate
+                                normal="1963">1963</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00209" level="file">
+                    <did>
+                        <unittitle>Freedom of Information Conference Speeches (1958-1961), <unitdate
+                                normal="1958/1961" type="inclusive">1958-1961</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00210" level="file">
+                    <did>
+                        <unittitle>Freedom of Information Conference Speeches (1962-1964), <unitdate
+                                normal="1962/1968" type="inclusive">1962-1968</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00211" level="file">
+                    <did>
+                        <unittitle>Position Papers (1963-1965). <unitdate normal="1964/1965"
+                                type="inclusive">1964-1965</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00212" level="file">
+                    <did>
+                        <unittitle>Position Papers (1966-1970). <unitdate normal="1966/1970"
+                                type="inclusive">1966-1970</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00213" level="file">
+                    <did>
+                        <unittitle>Sigma Delta Chi Reports. <unitdate normal="1954/1970"
+                                type="inclusive">1954-1970</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAC3119-00214" level="series">
+                <did>
+                    <container label="Box" type="Box">9</container>
+                    <unittitle>Current Case Files</unittitle>
+                </did>
+                <arrangement>
+                    <p>Series is organized alphabetically by subject, some of which are further
+                        subdivided into topical divisions. </p>
+                </arrangement>
+                <scopecontent>
+                    <p>Dates range from <unitdate normal="1941/1978" type="inclusive"
+                            >1941-1978,</unitdate> with the bulk in the <unitdate normal="1960/1969"
+                            type="bulk">1960s.</unitdate></p>
+                </scopecontent>
+                <c02 id="VAC3119-00215" level="file">
+                    <did>
+                        <unittitle>Advertising. <unitdate normal="1963/1976" type="inclusive"
+                                >1963-1976</unitdate></unittitle>
+                        <physdesc>(5 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00216" level="file">
+                    <did>
+                        <unittitle>Advertising. Terre Haute Ad Club Speech. <unitdate
+                                normal="1969-05-21">May 21, 1969,</unitdate>
+                            <unitdate normal="1967/1969" type="inclusive"
+                            >1967-1969</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00217" level="file">
+                    <did>
+                        <unittitle>Advertising. Unreported Cases . Recent Developments, <unitdate
+                                normal="1961/1977" type="inclusive">1961-1977</unitdate></unittitle>
+                        <physdesc>(8 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00218" level="file">
+                    <did>
+                        <unittitle>Contempt of Court. <unitdate normal="1963/1972" type="inclusive"
+                                >1963-1972</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00219" level="file">
+                    <did>
+                        <unittitle>Contempt of Court. Memphis (Tenn.) Contempt Cases, <unitdate
+                                normal="1968">1968</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00220" level="file">
+                    <did>
+                        <unittitle>Contempt of Court. Unreported Cases, Recent Developments,
+                                <unitdate normal="1962/1977" type="inclusive"
+                            >1962-1977</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00221" level="file">
+                    <did>
+                        <container label="Box" type="Box">10</container>
+                        <unittitle>Copyright. <unitdate normal="1963/1976" type="inclusive"
+                                >1963-1976</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00222" level="file">
+                    <did>
+                        <unittitle>Copyright. Unreported Cases - Recent Developments, <unitdate
+                                normal="1963/1977" type="inclusive">1963-1977</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00223" level="file">
+                    <did>
+                        <unittitle>During-Trial Publicity. <unitdate normal="1962/1975"
+                                type="inclusive">1962-1975</unitdate></unittitle>
+                        <physdesc>(6 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00224" level="file">
+                    <did>
+                        <unittitle>During-Trial Publicity. Post Shepard <unitdate normal="1966/1976"
+                                type="inclusive">1966-1976</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00225" level="file">
+                    <did>
+                        <unittitle>During-Trial Publicity. Unreported Cases - Recent Developments,
+                                <unitdate normal="1975/1977" type="inclusive"
+                            >1975-1977</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00226" level="file">
+                    <did>
+                        <unittitle>Federal Communications Commission. <unitdate normal="1963/1972"
+                                type="inclusive">1963-1972</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00227" level="file">
+                    <did>
+                        <unittitle>Federal Communications Commission. Unreported Cases - Recent
+                            Developments, <unitdate normal="1964/1977" type="inclusive"
+                                >1964-1977</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00228" level="file">
+                    <did>
+                        <unittitle>Federal Court Jurisdiction. <unitdate normal="1963/1970"
+                                type="inclusive">1963-1970</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00229" level="file">
+                    <did>
+                        <unittitle>Federal Court Jurisdiction. Unreported Cases - Recent
+                            Developments, <unitdate normal="1967/1977" type="inclusive"
+                                >1967-1977</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00230" level="file">
+                    <did>
+                        <unittitle>Federal Trade Commission. <unitdate normal="1963/1968"
+                                type="inclusive">1963-1968</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00231" level="file">
+                    <did>
+                        <unittitle>Federal Trade Commission. Unreported Cases - Recent Developments,
+                                <unitdate normal="1964/1976" type="inclusive"
+                            >1964-1976</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00232" level="file">
+                    <did>
+                        <container label="Box" type="Box">11</container>
+                        <unittitle>Freedom of Press. <unitdate normal="1962/1977" type="inclusive"
+                                >1962-1977</unitdate></unittitle>
+                        <physdesc>(16 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00233" level="file">
+                    <did>
+                        <container label="Box" type="Box">12</container>
+                        <unittitle>Freedom of Press. Unreported Cases - Recent Developments,
+                                <unitdate normal="1963/1969" type="inclusive"
+                            >1963-1969</unitdate></unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00234" level="file">
+                    <did>
+                        <unittitle>Free Press - Fair Trial. American Newspaper Publishers
+                            Association Report, <unitdate normal="1966/1967" type="inclusive"
+                                >1966-1967</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00235" level="file">
+                    <did>
+                        <unittitle>Free Press - Fair Trial. Hearings, <unitdate normal="1965"
+                                >1965</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00236" level="file">
+                    <did>
+                        <unittitle>Free Press - Fair Trial. Medina Report. Association of the Bar of
+                            the City of New York, <unitdate normal="1966/1967" type="inclusive"
+                                >1966-1967</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00237" level="file">
+                    <did>
+                        <unittitle>Free Press - Fair Trial. Reardon Report &amp; Comments, <unitdate
+                                normal="1964/1969" type="inclusive">1964-1969</unitdate></unittitle>
+                        <physdesc>(7 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00238" level="file">
+                    <did>
+                        <unittitle>Free Press - Fair Trial. Restrictions on News Coverage by Courts,
+                                <unitdate normal="1969/1972" type="inclusive"
+                            >1969-1972</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00239" level="file">
+                    <did>
+                        <unittitle>Free Press - Fair Trial. Restrictions on News Coverage by Courts.
+                            Pre-Trial, <unitdate normal="1966/1967" type="inclusive"
+                                >1966-1967</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00240" level="file">
+                    <did>
+                        <unittitle>Free Press - Fair Trial. Restrictions on News Coverage by Courts.
+                            During Trial, <unitdate normal="1966/1968" type="inclusive"
+                                >1966-1968</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00241" level="file">
+                    <did>
+                        <unittitle>Free Press - Fair Trial. Restrictions on News Coverage by Courts.
+                            Post-Trial, <unitdate normal="1966/1967" type="inclusive"
+                                >1966-1967</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00242" level="file">
+                    <did>
+                        <unittitle>Free Press - Fair Trial. Restrictions on News Release by Police.
+                            Pre-Trial, <unitdate normal="1966/1967" type="inclusive"
+                                >1966-1967</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00243" level="file">
+                    <did>
+                        <container label="Box" type="Box">13</container>
+                        <unittitle>Independent Contractors (Carrier Boys - Mail Route Carrier).
+                                <unitdate normal="1962/1974" type="inclusive"
+                            >1962-1974</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00244" level="file">
+                    <did>
+                        <unittitle>Independent Contractors. Unreported Cases - Recent Developments,
+                                <unitdate normal="1964/1977" type="inclusive"
+                            >1964-1977</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00245" level="file">
+                    <did>
+                        <unittitle>Labor Relations. <unitdate normal="1964/1976" type="inclusive"
+                                >1964-1976</unitdate></unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00246" level="file">
+                    <did>
+                        <unittitle>Labor Relations. Unreported Cases - Recent Developments,
+                                <unitdate normal="1964/1977" type="inclusive"
+                            >1964-1977</unitdate></unittitle>
+                        <physdesc>(7 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00247" level="file">
+                    <did>
+                        <container label="Box" type="Box">14</container>
+                        <unittitle>Legal Advertising and Notice. <unitdate normal="1963/1969"
+                                type="inclusive">1963-1969</unitdate></unittitle>
+                        <physdesc>(5 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00248" level="file">
+                    <did>
+                        <unittitle>Legal Advertising and Notice. Unreported Cases - Recent
+                            Developments, <unitdate normal="1964/1977" type="inclusive"
+                                >1964-1977</unitdate></unittitle>
+                        <physdesc>(5 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00249" level="file">
+                    <did>
+                        <unittitle>Libel. <unitdate normal="1962/1976" type="inclusive"
+                                >1962-1976</unitdate></unittitle>
+                        <physdesc>(7 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00250" level="file">
+                    <did>
+                        <container label="Box" type="Box">15</container>
+                        <unittitle>Libel (continued)- <unitdate normal="1963/1967" type="inclusive"
+                                >1963-1967</unitdate></unittitle>
+                        <physdesc>(5 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00251" level="file">
+                    <did>
+                        <unittitle>Libel. Unreported Cases - Recent Developments, <unitdate
+                                normal="1962/1977" type="inclusive">1962-1977</unitdate></unittitle>
+                        <physdesc>(5 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00252" level="file">
+                    <did>
+                        <unittitle>Libel After NY Times. <unitdate normal="1964/1971"
+                                type="inclusive">1964-1971</unitdate></unittitle>
+                        <physdesc>(7 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00253" level="file">
+                    <did>
+                        <container label="Box" type="Box">16</container>
+                        <unittitle>Libel After NY Times. <unitdate normal="1964/1966"
+                                type="inclusive">1964-1966</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00254" level="file">
+                    <did>
+                        <unittitle>Libel After NY Times. Unreported Cases - Recent Developments,
+                                <unitdate normal="1964/1968" type="inclusive"
+                            >1964-1968</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00255" level="file">
+                    <did>
+                        <unittitle>Libel (Cases #301- ). <unitdate normal="1964/1969"
+                                type="inclusive">1964-1969</unitdate></unittitle>
+                        <physdesc>(5 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00256" level="file">
+                    <did>
+                        <unittitle>Lotteries. <unitdate normal="1964/1975" type="inclusive"
+                                >1964-1975</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00257" level="file">
+                    <did>
+                        <unittitle>Lotteries. Unreported Cases - Recent Developments, <unitdate
+                                normal="1964/1977" type="inclusive">1964-1977</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00258" level="file">
+                    <did>
+                        <unittitle>Newsman's Privilege. Federal Free Flow of Information Act,
+                                <unitdate normal="1972/1973" type="inclusive"
+                            >1972-1973</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00259" level="file">
+                    <did>
+                        <unittitle>Newsman's Privilege. National Conference of Commissioners on
+                            Uniform State Laws, <unitdate normal="1970">1970</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00260" level="file">
+                    <did>
+                        <unittitle>Newspapers. General, <unitdate normal="1964/1970"
+                                type="inclusive">1964-1970</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00261" level="file">
+                    <did>
+                        <unittitle>Newspapers. General. Unreported Cases - Recent Developments,
+                                <unitdate normal="1970/1974" type="inclusive"
+                            >1970-1974</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00262" level="file">
+                    <did>
+                        <container label="Box" type="Box">17</container>
+                        <unittitle>Obscenity. <unitdate normal="1961/1976" type="inclusive"
+                                >1961-1976</unitdate></unittitle>
+                        <physdesc>(10 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00263" level="file">
+                    <did>
+                        <unittitle>Obscenity. Unreported Cases - Recent Developments, <unitdate
+                                normal="1965/1974" type="inclusive">1965-1974</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00264" level="file">
+                    <did>
+                        <unittitle>Open Meetings. Unreported Cases - Recent Developments, <unitdate
+                                normal="1965/1977" type="inclusive">1965-1977</unitdate></unittitle>
+                        <physdesc>(5 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00265" level="file">
+                    <did>
+                        <container label="Box" type="Box">18</container>
+                        <unittitle>Open Meetings. Unreported Cases - Recent Developments
+                            (continued), <unitdate normal="1969/1975" type="inclusive"
+                                >1969-1975</unitdate></unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00266" level="file">
+                    <did>
+                        <unittitle>Photography in Courtrooms. <unitdate normal="1963/1976"
+                                type="inclusive">1963-1976</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00267" level="file">
+                    <did>
+                        <unittitle>Photography in Courtrooms. Unreported Cases - Recent
+                            Developments, <unitdate normal="1959/1978" type="inclusive"
+                                >1959-1978</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00268" level="file">
+                    <did>
+                        <unittitle>Post Office. <unitdate normal="1963/1974" type="inclusive"
+                                >1963-1974</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00269" level="file">
+                    <did>
+                        <unittitle>Post Office. Unreported Cases - Recent Developments, <unitdate
+                                normal="1964/1977" type="inclusive">1964-1977</unitdate></unittitle>
+                        <physdesc>(6 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00270" level="file">
+                    <did>
+                        <container label="Box" type="Box">19</container>
+                        <unittitle>Prejudicial Publicity. Codes of Cooperation, <unitdate
+                                normal="1962/1968" type="inclusive">1962-1968</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00271" level="file">
+                    <did>
+                        <unittitle>Prejudicial Publicity. Court Cases, <unitdate normal="1960/1967"
+                                type="inclusive">1960-1967</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00272" level="file">
+                    <did>
+                        <unittitle>Prejudicial Publicity. Law Enforcement Changes, <unitdate
+                                normal="1963/1967" type="inclusive">1963-1967</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00273" level="file">
+                    <did>
+                        <unittitle>Prejudicial Publicity. Seminars and Panels, <unitdate
+                                normal="1964/1967" type="inclusive">1964-1967</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00274" level="file">
+                    <did>
+                        <unittitle>Prejudicial Publicity. Speeches and Comment, <unitdate
+                                normal="1963/1968" type="inclusive">1963-1968</unitdate></unittitle>
+                        <physdesc>(5 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00275" level="file">
+                    <did>
+                        <unittitle>Prejudicial Publicity. Statutory Proposals, <unitdate
+                                normal="1961/1967" type="inclusive">1961-1967</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00276" level="file">
+                    <did>
+                        <unittitle>Prejudicial Publicity. Studies, <unitdate normal="1953/1968"
+                                type="inclusive">1953-1968</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00277" level="file">
+                    <did>
+                        <container label="Box" type="Box">20</container>
+                        <unittitle>Pre-trial Publicity. <unitdate normal="1963/1966"
+                                type="inclusive">1963-1966</unitdate></unittitle>
+                        <physdesc>(6 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00278" level="file">
+                    <did>
+                        <unittitle>Pre-trial Publicity. Post Sheppard, <unitdate normal="1966/1976"
+                                type="inclusive">1966-1976</unitdate></unittitle>
+                        <physdesc>(7 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00279" level="file">
+                    <did>
+                        <unittitle>Pre-trial Publicity. Unreported Cases - Recent Developments,
+                                <unitdate normal="1961/1969" type="inclusive"
+                            >1961-1969</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00280" level="file">
+                    <did>
+                        <container label="Box" type="Box">21</container>
+                        <unittitle>Professional Immunity Law, <unitdate normal="1963/1977"
+                                type="inclusive">1963-1977</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00281" level="file">
+                    <did>
+                        <unittitle>Professional Immunity Law. Unreported Cases - Recent
+                            Developments, <unitdate normal="1962/1977" type="inclusive"
+                                >1962-1977</unitdate></unittitle>
+                        <physdesc>(6 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00282" level="file">
+                    <did>
+                        <unittitle>Professional Status Law for Reporters, <unitdate
+                                normal="1949/1967" type="inclusive">1949-1967</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00283" level="file">
+                    <did>
+                        <unittitle>Protection of News Source Case. Philadelphia Bulletin, <unitdate
+                                normal="1963">1963</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00284" level="file">
+                    <did>
+                        <unittitle>Public Records. <unitdate normal="1963/1977" type="inclusive"
+                                >1963-1977</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00285" level="file">
+                    <did>
+                        <unittitle>Public Records. Unreported Cases - Recent Developments, <unitdate
+                                normal="1964/1977" type="inclusive">1964-1977</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00286" level="file">
+                    <did>
+                        <container label="Box" type="Box">22</container>
+                        <unittitle>Right of Privacy. <unitdate normal="1941/1977" type="inclusive"
+                                >1941-1977</unitdate></unittitle>
+                        <physdesc>(6 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00287" level="file">
+                    <did>
+                        <unittitle>Right of Privacy. Unreported Cases . Recent Developments,
+                                <unitdate normal="1961/1977" type="inclusive"
+                            >1961-1977</unitdate></unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00288" level="file">
+                    <did>
+                        <unittitle>Taxes. <unitdate normal="1963/1974" type="inclusive"
+                                >1963-1974</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00289" level="file">
+                    <did>
+                        <unittitle>Taxes. Unreported Cases - Recent Developments, <unitdate
+                                normal="1964/1977" type="inclusive">1964-1977</unitdate></unittitle>
+                        <physdesc>(5 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00290" level="file">
+                    <did>
+                        <container label="Box" type="Box">23</container>
+                        <unittitle>Trade Names and Unfair Competition, <unitdate normal="1963/1976"
+                                type="inclusive">1963-1976</unitdate></unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00291" level="file">
+                    <did>
+                        <unittitle>Trade Names and Unfair Competition. Unreported Cases - Recent
+                            Developments, <unitdate normal="1965/1974" type="inclusive"
+                                >1965-1974</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00292" level="file">
+                    <did>
+                        <unittitle>Wage-Hour Law. <unitdate normal="1963/1974" type="inclusive"
+                                >1963-1974</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00293" level="file">
+                    <did>
+                        <unittitle>Wage-Hour Law. Unreported Cases - Recent Developments, <unitdate
+                                normal="1964/1978" type="inclusive">1964-1978</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAC3119-00294" level="series">
+                <did>
+                    <container label="Box" type="Box">23</container>
+                    <unittitle>Miscellaneous Files</unittitle>
+                </did>
+                <arrangement>
+                    <p>Organized alphabetically by subject.</p>
+                </arrangement>
+                <scopecontent>
+                    <p>Dates range from <unitdate normal="1964/1980" type="inclusive"
+                            >1964-1980,</unitdate> with the bulk in <unitdate normal="1975"
+                            type="bulk">1975.</unitdate></p>
+                </scopecontent>
+                <c02 id="VAC3119-00295" level="file">
+                    <did>
+                        <unittitle>1975 Independent Magazine Distributors of Indiana (Obscenity
+                            Legislation). <unitdate normal="1974/1975" type="inclusive"
+                                >1974-1975</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00296" level="file">
+                    <did>
+                        <unittitle>1975 Legislature - State Campaign Financing and Election Reform
+                            Law. <unitdate normal="1974">1974</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00297" level="file">
+                    <did>
+                        <unittitle>Alcoholic Beverage Advertising (Price Fixing). <unitdate
+                                normal="1975/1980" type="inclusive">1975-1980</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00298" level="file">
+                    <did>
+                        <unittitle>Attorney Advertising. <unitdate normal="1975/1978"
+                                type="inclusive">1975-1978</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00299" level="file">
+                    <did>
+                        <unittitle>Banks vs. Holder. <unitdate normal="1973"
+                            >1973</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+
+                <c02 id="VAC3119-00300" level="file">
+                    <did>
+                        <container label="Box" type="Box">24</container>
+                        <unittitle>Banks vs. Holder. Court of Appeals, Seventh Circuit, <unitdate
+                                normal="1973">1973</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00301" level="file">
+                    <did>
+                        <unittitle>Clippings. <unitdate normal="1975/1981" type="inclusive"
+                                >1975-1981</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00302" level="file">
+                    <did>
+                        <unittitle>Current Cases. <unitdate normal="1964"
+                            >1964</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00303" level="file">
+                    <did>
+                        <unittitle>"Display" Ordinances - Marion and Munice. <unitdate
+                                normal="1974/1975" type="inclusive">1974-1975</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00304" level="file">
+                    <did>
+                        <unittitle>Federal and State Energy Conservation and Rationing Plans
+                            (1979-80). <unitdate normal="1979/1980" type="inclusive"
+                                >1979-1980</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00305" level="file">
+                    <did>
+                        <unittitle><emph render="italic">Hustler</emph> and Indiana Obscenity Law.
+                                <unitdate normal="1977">1977</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00306" level="file">
+                    <did>
+                        <unittitle>Indiana Periodicals Distributors Assn. - 1974 General Assembly.
+                                <unitdate normal="1974">1974</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00307" level="file">
+                    <did>
+                        <unittitle>Legal Decisions - Ginsberg, Miller, Heller, Jenkins, CineCom.
+                                <unitdate normal="1967/1973" type="inclusive"
+                            >1967-1973</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00308" level="file">
+                    <did>
+                        <unittitle>Obscenity Legislation (Magazine Distributors Assn.). <unitdate
+                                normal="1973/1974" type="inclusive">1973-1974</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00309" level="file">
+                    <did>
+                        <unittitle>Responses on Police Records Withholding. <unitdate
+                                normal="1974/1976" type="inclusive">1974-1976</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00310" level="file">
+                    <did>
+                        <unittitle>SB46 as Introduced, SB88 as Reported From Senate Judiciary Comm.
+                                <unitdate normal="1974/1975" type="inclusive"
+                            >1974-1975</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00311" level="file">
+                    <did>
+                        <unittitle>SB88. Form in Which Passed in Senate Feb. 5, 1975. <unitdate
+                                normal="1975">1975</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00312" level="file">
+                    <did>
+                        <unittitle>SB88. Amendments Proposed in House Policy Comm. March 19, 1975.
+                                <unitdate normal="1975">1975</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00313" level="file">
+                    <did>
+                        <unittitle>SB88. As Amended March 19, 1975 by House Public Policy Comm.
+                                <unitdate normal="1975">1975</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00314" level="file">
+                    <did>
+                        <unittitle>HB1492. Amendments Proposed in Senate Judiciary Comm. <unitdate
+                                normal="1975">1975</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00315" level="file">
+                    <did>
+                        <unittitle>HB1492. As Reported Out of Senate Judiciary Comm. March 18, 1975.
+                                <unitdate normal="1975">1975</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00316" level="file">
+                    <did>
+                        <unittitle>HB1492. Amendments Proposed in Senate Subcomm. <unitdate
+                                normal="1975">[1975]</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00317" level="file">
+                    <did>
+                        <unittitle>HB1492. As Introduced and Amended in House. <unitdate
+                                normal="1975">1975</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00318" level="file">
+                    <did>
+                        <unittitle>SB88, HB1492. Legal Brief "Variable Obscenity for Minors" as
+                            Related to Legislation. <unitdate normal="1975"
+                            >[1975]</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00319" level="file">
+                    <did>
+                        <unittitle>HB1510 Civil Proceedings. <unitdate normal="1970/1979"
+                                type="inclusive">Undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC3119-00320" level="file">
+                    <did>
+                        <unittitle>SB106 1974 Conference Committee Report. <unitdate normal="1974"
+                                >1974</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+
+
+
+        </dsc>
+    </archdesc>
+</ead>
