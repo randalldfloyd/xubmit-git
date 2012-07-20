@@ -1,0 +1,1745 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+--><ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external" countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924" relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li" identifier="InU-Li-VAC3909">InU-Li-VAC3909</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Old Stile Press mss.<date normal="1989/2009">1989-2009</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2012" type="publication">© 2012</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2012">© 2012</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2012" type="source">2012</date>
+                <lb></lb>Finding aid encoded by Danielle Emerling, Lilly Library, Indiana University,
+                    <date normal="2012-07-06">July 6, 2012</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng">English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2012-07-06">July 6, 2012</date>
+                <item>Encoded finding aid begun.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <corpname encodinganalog="110" source="lcnaf">Old Stile Press.</corpname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Old Stile Press mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1989/2009" type="inclusive">1989-2009</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2732</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>180,000 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language langcode="eng">English</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">Consists of materials documenting the
+                process of traditional book design, production and publication from one of the most
+                prolific and independent of British Presses.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>Access to this collection requires advance notice. Please contact the Curator of
+                Manuscripts for additional information.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Administrative History</head>
+
+            <p>The Old Stile Press has been at the forefront of the British private press movement
+                for over twenty-five years. It is particularly notable for the freedom it gives
+                artists to respond to texts written by such authors as Oscar Wilde, George Mackay
+                Brown, W.S. Graham and others.</p>
+
+        </bioghist>
+
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The collection traces the progress of more than fifty titles from the project's
+                inception, through galley proofs of type, to printing, binding and distribution.
+                Also included are records which document the processes of hand-printing and
+                publishing as pursued by Frances and Nicolas McDowell, as well as lengthy and
+                detailed correspondence with creative individuals from the worlds of literature and
+                the visual arts in addition to suppliers of paper and binding supplies.
+                Correspondence relating to projects begun but abandoned; ephemeral printing; and
+                records relating to the financial operation of a press offer a view into the broader
+                community of private press printing in Britain during the second half of the
+                twentieth century.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/mcdowell+frances+correspondence">
+                            <persname encodinganalog="600" source="lcnaf" role="subject">McDowell,
+                                Frances --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/mcdowell+nicholas+correspondence">
+                            <persname encodinganalog="600" source="lcnaf" role="subject">McDowell,
+                                Nicholas --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/blaga+lucian+1895+1961">
+                            <persname encodinganalog="600" source="lcnaf" role="subject">Blaga,
+                                Lucian, 1895-1961.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/crossley+holland+kevin">
+                            <persname encodinganalog="600" source="lcnaf" role="subject">Crossley-Holland, Kevin.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/brown+george+mackay">
+                            <persname encodinganalog="600" source="lcnaf" role="subject">Brown,
+                                George Mackay.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/hughes+ted+1930+1998">
+                            <persname encodinganalog="600" source="lcnaf" role="subject">Hughes,
+                                Ted, 1930-1998.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/thomas+dylan+1914+1953">
+                            <persname encodinganalog="600" source="lcnaf" role="subject">Thomas,
+                                Dylan, 1914-1953.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/barnfield+richard+1574+1627">
+                            <persname encodinganalog="600" source="lcnaf" role="subject">Barnfield,
+                                Richard, 1574-1627</persname>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/authors+english+correspondence">
+                            <subject encodinganalog="650" source="lcsh">Authors, English
+                                --Correspondence.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/artists+books+correspondence">
+                            <subject encodinganalog="650" source="lcsh">Artists' books
+                                --Correspondence.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/bookbinding+correspondence">
+                            <subject encodinganalog="650" source="lcsh">Bookbinding
+                                --Correspondence.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/bookbinding+industry+correspondence">
+                            <subject encodinganalog="650" source="lcsh">Bookbinding industry
+                                --Correspondence.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/bookbinders+england+correspondence">
+                            <subject encodinganalog="650" source="lcsh">Bookbinders --England
+                                --Correspondence.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/private+presses+correspondence">
+                            <subject encodinganalog="650" source="lcsh">Private presses
+                                --Correspondence.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/printing+presses+correspondence">
+                            <subject encodinganalog="650" source="lcsh">Printing presses
+                                --Correspondence.</subject>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="110" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+        <!-- required, if appropriate -->
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 2010</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Old Stile Press mss., Lilly Library, Indiana University, Bloomington,
+                    Indiana.</p>
+            </prefercite>
+
+            <!--optional -->
+
+
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Whitney Buccione and Erin Dobias.</p>
+                <p>Completed in <date normal="2012">2012.</date></p>
+
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+        <c01 id="VAC3909-00001" level="collection">
+            <did>
+                <unittitle>Old Stile Press mss., <unitdate normal="1989/2009" type="inclusive">1989-2009</unitdate></unittitle>
+                </did>
+            <c02 id="VAC3909-00002" level="file">
+                <did>
+                    <container label="Box" type="Box">1</container>
+                    <unittitle>Brockway, Harry, <title render="italic">Faithful John,</title>
+                        correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00003" level="file">
+                <did>
+                    <unittitle>Fryer, Katherine, <title render="italic">Before the War &amp; Long
+                            Ago,</title> correspondence, production material, research</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00004" level="file">
+                <did>
+                    <unittitle>Graham, W. S. &amp; Thomson, Douglas, <title render="italic">Letters
+                            &amp; Heads,</title> correspondence, production material,
+                        research</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00005" level="file">
+                <did>
+                    <unittitle>Foa, Maryclare, <title render="italic">The Dream Song of Olaf
+                            Asteson,</title> correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00006" level="file">
+                <did>
+                    <unittitle>Bayliss, Keith, <title render="italic">White Voices,</title>
+                        correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00007" level="file">
+                <did>
+                    <container label="Box" type="Box">2</container>
+                    <unittitle>Sutton, Philip, Correspondence, production material,
+                        research</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00008" level="file">
+                <did>
+                    <unittitle>Gross, Philip, <title render="italic">The Abstract Garden,</title>
+                        correspondence, production material, research</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00009" level="file">
+                <did>
+                    <container label="Box" type="Box">3</container>
+                    <unittitle>Strachan, Geoffrey, <title render="italic">Masks,</title>
+                        correspondence, production material, research</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00010" level="file">
+                <did>
+                    <container label="Box" type="Box">4</container>
+                    <unittitle>Barnfield, Richard, <title render="italic">Sonnets,</title>
+                        correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00011" level="file">
+                <did>
+                    <container label="Box" type="Box">5</container>
+                    <unittitle>Correspondence, <unitdate normal="1996/2006" type="inclusive">1996-2006</unitdate></unittitle>
+                </did>
+                <scopecontent>
+                    <p>(multiple folders; majority Christmas/holiday cards)</p>
+                </scopecontent>
+            </c02>
+            <c02 id="VAC3909-00012" level="file">
+                <did>
+                    <container label="Box" type="Box">6</container>
+                    <unittitle>Harrop, Dorothy, <title render="italic">Bibliography of The Old Stile
+                            Press</title></unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00013" level="file">
+                <did>
+                    <unittitle>Isaac, Bert, <title render="italic">The Landscape Within,</title>
+                        correspondence, production material, research</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00014" level="file">
+                <did>
+                    <unittitle>Isaac, Bert, <title render="italic">For Books That Never
+                            Were,</title> production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00015" level="file">
+                <did>
+                    <container label="Box" type="Box">7</container>
+                    <unittitle>Wilde, Nicolas, <title render="italic">The Flute of Sardonyx,</title>
+                        correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00016" level="file">
+                <did>
+                    <unittitle>Tanner, Robin, <title render="italic">The Last Poems of Alice
+                            Meynell,</title> correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00017" level="file">
+                <did>
+                    <unittitle>Elwyn, John, <title render="italic">House of Leaves,</title>
+                        correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00018" level="file">
+                <did>
+                    <container label="Box" type="Box">8</container>
+                    <unittitle>Tanner, Heather, <title render="italic">The More Angels Shall I
+                            Paint,</title> correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00019" level="file">
+                <did>
+                    <unittitle>Tanner, Heather, <title render="italic">Ten Clerihews,</title>
+                        correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00020" level="file">
+                <did>
+                    <unittitle>Tanner, Heather, <title render="italic">A Country Alphabet,</title>
+                        correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00021" level="file">
+                <did>
+                    <unittitle>Tanner, Heather &amp; Robin, <title render="italic">A Country Book of
+                            Days,</title> correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00022" level="file">
+                <did>
+                    <container label="Box" type="Box">9</container>
+                    <unittitle>Kiggell, Ralph, <title render="italic">Leading the Cranes
+                            Home,</title> correspondence, production material, research</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00023" level="file">
+                <did>
+                    <container label="Box" type="Box">10</container>
+                    <unittitle>Double Crown Club, correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00024" level="file">
+                <did>
+                    <unittitle>Miscellaneous private presses, correspondence, production
+                        material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00025" level="file">
+                <did>
+                    <unittitle>Pisces Press, correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00026" level="file">
+                <did>
+                    <unittitle>Ridler, Vivian, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00027" level="file">
+                <did>
+                    <unittitle>Fleece Press, correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00028" level="file">
+                <did>
+                    <unittitle>Black Pennell Press, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00029" level="file">
+                <did>
+                    <unittitle>Chambers, David, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00030" level="file">
+                <did>
+                    <unittitle>Partridge, Walter &amp; The Perdix Press, correspondence, production
+                        material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00031" level="file">
+                <did>
+                    <unittitle>Rampant Lions Press, correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00032" level="file">
+                <did>
+                    <unittitle>Paulinus Press, correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00033" level="file">
+                <did>
+                    <unittitle>Rocket Press, correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00034" level="file">
+                <did>
+                    <unittitle>Libanus Press, correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00035" level="file">
+                <did>
+                    <unittitle>Whittington Press, correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00036" level="file">
+                <did>
+                    <container label="Box" type="Box">11</container>
+                    <unittitle><title render="italic">Duke Bluebeard's Castle,</title> production
+                        material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00037" level="file">
+                <did>
+                    <unittitle>Hardy, Thomas. <title render="italic">Green Blades,</title>
+                        correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00038" level="file">
+                <did>
+                    <unittitle><title render="italic">Taliesin &amp; the Mockers,</title>
+                        correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00039" level="file">
+                <did>
+                    <unittitle><title render="italic">Black Marigolds,</title> correspondence,
+                        production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00040" level="file">
+                <did>
+                    <container label="Box" type="Box">12</container>
+                    <unittitle>Krol, Abram, correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00041" level="file">
+                <did>
+                    <unittitle>L, general correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00042" level="file">
+                <did>
+                    <unittitle>Livay, Yaron, correspondence.</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00043" level="file">
+                <did>
+                    <unittitle>Lloyd, Noel, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00044" level="file">
+                <did>
+                    <unittitle>M, general correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00045" level="file">
+                <did>
+                    <unittitle>Mc, general correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00046" level="file">
+                <did>
+                    <unittitle>MacKenzie-Kerr, Ian, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00047" level="file">
+                <did>
+                    <unittitle>MacNeill, Alyson, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00048" level="file">
+                <did>
+                    <unittitle>Mould Type Foundry, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00049" level="file">
+                <did>
+                    <unittitle>McLean, David, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00050" level="file">
+                <did>
+                    <unittitle>Marsh, Leonard, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00051" level="file">
+                <did>
+                    <unittitle>Mountfield, Julian, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00052" level="file">
+                <did>
+                    <unittitle>Morgan, Robert, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00053" level="file">
+                <did>
+                    <unittitle>Marsh, Jan, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00054" level="file">
+                <did>
+                    <unittitle>Mitchell, Benard, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00055" level="file">
+                <did>
+                    <unittitle>Moore, Jerrold, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00056" level="file">
+                <did>
+                    <unittitle>Madibele, Miotshepi, correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00057" level="file">
+                <did>
+                    <unittitle>Martin, Douglas, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00058" level="file">
+                <did>
+                    <unittitle>MacDonald, Robert, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00059" level="file">
+                <did>
+                    <unittitle>Newport Printing Company, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00060" level="file">
+                <did>
+                    <unittitle>National Library of Wales, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00061" level="file">
+                <did>
+                    <unittitle>McMillington, Rodney, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00062" level="file">
+                <did>
+                    <unittitle>National Trust, Cardiff Association, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00063" level="file">
+                <did>
+                    <unittitle>N, general correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00064" level="file">
+                <did>
+                    <unittitle>Newport, Barry, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00065" level="file">
+                <did>
+                    <unittitle>Moon, Pip, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00066" level="file">
+                <did>
+                    <unittitle>Obituaries</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00067" level="file">
+                <did>
+                    <unittitle>O, general correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00068" level="file">
+                <did>
+                    <unittitle>Osmond, Mat, correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00069" level="file">
+                <did>
+                    <unittitle>Ould, Martyn, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00070" level="file">
+                <did>
+                    <unittitle>Oxford Guild of Printers, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00071" level="file">
+                <did>
+                    <unittitle>Orme, Robert, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00072" level="file">
+                <did>
+                    <unittitle>Perryman, Kevin, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00073" level="file">
+                <did>
+                    <unittitle>Phipps and Company, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00074" level="file">
+                <did>
+                    <unittitle>Packard, Simon, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00075" level="file">
+                <did>
+                    <unittitle>Puil, Paul Pever, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00076" level="file">
+                <did>
+                    <unittitle>PQ, general correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00077" level="file">
+                <did>
+                    <unittitle>Primrose Hill Press, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00078" level="file">
+                <did>
+                    <unittitle>Richards, Barry, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00079" level="file">
+                <did>
+                    <unittitle>Rundley, Timothy, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00080" level="file">
+                <did>
+                    <unittitle>Roose-Evans, James, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00081" level="file">
+                <did>
+                    <unittitle>Rocket Press, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00082" level="file">
+                <did>
+                    <unittitle>Rowlands-Pritchard, John, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00083" level="file">
+                <did>
+                    <unittitle>R, general correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00084" level="file">
+                <did>
+                    <unittitle>Tute, Bernhard, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00085" level="file">
+                <did>
+                    <unittitle>Sharp, N. C. Craig, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00086" level="file">
+                <did>
+                    <unittitle>Sanford, Lettice, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00087" level="file">
+                <did>
+                    <unittitle>Stephens, Ian, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00088" level="file">
+                <did>
+                    <unittitle>Silent Books, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00089" level="file">
+                <did>
+                    <unittitle>Five Seasons Press, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00090" level="file">
+                <did>
+                    <unittitle>S, general correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00091" level="file">
+                <did>
+                    <unittitle>Michael Taylor Rare Books, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00092" level="file">
+                <did>
+                    <unittitle>Lauretti, Robert, correspondence, production materials</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00093" level="file">
+                <did>
+                    <unittitle>Todd, Will, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00094" level="file">
+                <did>
+                    <unittitle>Tucker, Alex, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00095" level="file">
+                <did>
+                    <unittitle>T-U, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00096" level="file">
+                <did>
+                    <unittitle>National Library of Wales, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00097" level="file">
+                <did>
+                    <unittitle>Whitlock-Bundell, Joe, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00098" level="file">
+                <did>
+                    <unittitle>Weiss, Burton, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00099" level="file">
+                <did>
+                    <unittitle>Williams, Eric, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00100" level="file">
+                <did>
+                    <unittitle>Whiteway, Rogers, correspondence (includes hard disks)</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00101" level="file">
+                <did>
+                    <unittitle>Watson, Adam, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00102" level="file">
+                <did>
+                    <unittitle>V-W, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00103" level="file">
+                <did>
+                    <unittitle>Whittington Press, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00104" level="file">
+                <did>
+                    <unittitle>Zip, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00105" level="file">
+                <did>
+                    <unittitle>Yale University, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00106" level="file">
+                <did>
+                    <unittitle>Yallop, Jacqueline, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00107" level="file">
+                <did>
+                    <unittitle>Yorke, Malcolm, correspondence</unittitle>
+                </did>
+            </c02>
+
+            <c02 id="VAC3909-00108" level="file">
+                <did>
+                    <container label="Box" type="Box">13</container>
+                    <unittitle>Copy of <title render="italic">The Old Stile Press...in the twentieth
+                            century: a bibliography, 1979-1999</title></unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00109" level="file">
+                <did>
+                    <unittitle>Exhibitions, sale or return copies</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00110" level="file">
+                <did>
+                    <unittitle>Murphy, Gwenan and Peter, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00111" level="file">
+                <did>
+                    <unittitle>Wilde, Oscar, "The Ballad of Reading Gaol," orders and
+                        correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00112" level="file">
+                <did>
+                    <unittitle>Crossley-Holland, Kevin, <title render="italic">Eleanor's Advent,</title> orders and
+                        correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00113" level="file">
+                <did>
+                    <unittitle>Tanner, Robin, <title render="italic">The More Angels I Shall Paint,</title> orders and
+                        correspondence</unittitle>
+                </did>
+                <scopecontent><p>(includes photo negatives)</p></scopecontent>
+            </c02>
+            <c02 id="VAC3909-00114" level="file">
+                <did>
+                    <unittitle>Tanner, Robin, correspondence and production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00115" level="file">
+                <did>
+                    <unittitle>Leonard Curtis &amp; Co., correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00116" level="file">
+                <did>
+                    <unittitle><title render="italic">The Lad Philiside,</title> correspondence and production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00117" level="file">
+                <did>
+                    <unittitle>Brown, George Mackay, <title render="italic">Keepers of the House,</title> correspondence and
+                        production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00118" level="file">
+                <did>
+                    <unittitle>Lemaire, Angela, <title render="italic">Pied Piper,</title> correspondence and production
+                        material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00119" level="file">
+                <did>
+                    <unittitle><title render="italic">The Holy Barb,</title> correspondence and production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00120" level="file">
+                <did>
+                    <unittitle><title render="italic">Judas Iscariot and Elegy,</title> correspondence and production
+                        material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00121" level="file">
+                <did>
+                    <unittitle>Pitts, J. Martin, correspondence and production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00122" level="file">
+                <did>
+                    <unittitle>Pitts, J. Martin, <title render="italic">24 Nudes,</title> correspondence and production
+                        material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00123" level="file">
+                <did>
+                    <unittitle>Pitts, J. Martin, <title render="italic">The Waternymph and the Boy,</title> correspondence and
+                        production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00124" level="file">
+                <did>
+                    <unittitle>Pitts, J. Martin "Abraham and Isaac" – correspondence and production
+                        material.</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00125" level="file">
+                <did>
+                    <unittitle>Pitts, J. Martin, general publication check list and
+                        expenses</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00126" level="file">
+                <did>
+                    <unittitle>Redcliffe Press, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00127" level="file">
+                <did>
+                    <unittitle>Thomas, Llewellyn, correspondence and production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00128" level="file">
+                <did>
+                    <unittitle>McDowall, Nicholas, <title render="italic">A Wall in Wales,</title> correspondence and production
+                        material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00129" level="file">
+                <did>
+                    <unittitle>Davis, Michael and Simon Brett, <title render="italic">The Way to the Tree of Life,</title>
+                        correspondence and production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00130" level="file">
+                <did>
+                    <unittitle>MacNeill, Alyson, <title render="italic">Song of the Forest,</title> correspondence and production
+                        material.</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00131" level="file">
+                <did>
+                    <unittitle>Grimes, Peter, correspondence and production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00132" level="file">
+                <did>
+                    <unittitle>MacNeill, Alyson, <title render="italic">Benedicte,</title> correspondence and production material
+                        </unittitle>
+                </did>
+                <scopecontent><p>(includes woodcut)</p></scopecontent>
+            </c02>
+            <c02 id="VAC3909-00133" level="file">
+                <did>
+                    <unittitle>Crossley-Holland, Kevin, <title render="italic">Oenone in January,</title> correspondence and
+                        production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00134" level="file">
+                <did>
+                    <unittitle>Lawrences, Inger, <title render="italic">The Seafarer,</title> correspondence and production
+                        material</unittitle>
+                </did>
+            </c02>
+
+
+            <c02 id="VAC3909-00135" level="file">
+                <did>
+                    <container label="Box" type="Box">14</container>
+                    <unittitle>Nurse, Chris, <title render="italic">Pyramus &amp; Thisbe,</title> correspondence and production material</unittitle>
+                    <physdesc>(2 folders)</physdesc>
+                </did>
+                <scopecontent><p>(includes leather samples and film negatives)</p></scopecontent>
+            </c02>
+            <c02 id="VAC3909-00136" level="file">
+                <did>
+                    <unittitle>Schwartz, Julian, correspondence and production material</unittitle>
+                </did>
+                <scopecontent><p>(includes photographs)</p></scopecontent>
+            </c02>
+            <c02 id="VAC3909-00137" level="file">
+                <did>
+                    <unittitle>Martin, Gillian, <title render="italic">The Nonsense Stories,</title> correspondence and production material</unittitle>
+                    <physdesc>(2 folders)</physdesc>
+                </did>
+                <scopecontent><p>(includes metal plates)</p></scopecontent>
+            </c02>
+            <c02 id="VAC3909-00138" level="file">
+                <did>
+                    <unittitle>Martin, Gillian, <title render="italic">A Pear of Disconnected Verses,</title> correspondence and production material</unittitle>
+                </did>
+                <scopecontent><p>(includes metal plates)</p></scopecontent>
+            </c02>
+            <c02 id="VAC3909-00139" level="file">
+                <did>
+                    <unittitle>MacDonald, Robert, <title render="italic">Where Many Shipwreck,</title> correspondence and production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00140" level="file">
+                <did>
+                    <container label="Box" type="Box">15</container>
+                    <unittitle>Palmer, Garrick, <title render="italic">Ballad of Reading Gaol,</title> correspondence and production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00141" level="file">
+                <did>
+                    <unittitle>Palmer, Garrick, <title render="italic">Land,</title> correspondence and production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00142" level="file">
+                <did>
+                    <container label="Box" type="Box">16</container>
+                    <unittitle>Lemaire, Angela,<title render="italic"> Thomas the Rhymer and Thomas the Future,</title> correspondence and production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00143" level="file">
+                <did>
+                    <unittitle>Lemaire, Angela, miscellaneous titles, correspondence and production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00144" level="file">
+                <did>
+                    <unittitle>Lemaire, Angela, <title render="italic">Pyed Piper,</title> correspondence and production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00145" level="file">
+                <did>
+                    <unittitle>Lemaire, Angela, <title render="italic">Joys,</title> correspondence and production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00146" level="file">
+                <did>
+                    <unittitle>Kirk, Robert &amp; Lemaire, Angela, <title render="italic">Secret Commonwealth,</title> correspondence and production material</unittitle>
+                </did>
+                <scopecontent><p>(includes hard disk)</p></scopecontent>
+            </c02>
+            <c02 id="VAC3909-00147" level="file">
+                <did>
+                    <container label="Box" type="Box">17</container>
+                    <unittitle>Smith, Timothy d'Arch, <title render="italic">Alphabet,</title> correspondence and production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00148" level="file">
+                <did>
+                    <unittitle>A, general correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00149" level="file">
+                <did>
+                    <unittitle>Alexander, Gregory, correspondence and production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00150" level="file">
+                <did>
+                    <unittitle>Blamines, David, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00151" level="file"><did><unittitle>Byram-Wigfield, David, correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00152" level="file"><did><unittitle>Blow, Brian, correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00153" level="file"><did><unittitle>B, general correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00154" level="file"><did><unittitle>Bishop, Hal, correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00155" level="file"><did><unittitle>Brett, Simon, correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00156" level="file"><did><unittitle>Biblio File, correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00157" level="file"><did><unittitle>Brockway, Harry, correspondence (2 folders)</unittitle></did></c02>
+            <c02 id="VAC3909-00158" level="file"><did><unittitle>Checklist Calvary, correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00159" level="file"><did><unittitle>Crossley-Holland, Kevin, correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00160" level="file"><did><unittitle>Cutler, Ivor, correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00161" level="file"><did><unittitle>Cruikshank, George, correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00162" level="file"><did><unittitle>Cooke, Jean, correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00163" level="file"><did><unittitle>Crow, Barbara, correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00164" level="file"><did><unittitle>C, general correspondence (includes newspaper clippings)</unittitle></did></c02>
+            <c02 id="VAC3909-00165" level="file"><did><unittitle>Clayton, Roger, correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00166" level="file"><did><unittitle>Caxton Printing Supplies, correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00167" level="file"><did><unittitle>Confrey, Neil and Debra, correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00168" level="file"><did><unittitle>Desai, Ashvin, correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00169" level="file"><did><unittitle>Deuckert, Alexander, correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00170" level="file"><did><unittitle>Dingle, Habib, correspondence (include holiday card with cross-stitching on the front)</unittitle></did></c02>
+            <c02 id="VAC3909-00171" level="file"><did><unittitle>Hodgkins, Ian, correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00172" level="file"><did><unittitle>D, general correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00173" level="file"><did><unittitle>Delrue, Paul, correspondence (includes photograph)</unittitle></did></c02>
+            <c02 id="VAC3909-00174" level="file"><did><unittitle>Duyn, Jereon, correspondence and production materials</unittitle></did></c02>
+            <c02 id="VAC3909-00175" level="file"><did><unittitle>Designer Bookbinders, correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00176" level="file"><did><unittitle>D'Arbeloff, Natalie, correspondence and checklist of her works</unittitle></did></c02>
+            <c02 id="VAC3909-00177" level="file"><did><unittitle>Barbarian Press, correspondence and catalogue</unittitle></did></c02>
+            <c02 id="VAC3909-00178" level="file"><did><unittitle>E, correspondence, book, and photographs</unittitle></did></c02>
+            <c02 id="VAC3909-00179" level="file"><did><unittitle>Davies, John Elwyn, correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00180" level="file"><did><unittitle>Finley, Eric, correspondence and production material (includes photographs)</unittitle></did></c02>
+            <c02 id="VAC3909-00181" level="file"><did><unittitle>F, general correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00182" level="file"><did><unittitle>Future developments</unittitle></did></c02>
+            <c02 id="VAC3909-00183" level="file"><did><unittitle>Forster, Peter, correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00184" level="file"><did><unittitle>Folio Society, correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00185" level="file"><did><unittitle>Goddard, Juliette, correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00186" level="file"><did><unittitle>Gill, Alaistair, correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00187" level="file"><did><unittitle>Goldmark, Mike, correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00188" level="file"><did><unittitle>Gunn, Gordon and Freida, correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00189" level="file"><did><unittitle>Greenslade, David, correspondence and books</unittitle></did></c02>
+            <c02 id="VAC3909-00190" level="file"><did><unittitle>Gold, David, correspondence (includes newspaper clippings)</unittitle></did></c02>
+            <c02 id="VAC3909-00191" level="file"><did><unittitle>Geraci, Joseph, correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00192" level="file"><did><unittitle>G, general correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00193" level="file"><did><unittitle>Greenwood, Jeremy, correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00194" level="file"><did><unittitle>Harrison, Ski, correspondence and photographs (negatives)</unittitle></did></c02>
+            <c02 id="VAC3909-00195" level="file"><did><unittitle>Hill, Susan, correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00196" level="file"><did><unittitle>Hall, Bryan, correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00197" level="file"><did><unittitle>H, general correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00198" level="file"><did><unittitle>Jones, David, correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00199" level="file"><did><unittitle>I-J, general correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00200" level="file"><did><unittitle>Kobayashi, Shusuke, correspondence</unittitle></did></c02>
+            <c02 id="VAC3909-00201" level="file"><did><unittitle>K, general correspondence</unittitle></did></c02>
+            
+            <c02 id="VAC3909-00202" level="file">
+                <did>
+                    <container label="Box" type="Box">18</container>
+                    <unittitle>Hughes, Lynn, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00203" level="file">
+                <did>
+                    <unittitle>Thomas, Dylan, <title render="italic">The Laugharne Poems,</title> production material, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00204" level="file">
+                <did>
+                    <unittitle>Thomas, Dylan, <title render="italic">The Laugharne Poems,</title> orders</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00205" level="file">
+                <did>
+                    <unittitle>McDowall, Frances &amp; Nicholas, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00206" level="file">
+                <did>
+                    <unittitle>d'Arbeloff, Natalie, <title render="italic">Revelation,</title> production material, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00207" level="file">
+                <did>
+                    <container label="Box" type="Box">19</container>
+                    <unittitle>Philpott, Sara, correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00208" level="file">
+                <did>
+                    <unittitle>Skelton, Robin, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00209" level="file">
+                <did>
+                    <unittitle>Skelton, Robin &amp; Philpott, Sara, <title render="italic">Lens of Crystal,</title> production material, orders</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00210" level="file">
+                <did>
+                    <unittitle><title render="italic">Latin Memories,</title> production material, negatives</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00211" level="file">
+                <did>
+                    <unittitle>Blaga, Lucian, <title render="italic">The Poems of Light,</title> correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00212" level="file">
+                <did>
+                    <unittitle>Blaga, Lucian, <title render="italic">The Poems of Light,</title> Sara Philpott correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00213" level="file">
+                <did>
+                    <container label="Box" type="Box">20</container>
+                    <unittitle>Hughes, Ted, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00214" level="file">
+                <did>
+                    <unittitle>Lloyd, Reg, <title render="italic">Standing Stone,</title> correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00215" level="file">
+                <did>
+                    <unittitle>Lloyd, Reg &amp; Hughes, Ted, <title render="italic">Earth Dances,</title> production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00216" level="file">
+                <did>
+                    <unittitle>Brown, George Mackay, <title render="italic">In the Margins of a Shakespeare,</title> correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00217" level="file">
+                <did>
+                    <unittitle>Graham, Rigby, <title render="italic">Kippers and Sawdust,</title> correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00218" level="file">
+                <did>
+                    <container label="Box" type="Box">21</container>
+                    <unittitle>First British Conference of Fine Printing, The Camberwell Press (Camberwell Conference), correspondence, conference material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00219" level="file">
+                <did>
+                    <unittitle><title render="italic">If</title> Symposium, BBC Wales (BBC Conference), correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00220" level="file">
+                <did>
+                    <unittitle>Bold, Alan, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00221" level="file">
+                <did>
+                    <unittitle>Brown, Hamish, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00222" level="file">
+                <did>
+                    <unittitle>"Prints on the Page," Six Chapel Row, and Caterpillar Moon, correspondence, event material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00223" level="file">
+                <did>
+                    <unittitle>Exhibitions 1995, correspondence, exhibition material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00224" level="file">
+                <did>
+                    <unittitle>Art of Living 1998, correspondence, posters, conference material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00225" level="file">
+                <did>
+                    <unittitle><title render="italic">Seventy Stunning Books,</title> Six Chapel Row, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00226" level="file">
+                <did>
+                    <unittitle>The Bleddfa Trust, correspondence, exhibition material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00227" level="file">
+                <did>
+                    <unittitle>Printing Presses, correspondence, instruction book</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00228" level="file">
+                <did>
+                    <unittitle><title render="italic">24 Nudes,</title> correspondence, sales orders</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00229" level="file">
+                <did>
+                    <unittitle>Basilisk Press (Charlene Garry), correspondence, orders</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00230" level="file">
+                <did>
+                    <unittitle><title render="italic">Beginning Religion,</title> Bruce &amp; Wallbarch, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00231" level="file">
+                <did>
+                    <unittitle>The Fine Art Society, correspondence, promotional material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00232" level="file">
+                <did>
+                    <unittitle>Artisan 2002, correspondence, conference material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00233" level="file">
+                <did>
+                    <unittitle>RBSA Exhibition 2006, correspondence, exhibition material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00234" level="file">
+                <did>
+                    <unittitle>Robin Tanner Centenary, correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00235" level="file">
+                <did>
+                    <unittitle>Swarthmore College, correspondence, orders</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00236" level="file">
+                <did>
+                    <unittitle>Charles Seluzicki Fine &amp; Rare Books, correspondence, orders</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00237" level="file">
+                <did>
+                    <unittitle>Vamp &amp; Tramp Booksellers, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00238" level="file">
+                <did>
+                    <unittitle>Califia Books, correspondence, orders</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00239" level="file">
+                <did>
+                    <unittitle>Bookarts at the Bookery, correspondence, orders</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00240" level="file">
+                <did>
+                    <unittitle>Valia Fine Art, correspondence, orders</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00241" level="file">
+                <did>
+                    <unittitle>The 40th California International Antiquarian Book Fair / The Codex International Book Fair, 2007, correspondence, conference materials</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00242" level="file">
+                <did>
+                    <unittitle>Oak Knoll Fest XII, 2005, conference material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00243" level="file">
+                <did>
+                    <unittitle>London Artist Book Fair 2007 and Watercolours &amp; Drawings Fair 2008, correspondence, conference material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00244" level="file">
+                <did>
+                    <unittitle>Exhibitions/Fairs 2007, correspondence, conference material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00245" level="file">
+                <did>
+                    <unittitle>House &amp; Garden 2007, correspondence, article</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00246" level="file">
+                <did>
+                    <unittitle>Watercolours &amp; Drawings Fair 2009, correspondence, conference material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00247" level="file">
+                <did>
+                    <unittitle>Exhibitions 2004, correspondence, conference material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00248" level="file">
+                <did>
+                    <unittitle>Brecon Exhibition, <title render="italic">Working with Artists in Wales,</title> Brecknock Museum &amp; Art Gallery, correspondence, promotional material, exhibition material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00249" level="file">
+                <did>
+                    <container label="Box" type="Box">22</container>
+                    <unittitle>Photographic Material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00250" level="file">
+                <did>
+                    <unittitle>Tanner, Robin, <title render="italic">The More Angels I Shall Paint</title></unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00251" level="file">
+                <did>
+                    <unittitle>Tanner, Robin, correspondence and production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00252" level="file">
+                <did>
+                    <unittitle>Pitts, J. Martin</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00253" level="file">
+                <did>
+                    <unittitle>MacDonald, Nicolas, <title render="italic">A Wall in Wales</title></unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00254" level="file">
+                <did>
+                    <unittitle>Strachan, Geoffrey, correspondence, production materials, research</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00255" level="file">
+                <did>
+                    <unittitle>M, general correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00256" level="file">
+                <did>
+                    <unittitle>Mc, general correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00257" level="file">
+                <did>
+                    <unittitle>MacNeill, Alyson, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00258" level="file">
+                <did>
+                    <unittitle>Newport Printing Company, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00259" level="file">
+                <did>
+                    <unittitle>Roose-Evans, James, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00260" level="file">
+                <did>
+                    <unittitle>S, general correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00261" level="file">
+                <did>
+                    <unittitle>Barnfield, Richard, <title render="italic">Sonnets</title></unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00262" level="file">
+                <did>
+                    <unittitle>d'Arbeloff, Nicole, <title render="italic">Revelation</title></unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00263" level="file">
+                <did>
+                    <unittitle>Nurse, Chris, <title render="italic">Pyramus &amp; Thisbe</title></unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00264" level="file">
+                <did>
+                    <unittitle>Goddard, Juliette, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00265" level="file">
+                <did>
+                    <unittitle>Harrison, Ski, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00266" level="file">
+                <did>
+                    <unittitle>Correspondence <unitdate normal="1996/2006" type="inclusive">1996-2006</unitdate></unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00267" level="file">
+                <did>
+                    <unittitle>Harrop, Dorothy, <title render="italic">Bibliography of Old Stile Press</title></unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00268" level="file">
+                <did>
+                    <unittitle>Thomas, Dylan, <title render="italic">The Laugharne Poems,</title> production material, correspondence</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00269" level="file">
+                <did>
+                    <unittitle>Blaga, Lucian, The Poems of Light, correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00270" level="file">
+                <did>
+                    <unittitle>Exhibitions 1995, correspondence, exhibition material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00271" level="file">
+                <did>
+                    <unittitle>Printing Presses, correspondence, instruction book</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00272" level="file">
+                <did>
+                    <unittitle>Graham, Rigby, <title render="italic">Kippers and Sawdust,</title> correspondence, production material</unittitle>
+                </did>
+            </c02>
+            <c02 id="VAC3909-00273" level="file">
+                <did>
+                    <container label="Box" type="Box">23 (Oversize)</container>
+                    <unittitle>Barnfield, Richard, <title render="italic">Sonnets</title></unittitle>
+                </did>
+                <note><p>correspondence, production material</p></note>
+            </c02>
+            <c02 id="VAC3909-00274" level="file">
+                <did>
+                    <container label="Box" type="Box">24 (Oversize)</container>
+                    <unittitle>Strachan, Geoffrey, <title render="italic">Masks</title></unittitle>
+                </did>
+                <note><p>correspondence, production material, research</p></note>
+            </c02>
+            <c02 id="VAC3909-00275" level="file">
+                <did>
+                    <container label="Box" type="Box">25 (Oversize)</container>
+                    <unittitle><title render="italic">Duke Bluebeard's Castle</title></unittitle>
+                </did>
+                <note><p>production material</p></note>
+            </c02>
+            <c02 id="VAC3909-00276" level="file">
+                <did>
+                    <container label="Box" type="Box">26 (Oversize)</container>
+                    <unittitle>Kiggell, Ralph</unittitle>
+                </did>
+                <note><p>assorted volumes</p></note>
+            </c02>
+            <c02 id="VAC3909-00277" level="file">
+                <did>
+                    <container label="Box" type="Box">27 (Oversize)</container>
+                    <unittitle>Hardy, Thomas, <title render="italic">Green Blades</title></unittitle>
+                </did>
+                <note><p>correspondence, production material</p></note>
+            </c02>
+            <c02 id="VAC3909-00278" level="file">
+                <did>
+                    <container label="Box" type="Box">28 (Oversize)</container>
+                    <unittitle>Isaac, Bert. <title render="italic">The Landscape Within</title></unittitle>
+                </did>
+                <note><p>correspondence, production material, research</p></note>
+            </c02>
+            <c02 id="VAC3909-00279" level="file">
+                <did>
+                    <container label="Box" type="Box">29 (Oversize)</container>
+                    <unittitle>Martin, Gillian</unittitle>
+                </did>
+                <note><p>assorted volumes</p></note>
+            </c02>
+            <c02 id="VAC3909-00280" level="file">
+                <did>
+                    <container label="Box" type="Box">30 (Oversize)</container>
+                    <unittitle>Brown, George Mackay, <title render="italic">In the Margins of a Shakespeare</title></unittitle>
+                </did>
+                <note><p>correspondence, production material</p></note>
+            </c02>
+            <c02 id="VAC3909-00281" level="file">
+                <did>
+                    <container label="Box" type="Box">31 (Oversize)</container>
+                    <unittitle>d'Arbeloff, Natalie, <title render="italic">Revelation</title></unittitle>
+                </did>
+                <note><p>production material, correspondence</p></note>
+            </c02>
+            <c02 id="VAC3909-00282" level="file">
+                <did>
+                    <container label="Box" type="Box">32 (Oversize)</container>
+                    <unittitle>Lemaire, Angela, <title render="italic">Pyed Piper</title></unittitle>
+                </did>
+                <note><p>correspondence and production material</p></note>
+            </c02>
+            <c02 id="VAC3909-00283" level="file">
+                <did>
+                    <container label="Box" type="Box">33 (Oversize)</container>
+                    <unittitle>Graham, W.S. &amp; Thomson, Douglas. <title render="italic">Letters &amp; Heads</title></unittitle>
+                </did>
+                <note><p>correspondence, production material, research</p></note>
+            </c02>
+            <c02 id="VAC3909-00284" level="file">
+                <did>
+                    <container label="Box" type="Box">34 (Oversize)</container>
+                    <unittitle><title render="italic">Taliesin &amp; the Mockers</title></unittitle>
+                </did>
+                <note><p>correspondence, production material</p></note>
+            </c02>
+            <c02 id="VAC3909-00285" level="file">
+                <did>
+                    <container label="Box" type="Box">35 (Oversize)</container>
+                    <unittitle>Sutton, Philip</unittitle>
+                </did>
+                <note><p>correspondence, production material, research</p></note>
+            </c02>
+            <c02 id="VAC3909-00286" level="file">
+                <did>
+                    <container label="Box" type="Box">36 (Oversize)</container>
+                    <unittitle>Graham, Rigby, <title render="italic">Kippers and Sawdust</title></unittitle>
+                </did>
+                <note><p>correspondence, production material</p></note>
+            </c02>
+            <c02 id="VAC3909-00287" level="file">
+                <did>
+                    <container label="Box" type="Box">37 (Oversize)</container>
+                    <unittitle>Martin, Gillian, <title render="italic">The Nonsense Stories</title></unittitle>
+                </did>
+                <note><p>correspondence and production material</p></note>
+            </c02>
+            <c02 id="VAC3909-00288" level="file">
+                <did>
+                    <container label="Box" type="Box">38 (Oversize)</container>
+                    <unittitle>Wilde, Nicolas, <title render="italic">The Flute of Sardonyx</title></unittitle>
+                </did>
+                <note><p>correspondence, production material</p></note>
+            </c02>
+            <c02 id="VAC3909-00289" level="file">
+                <did>
+                    <container label="Box" type="Box">39 (Oversize)</container>
+                    <unittitle>Palmer, Garrick, <title render="italic">Ballad of Reading Gaol</title></unittitle>
+                </did>
+                <note><p>correspondence and production material</p></note>
+            </c02>
+            <c02 id="VAC3909-00290" level="file">
+                <did>
+                    <container label="Box" type="Box">40 (Oversize)</container>
+                    <unittitle>Kirk, Robert, <title render="italic">Secret Commonwealth</title></unittitle>
+                </did>
+                <note><p>correspondence and production material</p></note>
+            </c02>
+            <c02 id="VAC3909-00291" level="file">
+                <did>
+                    <container label="Box" type="Box">41 (Oversize)</container>
+                    <unittitle>Elwyn, Joan, <title render="italic">House of Leaves</title></unittitle>
+                </did>
+                <note><p>correspondence and production material</p></note>
+            </c02>
+            <c02 id="VAC3909-00292" level="file">
+                <did>
+                    <container label="Box" type="Box">42 (Oversize)</container>
+                    <unittitle>Tanner, Robin, <title render="italic">The Last Poems of Alice Maynell</title></unittitle>
+                </did>
+                <note><p>correspondence and production material</p></note>
+            </c02>
+            <c02 id="VAC3909-00293" level="file">
+                <did>
+                    <container label="Box" type="Box">43 (Oversize)</container>
+                    <unittitle>Lamaire, Angela, <title render="italic">Thomas the Rhymer</title> and <title render="italic">Thomas the Future</title></unittitle>
+                </did>
+                <note><p>correspondence and production material</p></note>
+            </c02>
+            <c02 id="VAC3909-00294" level="file">
+                <did>
+                    <container label="Box" type="Box">44 (Oversize)</container>
+                    <unittitle>Nurse, Chris. <title render="italic">Pyramus &amp; Thisbe</title></unittitle>
+                </did>
+                <note><p>correspondence, production material</p></note>
+            </c02>
+            <c02 id="VAC3909-00295" level="file">
+                <did>
+                    <container label="Box" type="Box">45 (Oversize)</container>
+                    <unittitle>Crossley-Holland, Kevin, Eleanor's Advent</unittitle>
+                </did>
+                <note><p>production material</p></note>
+            </c02>
+            <c02 id="VAC3909-00296" level="file">
+                <did>
+                    <container label="Box" type="Box">46 (Oversize)</container>
+                    <unittitle>Zerkall special making. <title render="italic">Antique</title></unittitle>
+                    <physdesc>61x100cms 200 gsm.</physdesc>
+                </did>
+
+            </c02>
+            <c02 id="VAC3909-00297" level="file">
+                <did>
+                    <container label="Box" type="Box">47 (Oversize)</container>
+                    <unittitle>Anderson, Kate</unittitle>
+                </did>
+                <note><p>artistic sample</p></note>
+            </c02>
+            <c02 id="VAC3909-00298" level="file">
+                <did>
+                    <unittitle>Eschenbach, Wolfram von, <title render="italic">Parzival</title></unittitle>
+                </did>
+                <note><p>Gwasg Gregynog Press, publicity material</p></note>
+            </c02>
+            <c02 id="VAC3909-00299" level="file">
+                <did>
+                    <unittitle>Rocket Press</unittitle>
+                </did>
+                <note><p>correspondence, production material</p></note>
+            </c02>
+            <c02 id="VAC3909-00300" level="file">
+                <did>
+                    <unittitle>Davis, Michael and Simon Brett, <title render="italic">The Way to the Tree of Life</title></unittitle>
+                </did>
+                <note><p>correspondence and production material</p></note>
+            </c02>
+            <c02 id="VAC3909-00301" level="file">
+                <did>
+                    <unittitle>Biblio File</unittitle>
+                </did>
+                <note><p>correspondence</p></note>
+            </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
