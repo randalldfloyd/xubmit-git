@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+--><ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external" countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924" relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li" identifier="InU-Li-VAC4807">InU-Li-VAC4807</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Plath mss.<date normal="1958/1961">1958-1961</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2012" type="publication">© 2012</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2012">© 2012</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2012" type="source">2012</date>
+                <lb></lb>Finding aid encoded by Danielle Emerling, Lilly Library, Indiana University,
+                    <date normal="2012-08-31">August 31, 2012</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng">English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2012-08-31">August 31, 2012</date>
+                <item>Encoded finding aid begun.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Plath, Sylvia.</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Plath mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1958/1961" type="inclusive">1958-1961</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1861</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>94 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language langcode="eng">English</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">Consists primarily of poems by Sylvia
+                Plath, 1932-1963.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+
+            <p>Plath was born in Boston, Massachusetts, and began writing poetry as a child. She
+                entered Smith College in 1950 and, after an abortive suicide attempt in August of
+                1953, graduated in 1955. She then attended Newnham College in Cambridge for two
+                years on a Fulbright Fellowship where late in her first year she met and shortly
+                thereafter married poet Ted Hughes. Plath took her degree in June 1957, after which
+                she and Hughes sailed to America for a year of teaching and a second year of writing
+                and travel. In late 1959 they returned to England where Plath lived until her death
+                in February 1963. </p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>Materials are arranged in chronological order.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Plath mss. collection, 1958–1961, consists of poems and some story fragments by Sylvia Plath.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/plath+sylvia">
+                            <persname encodinganalog="600" source="lcnaf" role="subject">Plath,
+                                Sylvia.</persname>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+
+            <!-- <persname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="110" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+
+
+        <!-- optional, if applicable -->
+        <relatedmaterial encodinganalog="544 1">
+            <head>Related Material</head>
+            <p>Plath mss. II</p>
+        </relatedmaterial>
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 1961</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Plath mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Lilly Staff.</p>
+                <p>Completed in <date normal="2003">2003</date></p>
+
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+
+            <c01 id="VAC4807-00001" level="series">
+                <did>
+                    <container label="Box" type="Box">1</container>
+                    <unittitle>Collection</unittitle>
+                </did>
+                <c02 id="VAC4807-00002" level="file">
+                    <did>
+                        <unittitle><title>"Hardcastle Craigs," </title><unitdate normal="1958-06-24">1958 June 24</unitdate> (poem)</unittitle>
+                        <physdesc>T.D. 1p. 28cm.</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">The Colossus...</title> London:
+                            Heinemann, [l960], p. 16. Printer's copy with proof-reader's notes.
+                            Originally titled "Nocturne" changed to "Walk in the Night"; changed to
+                            "Night Walk." Published as "Hardcastle Crags." </p>
+                    </scopecontent>
+                </c02>
+
+
+                <c02 id="VAC4807-00003" level="file">
+                    <did>
+                        <unittitle><title>"The Hanging Man," </title><unitdate normal="1960-06-27">1960 June 27</unitdate> (poem)</unittitle>
+                        <physdesc>T.D. (carbon). 1p. 28cm. </physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">Ariel...</title> London: Faber and
+                            Faber, 1965, p.70. </p>
+                    </scopecontent>
+                </c02>
+
+                <c02 id="VAC4807-00004" level="file">
+                    <did>
+                        <unittitle><title>"On Deck,"</title>
+                            <unitdate normal="1960-07">1960 July</unitdate> (poem)</unittitle>
+                    </did>
+                </c02>
+
+                <c02 id="VAC4807-00005" level="file">
+                    <did>
+                        <unittitle><title>"Two Campers in Cloud Country (Rock Lake,
+                                Canada),"</title>
+                            <unitdate normal="1960-07">1960 July</unitdate> (poem)</unittitle>
+                        <physdesc>2 drafts. T.D. (carbon) and T.D. 1p. each. 28 cm.</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">New Yorker,</title> XXXIX (August 3,
+                            1963), p.28 and <title render="italic">Crossing the Water,</title> p.50.
+                            Carbon draft has holograph changes. </p>
+                    </scopecontent>
+                </c02>
+
+                <c02 id="VAC4807-00006" level="file">
+                    <did>
+                        <unittitle><title>"Leaving Early,"</title>
+                            <unitdate normal="1960-09-25">1960 Sept. 25</unitdate>
+                            (poem)</unittitle>
+                        <physdesc>T.D. (carbon). 1p. 28cm. </physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">London Magazine,</title> i (August
+                            1961), p.5-10 and <title render="italic">Crossing the Water,</title>
+                            1971, p.33. </p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAC4807-00007" level="file">
+                    <did>
+                        <unittitle><title>"Love Letter,"</title>
+                            <unitdate normal="1960-10-16">1960 Oct. 16</unitdate> (poem)</unittitle>
+                        <physdesc>T.D. (carbon). 1p. 28cm. </physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">Poetry,</title> XCIX (March 1962),
+                            p.350 and <title render="italic">Crossing the Water,</title> p.44. </p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAC4807-00008" level="file">
+                    <did>
+                        <unittitle><title>"Candles,"</title>
+                            <unitdate normal="1960-10-17">1960 Oct. 17</unitdate> (poem)</unittitle>
+                        <physdesc>T.D. (carbon). 1p. 28cm. </physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">Listener,</title> LXIV (November 17,
+                            1960), p.877 and <title render="italic">Crossing the Water,</title>
+                            p.41. </p>
+                    </scopecontent>
+                </c02>
+
+                <c02 id="VAC4807-00009" level="file">
+                    <did>
+                        <unittitle><title>"A Life,"</title>
+                            <unitdate normal="1960-11-18">1960 Nov. 18</unitdate> (poem)</unittitle>
+                        <physdesc>2 drafts. T.D. (carbon) and T.D. 1p. each. 28cm.</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">Crossing the Water,</title> p.53.
+                            Carbon draft has holograph revisions. </p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAC4807-00010" level="file">
+                    <did>
+                        <unittitle><title>"Parliament Hill Fields,"</title>
+                            <unitdate normal="1961-02-11">1961 Feb. 11</unitdate> (poem)</unittitle>
+                        <physdesc>T.D. 1p. 28cm. </physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">London Magazine,</title> i (August
+                            1961), p.5-10 and <title render="italic">Crossing the Water,</title>
+                            p.19. </p>
+                    </scopecontent>
+                </c02>
+
+                <c02 id="VAC4807-00011" level="file">
+                    <did>
+                        <unittitle><title>"Whitsun,"</title>
+                            <unitdate normal="1961-02-14">1961 Feb. 14</unitdate> (poem)</unittitle>
+                        <physdesc>T.D. (carbon). 1p. 28cm. </physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">London Magazine,</title> i (August
+                            1961), p.5-10 and <title render="italic">Crossing the Water</title>,
+                            p.60. </p>
+                    </scopecontent>
+                </c02>
+
+                <c02 id="VAC4807-00012" level="file">
+                    <did>
+                        <unittitle><title>"Face Lift,"</title>
+                            <unitdate normal="1961-02-15">1961 Feb. 15</unitdate> (poem)</unittitle>
+                        <physdesc>2 drafts. T.D.S. and T.D. (carbon). 1p. each. 28cm.</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">Poetry,</title> XCIX (March 1962),
+                            p.349 and <title render="italic">Crossing the Water,</title> p.17.
+                            Signed draft has holograph revisions. Typescript carbon of p.5 of story
+                            "The Kitchen of the Fig Tree" on verso. </p>
+                    </scopecontent>
+                </c02>
+
+                <c02 id="VAC4807-00013" level="file">
+                    <did>
+                        <unittitle><title>"Morning Song,"</title>
+                            <unitdate normal="1961-02-19">1961 Feb. 19</unitdate> (poem)</unittitle>
+                        <physdesc>2 drafts. T.D. and T.D. (carbon). 1p. each. 28cm. </physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">Ariel,</title> p.11. On verso of
+                            typescript draft is typescript carbon of p.2 of the article "Watching
+                            the Water–voles." </p>
+                    </scopecontent>
+                </c02>
+
+                <c02 id="VAC4807-00014" level="file">
+                    <did>
+                        <unittitle><title>"Small Hours,"</title>
+                            <unitdate normal="1961-02-21">1961 Feb. 21</unitdate> (poem)</unittitle>
+                        <physdesc>2 drafts. T.D. and T.D. (carbon). 1p. each. 14 and 28cm.
+                        </physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">London Magazine,</title> i (August
+                            1961), p.5-10 and <title render="italic">Crossing</title> the Water,
+                            1971, p.46. Title changed from "Night Thoughts." verso of typescript
+                            fragment of <title render="italic">The Bell Jar.</title>
+                        </p>
+                    </scopecontent>
+                </c02>
+
+                <c02 id="VAC4807-00015" level="file">
+                    <did>
+                        <unittitle><title>"Heavy Women,"</title>
+                            <unitdate normal="1961-02-22">1961 Feb. 22</unitdate> (poem)</unittitle>
+                        <physdesc>2 drafts. T.D. and T.D. (carbon). 1p. each. 14 and 28cm.
+                        </physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">Poetry,</title> XCIV (March 1962),
+                            p.350 and <title render="italic">Crossing the Water,</title> p.37. Type
+                            script originally titled "Waiting Women." Has numerous holograph changes
+                            and notes about fishing on verso. Removed from verso of typescript
+                            fragment of <title render="italic">The Bell Jar.</title>
+                        </p>
+                    </scopecontent>
+                </c02>
+
+                <c02 id="VAC4807-00016" level="file">
+                    <did>
+                        <unittitle><title>"Private Ground,"</title>
+                            <unitdate normal="1961-02-25">1961 Feb. 25</unitdate> (poem)</unittitle>
+                        <physdesc>8 drafts. T.D.S. (6 drafts), T.D. (carbon), and T.D. 1p. each.
+                            28cm. </physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">Critical Quarterly,</title> III
+                            (Summer 1961), p.141 and <title render="italic">Crossing the
+                                Water,</title> p.36. Seven drafts have holograph revisions. Four
+                            drafts carry title "In Frost Time." </p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAC4807-00017" level="file">
+                    <did>
+                        <unittitle><title>"Tulips,"</title>
+                            <unitdate normal="1961-02-18">1961 Mar. 18</unitdate> (poem)</unittitle>
+                        <physdesc>T.D. (carbon). 2p. 28cm.</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">New Yorker,</title> XXXVIII (April 7,
+                            1962), p.40 and Ariel, p.20. Holograph addition at bottom. </p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAC4807-00018" level="file">
+                    <did>
+                        <unittitle><title>"I Am Vertical,"</title>
+                            <unitdate normal="1961-03-28">1961 Mar. 28</unitdate> (poem)</unittitle>
+                        <physdesc>2 drafts. T.D.S. and T.D. 1p. each. 28cm.</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">Critical Quarterly,</title> III
+                            (Summer 1961), p.140-141 and <title render="italic">Crossing the
+                                Water,</title> p.26. Holograph revisions on T.D.S. </p>
+                    </scopecontent>
+                </c02>
+
+                <c02 id="VAC4807-00019" level="file">
+                    <did>
+                        <unittitle><title>"Widow,"</title>
+                            <unitdate normal="1961-05-16">1961 May 16</unitdate> (poem)</unittitle>
+                        <physdesc>3 drafts. A.D.S. 3p., T.D.S. 1p., and T.D. 1p. 28cm.</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">Poetry</title> XCIX (March 1962),
+                            p.347 and <title render="italic">Crossing the Water,</title> p.38.
+                            A.D.S. and T.D.S. have holograph revisions. Typescripts of Ted Hughes'
+                            "My Mother" and "My Father" from <title render="italic">Meet My
+                                Folks!</title> on versos.</p>
+                    </scopecontent>
+                </c02>
+
+                <c02 id="VAC4807-00020" level="file">
+                    <did>
+                        <unittitle><title>"Insomniac,"</title>
+                            <unitdate normal="1961-05">1961 May</unitdate> (poem)</unittitle>
+                        <physdesc>T.D. 1p. 28cm.</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">The Guinness Book of Poetry</title>
+                            1960/1961, London: Putnam, 1962, p.33 and <title render="italic">Crossing the Water,</title> p.21. </p>
+                    </scopecontent>
+                </c02>
+
+                <c02 id="VAC4807-00021" level="file">
+                    <did>
+                        <unittitle><title>"The Rival,"</title>
+                            <unitdate normal="1961-07">1961 July</unitdate> (poem)</unittitle>
+                        <physdesc>3 drafts. T.D.S., T.D., and T.D. (carbon). 2p. each.
+                            28cm.</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">Observer,</title> January 21, 1962,
+                            p.31 and <title render="italic">Ariel,</title> p.53. One draft has
+                            holograph revisions. Typescripts of "Man in Black" and "Snakecharmer" on
+                            versos of T.D.S. "Man in Black" published in New Yorker, XXXVI (April 9,
+                            1960), p.40 and <title render="italic">The Colossus,</title> p.52.
+                            "Snakecharmer" published in <title render="italic">London
+                                Magazine,</title> vi (March 1959), p.33-6 and <title render="italic">The Colossus,</title> p.54. </p>
+                    </scopecontent>
+                </c02>
+
+                <c02 id="VAC4807-00022" level="file">
+                    <did>
+                        <unittitle><title>"Blackberrying,"</title>
+                            <unitdate normal="1961-09-23">1961 Sept. 23</unitdate>
+                            (poem)</unittitle>
+                        <physdesc>3 drafts. A.D.S. 2p., T.D.S. 1p., and T.D. (carbon) 1p.
+                            28cm.</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">New Yorker,</title> XXXVIII
+                            (September 15, 1962), p.48 and Crossing the Water, p.24. Two drafts have
+                            holograph revisions. Typescripts of "The Ghost's Leavetaking" and "I
+                            Want, I Want" on versos of A.D.S. "The Ghost's Leavetaking" published in
+                            Sewanee Review, LXVII (Summer 1959), p.446 and <title render="italic">The Colossus,</title> [1960], p.39. "I Want, I Want" published in
+                                <title render="italic">Partisan Review,</title> 26 (Fall 1959),
+                            p.558 and <title render="italic">The Colossus,</title> p.36. Typescript
+                            of "Suicide Off Egg Rock" on verso of T.D.S. Published in <title render="italic">Hudson Review,</title> XIII (Fall 1960), p.415 and
+                            The Colossus, p.33. </p>
+                    </scopecontent>
+                </c02>
+
+                <c02 id="VAC4807-00023" level="file">
+                    <did>
+                        <unittitle><title>"Finisterre,"</title>
+                            <unitdate normal="1961-09-29">1961 Sept. 29</unitdate>
+                            (poem)</unittitle>
+                        <physdesc>8 drafts. A.D.S. (3 drafts – 1p.,1p., and 3p.), T.D.S. (3 drafts –
+                            1p. each), A.&amp;T.D.S. (2p.), T.D. (carbon - 1p.). 28cm.</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">Observer,</title> August 5, 1962,
+                            p.14 and <title render="italic">Crossing the Water,</title> p.15. Seven
+                            drafts have holograph revisions. On versos are typescripts of
+                            "Aftermath," "All the Dead Dears," "Point Shirley," "Lorelei," and "The
+                            Colossus." All were published in <title render="italic">The
+                                Colossus,</title> p.20–26, 29–31. Also on versos, two typescript
+                            pages of Ted Hughes' <title render="italic">Meet My Folks!</title></p>
+                    </scopecontent>
+                </c02>
+
+                <c02 id="VAC4807-00024" level="file">
+                    <did>
+                        <unittitle><title>"The Surgeon at 2 A.M.,"</title>
+                            <unitdate normal="1961-09-29">1961 Sept. 29</unitdate>
+                            (poem)</unittitle>
+                        <physdesc>5 drafts. A.D.S. (2 drafts - 1p. and 5p.), T.D.S. (3 drafts - 1p.
+                            each). 28cm.</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">Listener,</title> LXVIII (September
+                            20, 1962), p.428 and <title render="italic">Crossing the Water,</title>
+                            p.48. Four drafts have holograph revisions. Typescripts of "Departure,"
+                            "Hardcastle Crags," "The Eye-mote," "Two Views of a Cadaver Room,"
+                            "Night Shift," and "The Manor Garden" on versos. "Departure" published
+                            in <title render="italic">Nation,</title> CLXXXVIII (March 7, 1959),
+                            p.212 and <title render="italic">The Colossus,</title> p.19. "The
+                            Eye-mote" published in <title render="italic">Chelsea Review,</title>
+                            VII (May 1960), p.71 and <title render="italic">The Colossus,</title>
+                            p.14. "Two Views of a Cadaver Room" published in <title render="italic">Times Literary Supplement,</title> 3010 (November 6, 1959), p.xxiii
+                            and <title render="italic">The Colossus,</title> p.10. "Night Shift"
+                            published in <title render="italic">The Colossus,</title> p.11. "The
+                            Manor Garden" published in <title render="italic">Critical
+                                Quarterly,</title> II (Summer 1960), p.155-7 and <title render="italic">The Colossus,</title> p.9. Typescript of Ted Hughes'
+                            "My Brother Bert" from Meet My Folks! on verso of one draft. </p>
+                    </scopecontent>
+                </c02>
+
+                <c02 id="VAC4807-00025" level="file">
+                    <did>
+                        <unittitle><title>"Wuthering Heights,"</title>
+                            <unitdate normal="1961-09">1961 Sept.</unitdate> (poem)</unittitle>
+                        <physdesc>6 drafts. A.D.S. 6p., T.D.S. (2 drafts – 1p. each), A.&amp;T.D.S.
+                            (2 drafts – 3p. and 7p.), T.D. 1p. 28cm.</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">New Statesman,</title> LXIII (Mar.
+                            16, 1962), p.390 and <title render="italic">Crossing the Water,</title>
+                            p.11. Five drafts have holograph revisions. Two drafts titled "Withins."
+                            Two p. of the 7p. draft are titled "The Bald Truth About: Grass at
+                            Wuthering Heights." On versos are typescripts of "The Surgeon at 2
+                            A.M.," "A Life," "Faun," "Metaphors," "Morning Song," "Home Thoughts
+                            from London," "Maudlin," "Full Fathom Five," and the title and first
+                            pages of <title render="italic">The Bed Book.</title> "Faun" published
+                            in <title render="italic">Poetry,</title> LXXXIX (January 1957), p.234
+                            and <title render="italic">The Colossus,</title> p.18. "Metaphors"
+                            published in Partisan Review, XXVII (Summer 1960), p.435 under the title
+                            "Metaphors for a Pregnant Woman" and in The Colossus, p.41. "Maudlin"
+                            published in The Colossus, p.48. "Full Fathom Five" published in <title render="italic">Audience,</title> vi (Spring 1955), p.34 and <title render="italic">The Colossus,</title> p.46. <title render="italic">The Bed Book</title> published London: Faber and Faber, 1976.
+                            Holograph drafts of "Queen Mary's Rose Garden" and "Withins" on
+                            versos.</p>
+                    </scopecontent>
+                </c02>
+
+                <c02 id="VAC4807-00026" level="file">
+                    <did>
+                        <unittitle><title>"Last Words,"</title>
+                            <unitdate normal="1961-10-21">1961 Oct. 21</unitdate>
+                            (poems)</unittitle>
+                        <physdesc>5 drafts. A.D.S., T.D.S. (3 drafts), and T.D. (carbon). 1p. each.
+                            28cm.</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">New American Review,</title> II, New
+                            York: Simon and Schuster, 1971, p.232 and <title render="italic">Crossing the Water,</title> p.63. Holograph revisions on all but
+                            typescript carbon.</p>
+                    </scopecontent>
+                </c02>
+
+                <c02 id="VAC4807-00027" level="file">
+                    <did>
+                        <unittitle><title>"The Moon and the Yew Tree,"</title>
+                            <unitdate normal="1961-10-22">1961 Oct. 22</unitdate> (poem)</unittitle>
+                        <physdesc>3 drafts. A.D.S. 4p., T.D.S. (2 drafts - 1p. each).
+                            28cm.</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">New Yorker,</title> XXXIX (August 3,
+                            1963), p.28-29 and in <title render="italic">Ariel,</title> p.47. </p>
+                    </scopecontent>
+                </c02>
+
+                <c02 id="VAC4807-00028" level="file">
+                    <did>
+                        <unittitle><title>"Mirror,"</title>
+                            <unitdate normal="1961-10-23">1961 Oct. 23</unitdate> (poem)</unittitle>
+                        <physdesc>4 drafts. A.D.S., T.D.S. (2 drafts), and T.D. (carbon). 1p. each.
+                            28cm.</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">New Yorker,</title> XXXIX (August 3,
+                            1963), p.28-29 and <title render="italic">Crystal
+                            Gazer...</title>London, Rainbow Press, 1971, p.20. Originally titled
+                            "Mirror Talk." Three drafts have have holograph revisions. </p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAC4807-00029" level="file">
+                    <did>
+                        <unittitle>"The Babysitters," 1961 Oct. 29 (poem)</unittitle>
+                        <physdesc>7 drafts. A.D.S. (3 drafts -1p. each), A.&amp; T.D.S. 3p., T.D.S.
+                            (2 drafts – 1p. each), T.D. (carbon – 1p.). 28cm.</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">New Yorker,</title> XLVII (March 6,
+                            1971), p.36 and <title render="italic">Crossing the Water,</title> p.27.
+                            Six drafts have holograph revisions. One holograph draft has title
+                            change. Typescripts of 5p. of draft from <title render="italic">The Bell
+                                Jar,</title> London: Heinemann, 1963, on versos. Typescripts of
+                            "Whitsun," "Magi" and "Black Rock in Rainy Weather" on versos. Latter
+                            published in <title render="italic">Antioch Review,</title> XVII
+                            (January 1957), p.232 and <title render="italic">The Colossus,</title>
+                            p.42.</p>
+                    </scopecontent>
+                </c02>
+
+                <c02 id="VAC4807-00030" level="file">
+                    <did>
+                        <unittitle><title>"The Beggars,"</title>
+                            <unitdate normal="1958/1961" type="inclusive">undated</unitdate>
+                            (poem)</unittitle>
+                        <physdesc>T.D. (carbon). 1p. 28cm.</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">Chelsea Review,</title> VII (May
+                            1960), p.70 and <title render="italic">Crystal Gazer,</title> p.12. Has
+                            holograph revisions. Originally titled "The Beggars of Benidorm Market."
+                            Unidentified holograph draft on verso. </p>
+                    </scopecontent>
+                </c02>
+
+                <c02 id="VAC4807-00031" level="file">
+                    <did>
+                        <unittitle><title>"The Bell Jar,"</title>
+                            <unitdate normal="1958/1961" type="inclusive">undated</unitdate> (novel
+                            fragments)</unittitle>
+                        <physdesc>2 drafts. T.D.S (carbon). 1p. each. 28cm.</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">The Bell Jar,</title> London:
+                            Heinemann, 1963. Both drafts of p.136 of <title render="italic">The Bell
+                                Jar.</title> "Small Hours" and "Heavy Women" removed from
+                            versos.</p>
+                    </scopecontent>
+                </c02>
+
+                <c02 id="VAC4807-00032" level="file">
+                    <did>
+                        <unittitle><title>"The Fifteen Dollar Eagle,"</title>
+                            <unitdate normal="1958/1961" type="inclusive">undated</unitdate>
+                            (story)</unittitle>
+                        <physdesc>2 drafts. T.D. (carbon) and T.D. 20 and 21p. 28cm.</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">Sewanee Review,</title> LXVIII (Fall
+                            1960), p.603. Holograph changes on typescript carbon. </p>
+                    </scopecontent>
+                </c02>
+
+                <c02 id="VAC4807-00033" level="file">
+                    <did>
+                        <unittitle><title>"In Plaster,"</title>
+                            <unitdate normal="1958/1961" type="inclusive">undated</unitdate>
+                            (poem)</unittitle>
+                        <physdesc>2 drafts. T.D.S. and T.D. 2p. each. 28cm.</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">London Magazine,</title> I (Fall
+                            1962), p.15 and <title render="italic">Crossing the Water,</title> p.30.
+                            Signed draft has holograph revisions. Typescripts of "Private Ground"
+                            and Ted Hughes' "Squirrel in January" on versos. </p>
+                    </scopecontent>
+                </c02>
+
+                <c02 id="VAC4807-00034" level="file">
+                    <did>
+                        <unittitle><title>"Magi,"</title>
+                            <unitdate normal="1958/1961" type="inclusive">undated</unitdate>
+                            (poem)</unittitle>
+                        <physdesc>T.D. (carbon). 1p. 28cm.</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">New Statesman,</title> LXI (March 31,
+                            1961), p.514 and <title render="italic">Crossing the Water,</title>
+                            p.4O. </p>
+                    </scopecontent>
+                </c02>
+
+                <c02 id="VAC4807-00035" level="file">
+                    <did>
+                        <unittitle><title>"Sleep in the Mojave Desert,"</title>
+                            <unitdate normal="1958/1961" type="inclusive">undated</unitdate>
+                            (poem)</unittitle>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">Observer,</title> November 19, 1961,
+                            p.28 and <title render="italic">Crossing the Water</title>, p.47 </p>
+                    </scopecontent>
+                </c02>
+
+                <c02 id="VAC4807-00036" level="file">
+                    <did>
+                        <unittitle><title>"Stars Over the Dordogne,"</title>
+                            <unitdate normal="1958/1961" type="inclusive">undated</unitdate>
+                            (poem)</unittitle>
+                        <physdesc>2 drafts. T.D.S. and T.D. 1p. each. 28cm.</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">Poetry,</title> XCIX (March 1962),
+                            p.346. Signed draft has holograph changes. Title changed from "Stars at
+                            Lacan." Typescript of "The Companionable Ills" on verso. Published in
+                                <title render="italic">Spectator,</title> CCII (January 30, 1959),
+                            p.163 and <title render="italic">The Colossus,</title> p.63. </p>
+                    </scopecontent>
+                </c02>
+
+                <c02 id="VAC4807-00037" level="file">
+                    <did>
+                        <unittitle><title>"Stillborn,"</title>
+                            <unitdate normal="1958/1961" type="inclusive">undated</unitdate>
+                            (poem)</unittitle>
+                        <physdesc>T.D.S. 1p. 28cm.</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">New Statesman,</title> 81 (March 19,
+                            1971), p.384 and Crossing the Water, p.35. Titled changed from "A Book
+                            of Dead Poems." Holograph draft of an untitled poem on verso; first
+                            line: "The breath of my body steams up to me, I am warm."</p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAC4807-00038" level="file">
+                    <did>
+                        <unittitle><title>"Words for a Nursery,"</title>
+                            <unitdate normal="1958/1961" type="inclusive">undated</unitdate>
+                            (poem)</unittitle>
+                        <physdesc>2 drafts. T.D. (carbon) and T.D. 1p. each. 28cm. </physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">Atlantic,</title> CCVIII (August
+                            1961), p.66. Carbon draft has holograph revisions. Title changed from
+                            "Hand Song," to "Rhyme for a Nursery," to "Words for a \ Nursery."</p>
+                    </scopecontent>
+                </c02>
+
+                <c02 id="VAC4807-00039" level="file">
+                    <did>
+                        <unittitle><title>"You're,"</title>
+                            <unitdate normal="1958/1961" type="inclusive">undated</unitdate>
+                            (poem)</unittitle>
+                        <physdesc>T.D. (carbon). 1p. 28cm.</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">Harper's,</title> CCXIII (June 1961),
+                            p.40 and Ariel, p.57. </p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAC4807-00040" level="file">
+                    <did>
+                        <unittitle><title>"Zoo Keeper's Wife,"</title>
+                            <unitdate normal="1958/1961" type="inclusive">undated</unitdate>
+                            (poem)</unittitle>
+                        <physdesc>T.D. (carbon). 1p. 28cm.</physdesc>
+                    </did>
+                    <scopecontent>
+                        <p>Published in <title render="italic">London Magazine,</title> i (August
+                            1961), p.5-10 and Crossing the Water, p.58. </p>
+                    </scopecontent>
+                </c02>
+
+
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>

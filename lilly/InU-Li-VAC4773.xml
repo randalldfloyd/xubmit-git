@@ -1,0 +1,2299 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+--><ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external" countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924" relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li" identifier="InU-Li-VAC4773">InU-Li-VAC4773</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">MacCarthy mss.<date normal="1863/1991">1863-1991</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2012" type="publication">© 2012</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2012">© 2012</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2012" type="source">2012</date>
+                <lb></lb>Finding aid encoded by Danielle Emerling, Lilly Library, Indiana University,
+                    <date normal="2012-08-28">August 28, 2012</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng">English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2012-08-28">August 28, 2012</date>
+                <item>Encoded finding aid begun.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">MacCarthy, Desmond,
+                    1877-1952.</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">MacCarthy mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1863/1991" type="inclusive">1863-1991</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1684</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>10,000 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language langcode="eng">English</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">Consists of the papers of drama and
+                literary critic Desmond MacCarthy, 1877-1952, and his wife, author Mary
+                (Warre-Cornish) MacCarthy, 1882-1953.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+            <p>Desmond's first experience as an editor was with <emph render="italic">New Quarterly</emph> and then <emph render="italic">Eye Witness</emph>
+                (later renamed: <emph render="italic">New Witness).</emph> In 1913 he began writing a weekly column for the <emph render="italic">New
+                Statesman</emph> eventually becoming literary editor in 1920, then the drama critic.
+                Desmond also contributed weekly articles to the London Sunday <emph render="italic">Times</emph> and broadcast
+                literary talks for the BBC. Mary (or Molly, as she was known to most) wrote two
+                books, <emph render="italic">A Pier and a Band</emph> and <emph render="italic">A Nineteenth Century Childhood,</emph> as well as other works.
+                Although not particularly well-known for their writings, the MacCarthys were
+                surrounded by the colorful personalities that defined turn- of-the-century English
+                drama, art, literature, and society in general. </p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Correspondence; II.
+                Writings; III. Miscellaneous</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The papers contain correspondence with their colleagues and friends as well as a
+                large quantity just between Desmond and Mary. Also included is the correspondence of
+                both Mary's and Desmond's families. Some of the notable correspondents are: Lady
+                Cynthia Mary Evelyn (Charteris) Asquith, Countess Margot Asquith, Enid Bagnold,
+                Maurice Baring, Sir James Matthew Barrie, Sir Max Beerbohm, Clive Bell, Vanessa
+                (Stephen) Bell, Hilaire Belloc, Lady Helen Violet Bonham Carter, Irene
+                Cooper-Willis, Ethel Anne Priscilla (Fane) Grenfell (Baroness Desborough), Thomas
+                Stearns Eliot, Edward Morgan Forster, Roger Fry, Duncan James Corrowr Grant, Harley
+                Granville-Barker, Bryan Walter Guinness, Thomas Hardy, Leslie Poles Hartley, John
+                Maynard Keynes, Hope Mirrlees, George Moore, George Edward Moore, Lady Ottoline
+                Violet Anne (Cavendish-Bentinck) Morrell, Raymond Mortimer, Violet Paget, Betsy
+                Graves Reyneau, Bertrand Russell, George Bernard Shaw, Logan Pearsall Smith, Giles
+                Lytton Strachey, George Macaulay Trevelyan, Robert Calverley Trevelyan, Arthur
+                Waley, Judith Anne Dorothea Wentworth Blunt-Lytton (Baroness Wentworth), Virginia
+                (Stephen) Woolf.</p>
+
+            <p>The writings contain many drafts and typescripts of Desmond's articles and a few
+                writings by Molly. Miscellaneous materials include calendars and diaries for both
+                and school reports for Desmond. In addition, there are school reports, writings and
+                other miscellaneous materials for members of both families. </p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/maccarthy+desmond+1877+1952+correspondence">
+                            <persname encodinganalog="600" source="lcnaf" role="subject">MacCarthy,
+                                Desmond, 1877-1952 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/maccarthy+mary+1882+1953+correspondence">
+                            <persname encodinganalog="600" source="lcnaf" role="subject">MacCarthy,
+                                Mary, 1882-1953 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/maccarthy+mary+1882+1953">
+                            <persname encodinganalog="600" source="lcnaf" role="subject">MacCarthy,
+                                Mary, 1882-1953.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/asquith+cynthia+lady+1887+1960">
+                            <persname encodinganalog="600" source="lcnaf" role="subject">Asquith,
+                                Cynthia, Lady, 1887-1960.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/bagnold+enid">
+                            <persname encodinganalog="600" source="lcnaf" role="subject">Bagnold,
+                                Enid.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/baring+maurice+1874+1945">
+                            <persname encodinganalog="600" source="lcnaf" role="subject">Baring,
+                                Maurice, 1874-1945.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/beerbohm+max+sir+1872+1956">
+                            <persname encodinganalog="600" source="lcnaf" role="subject">Beerbohm,
+                                Max, Sir, 1872-1956.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/bell+vanessa+1879+1961">
+                            <persname encodinganalog="600" source="lcnaf" role="subject">Bell,
+                                Vanessa, 1879-1961.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/belloc+hilaire+1870+1953">
+                            <persname encodinganalog="600" source="lcnaf" role="subject">Belloc,
+                                Hilaire, 1870-1953.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/eliot+thomas+stearns+1888+1965">
+                            <persname encodinganalog="600" source="lcnaf" role="subject">Eliot, T.
+                                S. (Thomas Stearns), 1888-1965.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/forster+edward+morgan+1879+1970">
+                            <persname encodinganalog="600" source="lcnaf" role="subject">Forster, E.
+                                M. (Edward Morgan), 1879-1970.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/hardy+thomas+1840+1928">
+                            <persname encodinganalog="600" source="lcnaf" role="subject">Hardy,
+                                Thomas, 1840-1928.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/keynes+john+maynard+1883+1946">
+                            <persname encodinganalog="600" source="lcnaf" role="subject">Keynes,
+                                John Maynard, 1883-1946.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/morrell+ottoline+violet+anne+cavendish+bentinck+lady+1873+1938">
+                            <persname encodinganalog="600" source="lcnaf" role="subject">Morrell,
+                                Ottoline Violet Anne Cavendish-Bentinck, Lady, 1873-1938.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/russell+bertrand+1872+1970">
+                            <persname encodinganalog="600" source="lcnaf" role="subject">Russell,
+                                Bertrand, 1872-1970.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/shaw+bernard+1856+1950">
+                            <persname encodinganalog="600" source="lcnaf" role="subject">Shaw,
+                                Bernard, 1856-1950.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/wentworth+lady+1873">
+                            <persname encodinganalog="600" source="lcnaf" role="subject">Wentworth,
+                                Lady, 1873-</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/woolf+virginia+1882+1941">
+                            <persname encodinganalog="600" source="lcnaf" role="subject">Woolf,
+                                Virginia, 1882-1941.</persname>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/authors+english+correspondence">
+                            <subject encodinganalog="650" source="lcsh">Authors, English
+                                --Correspondence.</subject>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="110" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+        <!-- required, if appropriate -->
+
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 1994</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], MacCarthy mss., Lilly Library, Indiana University, Bloomington,
+                    Indiana.</p>
+            </prefercite>
+
+            <!--optional -->
+
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Lilly Staff.</p>
+                <p>Completed in <date normal="1996">1996</date></p>
+
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+
+            <c01 id="VAC4773-00001" level="series">
+                <did>
+                    <container label="Box" type="Box">1</container>
+                    <unittitle>Correspondence</unittitle>
+                </did>
+
+
+                <c02 id="VAC4773-00002" level="subseries">
+                    <did>
+                        <container label="Box" type="Box">1</container>
+                        <unittitle>Colleagues and Friends</unittitle>
+                    </did>
+                    <arrangement>
+                        <p>Most of the correspondence of Desmond and Molly MacCarthy with their
+                            colleagues and friends is arranged in chronological order. Seven
+                            individual files have been kept intact and filed alphabetically after
+                            the chronological file. </p>
+                    </arrangement>
+                    <scopecontent>
+                        <p>Correspondents include: </p>
+                    </scopecontent>
+                    <note>
+                        <list>
+                            <item><persname>Lady Cynthia Mary Evelyn (Charteris) Asquith
+                                </persname></item>
+                            <item><persname>Countess Margot Asquith </persname></item>
+                            <item><persname>Enid Bagnold </persname></item>
+                            <item><persname>Maurice Baring </persname></item>
+                            <item><persname>Sir James Matthew Barrie </persname></item>
+                            <item><persname>Sir Max Beerbohm </persname></item>
+                            <item><persname>Clive Bell </persname></item>
+                            <item><persname>Vanessa (Stephen) Bell </persname></item>
+                            <item><persname>Hilaire Belloc </persname></item>
+                            <item><persname>Lady Helen Violet Bonham Carter </persname></item>
+                            <item><persname>Irene Cooper-Willis </persname></item>
+                            <item><persname>Ethel Anne Priscilla (Fane) Grenfell </persname></item>
+                            <item><persname>Baroness Desborough </persname></item>
+                            <item><persname>Thomas Stearns Eliot </persname></item>
+                            <item><persname>Edward Morgan Forster </persname></item>
+                            <item><persname>Roger Fry </persname></item>
+                            <item><persname>Duncan James Corrowr Grant </persname></item>
+                            <item><persname>Harley Granville-Barker </persname></item>
+                            <item><persname>Bryan Walter Guinness </persname></item>
+                            <item><persname>Thomas Hardy </persname></item>
+                            <item><persname>Leslie Poles Hartley </persname></item>
+                            <item><persname>John Maynard Keynes </persname></item>
+                            <item><persname>Hope Mirrlees </persname></item>
+                            <item><persname>George Moore </persname></item>
+                            <item><persname>George Edward Moore </persname></item>
+                            <item><persname>Lady Ottoline Violet Anne (Cavendish-Bentinck) Morrell
+                                </persname></item>
+                            <item><persname>Raymond Mortimer </persname></item>
+                            <item><persname>Violet Paget </persname></item>
+                            <item><persname>Betsy Graves Reyneau </persname></item>
+                            <item><persname>Bertrand Russell </persname></item>
+                            <item><persname>George Bernard Shaw </persname></item>
+                            <item><persname>Logan Pearsall Smith </persname></item>
+                            <item><persname>Giles Lytton Strachey </persname></item>
+                            <item><persname>George Macaulay Trevelyan </persname></item>
+                            <item><persname>Robert Calverley Trevelyan </persname></item>
+                            <item><persname>Arthur Waley </persname></item>
+                            <item><persname>Judith Anne Dorothea Wentworth Blunt-Lytton
+                                </persname></item>
+                            <item><persname>Baroness Wentworth </persname></item>
+                            <item><persname>Virginia (Stephen) Woolf</persname></item>
+
+                        </list>
+                    </note>
+
+
+                    <c03 id="VAC4773-00003" level="otherlevel">
+                        <did>
+                            <container label="Box" type="Box">1</container>
+                            <unittitle>Chronological files</unittitle>
+                        </did>
+                        <c04 id="VAC4773-00004" level="file">
+                            <did>
+
+                                <unittitle><unitdate normal="1876/1939" type="inclusive">1876-1939</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC4773-00005" level="file">
+                            <did>
+                                <container label="Box" type="Box">2</container>
+                                <unittitle><unitdate normal="1940/1991" type="inclusive">1940 -
+                                        1991;</unitdate>
+                                    <unitdate normal="1836/1991" type="inclusive">undated</unitdate></unittitle>
+                            </did>
+                        </c04>
+                    </c03>
+                    <c03 id="VAC4773-00006" level="otherlevel">
+                        <did>
+                            <container label="Box" type="Box">3</container>
+                            <unittitle>Alphabetical files</unittitle>
+                        </did>
+                        <c04 id="VAC4773-00007" level="file">
+                            <did>
+                                <container label="Folder" type="folder">1-14</container>
+                                <unittitle><persname>Abbott, Reymond</persname>
+                                    <unitdate normal="1895/1953" type="inclusive">1895-1953</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC4773-00008" level="file">
+                            <did>
+                                <container label="Folder" type="folder">15-19</container>
+                                <unittitle><persname>Asquith, Cynthia</persname>
+                                    <unitdate normal="1918/1953" type="inclusive">1918-1953</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC4773-00009" level="file">
+                            <did>
+                                <container label="Folder" type="folder">20-21</container>
+                                <unittitle><persname>Asquith, Margot</persname>
+                                    <unitdate normal="1917/1945" type="inclusive">1917-1945</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC4773-00010" level="file">
+                            <did>
+                                <container label="Folder" type="folder">22-23</container>
+                                <unittitle><persname>Baring, Maurice</persname>
+                                    <unitdate normal="1899/1945" type="inclusive">1899-1945</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC4773-00011" level="file">
+                            <did>
+                                <container label="Folder" type="folder">24-27</container>
+                                <unittitle><persname>Cooper-Willis, Irene</persname>
+                                    <unitdate normal="1916/1918" type="inclusive">1916-1918</unitdate></unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC4773-00012" level="file">
+                            <did>
+                                <container label="Folder" type="folder">28-29</container>
+                                <unittitle><persname>Morrell, Lady Ottoline</persname>
+                                    <unitdate normal="1914/1933" type="inclusive">1914-1933</unitdate>
+                                </unittitle>
+                            </did>
+                        </c04>
+                        <c04 id="VAC4773-00013" level="file">
+                            <did>
+                                <container label="Folder" type="folder">30-31</container>
+                                <unittitle><persname>Woolf, Virginia</persname>
+                                    <unitdate normal="1911/1940" type="inclusive">1911-1940</unitdate></unittitle>
+                            </did>
+                        </c04>
+                    </c03>
+                </c02>
+
+
+                <c02 id="VAC4773-00014" level="subseries">
+                    <did>
+                        <container label="Box" type="Box">4</container>
+                        <unittitle>Desmond and Molly</unittitle>
+                    </did>
+                    <scopecontent>
+                        <p>Correspondence between Desmond and Molly only. There are 279 letters from
+                            Desmond to Molly and 377 letters from Molly to Desmond.</p>
+                    </scopecontent>
+                    <arrangement>
+                        <p>They are interfiled into one chronological arrangement.</p>
+                    </arrangement>
+                    <c03 id="VAC4773-00015" level="file">
+                        <did>
+                            <container label="Box" type="Box">4</container>
+                            <unittitle><unitdate normal="1901/1952" type="inclusive">1901-1952;</unitdate>
+                                <unitdate normal="1836/1991" type="inclusive">undated</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+
+
+                <c02 id="VAC4773-00016" level="subseries">
+                    <did>
+                        <container label="Box" type="Box">5</container>
+                        <unittitle>Louise MacCarthy</unittitle>
+                    </did>
+                    <scopecontent>
+                        <p>Correspondence of Desmond and Molly with Desmond's mother Louise Jeanne
+                            Wilhelmine (de la Chevallerie) MacCarthy.</p>
+                    </scopecontent>
+                    <arrangement>
+                        <p>Interfiled into one chronological arrangement.</p>
+                    </arrangement>
+                    <c03 id="VAC4773-00017" level="file">
+                        <did>
+                            <container label="Box" type="Box">5</container>
+                            <unittitle><unitdate normal="1861/1937" type="inclusive">1861-1937;</unitdate>
+                                <unitdate normal="1836/1991" type="inclusive">undated</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00018" level="file">
+                        <did>
+                            <container label="Box" type="Box">6</container>
+                            <unittitle><unitdate normal="1836/1904" type="inclusive">1836-1904;</unitdate>
+                                <unitdate normal="1836/1991" type="inclusive">undated</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+
+
+                <c02 id="VAC4773-00019" level="subseries">
+                    <did>
+                        <container label="Box" type="Box">6</container>
+                        <unittitle>Family</unittitle>
+                    </did>
+                    <scopecontent>
+                        <p>Correspondence of the MacCarthy and Warre-Cornish families, excluding the
+                            correspondence of Molly, Desmond and Louise MacCarthy with each
+                            other.</p>
+                    </scopecontent>
+                    <arrangement>
+                        <p>The letters are interfiled into one chronological arrangement.</p>
+                    </arrangement>
+                    <scopecontent>
+                        <p>Correspondents include:</p>
+                    </scopecontent>
+                    <note>
+                        <list>
+                            <item><persname>Vanessa Bell </persname></item>
+                            <item><persname>Anne Thackeray </persname></item>
+                            <item><persname>Ritchie Gerald Warre-Cornish</persname></item>
+                            <item><persname>Francis Warre-Cornish</persname></item>
+                            <item><persname>Maurice Baring </persname></item>
+                            <item><persname>Lord Edward Christian David Gascoyne-Cecil
+                                </persname></item>
+                            <item><persname>Mary Elizabeth Coleridge </persname></item>
+                            <item><persname>Esmé Valerie (Fletcher) Eliot </persname></item>
+                            <item><persname>Thomas Hardy </persname></item>
+                            <item><persname>Henry James </persname></item>
+                            <item><persname>Neville Stephen Lytton </persname></item>
+                            <item><persname>Sir Edward Howard Marsh </persname></item>
+                            <item><persname>Alan Noel Latimer Munby</persname></item>
+                            <item><persname>Judith Anne Dorothea Wentworth Blunt-Lytton
+                                </persname></item>
+                            <item><persname>Baroness Wentworth</persname></item>
+
+                        </list>
+                    </note>
+                    <c03 id="VAC4773-00020" level="file">
+                        <did>
+                            <container label="Box" type="Box">6</container>
+                            <unittitle><unitdate normal="1836/1904" type="inclusive">1836-1904;</unitdate>
+                                <unitdate normal="1836/1991" type="inclusive">undated</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00021" level="file">
+                        <did>
+                            <container label="Box" type="Box">7</container>
+                            <unittitle><unitdate normal="1905/1958" type="inclusive">1905-1958;</unitdate>
+                                <unitdate normal="1836/1991" type="inclusive">undated</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+
+            </c01>
+
+            <c01 id="VAC4773-00022" level="series">
+                <did>
+                    <container label="Box" type="Box">7</container>
+                    <unittitle>Writings</unittitle>
+                </did>
+                <c02 id="VAC4773-00023" level="subseries">
+                    <did>
+                        <container label="Box" type="Box">7</container>
+                        <unittitle>Writings by Desmond MacCarthy</unittitle>
+                    </did>
+                    <arrangement>
+                        <p>Writings are filed under the following alphabetically-arranged subjects
+                            assigned by Desmond.</p>
+                    </arrangement>
+                    <scopecontent>
+                        <p>Types of writings include: dramatic criticism, book reviews, and other
+                            articles for newspapers and magazines; talks and lectures; radio
+                            broadcasts; short stories and books.</p>
+                    </scopecontent>
+                    <c03 id="VAC4773-00024" level="file">
+                        <did>
+                            <container label="Box" type="Box">7</container>
+                            <unittitle>Art</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00025" level="file">
+                        <did>
+                            <unittitle>Art of Reading</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00026" level="file">
+                        <did>
+                            <unittitle><persname>Bacon, Francis</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00027" level="file">
+                        <did>
+                            <unittitle><persname>Barrie, James</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00028" level="file">
+                        <did>
+                            <unittitle><persname>Beerbohm, Max</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00029" level="file">
+                        <did>
+                            <unittitle><persname>Belloc, Hilaire</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00030" level="file">
+                        <did>
+                            <unittitle><persname>Bennett, Arnold</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00031" level="file">
+                        <did>
+                            <unittitle><persname>Bibesco, Elizabeth</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00032" level="file">
+                        <did>
+                            <unittitle>Bloomsbury</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00033" level="file">
+                        <did>
+                            <unittitle><persname>Bronte, Charlotte</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00034" level="file">
+                        <did>
+                            <unittitle><persname>Byron, George Gordon Byron</persname></unittitle>
+                        </did>
+                    </c03>
+
+                    <c03 id="VAC4773-00035" level="file">
+                        <did>
+                            <container label="Box" type="Box">8</container>
+                            <unittitle><persname>Capek, Josef</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00036" level="file">
+                        <did>
+                            <unittitle><persname>Carlyle, Thomas</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00037" level="file">
+                        <did>
+                            <unittitle><persname>Carroll</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00038" level="file">
+                        <did>
+                            <unittitle><persname>Chesterton, Gilbert Keith</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00039" level="file">
+                        <did>
+                            <unittitle><persname>Chekhov, Anton Pavlovich</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00040" level="file">
+                        <did>
+                            <unittitle><persname>Claudel, Paul</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00041" level="file">
+                        <did>
+                            <unittitle><persname>Cobden-Sickert, Ellen
+                                Melicent</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00042" level="file">
+                        <did>
+                            <unittitle><persname>Cocteau, Jean</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00043" level="file">
+                        <did>
+                            <unittitle><persname>Congreve, William</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00044" level="file">
+                        <did>
+                            <unittitle><persname>Coward, Noel</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00045" level="file">
+                        <did>
+                            <unittitle><persname>Craig, Gordon</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00046" level="file">
+                        <did>
+                            <unittitle>Criticism</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00047" level="file">
+                        <did>
+                            <unittitle>A Critic's Daybook</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00048" level="file">
+                        <did>
+                            <unittitle><persname>Dalcroze, Jaques</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00049" level="file">
+                        <did>
+                            <unittitle><persname>Dane, Clemence</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00050" level="file">
+                        <did>
+                            <unittitle><persname>D'Annunzio, Gabriele</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00051" level="file">
+                        <did>
+                            <unittitle><persname>Darwin, Charles Galton</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00052" level="file">
+                        <did>
+                            <unittitle><persname>Daviot, Gordon</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00053" level="file">
+                        <did>
+                            <unittitle><persname>Defoe, Daniel</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00054" level="file">
+                        <did>
+                            <unittitle><persname>de la Mare, Walter</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00055" level="file">
+                        <did>
+                            <unittitle><persname>Dell, Ethel May</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00056" level="file">
+                        <did>
+                            <unittitle><persname>de Quincey, Thomas</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00057" level="file">
+                        <did>
+                            <unittitle><persname>de Selincourt, Ernest</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00058" level="file">
+                        <did>
+                            <unittitle><persname>Dibdin, Charles</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00059" level="file">
+                        <did>
+                            <unittitle><persname>Dickens, Charles</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00060" level="file">
+                        <did>
+                            <unittitle><persname>Din, Nasr-ed</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00061" level="file">
+                        <did>
+                            <unittitle>Diogenes, etc.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00062" level="file">
+                        <did>
+                            <unittitle>Distinguished Villa</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00063" level="file">
+                        <did>
+                            <unittitle>Dogs</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00064" level="file">
+                        <did>
+                            <unittitle><persname>Donne, John</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00065" level="file">
+                        <did>
+                            <unittitle><persname>Dostoevsky, Theodore M.</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00066" level="file">
+                        <did>
+                            <unittitle>Drama</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00067" level="file">
+                        <did>
+                            <unittitle>Drinkwater</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00068" level="file">
+                        <did>
+                            <unittitle><persname>Dryden, John</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00069" level="file">
+                        <did>
+                            <unittitle><persname>Eliot, T.S.</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00070" level="file">
+                        <did>
+                            <unittitle><persname>Emerson, Ralph Waldo</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00071" level="file">
+                        <did>
+                            <unittitle><persname>The English Character</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00072" level="file">
+                        <did>
+                            <unittitle><persname>Firbank, Ronald</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00073" level="file">
+                        <did>
+                            <unittitle><persname>Fleming, Marjory</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00074" level="file">
+                        <did>
+                            <unittitle><persname>Ford, Lionel</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00075" level="file">
+                        <did>
+                            <unittitle><persname>Forster, E. M.</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00076" level="file">
+                        <did>
+                            <unittitle><persname>Fry, Roger</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00077" level="file">
+                        <did>
+                            <unittitle><persname>Gallagher, Frank</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00078" level="file">
+                        <did>
+                            <unittitle><persname>Galsworthy, John</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00079" level="file">
+                        <did>
+                            <unittitle>The Gentleman</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00080" level="file">
+                        <did>
+                            <unittitle>Ghosts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00081" level="file">
+                        <did>
+                            <unittitle><persname>Gosse, Edmund</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00082" level="file">
+                        <did>
+                            <unittitle><persname>Granville-Barker, Harley</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00083" level="file">
+                        <did>
+                            <unittitle><persname>Hardy, Thomas</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00084" level="file">
+                        <did>
+                            <unittitle><persname>Hawthorne, Nathaniel</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00085" level="file">
+                        <did>
+                            <unittitle><persname>Hawtrey, Charles</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00086" level="file">
+                        <did>
+                            <unittitle><persname>Hazlitt, William</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00087" level="file">
+                        <did>
+                            <unittitle><persname>Heine, Heinrich</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00088" level="file">
+                        <did>
+                            <unittitle><persname>Herbert, Aubrey</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00089" level="file">
+                        <did>
+                            <unittitle><persname>Herrick, Robert</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00090" level="file">
+                        <did>
+                            <unittitle><persname>Holcroft, Thomas</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00091" level="file">
+                        <did>
+                            <unittitle><persname>Holmes, Sherlock</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00092" level="file">
+                        <did>
+                            <unittitle><persname>Hsiung, Shih-li</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00093" level="file">
+                        <did>
+                            <unittitle><persname>Hughes, Richard</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00094" level="file">
+                        <did>
+                            <unittitle>Humanities</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00095" level="file">
+                        <did>
+                            <unittitle>Humour</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00096" level="file">
+                        <did>
+                            <unittitle><persname>Hunt, Leigh</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00097" level="file">
+                        <did>
+                            <unittitle><persname>Huxley, Aldous</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00098" level="file">
+                        <did>
+                            <unittitle><persname>Ibsen, Henrik</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00099" level="file">
+                        <did>
+                            <unittitle>The Irish Players</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00100" level="file">
+                        <did>
+                            <unittitle><persname>James, Henry</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00101" level="file">
+                        <did>
+                            <unittitle><persname>Johnson, Samuel</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00102" level="file">
+                        <did>
+                            <unittitle>Journalists</unittitle>
+                        </did>
+                    </c03>
+
+                    <c03 id="VAC4773-00103" level="file">
+                        <did>
+                            <container label="Box" type="Box">9</container>
+                            <unittitle><persname>Kipling, Rudyard</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00104" level="file">
+                        <did>
+                            <unittitle><persname>Lamartine, Alphonse de</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00105" level="file">
+                        <did>
+                            <unittitle><persname>Lamb, Charles</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00106" level="file">
+                        <did>
+                            <unittitle><persname>Landor, Walter Savage</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00107" level="file">
+                        <did>
+                            <unittitle><persname>Lang, Andrew</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00108" level="file">
+                        <did>
+                            <unittitle><persname>Lawrence, D.H.</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00109" level="file">
+                        <did>
+                            <unittitle><persname>Lee, Vernon</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00110" level="file">
+                        <did>
+                            <unittitle><persname>Lemaitre, Jules</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00111" level="file">
+                        <did>
+                            <unittitle><persname>Lipscomb, William Percy</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00112" level="file">
+                        <did>
+                            <unittitle>Literature</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00113" level="file">
+                        <did>
+                            <unittitle><persname>Louÿs, Pierre</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00114" level="file">
+                        <did>
+                            <unittitle><persname>Lucas, Edward Verrall</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00115" level="file">
+                        <did>
+                            <unittitle><persname>Lucas, F. L.</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00116" level="file">
+                        <did>
+                            <unittitle><persname>Lytton, Bulwer</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00117" level="file">
+                        <did>
+                            <unittitle><persname>Mackenzie, Ronald</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00118" level="file">
+                        <did>
+                            <unittitle><persname>Maeterlinck, Maurice</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00119" level="file">
+                        <did>
+                            <unittitle><persname>Marillier, Christabel</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00120" level="file">
+                        <did>
+                            <unittitle><persname>Martinez Sierra, Gregorio</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00121" level="file">
+                        <did>
+                            <unittitle><persname>Masculine &amp; Feminine</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00122" level="file">
+                        <did>
+                            <unittitle><persname>Masefield, John</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00123" level="file">
+                        <did>
+                            <unittitle><persname>Maugham, Somerset</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00124" level="file">
+                        <did>
+                            <unittitle><persname>Maurois, Andre</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00125" level="file">
+                        <did>
+                            <unittitle><persname>Melville</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00126" level="file">
+                        <did>
+                            <unittitle><persname>Merezhkovsky, Dmitry
+                                Sergeyevich</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00127" level="file">
+                        <did>
+                            <unittitle><persname>Meredith, George</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00128" level="file">
+                        <did>
+                            <unittitle><persname>Merrick, Hope</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00129" level="file">
+                        <did>
+                            <unittitle><persname>Milton, John</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00130" level="file">
+                        <did>
+                            <unittitle><persname>Montaigne, Michel de</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00131" level="file">
+                        <did>
+                            <unittitle><persname>Moore, George</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00132" level="file">
+                        <did>
+                            <unittitle><persname>Munro, Charles Kirkpatrick</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00133" level="file">
+                        <did>
+                            <unittitle><persname>Musset, Alfred de</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00134" level="file">
+                        <did>
+                            <unittitle>Names</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00135" level="file">
+                        <did>
+                            <unittitle><persname>Napoleon I</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00136" level="file">
+                        <did>
+                            <unittitle>New Statesman</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00137" level="file">
+                        <did>
+                            <unittitle><persname>Nichols, Robert</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00138" level="file">
+                        <did>
+                            <unittitle><persname>Nicolson, Sir Arthur</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00139" level="file">
+                        <did>
+                            <unittitle><persname>Nietzsche, Friedrich</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00140" level="file">
+                        <did>
+                            <unittitle>The Nineteen-Twenties</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00141" level="file">
+                        <did>
+                            <unittitle>Nonsense</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00142" level="file">
+                        <did>
+                            <unittitle>The Novel</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00143" level="file">
+                        <did>
+                            <unittitle><persname>Obey, Andre</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00144" level="file">
+                        <did>
+                            <unittitle>Obscenity and the Law</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00145" level="file">
+                        <did>
+                            <unittitle><persname>O'Casey, Sean</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00146" level="file">
+                        <did>
+                            <unittitle>Old Age</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00147" level="file">
+                        <did>
+                            <unittitle><persname>O'Neill, Eugene</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00148" level="file">
+                        <did>
+                            <unittitle>Order of Merit</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00149" level="file">
+                        <did>
+                            <unittitle><persname>Ould, Hermon</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00150" level="file">
+                        <did>
+                            <unittitle><persname>Oxford, Lord</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00151" level="file">
+                        <did>
+                            <unittitle>Pain</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00152" level="file">
+                        <did>
+                            <unittitle><persname>Paley, Arthur</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00153" level="file">
+                        <did>
+                            <unittitle><persname>Parnell, Charles Stuart</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00154" level="file">
+                        <did>
+                            <unittitle><persname>Peacock, Thomas Love</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00155" level="file">
+                        <did>
+                            <unittitle><persname>Pencraft</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00156" level="file">
+                        <did>
+                            <unittitle><persname>Penn-Smith, Frank</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00157" level="file">
+                        <did>
+                            <unittitle><persname>Pepys, Samuel</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00158" level="file">
+                        <did>
+                            <unittitle><persname>Phillips</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00159" level="file">
+                        <did>
+                            <unittitle><persname>Pierrot</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00160" level="file">
+                        <did>
+                            <unittitle><persname>Pinero, Arthur</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00161" level="file">
+                        <did>
+                            <unittitle><persname>Pirandello, Luigi</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00162" level="file">
+                        <did>
+                            <unittitle><persname>Pixerecourt, Guilbert de</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00163" level="file">
+                        <did>
+                            <unittitle><persname>Plimsoll</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00164" level="file">
+                        <did>
+                            <unittitle><persname>Poe, Edgar Allan</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00165" level="file">
+                        <did>
+                            <unittitle>Poetry</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00166" level="file">
+                        <did>
+                            <unittitle><persname>Pope, Alexander</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00167" level="file">
+                        <did>
+                            <unittitle>Portraits and Criticism</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00168" level="file">
+                        <did>
+                            <unittitle><persname>Powys, Llewelyn</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00169" level="file">
+                        <did>
+                            <unittitle><persname>Priestley, J.B.</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00170" level="file">
+                        <did>
+                            <unittitle><persname>Prince, F.T.</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00171" level="file">
+                        <did>
+                            <unittitle><persname>Proust, Marcel</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00172" level="file">
+                        <did>
+                            <unittitle>Psychology and psychoanalysis</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00173" level="file">
+                        <did>
+                            <unittitle><persname>Pushkin, Aleksandr
+                                Sergeevich</persname></unittitle>
+                        </did>
+                    </c03>
+
+                    <c03 id="VAC4773-00174" level="file">
+                        <did>
+                            <container label="Box" type="Box">10</container>
+                            <unittitle><persname>Rabelais, Francois</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00175" level="file">
+                        <did>
+                            <unittitle>Reason and common sense</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00176" level="file">
+                        <did>
+                            <unittitle>Religion</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00177" level="file">
+                        <did>
+                            <unittitle><persname>Renan, Ernest</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00178" level="file">
+                        <did>
+                            <unittitle><persname>Richardson and Proust</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00179" level="file">
+                        <did>
+                            <unittitle><persname>Ricketts, Charles</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00180" level="file">
+                        <did>
+                            <unittitle><persname>Ritchie, Arthur</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00181" level="file">
+                        <did>
+                            <unittitle><persname>Robespierre, Maximilien</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00182" level="file">
+                        <did>
+                            <unittitle><persname>Robinson, Lennox</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00183" level="file">
+                        <did>
+                            <unittitle>Romanticists</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00184" level="file">
+                        <did>
+                            <unittitle><persname>Roseberry, Lord</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00185" level="file">
+                        <did>
+                            <unittitle><persname>Rossetti family</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00186" level="file">
+                        <did>
+                            <unittitle><persname>Rothschild, Henri de</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00187" level="file">
+                        <did>
+                            <unittitle><persname>Rousseau, Jean Jacques</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00188" level="file">
+                        <did>
+                            <unittitle><persname>Ruskin, John</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00189" level="file">
+                        <did>
+                            <unittitle>Russian literature,</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00190" level="file">
+                        <did>
+                            <unittitle>Russian stories</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00191" level="file">
+                        <did>
+                            <unittitle><persname>Saintsbury, George</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00192" level="file">
+                        <did>
+                            <unittitle><persname>Sala, George Augustus</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00193" level="file">
+                        <did>
+                            <unittitle><persname>Sanger, Lord George</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00194" level="file">
+                        <did>
+                            <unittitle><persname>Santayana, George</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00195" level="file">
+                        <did>
+                            <unittitle><persname>Savoir, Alfred</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00196" level="file">
+                        <did>
+                            <unittitle><persname>Schopenhauer, Arthur</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00197" level="file">
+                        <did>
+                            <unittitle><persname>Scott, Sir Walter</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00198" level="file">
+                        <did>
+                            <unittitle><persname>Shakespeare, William</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00199" level="file">
+                        <did>
+                            <unittitle><persname>Shaw, George Bernard</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00200" level="file">
+                        <did>
+                            <unittitle><persname>Sheppard, Jack</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00201" level="file">
+                        <did>
+                            <unittitle><persname>Sheridan, Richard Brinsley</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00202" level="file">
+                        <did>
+                            <unittitle><persname>Sherwood, Robert Emmet</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00203" level="file">
+                        <did>
+                            <unittitle>Short stories,</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00204" level="file">
+                        <did>
+                            <unittitle><persname>Sidney, Sir Philip</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00205" level="file">
+                        <did>
+                            <unittitle>Sign of the World's End</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00206" level="file">
+                        <did>
+                            <unittitle><persname>Simenon, Georges</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00207" level="file">
+                        <did>
+                            <unittitle><persname>Sitwell, Osbert</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00208" level="file">
+                        <did>
+                            <unittitle><persname>Sitwell, Edith</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00209" level="file">
+                        <did>
+                            <unittitle><persname>Smith, Sydney</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00210" level="file">
+                        <did>
+                            <unittitle>Social Distinctions in the Past</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00211" level="file">
+                        <did>
+                            <unittitle>Speeches</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00212" level="file">
+                        <did>
+                            <unittitle>Spiders</unittitle>
+                        </did>
+                    </c03>
+
+                    <c03 id="VAC4773-00213" level="file">
+                        <did>
+                            <container label="Box" type="Box">11</container>
+                            <unittitle><persname>Stael, Madame de</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00214" level="file">
+                        <did>
+                            <unittitle>Statues and Tailors</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00215" level="file">
+                        <did>
+                            <unittitle><persname>Stein, Gertrude</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00216" level="file">
+                        <did>
+                            <unittitle>Stendahl</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00217" level="file">
+                        <did>
+                            <unittitle><persname>Stephen, Leslie</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00218" level="file">
+                        <did>
+                            <unittitle><persname>Sterne, Laurence</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00219" level="file">
+                        <did>
+                            <unittitle><persname>Stevenson, Robert Louis</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00220" level="file">
+                        <did>
+                            <unittitle><persname>Strachey, Lytton</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00221" level="file">
+                        <did>
+                            <unittitle><persname>Strindberg, August</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00222" level="file">
+                        <did>
+                            <unittitle>Style</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00223" level="file">
+                        <did>
+                            <unittitle><persname>Sudermann, Hermann</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00224" level="file">
+                        <did>
+                            <unittitle>Suffragettes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00225" level="file">
+                        <did>
+                            <unittitle><persname>Surtees, Robert Smith</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00226" level="file">
+                        <did>
+                            <unittitle><persname>Swift, Jonathan</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00227" level="file">
+                        <did>
+                            <unittitle><persname>Swinburne, Algernon Charles</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00228" level="file">
+                        <did>
+                            <unittitle><persname>Symons, Arthur</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00229" level="file">
+                        <did>
+                            <unittitle><persname>Synge, John Millington</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00230" level="file">
+                        <did>
+                            <unittitle>Talks</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00231" level="file">
+                        <did>
+                            <unittitle><persname>Talleyrand-Perigord, Charles</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00232" level="file">
+                        <did>
+                            <unittitle><persname>Taylor, Jeremy</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00233" level="file">
+                        <did>
+                            <unittitle>Tears</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00234" level="file">
+                        <did>
+                            <unittitle><persname>Tennyson, Alfred Tennyson,
+                                baron</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00235" level="file">
+                        <did>
+                            <unittitle><persname>Tetrazzini, Luisa</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00236" level="file">
+                        <did>
+                            <unittitle><persname>Thackeray, William Makepeace</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00237" level="file">
+                        <did>
+                            <unittitle>Theatre Galley</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00238" level="file">
+                        <did>
+                            <unittitle><persname>Thompson, Francis</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00239" level="file">
+                        <did>
+                            <unittitle>To a Day Dreamer</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00240" level="file">
+                        <did>
+                            <unittitle><persname>Toller, Ernst</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00241" level="file">
+                        <did>
+                            <unittitle><persname>Tolstoy, Alexei</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00242" level="file">
+                        <did>
+                            <unittitle><persname>Toynbee, William</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00243" level="file">
+                        <did>
+                            <unittitle>Tragedy</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00244" level="file">
+                        <did>
+                            <unittitle>Translation</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00245" level="file">
+                        <did>
+                            <unittitle>Travel books</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00246" level="file">
+                        <did>
+                            <unittitle><persname>Tree, Sir Herbert</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00247" level="file">
+                        <did>
+                            <unittitle><persname>Trelawny, Edward John</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00248" level="file">
+                        <did>
+                            <unittitle><persname>Trevelyan, George Macaulay</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00249" level="file">
+                        <did>
+                            <unittitle><persname>Treves, Sir Frederick</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00250" level="file">
+                        <did>
+                            <unittitle><persname>Trollope, Anthony</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00251" level="file">
+                        <did>
+                            <unittitle><persname>Turgenev, Ivan Sergeevich</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00252" level="file">
+                        <did>
+                            <unittitle><persname>Van Gogh, Vincent</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00253" level="file">
+                        <did>
+                            <unittitle><persname>Verlaine, Paul</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00254" level="file">
+                        <did>
+                            <unittitle><persname>Verne, Jules</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00255" level="file">
+                        <did>
+                            <unittitle><persname>Vildrac, Charles</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00256" level="file">
+                        <did>
+                            <unittitle><persname>Vinci, Leonardo da</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00257" level="file">
+                        <did>
+                            <unittitle><persname>Voltaire</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00258" level="file">
+                        <did>
+                            <unittitle><persname>Wallace, Edgar</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00259" level="file">
+                        <did>
+                            <unittitle><persname>Walpole, Horace</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00260" level="file">
+                        <did>
+                            <unittitle><persname>Walpole, Hugh</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00261" level="file">
+                        <did>
+                            <unittitle><persname>Walpole, Robert</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00262" level="file">
+                        <did>
+                            <unittitle><persname>Walters, [Miss]</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00263" level="file">
+                        <did>
+                            <unittitle>War books</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00264" level="file">
+                        <did>
+                            <unittitle><persname>Watson, Sir William</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00265" level="file">
+                        <did>
+                            <unittitle><persname>Webb, Beatrice</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00266" level="file">
+                        <did>
+                            <unittitle><persname>Webling, Archie Frederic</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00267" level="file">
+                        <did>
+                            <unittitle><persname>Webster, John</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00268" level="file">
+                        <did>
+                            <unittitle><persname>Wellington, Arthur Wellesley</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00269" level="file">
+                        <did>
+                            <unittitle><persname>Wells, H.G.</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00270" level="file">
+                        <did>
+                            <unittitle><persname>Wharton, Edith</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00271" level="file">
+                        <did>
+                            <unittitle><persname>White, Gilbert</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00272" level="file">
+                        <did>
+                            <unittitle><persname>Whitman, Walt</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00273" level="file">
+                        <did>
+                            <unittitle><persname>Wilde, Oscar</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00274" level="file">
+                        <did>
+                            <unittitle><persname>Wilder, Thornton</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00275" level="file">
+                        <did>
+                            <unittitle><persname>Williams, Emlyn</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00276" level="file">
+                        <did>
+                            <unittitle><persname>Wilson, Harriette</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00277" level="file">
+                        <did>
+                            <unittitle><persname>Winter, Keith</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00278" level="file">
+                        <did>
+                            <unittitle>The Wonder Zoo</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00279" level="file">
+                        <did>
+                            <unittitle><persname>Woolf, Virginia</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00280" level="file">
+                        <did>
+                            <unittitle>Words</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00281" level="file">
+                        <did>
+                            <unittitle>Writing</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00282" level="file">
+                        <did>
+                            <unittitle><persname>Wyatt, Thomas</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00283" level="file">
+                        <did>
+                            <unittitle><persname>Yeats, Jack Butler</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00284" level="file">
+                        <did>
+                            <unittitle><persname>Yeats, William Butler</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00285" level="file">
+                        <did>
+                            <unittitle><persname>Zangwill, Israel</persname></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00286" level="file">
+                        <did>
+                            <unittitle><persname>Zweig, Stefan</persname></unittitle>
+                        </did>
+                    </c03>
+
+                    <c03 id="VAC4773-00287" level="file">
+                        <did>
+                            <container label="Box" type="Box">12</container>
+                            <container label="Folder" type="folder">1-3</container>
+                            <unittitle>Unidentified writings and miscellaneous pages </unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00288" level="file">
+                        <did>
+                            <container label="Folder" type="folder">4-11</container>
+                            <unittitle>14 Notebooks</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00289" level="file">
+                        <did>
+                            <container label="Folder" type="folder">12-18</container>
+                            <unittitle>Alphabetical and chronological lists of articles including
+                                those written for <title render="italic">Eyewitness,</title>
+                                <unitdate normal="1911/1912" type="inclusive">1911-1912,</unitdate>
+                                <title render="italic">New Statesman,</title>
+                                <unitdate normal="1913/1928" type="inclusive">1913-1928</unitdate>,
+                                    <title render="italic">The Sunday Times,</title>
+                                <unitdate normal="1928/1952" type="inclusive">1928-1952</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00290" level="file">
+                        <did>
+                            <container label="Folder" type="folder">19-26</container>
+                            <unittitle>Tear sheets of articles written by Desmond from the following
+                                newspapers/magazines: <title render="italic">Empire Review,</title>
+                                <title render="italic">The Eyewitness,</title>
+                                <title render="italic">The Listener,</title>
+                                <title render="italic">The New Statesman,</title>
+                                <unitdate normal="1905/1941" type="inclusive">1905-1941,</unitdate>
+                                and <title render="italic">The New Witness</title></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00291" level="file">
+                        <did>
+                            <container label="Box" type="Box">13</container>
+                            <container label="Folder" type="folder">1-11</container>
+                            <unittitle>Tear sheets from the series "The World of Books" in <title render="italic">The Sunday Times,</title>
+                                <unitdate normal="1928/1952" type="inclusive">1928-1952</unitdate></unittitle>
+                        </did>
+                        <scopecontent>
+                            <p>Four scrapbooks containing clippings for the series "The World of
+                                Books" in <title render="italic">The Sunday Times:</title>
+                                <unitdate normal="1938">1938,</unitdate>
+                                <unitdate normal="1939">1939,</unitdate>
+                                <unitdate normal="1949/1950" type="inclusive">1949/50,</unitdate>
+                                <unitdate normal="1950-03/1952-05" type="inclusive">March 1950 to
+                                    May 1952</unitdate>
+                            </p>
+                        </scopecontent>
+                    </c03>
+                    <c03 id="VAC4773-00292" level="file">
+                        <did>
+                            <container label="Folder" type="folder">12</container>
+                            <unittitle>Tear sheets and clippings from other magazines and
+                                newspapers</unittitle>
+                        </did>
+                    </c03>
+
+                    <c03 id="VAC4773-00293" level="file">
+                        <did>
+                            <container label="Folder" type="folder">13</container>
+                            <unittitle>Tear sheets from <title render="italic">Live and
+                                    Letters</title></unittitle>
+                        </did>
+                    </c03>
+
+                </c02>
+
+
+
+
+                <c02 id="VAC4773-00294" level="subseries">
+                    <did>
+                        <container label="Box" type="Box">13</container>
+                        <unittitle>Writings by Molly MacCarthy</unittitle>
+                    </did>
+                    <c03 id="VAC4773-00295" level="file">
+                        <did>
+                            <container label="Folder" type="folder">14</container>
+                            <unittitle>Notes on Bloomsbury </unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00296" level="file">
+                        <did>
+                            <container label="Folder" type="folder">15</container>
+                            <unittitle>A Pier and A Band (contract only)</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00297" level="file">
+                        <did>
+                            <container label="Folder" type="folder">16</container>
+                            <unittitle>Retrospect, <unitdate normal="1939-09/1941-02" type="inclusive">Sept. 1939-Feb.1941</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00298" level="file">
+                        <did>
+                            <container label="Folder" type="folder">17</container>
+                            <unittitle>Miscellaneous pages</unittitle>
+                        </did>
+                    </c03>
+
+                </c02>
+
+
+
+                <c02 id="VAC4773-00299" level="subseries">
+                    <did>
+                        <container label="Box" type="Box">13</container>
+                        <unittitle>Writings by Others</unittitle>
+                    </did>
+                    <c03 id="VAC4773-00300" level="file">
+                        <did>
+                            <container label="Folder" type="folder">18</container>
+                            <unittitle>British Orchids, "...with love from Jocelyn [Brooke],
+                                Christmas <unitdate normal="1950">1950</unitdate> "First Published
+                                1917" </unittitle>
+                        </did>
+                        <note>
+                            <list>
+                                <item>"A correspondent..." Article about Theodore Llewelyn
+                                    Davies</item>
+                                <item>'Esseta Emar [poem], <unitdate normal="1914-09">Sept.
+                                        1914</unitdate></item>
+                                <item>Extracts from Mr. Punch's History of Modern England, Vol. IV,
+                                    by Charles L. Graves</item>
+                            </list>
+                        </note>
+                    </c03>
+                    <c03 id="VAC4773-00301" level="file">
+                        <did>
+                            <container label="Folder" type="folder">19</container>
+                            <unittitle>The Garden of Delights, poem by Ursula (Lock) Vaughan
+                                Williams</unittitle>
+                        </did>
+                        <note>
+                            <list>
+                                <item>The Hound of Heaven, by Betsy Graves Reyneau</item>
+                                <item>The Last of Miss Vellum, by ?</item>
+                                <item>A Note on Desmond MacCarthy, by Jocelyn Brooke</item>
+                                <item>Note on Falstaff's Hallucinations, by Sydney J. Cole,
+                                        <unitdate normal="1944-02">Feb. 1944</unitdate></item>
+                                <item>The Real Tripitaka, by Arthur Waley </item>
+                                <item>Resolution passed at the Congress of Intellectuals in
+                                    Wroclaw</item>
+                            </list>
+                        </note>
+
+                    </c03>
+                    <c03 id="VAC4773-00302" level="file">
+                        <did>
+                            <container label="Folder" type="folder">20</container>
+                            <unittitle>Clippings and tear sheets of articles about Desmond
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00303" level="file">
+                        <did>
+                            <container label="Folder" type="folder">21-24</container>
+                            <unittitle>Reviews of Desmond's books: Criticism, Experience, Life and
+                                Letters, and Portraits</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00304" level="file">
+                        <did>
+                            <container label="Folder" type="folder">14</container>
+                            <unittitle>Miscellaneous clippings and tear sheets</unittitle>
+                        </did>
+                    </c03>
+
+                </c02>
+
+            </c01>
+            <c01 id="VAC4773-00305" level="series">
+                <did>
+                    <container label="Box" type="Box">14</container>
+                    <unittitle>Miscellaneous</unittitle>
+                </did>
+                <c02 id="VAC4773-00306" level="subseries">
+                    <did>
+                        <container label="Box" type="Box">14</container>
+                        <unittitle>Desmond</unittitle>
+                    </did>
+                    <c03 id="VAC4773-00307" level="file">
+                        <did>
+                            <container label="Folder" type="folder">5-6</container>
+                            <unittitle>Autobiographical notes - loose pages and notebook</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00308" level="file">
+                        <did>
+                            <container label="Folder" type="folder">7-8</container>
+                            <unittitle>British Broadcasting Corporation, materials for Literary
+                                Advisory Committee and misc. related papers</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00309" level="file">
+                        <did>
+                            <container label="Folder" type="folder">9-10</container>
+                            <unittitle>Calendars: <unitdate normal="1938">1938,</unitdate>
+                                <unitdate normal="1943">1943,</unitdate>
+                                <unitdate normal="1945">1945,</unitdate>
+                                <unitdate normal="1946">1946,</unitdate>
+                                <unitdate normal="1948">1948,</unitdate>
+                                <unitdate normal="1950">1950,</unitdate>
+                                <unitdate normal="1951">1951</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00310" level="file">
+                        <did>
+                            <container label="Folder" type="folder">11</container>
+                            <unittitle>Catalogue of books from the Library of Criticism and English
+                                Literature of the late Sir Desmond MacCarthy, on sale by James Bain
+                                Limited... <unitdate normal="1953">1953.</unitdate>
+                            </unittitle>
+                            <physdesc>Printed. 2 copies</physdesc>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00311" level="file">
+                        <did>
+                            <container label="Folder" type="folder">12</container>
+                            <unittitle>Diary, <unitdate normal="1900">1900</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00312" level="file">
+                        <did>
+                            <container label="Folder" type="folder">13</container>
+                            <unittitle>School reports, <unitdate normal="1885/1897" type="inclusive">1885 - 1897</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00313" level="file">
+                        <did>
+                            <container label="Folder" type="folder">14</container>
+                            <unittitle>Travel notes, <unitdate normal="1902">1902</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00314" level="file">
+                        <did>
+                            <container label="Folder" type="folder">15</container>
+                            <unittitle>Miscellany</unittitle>
+                        </did>
+                    </c03>
+
+                </c02>
+                <c02 id="VAC4773-00315" level="subseries">
+                    <did>
+                        <container label="Box" type="Box">14</container>
+                        <unittitle>Molly</unittitle>
+                    </did>
+                    <c03 id="VAC4773-00316" level="file">
+                        <did>
+                            <container label="Folder" type="folder">16</container>
+                            <unittitle>Address book, <unitdate normal="1931">1931</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+
+                    <c03 id="VAC4773-00317" level="file">
+                        <did>
+                            <container label="Folder" type="folder">17</container>
+                            <unittitle>Book of families</unittitle>
+                        </did>
+                        <scopecontent>
+                            <p>Made for Michael MacCarthy by his mother, Molly MacCarthy in December
+                                    <unitdate normal="1945">1945;</unitdate> and list of visitors
+                                from <unitdate normal="1942/1952" type="inclusive">1942-1952</unitdate></p>
+                        </scopecontent>
+                    </c03>
+                    <c03 id="VAC4773-00318" level="file">
+                        <did>
+                            <container label="Folder" type="folder">18</container>
+                            <unittitle>Calendars: <unitdate normal="1948">1948,</unitdate>
+                                <unitdate normal="1952">1952</unitdate>
+                            </unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00319" level="file">
+                        <did>
+                            <container label="Folder" type="folder">19-21</container>
+                            <unittitle>Diaries: <unitdate normal="1896">1896,</unitdate>
+                                <unitdate normal="1903">1903,</unitdate>
+                                <unitdate normal="1907">1907,</unitdate>
+                                <unitdate normal="1920">1920</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00320" level="file">
+                        <did>
+                            <container label="Folder" type="folder">22</container>
+                            <unittitle>Cottage Garden diary: <unitdate normal="1898-08/1916-11" type="inclusive">Aug. 1898-Nov. 1916</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC4773-00321" level="file">
+                        <did>
+                            <container label="Folder" type="folder">23</container>
+                            <unittitle>Miscellany</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAC4773-00322" level="subseries">
+                    <did>
+                        <container label="Box" type="Box">14</container>
+                        <unittitle>MacCarthy family</unittitle>
+                    </did>
+                    <scopecontent>
+                        <p>Includes a list of birthdays, list of investments, and other
+                            financialpapers</p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAC4773-00323" level="subseries">
+                    <did>
+                        <container label="Box" type="Box">14</container>
+                        <unittitle>Warre-Cornish family</unittitle>
+                    </did>
+                    <scopecontent>
+                        <p>Includes a diary dated <unitdate normal="1867">1867,</unitdate> talks
+                            given to Eton students (1877-1878) and other writings by Molly's father,
+                            Francis. There are school reports for her brothers Francis, Gerald and
+                            Hubert, and a journal dated June 1884 written by Hubert's wife,
+                            Laurencina (Meinertzhagen) Warre-Cornish as well as other family
+                            papers.</p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAC4773-00324" level="subseries">
+                    <did>
+                        <container label="Box" type="Box">14</container>
+                        <container label="Folder" type="folder">31-32</container>
+                        <unittitle>Miscellany</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+
+
+        </dsc>
+    </archdesc>
+</ead>
