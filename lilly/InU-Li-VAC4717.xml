@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+--><ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external" countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924" relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li" identifier="InU-Li-VAC4717">InU-Li-VAC4717</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Mamet mss.<date normal="1985/1986">1985-1986</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2012" type="publication">© 2012</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2012">© 2012</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2012" type="source">2012</date>
+                <lb></lb>Finding aid encoded by Danielle Emerling, Lilly Library, Indiana University,
+                    <date normal="2012-08-24">August 24, 2012</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng">English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2012-08-24">August 24, 2012</date>
+                <item>Encoded finding aid begun.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Mamet, David.</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Mamet mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1985/1986" type="inclusive">1985-1986</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2123</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>11 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language langcode="eng">English</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">Consists of scripts and research
+                materials relating to David Mamet's original screenplay for the 1987 film <emph render="italic">The Untouchables,</emph> starring Kevin Costner and Sean
+                Connery, and directed by Brian De Palma.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+            <p>Born in Chicago in 1947, Mamet is an American playwright, poet, novelist,
+                screenwriter, and director. He began his writing career during his studies at
+                Goddard College in Vermont, and has been a prolific author, publishing more than
+                fifty works since 1977. He has written screenplays for over two dozen films,
+                including <emph render="italic">Wag the Dog,</emph>
+                <emph render="italic">The Edge,</emph>
+                <emph render="italic">Hoffa,</emph> and the movie adaptation of his Pulitzer Prize
+                winning play <emph render="italic">Glengarry Glen Ross.</emph> He also is the
+                director of <emph render="italic">House of Games,</emph>
+                <emph render="italic">The Spanish Prisoner,</emph>
+                <emph render="italic">The Winslow Boy,</emph> and <emph render="italic">State and
+                    Main.</emph></p>
+
+        </bioghist>
+
+
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The collection illustrates the creative process of writing <emph render="italic">The
+                    Untouchables</emph>, from the preliminary research stage to the revised final
+                draft of 1986. Included are photocopied news clippings concerning Eliot Ness and Al
+                Capone, handwritten notes, scene sketches that reveal Mamet's ideas for dialogue and
+                character traits, and outlines and drafts, all of which reveal the evolution of the
+                work. A brief note from Art Linson, producer of the film, is included.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/mamet+david">
+                            <persname encodinganalog="600" source="lcsh">Mamet, David.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/linson+art">
+                            <persname encodinganalog="600" source="lcsh"> Linson, Art.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/costner+kevin">
+                            <persname encodinganalog="600" source="lcsh">Costner, Kevin.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/connery+sean">
+                            <persname encodinganalog="600" source="lcsh">Connery, Sean.</persname>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+           
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/motion+picture+plays">
+                            <subject encodinganalog="650" source="lcsh">Motion picture plays.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/motion+picture+producers+directors+united+states">
+                            <subject encodinganalog="650" source="lcsh">Motion picture producers and directors --United States.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/motion+picture+industry+united+states">
+                            <subject encodinganalog="650" source="lcsh">Motion picture industry --United States.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/motion+picture+actors+actresses">
+                            <subject encodinganalog="650" source="lcsh">Motion picture actors and actresses.</subject>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            
+            <controlaccess>
+                <head>Titles</head>
+                <list>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/untouchables+motion+picture">
+                            <subject encodinganalog="630" source="lcsh">Untouchables (Motion picture)</subject>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="110" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+            <!-- include if appropriate -->
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 2002</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Mamet mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Craig Simpson.</p>
+                <p>Completed in <date normal="2012">2012</date></p>
+
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+
+            <c01 id="VAC4717-00001" level="series">
+                <did>
+                    <container label="Box" type="Box">1</container>
+                    <unittitle>Collection</unittitle>
+                </did>
+                <c02 id="VAC4717-00002" level="file">
+                    <did>
+                        <unittitle>Newspaper clippings (photocopies), circa. <unitdate normal="1930/1970" type="inclusive">1930-1970</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC4717-00003" level="file">
+                    <did>
+                        <unittitle>Unordered notes, <unitdate normal="1985/1986" type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC4717-00004" level="file">
+                    <did>
+                        <unittitle>Preliminary scene sketches and dialogue notes, with handwritten
+                            annotations, <unitdate normal="1985/1986" type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC4717-00005" level="file">
+                    <did>
+                        <unittitle>Preliminary scene sketches, dialogue notes, and manila folder
+                            with handwritten annotations, <unitdate normal="1985/1986" type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC4717-00006" level="file">
+                    <did>
+                        <unittitle>Outline, <unitdate normal="1985-07">July
+                            1985</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC4717-00007" level="file">
+                    <did>
+                        <unittitle>Outline, with index cards, <unitdate normal="1985-08-12">August
+                                12, 1985</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC4717-00008" level="file">
+                    <did>
+                        <unittitle>First draft, handwritten, <unitdate normal="1985/1986" type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC4717-00009" level="file">
+                    <did>
+                        <unittitle>Typescript draft, <unitdate normal="1985-09">September
+                                1985</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC4717-00010" level="file">
+                    <did>
+                        <unittitle>Revised typescript draft, <unitdate normal="1986-04">April
+                                1986</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC4717-00011" level="file">
+                    <did>
+                        <unittitle>Congratulatory note from producer Art Linson, <unitdate normal="1985/1986" type="inclusive">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+
+
+
+
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
