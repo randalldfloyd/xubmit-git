@@ -1,0 +1,2666 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+--><ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external" countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924" relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li" identifier="InU-Li-VAC5512">InU-Li-VAC5512</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Eastman mss.<date normal="1892/1968">1892-1968</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2012" type="publication">© 2012</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2012">© 2012</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2012" type="source">2012</date>
+                <lb></lb>Finding aid encoded by Danielle Emerling, Lilly Library, Indiana University,
+                    <date normal="2012-11-09">November 9, 2012</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng">English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2012-11-09">November 9, 2012</date>
+                <item>Encoded finding aid begun.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Eastman, Max, 1883-1969.</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Eastman mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1892/1968" type="inclusive">1892-1968</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1301</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>4,096 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language langcode="eng">English,</language>
+                <language langcode="fre">French,</language>
+                <language langcode="ita">Italian,</language>
+                <language langcode="spa">Spanish,</language>
+                <language langcode="gem">German,</language>
+                <language langcode="rus">Russian,</language> and <language langcode="swe">Swedish.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">Consists of the correspondence and
+                writings of Max Forrester Eastman, 1883-1969, author.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+            <p>Completing his work for a Ph.D. degree at Columbia and encouraged by John Dewey, he
+                taught logic for three years at the University. In 1909 Eastman organized the Men's
+                League for Woman's Suffrage. His marriage to Ida Rauh, actress and poet, occurred in
+                1911 and produced comment when it was learned Miss Rauh would retain her maiden
+                name. Their son Daniel was born in 1912. A year later Eastman's first books, <emph render="italic">Enjoyment of Poetry</emph> and <emph>Child of the
+                    Amazons,</emph> were published. During this time he became editor of <emph render="italic">The Masses</emph> with its new idea in format and inclination
+                toward then-radical causes and worked with it until its close in October, 1917. The
+                next year with his sister Crystal Eastman as co-owner he started a new periodical
+                with similar interests called <emph render="italic">The Liberator.</emph>
+            </p>
+
+            <p>Leaving <emph render="italic">The Liberator</emph> in the hands of others in 1922
+                Eastman attended the International Conference at Genoa, Italy, where he met the
+                secretary to Maxim Litvinoff, Eliena Krylenko, 1895-1956, artist and dancer.
+                Continuing on to Russia the two met again and were married in 1924. Their
+                correspondence may be found in the Eastman, E., mss. (The divorce from Miss Rauh had
+                been effected in 1922). During a sojourn of five years in Europe Eastman became
+                acquainted with Leon Trotsky, served as his literary agent in the United States, and
+                translated some of his works. The correspondence for this relationship may be found
+                in the Trotskii mss. Pursuing his interests in writing and lecturing on Russia,
+                socialism, literature, humor, and poetry, Eastman became engaged as a roving editor
+                for The Reader's Digest Association for a number of years. In several letters
+                Eastman refuted the suggestion that he was a Jew (1929, Dec. 6; 1938, Apr. 19; 1955,
+                Mar. 10). Following Miss Krylenko's death he married Yvette Székely, a former social
+                worker, in 1958. </p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Biographical Materials; II.
+                Correspondence; III. Writings; IV. Printed Material; V. Printed Reviews.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The major portion of the correspondence is concerned with Eastman's writings and the
+                response of leading figures to his books, articles, and lectures. Some of the
+                letters are in French, Italian, Spanish, German, Russian, and Swedish. </p>
+
+            <p>Further materials in the Eastman mss. include letters from Wladslaw M. Besterman,
+                Viktor Mikhailovich Chernov, Jan Ciechanowski enclosing an address to the
+                Cooperative Forum in Washington, D.C., Boris Ivanovich Nikolaevskii, a letter from
+                an anonymous Polish sociologist about the occupation of Poland in 1940, the State
+                Organization Publishing House in Moscow, and Nikolai Vladislavovich Volskii.</p>
+
+            <p>Among the printed materials are clippings and notes arranged by subject which were
+                collected by Eastman for the preparation of his writings and the newspaper or
+                periodical reviews of his books, articles, and lectures arranged by title. </p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/eastman+max+1883+1969+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Eastman, Max, 1883-1969 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/benton+thomas+hart+1889+1975+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Benton, Thomas Hart, 1889-1975 --Correspondence</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/boas+franz+1858+1942+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Boas, Franz, 1858-1942 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/debs+eugene+victor+1855+1926+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Debs, Eugene V. (Eugene Victor), 1855-1926 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/dewey+john+1859+1952+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Dewey, John, 1859-1952 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/dos+passos+john+1896+1970+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Dos Passos, John, 1896-1970 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/dreiser+theodore+1871+1945+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Dreiser, Theodore, 1871-1945 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/durante+jimmy+1893+1980+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Durante, Jimmy, 1893-1980 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/eastman+annis+ford+1852+1910+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Eastman, Annis Ford, 1852-1910 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/eastman+crystal+1881+1928+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Eastman, Crystal, 1881-1928 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/eastman+yvette+szekely+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Eastman, Yvette Szekely --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/einstein+albert+1879+1955+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Einstein, Albert, 1879-1955 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/erskine+john+1879+1951+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Erskine, John, 1879-1951 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/fitzgerald+francis+scott+1896+1940+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Fitzgerald, F. Scott (Francis Scott), 1896-1940 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/freud+sigmund+1856+1939+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Freud, Sigmund, 1856-1939 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/hemingway+ernest+1899+1961+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Hemingway, Ernest, 1899-1961 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/huxley+aldous+1894+1963+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Huxley, Aldous, 1894-1963 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/lewis+sinclair+1885+1951+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Lewis, Sinclair, 1885-1951 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/mencken+henry+louis+1880+1956+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Mencken, H. L. (Henry Louis), 1880-1956 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/pound+ezra+1885+1972+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Pound, Ezra, 1885-1972 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/rivera+diego+1886+1957+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Rivera, Diego, 1886-1957 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/russell+bertrand+1872+1970+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Russell, Bertrand, 1872-1970 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/sandburg+carl+1878+1967+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Sandburg, Carl, 1878-1967 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/shaw+bernard+1856+1950+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Shaw, Bernard, 1856-1950 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/shawn+william+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Shawn, William --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/sinclair+upton+1878+1968+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Sinclair, Upton, 1878-1968 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/stanwyck+barbara+1907+1990+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Stanwyck, Barbara, 1907-1990 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/stevens+wallace+1879+1955+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Stevens, Wallace, 1879-1955 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/thurber+james+1894+1961+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Thurber, James, 1894-1961 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/van+doren+mark+1894+1972+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Van Doren, Mark, 1894-1972--Correspondence.</persname>
+                        </extref>
+                    </item>
+                    
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/authors+american+correspondence">
+                            <subject encodinganalog="650" source="lcsh">Authors, American --Correspondence.</subject>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="110" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+
+
+        <!-- optional, if applicable -->
+        <relatedmaterial encodinganalog="544 1">
+            <head>Related Material</head>
+            <p>Other collections related to the Eastman mss. are the Deshon mss.; Eastman, A.F.,
+                mss.; Eastman, E., mss.; McKay mss.; Norton mss.; and the Trotskii mss. </p>
+        </relatedmaterial>
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 1958, 1971, 1985, and 1986</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials. </p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Eastman mss., Lilly Library, Indiana University, Bloomington, Indiana.
+                </p>
+            </prefercite>
+
+
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Austin Alexander.</p>
+                <p>Completed in <date normal="2012">2012</date></p>
+
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAC5512-00001" level="series">
+                <did>
+                    <container label="Box" type="Box">1</container>
+                    <unittitle>Biographical Materials</unittitle>
+                </did>
+                <scopecontent>
+                    <p>A collection of newspaper clippings and other written materials about
+                        Eastman's public and private life.</p>
+                </scopecontent>
+                <c02 id="VAC5512-00002" level="file">
+                    <did>
+                        <unittitle>Newspaper and periodical clippings and photographs, <unitdate normal="1908/1937" type="inclusive">1908-1937</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00003" level="file">
+                    <did>
+                        <unittitle>Newspaper and periodical clippings, <unitdate normal="1911">1911,</unitdate>
+                            <unitdate normal="1930/1962" type="inclusive">1930-1962</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00004" level="file">
+                    <did>
+                        <unittitle>Newspaper clippings, typescript about, and death certificate of
+                            Eastman's second wife, Elena Krylenko, <unitdate normal="1933/1956" type="inclusive">1933-1956</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00005" level="file">
+                    <did>
+                        <unittitle>Pictures from newspaper and periodical clippings, <unitdate normal="1915/1954" type="inclusive">1915-1954</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00006" level="file">
+                    <did>
+                        <unittitle>Royalty statements, <unitdate normal="1948/1956" type="inclusive">1948-1956</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00007" level="file">
+                    <did>
+                        <unittitle>Photograph of Max Eastman, <unitdate normal="1892/1968" type="inclusive">undated</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+
+
+            </c01>
+
+            <c01 id="VAC5512-00008" level="series">
+                <did>
+                    <container label="Box" type="Box">1</container>
+                    <unittitle>Correspondence</unittitle>
+                </did>
+                <arrangement>
+                    <p>Arranged chronologically by year; undated correspondence is arranged
+                        alphabetically.</p>
+                </arrangement>
+                <note>
+                    <p>Correspondents include:</p>
+                    <p>
+                        <list>
+                            <item><persname>Charles David Abbott</persname></item>
+                            <item><persname>Martin Abern</persname></item>
+                            <item><persname>Barclay Acheson</persname></item>
+                            <item><persname>Barbara E. Adams</persname></item>
+                            <item><persname>Julia L.H. Adams</persname></item>
+                            <item><persname>Leslie Pleasant Adams</persname></item>
+                            <item><persname>George Ade</persname></item>
+                            <item><persname>Arthur Emil Albrecht</persname></item>
+                            <item><persname>Joseph Alderman</persname></item>
+                            <item><persname>Richard Aldington</persname></item>
+                            <item><persname>Fred Allen</persname></item>
+                            <item><persname>Floyd Henry Allport</persname></item>
+                            <item><persname>Andrew Russell Anderson</persname></item>
+                            <item><persname>Eleanor (Copenhaver) Anderson</persname></item>
+                            <item><persname>John Anderson</persname></item>
+                            <item><persname>Sherwood Anderson</persname></item>
+                            <item><persname>Juan Andrade</persname></item>
+                            <item><persname>Paul Shipman Andrews</persname></item>
+                            <item><persname>Sir Norman Angell</persname></item>
+                            <item><persname>Anthony Antonakakis</persname></item>
+                            <item><persname>Paul P. Appel</persname></item>
+                            <item><persname>Luis Araquistain y Quevedo</persname></item>
+                            <item><persname>Laird Archer</persname></item>
+                            <item><persname>Egmont Arens</persname></item>
+                            <item><persname>Richard Willard Armour</persname></item>
+                            <item><persname>Hamilton Fish Armstrong</persname></item>
+                            <item><persname>Thaddeus Ashby</persname></item>
+                            <item><persname>Edward Campbell Aswell</persname></item>
+                            <item><persname>Gertrude Franklin (Horn) Atherton</persname></item>
+                            <item><persname>Mlle Ann Avant</persname></item>
+                            <item><persname>Laurence H. Axman</persname></item>
+                            <item><persname>H.D. Bacon</persname></item>
+                            <item><persname>Peggy Bacon</persname></item>
+                            <item><persname>Jacob Baker</persname></item>
+                            <item><persname>Angelica Balabanoff</persname></item>
+                            <item><persname>Elbert Francis Baldwin</persname></item>
+                            <item><persname>Roger Nash Baldwin</persname></item>
+                            <item><persname>James David Bales</persname></item>
+                            <item><persname>Robert Oleson Ballou</persname></item>
+                            <item><persname>Mary Bancroft</persname></item>
+                            <item><persname>Charles Barber</persname></item>
+                            <item><persname>John Barber</persname></item>
+                            <item><persname>Solon R. Barber</persname></item>
+                            <item><persname>Henri Barbusse</persname></item>
+                            <item><persname>Ida Barker</persname></item>
+                            <item><persname>Virgil Barker</persname></item>
+                            <item><persname>John Barkham</persname></item>
+                            <item><persname>Alexander Barmine</persname></item>
+                            <item><persname>Harry Elmer Barnes</persname></item>
+                            <item><persname>Wilton Agnew Barrett</persname></item>
+                            <item><persname>Sir James Matthew Barrie</persname></item>
+                            <item><persname>William Baumrucker</persname></item>
+                            <item><persname>Theodore M. Bayer</persname></item>
+                            <item><persname>Joseph Warren Beach</persname></item>
+                            <item><persname>Robert Cameron Beadle</persname></item>
+                            <item><persname>Gweneth Beam</persname></item>
+                            <item><persname>Charles Austin Beard</persname></item>
+                            <item><persname>Maximilian Beck</persname></item>
+                            <item><persname>Julia (Jones) Beecher</persname></item>
+                            <item><persname>Clive Bell</persname></item>
+                            <item><persname>Daniel Bell</persname></item>
+                            <item><persname>George Wesley Bellows</persname></item>
+                            <item><persname>Richard Bennett</persname></item>
+                            <item><persname>Thomas Hart Benton</persname></item>
+                            <item><persname>Bernard Berenson</persname></item>
+                            <item><persname>Marvin Berger</persname></item>
+                            <item><persname>Peter Berlinrut</persname></item>
+                            <item><persname>Nathan Berman</persname></item>
+                            <item><persname>Virginia Berresford</persname></item>
+                            <item><persname>George Packer Berry</persname></item>
+                            <item><persname>John Edgar Berry</persname></item>
+                            <item><persname>Margaret Best</persname></item>
+                            <item><persname>Herman Beukema</persname></item>
+                            <item><persname>Pamela Bianco</persname></item>
+                            <item><persname>Francis Biddle</persname></item>
+                            <item><persname>George Biddle</persname></item>
+                            <item><persname>Katherine Garrison (Chaplin) Biddle</persname></item>
+                            <item><persname>Warren Knox Billings</persname></item>
+                            <item><persname>Alfred Mitchell Bingham</persname></item>
+                            <item><persname>George Holman Bishop</persname></item>
+                            <item><persname>Isabel Bishop</persname></item>
+                            <item><persname>Leif Bjork</persname></item>
+                            <item><persname>John Black</persname></item>
+                            <item><persname>Justin Blackwelder</persname></item>
+                            <item><persname>Bruce Ormsby Bliven</persname></item>
+                            <item><persname>Jean-Richard Bloch</persname></item>
+                            <item><persname>Walter Hart Blumenthal</persname></item>
+                            <item><persname>Philip L. Boardman</persname></item>
+                            <item><persname>Franz Boas</persname></item>
+                            <item><persname>William John Henry Boetcker</persname></item>
+                            <item><persname>William Edward Bohn</persname></item>
+                            <item><persname>Eugen Jan Boissevain</persname></item>
+                            <item><persname>Margaret (Bradford) Boni</persname></item>
+                            <item><persname>Ake Bonnier</persname></item>
+                            <item><persname>Gleb Botkin</persname></item>
+                            <item><persname>Louis Bouché</persname></item>
+                            <item><persname>Frances (Schroeder) Boulton</persname></item>
+                            <item><persname>Edward F. Boyd</persname></item>
+                            <item><persname>Percy Holmes Boynton</persname></item>
+                            <item><persname>Trygve Frøyland Braøty</persname></item>
+                            <item><persname>Alexander Brailovsky</persname></item>
+                            <item><persname>Henry Noel Brailsford</persname></item>
+                            <item><persname>Erdmann Neumeister Brandt</persname></item>
+                            <item><persname>Charles Breck</persname></item>
+                            <item><persname>Abraham Arden Brill</persname></item>
+                            <item><persname>Arthur Brisbane</persname></item>
+                            <item><persname>Alexander Brook</persname></item>
+                            <item><persname>Gladys (Rice) Brooks</persname></item>
+                            <item><persname>Van Wyck Brooks</persname></item>
+                            <item><persname>Alice Brown</persname></item>
+                            <item><persname>Francis Brown</persname></item>
+                            <item><persname>Harold Chapman Brown</persname></item>
+                            <item><persname>Lewis Browne</persname></item>
+                            <item><persname>William Crary Brownell</persname></item>
+                            <item><persname>Howard Brubaker</persname></item>
+                            <item><persname>Robert S. Bryan</persname></item>
+                            <item><persname>William Frank Buckley</persname></item>
+                            <item><persname>Louis Francis Budenz</persname></item>
+                            <item><persname>Marie (Granes) Bullock</persname></item>
+                            <item><persname>Franklin L. Burdette</persname></item>
+                            <item><persname>Anna H. Burgess</persname></item>
+                            <item><persname>Gelett Burgess</persname></item>
+                            <item><persname>Charles C. Burlingham</persname></item>
+                            <item><persname>James Burnham</persname></item>
+                            <item><persname>Trigant Burrow</persname></item>
+                            <item><persname>P.F. Butler</persname></item>
+                            <item><persname>Charles Edward Butterworth</persname></item>
+                            <item><persname>George Thurman Bye</persname></item>
+                            <item><persname>Witter Bynner</persname></item>
+                            <item><persname>Abraham Cahan</persname></item>
+                            <item><persname>Victor Francis Calverton</persname></item>
+                            <item><persname>Henry Seidel Canby</persname></item>
+                            <item><persname>Cass Canfield</persname></item>
+                            <item><persname>Jane (White) Canfield</persname></item>
+                            <item><persname>Milton Cantor</persname></item>
+                            <item><persname>Eddie Cantor</persname></item>
+                            <item><persname>Emile Capouya</persname></item>
+                            <item><persname>Ira Detrich Cardiff</persname></item>
+                            <item><persname>Joel Carmichael</persname></item>
+                            <item><persname>Jack Carney</persname></item>
+                            <item><persname>Edward Clark Carter</persname></item>
+                            <item><persname>William Horsfall Carter</persname></item>
+                            <item><persname>Pablo Casals</persname></item>
+                            <item><persname>Raymond B. Cattell</persname></item>
+                            <item><persname>Bennett Alfred Cerf</persname></item>
+                            <item><persname>John Rensselaer Chamberlain</persname></item>
+                            <item><persname>William Henry Chamberlin</persname></item>
+                            <item><persname>Charles Spencer Chaplin</persname></item>
+                            <item><persname>John Bowman Chapple</persname></item>
+                            <item><persname>Amy Charak</persname></item>
+                            <item><persname>Stuart Chase</persname></item>
+                            <item><persname>Julius Cherinsky</persname></item>
+                            <item><persname>Haakon Maurice Chevalier</persname></item>
+                            <item><persname>Eleanor Clark</persname></item>
+                            <item><persname>John Abbott Clark</persname></item>
+                            <item><persname>Olin H. Clark</persname></item>
+                            <item><persname>Wilson A. Clark</persname></item>
+                            <item><persname>David A. Clarkson</persname></item>
+                            <item><persname>Elizabeth Jane Coatsworth</persname></item>
+                            <item><persname>Stanton Arthur Coblentz</persname></item>
+                            <item><persname>Everett Johnston Coil</persname></item>
+                            <item><persname>Seward B. Collins</persname></item>
+                            <item><persname>Gladys (Ewing) Combes</persname></item>
+                            <item><persname>Groff Conklin</persname></item>
+                            <item><persname>Marcus Cook Connelly</persname></item>
+                            <item><persname>James Connolly</persname></item>
+                            <item><persname>Robert Constans</persname></item>
+                            <item><persname>Douglas O. Cooke</persname></item>
+                            <item><persname>Sheldon R. Coons</persname></item>
+                            <item><persname>Minnie (Federman) Corder</persname></item>
+                            <item><persname>Herbert Ellsworth Cory</persname></item>
+                            <item><persname>William Terry Couch</persname></item>
+                            <item><persname>George Sylvester Counts</persname></item>
+                            <item><persname>Norman Cousins</persname></item>
+                            <item><persname>Sidney Cox</persname></item>
+                            <item><persname>Lucille Cardin Crain</persname></item>
+                            <item><persname>Ronald Salmon Crane</persname></item>
+                            <item><persname>Thomas Craven</persname></item>
+                            <item><persname>George Creel</persname></item>
+                            <item><persname>John Henshaw Crider</persname></item>
+                            <item><persname>Frank Crowninshield</persname></item>
+                            <item><persname>Ely Culbertson</persname></item>
+                            <item><persname>Sasha Culbertson</persname></item>
+                            <item><persname>Countee Cullen</persname></item>
+                            <item><persname>Edward Estlin Cummings</persname></item>
+                            <item><persname>Virginia (Kent) Cummins</persname></item>
+                            <item><persname>William Jacob Cuppy</persname></item>
+                            <item><persname>Mable C. Daggett</persname></item>
+                            <item><persname>David Julievich Dallin</persname></item>
+                            <item><persname>Clarence Seward Darrow</persname></item>
+                            <item><persname>Jay Norwood Darling</persname></item>
+                            <item><persname>Alfred Shepard Dashiell</persname></item>
+                            <item><persname>Gustav Davidson</persname></item>
+                            <item><persname>Jo Davidson</persname></item>
+                            <item><persname>Louis Bennett Davidson</persname></item>
+                            <item><persname>Allen Freeman Davis</persname></item>
+                            <item><persname>Anna N. Davis</persname></item>
+                            <item><persname>Edward Davison</persname></item>
+                            <item><persname>Natalie Eva (Weiner) Davison</persname></item>
+                            <item><persname>Peter Davison</persname></item>
+                            <item><persname>Hugh Davson</persname></item>
+                            <item><persname>Irving Deakin</persname></item>
+                            <item><persname>Eugene Victor Debs</persname></item>
+                            <item><persname>Ralph J. de Golier</persname></item>
+                            <item><persname>Walter John De La Mare</persname></item>
+                            <item><persname>J.R. Dela Torre-Bueno</persname></item>
+                            <item><persname>Berta Marie (Gage) Dell</persname></item>
+                            <item><persname>Floyd Dell</persname></item>
+                            <item><persname>Leon Dennen</persname></item>
+                            <item><persname>Thomas Derrick</persname></item>
+                            <item><persname>Margaret (Burnham) De Silver</persname></item>
+                            <item><persname>Clement L. Despard</persname></item>
+                            <item><persname>Isaac Deutscher</persname></item>
+                            <item><persname>Eamon De Valéra</persname></item>
+                            <item><persname>John Dewey</persname></item>
+                            <item><persname>Roberta (Lowitz) Grant Dewey</persname></item>
+                            <item><persname>John Dietel</persname></item>
+                            <item><persname>Margarita Dobert</persname></item>
+                            <item><persname>John Dos Passos</persname></item>
+                            <item><persname>Earl Leroy Douglass</persname></item>
+                            <item><persname>Milorad M. Drachkovitch</persname></item>
+                            <item><persname>Theodore Draper</persname></item>
+                            <item><persname>Theodore Dreiser</persname></item>
+                            <item><persname>James Drever</persname></item>
+                            <item><persname>Thomas Duckworth</persname></item>
+                            <item><persname>Pendleton Dudley</persname></item>
+                            <item><persname>Irma Duncan</persname></item>
+                            <item><persname>Robert Williams Dunn</persname></item>
+                            <item><persname>Jimmy Durante</persname></item>
+                            <item><persname>Walter Duranty</persname></item>
+                            <item><persname>Fletcher McCullough Durbin</persname></item>
+                            <item><persname>Hazel (West) Durbin</persname></item>
+                            <item><persname>Annis Bertha (Ford) Eastman</persname></item>
+                            <item><persname>Crystal Eastman</persname></item>
+                            <item><persname>Daniel Eastman</persname></item>
+                            <item><persname>Eliena Vassilyenva (Krylenko) Eastman</persname></item>
+                            <item><persname>Evelyn Eastman</persname></item>
+                            <item><persname>G. Dufay Eastman</persname></item>
+                            <item><persname>Ida (Rauh) Eastman</persname></item>
+                            <item><persname>Max Eastman</persname></item>
+                            <item><persname>Samuel Ewer Eastman</persname></item>
+                            <item><persname>Sara (Moore) Eastman</persname></item>
+                            <item><persname>Stanley E. Eastman</persname></item>
+                            <item><persname>Yvette (Sakay) Eastman</persname></item>
+                            <item><persname>William Hanmer Eaton</persname></item>
+                            <item><persname>Charles Edison</persname></item>
+                            <item><persname>Arthur Egan</persname></item>
+                            <item><persname>Emi Ehm</persname></item>
+                            <item><persname>Albert Einstein</persname></item>
+                            <item><persname>Alma Kathy (Kaye) Eisenstaedt</persname></item>
+                            <item><persname>Helene Eliat</persname></item>
+                            <item><persname>Guy Emerson</persname></item>
+                            <item><persname>Ruth (Van Cleve) Emerson</persname></item>
+                            <item><persname>Paul Hamilton Engle</persname></item>
+                            <item><persname>Angna Enters</persname></item>
+                            <item><persname>Julius Victor Stefan Epstein</persname></item>
+                            <item><persname>John Erskine</persname></item>
+                            <item><persname>Ralph Erskine</persname></item>
+                            <item><persname>Charles W. Erwin</persname></item>
+                            <item><persname>Kate Evans</persname></item>
+                            <item><persname>John Rutherford Everett</persname></item>
+                            <item><persname>Clifton Fadiman</persname></item>
+                            <item><persname>Michel Farano</persname></item>
+                            <item><persname>John Chipman Farrar</persname></item>
+                            <item><persname>James Thomas Farrell</persname></item>
+                            <item><persname>Dimitri Fedotoff White</persname></item>
+                            <item><persname>Charles Andrew Fenton</persname></item>
+                            <item><persname>Thomas Hornsby Ferrill</persname></item>
+                            <item><persname>Lawrence Fertig</persname></item>
+                            <item><persname>Arthur Davison Ficke</persname></item>
+                            <item><persname>Sara Bard Field</persname></item>
+                            <item><persname>W.C. Fields</persname></item>
+                            <item><persname>Ernest Fiene</persname></item>
+                            <item><persname>Tom Filer</persname></item>
+                            <item><persname>Herman Finer</persname></item>
+                            <item><persname>John Fischer</persname></item>
+                            <item><persname>Irving Fisher</persname></item>
+                            <item><persname>Francis Scott Key Fitzgerald</persname></item>
+                            <item><persname>Roger W. Fleming</persname></item>
+                            <item><persname>Howard Florance</persname></item>
+                            <item><persname>Elizabeth Gurley Flynn</persname></item>
+                            <item><persname>Harriet French Ford</persname></item>
+                            <item><persname>Raymond Blaine Fosdick</persname></item>
+                            <item><persname>Constantin Alexander Fotitch</persname></item>
+                            <item><persname>Arne Fougner</persname></item>
+                            <item><persname>Louise Francois</persname></item>
+                            <item><persname>Adelaide (Schulkind) Frank</persname></item>
+                            <item><persname>Gerold Frank</persname></item>
+                            <item><persname>Jerome New Frank</persname></item>
+                            <item><persname>Clara H. Frederick</persname></item>
+                            <item><persname>Joseph Freeman</persname></item>
+                            <item><persname>Paul R. Freeman</persname></item>
+                            <item><persname>Sigmund Freud</persname></item>
+                            <item><persname>Donald Friede</persname></item>
+                            <item><persname>Lee Max Friedman</persname></item>
+                            <item><persname>Philip Friedman</persname></item>
+                            <item><persname>Theodore W. Friend III</persname></item>
+                            <item><persname>Eleanor (Marsh) Frost</persname></item>
+                            <item><persname>Grace Frost</persname></item>
+                            <item><persname>Cynthia Fuller</persname></item>
+                            <item><persname>Jeffrey Fuller</persname></item>
+                            <item><persname>Joyce Fuller</persname></item>
+                            <item><persname>Werner K. Gabler</persname></item>
+                            <item><persname>Iago Galdston</persname></item>
+                            <item><persname>Frank Ernest Gannett</persname></item>
+                            <item><persname>Lewis Stiles Gannett</persname></item>
+                            <item><persname>Ruth Chrisman (Arens) Gannett</persname></item>
+                            <item><persname>Devin Adair Garrity</persname></item>
+                            <item><persname>Kate Elizabeth (Crane) Gartz</persname></item>
+                            <item><persname>Margaret Root Garvin</persname></item>
+                            <item><persname>Arnold Francis Gates</persname></item>
+                            <item><persname>Sumner Gerard</persname></item>
+                            <item><persname>William James Ghent</persname></item>
+                            <item><persname>Paul Ginestier</persname></item>
+                            <item><persname>Mirra Ginsburg</persname></item>
+                            <item><persname>Arturo Giovannitti</persname></item>
+                            <item><persname>Benjamin Gitlow</persname></item>
+                            <item><persname>Munsey S. Gleaton</persname></item>
+                            <item><persname>Martin Henry Glynn</persname></item>
+                            <item><persname>Oliver St. John Gogarty</persname></item>
+                            <item><persname>Reuben Lucius Goldberg</persname></item>
+                            <item><persname>Irving Goldman</persname></item>
+                            <item><persname>Joel Ernest Goldthwait</persname></item>
+                            <item><persname>Walter Goldwater</persname></item>
+                            <item><persname>Jack Arthur Goodman</persname></item>
+                            <item><persname>Gordon Grand</persname></item>
+                            <item><persname>Alan G. Grant</persname></item>
+                            <item><persname>Joseph J. Gravely</persname></item>
+                            <item><persname>Ernest Weston Gray</persname></item>
+                            <item><persname>Richard G. Green</persname></item>
+                            <item><persname>Dorothea R. (Schwarcz) Greenbaum</persname></item>
+                            <item><persname>Edward S. Greenbaum</persname></item>
+                            <item><persname>C.G. Greenshields</persname></item>
+                            <item><persname>William Cabell Greet</persname></item>
+                            <item><persname>Alfred Griot</persname></item>
+                            <item><persname>William Gropper</persname></item>
+                            <item><persname>Milt Gross</persname></item>
+                            <item><persname>George Grosz</persname></item>
+                            <item><persname>Arthur Guiterman</persname></item>
+                            <item><persname>Arthur Guy</persname></item>
+                            <item><persname>Louis Morton Hacker</persname></item>
+                            <item><persname>Francis Hackett</persname></item>
+                            <item><persname>Signe (Toksvig) Hackett</persname></item>
+                            <item><persname>Hermann Hagedorn</persname></item>
+                            <item><persname>Henriette Roland Halat</persname></item>
+                            <item><persname>Granville Stanley Hall</persname></item>
+                            <item><persname>Robert Hallowell</persname></item>
+                            <item><persname>Margaret Halsey</persname></item>
+                            <item><persname>Charles Hutchins Hapgood</persname></item>
+                            <item><persname>Hutchins Hapgood</persname></item>
+                            <item><persname>Norman Hapgood</persname></item>
+                            <item><persname>Alfred Harcourt</persname></item>
+                            <item><persname>William Hard</persname></item>
+                            <item><persname>Marion (Choate) Harding</persname></item>
+                            <item><persname>Thomas Swann Harding</persname></item>
+                            <item><persname>Gelston Hardy</persname></item>
+                            <item><persname>Floyd Arthur Harper</persname></item>
+                            <item><persname>Harry Halstead Harper</persname></item>
+                            <item><persname>Frank Harris</persname></item>
+                            <item><persname>Aileen (Brenon) Harrity</persname></item>
+                            <item><persname>Molly Harrower</persname></item>
+                            <item><persname>Henry Hart</persname></item>
+                            <item><persname>Merwin Kimball Hart</persname></item>
+                            <item><persname>Huntington Hartford</persname></item>
+                            <item><persname>Harrison Smith Hartley</persname></item>
+                            <item><persname>Raymond Dexter Havens</persname></item>
+                            <item><persname>Marion (Emsley) Hawes</persname></item>
+                            <item><persname>Howard Haycraft</persname></item>
+                            <item><persname>Hiram Haydn</persname></item>
+                            <item><persname>Friedrich August von Hayek</persname></item>
+                            <item><persname>Bartlett Harding Hayes</persname></item>
+                            <item><persname>Alan S. Hays</persname></item>
+                            <item><persname>Arthur Garfield Hays</persname></item>
+                            <item><persname>Henry Hazlitt</persname></item>
+                            <item><persname>Daniel Heefner</persname></item>
+                            <item><persname>George Sidney Hellman</persname></item>
+                            <item><persname>Ernest Hemingway</persname></item>
+                            <item><persname>Leon Henderson</persname></item>
+                            <item><persname>Ralph Ernest Henderson</persname></item>
+                            <item><persname>James Henle</persname></item>
+                            <item><persname>Josephine Frey Herbst</persname></item>
+                            <item><persname>Don Herold</persname></item>
+                            <item><persname>Charles Judson Herrick</persname></item>
+                            <item><persname>Benjamin Russell Herts</persname></item>
+                            <item><persname>William Best Hesseltine</persname></item>
+                            <item><persname>Granville Hicks</persname></item>
+                            <item><persname>Eugene Higgins</persname></item>
+                            <item><persname>Stanley Hoflund High</persname></item>
+                            <item><persname>Robert Silliman Hillyer</persname></item>
+                            <item><persname>Trygve J. B. Hoff</persname></item>
+                            <item><persname>Edgar F. Hoffmeier</persname></item>
+                            <item><persname>Lancelot Hogben</persname></item>
+                            <item><persname>Harry Levi Hollingworth</persname></item>
+                            <item><persname>John Haynes Holmes</persname></item>
+                            <item><persname>John Holms</persname></item>
+                            <item><persname>Sidney Hook</persname></item>
+                            <item><persname>Ellison Hoover</persname></item>
+                            <item><persname>Josephine Verstille (Nivison) Hopper</persname></item>
+                            <item><persname>Arvo Horm</persname></item>
+                            <item><persname>Eleanor (Greenwood) Hornblower</persname></item>
+                            <item><persname>Hal Horne</persname></item>
+                            <item><persname>Henry Greene Hotchkiss</persname></item>
+                            <item><persname>Henry Beetle Hough</persname></item>
+                            <item><persname>Iskander Hourwich</persname></item>
+                            <item><persname>Roy Wilson Howard</persname></item>
+                            <item><persname>Quincy Howe</persname></item>
+                            <item><persname>Charles T. Hoy</persname></item>
+                            <item><persname>Edwin Powell Hubble</persname></item>
+                            <item><persname>Benjamin W. Huebsch</persname></item>
+                            <item><persname>Alice Hughes</persname></item>
+                            <item><persname>Langston Hughes</persname></item>
+                            <item><persname>Rolfe Humphries</persname></item>
+                            <item><persname>Robert Nigel Carew Hunt</persname></item>
+                            <item><persname>Zora Neale Hurston</persname></item>
+                            <item><persname>Helen Husted</persname></item>
+                            <item><persname>Paul Hutchinson</persname></item>
+                            <item><persname>Aldous Leonard Huxley</persname></item>
+                            <item><persname>Sir Julian Sorell Huxley</persname></item>
+                            <item><persname>Ralph McAllister Ingersoll</persname></item>
+                            <item><persname>William Mann Irvine</persname></item>
+                            <item><persname>Wallace Admah Irwin</persname></item>
+                            <item><persname>Cyril Lionel Roberts James</persname></item>
+                            <item><persname>Daniel James</persname></item>
+                            <item><persname>Pierre Marie Felix Janet</persname></item>
+                            <item><persname>Robinson Jeffers</persname></item>
+                            <item><persname>Belinda (Dobson) Jelliffe</persname></item>
+                            <item><persname>Herbert Franklin Jenkins</persname></item>
+                            <item><persname>Alexander D. Jenney</persname></item>
+                            <item><persname>Eleanor Jewett</persname></item>
+                            <item><persname>Alvin Saunders Johnson</persname></item>
+                            <item><persname>Ray Johnson</persname></item>
+                            <item><persname>William Johnson</persname></item>
+                            <item><persname>Bertha Johnston</persname></item>
+                            <item><persname>Mary Johnston</persname></item>
+                            <item><persname>Eugene Jolas</persname></item>
+                            <item><persname>Howard Munford Jones</persname></item>
+                            <item><persname>Paul Jordan-Smith</persname></item>
+                            <item><persname>Ben Josephson</persname></item>
+                            <item><persname>Irene Josephson</persname></item>
+                            <item><persname>Frederick A. Judson</persname></item>
+                            <item><persname>Eleanor Kairalla</persname></item>
+                            <item><persname>Horace Meyer Kaller</persname></item>
+                            <item><persname>Hans von Kaltenborn</persname></item>
+                            <item><persname>Olga (Von Nordenflycht) Kaltenborn</persname></item>
+                            <item><persname>Panayotis Kanellopoulos</persname></item>
+                            <item><persname>Justin Kaplan</persname></item>
+                            <item><persname>David Karp</persname></item>
+                            <item><persname>Harry Kemp</persname></item>
+                            <item><persname>John F. Kendrick</persname></item>
+                            <item><persname>Rockwell Kent</persname></item>
+                            <item><persname>Alexander Fedorovich Kerenskii</persname></item>
+                            <item><persname>John Barrett Kerfoot</persname></item>
+                            <item><persname>Anthony Kerrigan</persname></item>
+                            <item><persname>John Maynard Keynes</persname></item>
+                            <item><persname>baron Keynes</persname></item>
+                            <item><persname>William Heard Kilpatrick</persname></item>
+                            <item><persname>Alice Mary Kimball</persname></item>
+                            <item><persname>Husband Edward Kimmel</persname></item>
+                            <item><persname>Margaret Pinckney (Allen) King</persname></item>
+                            <item><persname>Stanley King</persname></item>
+                            <item><persname>Harold Kingsley</persname></item>
+                            <item><persname>Mrs. Harold Kingsley Watson
+                                Kirkconnell</persname></item>
+                            <item><persname>Sidney Dale Kirkpatrick</persname></item>
+                            <item><persname>George W. Kisker</persname></item>
+                            <item><persname>Benjamin Hamilton Kizer</persname></item>
+                            <item><persname>Pearl Kluger</persname></item>
+                            <item><persname>Hubert Renfro Knickerbocker</persname></item>
+                            <item><persname>Eric Mowbray Knight</persname></item>
+                            <item><persname>Jere Knight</persname></item>
+                            <item><persname>Grant Cochram Knight</persname></item>
+                            <item><persname>Arthur Koestler</persname></item>
+                            <item><persname>Kurt Koffka</persname></item>
+                            <item><persname>Alfred Kohlberg</persname></item>
+                            <item><persname>Aleksandra (Mikla_ilovna) Kollontai</persname></item>
+                            <item><persname>Elizabeth Haven (Pratt) Koren</persname></item>
+                            <item><persname>Samuel Jacob Kornhauser</persname></item>
+                            <item><persname>Hans Kraus</persname></item>
+                            <item><persname>Richard Julius Herman Krebs</persname></item>
+                            <item><persname>Joseph Wood Krutch</persname></item>
+                            <item><persname>Lawrence Schlesinger Kubie</persname></item>
+                            <item><persname>J. Alvin Kugelmass</persname></item>
+                            <item><persname>Minette (Stroock) Kuhn</persname></item>
+                            <item><persname>Stephen A. Kurtz</persname></item>
+                            <item><persname>Suzanne La Follette</persname></item>
+                            <item><persname>Corliss Lamont</persname></item>
+                            <item><persname>Jerome Barker Landfield</persname></item>
+                            <item><persname>Cornelia Thayer (Baldwin) Lane</persname></item>
+                            <item><persname>Rose (Wilder) Lane</persname></item>
+                            <item><persname>Ida Langdon</persname></item>
+                            <item><persname>Jervis Langdon</persname></item>
+                            <item><persname>Leo Lania</persname></item>
+                            <item><persname>Harold Joseph Laski</persname></item>
+                            <item><persname>Melvin J. Lasky</persname></item>
+                            <item><persname>Victor Lasky</persname></item>
+                            <item><persname>Natalie Wales Latham</persname></item>
+                            <item><persname>Ira H. Latimer</persname></item>
+                            <item><persname>Adolph Andreas Latzko</persname></item>
+                            <item><persname>David Lawrence</persname></item>
+                            <item><persname>Stephen Butler Leacock</persname></item>
+                            <item><persname>Daniel Bell Leary</persname></item>
+                            <item><persname>Mabel (Barbee) Lee</persname></item>
+                            <item><persname>David G. Legerman</persname></item>
+                            <item><persname>Maria Leiper</persname></item>
+                            <item><persname>Clara Leiser</persname></item>
+                            <item><persname>Mary Sinton (Lewis) Leitch</persname></item>
+                            <item><persname>Vlad_m_r _l'_ch Lenin</persname></item>
+                            <item><persname>Leo Lentelli</persname></item>
+                            <item><persname>Arthur Eastman Leonard</persname></item>
+                            <item><persname>Mattie (Ivey) Leonard</persname></item>
+                            <item><persname>Morgan Eastman Leonard</persname></item>
+                            <item><persname>William Ellery Leonard</persname></item>
+                            <item><persname>James Henry Leuba</persname></item>
+                            <item><persname>Albert Rice Leventhal</persname></item>
+                            <item><persname>Isaac Don Levine</persname></item>
+                            <item><persname>Samuel Morris Levitas</persname></item>
+                            <item><persname>Newman Levy</persname></item>
+                            <item><persname>Austin Lewis</persname></item>
+                            <item><persname>Clarence Irving Lewis</persname></item>
+                            <item><persname>Diana B. Lewis</persname></item>
+                            <item><persname>John F. Lewis</persname></item>
+                            <item><persname>Edith Louise (Miller) Lewis</persname></item>
+                            <item><persname>Hobart Durbin Lewis</persname></item>
+                            <item><persname>Joseph Lewis</persname></item>
+                            <item><persname>Sinclair Lewis</persname></item>
+                            <item><persname>David Eli Lilienthal</persname></item>
+                            <item><persname>Nicholas Vachel Lindsay</persname></item>
+                            <item><persname>Walter Lippman</persname></item>
+                            <item><persname>Robert Littell</persname></item>
+                            <item><persname>Harold Albert Loeb</persname></item>
+                            <item><persname>Jack London</persname></item>
+                            <item><persname>Hamilton Abert Long</persname></item>
+                            <item><persname>Battell Loomis</persname></item>
+                            <item><persname>Julia Olivia (Langdon) Loomis</persname></item>
+                            <item><persname>Anita Loos</persname></item>
+                            <item><persname>Herman Lorber</persname></item>
+                            <item><persname>Amy Loveman</persname></item>
+                            <item><persname>Claire (Boothe) Luce</persname></item>
+                            <item><persname>Mabel (Ganson) Dodge Luhan</persname></item>
+                            <item><persname>Harold A. Lynch</persname></item>
+                            <item><persname>Eugene Lyons</persname></item>
+                            <item><persname>William Manley McBride</persname></item>
+                            <item><persname>Virginia Armitage McCall</persname></item>
+                            <item><persname>Spencer Jarnagin McCallie</persname></item>
+                            <item><persname>Mary Margaret Patricia McCarran</persname></item>
+                            <item><persname>Olivia (Rosebrook) McConnell</persname></item>
+                            <item><persname>Katharine (Dexter) McCormick</persname></item>
+                            <item><persname>William McDougall</persname></item>
+                            <item><persname>William McFall</persname></item>
+                            <item><persname>John C. Macfarlane</persname></item>
+                            <item><persname>Frank McGrann</persname></item>
+                            <item><persname>Ethel Marion (Peterkin) MacIver</persname></item>
+                            <item><persname>Hugh John Coleridge Mackarness</persname></item>
+                            <item><persname>Alexander Galt McKnight</persname></item>
+                            <item><persname>Archibald Macleish</persname></item>
+                            <item><persname>Eugene Joseph Magner</persname></item>
+                            <item><persname>Charles Malamuth</persname></item>
+                            <item><persname>Benjamin Mandel</persname></item>
+                            <item><persname>Adra (Ashe) Mann</persname></item>
+                            <item><persname>Baldwin Mann</persname></item>
+                            <item><persname>William M. Mann</persname></item>
+                            <item><persname>Leopold Damrosch Mannes</persname></item>
+                            <item><persname>Martin Thomas Manton</persname></item>
+                            <item><persname>Edwin Markham</persname></item>
+                            <item><persname>Kyra Markham</persname></item>
+                            <item><persname>Betsy Pilat Marston</persname></item>
+                            <item><persname>Dwight Marvin</persname></item>
+                            <item><persname>John Masefield</persname></item>
+                            <item><persname>Gregory Mason</persname></item>
+                            <item><persname>M. Clinton Mason</persname></item>
+                            <item><persname>A. Mathieu</persname></item>
+                            <item><persname>Norman Häghejm Matson</persname></item>
+                            <item><persname>Joseph Brown Matthews</persname></item>
+                            <item><persname>William Somerset Maugham</persname></item>
+                            <item><persname>Marjorie M. Mayer</persname></item>
+                            <item><persname>Harry Monroe Meacham</persname></item>
+                            <item><persname>Daniel Mebane</persname></item>
+                            <item><persname>Andromache (Schliemann) Melas</persname></item>
+                            <item><persname>Harry W. Mellen</persname></item>
+                            <item><persname>Henry Louis Mencken</persname></item>
+                            <item><persname>Otto Julius Merkel</persname></item>
+                            <item><persname>Charles Edward Merriam</persname></item>
+                            <item><persname>Wallace Meyer</persname></item>
+                            <item><persname>Eva Meyerovitch</persname></item>
+                            <item><persname>Sir Francis Meynell</persname></item>
+                            <item><persname>Scudder Middleton</persname></item>
+                            <item><persname>Dra_a Milhailovi_</persname></item>
+                            <item><persname>Edna St. Vincent Millay</persname></item>
+                            <item><persname>Lois (Mattox) Miller</persname></item>
+                            <item><persname>William Robert Miller</persname></item>
+                            <item><persname>John Procter Mills</persname></item>
+                            <item><persname>Robert Minor</persname></item>
+                            <item><persname>Jonathan Mitchell</persname></item>
+                            <item><persname>Leon W. Mitchell</persname></item>
+                            <item><persname>Alice-Leone Moats</persname></item>
+                            <item><persname>Raymond Moley</persname></item>
+                            <item><persname>Lucien Monod</persname></item>
+                            <item><persname>Harriet Monroe</persname></item>
+                            <item><persname>William Pepperell Montague</persname></item>
+                            <item><persname>Ann Leslie (Nichol) Moore</persname></item>
+                            <item><persname>Ernest A. Moore</persname></item>
+                            <item><persname>Marianne Moore</persname></item>
+                            <item><persname>Merrill Moore</persname></item>
+                            <item><persname>Robert Thomas Moore</persname></item>
+                            <item><persname>Ward Moore</persname></item>
+                            <item><persname>Harrison Smith Morris</persname></item>
+                            <item><persname>Robert C. Morris</persname></item>
+                            <item><persname>Joseph Laffan Morse</persname></item>
+                            <item><persname>Asa Henry Morton</persname></item>
+                            <item><persname>John Chaplin Mosher</persname></item>
+                            <item><persname>Armand Mossé</persname></item>
+                            <item><persname>John Harold Moyer</persname></item>
+                            <item><persname>Norbert Muhlen</persname></item>
+                            <item><persname>Arthur Laurence Muir</persname></item>
+                            <item><persname>Lewis Mumford</persname></item>
+                            <item><persname>Charles Samuel Mundell</persname></item>
+                            <item><persname>Katharine D. Murdoch</persname></item>
+                            <item><persname>Frank Murphy</persname></item>
+                            <item><persname>Gilbert Murray</persname></item>
+                            <item><persname>Robert Hammond Murray</persname></item>
+                            <item><persname>Abraham John Muste</persname></item>
+                            <item><persname>Edward Frederick Mylius</persname></item>
+                            <item><persname>Robert Nathan</persname></item>
+                            <item><persname>Alla Nazimova</persname></item>
+                            <item><persname>Adelaide W. Neall</persname></item>
+                            <item><persname>Frederic Cook Nelson</persname></item>
+                            <item><persname>Charles Neider</persname></item>
+                            <item><persname>Louise Townsend Nicholl</persname></item>
+                            <item><persname>Leonora Nichols</persname></item>
+                            <item><persname>Sterling North</persname></item>
+                            <item><persname>Vernon C. Norton</persname></item>
+                            <item><persname>William Warder Norton</persname></item>
+                            <item><persname>Alice Effingham (Hopkins) Nott</persname></item>
+                            <item><persname>Charles Cooper Nott</persname></item>
+                            <item><persname>Ernesto Novelo Torres</persname></item>
+                            <item><persname>W. S. Nyland</persname></item>
+                            <item><persname>Liston M. Oak</persname></item>
+                            <item><persname>Joseph Ely O'Carroll</persname></item>
+                            <item><persname>Victor Wentworth Odlum</persname></item>
+                            <item><persname>Edwin Patrick O'Donnell</persname></item>
+                            <item><persname>Gullbrand Øverbye</persname></item>
+                            <item><persname>William Fielding Ogburn</persname></item>
+                            <item><persname>William Laurence O'Neill</persname></item>
+                            <item><persname>Ivan Opffer</persname></item>
+                            <item><persname>Alexander Orlov</persname></item>
+                            <item><persname>Elwin Lawrence Page</persname></item>
+                            <item><persname>Paul Palmer</persname></item>
+                            <item><persname>George Andreas Papandreou</persname></item>
+                            <item><persname>Helen Huss Parkhurst</persname></item>
+                            <item><persname>H. S. Parsons</persname></item>
+                            <item><persname>Betty Patterson</persname></item>
+                            <item><persname>Alice Paul</persname></item>
+                            <item><persname>Betty Paul</persname></item>
+                            <item><persname>Maurice Eden Paul</persname></item>
+                            <item><persname>Dennis J. Pauly</persname></item>
+                            <item><persname>Ivan Petrovich Pavlov</persname></item>
+                            <item><persname>Kenneth Wilcox Payne</persname></item>
+                            <item><persname>George Foster Peabody</persname></item>
+                            <item><persname>Josephine Preston Peabody</persname></item>
+                            <item><persname>Charles A. Pearce</persname></item>
+                            <item><persname>Donald Culross Peattie</persname></item>
+                            <item><persname>Samuel M. Pedrick</persname></item>
+                            <item><persname>Waldo Peirce</persname></item>
+                            <item><persname>Maxwell Evarts Perkins</persname></item>
+                            <item><persname>Bliss Perry</persname></item>
+                            <item><persname>Anne Persov</persname></item>
+                            <item><persname>Peter II</persname></item>
+                            <item><persname>Mirtalla (Kardinalovska) Petrov</persname></item>
+                            <item><persname>Vladimir N. Petrov</persname></item>
+                            <item><persname>John Sanburn Phillips</persname></item>
+                            <item><persname>Thomas Wharton Phillips</persname></item>
+                            <item><persname>Elsie Leonora (Gowdy) Picon</persname></item>
+                            <item><persname>Harriet (Fleischl) Pilpel</persname></item>
+                            <item><persname>Amos Richards Eno Pinchot</persname></item>
+                            <item><persname>Ruth (Pickering) Pinchot</persname></item>
+                            <item><persname>Werner Plant</persname></item>
+                            <item><persname>James Plunkett</persname></item>
+                            <item><persname>Philip Pollack</persname></item>
+                            <item><persname>Channing Pollock</persname></item>
+                            <item><persname>Carlo Posselt</persname></item>
+                            <item><persname>Frederick Albert Pottle</persname></item>
+                            <item><persname>Ezra Loomis Pound</persname></item>
+                            <item><persname>James Bissett Pratt</persname></item>
+                            <item><persname>Margery Wilerd (Davis) Pratt</persname></item>
+                            <item><persname>Frederic Prokosch</persname></item>
+                            <item><persname>Anne (Eisner) Putnam</persname></item>
+                            <item><persname>Arthur James Putnam</persname></item>
+                            <item><persname>Bogdan Radica</persname></item>
+                            <item><persname>William McLeod Raine</persname></item>
+                            <item><persname>Robert M. Rainey</persname></item>
+                            <item><persname>Albert Rapp</persname></item>
+                            <item><persname>Charles Rappoport</persname></item>
+                            <item><persname>Fanny Rappoport</persname></item>
+                            <item><persname>Samuel Kerkham Ratcliffe</persname></item>
+                            <item><persname>Leonard Edward Read</persname></item>
+                            <item><persname>Ben Ray Redman</persname></item>
+                            <item><persname>John Reed</persname></item>
+                            <item><persname>Robert Rush Reed</persname></item>
+                            <item><persname>William Marion Reedy</persname></item>
+                            <item><persname>Gustav Regler</persname></item>
+                            <item><persname>Vernon Reyman</persname></item>
+                            <item><persname>Ivy Jean (Baird) Richards</persname></item>
+                            <item><persname>Victor Riesel</persname></item>
+                            <item><persname>Richard Stanton Rimanoczy</persname></item>
+                            <item><persname>Diego Rivera</persname></item>
+                            <item><persname>Ruby (Altizer) Roberts</persname></item>
+                            <item><persname>Bill Robinson</persname></item>
+                            <item><persname>Boardman Robinson</persname></item>
+                            <item><persname>Frederick Bruce Robinson</persname></item>
+                            <item><persname>Henry Morton Robinson</persname></item>
+                            <item><persname>James Harvey Robinson</persname></item>
+                            <item><persname>Wilhelm Röpke</persname></item>
+                            <item><persname>Rochester Hart Rogers</persname></item>
+                            <item><persname>John William Rogers</persname></item>
+                            <item><persname>Romain Rolland</persname></item>
+                            <item><persname>H. Henry Roloff</persname></item>
+                            <item><persname>John Roosa</persname></item>
+                            <item><persname>Theodore Roosevelt</persname></item>
+                            <item><persname>Edward Merrill Root</persname></item>
+                            <item><persname>Mrs. Valentine Rosen</persname></item>
+                            <item><persname>Roswell P. Rosengren</persname></item>
+                            <item><persname>Jacob Rosin</persname></item>
+                            <item><persname>Michael Ross</persname></item>
+                            <item><persname>Charles B. Roth</persname></item>
+                            <item><persname>Constance Mayfield Rourke</persname></item>
+                            <item><persname>Vermont Connecticut Royster</persname></item>
+                            <item><persname>Harold Goddard Rugg</persname></item>
+                            <item><persname>Edward Aloysius Rumely</persname></item>
+                            <item><persname>Bertrand Russell</persname></item>
+                            <item><persname>3rd earl Russell</persname></item>
+                            <item><persname>Frances Theresa (Peet) Russell</persname></item>
+                            <item><persname>Mary (House) Ryskind</persname></item>
+                            <item><persname>Morrie Ryskind</persname></item>
+                            <item><persname>Jack Salzman</persname></item>
+                            <item><persname>Clara Langhorne (Clemens) Samoussoud</persname></item>
+                            <item><persname>Carl Sandburg</persname></item>
+                            <item><persname>Margaret (Higgins) Sanger</persname></item>
+                            <item><persname>Clive Sansom</persname></item>
+                            <item><persname>George Santayana</persname></item>
+                            <item><persname>Edward Sapir</persname></item>
+                            <item><persname>Hélène Sardeau</persname></item>
+                            <item><persname>Lew R. Sarett</persname></item>
+                            <item><persname>Siegfried Lorraine Sassoon</persname></item>
+                            <item><persname>Eugene F. Saxton</persname></item>
+                            <item><persname>Harry Truax Saylor</persname></item>
+                            <item><persname>Bernardine (Kielty) Scherman</persname></item>
+                            <item><persname>Harry Scherman</persname></item>
+                            <item><persname>Thomas Scherman</persname></item>
+                            <item><persname>Justus Julius Schifferes</persname></item>
+                            <item><persname>William Siegmund Schlamm</persname></item>
+                            <item><persname>Karl Schoenenmann</persname></item>
+                            <item><persname>Max Lincoln Schuster</persname></item>
+                            <item><persname>Louis Herbert Schwartz</persname></item>
+                            <item><persname>Solomon R. Schwarz</persname></item>
+                            <item><persname>Elmer Scott</persname></item>
+                            <item><persname>Edward Wyllis Scripps</persname></item>
+                            <item><persname>Anderson M. Scruggs</persname></item>
+                            <item><persname>Vida Dutton Scudder</persname></item>
+                            <item><persname>William Buehler Seabrook</persname></item>
+                            <item><persname>Eustace Seligman</persname></item>
+                            <item><persname>Arthur W. Seligmann</persname></item>
+                            <item><persname>Victor Serge</persname></item>
+                            <item><persname>Herbert Howard Sergeant</persname></item>
+                            <item><persname>William Ward Seward</persname></item>
+                            <item><persname>Max Shachtman</persname></item>
+                            <item><persname>Nathan D. Shapiro</persname></item>
+                            <item><persname>George Bernard Shaw</persname></item>
+                            <item><persname>William Shawn</persname></item>
+                            <item><persname>Julia Florence Sherbourne</persname></item>
+                            <item><persname>Editta (Rinaldo) Sherman</persname></item>
+                            <item><persname>Joseph Twadell Shipley</persname></item>
+                            <item><persname>Charles B. Shuman</persname></item>
+                            <item><persname>Richard Leo Simon</persname></item>
+                            <item><persname>Robert Simpson</persname></item>
+                            <item><persname>Mary Craig (Kimbrough) Sinclair</persname></item>
+                            <item><persname>Upton Beall Sinclair</persname></item>
+                            <item><persname>Tess Slesinger</persname></item>
+                            <item><persname>John French Sloan</persname></item>
+                            <item><persname>Thomas O'Conor Sloane III</persname></item>
+                            <item><persname>Amos Smalley</persname></item>
+                            <item><persname>Chard Powers Smith</persname></item>
+                            <item><persname>Harrison Smith</persname></item>
+                            <item><persname>Jean (Hoyt) Smith</persname></item>
+                            <item><persname>Jessica Smith</persname></item>
+                            <item><persname>Preserved Smith</persname></item>
+                            <item><persname>Thomas Vernor Smith</persname></item>
+                            <item><persname>Boris Sokoloff</persname></item>
+                            <item><persname>Herbert Solow</persname></item>
+                            <item><persname>Sylvia Solow</persname></item>
+                            <item><persname>Glja Sonnenschein</persname></item>
+                            <item><persname>William Soskin</persname></item>
+                            <item><persname>Re Soupault</persname></item>
+                            <item><persname>Etienne Souriau</persname></item>
+                            <item><persname>Boris Souvarine</persname></item>
+                            <item><persname>Mme Francoise (de Bidart) Souvarine</persname></item>
+                            <item><persname>James V. Spadea</persname></item>
+                            <item><persname>Theodore Spencer</persname></item>
+                            <item><persname>Leonora (von Stosch) Speyer</persname></item>
+                            <item><persname>Harriet Chapman (Jones) Sprague</persname></item>
+                            <item><persname>Harold Sproul</persname></item>
+                            <item><persname>Barbara Stanwyck</persname></item>
+                            <item><persname>E.F. Staral</persname></item>
+                            <item><persname>Monroe Mather Stearns</persname></item>
+                            <item><persname>P. Werner Stecher</persname></item>
+                            <item><persname>Joseph Lincoln Steffens</persname></item>
+                            <item><persname>Ruth (Walgreen) Stephan</persname></item>
+                            <item><persname>Juliet (Lit) Stern</persname></item>
+                            <item><persname>Julius David Stern</persname></item>
+                            <item><persname>Maurice Sterne</persname></item>
+                            <item><persname>Doris Stevens</persname></item>
+                            <item><persname>Wallace Stevens</persname></item>
+                            <item><persname>Ada Stewart</persname></item>
+                            <item><persname>Donald Odgen Stewart</persname></item>
+                            <item><persname>Mary T. Steyn</persname></item>
+                            <item><persname>Fred Holly Stocking</persname></item>
+                            <item><persname>Benjamin Stolberg</persname></item>
+                            <item><persname>Rex Todhunter Stout</persname></item>
+                            <item><persname>Edward Streeter</persname></item>
+                            <item><persname>Clarence Krishman Streit</persname></item>
+                            <item><persname>Charles H. Studin</persname></item>
+                            <item><persname>Aloysius Michael Sullivan</persname></item>
+                            <item><persname>Francois Susanna</persname></item>
+                            <item><persname>Oscar H. Swede</persname></item>
+                            <item><persname>Edgar James Swift</persname></item>
+                            <item><persname>Raymond Gram Swing</persname></item>
+                            <item><persname>Herbert Bayard Swope</persname></item>
+                            <item><persname>John Vernon Taberner</persname></item>
+                            <item><persname>Genevieve Taggard</persname></item>
+                            <item><persname>Frank Tannenbaum</persname></item>
+                            <item><persname>Harry Taylor</persname></item>
+                            <item><persname>Booth Tarkington</persname></item>
+                            <item><persname>Marian (Young) Taylor</persname></item>
+                            <item><persname>Warner Taylor</persname></item>
+                            <item><persname>Norman Mattoon Thomas</persname></item>
+                            <item><persname>Dorothy Thompson</persname></item>
+                            <item><persname>Mary (Clark) Thompson</persname></item>
+                            <item><persname>James Grover Thurber</persname></item>
+                            <item><persname>Charles Sanford Tippetts</persname></item>
+                            <item><persname>Edward Bradford Titchener</persname></item>
+                            <item><persname>Elon Farnsworth Thompkins</persname></item>
+                            <item><persname>Frederic Ridgley Torrence</persname></item>
+                            <item><persname>Muriel Tourrenc</persname></item>
+                            <item><persname>Charles Hanson Towne</persname></item>
+                            <item><persname>Charles L. Tranter</persname></item>
+                            <item><persname>Horace Traubel</persname></item>
+                            <item><persname>Iris Tree</persname></item>
+                            <item><persname>Emma Gray (White) Trigg</persname></item>
+                            <item><persname>Gene Tunney</persname></item>
+                            <item><persname>Robert Charles Tucker</persname></item>
+                            <item><persname>Jean (Starr) Untermeyer</persname></item>
+                            <item><persname>Louis Untermeyer</persname></item>
+                            <item><persname>Sir Stanley Unwin</persname></item>
+                            <item><persname>Fritz William Updegraff</persname></item>
+                            <item><persname>William Hazlett Upson</persname></item>
+                            <item><persname>Amy Vanderbilt</persname></item>
+                            <item><persname>Carl Clinton Van Doren</persname></item>
+                            <item><persname>Mark Van Doren</persname></item>
+                            <item><persname>Hendrik Willem Van Loon</persname></item>
+                            <item><persname>Carl Van Ness</persname></item>
+                            <item><persname>Joseph S. Van Why</persname></item>
+                            <item><persname>Harold Lord Varney</persname></item>
+                            <item><persname>Eleanor Veraude</persname></item>
+                            <item><persname>David Victoroff</persname></item>
+                            <item><persname>H. H. Vernon</persname></item>
+                            <item><persname>Peter Robert Edwin Viereck</persname></item>
+                            <item><persname>Oswald Garrison Villard</persname></item>
+                            <item><persname>John Nathaniel Vincent</persname></item>
+                            <item><persname>Fritz August Voigt</persname></item>
+                            <item><persname>Ludwig Edler von Mises</persname></item>
+                            <item><persname>Charmion von Wiegand</persname></item>
+                            <item><persname>Mary Marvin (Heaton) Vorse</persname></item>
+                            <item><persname>Robert Churchill Vose</persname></item>
+                            <item><persname>Betty Vytlacil</persname></item>
+                            <item><persname>Elizabeth Waddell</persname></item>
+                            <item><persname>Irene (Chadwick) Wagenaar</persname></item>
+                            <item><persname>John Allan Waite</persname></item>
+                            <item><persname>Rosie (Goldschmidt) Waldeck</persname></item>
+                            <item><persname>Louis Waldman</persname></item>
+                            <item><persname>Agnes (Schjoldager) Knickerbocker
+                                Walker</persname></item>
+                            <item><persname>DeWitt Wallace</persname></item>
+                            <item><persname>Lila Belle (Acheson) Wallace</persname></item>
+                            <item><persname>Anna (Strumsky) Walling</persname></item>
+                            <item><persname>E. Clayton Walton</persname></item>
+                            <item><persname>Aileen Ward</persname></item>
+                            <item><persname>Margaret Floy Washburn</persname></item>
+                            <item><persname>Stanley Washburn</persname></item>
+                            <item><persname>Charles Henshaw Ward</persname></item>
+                            <item><persname>Fred D. Warren</persname></item>
+                            <item><persname>David Lindsay Watson</persname></item>
+                            <item><persname>Forbes Watson</persname></item>
+                            <item><persname>Franklin Mowry Watts</persname></item>
+                            <item><persname>Hugo Weber</persname></item>
+                            <item><persname>Annie Clemens (Moffett) Webster</persname></item>
+                            <item><persname>Harold Tucker Webster</persname></item>
+                            <item><persname>Henry Kitchell Webster</persname></item>
+                            <item><persname>Albert Coady Wedemeyer</persname></item>
+                            <item><persname>Edward Augustus Weeks</persname></item>
+                            <item><persname>George L. Weissman</persname></item>
+                            <item><persname>George Anthony Weller</persname></item>
+                            <item><persname>Herbert George Wells</persname></item>
+                            <item><persname>Glenway Wescott</persname></item>
+                            <item><persname>Frank Westenkamp</persname></item>
+                            <item><persname>Walter Edward Weyl</persname></item>
+                            <item><persname>James P. Whedon</persname></item>
+                            <item><persname>Willard W. Wheeler</persname></item>
+                            <item><persname>John Hall Wheelock</persname></item>
+                            <item><persname>Elwyn Brooks White</persname></item>
+                            <item><persname>Grace (Hoffman) White</persname></item>
+                            <item><persname>Lawrence Grant White</persname></item>
+                            <item><persname>Paul F. White</persname></item>
+                            <item><persname>Sarah Parker White</persname></item>
+                            <item><persname>William Lindsay White</persname></item>
+                            <item><persname>Stella Muse Whitehead</persname></item>
+                            <item><persname>Helen Whittier</persname></item>
+                            <item><persname>Charles W. Whittlesey</persname></item>
+                            <item><persname>James Lester Wick</persname></item>
+                            <item><persname>Rowse Babcock Wilcox</persname></item>
+                            <item><persname>Albert Rhys Williams</persname></item>
+                            <item><persname>Calder Baynard Willingham</persname></item>
+                            <item><persname>Edmund Wilson</persname></item>
+                            <item><persname>J. Kenneth C. Wilson</persname></item>
+                            <item><persname>Rufus Rockwell Wilson</persname></item>
+                            <item><persname>Woodrow Wilson</persname></item>
+                            <item><persname>William Kurtz Wimsatt</persname></item>
+                            <item><persname>Rosalind Mae (Guggenheim) Winslow</persname></item>
+                            <item><persname>Sophus Keith Winther</persname></item>
+                            <item><persname>Frances Winwar</persname></item>
+                            <item><persname>Stephen Samuel Wise</persname></item>
+                            <item><persname>Samuel W. Witte</persname></item>
+                            <item><persname>Ester (Schiff) Wittfogel</persname></item>
+                            <item><persname>Karl August Wittfogel</persname></item>
+                            <item><persname>M. Adella Wolcott</persname></item>
+                            <item><persname>Bertram David Wolfe</persname></item>
+                            <item><persname>Charles Erskine Scott Wood</persname></item>
+                            <item><persname>Sidney B. Wood</persname></item>
+                            <item><persname>Sidney B. Wood</persname></item>
+                            <item><persname>Jr.</persname></item>
+                            <item><persname>Frederick James Eugene Woodbridge</persname></item>
+                            <item><persname>Homer Edwards Woodbridge</persname></item>
+                            <item><persname>William Edward Woodward</persname></item>
+                            <item><persname>Marjorie (Muir) Worthington</persname></item>
+                            <item><persname>Russell Wright</persname></item>
+                            <item><persname>Francis Lewis Wurzburg</persname></item>
+                            <item><persname>Robert Mearns Yerkes</persname></item>
+                            <item><persname>Robert A. York</persname></item>
+                            <item><persname>Annis (Fuller) Young</persname></item>
+                            <item><persname>Arthur Henry Young</persname></item>
+                            <item><persname>William Bernard Ziff</persname></item>
+                            <item><persname>Friderike Maria (Burger) von Winternitz
+                                Zweig</persname></item>
+                            <item><persname>Stefan Zweig.</persname></item>
+
+                        </list>
+                    </p>
+                </note>
+
+
+                <c02 id="VAC5512-00009" level="file">
+                    <did>
+                        <unittitle>Correspondence, 1892-1943 </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00010" level="file">
+                    <did>
+                        <unittitle>Correspondence with Rosalinde Fuller, 1928-1956</unittitle>
+                    </did>
+                </c02>
+
+
+                <c02 id="VAC5512-00011" level="file">
+                    <did>
+                        <container label="Box" type="Box">2</container>
+                        <unittitle>Correspondence, <unitdate normal="1944/1956" type="inclusive">1944-1956</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+
+                <c02 id="VAC5512-00012" level="file">
+                    <did>
+                        <container label="Box" type="Box">3</container>
+                        <unittitle>Correspondence, <unitdate normal="1956/1968" type="inclusive">1956-1968</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00013" level="file">
+                    <did>
+                        <unittitle>Undated correspondence, A-Z</unittitle>
+                    </did>
+                </c02>
+
+                <c02 id="VAC5512-00014" level="file">
+                    <did>
+                        <container label="Box" type="Box">9</container>
+                        <unittitle>Grandfather's letters, 1868-1869, 1871-1878, <unitdate normal="1888/1894" type="inclusive">1888-1894</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00015" level="file">
+                    <did>
+                        <unittitle>Grandfather's letters, <unitdate normal="1892/1968" type="inclusive">undated</unitdate> and in unidentified envelope
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00016" level="file">
+                    <did>
+                        <unittitle>Mother's letters to Max Eastman, <unitdate normal="1898/1910" type="inclusive">1898-1910</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00017" level="file">
+                    <did>
+                        <unittitle>Mother's letters to Anstice Ford ‘Peter' Eastman, <unitdate normal="1903/1910" type="inclusive">1903-1910</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00018" level="file">
+                    <did>
+                        <unittitle>Anstice Ford 'Peter' Eastman letters to Mr. Frank Swift,
+                                <unitdate normal="1904">1904</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00019" level="file">
+                    <did>
+                        <unittitle>Max Eastman's letters to his mother, <unitdate normal="1901/1906" type="inclusive">1901-1906</unitdate></unittitle>
+                    </did>
+                </c02>
+
+
+                <c02 id="VAC5512-00020" level="file">
+                    <did>
+                        <container label="Box" type="Box">10</container>
+                        <unittitle>Max Eastman's letters to his mother, 1906-1910 </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00021" level="file">
+                    <did>
+                        <unittitle>Max Eastman's letters to his father, 1911 </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00022" level="file">
+                    <did>
+                        <unittitle>Max Eastman's letters to his mother and sister, Crystal, 192l
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00023" level="file">
+                    <did>
+                        <unittitle>Max Eastman's letters to his sister, Crystal, 1897-1907, 1909,
+                            undated</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00024" level="file">
+                    <did>
+                        <unittitle>Max Eastman's letters to his brother, Anstice Ford ‘Peter'
+                            Eastman, 1914 </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00025" level="file">
+                    <did>
+                        <unittitle>Max Eastman's letters to Ms. Suzie Hopkins, 1905-1907
+                        </unittitle>
+                    </did>
+                </c02>
+
+
+
+                <c02 id="VAC5512-00026" level="file">
+                    <did>
+                        <container label="Box" type="Box">11</container>
+                        <unittitle>Letter from ‘Betsy,' June 13, 1956</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00027" level="file">
+                    <did>
+                        <unittitle>Anna Carlson letters, 1906-1907</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00028" level="file">
+                    <did>
+                        <unittitle>Amy Charak letters, 1940-1946</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00029" level="file">
+                    <did>
+                        <unittitle>Creigh Collins letters, 1938-1939, 1956 </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00030" level="file">
+                    <did>
+                        <unittitle>Anstice Ford 'Peter' Eastman letters to Mr. Frank Swift, 1904
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00031" level="file">
+                    <did>
+                        <unittitle>Reneé Dozon letters, 1922-1949 </unittitle>
+                    </did>
+                </c02>
+
+
+                <c02 id="VAC5512-00032" level="file">
+                    <did>
+                        <container label="Box" type="Box">12</container>
+                        <unittitle>Martha Ellis letters, 1940-1956, undated </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00033" level="file">
+                    <did>
+                        <unittitle>Lisa Duncan letters, 1920 </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00034" level="file">
+                    <did>
+                        <unittitle>Photographs of Lisa Duncan, 1920s era </unittitle>
+                    </did>
+                </c02>
+
+
+                <c02 id="VAC5512-00035" level="file">
+                    <did>
+                        <container label="Box" type="Box">13</container>
+                        <unittitle>Gretchen Fassel letters, 1904-1948 </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00036" level="file">
+                    <did>
+                        <unittitle>Lydia Gibson letters, 1916-1917 </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00037" level="file">
+                    <did>
+                        <unittitle>Nancy Hanks letters, 1907-1910 </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00038" level="file">
+                    <did>
+                        <unittitle>Juliette Hubbell letters, 1903-1906 </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00039" level="file">
+                    <did>
+                        <unittitle>June Johnson letters, 1948, 1954 </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00040" level="file">
+                    <did>
+                        <unittitle>Dilys Jones letters, 1926-1927 </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00041" level="file">
+                    <did>
+                        <unittitle>Mrs. Diana B. Lewis letters, 1953-1956 </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00042" level="file">
+                    <did>
+                        <unittitle>Lillian letters, 1936-1937 </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00043" level="file">
+                    <did>
+                        <unittitle>Marie letters, 1932, undated </unittitle>
+                    </did>
+                </c02>
+
+                <c02 id="VAC5512-00044" level="file">
+                    <did>
+                        <container label="Box" type="Box">14</container>
+                        <unittitle>Marjorie Morawetz letters, 1905-1913, 1939-1956 </unittitle>
+                    </did>
+                </c02>
+
+                <c02 id="VAC5512-00045" level="file">
+                    <did>
+                        <container label="Box" type="Box">15</container>
+                        <unittitle>K.H. Peltz letters, 1910-1956 </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00046" level="file">
+                    <did>
+                        <unittitle>Rada letters, undated </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00047" level="file">
+                    <did>
+                        <unittitle>Ione Robinson letters, 1928-1953 </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00048" level="file">
+                    <did>
+                        <unittitle>Mme. Nina Smirnova letters, 1922-1925 </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00049" level="file">
+                    <did>
+                        <unittitle>Florence Southard letters, 1942-1943 </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00050" level="file">
+                    <did>
+                        <unittitle>Genevieve Taggard letters, 1925-1931 </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00051" level="file">
+                    <did>
+                        <unittitle>Florence Wyckoff letters, 1906-1954 </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00052" level="file">
+                    <did>
+                        <unittitle>Vera Z. letters, 1920-1921, undated </unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+
+            <c01 id="VAC5512-00053" level="series">
+                <did>
+                    <container label="Box" type="Box">3</container>
+                    <unittitle>Writings</unittitle>
+                </did>
+                <scopecontent>
+                    <p>Includes Eastman's published materials and written reflections, along with
+                        drafts and notes. </p>
+                </scopecontent>
+                <arrangement>
+                    <p>Arranged chronologically by year; undated materials are arranged
+                        alphabetically according to the title of the work, then, by large sections
+                        of the drafts of Eastman's published materials. </p>
+                </arrangement>
+
+                <c02 id="VAC5512-00054" level="file">
+                    <did>
+                        <unittitle>"Public-Mind Reading," <unitdate normal="1903">1903</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00055" level="file">
+                    <did>
+                        <unittitle>"Poems," with titles, <unitdate normal="1906/1930" type="inclusive">1906-1930</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00056" level="file">
+                    <did>
+                        <unittitle>"Dancer Through Life: Isadora Duncan," <unitdate normal="1928">1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00057" level="file">
+                    <did>
+                        <unittitle>"What is Good Style?" <unitdate normal="1932">1932</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00058" level="file">
+                    <did>
+                        <unittitle>"Lenin's Letters to His Family," a report, <unitdate normal="1936">1936</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00059" level="file">
+                    <did>
+                        <unittitle>"A Case in Point," <unitdate normal="1937">1937</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00060" level="file">
+                    <did>
+                        <unittitle>"The End of Socialism in Russia," <unitdate normal="1937">1937</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00061" level="file">
+                    <did>
+                        <unittitle><title render="italic">Enjoyment of Living,</title> reader's
+                            reports, <unitdate normal="1938">1938</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00062" level="file">
+                    <did>
+                        <unittitle>"Memo on having dined with Pound and Cummings," <unitdate normal="1939">1939</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00063" level="file">
+                    <did>
+                        <unittitle>"It Takes a Poet," <unitdate normal="1942">1942</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00064" level="file">
+                    <did>
+                        <unittitle><title render="italic">Lot's Wife</title>
+                            <unitdate normal="1942">(1942)</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00065" level="file">
+                    <did>
+                        <unittitle>"What the Russians Learn About Us," notes, <unitdate normal="1945">1945</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00066" level="file">
+                    <did>
+                        <unittitle>"Yugoslavia," <unitdate normal="1945">1945</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00067" level="file">
+                    <did>
+                        <unittitle>"Are We Heading For War with Russia?" <unitdate normal="1946">1946</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00068" level="file">
+                    <did>
+                        <unittitle>"Child Welfare in the Soviet Union," <unitdate normal="1947">1947</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00069" level="file">
+                    <did>
+                        <unittitle>"Conversation with a Queen," article and notes, <unitdate normal="1949">1949</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00070" level="file">
+                    <did>
+                        <unittitle>"Cummings at Breakfast," <unitdate normal="1949">1949</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00071" level="file">
+                    <did>
+                        <unittitle>"Food of the Future," <unitdate normal="1949/1952" type="inclusive">1949-1952</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00072" level="file">
+                    <did>
+                        <unittitle>"The Kremlin I," <unitdate normal="1953">1953</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00073" level="file">
+                    <did>
+                        <unittitle>"The Kremlin II," <unitdate normal="1953">1953</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00074" level="file">
+                    <did>
+                        <unittitle>"How Human are Animals?" <unitdate normal="1957">1957</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00075" level="file">
+                    <did>
+                        <unittitle>"Two Bertrand Russells," <unitdate normal="1957">1957</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00076" level="file">
+                    <did>
+                        <unittitle>"Ignorance at Washington," <unitdate normal="1968">1968</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00077" level="file">
+                    <did>
+                        <unittitle>"About Sherwood Anderson"</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00078" level="file">
+                    <did>
+                        <unittitle>"The Anatomy of a Dictator"</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00079" level="file">
+                    <did>
+                        <unittitle>"Art Young," profile and notes</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00080" level="file">
+                    <did>
+                        <unittitle>"The Character of Lenin," notes I</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00081" level="file">
+                    <did>
+                        <unittitle>"The Character of Lenin," notes II</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00082" level="file">
+                    <did>
+                        <unittitle>"Contemporaries and Friends," notes</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00083" level="file">
+                    <did>
+                        <unittitle>"Conversation with Alexander Barmine"</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00084" level="file">
+                    <did>
+                        <unittitle>"Eliot himself speaks of…poetry"</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00085" level="file">
+                    <did>
+                        <unittitle>"Ely Culbertson," notes for a portrait</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00086" level="file">
+                    <did>
+                        <unittitle>"Every statement that Scott Nearing makes"</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00087" level="file">
+                    <did>
+                        <unittitle>"Experience Book," excerpt</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00088" level="file">
+                    <did>
+                        <unittitle>"For summer days"</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00089" level="file">
+                    <did>
+                        <unittitle>"Hart Crane," notes</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00090" level="file">
+                    <did>
+                        <unittitle>"In thinking of the Bible and of churches"</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00091" level="file">
+                    <did>
+                        <unittitle>"It should be the honor of America"</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00092" level="file">
+                    <did>
+                        <unittitle>"Keys to the Moscow Murder Mystery"</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00093" level="file">
+                    <did>
+                        <unittitle><title render="italic">Lenin Expurgated,</title>
+                            review</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00094" level="file">
+                    <did>
+                        <unittitle>"Liquor and strong drink"</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00095" level="file">
+                    <did>
+                        <unittitle>"Mark Twain's experiences"</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00096" level="file">
+                    <did>
+                        <unittitle><title render="italic">Marxism: Is it Science?</title>
+                            <unitdate normal="1940">(1940),</unitdate> rough draft</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00097" level="file">
+                    <did>
+                        <unittitle>"About H.L. Mencken," article and notes</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00098" level="file">
+                    <did>
+                        <unittitle>Miscellaneous notes</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00099" level="file">
+                    <did>
+                        <unittitle>"Morals," notes</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00100" level="file">
+                    <did>
+                        <unittitle>"My character"</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00101" level="file">
+                    <did>
+                        <unittitle>"Poems," fragments and incomplete poems</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00102" level="file">
+                    <did>
+                        <unittitle><title render="italic">Poems of Five Decades</title>
+                            <unitdate normal="1954">(1954)</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00103" level="file">
+                    <did>
+                        <unittitle>"Poems," with titles</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00104" level="file">
+                    <did>
+                        <unittitle>"Poetry and Science," notes</unittitle>
+                    </did>
+                </c02>
+
+
+                <c02 id="VAC5512-00105" level="file">
+                    <did>
+                        <container label="Box" type="Box">4</container>
+                        <unittitle>"Re Marx," an informal note</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00106" level="file">
+                    <did>
+                        <unittitle>"Re Bob Minor," notes</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00107" level="file">
+                    <did>
+                        <unittitle><title render="italic">Reflections on the Failures of
+                                Socialism</title>
+                            <unitdate normal="1955">(1955),</unitdate> parts I-II</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00108" level="file">
+                    <did>
+                        <unittitle>"Robert Burns," article and notes</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00109" level="file">
+                    <did>
+                        <unittitle>"Russian War Relief Society," notes</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00110" level="file">
+                    <did>
+                        <unittitle><title render="italic">Seven Kinds of Goodness</title>
+                            <unitdate normal="1967">(1967),</unitdate> rough draft</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00111" level="file">
+                    <did>
+                        <unittitle>"Song of the Sea"</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00112" level="file">
+                    <did>
+                        <unittitle>"Telekinesis, hypnosis," notes</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00113" level="file">
+                    <did>
+                        <unittitle>"Tom Paine," notes</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00114" level="file">
+                    <did>
+                        <unittitle>"Tzar to Lenin," copy of remarks</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00115" level="file">
+                    <did>
+                        <unittitle>"Unnecessary Fog," review</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00116" level="file">
+                    <did>
+                        <unittitle>"Walt Whitman," material for an article</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00117" level="file">
+                    <did>
+                        <unittitle>"Who threatens cultural freedom in America?"</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00118" level="file">
+                    <did>
+                        <unittitle>Miscellaneous notes</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00119" level="file">
+                    <did>
+                        <unittitle>"Stalin's American Power," parts I-IV</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00120" level="file">
+                    <did>
+                        <unittitle>"Stalin's American Press," notes</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00121" level="file">
+                    <did>
+                        <unittitle>"Stalin's American Press"</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00122" level="file">
+                    <did>
+                        <unittitle>"Stalin's Purposes," articles and materials I</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00123" level="file">
+                    <did>
+                        <unittitle>"Stalin's Purposes," articles and materials II</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00124" level="file">
+                    <did>
+                        <unittitle><title render="italic">Stalin's Russia and the Crisis in
+                                Socialism</title>
+                            <unitdate normal="1939">(1939)</unitdate>, rough draft</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00125" level="file">
+                    <did>
+                        <unittitle><title render="italic">Enjoyment of Laughter</title>
+                            <unitdate normal="1936">(1936),</unitdate> unidentified page</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00126" level="file">
+                    <did>
+                        <unittitle><title render="italic">Enjoyment of Laughter</title>
+                            <unitdate normal="1936">(1936),</unitdate> rough draft, parts
+                            I-VII</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00127" level="file">
+                    <did>
+                        <unittitle><title render="italic">Enjoyment of Laughter</title>
+                            <unitdate normal="1936">(1936),</unitdate> supplementary</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00128" level="file">
+                    <did>
+                        <unittitle><title render="italic">Enjoyment of Living</title>
+                            <unitdate normal="1948">(1948),</unitdate> printer's copy, chapters
+                            1-40</unittitle>
+                    </did>
+                </c02>
+
+                <c02 id="VAC5512-00129" level="file">
+                    <did>
+                        <container label="Box" type="Box">5</container>
+                        <unittitle><title render="italic">Enjoyment of Living</title>
+                            <unitdate normal="1948">(1948),</unitdate> printer's copy, chapters
+                            41-Appendix</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00130" level="file">
+                    <did>
+                        <unittitle><title render="italic">Enjoyment of Living</title>
+                            <unitdate normal="1948">(1948),</unitdate> rough draft, early chapter
+                            about parents and Parks Church</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00131" level="file">
+                    <did>
+                        <unittitle><title render="italic">Enjoyment of Living</title>
+                            <unitdate normal="1948">(1948),</unitdate> rough draft, Foreward-chapter
+                            38</unittitle>
+                    </did>
+                </c02>
+
+
+                <c02 id="VAC5512-00132" level="file">
+                    <did>
+                        <container label="Box" type="Box">10</container>
+                        <unittitle><title render="italic">Enjoyment of Living</title>
+                            <unitdate normal="1948">(1948),</unitdate> rough draft, chapters
+                            39-65</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00133" level="file">
+                    <did>
+                        <unittitle><title render="italic">Enjoyment of Poetry</title>
+                            <unitdate normal="1913">(1913),</unitdate> "Realization of Change" and
+                            "Last Words"</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00134" level="file">
+                    <did>
+                        <unittitle><title render="italic">Enjoyment of Poetry</title>
+                            <unitdate normal="1913">(1913),</unitdate> rough draft, chapters
+                            1-5</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00135" level="file">
+                    <did>
+                        <unittitle><title render="italic">Enjoyment of Poetry</title>
+                            <unitdate normal="1913">(1913),</unitdate> rough draft, Preface to the
+                            21st edition</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00136" level="file">
+                    <did>
+                        <unittitle><title render="italic">Heroes I Have Known</title>
+                            <unitdate normal="1942">(1942)</unitdate>, printer's copy, chapters
+                            1-12</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00137" level="file">
+                    <did>
+                        <unittitle><title render="italic">Heroes I Have Known</title>
+                            <unitdate normal="1942">(1942),</unitdate> rough draft, Title Page and
+                            Table of Contents</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00138" level="file">
+                    <did>
+                        <unittitle><title render="italic">Heroes I Have Known</title>
+                            <unitdate normal="1942">(1942),</unitdate> rough draft,
+                            Introduction</unittitle>
+                    </did>
+                </c02>
+
+
+
+                <c02 id="VAC5512-00139" level="file">
+                    <did>
+                        <container label="Box" type="Box">7</container>
+                        <unittitle><title render="italic">Heroes I have Known</title>
+                            <unitdate normal="1942">(1942),</unitdate> rough draft, chapters
+                            1-Epilogue</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00140" level="file">
+                    <did>
+                        <unittitle>Reader's Opinion on <title render="italic">Marx and Lenin: The
+                                Science of Revolution</title> (1926), Anonymous, <unitdate normal="1926">1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00141" level="file">
+                    <did>
+                        <unittitle>"Guacho: The Story of Fabio Cáceres," Anonymous, <unitdate normal="1926">1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00142" level="file">
+                    <did>
+                        <unittitle>"Albania is a tiny, mountainous country," Anonymous</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00143" level="file">
+                    <did>
+                        <unittitle>"Marx, the prophet of social relations," Anonymous</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00144" level="file">
+                    <did>
+                        <unittitle>"Le Marxisme comme Science et comme Philosophie,"
+                            Anonymous</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00145" level="file">
+                    <did>
+                        <unittitle>"About Antonio Francisco Lîsbos," Acheson, Barclay,
+                            1944</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00146" level="file">
+                    <did>
+                        <unittitle>"The New Communist Conspiracy," Barmine, Alexander, parts
+                            I-II</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00147" level="file">
+                    <did>
+                        <unittitle>"Russian Policy in Europe," Barmine, Alexander</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00148" level="file">
+                    <did>
+                        <unittitle>Review of <title render="italic">The Literary Mind: It's Place in
+                                an Age of Science</title>
+                            <unitdate normal="1931">(1931),</unitdate> Boynton, Percy
+                            Holmes</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00149" level="file">
+                    <did>
+                        <unittitle><title render="italic">Review of Enjoyment of Living</title>
+                            <unitdate normal="1948">(1948),</unitdate> Clark, John Abbot</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00150" level="file">
+                    <did>
+                        <unittitle>"The Lost Art," Dell, Floyd</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00151" level="file">
+                    <did>
+                        <unittitle>"Notes on Max Eastman's Poems," Dell, Floyd</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00152" level="file">
+                    <did>
+                        <unittitle>"Sports in the Soviet Union," Kurilov, Sergei, articles, letters
+                            and notes, <unitdate normal="1946">1946</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00153" level="file">
+                    <did>
+                        <unittitle>League of American Writers, collected papers</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00154" level="file">
+                    <did>
+                        <unittitle>League for Peace and Democracy, collected papers</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00155" level="file">
+                    <did>
+                        <unittitle>"The Red Decade," Lyons, Eugene, materials I-II</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00156" level="file">
+                    <did>
+                        <unittitle>"The Red Decade," Lyons, Eugene, chapter 31</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00157" level="file">
+                    <did>
+                        <unittitle>"Poems," Mayer, Marjorie</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00158" level="file">
+                    <did>
+                        <unittitle>"My most unforgettable character," Melas, A.S., <unitdate normal="1949">1949</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00159" level="file">
+                    <did>
+                        <unittitle>"What happened in Russia," Minor, Robert</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00160" level="file">
+                    <did>
+                        <unittitle>"Poems," Peirce, Waldo</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00161" level="file">
+                    <did>
+                        <unittitle>"The Soviet Gold Rush and related papers," Petrov, Vladimir
+                            N</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00162" level="file">
+                    <did>
+                        <unittitle>"Innocents at Large," Riesel, Victor</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00163" level="file">
+                    <did>
+                        <unittitle>"Hollywood Fellow Travelers," Riesel, Victor</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00164" level="file">
+                    <did>
+                        <unittitle>"The Road to Abundance," Rosin, Jacob, <unitdate normal="1952/1953" type="inclusive">1952-1953</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00165" level="file">
+                    <did>
+                        <unittitle>"The Road to Abundance," Rosin, Jacob, as told to
+                            Eastman</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00166" level="file">
+                    <did>
+                        <unittitle>"Max Eastman," Schriftgiesier, Karl, <unitdate normal="1931">1931</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00167" level="file">
+                    <did>
+                        <unittitle>"The Real Karl Marx," Schwarzschild, Leopold</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00168" level="file">
+                    <did>
+                        <unittitle>"A Cagliostro of the Underworld," Wohl, Paul</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+
+
+            <c01 id="VAC5512-00169" level="series">
+                <did>
+                    <container label="Box" type="Box">7</container>
+                    <unittitle>Printed Material</unittitle>
+                </did>
+                <scopecontent>
+                    <p> Contains Newspaper and Periodical clippings, typescript documents and notes
+                        concerning organizations, issues and individuals with whom Eastman had
+                        established relationships. </p>
+                </scopecontent>
+                <c02 id="VAC5512-00170" level="file">
+                    <did>
+                        <unittitle>American Committee for Democracy and Intellectual
+                            Freedom</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00171" level="file">
+                    <did>
+                        <unittitle>American Youth Congress</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00172" level="file">
+                    <did>
+                        <unittitle>"Communist Teachers"</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00173" level="file">
+                    <did>
+                        <unittitle>"Related to Clarence Darrow"</unittitle>
+                    </did>
+                </c02>
+
+                <c02 id="VAC5512-00174" level="file">
+                    <did>
+                        <container label="Box" type="Box">8</container>
+                        <unittitle>"Death Penalty for Children in the Soviet Union"</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00175" level="file">
+                    <did>
+                        <unittitle>Ernest Hemingway</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00176" level="file">
+                    <did>
+                        <unittitle>Walter G. Krivitsky</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00177" level="file">
+                    <did>
+                        <unittitle>"Related to Karl Marx"</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00178" level="file">
+                    <did>
+                        <unittitle>Material from Russia</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00179" level="file">
+                    <did>
+                        <unittitle>John Proctor Mills</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00180" level="file">
+                    <did>
+                        <unittitle>Miscellaneous</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00181" level="file">
+                    <did>
+                        <unittitle>"Mission to Moscow by Davies"</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00182" level="file">
+                    <did>
+                        <unittitle>"Moscow Trials," I-II</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00183" level="file">
+                    <did>
+                        <unittitle>Poetry</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00184" level="file">
+                    <did>
+                        <unittitle>Genevieve Taggard</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00185" level="file">
+                    <did>
+                        <unittitle>"Totalitarianism," I-IV</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00186" level="file">
+                    <did>
+                        <unittitle>"Treaties Stalin Broke"</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00187" level="file">
+                    <did>
+                        <unittitle>H.G. Wells</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00188" level="file">
+                    <did>
+                        <unittitle>Miscellaneous</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+
+            <c01 id="VAC5512-00189" level="series">
+                <did>
+                    <container label="Box" type="Box">8</container>
+                    <unittitle>Printed Reviews</unittitle>
+                </did>
+                <scopecontent>
+                    <p>Contains reviews in Newspaper and Periodical clippings of Eastman's and
+                        others' published work. If no author is cited, the review is of Eastman's
+                        work.</p>
+                </scopecontent>
+                <c02 id="VAC5512-00190" level="file">
+                    <did>
+                        <unittitle><title render="italic">Artists in Uniform</title> <unitdate normal="1934">(1934)</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00191" level="file">
+                    <did>
+                        <unittitle><title render="italic">John Brown's Body</title> <unitdate normal="1928">(1928)</unitdate> by Stephen Vincent Bénet</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00192" level="file">
+                    <did>
+                        <unittitle>"Gautama Buddha: The Enlightened One"</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00193" level="file">
+                    <did>
+                        <unittitle><title render="italic">Child of the Amazons and Other Poems</title> <unitdate normal="1913">(1913)</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00194" level="file">
+                    <did>
+                        <unittitle><title render="italic">Colors of Life: Poems, Songs and Sonnets</title> <unitdate normal="1918">(1918)</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00195" level="file">
+                    <did>
+                        <unittitle>"The Cult of Unintelligibility," <unitdate normal="1929">1929</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00196" level="file">
+                    <did>
+                        <unittitle><title render="italic">Enjoyment of Laughter</title> <unitdate normal="1936">(1936)</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00197" level="file">
+                    <did>
+                        <unittitle><title render="italic">Enjoyment of Living</title> <unitdate normal="1948">(1948)</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00198" level="file">
+                    <did>
+                        <unittitle><title render="italic">Enjoyment of Poetry</title> <unitdate normal="1913">(1913)</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00199" level="file">
+                    <did>
+                        <unittitle><title render="italic">Enjoyment of Poetry: Anthology</title> <unitdate normal="1951">(1951)</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00200" level="file">
+                    <did>
+                        <unittitle><title render="italic">Great Companions: Critical Memoirs of Some Famous Friends</title>
+                            <unitdate normal="1959">(1959)</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00201" level="file">
+                    <did>
+                        <unittitle><title render="italic">Heroes I Have Known</title> <unitdate normal="1942">(1942)</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00202" level="file">
+                    <did>
+                        <unittitle><title render="italic">Journalism Versus Art</title> <unitdate normal="1916">(1916)</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00203" level="file">
+                    <did>
+                        <unittitle><title render="italic">Kinds of Love</title> <unitdate normal="1931">(1931)</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00204" level="file">
+                    <did>
+                        <unittitle><title render="italic">A Letter to Every American</title> <unitdate normal="1941">(1941)</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00205" level="file">
+                    <did>
+                        <unittitle><title render="italic">The Literary Mind: Its Place in an Age of Science</title> <unitdate normal="1931">(1931);</unitdate>
+                            American and British reviews</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00206" level="file">
+                    <did>
+                        <unittitle><title render="italic">Lot's Wife</title> <unitdate normal="1942">(1942)</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00207" level="file">
+                    <did>
+                        <unittitle>"Mark Twain's Elmira," <unitdate normal="1938">1938</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00208" level="file">
+                    <did>
+                        <unittitle><title render="italic">Marxism: Is It a Science?</title> <unitdate normal="1940">(1940)</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00209" level="file">
+                    <did>
+                        <unittitle>"Non-Communicative Art," <unitdate normal="1954">1954</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00210" level="file">
+                    <did>
+                        <unittitle><title render="italic">Poems of Five Decades</title> <unitdate normal="1954">(1954)</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00211" level="file">
+                    <did>
+                        <unittitle><title render="italic">Marx and Lenin: The Science of Revolution</title> <unitdate normal="1926">(1926);</unitdate> American,
+                            British, French, German and Spanish reviews</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00212" level="file">
+                    <did>
+                        <unittitle>"Poetic Education and Slang," 1916</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00213" level="file">
+                    <did>
+                        <unittitle><title render="italic">Reflections on the Failure of Socialism</title> <unitdate normal="1955">(1955)</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00214" level="file">
+                    <did>
+                        <unittitle>"Russia and the Socialist Ideal," <unitdate normal="1938">1938</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00215" level="file">
+                    <did>
+                        <unittitle>"Socialism and Human Nature," <unitdate normal="1942">1942</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00216" level="file">
+                    <did>
+                        <unittitle>"Comments on speeches," general, humor, Mark Twain, Poetry,
+                            Soviet life, Totalitarianism and Women's suffrage, <unitdate normal="1913/1955" type="inclusive">1913-1955</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00217" level="file">
+                    <did>
+                        <unittitle>"Parks Church Centennial Speech," <unitdate normal="1946">1946</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00218" level="file">
+                    <did>
+                        <unittitle><title render="italic">The Sense of Humor</title> <unitdate normal="1921">(1921)</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00219" level="file">
+                    <did>
+                        <unittitle><title render="italic">Since Lenin Died</title> <unitdate normal="1925">(1925)</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00220" level="file">
+                    <did>
+                        <unittitle><title render="italic">Stalin's Russia and the Crisis in Socialism</title> <unitdate normal="1939">(1939)</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00221" level="file">
+                    <did>
+                        <unittitle>"To Collaborate Successfully, We Must Face the Facts About
+                            Russia," <unitdate normal="1943">1943</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00222" level="file">
+                    <did>
+                        <unittitle><title render="italic">Understanding Germany: The Only Way to End the War and Other
+                            Essays</title> <unitdate normal="1916">(1916)</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00223" level="file">
+                    <did>
+                        <unittitle><title render="italic">Venture</title> <unitdate normal="1927">(1927)</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00224" level="file">
+                    <did>
+                        <unittitle>"What Do You Call Yourself?" <unitdate normal="1953">1953</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00225" level="file">
+                    <did>
+                        <unittitle>"Word Game" radio show, <unitdate normal="1938">1938</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5512-00226" level="file">
+                    <did>
+                        <unittitle>Miscellaneous</unittitle>
+                    </did>
+                </c02>
+
+
+            </c01>
+
+
+        </dsc>
+    </archdesc>
+</ead>

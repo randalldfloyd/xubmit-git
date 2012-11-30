@@ -1,0 +1,1506 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+--><ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external" countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924" relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li" identifier="InU-Li-VAC5072">InU-Li-VAC5072</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Camp mss. <date normal="1873/1918">1873-1918</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2012" type="publication">© 2012</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2012">© 2012</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2012" type="source">2012</date>
+                <lb></lb>Finding aid encoded by Danielle Emerling, Lilly Library, Indiana University,
+                    <date normal="2012-09-25">September 25, 2012</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng">English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2012-09-25">September 25, 2012</date>
+                <item>Encoded finding aid begun.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Camp, Walter Mason,
+                    1867-1925.</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Camp mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1873/1918" type="inclusive">1873-1918</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1167</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>125 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language langcode="eng">English</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">Consists of the field notes of Walter
+                Mason Camp, 1867-1925, engineer, dealing with the Indians and Indian
+                Wars.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+
+            <p>Born in 1867, Walter Mason Camp was a civil engineer who worked for the railroad and
+                spent many summers traveling throughout the country interviewing various
+                participants and survivors of the Indian wars. He died in 1925.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Articles; II. Field Notes; III. Photographs;
+                and IV. Maps.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+            <head>Scope and Content Note</head>
+            <p>The collection contains thousands of his pencilled notes, mostly on small bits of
+                paper. The notes arrived in over 80 envelopes and this arrangement has been
+                preserved. </p>
+
+            <p> Some of the field notes were arranged by topics and include material on Frank Dwight
+                Baldwin; James Montgomery Bell; Big Horse, Indian; Bozeman expedition, 1874;
+                Cheyenne Indian wars; Ben Clark, George Crook, George Armstrong Custer; Delaware
+                Indians; Daniel A. Knipe; Battle of Little Big Horn, 1876; Max Littman; Grant Marsh,
+                John Martin, Nez Perc' Indian wars; Battle of Rosebud, 1874; Hugh Lenox Scott;
+                Sundance Creek and Divide; Battle of Washita; Yellow Hair, Indian; Yellowstone
+                Campaign, 1873. There are also sixty- four envelopes unclassified miscellaneous
+                material.</p>
+
+            <p>Denver Public Library and Brigham Young University Library also received some of
+                Camp's field notes. A transcript of Camp's field notes from all three institutions
+                was made by Professor Kenneth Hammer for his book Custer in 76 (Brigham Young
+                University Press, l976). A copy of the transcript is available for on site use,
+                however no photocopies will be made without the permission of Professor Hammer.</p>
+
+
+            <p>Included are also four articles--Baldwin Indian Territory Expedition, 1874; General
+                Baldwin's Scout in Panhandle of Texas, 1874; Indian of Yesterday and Today; How Big
+                Horse Planned to Massacre Darlington, 1874--and the muster rolls of companies G, H,
+                I, J, K, L, and M of the 7th regiment, U.S. Cavalry.</p>
+
+            <p>In the collection are military maps in an oversized folder, and a group of
+                photographs.</p>
+
+            <p>The first folder in the box of articles contains a biographical sketch of Walter
+                Mason Camp. </p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/camp+walter+mason+1867+1925">
+                            <persname encodinganalog="600" source="lcnaf">Camp, Walter Mason, 1867-1925.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/custer+george+armstrong+1839+1876">
+                            <persname encodinganalog="600" source="lcnaf">Custer, George A. (George Armstrong), 1839-1876.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/baldwin+frank+dwight+1842+1923">
+                            <persname encodinganalog="600" source="lcnaf">Baldwin, Frank Dwight, 1842-1923.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/bell+james+m">
+                            <persname encodinganalog="600" source="lcnaf">Bell, James M.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/yellow+hand+1876">
+                            <persname encodinganalog="600" source="lcnaf">Yellow Hand, 1850?-1876.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/knipe+daniel+a">
+                            <persname encodinganalog="600" source="lcnaf">Knipe, Daniel A.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/scott+hugh+lenox+1853+1934">
+                            <persname encodinganalog="600" source="lcnaf">Scott, Hugh Lenox, 1853-1934.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/united+states+army+cavalry+7th+sources">
+                            <corpname encodinganalog="610" source="lcnaf">United States. Army. Cavalry, 7th --Sources.</corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/united+states+army+sources">
+                            <corpname encodinganalog="610" source="lcnaf">United States. Army --Sources.</corpname>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/indians+north+america+sources">
+                            <subject encodinganalog="650" source="lcsh">Indians of North America--Sources.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/indians+north+america+wars+1866+1895+sources">
+                            <subject encodinganalog="650" source="lcsh">Indians of North America --Wars --1866-1895 --Sources.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/little+bighorn+battle+mont+1876">
+                            <subject encodinganalog="650" source="lcsh">Little Bighorn, Battle of the, Mont., 1876.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/rosebud+battle+mont+1876">
+                            <subject encodinganalog="650" source="lcsh">Rosebud, Battle of the, Mont., 1876.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/washita+campaign+1868+1869">
+                            <subject encodinganalog="650" source="lcsh">Washita Campaign, 1868-1869.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/cheyenne+indians+wars">
+                            <subject encodinganalog="650" source="lcsh">Cheyenne Indians --Wars.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/nez+perce+indians+wars+1877">
+                            <subject encodinganalog="650" source="lcsh">Nez Percé Indians --Wars, 1877.</subject>
+                        </extref>
+                    </item>
+                    
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="110" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 1956</p>
+            </acqinfo>
+            
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Camp mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+
+
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Lilly Staff.</p>
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+            <c01 id="VAC5072-00001" level="series">
+                <did>
+                    <container label="Box" type="Box">1</container>
+                    <unittitle>Articles</unittitle>
+                </did>
+                <c02 id="VAC5072-00002" level="file">
+                    <did>
+                        <container label="Folder" type="folder">1</container>
+                        <unittitle>Baldwin Indian Territory Expedition</unittitle>
+                    </did>
+                    <note>
+                        <p>Kenneth Hammer transcript pp. 843-853</p>
+                    </note>
+                </c02>
+                <c02 id="VAC5072-00003" level="file">
+                    <did>
+                        <container label="Folder" type="folder">2</container>
+                        <unittitle>General Baldwin's scout in panhandle of Texas, <unitdate normal="1874">1874</unitdate></unittitle>
+                    </did>
+                    <note>
+                        <p>Kenneth Hammer transcript pp. 854-863</p>
+                    </note>
+                </c02>
+                <c02 id="VAC5072-00004" level="file">
+                    <did>
+                        <container label="Folder" type="folder">3</container>
+                        <unittitle>How Big Horse planned to massacre Darlington</unittitle>
+                    </did>
+                    <note>
+                        <p>Kenneth Hammer transcript pp. 863-865</p>
+                    </note>
+                </c02>
+                <c02 id="VAC5072-00005" level="file">
+                    <did>
+                        <container label="Folder" type="folder">4</container>
+                        <unittitle> The Indians of yesterday and today</unittitle>
+                    </did>
+                    <note>
+                        <p>Kenneth Hammer transcript pp. 882-918</p>
+                    </note>
+                </c02>
+                <c02 id="VAC5072-00006" level="file">
+                    <did>
+                        <container label="Folder" type="folder">5</container>
+                        <unittitle> U.S. Cavalry, 7th Regt. rosters for Companies A, B, C, D, E, F
+                            (Transcript pages only. Originals filed in Ellison correspondence, May
+                            11, 1935)</unittitle>
+                    </did>
+                    <note>
+                        <p>Kenneth Hammer transcript pp. 866-874</p>
+                    </note>
+                </c02>
+                <c02 id="VAC5072-00007" level="file">
+                    <did>
+                        <unittitle>U.S. Cavalry, 7th Regt. rosters for Companies G, H, I, K, L,
+                            M</unittitle>
+                    </did>
+                    <note>
+                        <p>Kenneth Hammer transcript pp. 874-881</p>
+                    </note>
+                </c02>
+            </c01>
+
+            <c01 id="VAC5072-00008" level="series">
+                <did>
+                    <container label="Box" type="Box">2</container>
+                    <unittitle>Field Notes</unittitle>
+                </did>
+                <c02 id="VAC5072-00009" level="subseries">
+                    <did>
+                        <container label="Box" type="Box">2</container>
+                        <unittitle>Topics</unittitle>
+                    </did>
+                    <c03 id="VAC5072-00010" level="file">
+                        <did>
+                            <container label="Folder" type="folder">1</container>
+                            <unittitle>Bell, James Montgomery</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 1-6</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00011" level="file">
+                        <did>
+                            <container label="Folder" type="folder">2</container>
+                            <unittitle>Bozeman Expedition of <unitdate normal="1874">1874</unitdate></unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 6-9</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00012" level="file">
+                        <did>
+                            <container label="Folder" type="folder">3</container>
+                            <unittitle>Cheyenne Indian wars</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 9-10</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00013" level="file">
+                        <did>
+                            <container label="Folder" type="folder">4</container>
+                            <unittitle>Clark, Ben</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 10-23</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00014" level="file">
+                        <did>
+                            <container label="Folder" type="folder">5</container>
+                            <unittitle>Crook, George</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript p. 23</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00015" level="file">
+                        <did>
+                            <container label="Folder" type="folder">6</container>
+                            <unittitle>Custer, George Armstrong</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 24-31</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00016" level="file">
+                        <did>
+                            <container label="Folder" type="folder">7</container>
+                            <unittitle>Far West (ship)</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 31-32</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00017" level="file">
+                        <did>
+                            <container label="Folder" type="folder">8</container>
+                            <unittitle>Knipe, Daniel A.</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 32-51</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00018" level="file">
+                        <did>
+                            <container label="Folder" type="folder">9</container>
+                            <unittitle>Little Big Horn, Battle of, <unitdate normal="1876">1876,</unitdate> I</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 51-63</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00019" level="file">
+                        <did>
+                            <container label="Folder" type="folder">10</container>
+                            <unittitle>Little Big Horn, Battle of, <unitdate normal="1876">1876,</unitdate> II</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 63-79</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00020" level="file">
+                        <did>
+                            <container label="Folder" type="folder">11</container>
+                            <unittitle>Little Big Horn, Battle of, <unitdate normal="1876">1876,</unitdate> III</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 79-113</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00021" level="file">
+                        <did>
+                            <container label="Folder" type="folder">12</container>
+                            <unittitle>Littman, Max</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 113-117</p>
+                        </note>
+                    </c03>
+
+                    <c03 id="VAC5072-00022" level="file">
+                        <did>
+                            <container label="Box" type="Box">3</container>
+                            <container label="Folder" type="folder">1</container>
+                            <unittitle>Map data</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 118-121</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00023" level="file">
+                        <did>
+                            <container label="Folder" type="folder">2</container>
+                            <unittitle>Marsh, Grant</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 122-128</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00024" level="file">
+                        <did>
+                            <container label="Folder" type="folder">3</container>
+                            <unittitle>Martin, John</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 129-137</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00025" level="file">
+                        <did>
+                            <container label="Folder" type="folder">4</container>
+                            <unittitle>Nez Perce Indian wars, I</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 128-151</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00026" level="file">
+                        <did>
+                            <container label="Folder" type="folder">5</container>
+                            <unittitle>Nez Perce Indian wars, II</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 151-170</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00027" level="file">
+                        <did>
+                            <container label="Folder" type="folder">6</container>
+                            <unittitle>Photographs (see appendix)</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 170</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00028" level="file">
+                        <did>
+                            <container label="Folder" type="folder">7</container>
+                            <unittitle>Preface</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 170-175</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00029" level="file">
+                        <did>
+                            <container label="Folder" type="folder">8</container>
+                            <unittitle>Rosebud, Battle of, <unitdate normal="1874">1874</unitdate></unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 176-178</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00030" level="file">
+                        <did>
+                            <container label="Folder" type="folder">9</container>
+                            <unittitle>Scott, Hugh Lenox</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 178-187</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00031" level="file">
+                        <did>
+                            <container label="Folder" type="folder">10</container>
+                            <unittitle>Sundance Creek and Divide</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 187-189</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00032" level="file">
+                        <did>
+                            <container label="Folder" type="folder">11</container>
+                            <unittitle>Washita, Battle of, and Ben Clark interview on</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 190-206</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00033" level="file">
+                        <did>
+                            <container label="Folder" type="folder">12</container>
+                            <unittitle>Yellowhair</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 207-208</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00034" level="file">
+                        <did>
+                            <container label="Folder" type="folder">13</container>
+                            <unittitle>Yellowstone Campaign, <unitdate normal="1873">1873</unitdate></unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 209-210</p>
+                        </note>
+                    </c03>
+                </c02>
+                <c02 id="VAC5072-00035" level="subseries">
+                    <did>
+                        <container label="Box" type="Box">4</container>
+                        <unittitle>Unclassified</unittitle>
+                    </did>
+                    <note>
+                        <p>Information taken from front of envelopes. Names in boldface are
+                            interviewees.</p>
+                    </note>
+
+
+                    <c03 id="VAC5072-00036" level="file">
+                        <did>
+                            <container label="Folder" type="folder">1</container>
+                            <unittitle>Envelope 2: Killing of Hoover boy by Cheyenne at Lamedeer
+                                Agency; Baker's battlefield, Pease Bottom, Torn Pension, LeForge,
+                                        <persname><emph render="bold">Paul
+                                    McCormick</emph></persname></unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 210-216</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00037" level="file">
+                        <did>
+                            <container label="Folder" type="folder">2</container>
+                            <unittitle>Envelope 3: <persname><emph render="bold">Guerrier,</emph></persname> Hancock burning village, Sand
+                                Creek, Lt. Kidder</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 217-225</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00038" level="file">
+                        <did>
+                            <container label="Folder" type="folder">3</container>
+                            <unittitle>Envelope 4: <persname><emph render="bold">V.T.
+                                        McGillycuddy,</emph></persname> 1915: Battle White Clay
+                                Creek, Slim Butter, Wounded Knee, Indian police, California Joe, Red
+                                Cloud</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 225-233</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00039" level="file">
+                        <did>
+                            <container label="Folder" type="folder">4</container>
+                            <unittitle>Envelope 5: Cheyenne River Reservation, Sept. 1915; Slim
+                                Butter, Wounded Knee about Indian photos, etc.</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 233-243</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00040" level="file">
+                        <did>
+                            <container label="Folder" type="folder">5</container>
+                            <unittitle>Envelope 6: Barkley statement of 1874, gold expedition from
+                                Bozeman; odometer on Rosebud River, Sept. 1913; Bozeman expedition,
+                                1874; Custer's camp, night of 6/24; Barkley; Wagon Box
+                                site</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 243-254</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00041" level="file">
+                        <did>
+                            <container label="Folder" type="folder">6</container>
+                            <unittitle>Envelope 8: biographical sketch of John Hunton; biographical
+                                sketch of John Richard; Fort Laramie, June 1918</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 255-264</p>
+                        </note>
+                    </c03>
+                    
+                    
+                    <c03 id="VAC5072-00042" level="file">
+                        <did>
+                            <container label="Folder" type="folder">7</container>
+                            <unittitle>Envelope 9: Garnett, Yellow Hand, Sioux names, etc.; Pine
+                                Ridge, June 1918</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 264-269</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00043" level="file">
+                        <did>
+                            <container label="Folder" type="folder">8</container>
+                            <unittitle>Envelope 10: Misc. interesting if not important; Interior and
+                                Crow Creek, 1917; <persname><emph render="bold">Farnham,</emph></persname> John Davidson, He Dog (1915);
+                                Calico; <persname><emph render="bold">Joe
+                                Claymore</emph></persname></unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 269-281</p>
+                        </note>
+                    </c03>
+                    
+                    
+                    <c03 id="VAC5072-00044" level="file">
+                        <did>
+                            <container label="Folder" type="folder">9</container>
+                            <unittitle>Envelope 11: Pine Ridge (includes map); chronology of
+                                Ogallala Sioux</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 282-295; 315-320; 476-479</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00045" level="file">
+                        <did>
+                            <container label="Folder" type="folder">10</container>
+                            <unittitle>Envelope 13: Gordon's train party of 76 men; Sioux City,
+                                Yankton, Pierre, Mo. River Points, Winnebago, Omaha</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 296-297</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00046" level="file">
+                        <did>
+                            <container label="Folder" type="folder">11</container>
+                            <unittitle>Envelope 14: Sappa Creek fight site, Apr. 23, 1875 (includes
+                                map); Inquiries: Omaha, Lincoln, Columbus, Neb., Ainsworth, Neb.,
+                                Grand Island, Neb., Humboldt, Neb., Bern, Kan., Oberlin, Kan., Sappa
+                                Creek, Kan., Ash Hollow</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 298-300</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00047" level="file">
+                        <did>
+                            <container label="Folder" type="folder">12</container>
+                            <unittitle>Envelope 33: Misc. inquiries at...St. Paul, Milwaukee; little
+                                importance</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 300-301</p>
+                        </note>
+                    </c03>
+                    
+                    
+                    <c03 id="VAC5072-00048" level="file">
+                        <did>
+                            <container label="Folder" type="folder">13</container>
+                            <unittitle>Envelope 34: Routes etc. in Wyoming and Montana</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 301-306</p>
+                        </note>
+                    </c03>
+                    
+                    <c03 id="VAC5072-00049" level="file">
+                        <did>
+                            <container label="Folder" type="folder">14</container>
+                            <unittitle>Envelope 35: Cheyenne River Reservation; Wounded
+                                Knee</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 307-314</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00050" level="file">
+                        <did>
+                            <container label="Folder" type="folder">15</container>
+                            <unittitle>Envelope 36: Notes from <persname><emph render="bold">Jacob
+                                        Fry</emph></persname> about killing of Black Bear by Capt.
+                                H.G. Nickerson's party; Clark's Bridge and over N. Platte,
+                                etc.</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 321</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00051" level="file">
+                        <did>
+                            <container label="Folder" type="folder">16</container>
+                            <unittitle>Envelope 37: Misc. notes...: Cheyenne, Wyo, Ft. Bridges, Salt
+                                Lake City, Denver, Bent's Fort, Sand Creek (includes map), Summit
+                                Springs</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 322-328</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00052" level="file">
+                        <did>
+                            <container label="Folder" type="folder">17</container>
+                            <unittitle>Envelope 38: Misc. notes and data about several Indian fights
+                                (includes map); also paragraphs for preface of book</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 329-334</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00053" level="file">
+                        <did>
+                            <container label="Box" type="Box">5</container>
+                            <container label="Folder" type="folder">1</container>
+                            <unittitle>Envelope 41: Killing of Sitting Bull; Little Big Horn, Lame
+                                Deer, Sibley Scout, Fetterman, etc.</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 335-358</p>
+                        </note>
+                    </c03>
+                     
+                    
+                    
+                    <c03 id="VAC5072-00054" level="file">
+                        <did>
+                            <container label="Folder" type="folder">2</container>
+                            <unittitle>Envelope 42: Killing of McGee by Johnny Brughier, Louis Le Gore, etc.; E.H. Allison</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 359-360</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00055" level="file">
+                        <did>
+                            <container label="Folder" type="folder">3</container>
+                            <unittitle>Envelope 43: Three men Terry sent to Crook; assisting wounded of Reno to Far West, etc.; William Moran, 7th Infantry</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 360-362</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00056" level="file">
+                        <did>
+                            <container label="Folder" type="folder">4</container>
+                            <unittitle>Envelope 44: Bob Jackson and family by <persname><emph render="bold">Harvey A. Fox</emph></persname> and <persname><emph render="bold">John A. Bailey.</emph></persname> Not at Little Big Horn</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 362-363</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00057" level="file">
+                        <did>
+                            <container label="Folder" type="folder">5</container>
+                            <unittitle>Envelope 46: Notes from Bismarck Tribune and Indian Affairs reports; Surrender of Hostiles </unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 363-365</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00058" level="file">
+                        <did>
+                            <container label="Folder" type="folder">6</container>
+                            <unittitle>Envelope 47: Beecher Island, Little Big Horn, Dull Knife, etc.; Bull Hump and White Bird, <unitdate normal="1912">1912</unitdate> </unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 365-368</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00059" level="file">
+                        <did>
+                            <container label="Folder" type="folder">7</container>
+                            <unittitle>Envelope 48: Notes of <persname><emph render="bold">Smith F. Foster</emph></persname> re: Major Price, Miles, Buffalo Wallow, German girls, adobe walls, etc.; Washington trip, 1921</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 368-380</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00060" level="file">
+                        <did>
+                            <container label="Folder" type="folder">8</container>
+                            <unittitle>Envelope 49: Misc. notes re: books, papers, etc. to check at Congressional Library </unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 381-386</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00061" level="file">
+                        <did>
+                            <container label="Folder" type="folder">9</container>
+                            <unittitle>Envelope 50: Two references - two memos of Camp's thought on Whites and Indians
+                                Envelope 60: General thought of Camp - Whites and Indians</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 387-389</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00062" level="file">
+                        <did>
+                            <container label="Folder" type="folder">10</container>
+                            <unittitle>Envelope 62: Misc. notes re: Spotted Tail, Lieut. Kidder, Mrs. Eubank, Two Strike, etc.; <persname><emph render="bold">Antoine Bordeaux,</emph></persname> Little Hawk</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 390-394</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00063" level="file">
+                        <did>
+                            <container label="Folder" type="folder">11</container>
+                            <unittitle> 	Envelope 64: Crow war 1887; <persname><emph render="bold">Maj. Burkhardt,</emph></persname> 1/16/13; Beecher Island; Mrs. Eubank; capture of Sitting Bull; <persname><emph render="bold">Gen. Frank Baldwin,</emph></persname> 1/20/13; <persname><emph render="bold">I.H.P. Wiggins,</emph></persname> 1/20/13; <persname><emph render="bold">Eli Zigler,</emph></persname> 1/25/13; <persname><emph render="bold">Col. Geo. S. Young;</emph></persname> <persname><emph render="bold">Running Wolf,</emph></persname> 2/6/13; Rees, <persname><emph render="bold">Walter S. Sterland,</emph></persname> 2/5/13; <persname><emph render="bold">Howard Morton,</emph></persname> <persname><emph render="bold">Chalmers Smith,</emph></persname> 1/18/13</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 395-412</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00064" level="file">
+                        <did>
+                            <container label="Folder" type="folder">12</container>
+                            <unittitle>Envelope 65: <persname><emph render="bold">W.B. Jordon;</emph></persname> Surrender of Sitting Bull and his death by De Loria, grave and monument</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 412-416</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00065" level="file">
+                        <did>
+                            <container label="Folder" type="folder">13</container>
+                            <unittitle>Envelope 67: Sitting Bull in Canada: notes from letter in Regina Leader, 3-17-85; comment of court on surrender because starved out</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 416-417</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00066" level="file">
+                        <did>
+                            <container label="Folder" type="folder">14</container>
+                            <unittitle>Envelope 68: Location of Old Red Cloud Agency, west of Crawford, Neb.</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 417</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00067" level="file">
+                        <did>
+                            <container label="Folder" type="folder">15</container>
+                            <unittitle>Envelope 69: Deaths of Head Chief and Young Mule per William Rowland, 9/26/13; <persname><emph render="bold">Two Moons</emph></persname> 9/26/13, Fetterman and Reynolds fights, etc.; Crook's fight 3/17/76, site of Wolf Mountain Battlefield</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 418-422</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00068" level="file">
+                        <did>
+                            <container label="Folder" type="folder">16</container>
+                            <unittitle>Envelope 70: <persname><emph render="bold">Curly</emph></persname> interview, 9/30/13, per <persname><emph render="bold">Thomas LeForge,</emph></persname> interpreter, etc.; Notes Crow: Cut Ear, Hairy Moccasin; Lt. C.F. Smith, Fetterman fight</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 434-440</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00069" level="file">
+                        <did>
+                            <container label="Folder" type="folder">17</container>
+                            <unittitle>Envelope 71: 1918: Lt. Fetterman, Bozeman Trail, Killing of Sioux messengers by Crows <persname><emph render="bold">Gen. E.S. Godfrey,</emph></persname> <persname><emph render="bold">Antoine Bordeaux</emph></persname> &amp; Mrs. Bettelyon, <persname><emph render="bold">Big Bat,</emph></persname> Utah campaign 1857 &amp; Ft. Bridges, <persname><emph render="bold">Clarence Three Stars,</emph></persname> <persname><emph render="bold">George Little Dog</emph></persname></unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 440-450</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00070" level="file">
+                        <did>
+                            <container label="Folder" type="folder">18</container>
+                            <unittitle>Envelope 72: <persname><emph render="bold">Gen. John W. Bubb</emph></persname> (Slim Butter), 11/19/15, Lt. Phil Kearney veterans, J.G. Tritten, <persname><emph render="bold">Dennis Duffy,</emph></persname> Hayfield fight, Lt. C.F. Smith, <persname><emph render="bold">Frank Ruland,</emph></persname> Killian Innes</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 422-433</p>
+                        </note>
+                    </c03>
+                
+                    <c03 id="VAC5072-00071" level="file">
+                        <did>
+                            <container label="Box" type="Box">6</container>
+                            <container label="Folder" type="folder">1</container>
+                            <unittitle>Envelope 75: Lamedeer fight, <persname><emph render="bold">Charles Reynolds,</emph></persname> Fetterman and Wagon Box, <persname><emph render="bold">Gen. Miles,</emph></persname> Powder River fight, 3/17/76; <persname><emph render="bold">Gen. Morton,</emph></persname> 1/27/14, Crook's starvation; Battle of the Rosebud, 6/17/76; <persname><emph render="bold">Gen. Andrew F. Burt,</emph></persname> Lt. C.F. Smith; <persname><emph render="bold">Gen. Fred C. Ainsworth,</emph></persname> 1/25/14, Gen. Howard, Bannock War of 1878</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 450-466</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00072" level="file">
+                        <did>
+                            <container label="Folder" type="folder">2</container>
+                            <unittitle>Envelope 77: Notes re: Little Big Horn from <persname><emph render="bold">Young Hawk</emph></persname> and <persname><emph render="bold">Two Strikes</emph></persname> who did not recall scout Baker; <persname><emph render="bold">Rees</emph></persname></unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 466-471</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00073" level="file">
+                        <did>
+                            <container label="Folder" type="folder">3</container>
+                            <unittitle>Envelope 78: <persname><emph render="bold">Miss Collins,</emph></persname> 1/15/13, re: Sitting Bull and Ghost Dance, etc.</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 471-480</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00074" level="file">
+                        <did>
+                            <container label="Folder" type="folder">4</container>
+                            <unittitle>Envelope 79: <persname><emph render="bold">Col C.A. Booth,</emph></persname> 9/7/12, at Pease Bottom with Co. B, 6/25/76, saw Curly after Little Big Horn kill buffalo (includes map)</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 480-483</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00075" level="file">
+                        <did>
+                            <container label="Folder" type="folder">5</container>
+                            <unittitle>Envelope 80: at Little Eagle, <emph render="bold">Goose,</emph> 7/26/11, Rev. Reed, etc., Sitting Bull's house</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 483-485</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00076" level="file">
+                        <did>
+                            <container label="Folder" type="folder">6</container>
+                            <unittitle>Envelope 81: Cheyenne River Reservation, July 1912, <emph render="bold">Little Crow,</emph> Lamedeer fight; misc. notes re: Hump, Little Big Horn, Bears Paw and Big Foot's band,</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 485-487</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00077" level="file">
+                        <did>
+                            <container label="Folder" type="folder">7</container>
+                            <unittitle>Envelope 82: <persname><emph render="bold">William E. Morris,</emph></persname> notes on Reno fight and escape to hill[?], names of men shot with or near Morris</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 488-489</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00078" level="file">
+                        <did>
+                            <container label="Folder" type="folder">8</container>
+                            <unittitle>Envelope 83: <persname><emph render="bold">W.H. Norton,</emph></persname> 1911, re: Muggins Taylor's dispatch of Little Big Horn from Gibbs; Mitch Bowyer, Mrs. Sloan, Countryman</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 489-494</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00079" level="file">
+                        <did>
+                            <container label="Folder" type="folder">9</container>
+                            <unittitle>Envelope 85: <emph render="bold">Col. R.E. Thompson</emph> saw bodies at Little Big Horn; Col. C.W. Taylor at Wounded Knee surrender, etc.</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 494-495</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00080" level="file">
+                        <did>
+                            <container label="Folder" type="folder">10</container>
+                            <unittitle>Envelope 86: Killing of Hugh Boyle and death of Head Chief and Young Uncle Lamedeer, Sept.13, 1890; from inquest and St. Paul Pioneer, 9/20/90</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 496-503</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00081" level="file">
+                        <did>
+                            <container label="Folder" type="folder">11</container>
+                            <unittitle>Envelope 87: Washita--Fort Cobb--from reports and letters in Missouri Repub. (St. Louis, Dec.-Jan. 68-69. Sheridan's Official Reports in Indian Territory.</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 504-509</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00082" level="file">
+                        <did>
+                            <container label="Folder" type="folder">12</container>
+                            <unittitle>Envelope 88: Data from Roe and his report re: Custer Little Big Horn monument; re: fight, 8/11/73.</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 517-520</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00083" level="file">
+                        <did>
+                            <container label="Folder" type="folder">13</container>
+                            <unittitle>Envelope 89: Wounded Knee: Data on monument and notes of battlefield and fight from Indian side (1910).</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 510-516</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00084" level="file">
+                        <did>
+                            <container label="Folder" type="folder">14</container>
+                            <unittitle>Envelope 90: Interviews re: Wounded Knee with <persname><emph render="bold">Andrew Good Thunder,</emph></persname> <persname><emph render="bold">Little Hawk,</emph></persname> <persname><emph render="bold">No Flesh;</emph></persname> Louis Bordeaux re: Beecher Island, etc., very important; Rosebud Reservation, Interviews, etc., Summer 1912.</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 521-532, 536</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00085" level="file">
+                        <did>
+                            <container label="Folder" type="folder">15</container>
+                            <unittitle>Envelope 91: Notes re: Howard, Joseph, etc. from <persname><emph render="bold">Felix Corbett,</emph></persname> <persname><emph render="bold">James Stewart,</emph></persname> <persname><emph render="bold">J.G. Rowton,</emph></persname> and <persname><emph render="bold">Mr. Stites.</emph></persname></unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 537-542</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00086" level="file">
+                        <did>
+                            <container label="Folder" type="folder">16</container>
+                            <unittitle>Envelope 92: <persname><emph render="bold">Barnitz</emph></persname> re: Washita; <persname><emph render="bold">Col. E.J. McClernand</emph></persname> after Little Big Horn; <persname><emph render="bold">Garlington</emph></persname> and <persname><emph render="bold">McCormick.</emph></persname></unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 543-549</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00087" level="file">
+                        <did>
+                            <container label="Folder" type="folder">17</container>
+                            <unittitle>Envelope 115: Miscellaneous map data re: Little Big Horn.</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 550-551</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00088" level="file">
+                        <did>
+                            <container label="Folder" type="folder">18</container>
+                            <unittitle>Envelope 116: Notes of surveys for Little Big Horn map; survey of trail.</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 552-558</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00089" level="file">
+                        <did>
+                            <container label="Folder" type="folder">19</container>
+                            <unittitle>Envelope 121: Notes re: locations of bodies of Sergeant Butler and Corporal Foley at Little Big Horn.</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 559-560</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00090" level="file">
+                        <did>
+                            <container label="Folder" type="folder">20</container>
+                            <unittitle>Envelope 122: Notes re: Ford A as identified by <persname><emph render="bold">Roy.</emph></persname></unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 560</p>
+                        </note>
+                    </c03>
+                    
+                    <c03 id="VAC5072-00091" level="file">
+                        <did>
+                            <container label="Box" type="Box">7</container>
+                            <container label="Folder" type="folder">1</container>
+                            <unittitle>Envelope 127: Notes re: Nez Perce, Bridger, Shoshones, Ben Clark. Names on picture of White Antelope, Shot in the Eye and Roman Nose; important. </unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 560-575</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00092" level="file">
+                        <did>
+                            <container label="Folder" type="folder">2</container>
+                            <unittitle>Envelope 129: Notes re: Indians and whites, Preface, Little Big Horn, Nez Perce, scouts, mules, and Dakota agencies, etc.</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 572, 576-600</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00093" level="file">
+                        <did>
+                            <container label="Folder" type="folder">3</container>
+                            <unittitle>Envelope 130: Notes re: Preface, whites and Indians, Little Big Horn, Wounded Knee, Canyon Creek, Bears Paw, etc. (<persname><emph render="bold">Lynch,</emph></persname> <persname><emph render="bold">Ryan,</emph></persname> <persname><emph render="bold">Scott,</emph></persname> <persname><emph render="bold">Barnitz,</emph></persname> <persname><emph render="bold">Knife,</emph></persname> <persname><emph render="bold">Garlington,</emph></persname> etc.)</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 533-535, 601-617</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00094" level="file">
+                        <did>
+                            <container label="Folder" type="folder">4</container>
+                            <unittitle>Envelope 131: Notes re: whites and Indians, preface, Little Big Horn, Washita, Beecher Island, references Minnesota Historical Society, etc., <persname><emph render="bold">Billy Jackson,</emph></persname> <persname><emph render="bold">Keirn[?],</emph></persname> <persname><emph render="bold">Mrs. Custer,</emph></persname> etc.</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 618-629, 634-635</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00095" level="file">
+                        <did>
+                            <container label="Folder" type="folder">5</container>
+                            <unittitle>Envelope 132: Interviews with <persname><emph render="bold">Little Wolf,</emph></persname> <persname><emph render="bold">Broken Foot,</emph></persname> <persname><emph render="bold">daughter of Dull Knife;</emph></persname> Location of Fort Reno, Lamedeer, and Dull Knife fights; 1918 trip: Nor Cheyenne Reservation, Bozeman Trail, Little Wolf, Mrs. Flying</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 630-633, 636</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00096" level="file">
+                        <did>
+                            <container label="Folder" type="folder">6</container>
+                            <unittitle>Envelope 133: Miscellaneous questions (unanswered) at many places re: Nez Perce, etc.; books, articles, etc.</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 637-650</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00097" level="file">
+                        <did>
+                            <container label="Folder" type="folder">7</container>
+                            <unittitle>Envelope 134: Notes re: whites and Indians, Preface, Little Big Horn, Nez Perce, etc.; Reference to Maguire's reports, etc.; Ben Clark biography by Mooney.</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 650-666</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00098" level="file">
+                        <did>
+                            <container label="Folder" type="folder">8</container>
+                            <unittitle>Envelope 135: Notes, clippings, references, etc.; Notes from <persname><emph render="bold">Herendeen,</emph></persname> <persname><emph render="bold">Ray,</emph></persname> <persname><emph render="bold">Gerard,</emph></persname> <persname><emph render="bold">W.B. Jordan,</emph></persname> <persname><emph render="bold">James Boyle,</emph></persname> <persname><emph render="bold">Creighton,</emph></persname> etc.; and nothing important except references</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 666-684</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAC5072-00099" level="file">
+                        <did>
+                            <container label="Folder" type="folder">9</container>
+                            <unittitle>Envelope 136: Notes re: Whites and Indians, Preface, Little Big Horn, Fetterman, Crook, etc. fights. Death of Left Hand.</unittitle>
+                        </did>
+                        <note>
+                            <p>Kenneth Hammer transcript pp. 684-704</p>
+                        </note>
+                    </c03>
+                </c02>
+                <c02 id="VAC5072-00100" level="subseries">
+                    <did>
+                        <container label="Box" type="Box">8</container>
+                        <unittitle>Field Notes. Unclassified - Miscellaneous I-IX</unittitle>
+                    </did>
+                    <c03 id="VAC5072-00101" level="file">
+                        <did>
+                            <container label="Folder" type="folder">1</container>
+                            <unittitle>Kenneth Hammer transcript pp. 705-739</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC5072-00102" level="file">
+                        <did>
+                            <container label="Folder" type="folder">2</container>
+                            <unittitle>Kenneth Hammer transcript pp. 740-751</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC5072-00103" level="file">
+                        <did>
+                            <container label="Folder" type="folder">3</container>
+                            <unittitle>Kenneth Hammer transcript pp. 751-763</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC5072-00104" level="file">
+                        <did>
+                            <container label="Folder" type="folder">4</container>
+                            <unittitle>Kenneth Hammer transcript pp. 763-783</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC5072-00105" level="file">
+                        <did>
+                            <container label="Folder" type="folder">5</container>
+                            <unittitle>Kenneth Hammer transcript pp. 784-798</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC5072-00106" level="file">
+                        <did>
+                            <container label="Folder" type="folder">6</container>
+                            <unittitle>Kenneth Hammer transcript pp. 799-811</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC5072-00107" level="file">
+                        <did>
+                            <container label="Folder" type="folder">7</container>
+                            <unittitle>Kenneth Hammer transcript pp. 811-821</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC5072-00108" level="file">
+                        <did>
+                            <container label="Folder" type="folder">8</container>
+                            <unittitle>Kenneth Hammer transcript pp. 822-826</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC5072-00109" level="file">
+                        <did>
+                            <container label="Folder" type="folder">9</container>
+                            <unittitle>Kenneth Hammer transcript pp. 826-842</unittitle>
+                        </did>
+                    </c03> 
+                </c02>
+            </c01>
+            
+            
+            <c01 id="VAC5072-00110" level="series">
+                <did>
+                    <container label="Box" type="Box">3</container>
+                    <container label="Folder" type="folder">6</container>
+                    <unittitle>Appendix 1: Photographs</unittitle>
+                </did>
+                <c02 id="VAC5072-00111" level="file">
+                    <did>
+                        <unittitle>1. Camp, Walter Mason. n.d. "Photographed by [Rivkin?] in 1934 from photo by Gibson, Sykes &amp; Fowler, McVickers Theater Bldg., Chicago, Ill..." 2 copies. </unittitle>
+                    </did>
+                </c02>
+                
+                <c02 id="VAC5072-00112" level="otherlevel">
+                    <did>
+                        <unittitle>2. Summer trip among Indians, 1912: Grand River, Rosebud Reservation, Arickarees, One Bull. Photographs taken by Walter Mason Camp </unittitle>
+                    </did>
+                    
+                    <c03 id="VAC5072-00113" level="file">
+                        <did>
+                            <unittitle>a. Group scene of people seated on benches and chairs, listening to an Indian speak</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC5072-00114" level="file">
+                        <did>
+                            <unittitle>b. Six Indians, including a young boy, seated in a tent</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC5072-00115" level="file">
+                        <did>
+                            <unittitle>c. Indian in traditional dress; wagons and tents in background</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC5072-00116" level="file">
+                        <did>
+                            <unittitle>d. Indian in traditional dress near doorway of log structure</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC5072-00117" level="file">
+                        <did>
+                            <unittitle>e. Indian man and woman in traditional dress</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC5072-00118" level="file">
+                        <did>
+                            <unittitle>f. Formal portrait of Indian in traditional dress</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC5072-00119" level="file">
+                        <did>
+                            <unittitle>g. Formal portrait of seven male Indians in traditional dress</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC5072-00120" level="file">
+                        <did>
+                            <unittitle>h. Group of Indians of various ages in traditional dress and one white male (W.M. Camp?)</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC5072-00121" level="file">
+                        <did>
+                            <unittitle>i. Group of Indians and white male clergyman in church</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC5072-00122" level="file">
+                        <did>
+                            <unittitle>j. Group of 16 people (white and Indian) posed in front of teepee and U.S. flag (Negative only) </unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC5072-00123" level="file">
+                        <did>
+                            <unittitle>k. Four white males posed in front of teepee (Negative only)</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAC5072-00124" level="file">
+                        <did>
+                            <unittitle>l. Copy of photograph of Indian in traditional dress, by A. Bogardus, 872 Broadway, cor. 18th St., N.Y.</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                
+                <c02 id="VAC5072-00125" level="file">
+                    <did>
+                        <unittitle>3. DeSmet, Rev. Pierre Jean, S.J., Fort Berthold, North Dakota. n.d. Calling card photograph by Nichols &amp; Howard, Photographers, 60 North Fourth St., St. Louis, Mo. </unittitle>
+                    </did>
+                </c02>
+                
+                <c02 id="VAC5072-00126" level="file">
+                    <did>
+                        <unittitle>4. Reynolds, Joseph Jones. n.d. Photograph from The Collection of Americana of Frederick H. Meserve, New York </unittitle>
+                    </did>
+                </c02>
+            </c01>
+            
+            <c01 id="VAC5072-00127" level="series">
+                <did>
+                    <unittitle>Appendix 2: Maps</unittitle>
+                </did>
+                <c02 id="VAC5072-00128" level="file">
+                    <did>
+                        <unittitle>1. Camp, W[alter] M[ason]. "Surveyed by W. M. Camp, September, 1908." Indicates Reno's Advance to Attack Village, and other details including Ford A. Blueprint. 40.5x45cm. Notes in pencil with red pencilled heading: "Interview with McDougall, 6/26/09" </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5072-00129" level="file">
+                    <did>
+                        <unittitle>2. [Camp, Walter Mason]. Surveyed by [W. M. Camp? Date? (information torn off but matches above Survey)]. Indicates Reno's Advance to Attack Village, and other details including Ford B. Blueprint. 40.5x45cm. Notes in pencil with red pencilled heading: "Interview with Rees, 8/24/09" </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5072-00130" level="file">
+                    <did>
+                        <unittitle>3. Maguire, Lt. Edward, Corp of Engineers. "Custer's Battlefield, June 25, 1876." Drawn by Sergeant Charles Becker, Co. D, Battalion of Engineers, under Maguire's supervision. Blackprint. 38x52cm. </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5072-00131" level="file">
+                    <did>
+                        <unittitle>4. Maguire, Lt. Edward. "Map of the Line of March of the Troops serving in the Department of Dakota in the campaign against Hostile Sioux, 1876." Drawn by James E. Wilson, Sergeant, U.S. Engineers, under Maguire's supervision. Blueprint. 48x124cm. Two copies, one with notes in red pencil. </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5072-00132" level="file">
+                    <did>
+                        <unittitle>5. Maguire, Lt. Edward. "Plan of the Battlefield on the Little Big Horn Creek, Dakota Territory, June 25, 1876. to accompany his preliminary Report to the Chief of Engineers, Dated July 2, 1876." Blueprint. 22.5x27.3cm. </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5072-00133" level="file">
+                    <did>
+                        <unittitle>6. Maguire, Lt. Edward. "Plan of the Battlefield of the 7th Regt. Cav. (June 25, 1876). Lt. Col. Custer, Maj. Reno, Capt. Benteen, 7th Cav., Commanding." Blackprint. 33x44.2cm. </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5072-00134" level="file">
+                    <did>
+                        <unittitle>7. "Map of parts of Kansas, Indian Ter., Texas and New Mexico." In 4 parts, each 35x47.5cm. Photostats. Pencilled note reads: This four-sheet manuscript map is undoubtedly the one which accompanied Gen Miles Report of Mar. 4 1875 on the Indian Ter. Expn of 1874. W[illiam] C[arey] B[rown]." See: Hammer, page xi.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5072-00135" level="file">
+                    <did>
+                        <unittitle>8. Mills, Capt. Anson, 3rd Cav. "Map of the Battle of Powder River between Companies E, I, &amp; K, 2nd E, F, &amp; M, 3rd Cavalry, under command of Col. J. J. Reynolds, 3rd Cavalry, and the hostile Band of Ogallala Sioux under Crazy Horse, March 17, 1876. A true transcription from the original by me submitted Apr 21, 76, Anson Mills." Blueprint. 34x43cm. </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5072-00136" level="file">
+                    <did>
+                        <unittitle>9. Morton, Charles, 2d Lt., 3rd Cav. "Map of the Route of the Big Horn Expedition Commanded by Brig. General Crook, March 1st to 26th, 1876." Stamped May 7, 1876, a true tracing, W. S. Stanton, Capt. of Engineers. Blueprint. 44.5x87cm. </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5072-00137" level="file">
+                    <did>
+                        <unittitle>10. Morton, Charles. "Sketch of Crazy Horse's village and vicinity." Stamped May 7, 1876, a true tracing, W. S. Stanton, Capt. of Engineers. Blueprint. 33.3x36cm. Notes in pencil </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5072-00138" level="file">
+                    <did>
+                        <unittitle>11. Red Cloud Agency. Map of Red Cloud Agency in Dawes County, T31N-R52W. 1913. Oilskin. 33x66.5cm. In pencil. Accompanied by notes entitled: Levels from River to the Monument. 2 pages. 10.5x13.5cm. In pencil </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5072-00139" level="file">
+                    <did>
+                        <unittitle>12. Oilskin map of an unidentified area. 29x37.5 cm. In pencil </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5072-00140" level="file">
+                    <did>
+                        <unittitle>13. U. S. Dept. of Agriculture. Big Horn National Forest, Wyoming, 1917. 52x51cm. Printed. </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5072-00141" level="file">
+                    <did>
+                        <unittitle>14. U. S. Dept. of Interior. Crow Indian Reservation, Montana, 1910. 78x105cm. Printed. </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5072-00142" level="file">
+                    <did>
+                        <unittitle>15. U. S. Geological Survey. Topographic map. Montana (Rosebud County), Rosebud Quadrangle. Surveyed 1891-92. 52x39.5cm. Printed. Notes in blue and black pencil</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5072-00143" level="file">
+                    <did>
+                        <unittitle>16. [U. S. Geological Survey. Topographic map.] [Montana], St. Xavier Quadrangle, and [Wyoming], Bald Mountain Quadrangle. Cut out and pasted together. 40x32cm. Printed. Notes in pencil</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC5072-00144" level="file">
+                    <did>
+                        <unittitle>17. U. S. Geological Survey. Topographic map. Wyoming-Montana, Sheridan Quadrangle. Surveyed in 1898 and 1909. 50.4x42cm. Printed. Notes in pencil</unittitle>
+                    </did>
+                </c02>
+                
+            </c01>
+
+
+
+        </dsc>
+    </archdesc>
+</ead>
