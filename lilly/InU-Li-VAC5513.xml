@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader relatedencoding="dublincore" audience="external" langencoding="iso639-2b"
+        scriptencoding="iso15924" repositoryencoding="iso15511" countryencoding="iso3166-1"
+        dateencoding="iso8601" findaidstatus="edited-full-draft">
+        <eadid encodinganalog="identifier" identifier="InU-Li-VAC5513" countrycode="US"
+            mainagencycode="InU-Li">InU-Li-VAC5513</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Palmer mss.<date normal="1835/1888"
+                        >1835-1888</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2012" type="publication">© 2012</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2012">© 2012</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2012" type="source">2012</date>
+                <lb/>Finding aid encoded by Danielle Emerling, Lilly Library, Indiana University,
+                    <date normal="2012-11-09">November 09, 2012</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2012-11-09">November 9, 2012</date>
+                <item>Encoded finding aid begun.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc level="collection" audience="external" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository encodinganalog="852" label="Repository" id="lilly">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname source="lcnaf" encodinganalog="100">Palmer, Joel, 1810-1881.</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Palmer mss.</unittitle>
+            <unitdate normal="1835/1888" type="inclusive" encodinganalog="245$f"
+                >1835-1888</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1815</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>1,182 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">Consists of correspondence and papers of
+                Joel Palmer, 1810-1881, superintendent of Indian Affairs in Oregon Territory,
+                1853-1857, and of his brother, Ephraim Palmer, captain of Company B, 1st regiment,
+                Oregon Infantry. </abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+            <p>Career of Joel Palmer: born, October 4, 1810, Ontario, Canada; family moved to New
+                York state, 1812; Joel Palmer moved to Bucks County, Pennsylvania at about sixteen
+                years of age; moved to Laurel, Franklin County, Indiana, 1836; representative in
+                Indiana legislature, 1843-1845; crossed plains to Oregon, 1845; commissary-general
+                of volunteer forces in Cayuse War, 1847; led a company to California gold mines,
+                1848 and 1849; laid out Dayton, Oregon, in winter of 1848-1849; superintendent of
+                Indian Affairs, Oregon Territory, 1853-1857; in gold fields of the Fraser and
+                Thompson Rivers and in the Similkameen Valley, British Columbia as a trader,
+                1858-1861; opened route from Priest Rapids through Oregon and Washington to gold
+                diggings of Okanogan, Similkameen, Rock Creek, and Upper Columbia River in British
+                Columbia, 1860; speaker, Oregon House of Representatives, 1862; organized Columbia
+                River Road Company to open trail for pack trains and cattle through Oregon side of
+                Columbia river gorge, 1862; appointed brigadier-general, Oregon Militia, 1862;
+                member Oregon Senate, 1864-1866; defeated as Republican candidate for governor of
+                Oregon, 1870; U.S. Indian agent at Siletz Indian Reservation, 1871- 1874; died,
+                Dayton, Oregon, June 9, 1881.</p>
+            <p>Biographical information on Joel Palmer may be found in Stanley S. Spaid's "The Later
+                Life and Activities of General Joel Palmer," Oregon Historical Quarterly, LV:
+                311-332, December 1954; and Edward Evans' History of the Pacific Northwest
+                (Portland, Oregon, 1889) II: 508. There is also biographical and genealogical
+                material relating to Joel Palmer and his family in the first folder in the Palmer
+                collection. </p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is arranged chronologically.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>Most of the papers in the collection fall within the years 1853-1874. Those before
+                1853 consist of Joel Palmer's naturalization certificate as a U.S. citizen, October
+                8, 1832, and some personal papers, 1849-1852. For 1853-January 10, 1857, the
+                manuscripts consist almost entirely of official correspondence and papers of Joel
+                Palmer as Superintendent of Indian Affairs. Included are his diaries for 1854 and
+                1856, correspondence, financial and other reports and records, and a number of bills
+                and receipts. There are also diaries for 1860 and 1861 at which time Joel Palmer was
+                acting as a trader in the gold fields of the Fraser and Thompson Rivers and in the
+                Similkameen Valley, British Columbia. For 1871- 1874 the papers are those of Palmer
+                as U.S. Indian agent at the Siletz Indian Reservation.</p>
+
+            <p>The manuscripts in the collection for 1864-1866 are almost entirely Ephraim Palmer's
+                official letters and papers as captain of Company B, 1st regiment, Oregon
+                Infantry.</p>
+
+            <p>Also included in the collection are an undated plat map of Dayton, Oregon; a map of a
+                reconnaissance of the route of the Snake River expedition in 1855 by George Henry
+                Mendell; a daguerreotype and a photograph of Joel Palmer; a daguerreotype of Joel
+                Palmer and his second wife, Mrs. Sarah Ann (Derbyshire) Palmer; photograph of Mrs.
+                Sarah Ann (Derbyshire) Palmer, George Abernethy, Andrew Smith, husband of Mrs. Sarah
+                Elizabeth (Palmer) Smith, and of Joel Palmer's home built in 1852 in Dayton, Oregon;
+                and a daguerreotype of Mrs. Polly Smith, wife of Andrew D. Smith. </p>
+
+            <p>Correspondents represented in this collection include George H. Ambrose, Joseph
+                Conant Avery, Daniel F. Bradford, Robert Christie Buchanan, Benjamin Franklin Burch,
+                Asahel Bush, Jacob Comegys, John Winchell Cullen, Anson Dart, Edwin P. Drew, Robert
+                W. Dunbar, William H. Farrar, DeLancey Floyd- Jones, Philip Foster, Charles K.
+                Gardiner, Joseph M. Garrison, Edward Rachford Geary, Joseph Cary Geer, Addison
+                Crandall Gibbs, La Fayette Grover, Edward Hamilton, William Holmes, David S. Holton,
+                Thomas Jefferson Hubbard, David C. Ingalls, Ralph Jacobs, Berryman Jennings, William
+                Sargent Ladd, Joseph Lane, William Jennings Martin, Alfred B. Meacham, James Willis
+                Nesmith, Robert Newell, William Holman Odell, Peter Skene Ogden, Cyrus Olney, Nathan
+                Olney, Ephraim Palmer, Josiah L. Parrish, L. J. Powell, Orville Charles Pratt, John
+                B. Preston, Gabriel James Rains, William W. Raymond, Cyrus Adams Reed, John Fulton
+                Reynolds, Robert Valentine Short, Benjamin Simpson, Alonzo A. Skinner, Andrew
+                Jackson Smith, Edward P. Smith, Henry Harmon Spalding, Charles Carroll Stratton,
+                Christopher Taylor, Chester N. Terry, Robert R. Thompson, William Tichenor, Aaron E.
+                Wait, Courtney M. Walker, Cyrus Hamlin Walker, Joseph Watt and Frederick Waymire.
+            </p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/palmer+joel+1810+1881">
+                            <persname encodinganalog="600" source="lcnaf">Palmer, Joel,
+                                1810-1881.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/palmer+ephraim">
+                            <persname encodinganalog="600" source="lcnaf">Palmer, Ephraim</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/palmer+joel+1810+1881+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Palmer, Joel, 1810-1881
+                                --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/palmer+ephraim+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Palmer, Ephraim
+                                --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/grover+la+fayette+1823+1911+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Grover, La Fayette,
+                                1823-1911 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/buchanan+robert+christie+1811+1878+correspondence">
+                            <persname encodinganalog="600" source="lcnaf"> Buchanan, Robert
+                                Christie, 1811-1878 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/gibbs+addison+crandall+1825+1886+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Gibbs, A. C. (Addison
+                                Crandall), 1825-1886 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/geary+edward+ratchford+1845+1863+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Geary, Edward Ratchford,
+                                1845-1863 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/stratton+charles+carroll+1833+1910+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Stratton, C. C. (Charles
+                                Carroll), 1833-1910--Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/spalding+henry+harmon+1803+1874+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Spalding, Henry Harmon,
+                                1803-1874 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/walker+cyrus+1827+1913+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Walker, Cyrus, 1827-1913
+                                --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/olney+nathan+1824+1866+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Olney, Nathan, 1824-1866
+                                --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/ogden+peter+skene+1790+1854+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Ogden, Peter Skene,
+                                1790-1854 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/nesmith+james+willis+1820+1885+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Nesmith, James Willis,
+                                1820-1885 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/meacham+alfred+benjamin+1826+1882+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Meacham, A. B. (Alfred
+                                Benjamin), 1826-1882 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/bush+asahel+1824+1913+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Bush, Asahel, 1824-1913
+                                --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/pratt+orville+charles+1819+1891+correspondence">
+                            <persname encodinganalog="600" source="lcnaf">Pratt, Orville C. (Orville
+                                Charles), 1819-1891 --Correspondence.</persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/palmer+family">
+                            <persname encodinganalog="600" source="lcnaf">Palmer family.</persname>
+                        </extref>
+                    </item>
+
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/united+states+office+indian+affairs+oregon+superintendency">
+                            <corpname encodinganalog="610" source="lcnaf">United States. Office of
+                                Indian Affairs. Oregon Superintendency.</corpname>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/indian+agents+oregon+correspondence">
+                            <subject encodinganalog="650" source="lcnaf">Indian agents --Oregon
+                                --Correspondence.</subject>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/pacific+coast+indians+wars+with+1847+1865">
+                            <subject encodinganalog="650" source="lcnaf">Pacific Coast Indians, Wars
+                                with, 1847-1865.</subject>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Geographic Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/oregon+territory+history">
+                            <geogname encodinganalog="651" source="lcnaf">Oregon Territory
+                                --History.</geogname>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="110" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 1956</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials. </p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Palmer mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Lilly Staff.</p>
+                <p>Completed in <date normal="2012">2012</date></p>
+
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+
+
+            <c01 level="collection">
+                <did>
+                    <container type="Box" label="Box">1</container>
+                    <unittitle>Biographical material</unittitle>
+                </did>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle><unitdate normal="1835/1852" type="inclusive"
+                        >1835-1852</unitdate></unittitle>
+                </did>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle><unitdate normal="1853">1853</unitdate></unittitle>
+                </did>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle><unitdate normal="1835/1885" type="inclusive"
+                        >1835-1885</unitdate></unittitle>
+                </did>
+                <scopecontent>
+                    <p>Transcripts of miscellaneous Joel Palmer correspondence and documents</p>
+                </scopecontent>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle><unitdate normal="1854-01/1854-03" type="inclusive">1854
+                            Jan.-Mar.</unitdate></unittitle>
+                </did>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle><unitdate normal="1854-04/1854-05" type="inclusive">1854
+                            Apr.-May</unitdate></unittitle>
+                </did>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle><unitdate normal="1854-06">1854 June</unitdate></unittitle>
+                </did>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle><unitdate normal="1854-07/1954-12" type="inclusive">1854
+                            July-Dec.</unitdate></unittitle>
+                </did>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle>Bank book? Ledger?</unittitle>
+                </did>
+            </c01>
+
+
+            <c01 level="file">
+                <did>
+                    <container type="Box" label="Box">2</container>
+                    <unittitle><unitdate normal="1855-01/1855-05" type="inclusive">1855
+                            Jan.-May</unitdate></unittitle>
+                </did>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle><unitdate normal="1855-06/1855-07" type="inclusive">1855
+                            June-July</unitdate></unittitle>
+                </did>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle><unitdate normal="1855-08/1855-09" type="inclusive">1855
+                            Aug.-Sept.</unitdate></unittitle>
+                </did>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle><unitdate normal="1855-10">1855 Oct.</unitdate></unittitle>
+                </did>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle><unitdate normal="1855-11">1855 Nov.</unitdate></unittitle>
+                </did>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle><unitdate normal="1855-12">1855 Dec.</unitdate></unittitle>
+                </did>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle><unitdate normal="1856-01/1856-03" type="inclusive">1856
+                            Jan.-Mar.</unitdate></unittitle>
+                </did>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle><unitdate normal="1856-01/1856-08-27" type="inclusive">1856 Jan.-Aug.
+                            27</unitdate></unittitle>
+                </did>
+                <scopecontent>
+                    <p>Transcript of diary.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle><unitdate normal="1856-04/1856-06" type="inclusive">1856
+                            Apr.-June</unitdate></unittitle>
+                </did>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle><unitdate normal="1856-07/1856-12" type="inclusive">1856
+                            July-Dec.</unitdate></unittitle>
+                </did>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle><unitdate normal="1857/1859" type="inclusive"
+                        >1857-1859</unitdate></unittitle>
+                </did>
+            </c01>
+
+            <c01 level="file">
+                <did>
+                    <container type="Box" label="Box">3</container>
+                    <unittitle>Diary, <unitdate normal="1860">1860</unitdate></unittitle>
+                </did>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle>Diary, <unitdate normal="1861">1861</unitdate></unittitle>
+                </did>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle><unitdate normal="1860-01-01/1860-01-05" type="inclusive">1860 Jan.
+                            1-5</unitdate></unittitle>
+                </did>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle><unitdate normal="1860-01-05/1860-11-11" type="inclusive">1860 Jan.
+                            5-Nov. 11</unitdate></unittitle>
+                </did>
+                <scopecontent>
+                    <p>Transcript of diary.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle><unitdate normal="1860-02/1860-12" type="inclusive">1860
+                            Feb.-Dec.</unitdate></unittitle>
+                </did>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle><unitdate normal="1861-02-26/1861-08-17" type="inclusive">1861 Feb.
+                            26-Aug. 17</unitdate></unittitle>
+                </did>
+                <scopecontent>
+                    <p>Transcript of diary.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle><unitdate normal="1862/1864" type="inclusive"
+                        >1862-1864</unitdate></unittitle>
+                </did>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle><unitdate normal="1865-01/1865-06" type="inclusive">1865
+                            Jan.-June</unitdate></unittitle>
+                </did>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle><unitdate normal="1865-07/1865-12" type="inclusive">1865
+                            July-Dec.</unitdate></unittitle>
+                </did>
+            </c01>
+
+            <c01 level="file">
+                <did>
+                    <container type="Box" label="Box">4</container>
+                    <unittitle><unitdate normal="1866-01/1866-03" type="inclusive">1866
+                            Jan.-Mar.</unitdate></unittitle>
+                </did>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle><unitdate normal="1866-04/1870" type="inclusive">1866
+                            Apr.-1870</unitdate></unittitle>
+                </did>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle><unitdate normal="1871">1871</unitdate></unittitle>
+                </did>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle><unitdate normal="1872/1888" type="inclusive"
+                        >1872-1888</unitdate></unittitle>
+                </did>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle><unitdate normal="1835/1888" type="inclusive"
+                        >undated</unitdate></unittitle>
+                </did>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle>Photograph, ambrotype</unittitle>
+                </did>
+            </c01>
+            <c01 level="file">
+                <did>
+                    <unittitle>Photograph, daguerrotype</unittitle>
+                </did>
+            </c01>
+
+            <c01 level="file">
+                <did>
+                    <container type="Box" label="Box">5</container>
+                    <unittitle>Holy Bible</unittitle>
+                </did>
+            </c01>
+
+
+
+
+            <c01 level="file">
+                <did>
+                    <container type="Box" label="Box">Oversize</container>
+                    <unittitle>Oversize materials include:</unittitle>
+                </did>
+                <note>
+                    <list>
+                        <item>Plat map of Dayton, Oregon</item>
+                        <item>Snake River Expedition map, 1855</item>
+                        <item>Muster Rolls, 1855-1865</item>
+                        <item>Quarterly Return of Ordnance and Ordnance Stores, 1865-1866</item>
+                        <item>Inventory and inspection reports, 1865-1866</item>
+                        <item>Commissioned officer returns, 1865</item>
+                        <item>Lists of Deserters, 1865</item>
+                        <item>Palmer's appointment to Superintendent of Indian Affairs by U.S.
+                            President Franklin Pierce</item>
+                        <item>Oregon Superintendency accounts, 1853-1855</item>
+
+                    </list>
+                </note>
+            </c01>
+
+
+        </dsc>
+    </archdesc>
+</ead>
