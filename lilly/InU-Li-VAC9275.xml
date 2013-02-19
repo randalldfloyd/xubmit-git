@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAC9275">InU-Li-VAC9275</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Waddell mss., <date normal="1944/1987"
+                        type="bulk">1944-1987</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2013" type="publication">© 2013</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2013">© 2013</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2013" type="source">2013</date>
+                <lb/>Finding aid encoded by Shayna Pekala, Lilly Library, Indiana University, <date
+                    normal="2013-02-05">February 5, 2013</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2013-02-05">February 5, 2013</date>
+                <item>Encoded finding aid started.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Waddell, Courtney</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Waddell mss.,</unittitle>
+            <unitdate encodinganalog="245$f" normal="1944/1987" type="inclusive"
+                >1944-1987</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2509</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>300 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">Collection consists of the World War II
+                correspondence between geologist (Byron) Courtney Waddell and his fiancée and then
+                wife, Australian-born Lola Yvonne Line.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+            <p>Born in Indianapolis, Waddell attended Indiana University, earning a B.A. in Geology
+                in 1938, an M.A. in 1949 and his Ph.D. in 1952. He was a member of Sigma Gamma
+                Epsilon, an honorary and professional geology fraternity and Scabbard and Blade, a
+                national honorary military fraternity.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Correspondence; II. Legal
+                Documents; III. Memorabilia; IV. Miscellaneous; V. Writings.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>Correspondence includes letters from Lola Yvonne Line to Courtney Waddell. Legal
+                Documents include immigrations and army records, as well as deeds and wills.
+                Memorabilia includes photographs and greeting cards. Writings include <emph render="doublequote">A Product of
+                the Land Down Under,</emph> by Lola Yvonne Line, and <emph render="italic">Geology and Economic Resources of the
+                Shelburn, Fairbanks, Hutton, and Pimento Quadrangles,</emph> by Courtney Waddell.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/waddell+courtney+correspondence{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Waddell, Courtney
+                                --Correspondence. </persname></extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/line+lola+yvonne+correspondence{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Line, Lola Yvonne
+                                --Correspondence. </persname></extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="110" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 2005</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Waddell mss., Lilly Library, Indiana University, Bloomington,
+                    Indiana.</p>
+            </prefercite>
+
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Craig Simpson.</p>
+                <p>Completed in <date normal="2012">2012</date></p>
+
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAC9275-00001" level="series">
+                <did>
+                    <unittitle>Correspondence</unittitle>
+                </did>
+
+                <c02 id="VAC9275-00002" level="file">
+                    <did>
+                        <container label="Box" type="Box">1</container>
+                        <unittitle>Lola to Courtney, <unitdate normal="1944/1946" type="inclusive"
+                                >1944-1946</unitdate></unittitle>
+                    </did>
+                    <note>
+                        <list>
+                            <item><date normal="1944-01/1944-12" type="inclusive">1944,
+                                    Jan.-Dec.</date></item>
+                            <item><date normal="19450118/19450131" type="inclusive">1945, Jan.
+                                    18-31</date></item>
+                            <item><date normal="19450201/19450228" type="inclusive">1945, Feb.
+                                    1-28</date></item>
+                            <item><date normal="19450301/19450316" type="inclusive">1945, Mar.
+                                    1-16</date></item>
+                            <item><date normal="19450317/19450331" type="inclusive">1945, Mar.
+                                    17-31</date></item>
+                            <item><date normal="19450401/19450415" type="inclusive">1945, Apr.
+                                    1-15</date></item>
+                            <item><date normal="19450416/19450430" type="inclusive">1945, Apr.
+                                    16-30</date></item>
+                            <item><date normal="19450501/19450513" type="inclusive">1945, May
+                                    1-13</date></item>
+                            <item><date normal="19450513/19450531" type="inclusive">1945, May
+                                    13-31</date></item>
+                            <item><date normal="19450601/19450615" type="inclusive">1945, Jun.
+                                    1-15</date></item>
+                            <item><date normal="19450616/19450630" type="inclusive">1945, Jun.
+                                    16-30</date></item>
+                            <item><date normal="19450701/19450715" type="inclusive">1945, Jul.
+                                    1-15</date></item>
+                            <item><date normal="19450716/19450730" type="inclusive">1945, Jul.
+                                    16-30</date></item>
+                            <item><date normal="19450731/19450814" type="inclusive">1945, Jul.
+                                    31-Aug. 14</date></item>
+                            <item><date normal="19450815/19450831" type="inclusive">1945, Aug.
+                                    15-31</date></item>
+                            <item><date normal="19450901/19450914" type="inclusive">1945, Sept.
+                                    1-14</date></item>
+                            <item><date normal="19450915/19451001" type="inclusive">1945, Sept.
+                                    15-Oct. 1</date></item>
+                            <item><date normal="19451002/19451015" type="inclusive">1945, Oct.
+                                    2-15</date></item>
+                            <item><date normal="19451016/19451031" type="inclusive">1945, Oct.
+                                    16-31</date></item>
+                            <item><date normal="19451101/19451114" type="inclusive">1945, Nov.
+                                    1-14</date></item>
+                            <item><date normal="19451115/19451130" type="inclusive">1945, Nov.
+                                    15-30</date></item>
+                            <item><date normal="19451201/19451214" type="inclusive">1945, Dec.
+                                    1-14</date></item>
+                            <item><date normal="19451215/19451231" type="inclusive">1945, Dec.
+                                    15-31</date></item>
+                            <item><date normal="19460101/19460114" type="inclusive">1946, Jan.
+                                    1-14</date></item>
+                            <item><date normal="19460115/1946" type="inclusive">1946, Jan.
+                                    15-undated</date></item>
+                            <item><date normal="19460201/19460215" type="inclusive">1946, Feb.
+                                    1-15</date></item>
+                            <item><date normal="19460215/19460301" type="inclusive">1946, Feb.
+                                    15-Mar. 1</date></item>
+                            <item><date normal="19460302/19460314" type="inclusive">1946, Mar.
+                                    2-14</date></item>
+                            <item><date normal="19460315/19460329" type="inclusive">1946, Mar.
+                                    15-29</date></item>
+                            <item><date normal="19460402/19460415" type="inclusive">1946, Apr.
+                                    2-15</date></item>
+                            <item><date normal="19460416/19460502" type="inclusive">1946, Apr.
+                                    16-May 2</date></item>
+                            <item><date normal="19460503/19460516" type="inclusive">1946, May
+                                    3-16</date></item>
+                            <item><date normal="19460517/19460603" type="inclusive">1946, May
+                                    17-Jun. 3</date></item>
+                            <item><date normal="19460604/19460618" type="inclusive">1946, Jun.
+                                    4-18</date></item>
+                            <item><date normal="19460618/19460702" type="inclusive">1946, Jun.
+                                    18-Jul. 2</date></item>
+                            <item><date normal="19460702/19460715" type="inclusive">1946, Jul.
+                                    2-15</date></item>
+                            <item><date normal="19460716/19460731" type="inclusive">1946, Jul.
+                                    16-31</date></item>
+                            <item><date normal="19460801/19460816" type="inclusive">1946, Aug.
+                                    1-16</date></item>
+                            <item><date normal="19460817/19460902" type="inclusive">1946, Aug.
+                                    17-Sept. 2</date></item>
+                            <item><date normal="19460903/19460916" type="inclusive">1946, Sept.
+                                    3-16</date></item>
+                            <item><date normal="19460917/19460930" type="inclusive">1946, Sept.
+                                    17-30</date></item>
+                            <item><date normal="19461001/19461011" type="inclusive">1946, Oct.
+                                    1-11</date></item>
+
+                        </list>
+                    </note>
+
+                </c02>
+                <c02 id="VAC9275-00003" level="file">
+                    <did>
+                        <unittitle>From Lola's Family and Friends, <unitdate normal="1958/1971"
+                                type="inclusive">1958-1971</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9275-00004" level="file">
+                    <did>
+                        <unittitle>Maud Courtney Waddell to Courtney, <unitdate normal="1963/1966"
+                                type="inclusive">1963-1966</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9275-00005" level="file">
+                    <did>
+                        <unittitle>William B. Waddell to Courtney, <unitdate normal="1962/1966"
+                                type="inclusive">1962-1966</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9275-00006" level="file">
+                    <did>
+                        <unittitle>Miscellaneous, <unitdate normal="1966-02/1966-10"
+                                type="inclusive">1966, Feb.-Oct.</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAC9275-00007" level="series">
+                <did>
+                    <unittitle>Legal Documents</unittitle>
+                </did>
+                <c02 id="VAC9275-00008" level="file">
+                    <did>
+                        <container label="Box" type="Box">1</container>
+                        <unittitle>Immigration Documents, <unitdate certainty="circa"
+                                normal="1945/1960" type="inclusive">1945-ca.
+                            1960s</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9275-00009" level="file">
+                    <did>
+                        <unittitle>Passports and Passport Documentation, <unitdate certainty="circa"
+                                normal="1945/1987" type="inclusive">1945-ca.
+                            1987</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9275-00010" level="file">
+                    <did>
+                        <unittitle>Courtney's Biographical Info, <unitdate normal="1916/2003"
+                                type="inclusive">1916-2003</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9275-00011" level="file">
+                    <did>
+                        <unittitle>Deeds and Wills, <unitdate normal="1889/1975" type="inclusive"
+                                >1889-1975</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9275-00012" level="file">
+                    <did>
+                        <unittitle>Army Documents, <unitdate normal="1942/1946" type="inclusive"
+                                >1942-1946</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAC9275-00013" level="series">
+                <did>
+                    <unittitle>Memorabilia</unittitle>
+                </did>
+                <c02 id="VAC9275-00014" level="file">
+                    <did>
+                        <container label="Box" type="Box">1</container>
+                        <unittitle>Photographs and Hair, <unitdate normal="1938/1987"
+                                type="inclusive">1938-undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9275-00015" level="file">
+                    <did>
+                        <unittitle>Greeting Cards, <unitdate normal="1946/1987" type="inclusive"
+                                >1946-undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9275-00016" level="file">
+                    <did>
+                        <unittitle>William B. Waddell, <unitdate normal="1908/1987" type="inclusive"
+                                >1908-undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9275-00017" level="file">
+                    <did>
+                        <unittitle>Nannie Bayly Waddell, <unitdate normal="1975/1976"
+                                type="inclusive">1975-1976</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAC9275-00018" level="series">
+                <did>
+                    <unittitle>Miscellaneous</unittitle>
+                </did>
+                <c02 id="VAC9275-00019" level="file">
+                    <did>
+                        <container label="Box" type="Box">1</container>
+                        <unittitle><unitdate normal="1944/1987" type="inclusive"
+                                >1944-undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9275-00020" level="file">
+                    <did>
+                        <unittitle><unitdate normal="1944/1987" type="inclusive"
+                            >Undated</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAC9275-00021" level="series">
+                <did>
+                    <unittitle>Writings</unittitle>
+                </did>
+                <c02 id="VAC9275-00022" level="file">
+                    <did>
+                        <container label="Box" type="Box">1</container>
+                        <unittitle><emph render="doublequote">An Outline of St. Mark's
+                                Gospel,</emph> by J. C. Hurd, <unitdate normal="1944/1987"
+                                >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9275-00023" level="file">
+                    <did>
+                        <unittitle><emph render="doublequote">A Product from the Land Down
+                                Under,</emph> by Lola, <unitdate normal="1944/1987"
+                                >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9275-00024" level="file">
+                    <did>
+                        <unittitle><title render="italic">Geology and Economic Resources of the
+                                Shelburn, Fairbanks, Hutton, and Pimento Quadrangles,</title> by
+                            Courtney Waddell, <unitdate normal="1952-02">1952,
+                            Feb.</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
