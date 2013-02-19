@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+--><ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external" countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924" relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li" identifier="InU-Li-VAC9274">InU-Li-VAC9274</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Rappaport mss., <date normal="1972/1990" type="inclusive">1972-1990</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2013" type="publication">© 2013</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2013">© 2013</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2013" type="source">2013</date>
+                <lb></lb>Finding aid encoded by Shayna Pekala, Lilly Library, Indiana University, <date normal="2013-02-05">February 5, 2013</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng">English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2013-02-05">February 5, 2013</date>
+                <item>Encoded finding aid started.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Rappaport, John H., 1940-</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Rappaport mss.,</unittitle>
+            <unitdate encodinganalog="245$f" normal="1972/1990" type="inclusive">1972-1990</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2418</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>60 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">Consists of the papers of television and
+                motion picture writer John Rappaport.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+            <p>Born in Chicago and raised in Highland Park, IL, Rappaport graduated from Indiana
+                University. At IU, he began a career in show business by hosting music and variety
+                programs on the IMU radio show, WFIU, and other broadcasting venues. Eventually he
+                moved to Hollywood and became a writer on <emph render="italic">Rowan &amp; Martin's
+                    Laugh-In.</emph> His other writing credits include episodes of <emph render="italic">All in the Family, The Odd Couple, Maude, The Bob Newhart
+                    Show,</emph> and, most prominently, <emph render="italic">M*A*S*H.</emph>
+                Additionally, on <emph render="italic">M*A*S*H,</emph> Rappaport served as producer
+                (1979-1981) and supervising producer (1981-1983); and he co-wrote the series' final
+                episode, "Goodbye, Farewell, and Amen." He has earned eight Emmy nominations and
+                four People's Choice awards, as well as residency in the National Association of
+                Broadcasters and Producers Guild of America Halls of Fame</p>
+
+        </bioghist>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The collection consists primarily of drafts and revisions of scripts for television
+                sitcoms written by Rappaport during his career. Also included in the collection are
+                correspondence, clippings, and photographs.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/rappaport+john+h.+1940{su}"><persname encodinganalog="100" source="lcnaf">Rappaport, John H.,
+                                1940-</persname></extref></item>
+
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/rappaport+john+h.+1940{su}"><persname encodinganalog="100" source="lcnaf">Rappaport, John H.,
+                                1940- --Correspondence.</persname></extref></item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/television+comedy+writers{su}"><subject encodinganalog="650" source="lcsh">Television comedy
+                                writers.</subject></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/television+writers{su}"><subject encodinganalog="650" source="lcsh">Television
+                                writers.</subject></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/situation+comedies+television+programs{su}"><subject encodinganalog="650" source="lcsh">Situation comedies
+                                (Television programs)</subject></extref></item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="110" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 1998</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Rappaport mss., Lilly Library, Indiana University, Bloomington,
+                    Indiana.</p>
+            </prefercite>
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Craig Simpson.</p>
+                <p>Completed in <date normal="2012">2012</date></p>
+
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAC9274-00001" level="collection">
+                <did>
+
+                    <unittitle>Rappaport mss., <unitdate normal="1972/1990" type="inclusive">1972-1990</unitdate></unittitle>
+
+                </did>
+
+                <c02 id="VAC9274-00002" level="file">
+                    <did>
+                        <container label="Box" type="Box">1</container>
+                        <unittitle>Miscellaneous Career Materials, <unitdate normal="1940/1984" type="inclusive">1940-1984</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00003" level="file">
+                    <did>
+                        <unittitle>Miscellaneous correspondence, lists, résumé</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00004" level="file">
+                    <did>
+                        <unittitle>Lily Tomlin Special, <unitdate normal="1973">1973</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00005" level="file">
+                    <did>
+                        <unittitle>Script List</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00006" level="file">
+                    <did>
+                        <unittitle><title render="italic">Rowan and Martin's Laugh-In,</title>
+                            script, <unitdate normal="1971">1971</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00007" level="file">
+                    <did>
+                        <unittitle><title render="italic">All in the Family:</title> "Archie is
+                            Cursed," script, <unitdate normal="1973">1973</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00008" level="file">
+                    <did>
+                        <unittitle><title render="italic">All in the Family:</title> "Archie Puts
+                            the Lid On," 1973</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00009" level="file">
+                    <did>
+                        <unittitle><title render="italic">All in the Family:</title> "Archie and the
+                            Kiss," 1973</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00010" level="file">
+                    <did>
+                        <unittitle><title render="italic">All in the Family:</title> untitled story
+                            idea, <unitdate normal="1973">1973</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00011" level="file">
+                    <did>
+                        <unittitle><title render="italic">Maude:</title> "Florida’s Goodbye,"
+                            script, <unitdate normal="1973">1973</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00012" level="file">
+                    <did>
+                        <unittitle><title render="italic">The Bob Newhart Show:</title> "Brutally
+                            Yours, Bob Hartley," script, <unitdate normal="1974">1974</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00013" level="file">
+                    <did>
+                        <unittitle><title render="italic">The Odd Couple:</title> "One for the
+                            Bunny," script, <unitdate normal="1974">1974</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00014" level="file">
+                    <did>
+                        <unittitle><title render="italic">The Odd Couple:</title> "Oscar's Wedding,"
+                            script, <unitdate normal="1974">1974</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00015" level="file">
+                    <did>
+                        <unittitle><title render="italic">The Odd Couple:</title> "Your Mother Wears
+                            Army Boots," script, <unitdate normal="1974">1974</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00016" level="file">
+                    <did>
+                        <unittitle><title render="italic">The Odd Couple:</title> "Oscar's
+                            Birthday," call sheet only, <unitdate normal="1974">1974</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00017" level="file">
+                    <did>
+                        <unittitle><title render="italic">The Masked Stranger:</title> miscellaneous
+                            materials, <unitdate normal="1975">1975</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00018" level="file">
+                    <did>
+                        <unittitle><title render="italic">American Pie:</title> script, <unitdate normal="1976">1976</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00019" level="file">
+                    <did>
+                        <unittitle><title render="italic">Fun with Dick and Jane:</title> scripts,
+                                <unitdate normal="1975/1976" type="inclusive">1975-1976</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00020" level="file">
+                    <did>
+                        <unittitle><title render="italic">Three Times Daley:</title> story ideas,
+                                <unitdate normal="1976">1976</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00021" level="file">
+                    <did>
+                        <unittitle><title render="italic">Three Times Daley:</title> 1st draft.
+                            1976</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00022" level="file">
+                    <did>
+                        <unittitle><title render="italic">Three Times Daley:</title> script,
+                                <unitdate normal="1976">1976</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00023" level="file">
+                    <did>
+                        <unittitle><title render="italic">The Feeling is Mutual:</title> scripts,
+                                <unitdate normal="1982">1982</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00024" level="file">
+                    <did>
+                        <unittitle><title render="italic">The Feeling is Mutual:</title> notes,
+                                <unitdate normal="1982">1982</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00025" level="file">
+                    <did>
+                        <unittitle><title render="italic">Who's On Top?:</title> rough draft, 1st
+                            draft, <unitdate normal="1983">1983</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00026" level="file">
+                    <did>
+                        <unittitle><title render="italic">Who's On Top?:</title> script, <unitdate normal="1983">1983</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00027" level="file">
+                    <did>
+                        <unittitle><title render="italic">Who's On Top?:</title> notes, <unitdate normal="1983">1983</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00028" level="file">
+                    <did>
+                        <unittitle><title render="italic">Second Edition:</title> 1st Draft,
+                                <unitdate normal="1983">1983</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00029" level="file">
+                    <did>
+                        <unittitle><title render="italic">Second Edition:</title> 2nd Draft,
+                                <unitdate normal="1983">1983</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00030" level="file">
+                    <did>
+                        <unittitle><title render="italic">Second Edition:</title> Final Draft,
+                                <unitdate normal="1984">1984</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00031" level="file">
+                    <did>
+                        <container label="Box" type="Box">2</container>
+                        <unittitle><title render="italic">Zack:</title> 1st Drafts, <unitdate normal="1985">1985</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00032" level="file">
+                    <did>
+                        <unittitle><title render="italic">Gung Ho:</title> 1st Draft, Final Draft,
+                                <unitdate normal="1987">1987</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00033" level="file">
+                    <did>
+                        <unittitle><title render="italic">Night Owls:</title> 1st and 2nd Drafts,
+                                <unitdate normal="1988">1988</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00034" level="file">
+                    <did>
+                        <unittitle><title render="italic">One of a Kind:</title> 1st Draft,
+                                <unitdate normal="1988">1988</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00035" level="file">
+                    <did>
+                        <unittitle><title render="italic">Night Court:</title> episode drafts,
+                                <unitdate normal="1989/1990" type="inclusive">1989-1990</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00036" level="file">
+                    <did>
+                        <unittitle>"Ernestine Tomlin, General Motors": script</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00037" level="file">
+                    <did>
+                        <unittitle>"Lily Tomlin: "The Sensuous Senator," script</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00038" level="file">
+                    <did>
+                        <unittitle><title render="italic">That's My Boy:</title> Pilot Episode,
+                            script</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00039" level="file">
+                    <did>
+                        <unittitle><title render="italic">M*A*S*H:</title> "Morale Victory,"
+                            treatments, scripts, excerpts, <unitdate normal="1979">1979</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00040" level="file">
+                    <did>
+                        <unittitle><title render="italic">M*A*S*H:</title> "Morale Victory," notes,
+                                <unitdate normal="1979">1979</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00041" level="file">
+                    <did>
+                        <unittitle><title render="italic">M*A*S*H:</title> "Dear Uncle Abdul," final
+                            script, <unitdate normal="1979">1979</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00042" level="file">
+                    <did>
+                        <unittitle><title render="italic">M*A*S*H:</title> "Period of Adjustment,"
+                            revised pages, <unitdate normal="1979">1979</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00043" level="file">
+                    <did>
+                        <unittitle><title render="italic">M*A*S*H:</title> "Letters," final draft,
+                                <unitdate normal="1980">1980</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00044" level="file">
+                    <did>
+                        <unittitle><title render="italic">M*A*S*H:</title> "No Laughing Matter,"
+                            final draft, <unitdate normal="1980">1980</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00045" level="file">
+                    <did>
+                        <unittitle><title render="italic">M*A*S*H:</title> "No Sweat," scripts,
+                            story outlines, <unitdate normal="1980">1980</unitdate></unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00046" level="file">
+                    <did>
+                        <unittitle><title render="italic">M*A*S*H:</title> "Oh, How We Danced,"
+                            scripts, story outlines, <unitdate normal="1980">1980</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00047" level="file">
+                    <did>
+                        <unittitle><title render="italic">M*A*S*H:</title> "Taking the Fifth," story
+                            outline, <unitdate normal="1980">1980</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00048" level="file">
+                    <did>
+                        <unittitle><title render="italic">M*A*S*H:</title> "Tell It to the Marines,"
+                            Final Draft, <unitdate normal="1980">1980</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00049" level="file">
+                    <did>
+                        <unittitle><title render="italic">M*A*S*H:</title> "Give .Em Hell, Hawkeye,"
+                            Final Draft, <unitdate normal="1981">1981</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00050" level="file">
+                    <did>
+                        <unittitle><title render="italic">M*A*S*H:</title> "The Life You Save,"
+                            scripts, <unitdate normal="1981">1981</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00051" level="file">
+                    <did>
+                        <unittitle><title render="italic">M*A*S*H:</title> "Snap Judgment" [Part I],
+                            Revised Final Draft, <unitdate normal="1981">1981</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00052" level="file">
+                    <did>
+                        <unittitle><title render="italic">M*A*S*H:</title> "Snappier Judgment" [Part
+                            II], Revised Final Draft, <unitdate normal="1981">1981</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00053" level="file">
+                    <did>
+                        <unittitle><title render="italic">M*A*S*H:</title> "Wheelers and Dealers,"
+                            Final Draft, <unitdate normal="1981">1981</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00054" level="file">
+                    <did>
+                        <unittitle><title render="italic">M*A*S*H:</title> "Bombshells," Final
+                            Draft, <unitdate normal="1981">1981</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00055" level="file">
+                    <did>
+                        <unittitle><title render="italic">M*A*S*H:</title> "The Joker is Wild,"
+                            story outline, script, <unitdate normal="1982">1982</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00056" level="file">
+                    <did>
+                        <unittitle><title render="italic">M*A*S*H:</title> "Say No More," scripts,
+                                <unitdate normal="1982">1982</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00057" level="file">
+                    <did>
+                        <unittitle><title render="italic">M*A*S*H:</title> "Strange Bedfellows,"
+                            Revised Final Draft, <unitdate normal="1982">1982</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00058" level="file">
+                    <did>
+                        <unittitle><title render="italic">M*A*S*H:</title> "Trick or Treatment,"
+                            Final Draft, <unitdate normal="1982">1982</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00059" level="file">
+                    <did>
+                        <unittitle><title render="italic">M*A*S*H:</title> "U.N. the Night and the
+                            Music," Final Draft, <unitdate normal="1982">1982</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00060" level="file">
+                    <did>
+                        <unittitle><title render="italic">M*A*S*H:</title> "Where There’s a Will
+                            There's a War," story outline</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00061" level="file">
+                    <did>
+                        <unittitle><title render="italic">M*A*S*H:</title> miscellaneous script
+                            pages</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00062" level="file">
+                    <did>
+                        <unittitle><title render="italic">M*A*S*H:</title> correspondence, call
+                            sheets, articles</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00063" level="file">
+                    <did>
+                        <unittitle><title render="italic">M*A*S*H:</title> clippings, notes, story
+                            ideas</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9274-00064" level="file">
+                    <did>
+                        <unittitle><title render="italic">M*A*S*H:</title> photographs</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
