@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+	revised 2004-09-15 JLR; 
+	revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+	added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+	<eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+		countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+		relatedencoding="dublincore" findaidstatus="edited-full-draft">
+		<eadid encodinganalog="identifier" countrycode="US" mainagencycode="InU-Li"
+			identifier="InU-Li-VAA1950">InU-Li-VAA1950</eadid>
+		<filedesc>
+
+			<titlestmt>
+				<titleproper encodinganalog="title">English literature mss.,</titleproper>
+				<subtitle>Papers, <date normal="1630/1800">1630-1800,</date> of English literature
+					at the Lilly Library, Indiana University, Bloomington, Indiana</subtitle>
+
+			</titlestmt>
+			<publicationstmt>
+
+				<publisher encodinganalog="publisher">Indiana University Digital Library
+					Program</publisher>
+				<date encodinganalog="date" normal="2013" type="publication">© 2013</date>
+			</publicationstmt>
+			<notestmt>
+
+				<!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+				<note encodinganalog="rights">
+					<p><date normal="2013">© 2013</date> Trustees of Indiana University. All rights
+						reserved.</p>
+				</note>
+
+			</notestmt>
+		</filedesc>
+
+		<profiledesc>
+			<creation>XML finding aid derived from Microsoft Word 2003 file through cutting and
+				pasting. <!--description of how the finding aid was created, for example: XML finding aid derived from
+[paper by means of scanning and OCR] [OCR file edited for typographical errors before encoding]
+[typescript by rekeying] [word processing program and version number]
+[<extref href="" linktype="simple" title="" actuate="onrequest" show="new">HTML collection description</extref>]. -->
+				<lb/>[date of source: <lb/>Finding aid encoded by Ryan K. Lee, Lilly Library,
+				Indiana University, <date normal="2005-09-28">September 28, 2005</date>
+			</creation>
+			<!-- iso three-digit 639-2 value for @langcode can be found at http://www.loc.gov/standards/iso639-2/langcodes.html -->
+			<langusage>Description is in <language scriptcode="Latn" encodinganalog="language"
+					langcode="eng">English.</language></langusage>
+		</profiledesc>
+		<!-- revisiondesc is required -->
+		<!-- record when the finding aid is initiated in first 'change' element, with subsequent changes listed below the first, and the final 'change' element indicating date finding aid completed -->
+		<revisiondesc>
+			<change>
+				<date normal="2005-09-28">September 28, 2005</date>
+				<item>Encoded finding aid begun.</item>
+			</change>
+			<change>
+				<date normal="2006-02-14">February 14, 2006</date>
+				<item>Encoded finding aid completed.</item>
+			</change>
+			<change>
+				<date normal="2012-02-15">February 15, 2012</date>
+				<item>Encoded finding aid updated</item>
+			</change>
+			<change>
+				<date normal="2012-08-24">August 24, 2012</date>
+				<item>Updated acquisition info.</item>
+			</change>
+			<change>
+				<date normal="2013-02-12">February 12, 2013</date>
+				<item>Added indexing terms.</item>
+			</change>
+		</revisiondesc>
+	</eadheader>
+
+
+	<!-- the 'frontmatter' element is a wrapper that bundles prefatory text found before the start of the archival description <archdesc>. It focuses on the creation, publication, or use of the finding aid rather than information
+about the materials being described. Examples include a title page, preface, dedication, and instructions for
+using a finding aid. -->
+
+	<!-- information should be included as you would wish it to appear on a titlepage of a printed finding aid -->
+
+	<archdesc audience="external" level="collection" type="inventory" relatedencoding="marc">
+		<!-- @type value may alternatively be 'bulk' -->
+		<!-- use the label attribute for these elements to determine what label is displayed -->
+		<did>
+			<head>Summary Information</head>
+			<!-- record the name of the repository even if its display is to be suppressed -->
+			<repository id="lilly" encodinganalog="852" label="Repository">
+				<corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+					>Lilly Library (Indiana University, Bloomington)</corpname>
+				<address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+			</repository>
+			<!-- per RLG guidelines recommendation, do not nest unitdate element within unittitle element -->
+			<unittitle encodinganalog="245$a" label="Title">English literature mss.,</unittitle>
+			<unitdate encodinganalog="245$f" normal="1630/1800" type="inclusive"
+				>1630-1800</unitdate>
+			<!-- do not include separating punctuation between the unit title and the unit date - the stylesheets will supply a comma where appropriate. -->
+			<!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+			<!-- record the type of date - bulk or inclusive - in the type attribute. -->
+			<!-- recommended -->
+			<unitid encodinganalog="099" label="Collection No.">LMC 1334</unitid>
+			<physdesc encodinganalog="300" label="Extent">
+				<extent>20 items</extent>
+				<!-- if both linear feet and number of items included, separate by lb tag -->
+			</physdesc>
+			<!-- langmaterial element replaces langmaterial attribute on eadheader element in 2002 DTD -->
+			<!-- if collection includes significant non-english material add code to langmaterial element -->
+			<langmaterial encodinganalog="546" label="Language">Materials are in <language
+					langcode="eng">English, </language><language langcode="lat">Latin,
+				</language>and <language langcode="fre">French.</language></langmaterial>
+			<abstract encodinganalog="520" label="Abstract">Consists of individual items acquired
+				separately either as a gift, purchase, transfer, or removal from a variety of
+				sources, relating to English literature. Additions continue to be made.</abstract>
+		</did>
+		<accessrestrict encodinganalog="506">
+			<head>Access Restrictions</head>
+			<p>This collection is open for research.</p>
+		</accessrestrict>
+
+		<arrangement encodinganalog="351">
+			<head>Arrangement</head>
+			<p>Arranged chronologically.</p>
+		</arrangement>
+		<scopecontent encodinganalog="520">
+			<head>Scope and Content Note</head>
+			<p>This collection contains mostly correspondence from major figures in English
+				literature between 1630-1800. It also includes literary works, including manuscripts
+				and bound volumes; financial records; and legal documents.</p>
+		</scopecontent>
+		<controlaccess>
+			<head>Indexing Terms</head>
+			<controlaccess>
+				<head>Names</head>
+				<list>
+					<item><extref
+							xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/burns+robert+1759-1796+auld+lang+syne">
+							<persname encodinganalog="700" source="lcnaf">Burns, Robert, 1759-1796.
+								Auld lang syne</persname>
+						</extref></item>
+					<item><extref
+							xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/gray+thomas+1716-1771">
+							<persname encodinganalog="700" source="lcnaf">Gray, Thomas,
+								1716-1771.</persname>
+						</extref></item>
+					<item><extref
+							xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/pepys+samuel+1633-1703">
+							<persname encodinganalog="700" source="lcnaf">Pepys, Samuel,
+								1633-1703.</persname>
+						</extref></item>
+					<item><extref
+							xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/richardson+samuel+1689-1761">
+							<persname encodinganalog="700" source="lcnaf">Richardson, Samuel,
+								1689-1761.</persname>
+						</extref></item>
+					<item><extref
+							xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/swift+jonathan+1667-1745">
+							<persname encodinganalog="700" source="lcnaf">Swift, Jonathan,
+								1667-1745.</persname>
+						</extref></item>
+					<item><extref
+							xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/lilly+josiah+kirby+1893-1966">
+							<persname encodinganalog="700" source="lcnaf">Lilly, Josiah Kirby,
+								1893-1966, former owner.</persname>
+						</extref></item>
+				</list>
+			</controlaccess>
+			<controlaccess>
+				<head>Topics</head>
+				<list>
+					<item>
+						<extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/hornbooks{su}">
+							<subject encodinganalog="650" source="lcnaf">Hornbooks.</subject>
+						</extref></item>
+					<item>
+						<extref
+							xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/english+literature+17th+century{su}">
+							<subject encodinganalog="650" source="lcnaf">English literature --17th
+								century.</subject>
+						</extref></item>
+					<item>
+						<extref
+							xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/english+literature+18th+century{su}">
+							<subject encodinganalog="650" source="lcnaf">English literature --18th
+								century.</subject>
+						</extref></item>
+					<item>
+						<extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/prov.+ball{su}">
+							<subject encodinganalog="650" source="lcnaf">Prov.: Ball.</subject>
+						</extref></item>
+				</list>
+			</controlaccess>
+		</controlaccess>
+
+		<relatedmaterial encodinganalog="544 1">
+			<head>Related Material</head>
+			<p>Additional finding aids for English literature mss. are available. <lb/>
+				<extref
+					xlink:href="http://purl.dlib.indiana.edu/iudl/findingaids/lilly/InU-Li-VAC2016"
+					>English Literature mss., 1801-1850</extref><lb/>
+				<extref
+					xlink:href="http://purl.dlib.indiana.edu/iudl/findingaids/lilly/InU-Li-VAC3046"
+					>English Literature mss., 1851-1900</extref><lb/>
+				<extref
+					xlink:href="http://purl.dlib.indiana.edu/iudl/findingaids/lilly/InU-Li-VAC3047"
+					>English Literature mss., 1901-1950</extref><lb/>
+				<extref
+					xlink:href="http://purl.dlib.indiana.edu/iudl/findingaids/lilly/InU-Li-VAC3048"
+					>English Literature mss., 1951-1993</extref><lb/>
+				<extref
+					xlink:href="http://purl.dlib.indiana.edu/iudl/findingaids/lilly/InU-Li-VAC3049"
+					>English Literature mss., undated</extref>
+			</p>
+		</relatedmaterial>
+
+		<!-- required; 'descgrp' element replaces admininfo element in 2002 DTD -->
+		<descgrp>
+			<head>Administrative Information</head>
+			<!-- required even if unrestricted -->
+
+			<!-- recommended for manuscript collections, if known -->
+			<acqinfo encodinganalog="541">
+				<head>Acquisition Information</head>
+				<p>Received from numerous sources at various times. Accession information is given
+					for the majority of entries.</p>
+			</acqinfo>
+			<!-- required even if unrestricted -->
+			<userestrict encodinganalog="540">
+				<head>Usage Restrictions</head>
+				<p>Prior arrangements are not necessary before coming to the Library, however,
+					patrons from out of town are encouraged to communicate with the Library in
+					advance of their visits to ascertain availability of materials.</p>
+				<p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+					Library.</p>
+			</userestrict>
+			<prefercite encodinganalog="524$a">
+				<head>Preferred Citation</head>
+				<p>[Item], English literature mss., Lilly Library, Indiana University, Bloomington,
+					Indiana.</p>
+			</prefercite>
+		</descgrp>
+		<!-- required for collection level; optional for lower levels -->
+
+		<!--optional -->
+		<!-- element organization deprecated in DTD version 2002; @encodinganalog may be used to differentiate between 351 subfield a (organization) and subfield b (arrangement). -->
+
+		<!-- recommended; this information would be included for marc amc record -->
+		<!-- should include all personal and corporate names, and subject headings -->
+
+
+
+
+		<dsc type="combined">
+			<!-- unittitle is the only required element within component -->
+			<!-- possible values for @level include: class, collection, file, fonds, item, otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+			<c01 id="VAA1950-00001" level="series">
+				<did>
+					<unittitle>English literature mss. </unittitle>
+				</did>
+				<scopecontent>
+					<p>Arranged chronologically at the item level.</p>
+				</scopecontent>
+				<c02 id="VAA1950-00002" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1630-08-27">[1630] Aug. 27 - </unitdate>
+							<persname>Chappell, William, 1582-1649, bishop of Cork and
+								Ross.</persname> To William Moreton. Will do his uttermost to carry
+							out the bargain made with his brothers and Moreton. </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1 p. 24 cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>In ink.</item>
+								<item>On a slip of paper pasted at the top of the letter is a note
+									in red ink that Chappell was Milton’s tutor.</item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Gift. <date normal="1965">1965.</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA1950-00003" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1666-04-12">1666 Apr. 12 - </unitdate>
+							<persname>Pepys, Samuel, 1633-1703, diarist.</persname> Certificate for
+							payment of a bill due Francis Moles for a supply of Flanders hemp
+							delivered to his Majesty’s stores at Woolwich.</unittitle>
+						<physdesc>
+							<extent>Autograph Document Signed 1 p. 30 cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>From the library of <persname>Josiah Kirby Lilly, Jr.</persname>,
+							Indianapolis, Indiana. <date normal="1956">1956.</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA1950-00004" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1715-03-07">1715 Mar. 7 - </unitdate>
+							<persname>Swift, Jonathan, 1667-1745, satirist.</persname> Appointment
+							of Philipp Kerby to the cathedral staff. </unittitle>
+						<physdesc>
+							<extent>Autograph Document Signed 2 p. 33 cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>In Latin.</item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Removed from Swift’s <title render="italic">Travels into several remote
+								nations of the world …By Lemuel Gulliver</title>. London, Printed
+							for Benjamin Motte, <date normal="1726">1726</date>. (Lilly PR3724 .G7
+							1726).</p>
+						<p>From the library of <persname>Josiah Kirby Lilly, Jr.</persname>,
+							Indianapolis, Indiana. <date normal="1956">1956</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA1950-00005" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1718-11-20">1718 Nov. 20 - </unitdate>
+							<persname normal="Rowe, Nicholas">[Rowe, Nicholas], 1674-1718,
+								poet.</persname> Probate copy of will. </unittitle>
+						<physdesc>
+							<extent>Autograph Document 1 leaf. 29 x 40 cm.</extent>
+							Folio.</physdesc>
+						<note>
+							<list>
+								<item>Written on vellum.</item>
+								<item>Witnessed by Alexander Pope and Thomas Hill. Published in
+										<title render="italic">Gentleman’s Magazine</title>, <date
+										normal="1922-03">March, 1822</date>, pages 207-208.</item>
+								<item>Appended is the grant of probate bearing a blue seal and
+									written in Latin to Anne Rowe on <date normal="1719-06-19">June
+										19, 1719</date>, by the Prerogative Court of Canterbury, and
+									as entered in the several offices including those of Thomas
+									Foley and Edward Harley, <date normal="1719-07-06/1719-11-09"
+										type="inclusive">July 6-Nov. 9, 1719</date>, 18 x 17 cm.
+								</item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1975">1975</date>. Accessioned <date
+								normal="1977">1977</date>. </p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA1950-00006" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1724">1724 - </unitdate>On the <persname>Lord Carteret
+								Lord Lieutenant of Ireland</persname> 1724.
+								<genreform>Poem.</genreform>
+						</unittitle>
+						<physdesc>
+							<extent>Autograph Document 1 p. 18 cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>On initial inserted blank of Richard Verstegen, <title render="italic">A
+								restitution of decayed intelligence: In antiquities.</title>
+							Antwerp. Printed … by Robert Bruney, And to be sold at London… by Iohn
+							Norton and Iohn Bill, <date normal="1605">1605</date> (Lilly DA152 .V56
+							R43).</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA1950-00007" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1742-03-12/1743-03-12" type="inclusive">1742/3 Mar. 12
+								- </unitdate>
+							<persname>Whitefield, George, 1714-1770, clergyman.</persname> At Mr.
+							Abbots in Charles square near Hoxton. To Dear Sir. Has received the
+							books, for which he thanks the gentlemen of the Society, but no bill.
+							Wishes to call upon Sir Erasmus Philipps. Requests also half A dozen
+							hornbooks.</unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1 p. 19.2 cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Endorsed on verso: Recd <date normal="1742-03-15/1743-03-15"
+										type="inclusive">15 March 1742[/3]</date> Answrd, 15
+									March…</item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Gift 1984 from the estate of Elisabeth Ball.</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA1950-00008" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1748-04-14">1748 Apr. 14 - </unitdate>
+							<persname>Richardson, Samuel, 1689-1761, novelist.</persname> London,
+							[England]. To [William] Warburton. Refers to Clarissa and a paper by
+							Warburton. </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1 p. 19 cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>From the library of <persname>Josiah Kirby Lilly, Jr.</persname>,
+							Indianapolis, Indiana. <date normal="1956">1956</date>.</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA1950-00009" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1750">1750 - </unitdate>
+							<persname>Gray, Thomas, 1716-1771, poet.</persname> Elegy written in a
+							country-church yard. </unittitle>
+						<physdesc>
+							<extent>Autograph Document 4 p. 17 cm.</extent>
+							<genreform>Facsimile.</genreform>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1952">1952</date>.</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA1950-00010" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1752-10-14">1752 Oct. 14 - </unitdate>
+							<persname>Warburton, William, 1698-1779, bishop of
+								Gloucester.</persname> Prior Park. To "Sir." Deals with an order of
+							various books and insisting on his usual style of binding—boards with
+							wide margins. </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1 p. 18 cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1966">1966</date>.</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA1950-00011" level="item">
+					<did>
+						<unittitle><unitdate normal="1753-09-04">1753, Sept. 4 - </unitdate>
+							<persname>Garrick, David, 1717-1779, actor, dramatist.</persname>
+							London. To Dear Sir. Speaks of Mrs. Byron, Sir Rowland Meredith, Mr.
+							Richardson, Lord Orrey, and Draper. </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 3p. 25 cm.</extent>
+							<genreform>Facsimile</genreform>
+						</physdesc>
+					</did>
+					<originalsloc>
+						<p>Source of original unknown</p>
+					</originalsloc>
+					<acqinfo>
+						<p>Mounted between pages 2 and 3 of Robson, The Old Play-Goer, London, James
+							Masters, <date normal="1846">1846</date> (Lilly PN2594 .R6 1846). <date
+								normal="1973">1973</date>.</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA1950-00012" level="item">
+					<did>
+						<unittitle><unitdate normal="1759-08-02">1759 Aug. 2 - </unitdate>
+							<persname>Richardson, Samuel, 1689-1761, novelist.</persname> London,
+							England. To Lady Echlin. Pleased to hear of her safe arrival in England. </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1 p. 23cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>From the library of <persname>Josiah Kirby Lilly, Jr.</persname>,
+							Indianapolis, Indiana. <date normal="1956">1956</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA1950-00013" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1760-06-09">1760 June 9 - </unitdate>
+							<persname>Sterne, Laurence, 1713-1768, author.</persname> York. To "My
+							Lord," William Warburton, bishop of Gloucester. Sends Sermons; thanks
+							him "for the generosity of yr Protection;" "just setting down to go on
+							with Tristram." </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1 p. 23 cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Printed in Sterne’s <title render="italic">Letters</title> …
+									London, T. Becket, <date normal="1775">1775</date>, I:98-99;
+										<title render="italic">The life and letters of Laurence
+										Sterne, by Lewis Melville</title> … New York, Appleton,
+										<date normal="1912">1912</date>. I:232-233, which identifies
+									the addressee. </item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Gift. <date normal="1962">1962</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA1950-00014" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1770/1771" type="inclusive">1770-1771 - </unitdate>
+							<persname>Gray, Thomas, 1716-1771, poet</persname>
+							<persname>Lister, Martin, 1638?-1712.</persname> Martini Lister, M.D.
+							Historiae sive synopsis methodicae conchyliorum et tabularum
+							anatomicarum; editio altera. Recensuit et indicibus auxit Gulielmus
+							Huddesford … Oxonii, E typ. Clarendoniano, <date normal="1770"
+								>1770</date>. </unittitle>
+						<note>
+							<list>
+								<item>Thomas Gray’s copy, with notes in his hand on many of the
+									margins.</item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p> Purchased. <date normal="1959">1959</date>
+						</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA1950-00015" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1771-01-16">1771 Jan. 16 - </unitdate>
+							<unitdate normal="1772-02-26">1772 Feb. 26 - </unitdate> Chippendale,
+							Haig, &amp; co., London. Bill to David Garrick. </unittitle>
+						<physdesc>
+							<extent>Autograph Document 1p. 34 cm.</extent>
+							<genreform>Photostat.</genreform>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Removed from <title render="italic">Pineapples of finest flavour or a
+								selection of sundry unpublished letters of the English Roscius,
+								David Garrick, edited by with an introduction and notes by David
+								Mason Little.</title> Cambridge, Harvard University Press, <date
+								normal="1930">1930</date>. (Lilly PR3468 .A4 1930). <date
+								normal="1964">1964</date>
+						</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA1950-00016" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1777">[1777] - </unitdate>
+							<persname>[Sheridan , Richard Brinsley], 1751-1816,
+								dramatist.</persname>
+							<title render="italic">School for Scandal.</title>
+						</unittitle>
+						<physdesc>
+							<extent>Autograph Document 140 p. 20 x 25 cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Partial cast of the first performance Drury Lane, <date
+										normal="1777-05-08">May 8, 1777</date>.</item>
+								<item>Forty-three corrections on thirty-six pages.</item>
+								<item>Text varies greatly from the printed versions.</item>
+								<item>Embossed crest of Glendon Hall on title page.</item>
+								<item>Bookplate of George Chetwynd, licenser of plays at the time of
+									the first performance, on inside cover.</item>
+								<item>Bound in early 19th century half calf and cloth, lacks spine .
+								</item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1970">1970</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA1950-00017" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1778">1778 - </unitdate>
+							<persname>[Gwinnett, Samuel], 1732-1792, clergyman.</persname>
+							<title render="italic">Four Historic Tragedies on the several Models of
+								Grecian and the Modern Drama.</title>
+						</unittitle>
+						<physdesc>
+							<extent>Autograph Document (fair copy) [413] p. 18cm</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>In brown slipcase.</item>
+								<item>Lacks covers but retains blue leather spine with horizontal
+									gold lines. </item>
+								<item>Green ribbon marker</item>
+							</list>
+						</note>
+						<note>
+							<list>
+								<head>Contents:</head>
+								<item>[First part]: The Appian Way, Metius Curtius, The Druid
+									Judgement, Marcus Manlius Capitolinus.</item>
+								<item>[Second part: elegies, odes, sonnets], some of which honor the
+									River Usk and other rivers, Member of Parliament from Gloucester
+										<persname>Sir Charles Barrow, bart., -1789</persname>, the
+									godmother of Button Gwinnett, <persname>Barbara Button,
+										1695?-1775</persname>, physician <persname>John Caple [i.e.,
+										Capel] of Gloucester, -1753</persname>, alderman
+										<persname>George Heathcote, -1768</persname>; and
+									"Sepulchral Inscriptions" concerning the tombstone of Gwinnett’s
+									father and mother, Samuel and Anne (Emes) Gwinnett, and another
+									Inscription to Gulielmo [ i.e. William] Warburton, dated "<date
+										normal="1778-10-20">friday October 20, 1778</date>". </item>
+							</list>
+							<list>
+								<item>Occasional commentary notes the dates of composition of the
+									pieces and other references, that three pieces are college
+									exercises (Gwinnett attended Oriel College, Oxford), and that in
+										<date normal="1761">1761</date>
+									<persname>Button Gwinnett, 1735-1777</persname>, Signer of the
+									Declaration of Independence, returned from Canada (page 220) </item>
+								<item>Front marbled flyleaf , recto and verso, bears the initials of
+										<persname>Emilia Gwinnett, 1741-1807</persname>, who
+									inherited the manuscript from her brother and whose collection
+									was sold in <date normal="1816">1816</date> (British Museum
+									94:991) </item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Gift 1984 from the estate of Elisabeth Ball.</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA1950-00018" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1787-01-15">[1787 Jan. 15] - </unitdate>
+							<persname>Burns, Robert, 1759-1796, poet.</persname> Lawn Market. To
+							[Patrick] Miller, Edinburgh , Scotland. Requests lease of farm from "my
+							honored, kind Patron." </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 2p. 23 cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Shelved in Vault 2.</item>
+								<item>In red protective case.</item>
+								<item>The letter was addressed to Peter Miller which appears to be
+									an error. There is also some doubt as to whether the address is
+									in the hand of Burns. A farm was leased by burns from Patrick
+									Miller, banker. </item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>From the library of <persname>Josiah Kirby Lilly, Jr.</persname>,
+							Indianapolis, Indiana. <date normal="1956">1956</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA1950-00019" level="item">
+					<did>
+						<unittitle><unitdate normal="1788-12-07">[1788 Dec. 7] - </unitdate>
+							<persname>[Burns, Robert], 1759-1796, poet.</persname>
+							<title render="doublequote">Auld Lang Syne</title>. </unittitle>
+						<physdesc>
+							<extent>Autograph Document 2p. 23cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Shelved in Vault 2.</item>
+								<item>Earliest known version.</item>
+								<item>In red protective case.</item>
+								<item>Accompanied by a letter from Henry Stevens to John Van Schaick
+									Lansing, <date normal="1859-01-07">Jan. 7, 1859</date>. </item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>From the library of <persname>Josiah Kirby Lilly, Jr.</persname>,
+							Indianapolis, Indiana. <date normal="1956">1956</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA1950-00020" level="item">
+					<did>
+						<unittitle><unitdate normal="1795-05-23">1795 May 23 - </unitdate>
+							<persname>Radcliffe, Mrs. Ann [(Ward), (Mrs. William Radcliffe)].
+								1764-1823, novelist</persname>, and <persname>William Radcliffe, fl.
+								1826, editor.</persname> "Received … of Geo.. . and John Robinson
+							five hundred pounds… in full for the Copyright of a Journey through
+							Holland and the Western Frontier of Germany…". </unittitle>
+						<physdesc>
+							<extent>Autograph Document Signed 1 p. 7x19 cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Embossed is an official receipt symbol for six pence.</item>
+								<item>Mounted on another sheet of paper, 24x22 cm, with the
+									watermark J. Whatman <date normal="1827">1827</date></item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Source unknown. Transferred from Lilly Library Administrative Office.
+								<date normal="1975">1975</date>.</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA1950-00021" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1796-03-10">1796 Mar. 10 - </unitdate>
+							<persname>Gabell, Henry Dison, 1764-1831, headmaster of Winchester,
+								author.</persname> To Cadell &amp; Davies, booksellers, Strand,
+							London, England. Refers to the Publication of his pamphlet. </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 23 cm. 2pp.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1967">1967</date></p>
+					</acqinfo>
+				</c02>
+			</c01>
+		</dsc>
+	</archdesc>
+</ead>

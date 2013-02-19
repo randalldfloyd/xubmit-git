@@ -1,0 +1,2366 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+	revised 2004-09-15 JLR; 
+	revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+	added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+	<eadheader audience="external" langencoding="iso639-2b" repositoryencoding="iso15511"
+		countryencoding="iso3166-1" dateencoding="iso8601" relatedencoding="dublincore"
+		scriptencoding="iso15924" findaidstatus="edited-full-draft">
+		<eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+			identifier="InU-Li-VAA2016">InU-Li-VAA2016</eadid>
+		<filedesc>
+			<!-- This is a description of the electronic finding aid, not the original finding aid or the collection -->
+			<!-- Make title "xxxx mss., yyyy-yyyy"-->
+			<!--Make subtitle "Papers, yyyy-yyyy, of [person] at the Lilly Library, Indiana University, Bloomington, Indiana-->
+			<titlestmt>
+				<titleproper encodinganalog="title">English literature mss.,</titleproper>
+				<subtitle>Papers, <date normal="1801/1850">1801-1850</date>, of English literature
+					at the Lilly Library, Indiana University, Bloomington, Indiana</subtitle>
+
+			</titlestmt>
+			<publicationstmt>
+
+				<publisher encodinganalog="publisher">Indiana University Digital Library
+					Program</publisher>
+				<date encodinganalog="date" normal="2013" type="publication">© 2013</date>
+			</publicationstmt>
+			<notestmt>
+
+				<!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+				<note encodinganalog="rights">
+					<p><date normal="2013">© 2013</date> Trustees of Indiana University. All rights
+						reserved.</p>
+				</note>
+
+			</notestmt>
+		</filedesc>
+		<profiledesc>
+			<creation>XML finding aid derived from Microsoft Word 2003 file through cutting and
+				pasting. <!--description of how the finding aid was created, for example: XML finding aid derived from
+[paper by means of scanning and OCR] [OCR file edited for typographical errors before encoding]
+[typescript by rekeying] [word processing program and version number]
+[<extref href="" linktype="simple" title="" actuate="onrequest" show="new">HTML collection description</extref>]. -->
+				<lb/>[date of source: <lb/>Finding aid encoded by Ryan K. Lee, Lilly Library,
+				Indiana University, <date normal="2005-10-27">October 27, 2005</date>
+			</creation>
+			<!-- iso three-digit 639-2 value for @langcode can be found at http://www.loc.gov/standards/iso639-2/langcodes.html -->
+			<langusage>Description is in <language scriptcode="Latn" encodinganalog="language"
+					langcode="eng">English.</language></langusage>
+		</profiledesc>
+		<!-- revisiondesc is required -->
+		<!-- record when the finding aid is initiated in first 'change' element, with subsequent changes listed below the first, and the final 'change' element indicating date finding aid completed -->
+		<revisiondesc>
+			<change>
+				<date normal="2005-10-27">October 27, 2005</date>
+				<item>Encoded finding aid begun.</item>
+			</change>
+			<change>
+				<date normal="2006-02-14">February 14, 2006</date>
+				<item>Encoded finding aid completed.</item>
+			</change>
+			<change>
+				<date normal="2012-02-15">February 15, 2012</date>
+				<item>Encoded finding aid updated.</item>
+			</change>
+			<change>
+				<date normal="2012-08-24">August 24, 2012</date>
+				<item>Updated acquisition info.</item>
+			</change>
+			<change>
+				<date normal="2013-02-12">February 12, 2013</date>
+				<item>Added indexing terms.</item>
+			</change>
+		</revisiondesc>
+	</eadheader>
+	<!-- the 'frontmatter' element is a wrapper that bundles prefatory text found before the start of the archival description <archdesc>. It focuses on the creation, publication, or use of the finding aid rather than information
+about the materials being described. Examples include a title page, preface, dedication, and instructions for
+using a finding aid. -->
+	<!-- information should be included as you would wish it to appear on a titlepage of a printed finding aid -->
+
+
+	<archdesc audience="external" level="collection" type="inventory" relatedencoding="marc">
+		<!-- @type value may alternatively be 'bulk' -->
+		<!-- use the label attribute for these elements to determine what label is displayed -->
+		<did>
+			<head>Summary Information</head>
+			<!-- record the name of the repository even if its display is to be suppressed -->
+			<repository id="lilly" encodinganalog="852" label="Repository">
+				<corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+					>Lilly Library (Indiana University, Bloomington)</corpname>
+				<address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+			</repository>
+			<!-- per RLG guidelines recommendation, do not nest unitdate element within unittitle element -->
+			<unittitle encodinganalog="245$a" label="Title">English literature mss.,</unittitle>
+			<unitdate encodinganalog="245$f" normal="1801/1850" type="inclusive"
+				>1801-1850</unitdate>
+			<!-- do not include separating punctuation between the unit title and the unit date - the stylesheets will supply a comma where appropriate. -->
+			<!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+			<!-- record the type of date - bulk or inclusive - in the type attribute. -->
+			<!-- recommended -->
+			<unitid encodinganalog="099" label="Collection No.">LMC 1334</unitid>
+			<physdesc encodinganalog="300" label="Extent">
+				<extent>99 items</extent>
+				<!-- if both linear feet and number of items included, separate by lb tag -->
+			</physdesc>
+			<!-- langmaterial element replaces langmaterial attribute on eadheader element in 2002 DTD -->
+			<!-- if collection includes significant non-english material add code to langmaterial element -->
+			<langmaterial encodinganalog="546" label="Language">Materials are in <language
+					langcode="eng">English.</language></langmaterial>
+			<abstract encodinganalog="520" label="Abstract">Consists of individual items acquired
+				separately either as a gift, purchase, transfer, or removal from a variety of
+				sources, relating to English literature. Additions continue to be made.</abstract>
+		</did>
+		<accessrestrict encodinganalog="506">
+			<head>Access Restrictions</head>
+			<p>This collection is open for research.</p>
+		</accessrestrict>
+
+		<arrangement encodinganalog="351$x">
+			<head>Arrangement</head>
+			<p>Arranged chronologically. Undated items are arranged alphabetically at the end of the
+				series.</p>
+		</arrangement>
+		<scopecontent encodinganalog="520$a$b">
+			<head>Scope and Content Note</head>
+			<p>This collection contains mostly correspondence from major figures in English
+				literature between 1801-1850. It also includes literary works, including manuscripts
+				and bound volumes; financial records; and legal documents.</p>
+		</scopecontent>
+
+		<controlaccess>
+			<head>Indexing Terms</head>			
+			<controlaccess>
+				<head>Names</head>
+				<list>
+					<item><extref
+							xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/brydges+egerton+sir+1762-1837">
+							<persname encodinganalog="700" source="lcnaf">Brydges, Egerton, Sir,
+								1762-1837.</persname>
+						</extref></item>
+					<item><extref
+							xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/dickens+charles+1812-1870">
+							<persname encodinganalog="700" source="lcnaf">Dickens, Charles,
+								1812-1870.</persname>
+						</extref></item>
+					<item><extref
+							xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/shelley+percy+bysshe+1792-1822">
+							<persname encodinganalog="700" source="lcnaf">Shelley, Percy Bysshe,
+								1792-1822.</persname>
+						</extref></item>
+					<item><extref
+							xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/thackeray+william+makepeace+1811-1863">
+							<persname encodinganalog="700" source="lcnaf">Thackeray, William
+								Makepeace, 1811-1863.</persname>
+						</extref></item>
+					<item><extref
+							xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/wordsworth+william+1770-1850">
+							<persname encodinganalog="700" source="lcnaf">Wordsworth, William,
+								1770-1850.</persname>
+						</extref></item>
+					<item><extref
+							xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/lilly+josiah+kirby+1893-1966">
+							<persname encodinganalog="700" source="lcnaf">Lilly, Josiah Kirby,
+								1893-1966, former owner.</persname>
+						</extref></item>
+					<item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/marks+john+l.">
+							<persname encodinganalog="700" source="lcnaf">Marks, John L., former
+								owner.</persname>
+						</extref></item>
+					<item><extref
+							xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/parker+william+r.+1893-1966">
+							<persname encodinganalog="700">Parker, William R., 1893-1966, former
+								owner.</persname>
+						</extref></item>
+					<item><extref
+							xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/marks+john+l.+1893-1966">
+							<persname encodinganalog="700">Marks, John L., 1893-1966, former
+								owner.</persname>
+						</extref></item>
+					<item><extref
+							xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/tucker+josephine+1893-1966">
+							<persname encodinganalog="700">Tucker, Josephine, 1893-1966, former
+								owner.</persname>
+						</extref></item>
+					<item><extref
+							xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/gumuchian+c.+field+1893-1966">
+							<persname encodinganalog="700">Gumuchian, C. Field, 1893-1966, former
+								owner.</persname>
+						</extref></item>
+				</list>
+			</controlaccess>
+			<controlaccess>
+				<head>Topics</head>
+				<list>
+					<item><extref
+							xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/english+literature+19th+century{su}">
+							<subject encodinganalog="650" source="lcnaf">English literature --19th
+								century.</subject>
+						</extref></item>
+				</list>
+			</controlaccess>
+		</controlaccess>
+
+		<relatedmaterial encodinganalog="544 1">
+			<head>Related Material</head>
+			<p>Additional finding aids for English literature mss. are available. <lb/>
+				<extref
+					xlink:href="http://purl.dlib.indiana.edu/iudl/findingaids/lilly/InU-Li-VAC1950"
+					>English Literature mss., 1630-1800</extref><lb/>
+				<extref
+					xlink:href="http://purl.dlib.indiana.edu/iudl/findingaids/lilly/InU-Li-VAC3046"
+					>English Literature mss., 1851-1900</extref><lb/>
+				<extref
+					xlink:href="http://purl.dlib.indiana.edu/iudl/findingaids/lilly/InU-Li-VAC3047"
+					>English Literature mss., 1901-1950</extref><lb/>
+				<extref
+					xlink:href="http://purl.dlib.indiana.edu/iudl/findingaids/lilly/InU-Li-VAC3048"
+					>English Literature mss., 1951-1993</extref><lb/>
+				<extref
+					xlink:href="http://purl.dlib.indiana.edu/iudl/findingaids/lilly/InU-Li-VAC3049"
+					>English Literature mss., undated</extref>
+			</p>
+		</relatedmaterial>
+		<!-- required; 'descgrp' element replaces admininfo element in 2002 DTD -->
+		<descgrp>
+			<head>Administrative Information</head>
+			<!-- required even if unrestricted -->
+
+			<!-- recommended for manuscript collections, if known -->
+			<acqinfo encodinganalog="541">
+				<head>Acquisition Information</head>
+				<p>Received from numerous sources at various times. Accession information is given
+					for the majority of entries.</p>
+			</acqinfo>
+			<!-- required even if unrestricted -->
+			<userestrict encodinganalog="540">
+				<head>Usage Restrictions</head>
+				<p>Prior arrangements are not necessary before coming to the Library, however,
+					patrons from out of town are encouraged to communicate with the Library in
+					advance of their visits to ascertain availability of materials.</p>
+				<p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+					Library.</p>
+			</userestrict>
+			<prefercite encodinganalog="524$a">
+				<head>Preferred Citation</head>
+				<p>[Item], English literature mss., Lilly Library, Indiana University, Bloomington,
+					Indiana.</p>
+			</prefercite>
+		</descgrp>
+		<!-- required for collection level; optional for lower levels -->
+
+
+		<!--optional -->
+		<!-- element organization deprecated in DTD version 2002; @encodinganalog may be used to differentiate between 351 subfield a (organization) and subfield b (arrangement). -->
+
+		<!-- recommended; this information would be included for marc amc record -->
+		<!-- should include all personal and corporate names, and subject headings -->
+
+		<dsc type="combined">
+			<!--unittitle is the only required element within component-->
+			<!--possible values for @level include: class, collection, file, fonds, item, otherlevel, recordgrp, series, subfonds, subgrp, subseries-->
+			<c01 id="VAA2016-00001" level="series">
+				<did>
+					<unittitle>English literature mss.</unittitle>
+				</did>
+				<scopecontent>
+					<p>Arranged chronologically at the item level, undated items are further
+						arranged alphabetically.</p>
+				</scopecontent>
+				<c02 id="VAA2016-00002" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1802-10-29">1802 Oct. 29 - </unitdate>
+							<persname>Scott, Sir Walter, 1771-1832, novelist. </persname> Laswade
+							Cottage. Memorandum of an agreement about the Minsrelsy of the Scottish
+							Border </unittitle>
+						<physdesc>
+							<extent>Autograph Document Signed 1p. 12cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>From the library of <persname>Josiah Kirby Lilly, Jr.</persname>,
+							Indianapolis, Indiana. <date normal="1956">1956</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00003" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1805-11-03">1805 Nov. 3 - </unitdate>
+							<persname>Gilchrist, Octavius Graham, 1779-1823, antiquary. </persname>
+							Stamford, England To Thomas Hill. Recommends young man for position;
+							books. </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 3p. 25 cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Removed from Gilchrist’s <title render="italic">An examination of the
+								charges maintained by Messrs. Malone, Chalmers, and others of Ben
+								Ben Johnson’s enmity, &amp; c. towards Shakespeare</title>
+							....London, Printed for Taylor and Hessey, <date normal="1808"
+								>1808</date>. (Lilly PR2958 .J604). <date normal="1960">1960</date>
+						</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00004" level="item">
+					<did>
+						<unittitle><unitdate normal="1806-02-10">1806 Feb. 10 - </unitdate>
+							<persname>Hill, Joseph, fl. 1806.</persname> To"Madam". Deals with
+							finances.</unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 2 p. 22cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1966">1966</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00005" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1807-01-01">1807 Jan. 1 - </unitdate>
+							<persname>De Quincey, Thomas, 1785-1859, essayist.</persname> To John
+							Kelsall, merchant, Manchester, England. "I beg you will give my kind
+							Respects to Mrs. Kelsall with the agreeable news that Mrs. Radcliffe has
+							finished a new romance…" </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1 p. 22cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1971">1971.</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00006" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1807-01-20">1807 Jan. 20 - </unitdate>
+							<persname>Scott, Sir Walter, 1771-1832, novelist.</persname> Receipt for
+							four hundred and fifty pounds sterling. Proceeds from his father’s
+							estate. </unittitle>
+						<physdesc>
+							<extent>Autograph Document Signed 1p. 16 cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>From the library of <persname>Josiah Kirby Lilly, Jr.</persname>,
+							Indianapolis, Indiana. <date normal="1956">1956</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00007" level="item">
+					<did>
+						<unittitle><unitdate normal="1807-03/1807-12" type="inclusive">1807
+								Mar.-Dec. - </unitdate>
+							<title>The Juvenile Repository.</title> Published by Daniel Manuscript.
+							Fort. Bristol.</unittitle>
+						<physdesc>
+							<extent>Autograph Document [208]p. 17cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Bound.</item>
+								<item>Housed in a book-style box.</item>
+								<item>Issues for March through December</item>
+								<item>Each issue preceded by four blue pages regarding
+									content</item>
+								<item>Introductory Address refers to a former periodical by the same
+									title which existed only for a few months </item>
+								<item>Largely in script style, a few pages in print style</item>
+								<item>Contains brief articles, chiefly about literary or science
+									matters, letters to the Editor, and poetry </item>
+								<item>Satirical rendering on current literary styles and
+									periodicals, and not a publication for young people. </item>
+							</list>
+						</note>
+					</did>
+					<custodhist>
+						<p>Ownership signatures: S.J. Gardiner; C. Field Gumuchian 3942</p>
+					</custodhist>
+					<acqinfo>
+						<p>Gift 1984 from the estate of Elisabeth Ball. </p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00008" level="item">
+					<did>
+						<unittitle><unitdate normal="1807-04-23">1807 Apr. 23 - </unitdate>
+							<persname>Park, Thomas, 1759-1834, bibliographer.</persname> Church Row,
+							Hempstead. To James Lackington, Temple of the Muses, Finsbury Square.
+							"It is my wish … to have the Observations of Ritson put up with the
+							fragment of vol. IV." </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1 p. 20 cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Removed from Park’s Sonnets, and other small poems. London, Printed for
+							G. Sael, <date normal="1797">1797</date> (Lilly PR5115 .P75 S6 1797).
+								<date normal="1968">1968</date>
+						</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00009" level="item">
+					<did>
+						<unittitle><unitdate normal="1808-10-19">1808 Oct. 19 - </unitdate>
+							<persname>Jeffrey, Francis Jeffrey, Lord, 1773-1850, judge,
+								critic.</persname> 62 Queen Street, Edinburgh. To "Dear Sir … shall
+							not fail to pay my respects to you at Cambridge the next time… as to
+							Lord [Royston’s?] book I had a peep of it at Wimbledon when I visited
+							Lord Aberdeen the day after you had left him…". </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 2pp. 23cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Source unknown. Transferred from Lilly Library Administrative Office.
+								<date normal="1975">1975.</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00010" level="item">
+					<did>
+						<unittitle><unitdate normal="1808">[1808] - </unitdate>
+							<persname>Horner, Francis, 1778-1817, politician. </persname> Temple. To
+							[Francis ] Jeffrey, [lord Jeffrey]. Hopes Musgrave’s "communications
+							worthy of being inserted." Refers to Jeffrey’s "habit of working over
+							some … of his contributor’s articles." </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 3p. 19cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Purchased <date normal="1966">1966</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00011" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1809-06-15/1809-09-09" type="inclusive">1809 June
+								15-Sept. 9 - </unitdate>
+							<persname>Dickinson, William, 1771-1837, member of
+								parliament.</persname> Journal of a tour in England, Ireland, and
+							Scotland. Describes one of the mills in Manchester, also a calico
+							printing and dyeing mill. In Ireland the subjects included the Wakes,
+							roads, police and crime, religion, the results of rebellion, and
+							currency. </unittitle>
+						<physdesc>
+							<extent>Autograph Document [128] p. 33cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Bound in old half calf, lettered "Irish Tour" in gold on
+									spine.</item>
+								<item>A map of the present and proposed lines of the inland
+									navigation of Ireland by Henry Walker, land surveyor, 1800, with
+									holograph notes in ink and pencilled binding instructions to Mr.
+									Frazer on verso of map bound in at the end of the journal.
+									37x50cm. </item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1968">1968</date>
+						</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00012" level="item">
+					<did>
+						<unittitle><unitdate normal="1810-11-20">1810 Nov. 20 - </unitdate>
+							<persname>Wordsworth, Christopher, 1774-1846, educator.</persname>
+							Bocking, Essex, England. To John Cockfield, Esqre., Upton, near Westham,
+							Essex. Discusses Stephen Hales, "Friendly Admonition to the Drinkers of
+							Spirituous Liquors" and Lindley Murray’s "The Power of Religion on the
+							Mind." </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 4p. 23cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1972">1972</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00013" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1810-11-26">1810 Nov. 26 - </unitdate>
+							<persname>Wordsworth, Christopher, 1774-1846, educator.</persname>
+							Deanery Bocking, Essex, England.To John Cockfield Esqre., Upton, near
+							Westham, Essex. "…accept gladly the obliging offer which you make me a
+							copy of the new edition of the Power of Religion on the Mind." </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 2p. 23cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1972">1972</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00014" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1811-05-13">1811 May 13 - </unitdate>
+							<persname>Mathias, Thomas James, 1754?-1835, satirist.</persname> Middle
+							Scotland Yard, Whitehall. To [Charles Gordon Perceval, 2d baron] Arden.
+							St. James Place. Presenting him a copy of his recent book. </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1p. 18cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Removed from Thomas James Mathias, <title render="italic">Poesie liriche
+								e prose toscone</title>. London, William Bulmer &amp; Co., <date
+								normal="1810">1810</date>. (Lilly PR4987 .M2 P6). <date
+								normal="1966">1966</date>
+						</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00015" level="item">
+					<did>
+						<unittitle><unitdate normal="1811-07-23">1811 July 23 - </unitdate>
+							<persname>Richardson, William, 1740-1820, author </persname> Portrush
+							Colerain[e Ireland]. To William Dickinson. Concerns the planting of
+							Fiorin grass.</unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 4p. 23cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1968">1968</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00016" level="item">
+					<did>
+						<unittitle><unitdate normal="1812-02-07">1812 Feb. 7 - </unitdate>
+							<persname>Lewis, Matthew Gregory, 1775-1818, novelist, dramatist, poet.
+							</persname> London. Autograph receipt for six pounds, eleven shillings,
+							and sixpence.</unittitle>
+						<physdesc>
+							<extent>Autograph Document 8cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Accompanied by an envelope "autograph of ‘Monk’ Lewis."</item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Removed from Lewis, The monk … London, J. Bell, <date normal="1796"
+								>1796</date>. (Lilly PR4887 .M6, 1796, vol. 1). <date normal="1967"
+								>1967</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00017" level="item">
+					<did>
+						<unittitle><unitdate normal="1813-01-28">1813 Jan. 28 - </unitdate>
+							Litchfield &amp; Hobhouse, solicitors. Summons to John and Leigh Hunt to
+							appear in His Majesty’s Court of Kings Bench … for certain misdemanors
+							….</unittitle>
+						<physdesc>Autograph Document Signed 1p. 33cm.</physdesc>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1970">1970</date></p>
+					</acqinfo>
+				</c02>
+
+				<c02 id="VAA2016-00018" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1813-11-08">1813 Nov. 8 - </unitdate>
+							<persname>Galt, John, 1779-1839, novelist.</persname> 9 Burton Crescent
+							[London}. To Gentlemen. "The copperplate printer having nearly completed
+							his work I have desired Messrs. Nichols &amp; Co. to deliver the sheets
+							of my volume of letters to your order…" </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1p. 25cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>1 item</item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1971">1971</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00019" level="item">
+					<did>
+						<unittitle><unitdate normal="1814-04-30">1814 Apr. 30 - </unitdate>
+							<persname>Park, Thomas, 1759-1834, bibliographer.</persname>
+							<genreform> Hempstead.</genreform> To Thomas Hill, 2 New Inn, Wyche
+							Street. Recommends some books and expresses dissatisfaction of an offer
+							made to him by Sotheby &amp; Co.</unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1p. 21cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Removed from Park’s <title render="italic">Sonnets and other small
+								poems</title>. London, Printed for G. Sael, <date normal="1797"
+								>1797</date>. (Lilly PR5115 .P75 S6 1797). <date normal="1968"
+								>1968</date>
+						</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00020" level="item">
+					<did>
+						<unittitle><unitdate normal="1814-08-27">1814 Aug. 27 - </unitdate>
+							<persname>Godwin, William, 1756-1836, author.</persname> To Taylor,
+							John, Norwich, England. On the elopement of his daughter Mary with
+							Shelley; financial matters.</unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 8p. 23cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Shelved in Vault 2.</item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>From the library of <persname>Josiah Kirby Lilly, Jr.</persname>,
+							Indianapolis, Indiana. <date normal="1956">1956.</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00021" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1814-10-27">[1814] [Oct. 27] - </unitdate>
+							<persname>Shelley, Mary Wollstonecraft (Godwin), 1797-1851,
+								novelist.</persname> To [Percy Bysshe Shelley]. Plans to meet him
+							"at three and bring heaps of Skinner Street news." </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1p. 19cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Shelved in Vault 2.</item>
+								<item>Bound in a morocco folder with etchings of Mary Wollstonecraft
+									Shelley, Percy Shelley and Field Place. </item>
+								<item>Published in Frederick L. Jones, ed. <title render="italic"
+										>The Letters of Mary W. Shelley</title>, Norman, University
+									of Oklahoma Press, <date normal="1944">1944</date>, vol. I, p.
+									4. (PR5398 .A35 v. 1) </item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>From the library of <persname>Josiah Kirby Lilly, Jr.</persname>,
+							Indianapolis, Indiana. <date normal="1956">1956</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00022" level="item">
+					<did>
+						<unittitle>
+							<unitdate certainty="approximate" normal="1815">1815? - </unitdate>
+							<persname>Daniel, George, 1789-1864, author, book collector. </persname>
+							<title>An April Day</title>. </unittitle>
+						<physdesc>
+							<extent>Autograph Document 4 leaves. 12cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Stitched as a booklet with decorative title.</item>
+								<item>Written in pencil on title page: "Composed by my father and
+									given to me on my birthday"</item>
+								<item>In another hand "By George Daniel"</item>
+								<item>Accompanied by an envelope which bears the note: "Verses by
+									George Daniel to his little daughter Emma Cato Daniel, about
+									1815" </item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1972">1972</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00023" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1815/1816" type="inclusive">1815-1816 - </unitdate>
+							<persname>Bouchier, Barton, 1794-1865, religious writer.</persname>
+							[Poems]. </unittitle>
+						<physdesc>
+							<extent>Autograph Document Signed [11]. 17.5 cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Call number: Lilly PR4161 .B15 P7.</item>
+								<item>Ten poems , eight of which are initialed: B.B. See
+									Inventory</item>
+								<item>One poem signed with reversed signature: Notarb Rehcuob
+									(Bouchier changed his name from Boucher after 1822) </item>
+								<item>Some of the poems are addressed to Mary and one to Mrs. N.
+									Thornbury (Bouchier married Mary Thornbury, the daughter of Mrs.
+									Nathaniel Thornbury in 1816) </item>
+								<item>Poems are written in Bouchier, <title render="italic">Poems on
+										Various Occasions</title>, Oxford, W. Baxter, <date
+										normal="1815">1815</date>, which is inscribed "To Miss
+									Thornbury with the Author’s best Compliments" </item>
+								<item>Inside cover bears note in the hand of Frederick Locker
+									[-Lampson] about the identity of the author, who was in fact his
+									uncle </item>
+								<item>Bookplates of <persname>Frederick Locker-Lampson, 1821-1895,
+										poet,</persname> by Walter Crane (not Greenaway: see Lilly
+									Z994 .E5C35 page 177) and of <persname>Montgomery Evans II,
+										1898-1954, collector</persname>, by T. Diedrichsen (not the
+									same as the bookplate in Lilly PS3523 .A592M9) </item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Gift. <date normal="1986">1986</date>
+						</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00024" level="item">
+					<did>
+						<unittitle><unitdate normal="1816-12-21">1816 Dec 21 - </unitdate>
+							<persname>Scott, Sir Walter, 1771-1832, novelist.</persname> Abbotsford,
+							[Melrose, Scotland]. To "Sir." "You will be surprised to find <title>Old
+								Mortality</title> has got into print." </unittitle>
+						<physdesc>
+							<extent>Facsimile of Autograph Letter Signed 2p. 24cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Removed from John Buchan, … <title render="italic">Sir Walter Scott … a
+								Centenary Address …</title> San Francisco, the Book Club of
+							California, <date normal="1932">1932</date>. (Lilly PR5333 ,B9). <date
+								normal="1965">1965</date>
+						</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00025" level="item">
+					<did>
+						<unittitle><unitdate normal="1817-04-29">1817 Apr. 29 - </unitdate>
+							<persname>Edgeworth, Maria, 1767-1849, novelist.</persname> Deep Dene.
+							To Lady [Susan Leveson- Gower Ryder] Harrowby. Refers to correspondent’s
+							note and ill health of sister. </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 2p. 18cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>From the library of <persname>Josiah Kirby Lilly, Jr.</persname>,
+							Indianapolis, Indiana. <date normal="1956">1956</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00026" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1818-02-21/1818-03-09" type="inclusive">1818
+								Feb.21-Mar. 9 - </unitdate>
+							<persname>Shelley, Percy Bysshe, 1792-1822, poet.</persname>
+						</unittitle>
+						<unittitle>Check made payable to Messrs. Brooker &amp; Co.</unittitle>
+						<physdesc>
+							<extent>Autograph Document Signed 11x18cm.</extent>
+						</physdesc>
+						<unittitle>Check made payable to Messrs. Gilby &amp; Co.</unittitle>
+						<physdesc>
+							<extent>Autograph Document Signed 7x19cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>From the library of <persname>Josiah Kirby Lilly, Jr.</persname>,
+							Indianapolis, Indiana. <date normal="1956">1956</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00027" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1818-05-28">1818 May 28 - </unitdate>
+							<persname>Scott, Michael, 1789-1835, author.</persname> Marriage
+							contract between Michael Scott and Margaret Cathcart Bogle. </unittitle>
+						<physdesc>
+							<extent>Autograph Document Signed 3p. 39cm.</extent> Folio.</physdesc>
+						<note>
+							<list>
+								<item>Accompanied by an extract of birth from the registrar of
+									births at Barony Parish of Glasgow recording the birth of
+									Scott’s ninth child, a boy, <date normal="1834-01-23">Jan. 23,
+										1834</date>. Document Signed 1p. 12cm. </item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1969">1969</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00028" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1819-04-27">1819 Apr. 27 - </unitdate>
+							<persname>Byron, George Gordon Noel Byron, 6th baron, 1788-1824,
+								poet.</persname> To Editor of Galignani’s Messenger, 18 Rue
+							Vivienne, Paris, [France]. Byron objects to two statements made in
+							Galignani’s <title>Messenger</title> about him the author of the work
+								<title render="doublequote">The Vampire,</title> and giving his
+							residence in the Island of Mitylene. </unittitle>
+						<physdesc>
+							<extent>Facsimile of Autograph Letter Signed 3pp. 27cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Removed from <title render="italic">The Works of Lord Byron</title>,
+							Paris, A and W. Galignani, <date normal="1727">1727</date>. (Lilly
+							PR4350 .E27). <date normal="1967">1967</date>
+						</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00029" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1819-06-09">1819 June 9 - </unitdate>
+							<persname>Dibdin, Thomas Frognall, 1776-1847, bibliographer.</persname>
+							Spencer House. To Dawson Turner, Flagdongs Hotel, 144 Oxford St[reet].
+							"You undertake too much to execute with comfort to yourself. I was here
+							by 12, according to appointment; but no Inhabitant of Flagdong’s hotel." </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1p. 21cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Purchase. <date normal="1968">1968</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00030" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1819-11-27/1833-03" type="inclusive">1819 Nov. 27-1833
+								Mar. - </unitdate>
+							<persname>Sotheby, William, 1757-1833, author.</persname> Autograph
+							Album. Poems by William Sotheby, copies of poems by Byron, by William
+							and other Members of the Sotheby family, poem signed by Catherine
+							Fanshawe, autograph poem by Arthur Hallam and Fanny Kemble, original
+							drawings and water colors, a few Ackerman prints in color of furniture
+							and other prints. </unittitle>
+						<physdesc>
+							<extent>Autograph Document 110p 19x24cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Bound in red morocco with tooled borders in gilt and
+									clasp.</item>
+							</list>
+						</note>
+					</did>
+					<custodhist>
+						<p>From the library of John L. Marks, Chippendale, Earlswood.</p>
+					</custodhist>
+					<acqinfo>
+						<p>Purchased. <date normal="1966">1966</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00031" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1820-02-24">[1820?] [Feb. 24?] - </unitdate>
+							<persname>Keats, John, 1795-1821, poet.</persname> To Fanny Brawne.
+							Concerning his health. </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 2p. 20cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Shelved in Vault 2.</item>
+								<item>Published in Maurice Buxton Forman, ed., <title
+										render="italic">The Letters of John Keats</title>, London,
+									1948, p. 469. (Lilly. Wordsworth PR4836 .A5 F72 1948). </item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>From the library of <persname>Josiah Kirby Lilly, Jr.</persname>,
+							Indianapolis, Indiana. <date normal="1956">1956</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00032" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1821-11-11">1821 Nov. 11 - </unitdate>
+							<persname>Shelley, Percy Bysshe, 1792-1822, poet.</persname> Pisa
+							[Italy]. To Ollier &amp; Co., London, England. Refers to Hellas and
+							Adonais.</unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 3p. 24cm</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Shelved in Vault 2.</item>
+								<item>Published in Roger Ingpen, ed., <title render="italic">The
+										Letters of Percy Bysshe Shelley</title>, London, G. Bell,
+									1915, vol. II, p. 921-922. (PR 5431 .A3 I52) </item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>From the library of <persname>Josiah Kirby Lilly, Jr.</persname>,
+							Indianapolis, Indiana. <date normal="1956">1956</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00033" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1821/1834" type="inclusive">[1821-1834] - </unitdate>
+							<persname>Moore, Thomas, 1779-1852, poet.</persname> [<title>National
+								melodies</title>: lyrics by Thomas Moore, music by Sir Henry Rowley
+							Bishop]. </unittitle>
+						<physdesc>
+							<extent>Autograph Document 36p. 24x29cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>No title page.</item>
+								<item>Title taken from cover.</item>
+								<item>Music in hand of Sir Henry Rowley Bishop; most of the lyrics
+									in hand of Thomas Moore. All the lyrics have been published.
+								</item>
+							</list>
+						</note>
+						<note>
+							<list>
+								<head>Contents:</head>
+								<item><title>Tis the Vine</title>, <date normal="1828-03-31">March
+										31, 1828</date>;</item>
+								<item><title>Ne’er talk of wisdom’s gloomy schools</title>, <date
+										normal="1822">1822</date>;</item>
+								<item><title>When thou shalt wander</title>, <date normal="1821"
+										>1821</date>;</item>
+								<item><title>My harp has one unchanging theme</title>, <date
+										normal="1821/1834" type="inclusive">n.d.</date>;</item>
+								<item><title>Love and hope</title>, <date normal="1821/1834"
+										type="inclusive">n.d.</date>;</item>
+								<item><title>I’ve a secret to tell thee</title>, <date normal="1834"
+										>1834</date>.</item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1956">1956</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00034" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1822-02-23">1822 Feb. 23 - </unitdate>
+							<persname>Grattan, Thomas Colley, 1792-1864, author. </persname>
+							Versailles. To Eugenius Roche, Bell Yard, Carey Street, Lincoln Inn
+							Fields. "I am obliged to quit my apartment …on the 12th April, by which
+							time I must positively decide on my plans for two or three yers to
+							come.—whether to go to London… to retire to Normandy… &amp; write more
+							stories…" </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 3p. 20cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1970">1970</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00035" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1822-05-13">[1822] May 13 - </unitdate>
+							<persname>Shelley, Percy Bysshe, 1792-1822, poet.</persname> Leriel,
+							[Italy]. To [Daniel] Roberts, Genoa, [Italy]. Announces arrival of his
+							boat Don Juan; mentions sailing conditions. </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 4 p. 24 cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Shelved in Vault 2.</item>
+								<item>Published in Roger Ingpen, ed., <title render="italic">The
+										Letters of Percy Bysshe Shelley</title>, London, G. Bell,
+										<date normal="1915">1915</date>, Vol. II, p. 966-968.
+									(PR5431 .A3152) </item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>From the library of <persname>Josiah Kirby Lilly, Jr.</persname>,
+							Indianapolis, Indiana. <date normal="1956">1956</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00036" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1822-12-18">1822 Dec. 18 - </unitdate>
+							<persname>Heber, Reginald, 1783-1826, bishop.</persname> To [Henry Hart]
+							Milman, St. Mary’s Reading, [England]. Discusses work and refers to The
+							"volume with our hymns" and a future meeting. </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 3p. 22cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>From the library of <persname>Josiah Kirby Lilly, Jr.</persname>,
+							Indianapolis, Indiana. <date normal="1956">1956</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00037" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1822">[1822] - </unitdate>
+							<persname>Laing, David, 1793-1878, bookseller, editor.</persname> Draft
+							for the Constitution of the Bannatyne Club. </unittitle>
+						<physdesc>
+							<extent>Autograph Document, 3 items, 2p. 32cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>With holograph corrections by Sir Walter Scott</item>
+								<item>Accompanied by the notice of the first anniversary meeting of
+									the Club Thursday, <date normal="1823-02-27">February 27th,
+										1823</date>, signed by the members who attended. Included is
+									also a printed page about the final meeting of the Club in <date
+										normal="1861">1861</date>. </item>
+								<item>Bound together in half morocco</item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1973">1973</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00038" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1823-12-04">1823 Dec. 4 - </unitdate>
+							<persname>Nicolas, Sir Nicholas, Harris, 1799-1848,
+								antiquary.</persname> Kew, Surrey. To Sir [Samuel] Egerton Brydges.
+							Refers to the fact that the discovery of materials about William Davison
+							in the British Museum persuaded him that enough "existed to form a
+							memoir of the unfortunate minister." </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 2pp. 22cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Removed from Nicolas, <title render="italic">Life of William
+								Davison</title> ... London, John Nicholas and son, <date
+								normal="1823">1823</date> (Lilly DA358 .d2N6). <date normal="1975"
+								>1975</date>
+						</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00039" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1823-12-09">1823 Dec. 9 - </unitdate>
+							<persname>Lamb, Charles, 1775-1834, essayist, humorist.</persname> India
+							House, [London,England]. To W[illiam] H[arrison] Ainsworth, 10 King’s
+							Street, Manchester, [England]. Refers to <title render="italic">The
+								workes of our antient and learned English poet Geffrey
+								Chaucer</title>. </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 3p. 20cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Removed from <title render="italic">The workes of our antient and learned
+								English poet, Geffrey Chaucer</title>… London, Printed by Adam
+							Islip, <date normal="1598">1598</date>. (Lilly PR1850 1598a). </p>
+						<p>From the library of <persname>Josiah Kirby Lilly, Jr.</persname>,
+							Indianapolis, Indiana. <date normal="1956">1956</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00040" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1824-05-21">1824 May 21 - </unitdate>
+							<persname>Porter, Jane, 1776-1850, novelist.</persname> Consbrook. To
+							Mrs. Tornoor, Parchment Street, Winchester. Refers to the illness of her
+							cousin, her mother, and her sister. </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 4p. 23cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Removed from Porter, <title render="italic">The Scottish Chiefs</title>…
+							London, Printed for Longman, Hurst, Rees, and Orme, <date normal="1810"
+								>1810</date>. (Lilly PR5189 .P4S4 v.1). <date normal="1968"
+								>1968</date>
+						</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00041" level="item">
+					<did>
+						<unittitle><unitdate normal="1824-09-22">1824 Sept. 22 - </unitdate>
+							<persname>Johnson, John, -1833</persname>, friend of Cowper. Yaxham
+							Parsonage near East Dereham, Norfold, [England]. To L. Saunders.
+							Circulating Library Conduit Street, Bond Street, London [England]. Gives
+							instructions for sending the portrait of William Cowper by
+							Abbott.</unittitle>
+						<physdesc>Autograph Letter Signed 4p. 23cm.</physdesc>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1966">1966</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00042" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1825-07-05">1825 July 5 - </unitdate>
+							<persname>Lamb, Charles, 1775-1834, essayist, humorist.</persname>
+							Colebrooke Cottage, Islington, [London, England]. To John Aitken, "As I
+							cannot arrange with a London Publisher to reprint "Rosamund Gray" as a
+							book, it will be at your service to admit into the Cabinet." </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1p. 16cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Removed from Lamb’s <title render="italic">A Tale of Rosamund
+								Gray</title>… London, Printed for Lee and Hurst, <date normal="1798"
+								>1798</date> (Lilly PR4862 .R6 1798).</p>
+						<p>From the library of Josiah Kirby Lilly Jr., Indianapolis, Indiana. <date
+								normal="1956">1956</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00043" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1825-07-16">1825 July 16 - </unitdate>
+							<persname>Sumner, Charles Richard, bp. of Winchester,
+								1790-1874.</persname> Carlton House. To [William Wyndham Grenville,
+							baron Grenville]. "I have had the honour of receiving the command of the
+							King to transmit to your Lordship on the part of His Majesty, a copy of
+							the posthumous treatise of Milton which has recently been discovered in
+							the State Paper Office." </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1p. 23cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Removed from John Milton, <title render="italic">Joannis Miltoni Angli de
+								Doctrina Christiana</title> ... Cambridge, <date normal="1825"
+								>1825</date> (Lilly PR3570 .D278)</p>
+						<p>From the library of William R. Parker, Bloomington, Indiana. <date
+								normal="1973">1973</date>.</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00044" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1825-07-16">1825 July 16 - </unitdate>
+							<persname>Sumner, Charles Richard, bp. of Winchester,
+								1790-1874.</persname> Carleton House. To C[harles] W[atkin]
+							W[illiams] Wynn. Transmitting copy of posthumous treatise of Milton
+							recently discovered in State paper office. </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1p. 23cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Removed from John Milton’s Joannis Miltoni Angli de Doctrina Christiana
+							... Cambridge, <date normal="1825">1825</date> (PR3571 .D63). <date
+								normal="1957">1957</date>
+						</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00045" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1826/1833" type="inclusive">1826-1833 - </unitdate>
+							<persname>Hoff, Martha Sophia.</persname> Album of verse and prose.
+							Copies of poems by Byron,Cowper, Johnson, Moliere, Schiller, and others. </unittitle>
+						<physdesc>
+							<extent>Autograph Document Signed [133] p. 19-25cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Seven leaves tipped in.</item>
+								<item>Bound in contemporary quarter striped morocco, straight
+									grained, with marbled boards, all in worn condition. </item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1968">1968</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00046" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1827-02-17">1827, Feb. 17 - </unitdate>
+							<persname>Robertson, George, 1750?-1832, writer.</persname> Bower Lodge.
+							To John Phillip Wood. "I am collecting materials for a Supplement to my
+							account of Ayrshire Families – which is intended chiefly for <emph
+								render="underline">corrections</emph> …." </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1 p. 22.5cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Tipped in Robertson, <title render="italic">Rural recollections, or, The
+								progress of improvement in agriculture and rural affairs</title>.
+							Irvine: Cunninghame Press, <date normal="1829">1829</date>. (Lilly S459
+							.R64 R94.)<date normal="1986">1986</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00047" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1828-03-11">1828 Mar. 11 - </unitdate>
+							<persname>Chantrey, Sir Francis Legatt, 1781-1841, sculptor.</persname>
+							Belgrave Place. To John Wilson Croker, Esq. "Yesterday I delivered the
+							commission for a statue of Mr. Canning…I know no man but yourself on
+							whose judgment I can with satisfaction depend…" </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1p. 18cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Note at top of letter: answered Mar. 11</item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1972">1972</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00048" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1828-04-04">1828 Apr. 4 - </unitdate>
+							<persname>Burke, John, 1787-1848, genealogical and heraldic
+								writer.</persname> 8 New Burlington St. To Sir Samuel Egerton
+							Brydges, Bart. Refers to Brydges review of his work on the peerage and
+							baronetage and notes that the "passage relative to the Barony of Chandos
+							[was] particularly assailed…" </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 3pp. 18cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Removed from George Frederick Beltz, <title render="italic">A review of
+								the Chandos Peerage Case, adjudicated 1803</title>… London, Richard
+							Bentley, <date normal="1834">1834</date> (Lilly KD4265.5.A3C45). <date
+								normal="1975">1975</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00049" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1829-01-19">1829 Jan. 19 - </unitdate>
+							<persname>Torre, Nicholas Lee, 1795?- author.</persname> Leamington,
+							Warwickshire, [England]. To Davies Gilbert. "I hope you will pardon my
+							presumption in laying before you a specimen of the work, respecting
+							which I took the liberty a few weeks since to trouble you with a
+							communication." </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 3p. 18cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Signed "Formerly Fellow of New Coll. Oxon."</item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Removed from George Canning <title render="italic">The Pilgrimage of
+								Mecca</title> … [Warwick, Heathcote, Printer], <date normal="1829"
+								>1829</date>. (Lilly PR4415 .C15P5). <date normal="1968">1968</date>
+						</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00050" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1829-03-10">1829 Mar. 10 - </unitdate>
+							<persname>Hogg, James, 1770-1835, poet. </persname> Mount Benger
+							[Scotland]. To [William] Blackwood, publisher. Hogg criticizes the
+							Editor of Blackwood’s Magazine for his treatment of sketches sent for
+							inclusion in the magazine. "What kind of a letter was your last to write
+							to a poet?" Hogg commends Allan Cuningham. "Allan likes those with
+							faults best as he generally turns them into the greatest beauties." The
+							author also desires that Mary (Botham) Howitt should receive a copy of
+							the Magazine. </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 2pp. 24cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Integral leaf blank.</item>
+								<item>Enclosed in red protective case.</item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1976">1976</date>. </p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00051" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1829-06-26">1829 June 26 - </unitdate>
+							<persname>Davies, George, bookseller.</persname> 33 Carmarthen Street,
+							Tottenham Court Road. To [Sir Francis Freeling]. Concerns Wadsworth’s
+							English Spanish Pilgrime. </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1p. 22cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Removed from James Wadsworth, <title render="italic">The English Spanish
+								Pilgrime </title>… London, Printed by T. Cotes and R.C. for Mich.
+							Sparke, <date normal="1630">1630</date> (Lilly PA398 .W2 1630). <date
+								normal="1968">1968</date>
+						</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00052" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1829-08-24">1829 Aug. 24 - </unitdate>
+							<persname>Hogg, James, 1770-1835, poet.</persname> Mount Benger,
+							[Scotland]. To Gaulding &amp; Dalmaine, London, [England]. "Your musical
+							work has slipped from my memory till I got Mr. Purdie’s letter
+							yesterday. I now send you three songs for it in My own wild stile which
+							I hope will please." </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 3p. 24 cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>In red protective case.</item>
+								<item>Appended are three poems, "O weel befa’ the guileless heart"
+									By the Ettrick Shepherd. Varies from the poem published as "O
+									weel befa’ the maiden gay," in <title render="italic"
+										>Songs</title> by the Ettrick Shepherd. Edinburgh, William
+									Blackwood, <date normal="1831">1831</date> (Lilly PR4791 .S6)
+									pages 117-120; and two "Fairy Songs" 18 and 24 lines in length,
+									By the Ettrick Shepherd.</item>
+								<item>Address panel on verso of letter has black wax seal.</item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1975-08">Aug. 1975</date>. Accessioned <date
+								normal="1976">1976</date>.</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00053" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1829-12-24">1829, Dec. 24 - </unitdate>
+							<persname>Coleridge, Samuel Taylor, 1772-1834, poet.</persname> [The]
+							Grove, Highgate [England]. Comment on William Blake’s <title
+								render="italic">The Ladies Charity School-house Roll of
+								Highgate</title>: "…the simplicity &amp; single-heartedness overall
+							– give this old Book, for me, a sort of charm…". </unittitle>
+						<physdesc>
+							<extent>Autograph Document Signed 2p. 15cm.</extent>
+						</physdesc>
+						<note>
+							<p>Book bears autograph of James Gillman, 1782-1839, surgeon, with whose
+								family Coleridge lived at Highgate </p>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Written on front flyleaf of Blake, <title render="italic">The Ladies
+								Charity School-house Roll of Highgate</title>, London, <date
+								normal="1670">1670</date>? (Lilly LC4096 .G7 B63). <date
+								normal="1972">1972</date>
+						</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00054" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1830-04-29">1830, Apr. 29 - </unitdate>
+							<persname>Scott, Sir Walter, 1771-1832, novelist.</persname> Abbotsford,
+							Melrose [Scotland]. To J.H. Hanshall Esq., West and Bedford Street,
+							Reading, Berkshire. "I am favoured with the safe receipt of your letter
+							of 25 April … the curious volume respecting the Discoverie of the
+							Lancaster Witches …" </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1p. 22cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Mounted on back flyleaf of Thomas Potts, <title render="italic">The
+								wonderfull discoverie of witches in the countie of Lancaster</title>
+							… London, <date normal="1613">1613</date>. (Lilly BF1581 .A2P6). <date
+								normal="1961">1961</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00055" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1830-08-18">1830, Aug. 18 - </unitdate>
+							<persname>Brydges, Samuel Egerton, 1762-1837, bibliographer,
+								genealogist.</persname> Geneva [Switzerland]. To [Joseph Haslewood].
+							"I sent a copy of the Prologues by a friend three weeks ago. I now send
+							this as a single sheet… I sent an essay on Collins to Pickering…" </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1p. 22cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Written in pencil on the page entitled Four Prologues in
+									Geneva Gems, <date normal="1831">1831</date>. </item>
+								<item>Another copy of the letter in ink in Haslewood’s hand with an
+									appended note dated <date normal="1830-08-26">26 Aug.
+										1830</date> concerning the receipt of a letter written on a
+									front end paper of Geneva Gems, <date normal="1831"
+									>1831</date>.</item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Both letters bound in Geneva Gems, <date normal="1831">1831</date> (Lilly
+							PR4252 .B7G32). <date normal="1975">1975</date>
+						</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00056" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1830-10-20">1830, Oct. 20 - </unitdate>
+							<persname>Rogers, Samuel, 1763-1855, poet, banker, talker.</persname> To
+							Sir Samuel Egerton Brydges Bart, at Geneva… [poem in the hand of Joseph
+							Haslewood]. </unittitle>
+						<physdesc>
+							<extent>Autograph Document 5pp. 22cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Note by Joseph Haslewood, Conduit Street, indicates the
+									"address… was written on the flyleaves of a copy of the Poem on
+									Italy by Samuel Rogers…" </item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Bound in Geneva Gems, <date normal="1831">1831</date> (Lilly PR4252
+							.B7G32). <date normal="1975">1975</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00057" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1830-11-01">1830 Nov. 1 - </unitdate>
+							<persname>Croker, John Wilson, 1780-1857, politician, author.</persname>
+							To John Murray. Proposes to hire someone to take down his translation in
+							short hand. </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 2 p. 18cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1966">1966</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00058" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1830-11-14">1830, Nov.14 - </unitdate>
+							<persname>Brydges, Sir Samuel Egerton, 1762-1837, bibliographer,
+								genealogist.</persname> Geneva, [Switzerland]. To Messr Bossange
+							&amp; Co., Booksellers, Marlborough Street, London. "…please to charge
+							one with this letter and after cutting offthe marginal writing send the
+							printed sheet to Mr. Haslewood … I remember with pleasure having recd
+							civilities from Mr. Lowell at Mr. Bossange’s shop at Paris…" </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 3pp. 22cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Written on pages 241-243 of Lex Terrae in Geneva Ges, <date normal="1831"
+								>1831</date>. (Lilly PR4252 .B7G32). <date normal="1975">1975</date>
+						</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00059" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1830-12-03">1830, Dec. 3 - </unitdate>
+							<persname>Brydges, Sir Samuel Egerton, 1762-1837, bibliographer,
+								genealogist.</persname> To Messr Bossange &amp; Co., Booksellers,
+							Marlborough Street, London. Mentions books that he wants sent and says
+							"pray cut off this, and send the sheet to Mr. Haslewood." </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1p. 22cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Written on page 257 with the address on page 272 of Lex Terrae in Geneva
+							Gems, <date normal="1831">1831</date>. (Lilly PR4252 .B7G32). <date
+								normal="1975">1975</date>
+						</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00060" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1830/1834" type="inclusive">[1830-1834] -
+							</unitdate>Byron’s <title>English Bards and Scotch Reviewers</title>. </unittitle>
+						<physdesc>
+							<extent>Printed and Autograph Document [122]p. 25.5cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Bound.</item>
+								<item>Prepared about <date normal="1830/1834" type="inclusive"
+										>1830-1834</date> (see pages 4, 107, 113, and Inventory of
+									Portraits), and bearing the name of Abraham Lincolne, Highbury
+									Place, <date normal="1834">1834</date>, in an oval on page 4 </item>
+								<item>Volume bound in black, contains the mounted pages of the 4th
+									edition, <date normal="1810">1810</date>; 30 portraits and views
+									as extra-illustrations (3 bound in, 27 loose leaves removed to
+									separate folder – See Inventory); and holograph copies of
+									published remarks critical of <title render="italic">English
+										Bards</title> … Ornamental title page prepared by Alfred
+									Bentley of Highbury Grange (pages 12-13) Suggested title page to
+									the volume of illustrations not present </item>
+								<item>Bookplate of Robert John Hopkins</item>
+								<item>Laid in: <list>
+										<item>1. "Illustrations in Mr. Turner’s ‘English Bards and
+											Sco. Reviewers’", <date normal="1824">1824</date>, 7 p.,
+											23cm., signed W.T., Jany, <date normal="1824"
+												>1824</date>. Page 5 makes reference to W. Lowell.
+											Page 6 has attached the printed page, An Alphabetical
+											List of Names mentioned in the <title render="italic"
+												>English Bards and Scotch Reviewers</title>, with
+											annotations in ink.</item>
+										<item>2. Letter of <persname>William Upcott, 1779-1845,
+												bibliographer</persname>, to Abraham Lincolne of
+											Highbury Place, <date normal="1833-06-08">1833, June
+												8</date>. See separate Calendar Card. </item>
+									</list>
+								</item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Gift 1984 from the estate of Elisabeth Ball.</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00061" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1831-01-01">1831 Jan. 1 - </unitdate>
+							<persname>Vestris, Mme. Lucia Elizabeth (Bartolozzi), 1797-1856,
+								actress, manager.</persname> Olympic Theatre. To The Editor of The
+							Age. "Madame Vestris has done herself the pleasure of placing the Editor
+							on the free list of the Olympic Theatre and feels assured thet the size
+							of the house will be kindly taken Into consideration." </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 2p. 18cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Removed from <title render="italic">Memoirs of the Life … of Madame
+								Vestris</title>…, London, <date normal="1839">1839</date> (Lilly
+							PN2598 .V58 W53). <date normal="1973">1973</date>
+						</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00062" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1831-04-22">1831, Apr. 22 - </unitdate>
+							<persname>Brydges, Sir Samuel Egerton, 1762-1837, bibliographer,
+								genealogist.</persname> Geneva, [Switzerland]. To J[oseph]
+							Haslewood, Esq., 40 Conduit Street. "I have sent you 3 copies by a
+							friend … of the first 2 sheets of Modern Aristocracy…"</unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1p. 22cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Inserted prior to Modern Aristocracy in Geneva Gems, <date normal="1831"
+								>1831</date> (Lilly PR4252 .B7G32). <date normal="1975">1975</date>
+						</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00063" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1831-05-19">1831 May 19 - </unitdate>
+							<persname>Hallam, Henry, 1777-1859, historian.</persname> To John
+							Murray. Asks to see State Paper office volume containing letters of
+							Henry VIII’s time. </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 2p. 18cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1966">1966.</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00064" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1831-09-10">1831 Sept. 10 - </unitdate>
+							<persname>Wordsworth, William, 1770-1850, poet.</persname> Rydal Mount.
+							To Sir Robert Ker Porter. City of Caracas. Discusses a rash financial
+							speculation, presumably in South American securities, and refers to
+							William Green and his Guide to the Lakes. "I am obliged to employ my
+							wife’s pen, in consequence of an inflammation in my eyelids". </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 3p. 23cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1971">1971.</date>
+						</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00065" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1831-11-02">1831 Nov. 2 - </unitdate>
+							<persname>Hogg, James, 1770-1835, poet.</persname> Altrive Lake,
+							Scotland. To "My dear Sir." Refers to literary matters. </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1p. 18cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>From the library of <persname>Josiah Kirby Lilly, Jr.</persname>,
+							Indianapolis, Indiana. <date normal="1956">1956</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00066" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1831">1831 - </unitdate>
+							<persname>Haslewood, Joseph, 1769-1833, antiquary.</persname>
+							Advertisement. "To this farrago, if so branded, an off-hand-title, is
+							given as deriving its value from the pen of Sir Samuel Egerton
+							Brydges…". </unittitle>
+						<physdesc>
+							<extent>Autograph Note Signed 1p. 22cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Bound in the volume entitled <title>Geneva Gems</title>, <date
+								normal="1831">1831</date> (Lilly PR4252 .B732). <date normal="1975"
+								>1975</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00067" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1831/1841" type="inclusive">1831-1841 - </unitdate>
+							<title>Anagrams and Conundrums.</title>
+						</unittitle>
+						<physdesc>
+							<extent>Autograph Document [233]p. 17.5cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Bound.</item>
+								<item>In several hands</item>
+								<item>Blank pages number 144, among which 14 plant leaves are
+									pressed</item>
+							</list>
+							<list>
+								<head>Contents include:</head>
+								<item>Anagrams and Conundrums with answers;</item>
+								<item>Charades and their Explanations;</item>
+								<item>Selections;</item>
+								<item>Book lists dated <date normal="1834-08-09">Aug. 9,
+									1834</date>, at Chester, <date normal="1841-03-01">Mar. 1,
+										1841</date>, in parlor case, and n.d. which included a Poll
+									book for Chester for <date normal="1826">1826</date> (pages
+									213-216, 220-222, 230); </item>
+								<item>Memorandum for <date normal="1833-02-06/1833-04-02"
+										type="inclusive">Feb. 6-Apr. 2, 1833</date> in which a man
+									comes from Campechee to visit his ill father in Chester and
+									attend his funeral at Queen Street Chapel (p.. 225-228); </item>
+								<item>and a note on <date normal="1831-12-02">Dec. 2, 1831</date>,
+									regarding the Distance to Barbadoes (p. 233). </item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Gift 1984 from the estate of Elisabeth Ball.</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00068" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1832-07-26">1832 July 26 - </unitdate>
+							<persname>Brydges, Sir Samuel Egerton, 1762-1837, bibliographer,
+								genealogist.</persname> Geneva. To Stacey Grimaldi, Esq. "I hope
+							some sheets of Stemmata Illustria remain, and that my sons will be able
+							to find a copy for you…". </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1p. 7cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Removed from Brydges, Stemmata Illustria … Paris, Printed by J. Smith,
+								<date normal="1825">1825</date> (Lilly CS349 .B916S8). <date
+								normal="1975">1975</date>
+						</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00069" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1832-10-03">1832 Oct. 3 - </unitdate>
+							<persname>Wordsworth, William, 1770-1850, poet.</persname>
+							<title render="doublequote">Go, faithful Portrait!</title>
+						</unittitle>
+						<physdesc>
+							<extent>Autograph Document Signed 1p. 18cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Framed with photograph. Wordsworth Room. Sonnet published in
+										<title render="italic">The poetical works of William
+										Wordsworth</title>. London, Edward Moxon, <date
+										normal="1837">1837</date>. vol. 3, p. 101 (Lilly PR 5850
+									1836d). Differs considerably from the published text. </item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>From the library of <persname>Josiah Kirby Lilly, Jr.</persname>,
+							Indianapolis, Indiana. <date normal="1956">1956</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00070" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1833-01-04">1833 Jan. 4 - </unitdate>
+							<persname>Hunt, Leigh, 1784-1859, poet.</persname> 5 York Buildings, New
+							Road. To [Samuel Laman] Blanchard. Cannot accept the invitation because
+							of a family engagement. </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 2p. 13cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Apparently pages 1 and 3, with page 2 lacking</item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>From the library of <persname>Josiah Kirby Lilly, Jr.</persname> ,
+							Indianapolis, Indiana. <date normal="1956">1956</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00071" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1833-01">1833 Jan. - </unitdate>
+							<persname>Shinn, W.C., fl. 1833.</persname> Collection of verses from
+							favored authors.</unittitle>
+						<physdesc>
+							<extent>Autograph Document Signed 149p. 19cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Bound</item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1967">1967</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00072" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1833-06-08">1833 June 8 - </unitdate>
+							<persname>Upcott, William, 1779-1845, bibliographer.</persname> London
+							Institution. To Abraham Lincolne, Esq., 33 Highbury Place. Suggests that
+							Lincolne will "feel gratified" to see Byron’s English Bards aand Scotch
+							Reviewers Illustrated by Mr. Lowell, a partner in the House of Bossange
+							&amp; Co., Great Marlborough Street. </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1p. 20.4cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Integral address leaf bears remnant of red seal.</item>
+								<item>Watermark: Charles Skipper London</item>
+								<item> Letter is laid in Byron’s <title render="italic">English
+										Bards and Scotch Reviewers</title>, 1830-1834 (bound
+									volume). English literature mss. See separate Calendar Card.
+								</item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Gift 1984 from the estate of Elisabeth Ball.</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00073" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1833-08-30">1833 Aug. 30 - </unitdate>
+							<persname>Croker, John Wilson, 1780-1857, politician, author.</persname>
+							To Edward Hawke Locker, Greenwich, [England]. Condition of Lord _____;
+							Hopes to see him soon. </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 3p. 20cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1966">1966</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00074" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1834-02-18">1834 Feb. 18 - </unitdate>
+							<persname>Pierce, Egan, 1772-1849, author.</persname> Dublin, [Ireland].
+							To Benjamin [Nottingham] Webster, Esq., T.R.D.L., 2, Museum Street,
+							Bloomsbury, [England] . … "I have used all the <emph render="underline"
+								>Art</emph> I am master of to <emph render="underline"
+								>persuade</emph> the Irish Public that The only place to see "<title
+								render="underline">Life in Dublin</title>" is at the [..?.] The
+								<emph render="underline">Actors</emph> are all upon the <emph
+								render="underline">qui vive</emph> about the event…" </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1 p. 19cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Address on verso of letter</item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Removed from Egan, <title render="italic">Finish … to the Life in
+								London</title>, London, Printed by C. Baynes… <date normal="1830"
+								>1830</date> (Lilly PR4649 .E45L52). <date normal="1975"
+							>1975</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00075" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1834">[1834] - </unitdate>
+							<persname>Martineau, Harriet, 1802-1876, author.</persname>
+							<title>Retrospect of Western Travel.</title>
+						</unittitle>
+						<physdesc>
+							<extent>Autograph Document Signed 811p. 25cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Shelved in Vault 2.</item>
+								<item>Except for slight changes, as published in London, Saunders
+									and Otley, <date normal="1838">1838</date>. (Lilly E165 .M33) </item>
+								<item>Three volumes in four. Bound in full green morocco.</item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>From the library of <persname>Josiah Kirby Lilly, Jr.</persname>,
+							Indianapolis, Indiana. <date normal="1956">1956</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00076" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1835-09-07">1835 Sept. 7 - </unitdate>
+							<persname>Guiccioli, Teresa (Gamba) contessa [afterwards Boissy],
+								1800?-1873.</persname> To Dr. Lardner. "I shall wait for your letter
+							with impatience natural to real friendships."</unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1 p. 14cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Removed from Guiccioli, <title render="italic">Lord Byron juge par les
+								temoins de sa vie</title>. Richard Bentley, <date normal="1869"
+								>1869</date>. (Lilly PR4382 .G9 1869). <date normal="1967"
+								>1967</date>
+						</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00077" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1836-05-10">1836 May 10 - </unitdate>
+							<persname>Bodham, Anne, cousin of Cowper.</persname> To Messrs. Baldwin
+							and Cradock. Gives permission for the publication of William Cowper’s
+							letters. </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1p. 22cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Accompanied by picture of Anne Bodham and William
+									Cowper.</item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1966">1966</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00078" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1836-09-07">1836 Sept. 7 - </unitdate>
+							<persname>Whewell, William, 1794-1866, author, editor.</persname>
+							Glastonbury. To Andrew Crosse, Bromfield nr. Bridgewater./ "In
+							consequence of the very interesting account of your experiments which
+							you gave at Bristol, I am extremely desirous to see your apparatus and
+							its results …the liberty of coming with my friend Mr. Conybeare
+							…".</unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 3pp. 23cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>On the address leaf Bridgewater is crossed out and Taunton
+									written in</item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Source unknown. Transferred from Lilly Library Administrative Office.
+								<date normal="1975">1975</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00079" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1840-04-11">1840, Apr. 11 - </unitdate>
+							<persname>Knowles, James Sheridan, 1874-1862, actor,
+								dramatist.</persname> [Akerfoyle?] via Stirling, Scotland. To [
+							William?} Moxon. "Your invitation reached me last night. But I am hard
+							at work … Remind your Brother of his printing promise …".</unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1p. 25cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Mounted between pages 124-125 of Robson, <title render="italic">The Old
+								Play-Goer</title>, London, Joseph Masters, <date normal="1846"
+								>1846</date>. (Lilly PN2594 .R6 1846) <date normal="1973"
+								>1973</date>
+						</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00080" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1842-01-12">1842 Jan. 12 - </unitdate>
+							<persname>Rogers, Samuel, 1763-1855, poet.</persname> St. James’s Place,
+							[London.] To "Dear Sir." Thanking him for a volume of poetry; "Volume
+							intended for Mr. Wordsworth shall be carefully conveyed to
+							him."</unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 2p. 18cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Removed from <title render="italic">Recollections of the table-talk of
+								Samuel Rogers</title> … ed. by the late Rev. Alexander Dyce … New
+							Southgate, H.A. Rogers, <date normal="1887">1887</date> (PR5235 .A41).
+								<date normal="1955">1955</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00081" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1842-02-07">[1842 Feb. 7] - </unitdate>
+							<persname>Thackeray, William Makepeace, 1811-1863, novelist.</persname>
+							11 Avenue Fortunee, [Paris, France]. To Mr. Nickisson. 215 Regent
+							Street. Concerns engravings and directions about them. </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1p. 7cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>From the library of <persname>Josiah Kirby Lilly, Jr.</persname>,
+							Indianapolis, Indiana. <date normal="1956">1956</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00082" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1842-09-11">1842 Sept. 11 - </unitdate>
+							<persname>Marryat, Frederick, 1792-1848, novelist.</persname> To "My
+							Dear Sir." "It is many years since I have had any critiques of my works
+							– I am getting too old an Author for that."</unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 3p. 16cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1970">1970</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00083" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1843-08-22">1843 Aug. 22 - </unitdate>
+							<persname>Brotherton, Augustus Henry, -1887, artist.</persname> Rome,
+							[Italy]. To Frederick Tennyson,Boxley, Maidstone, Kent, Angleterre.
+							Relates the story of Savile Morton who has stolen his mistress and may
+							be writing a novel about it. Tennyson’s Boxes are in a safe place to
+							which only he and Morton have access. </unittitle>
+						<note>
+							<list>
+								<item>Address leaf bears traces of red wax seal and postal
+									cancellation: Maidstone Se 2 1843</item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1985">1985</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00084" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1843">1843 - </unitdate>
+							<persname>Osborne, Thomas James, Jr.</persname>
+							<title>Fugitive verses.</title>
+						</unittitle>
+						<physdesc>
+							<extent>Autograph Document Signed [3] , 59, [5]p. 22cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Bound</item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1962">1962</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00085" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1844-01-13">1844 Jan. 13 - </unitdate>
+							<persname>Wordsworth, William, 1770-1850, poet.</persname> To "Dear
+							Sir". Regrets that he has not replied partly because of pressure of
+							engagements. "There is no species of composition upon which I should …
+							pass judgement as an Epitaph…"</unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 4pp. 18cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>The letter is noted by Russell Noyes in his article "An
+									Unpublished letter by Wordsworth on Epitaphs." In <title
+										render="italic">Notes &amp; Queries</title> for February,
+										<date normal="1975">1975</date> (Ag 305 .N91) </item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1970">1970</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00086" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1844-02-05">1844 Feb. 5 - </unitdate>
+							<persname>Moore, Thomas, 1779-1852, poet.</persname> To "Dear Sir."
+							Expresses thanks for "interesting communication respecting Emmet". </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1p. 17cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>From the library of <persname>Josiah Kirby Lilly, Jr.</persname>,
+							Indianapolis, Indiana. <date normal="1956">1956</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00087" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1844-06-26">1844 June 26 - </unitdate>
+							<persname>Miller, Hugh, 1802-1856, author.</persname> Witness Office,
+							[Edinburgh, Scotland]. To Daniel Frazer. 113 Buchanan Street, Glasgow
+							[Scotland],. Thanks Frazer for his support. Returns two issues of the
+								<title render="underline">Banner of Ulster</title>. </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed [2]p. 18.5 cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Enclosures not present.</item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Removed from <title render="italic">What is criticism?</title> … with
+							introductory remarks by Hugh Miller. Ediburgh: Shepherd &amp; Elliot ….
+								<date normal="1855">1855</date> (Lilly KD1960 .Z9 W55). <date
+								normal="1982">1982</date>
+						</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00088" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1845-03-03">1845, Mar. 3 - </unitdate>
+							<persname>Kemble, Charles, 1775-1854, actor.</persname> Albion Hotel,
+							Manchester. To Mr. Radley. "I shall be in Liverpool early tomorrow—pray
+							have my rooms in readiness…". </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1p. 18 cm</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Mounted facing page iv in Robson, <title render="italic">The Old
+								Play-Goer,</title> London, Joseph Masters, <date normal="1846"
+								>1846</date> (Lilly PN2594 .R6 1846). <date normal="1973"
+								>1973</date>
+						</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00089" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1846-04-08">1846 Apr. 8 - </unitdate>
+							<persname>Keble, John, 1792-1866, divine.</persname> To "Dear Sir".
+							Arranges for additions to his list of persons to receive presentation
+							copies of his book. </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1p. 11cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Purchase. <date normal="1966">1966</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00090" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1846-09-12">1846 Sept. 12 - </unitdate>
+							<persname>Thackeray, William Makepeace, 1811-1863, novelist.</persname>
+							Kensington. To "Willie". Urging him to reform. </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 2p. 24cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Forged by an English forger early in 1920’s. Information from
+									David Anton Randall.</item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Gift. <date normal="1957">1957</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00091" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1847-07-02">1847 July 2 - </unitdate>
+							<persname>Lytton, Edward George Earle Lytton, Bulwer-Lytton, baron,
+								1803-1873, author.</persname> To "My dear Sir." "There might be
+							obstacles to his appointment in the F.O." </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1 p. 20cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Removed from The last days of Pompeii. London, Richard Bentley, <date
+								normal="1834">1834</date> (Lilly PR4912 1834b. v. 3). </p>
+						<p>From the library of <persname>Josiah Kirby Lilly, Jr.</persname>,
+							Indianapolis, Indiana. <date normal="1956">1956</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00092" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1847-07-21/1851-02-10" type="inclusive">1847 July
+								21-1851 Feb. 10 - </unitdate>
+							<persname>Waugh, Edwin, 1817-1890, poet.</persname> Negative microfilm
+							of a diary, Microfilmed by The Manchester Public Libraries, Manchester,
+							England. </unittitle>
+					</did>
+					<acqinfo>
+						<p>Transferred from the Main Library to the Manuscripts Department, Lilly
+							Library by Martha Vicinus, Victorian Studies, Indiana University, <date
+								normal="1971-03-18">March 18, 1971</date>. </p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00093" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1847-08-30">1847 Aug. 30 - </unitdate>
+							<persname>Wordsworth, William, 1770-1850, poet.</persname> Rydal Mount,
+							Ambleside. To "Dear Sir." "I have been… expecting … the Cast of the Boy
+							with the Shell … but it has not arrived." </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 2p. 18cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1969">1969</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00094" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1847">[1847] - </unitdate>
+							<persname>Macready, William Charles, 1793-1873, actor.</persname>
+							Clarence Terrace, Devonshire W. London, England. To Mr. Cunningham. "I
+							shall not be ble to extend my wandering so far as Belfast this winter." </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 2p. 11cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>From the library of <persname>Josiah Kirby Lilly, Jr.</persname>,
+							Indianapolis, Indiana. <date normal="1956">1956</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00095" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1848-10-10">1848 Oct. 10 - </unitdate>
+							<persname>Wordsworth, William, 1770-1850, poet.</persname> Rydal Mount.
+							To "My dear Sir." "The distressing circumstance of my Daughter-in-law’s
+							somewhat sudden death in a foreign country gave a great shock to the
+							Family." </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 6p. 18cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1971">1971</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00096" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1848-10-30">1848 Oct. 30 - </unitdate>
+							<persname>Jones, Robert St. Clair, playwright.</persname> 33 Red Lion
+							St., Red Lion Square. To [James Robertson] Anderson. Encloses his last
+							new play entitled <title>Robin Hood</title>, written while Anderson was
+							in America, and wishes him to "peruse it and forward [his] opinion." </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 2pp. 18cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Stationery edged in black.</item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Removed from author’s inscribed presentation copy of <title
+								render="italic">Robin Hood</title> to Anderson: published in London
+							by C. Harris, <date normal="1848">1848</date> (Lilly PR4829 .J58R6).
+								<date normal="1983">1983</date>
+						</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00097" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1848-11-24">1848 Nov. 24 - </unitdate>
+							<persname>Ainsworth, William Harrison, 1805-1882, novelist.</persname>
+							Conservation Club, Brighton, England. To "My dear Smith". "I have
+							written to my Daughter to look up the Maps and Drawings of the Battle
+							Field… and to leave them with you." </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 2p. 18cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>"Ainsworth prohibited the publication of his own letters."
+									DNB</item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>Purchased. <date normal="1972">1972</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00098" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1849-03-27">1849 Mar. 27 - </unitdate>
+							<persname>Dickens, Charles, 1812-1870, novelist.</persname> Devonshire
+							Terrace, [London, England]. To [Frances Maria] Kelly. 30 Moscow Road,
+							Bayswater. Concerns dramatic matters. </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 2p. 18cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Accompanied by cover</item>
+							</list>
+						</note>
+					</did>
+					<acqinfo>
+						<p>From the library of <persname>Josiah Kirby Lilly, Jr.</persname>,
+							Indianapolis, Indiana. <date normal="1956">1956</date></p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00099" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1849-07-25">[1849] July 25 - </unitdate>
+							<persname>Thackeray, William Makepeace, 1811-1863, novelist.</persname>
+							Kensington. To My dear Madam. "… must dine with the Printers devil [who
+							is] sitting in the hall now waiting for copy." Has been out of town for
+							ten days or would have come for a cup of tea and news "about the Duchess
+							of Manfredonia." </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1p. 18cm.</extent>
+						</physdesc>
+						<note>
+							<list>
+								<item>Illustrated with pen and ink sketch of young boy, "printers
+									devil," sitting in chair.</item>
+								<item>Dated: Wednesday, July 25.</item>
+								<item>Year determined by perpetual calendar and footnotes in <title
+										render="italic">Letters and Private Papers of William
+										Makepeace Thackeray</title>, edited by Gordon N. Ray,
+									Harvard University Press, Cambridge, <date normal="1946"
+										>1946</date>, Vol. II, pages 238 and 569 (Lilly PR5631
+									,A3R26 1945).</item>
+							</list>
+						</note>
+					</did>
+					<custodhist>
+						<p>Formerly in the library of Josephine Tucker.</p>
+					</custodhist>
+					<acqinfo>
+						<p>Gift 1984 from the estate of Elisabeth Ball.</p>
+					</acqinfo>
+				</c02>
+				<c02 id="VAA2016-00100" level="item">
+					<did>
+						<unittitle>
+							<unitdate normal="1850-07-26">1850 July 26 - </unitdate>
+							<persname>Dickens, Charles, 1812-1870, novelist.</persname> Devonshire
+							Terrace, London, England. To Henry Ashworth. Expresses thanks for the
+							pamphlet sent him. </unittitle>
+						<physdesc>
+							<extent>Autograph Letter Signed 1p. 17cm.</extent>
+						</physdesc>
+					</did>
+					<acqinfo>
+						<p>From the library of <persname>Josiah Kirby Lilly, Jr.</persname>,
+							Indianapolis, Indiana. <date normal="1956">1956</date></p>
+					</acqinfo>
+				</c02>
+			</c01>
+		</dsc>
+	</archdesc>
+</ead>
