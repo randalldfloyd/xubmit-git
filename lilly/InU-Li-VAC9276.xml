@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAC9276">InU-Li-VAC9276</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Byrd mss., <date normal="1794/1881"
+                        type="inclusive">1794-1881</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2013" type="publication">© 2013</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2013">© 2013</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2013" type="source">2013</date>
+                <lb/>Finding aid encoded by Shayna Pekala, Lilly Library, Indiana University, <date
+                    normal="2013-02-19">February 19, 2013</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2013-02-19">February 19, 2013</date>
+                <item>Encoded finding aid started.</item>
+            </change>
+            <change audience="internal">
+                <date normal="2013-02-19">February 26, 2013</date>
+                <item>Encoded finding aid started.</item>
+            </change>
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Byrd, Charles Willing,
+                    1770-1828</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Byrd mss.,</unittitle>
+            <unitdate encodinganalog="245$f" normal="1794/1881" type="inclusive"
+                >1794-1881</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1159</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>235 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">Consists of the papers of Charles
+                Willing Byrd. A member of the prominent Virginia family of that name, Byrd became
+                deeply interested in the Shaker movement, and one of his sons, William Silonwe Byrd,
+                joined the Shaker community at Pleasant Hill, Kentucky. For the years 1826-1828, a
+                considerable portion of the collection consists of letters from this son, dealing
+                with the beliefs of the Shakers and the affairs of Pleasant Hill. The collection
+                also includes letters to Charles Willing Byrd from members of his family, in regard
+                to family matters. Letters from an aunt refer to the death of Washington and to
+                conditions in Philadelphia during the War of 1812. Some light on medical practices
+                of the day is given in letters, 1826-1828, to Byrd from his physicians, prescribing
+                treatment for him.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+
+            <p>The Byrd mss., 1794-1881, are papers of Charles Willing Byrd, 1770-1828, a member of
+                the prominent Virginia family of that name. He was born in Virginia, received his
+                academic and legal education in Philadelphia, and, in 1794, went to Kentucky to look
+                after Robert Morris' land interests there. He was appointed Secretary of the
+                Northwest Territory by President John Adams in 1799, and served as Acting Governor
+                from 1802 to 1803 following the removal from office of General Arthur St. Clair. He
+                was delegate to the convention which framed the first constitution for Ohio. Soon
+                thereafter President Thomas Jefferson appointed him Judge of the United States
+                District Court for Ohio, which office he held until his death in 1828.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>Items are arranged chronological order.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>Byrd became deeply interested in the Shaker movement, and one of his sons, William
+                Silonwe Byrd, joined the Shaker community at Pleasant Hill, Kentucky. For the years,
+                1826- 1828, a considerable portion of the collection consists of letters from his
+                son, dealing with the beliefs of the Shakers and the affairs of Pleasant Hill.
+                Included also are letters to Charles Willing Byrd from Francis Voris, principal
+                deacon and business manager at Pleasant Hill, who was managing some business matters
+                for Byrd. The collection also includes letters to Charles Willing Byrd from members
+                of his family, including his mother, his brothers, and sisters, his children and
+                other relatives in regard to family matters. Letters from an aunt, Elizabeth Powel
+                of Philadelphia, refer to the death of Washington and to conditions in Philadelphia
+                during the War of 1812.</p>
+            <p>Some light on medical practices of the day is given in letters, 1826-1828, to Byrd
+                from his physicians, prescribing treatment for him. Included also are letters
+                relating to a mail robbery, 1828, during the trial of which Byrd died. Manuscripts
+                for the years following Charles Willing Byrd's death are principally those of one of
+                his sons by his second marriage, Samuel Otway Byrd of Sinking Springs, Ohio. The
+                first folder in the collection contains biographical material on Charles Willing
+                Byrd and some of the other persons represented.</p>
+            <p>Accompanying the collection is a computer print-out of <emph render="italic">Letters
+                    from a Young Shaker: William S. Byrd at Pleasant Hill, Kentucky,</emph> edited
+                by Stephen J. Stein.</p>
+            <p>This collection has been used in the preparation of Gerald J. Geiger's <emph
+                    render="doublequote">Charles Willing Byrd.</emph> Master's thesis, Indiana
+                University, February 1951.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/byrd+charles+willing+1770-1828{su}"
+                            ><persname encodinganalog="600" source="lcnaf">Byrd, Charles Willing,
+                            1770-1828.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/adams+john+1735-1826{su}"
+                            ><persname encodinganalog="600" source="lcnaf">Adams, John,
+                            1735-1826.</persname></extref></item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/shakers+history+19th+century{su}"
+                            ><subject encodinganalog="650" source="lcsh">Shakers --History --19th
+                            century.</subject></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/religion+history+19th+century{su}"
+                            ><subject encodinganalog="650" source="lcsh">Religion --History --19th
+                            century.</subject></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/judges+correspondence{su}"
+                            ><subject encodinganalog="650" source="lcsh">Judges
+                            --Correspondence.</subject></extref></item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Places</head>
+                <list>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/pleasant+hill+(ky.)+history+19th+century{su}">
+                            <geogname encodinganalog="651" source="aacr2">Pleasant Hill
+                                (Ky.) --History --19th century.</geogname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/united+states+history+1809-1817{su}">
+                            <geogname encodinganalog="651" source="aacr2">United States --History
+                                --1809-1817.</geogname></extref></item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="110" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="100" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 1948</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Byrd mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by staff</p>
+
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+            <c01 id="VAC9276-00001" level="collection">
+                <did>
+                    <unittitle>Byrd mss., <unitdate type="inclusive" normal="1794/1881"
+                            >1794-1881</unitdate></unittitle>
+                </did>
+                <c02 id="VAC9276-00002" level="file">
+                    <did>
+                        <container label="Box" type="Box">1</container>
+                        <unittitle>Biographical Information</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9276-00003" level="file">
+                    <did>
+                        <unittitle>Correspondence, <unitdate normal="1794/1799" type="inclusive"
+                                >1794-1799</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9276-00004" level="file">
+                    <did>
+                        <unittitle>Correspondence, <unitdate normal="1800/1810" type="inclusive"
+                                >1800-1810</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9276-00005" level="file">
+                    <did>
+                        <unittitle>Correspondence, <unitdate normal="1811/1819" type="inclusive"
+                                >1811-1819</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9276-00006" level="file">
+                    <did>
+                        <unittitle>Correspondence, <unitdate normal="1820/1825" type="inclusive"
+                                >1820-1825</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9276-00007" level="file">
+                    <did>
+                        <unittitle>Correspondence, <unitdate normal="1826"
+                            >1826</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9276-00008" level="file">
+                    <did>
+                        <unittitle>Correspondence, <unitdate normal="1827"
+                            >1827</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9276-00009" level="file">
+                    <did>
+                        <unittitle>Correspondence, <unitdate normal="1828"
+                            >1828</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9276-00010" level="file">
+                    <did>
+                        <unittitle>Correspondence, <unitdate normal="1829/1839" type="inclusive"
+                                >1829-1839</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9276-00011" level="file">
+                    <did>
+                        <unittitle>Correspondence, <unitdate normal="1840/1881" type="inclusive"
+                                >1840-1881</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9276-00012" level="file">
+                    <did>
+                        <unittitle>Supplement, <title render="italic">Letters from a Young
+                                Shaker,</title> Stein, Stephen J. (ed.), computer printout,
+                                <unitdate normal="1983">1983</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
