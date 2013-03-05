@@ -1,0 +1,2215 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAC9390">InU-Li-VAC9390</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Ferrell mss., <date certainty="circa"
+                        normal="1940/1999" type="inclusive">ca. 1940-1999</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2013" type="publication">© 2013</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2013">© 2013</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2013" type="source">2013</date>
+                <lb/>Finding aid encoded by Shayna Pekala, Lilly Library, Indiana University, <date
+                    normal="2013-03-05">March 5, 2013</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2013-03-05">March 5, 2013</date>
+                <item>Encoded finding aid started.</item>
+            </change>
+            <change audience="internal">
+                <date normal="2013-03-05">March 5, 2013</date>
+                <item>Encoded finding aid completed.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Ferrell, Robert H.</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Ferrell mss., </unittitle>
+            <unitdate encodinganalog="245$f" certainty="circa" normal="1940/1999" type="inclusive"
+                >ca. 1940-1999</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2718</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>200,000 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Ferrell mss, ca. 1940-1999, consist
+                of the papers, writings and correspondence of Indiana University Prof. Emeritus
+                Robert H. Ferrell.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+            <p> Robert H. Ferrell (b. 1921) is an American historian and author of several books on
+                Harry S. Truman and the diplomatic history of the United States. He received a B.S.
+                in Education from Bowling Green State University in 1946 and a Ph.D. from Yale in
+                1951. He served in the U.S. Army Air Forces during World War II and as an
+                intelligence analyst in the U.S. Air Force during the Korean War. Ferrell began his
+                career at Indiana University as an Assistant Professor in 1953, subsequently rising
+                to the post of Distinguished Professor of History in 1974.</p>
+
+        </bioghist>
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>Organized into correspondence and writings. Correspondence arranged chronologically.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The collection includes correspondence, original drafts of Ferrell’s work, and
+                accompanying research files.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/ferrell+robert+h.+correspondence{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Ferrell, Robert
+                                H.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/ferrell+robert+h.{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Ferrell, Robert H.
+                                --Correspondence</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/truman+harry+s.+1884-1972{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Truman, Harry S.,
+                                1884-1972.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/coolidge+calvin+1872-1933{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Coolidge, Calvin,
+                                1872-1933.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/eisenhower+dwight+d.+(dwight+david)+1890-1969{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Eisenhower, Dwight D.
+                                (Dwight David), 1890-1969.</persname></extref></item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/presidents+united+states+history+20th+century{su}"
+                                ><subject encodinganalog="650" source="lcnaf">Presidents --United
+                                States --History --20th century.</subject></extref></item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="610" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 2000</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+                <p>Prior arrangements are not necessary before coming to the Library, however, patrons from 
+                    out of town are encouraged to communicate with the Library in advance of their visits to 
+                    ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Ferrell mss., Lilly Library, Indiana University, Bloomington,
+                    Indiana.</p>
+            </prefercite>
+
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Staff.</p>
+                <p>Completed in <date normal="2012">2012</date></p>
+
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAC9390-00001" level="collection">
+                <did>
+                    <unittitle>Ferrell mss., <unitdate certainty="circa" normal="1940/1999"
+                            type="inclusive">ca. 1940-1999</unitdate></unittitle>
+
+                </did>
+                <c02 id="VAC9390-00002" level="file">
+                    <did>
+                        <container label="Box" type="Label">1</container>
+                        <unittitle>Correspondence, <unitdate normal="1957/1958" type="inclusive"
+                                >1957-1958</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00003" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 2</container>
+                        <unittitle>Correspondence, <unitdate normal="1986"
+                            >1986</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00004" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 3</container>
+                        <unittitle>Correspondence, <unitdate normal="1979-09/1980-02"
+                                type="inclusive">Sep. 1979-Feb. 1980</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00005" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 4</container>
+                        <unittitle>Correspondence, <unitdate normal="1980-02/1980-10"
+                                type="inclusive">Feb. 1980-Oct. 1980</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00006" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 5</container>
+                        <unittitle>Correspondence, <unitdate normal="1987-01/1987-06"
+                                type="inclusive">Jan 1987-June 1987,</unitdate><unitdate
+                                normal="1989-07"> July 1989</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00007" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 6</container>
+                        <unittitle>Correspondence, <unitdate normal="1968-10/1969-04"
+                                type="inclusive">Oct. 1968-April 1969</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00008" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 7</container>
+                        <unittitle>Correspondence, <unitdate normal="1969-05/1969-04"
+                                type="inclusive">May-Dec 1969</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00009" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 8</container>
+                        <unittitle>H.S.T. Correspondence</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00010" level="file">
+                    <did>
+                        <unittitle>Personal</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00011" level="file">
+                    <did>
+                        <unittitle>Class materials</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00012" level="file">
+                    <did>
+                        <unittitle>Grade books</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00013" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 9</container>
+                        <unittitle>Correspondence, <unitdate normal="1981/1982" type="inclusive"
+                                >1981-1982</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00014" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 10</container>
+                        <unittitle>Correspondence, <unitdate normal="1970"
+                            >1970</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00015" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 11</container>
+                        <unittitle>Correspondence / Manuscript, <unitdate normal="1991/1992"
+                                type="inclusive">1991-1992</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00016" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 12</container>
+                        <unittitle>Correspondence, <unitdate normal="1970/1971" type="inclusive"
+                                >1970-1971</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00017" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 13</container>
+                        <unittitle>Correspondence, <unitdate normal="1965-01/1965-06"
+                                type="inclusive">Jan.-June 1965</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00018" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 14</container>
+                        <unittitle>Correspondence, <unitdate normal="1964"
+                            >1964</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00019" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 15</container>
+                        <unittitle>Correspondence, <unitdate normal="1971"
+                            >1971</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00020" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 16</container>
+                        <unittitle>Correspondence, <unitdate normal="1984"
+                            >1984</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00021" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 17</container>
+                        <unittitle>Correspondence, <unitdate normal="1961/1962" type="inclusive"
+                                >1961-1962</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00022" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 18</container>
+                        <unittitle>Correspondence, <unitdate normal="1960/1963" type="inclusive"
+                                >1960-1963</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00023" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 19</container>
+                        <unittitle>Correspondence, <unitdate normal="1966-08/1966-11"
+                                type="inclusive">Aug.-Nov. 1966,</unitdate><unitdate normal="1987"
+                                >1987,</unitdate><unitdate normal="1988">1988</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00024" level="file">
+                    <did>
+                        <unittitle>Miscellaneous files</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00025" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 20</container>
+                        <unittitle>Correspondence, <unitdate normal="1966-12/1967-06"
+                                type="inclusive">1966, Dec.-1967, June</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00026" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 21</container>
+                        <unittitle>Correspondence / Manuscript, <unitdate normal="1982-10/1983-08"
+                                type="inclusive">Oct. 1982-Aug. 1983</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00027" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 22</container>
+                        <unittitle>Correspondence / Manuscript, <unitdate normal="1983-08/1984-12"
+                                type="inclusive">Aug. 1983-Dec. 1984</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00028" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 23</container>
+                        <unittitle>Correspondence / Manuscript, <unitdate normal="1993-02/1993-11"
+                                type="inclusive">Feb.-Nov. 1993</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00029" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 24</container>
+                        <unittitle>Correspondence, <unitdate normal="1985-01/1985-06"
+                                type="inclusive">Jan.-June 1985</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00030" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 25</container>
+                        <unittitle>Correspondence / Manuscript, <unitdate normal="1993-10/1994-12"
+                                type="inclusive">Oct. 1993-Aug. 1994</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00031" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 26</container>
+                        <unittitle>Correspondence / Manuscript, <unitdate normal="1986-01/1986-10"
+                                type="inclusive">Jan.-Oct. 1986</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00032" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 27</container>
+                        <unittitle>Correspondence / Manuscript, <unitdate normal="1992/1993"
+                                type="inclusive">1992-1993</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00033" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 28</container>
+                        <unittitle>Correspondence, <unitdate normal="1989/1991" type="inclusive"
+                                >1989-1991</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00034" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 29</container>
+                        <unittitle>Correspondence, <unitdate normal="1990-06/1990-12"
+                                type="inclusive">June-Dec. 1990</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00035" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 30</container>
+                        <unittitle>Correspondence, <unitdate normal="1985/1989" type="inclusive"
+                                >1985-1989</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00036" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 31</container>
+                        <unittitle>Correspondence, <unitdate normal="1990-01/1990-09"
+                                type="inclusive">Jan.-Sep. 1990</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00037" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 32</container>
+                        <unittitle>Correspondence, <unitdate normal="1975/1976" type="inclusive"
+                                >1975-1976</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00038" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 33</container>
+                        <unittitle>Correspondence, <unitdate normal="1995-03/1996-01"
+                                type="inclusive">March 1995-Jan. 1996</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00039" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 34</container>
+                        <unittitle>Correspondence, etc., <unitdate normal="1991/1993"
+                                type="inclusive">1991-1993</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00040" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 35</container>
+                        <unittitle>Correspondence, <unitdate normal="1978-10/1979-08"
+                                type="inclusive">Oct. 1978-Aug. 1979</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00041" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 36</container>
+                        <unittitle>Files (sorted correspondence)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00042" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 37</container>
+                        <unittitle>Correspondence, <unitdate normal="1981-04/1981-10"
+                                type="inclusive">April-October, 1981</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00043" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 38</container>
+                        <unittitle>Correspondence, <unitdate normal="1965/1966" type="inclusive"
+                                >1965-1966</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00044" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 39</container>
+                        <unittitle>Correspondence, <unitdate normal="1981-12/1984-02"
+                                type="inclusive">Dec. 1981-Feb. 1984</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00045" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 40</container>
+                        <unittitle>Correspondence, <unitdate normal="1965/1966" type="inclusive"
+                                >1965-1966</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00046" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 41</container>
+                        <unittitle>Files </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00047" level="file">
+                    <did>
+                        <unittitle>sorted correspondence, <unitdate normal="1963/1964"
+                                type="inclusive">1963-1964</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00048" level="file">
+                    <did>
+                        <unittitle>Writings </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00049" level="file">
+                    <did>
+                        <unittitle>revisionist historians</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00050" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 42</container>
+                        <unittitle>Sorted correspondence, <unitdate normal="1958/1975"
+                                type="inclusive">1958-1975</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00051" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 43</container>
+                        <unittitle>Correspondence, <unitdate normal="1955/1957" type="inclusive"
+                                >1955-1957</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00052" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 44</container>
+                        <unittitle>Correspondence, <unitdate normal="1952-04/1953-09"
+                                type="inclusive">April 1952-Sep. 1953</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00053" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 45</container>
+                        <unittitle>Correspondence, <unitdate normal="2000"
+                            >2000</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00054" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 46</container>
+                        <unittitle>Correspondence, <unitdate normal="1953-09/1955-04"
+                                type="inclusive">Sep. 1953-April 1955</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00055" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 47</container>
+                        <unittitle>Correspondence, <unitdate normal="2000"
+                            >2000</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00056" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 48</container>
+                        <unittitle>Correspondence, <unitdate normal="1974/1977" type="inclusive"
+                                >1974-1977</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00057" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 49</container>
+                        <unittitle>Correspondence, <unitdate normal="1973/1974" type="inclusive"
+                                >1973-1974</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00058" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 50</container>
+                        <unittitle>Correspondence, <unitdate normal="1971/1973" type="inclusive"
+                                >1971-1973</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00059" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 51</container>
+                        <unittitle>Correspondence, <unitdate normal="1998/2000" type="inclusive"
+                                >1998-2000</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00060" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 52</container>
+                        <unittitle>Correspondence, <unitdate normal="1995/1999" type="inclusive"
+                                >1995-1999</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00061" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 53</container>
+                        <unittitle>Correspondence, <unitdate normal="1988/1989" type="inclusive"
+                                >1988-1989</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00062" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 54</container>
+                        <unittitle>Correspondence, <unitdate normal="1985/1988" type="inclusive"
+                                >1985-1988</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00063" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 55</container>
+                        <unittitle>Correspondence, <unitdate normal="1983/1985" type="inclusive"
+                                >1983-1985</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00064" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 56</container>
+                        <unittitle>Correspondence, <unitdate normal="1982/1983" type="inclusive"
+                                >1982-1983</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00065" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 57</container>
+                        <unittitle>Correspondence, <unitdate normal="1999"
+                            >1999</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00066" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 58</container>
+                        <unittitle>Correspondence, <unitdate normal="1997/1999" type="inclusive"
+                                >1997-1999</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00067" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 59</container>
+                        <unittitle>Correspondence, <unitdate normal="1995/1997" type="inclusive"
+                                >1995-1997</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00068" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 60</container>
+                        <unittitle>Correspondence, <unitdate normal="1987/1988" type="inclusive"
+                                >1987-1988</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00069" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 61</container>
+                        <unittitle>Correspondence, <unitdate normal="1985/1987" type="inclusive"
+                                >1985-1987</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00070" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 62</container>
+                        <unittitle>Correspondence, <unitdate normal="1982/1985" type="inclusive"
+                                >1982-1985</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00071" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 63</container>
+                        <unittitle>Correspondence, <unitdate normal="1997/1999" type="inclusive"
+                                >1997-1999</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00072" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 64</container>
+                        <unittitle>Correspondence, <unitdate normal="1995/1997" type="inclusive"
+                                >1995-1997</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00073" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 65</container>
+                        <unittitle>Correspondence, <unitdate normal="1994/1995" type="inclusive"
+                                >1994-1995</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00074" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 66</container>
+                        <unittitle>Correspondence, <unitdate normal="1977/1981" type="inclusive"
+                                >1977-1981</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00075" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 67</container>
+                        <unittitle>Correspondence, <unitdate normal="1976/1977" type="inclusive"
+                                >1976-1977</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00076" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 68</container>
+                        <unittitle>Correspondence, <unitdate normal="1976/1978" type="inclusive"
+                                >1976-1978</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00077" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 69</container>
+                        <unittitle>Correspondence, <unitdate normal="1975/1976" type="inclusive"
+                                >1975-1976</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00078" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 70</container>
+                        <unittitle>Correspondence, <unitdate normal="1992/1994" type="inclusive"
+                                >1992-1994</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00079" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 71</container>
+                        <unittitle>Correspondence, <unitdate normal="1980"
+                            >1980</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00080" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 72</container>
+                        <unittitle>Correspondence, <unitdate normal="1954/1959" type="inclusive"
+                                >1954-1959</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00081" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 73</container>
+                        <unittitle>Correspondence, <unitdate normal="1959/1960" type="inclusive"
+                                >1959-1960</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00082" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 74</container>
+                        <unittitle>Correspondence, <unitdate normal="1942/1948" type="inclusive"
+                                >1942-1948</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00083" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 75</container>
+                        <unittitle>Correspondence, <unitdate normal="1961/1966" type="inclusive"
+                                >1961-1966</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00084" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 76</container>
+                        <unittitle>Correspondence, <unitdate normal="1974/1977" type="inclusive"
+                                >1974-1977</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00085" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 77</container>
+                        <unittitle>Correspondence, <unitdate normal="1963/1964" type="inclusive"
+                                >1963-1964</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00086" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 78</container>
+                        <unittitle>Correspondence, <unitdate normal="1977/1978" type="inclusive"
+                                >1977-1978</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00087" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 79</container>
+                        <unittitle>Correspondence, <unitdate normal="2000/2001" type="inclusive"
+                                >2000-2001</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00088" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 80</container>
+                        <unittitle>Correspondence, <unitdate normal="1978/1981" type="inclusive"
+                                >1978-1981</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00089" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 81</container>
+                        <unittitle>Correspondence, <unitdate normal="1999/2000" type="inclusive"
+                                >1999-2000</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00090" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 82</container>
+                        <unittitle>Correspondence, <unitdate normal="1968"
+                            >1968</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00091" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 83</container>
+                        <unittitle>Correspondence, <unitdate normal="1972"
+                            >1972</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00092" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 84</container>
+                        <unittitle>Correspondence, <unitdate normal="1949/1952" type="inclusive"
+                                >1949-1952</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00093" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 85</container>
+                        <unittitle>Correspondence, <unitdate normal="1969/1973" type="inclusive"
+                                >1969-1973</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00094" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 86</container>
+                        <unittitle>Correspondence, <unitdate normal="1964/1967" type="inclusive"
+                                >1964-1967</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00095" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 87</container>
+                        <unittitle>Correspondence, <unitdate normal="1973">1973,</unitdate><unitdate
+                                normal="1980/1984" type="inclusive">1980-1984</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00096" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 88</container>
+                        <unittitle>Correspondence, <unitdate normal="1967/1968" type="inclusive"
+                                >1967-1968</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00097" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 89</container>
+                        <unittitle>Correspondence, <unitdate normal="1983/1987" type="inclusive"
+                                >1983-1987</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00098" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 90</container>
+                        <unittitle>Correspondence, <unitdate normal="1987/1988" type="inclusive"
+                                >1987-1988</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00099" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 91</container>
+                        <unittitle>Correspondence, <unitdate normal="1996/1998" type="inclusive"
+                                >1996-1998</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00100" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 92</container>
+                        <unittitle>Correspondence, <unitdate normal="1988/1989" type="inclusive"
+                                >1988-1989</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00101" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 93</container>
+                        <unittitle>Correspondence, <unitdate normal="1998"
+                            >1998</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00102" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 94</container>
+                        <unittitle>Correspondence, <unitdate normal="1989/1994" type="inclusive"
+                                >1989-1994</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00103" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 95</container>
+                        <unittitle>Correspondence, <unitdate normal="1998/2001" type="inclusive"
+                                >1998-2001</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00104" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 96</container>
+                        <unittitle>Correspondence, <unitdate normal="1993/1995" type="inclusive"
+                                >1993-1995</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00105" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 97</container>
+                        <unittitle>Correspondence, <unitdate normal="2001/2002" type="inclusive"
+                                >2001-2002</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00106" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 98</container>
+                        <unittitle>Correspondence, <unitdate normal="1995/1996" type="inclusive"
+                                >1995-1996</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00107" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 99</container>
+                        <unittitle>Correspondence, <unitdate normal="2002"
+                            >2002</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00108" level="file">
+                    <did>
+                        <unittitle>Writings by others</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00109" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 100</container>
+                        <unittitle><emph render="doublequote">American Diplomacy</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00110" level="file">
+                    <did>
+                        <unittitle><emph render="doublequote">Kyoto</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00111" level="file">
+                    <did>
+                        <unittitle>etc.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00112" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 101</container>
+                        <unittitle>Woodrow Wilson</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00113" level="file">
+                    <did>
+                        <unittitle>Eisenhower Diaries</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00114" level="file">
+                    <did>
+                        <unittitle>HST Autobiography</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00115" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 102</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00116" level="file">
+                    <did>
+                        <unittitle>American Diplomacy, 4th ed.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00117" level="file">
+                    <did>
+                        <unittitle><emph render="doublequote">N.A.N.</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00118" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 103</container>
+                        <unittitle>Manuscripts, misc.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00119" level="file">
+                    <did>
+                        <unittitle><emph render="doublequote">Fighting Soldier</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00120" level="file">
+                    <did>
+                        <unittitle>Correspondence, misc. 1984-1985</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00121" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 104</container>
+                        <unittitle>Interviews</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00122" level="file">
+                    <did>
+                        <unittitle>Student related?</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00123" level="file">
+                    <did>
+                        <unittitle>Keep?</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00124" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 105</container>
+                        <unittitle>American Diplomacy, 3rd ed.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00125" level="file">
+                    <did>
+                        <unittitle>etc.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00126" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 106</container>
+                        <unittitle>Interviews (continued)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00127" level="file">
+                    <did>
+                        <unittitle>Class materials</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00128" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 107</container>
+                        <unittitle>Rand McNally</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00129" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 108</container>
+                        <unittitle>Class materials</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00130" level="file">
+                    <did>
+                        <unittitle>Eisenhower Diaries, vol. 1 and 2</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00131" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 109</container>
+                        <unittitle>Rand McNally</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00132" level="file">
+                    <did>
+                        <unittitle>Scribner's</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00133" level="file">
+                    <did>
+                        <unittitle>Little-Brown</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00134" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 110</container>
+                        <unittitle>Eisenhower Diaries</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00135" level="file">
+                    <did>
+                        <unittitle><emph render="doublequote">NAN</emph> - Chapters 2-9</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00136" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 111</container>
+                        <unittitle>Eisenhower Diaries</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00137" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 112</container>
+                        <unittitle>Truman</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00138" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 113</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00139" level="file">
+                    <did>
+                        <unittitle>NAN</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00140" level="file">
+                    <did>
+                        <unittitle>Choosing Truman</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00141" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 114</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00142" level="file">
+                    <did>
+                        <unittitle>Truman</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00143" level="file">
+                    <did>
+                        <unittitle>Truman in the Whitehouse</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00144" level="file">
+                    <did>
+                        <unittitle>Dear Bess</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00145" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 115</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00146" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 116</container>
+                        <unittitle>Files</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00147" level="file">
+                    <did>
+                        <unittitle>Shorter writings, <unitdate certainty="approximate"
+                                normal="1960/1970" type="inclusive"
+                            >1960s-1970s</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00148" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 117</container>
+                        <unittitle>Truman</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00149" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 118</container>
+                        <unittitle>Files</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00150" level="file">
+                    <did>
+                        <unittitle>Shorter writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00151" level="file">
+                    <did>
+                        <unittitle>etc.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00152" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 119</container>
+                        <unittitle>Writings: triplet</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00153" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 120</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00154" level="file">
+                    <did>
+                        <unittitle>M, F, + H-W</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00155" level="file">
+                    <did>
+                        <unittitle>Harper M.S.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00156" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 121</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00157" level="file">
+                    <did>
+                        <unittitle>Eisenhower Diaries</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00158" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 122</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00159" level="file">
+                    <did>
+                        <unittitle>The Dying President</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00160" level="file">
+                    <did>
+                        <unittitle>The Presidency of C. Coolidge</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00161" level="file">
+                    <did>
+                        <unittitle>Triplet</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00162" level="file">
+                    <did>
+                        <unittitle>The Kansas City Investigation</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00163" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 123</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00164" level="file">
+                    <did>
+                        <unittitle>Ill-Advised</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00165" level="file">
+                    <did>
+                        <unittitle>Autobio. of Grace Coolidge</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00166" level="file">
+                    <did>
+                        <unittitle>In the Philippines and Okinawa</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00167" level="file">
+                    <did>
+                        <unittitle>etc.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00168" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 124</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00169" level="file">
+                    <did>
+                        <unittitle>Clifford</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00170" level="file">
+                    <did>
+                        <unittitle>Lawrence Memoir</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00171" level="file">
+                    <did>
+                        <unittitle>Coolidge, the man and the pres.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00172" level="file">
+                    <did>
+                        <unittitle>Vice presidents</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00173" level="file">
+                    <did>
+                        <unittitle>etc.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00174" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 125</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00175" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 126</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00176" level="file">
+                    <did>
+                        <unittitle>Truman and Pendergast</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00177" level="file">
+                    <did>
+                        <unittitle>Kansas City Investigation</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00178" level="file">
+                    <did>
+                        <unittitle>Rainbow Hoosier</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00179" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 127</container>
+                        <unittitle>Offprints, <unitdate normal="1977/1993" type="inclusive"
+                                >1977-1993</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00180" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 128</container>
+                        <unittitle>H.S. Truman, <unitdate normal="1994">1994</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00181" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 129</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00182" level="file">
+                    <did>
+                        <unittitle>New American Nation</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00183" level="file">
+                    <did>
+                        <unittitle>Files</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00184" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 130</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00185" level="file">
+                    <did>
+                        <unittitle>The Strange Deaths of President Harding</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00186" level="file">
+                    <did>
+                        <unittitle>Holding the Line</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00187" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 131</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00188" level="file">
+                    <did>
+                        <unittitle>Joseph D. Lawrence, Fighting Soldier</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00189" level="file">
+                    <did>
+                        <unittitle>Bemis Festschriff</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00190" level="file">
+                    <did>
+                        <unittitle>Truman and the Bomb</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00191" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 132</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00192" level="file">
+                    <did>
+                        <unittitle>N.A.N.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00193" level="file">
+                    <did>
+                        <unittitle>Dear Bess</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00194" level="file">
+                    <did>
+                        <unittitle>The Mad American President</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00195" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 133</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00196" level="file">
+                    <did>
+                        <unittitle>They Dying President</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00197" level="file">
+                    <did>
+                        <unittitle>Barber-Holding the Line</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00198" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 134</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00199" level="file">
+                    <did>
+                        <unittitle>Truman</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00200" level="file">
+                    <did>
+                        <unittitle>Harding</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00201" level="file">
+                    <did>
+                        <unittitle>Coolidge</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00202" level="file">
+                    <did>
+                        <unittitle>N.A.N.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00203" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 135</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00204" level="file">
+                    <did>
+                        <unittitle>Harding</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00205" level="file">
+                    <did>
+                        <unittitle>D.A.H.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00206" level="file">
+                    <did>
+                        <unittitle>Ernest Ferrell</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00207" level="file">
+                    <did>
+                        <unittitle>Waterville Bank</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00208" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 136</container>
+                        <unittitle>Files with publishers</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00209" level="file">
+                    <did>
+                        <unittitle>Etc.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00210" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 137</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00211" level="file">
+                    <did>
+                        <unittitle>Wilson</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00212" level="file">
+                    <did>
+                        <unittitle>Truman</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00213" level="file">
+                    <did>
+                        <unittitle>Coolidge</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00214" level="file">
+                    <did>
+                        <unittitle>Etc.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00215" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 138</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00216" level="file">
+                    <did>
+                        <unittitle>Dana ms.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00217" level="file">
+                    <did>
+                        <unittitle>And shorter writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00218" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 139</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00219" level="file">
+                    <did>
+                        <unittitle>Ill Advised</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00220" level="file">
+                    <did>
+                        <unittitle>Etc.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00221" level="file">
+                    <did>
+                        <unittitle>Files</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00222" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 140</container>
+                        <unittitle>Subject files</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00223" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 141</container>
+                        <unittitle>Files</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00224" level="file">
+                    <did>
+                        <unittitle>Subject Files</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00225" level="file">
+                    <did>
+                        <unittitle>Etc.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00226" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 142</container>
+                        <unittitle>Files</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00227" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 143</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00228" level="file">
+                    <did>
+                        <unittitle>Strange Deaths of Harding</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00229" level="file">
+                    <did>
+                        <unittitle>Etc.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00230" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 144</container>
+                        <unittitle>Files</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00231" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 145</container>
+                        <unittitle>Files</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00232" level="file">
+                    <did>
+                        <unittitle>Brooklyn College</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00233" level="file">
+                    <did>
+                        <unittitle>Indiana University</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00234" level="file">
+                    <did>
+                        <unittitle>SHAFR</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00235" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 146</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00236" level="file">
+                    <did>
+                        <unittitle>American Diplomacy</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00237" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 147</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00238" level="file">
+                    <did>
+                        <unittitle>American Diplomacy</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00239" level="file">
+                    <did>
+                        <unittitle>The Rev. in AFP</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00240" level="file">
+                    <did>
+                        <unittitle>Atlas of American History</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00241" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 148</container>
+                        <unittitle>Files</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00242" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 149</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00243" level="file">
+                    <did>
+                        <unittitle>Choosing Truman</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00244" level="file">
+                    <did>
+                        <unittitle>The Dying President</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00245" level="file">
+                    <did>
+                        <unittitle>Adding the Line</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00246" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 150</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00247" level="file">
+                    <did>
+                        <unittitle>America: A history of the people</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00248" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 151</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00249" level="file">
+                    <did>
+                        <unittitle>They Dying President: FDR</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00250" level="file">
+                    <did>
+                        <unittitle>The Presidency of C. Coolidge</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00251" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 152</container>
+                        <unittitle>Writings by Others</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00252" level="file">
+                    <did>
+                        <unittitle>Bart Bernstein</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00253" level="file">
+                    <did>
+                        <unittitle>Walker autobiography</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00254" level="file">
+                    <did>
+                        <unittitle>Weeks ms.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00255" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 153</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00256" level="file">
+                    <did>
+                        <unittitle>The Presidency of C. Coolidge</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00257" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 154</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00258" level="file">
+                    <did>
+                        <unittitle>Triplet memoir</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00259" level="file">
+                    <did>
+                        <unittitle>Crowell</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00260" level="file">
+                    <did>
+                        <unittitle>Carl Anthony</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00261" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 155</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00262" level="file">
+                    <did>
+                        <unittitle>FDR's quiet confidant</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00263" level="file">
+                    <did>
+                        <unittitle>Walker autobiography</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00264" level="file">
+                    <did>
+                        <unittitle>Politics of Integrity</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00265" level="file">
+                    <did>
+                        <unittitle>Encyclopedia of the American Pres.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00266" level="file">
+                    <did>
+                        <unittitle>The presidency of C. Coolidge</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00267" level="file">
+                    <did>
+                        <unittitle>Triplet</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00268" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 156</container>
+                        <unittitle>Writings by Others</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00269" level="file">
+                    <did>
+                        <unittitle>E. Ferrell-Stories....</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00270" level="file">
+                    <did>
+                        <unittitle>Kneeshaw ms.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00271" level="file">
+                    <did>
+                        <unittitle>Bogle-Madison and Indy RR</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00272" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 157</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00273" level="file">
+                    <did>
+                        <unittitle>Article on Publishing</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00274" level="file">
+                    <did>
+                        <unittitle>Torchbooks</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00275" level="file">
+                    <did>
+                        <unittitle>AIADW</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00276" level="file">
+                    <did>
+                        <unittitle>AAWP</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00277" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 158</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00278" level="file">
+                    <did>
+                        <unittitle>Truman- Family Farm</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00279" level="file">
+                    <did>
+                        <unittitle>Dana</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00280" level="file">
+                    <did>
+                        <unittitle>Etc.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00281" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 159</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00282" level="file">
+                    <did>
+                        <unittitle>Barber mss.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00283" level="file">
+                    <did>
+                        <unittitle>Off the Record</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00284" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 160</container>
+                        <unittitle>Clippings (Truman, <unitdate normal="1983"
+                            >1983)</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00285" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 161</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00286" level="file">
+                    <did>
+                        <unittitle>Off the Record</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00287" level="file">
+                    <did>
+                        <unittitle>Etc.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00288" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 162</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00289" level="file">
+                    <did>
+                        <unittitle>Harry S. Truman- a life</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00290" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 163</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00291" level="file">
+                    <did>
+                        <unittitle>Banners in the Air</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00292" level="file">
+                    <did>
+                        <unittitle>Gruenther ms.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00293" level="file">
+                    <did>
+                        <unittitle>Etc.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00294" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 164</container>
+                        <unittitle>Note card files</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00295" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 165</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00296" level="file">
+                    <did>
+                        <unittitle>Ill Advised</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00297" level="file">
+                    <did>
+                        <unittitle>Eisenhower and the doctors</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00298" level="file">
+                    <did>
+                        <unittitle>Truman and the Pendargast</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00299" level="file">
+                    <did>
+                        <unittitle>The Dying President</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00300" level="file">
+                    <did>
+                        <unittitle>The Strange Deaths</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00301" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 166</container>
+                        <unittitle>Note card files</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00302" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 167</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00303" level="file">
+                    <did>
+                        <unittitle>Truman Centenary</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00304" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 168</container>
+                        <unittitle>Note card files</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00305" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 169</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00306" level="file">
+                    <did>
+                        <unittitle>Eisenhower diaries</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00307" level="file">
+                    <did>
+                        <unittitle>Leftovers</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00308" level="file">
+                    <did>
+                        <unittitle>PPHST</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00309" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 170</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00310" level="file">
+                    <did>
+                        <unittitle>PPHST</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00311" level="file">
+                    <did>
+                        <unittitle>SHAFR bibl.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00312" level="file">
+                    <did>
+                        <unittitle>Barber ms.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00313" level="file">
+                    <did>
+                        <unittitle>Baker articles</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00314" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 171</container>
+                        <unittitle>Files</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00315" level="file">
+                    <did>
+                        <unittitle>Conf. on Euro. Problems</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00316" level="file">
+                    <did>
+                        <unittitle>SHAFR</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00317" level="file">
+                    <did>
+                        <unittitle>Etc.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00318" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 172</container>
+                        <unittitle>Course files</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00319" level="file">
+                    <did>
+                        <unittitle>Writings by Others</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00320" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 173</container>
+                        <unittitle>Clippings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00321" level="file">
+                    <did>
+                        <unittitle>Offprints</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00322" level="file">
+                    <did>
+                        <unittitle>Printed Material</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00323" level="file">
+                    <did>
+                        <unittitle>Writings by others</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00324" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 174</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00325" level="file">
+                    <did>
+                        <unittitle>Coolidge</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00326" level="file">
+                    <did>
+                        <unittitle>Truman</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00327" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 175</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00328" level="file">
+                    <did>
+                        <unittitle>Triplet</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00329" level="file">
+                    <did>
+                        <unittitle>Am. Diplomacy, 20th e.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00330" level="file">
+                    <did>
+                        <unittitle>Short writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00331" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 176</container>
+                        <unittitle>Bemis Fest.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00332" level="file">
+                    <did>
+                        <unittitle>Writings by others</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00333" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 177</container>
+                        <unittitle>Writings by others</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00334" level="file">
+                    <did>
+                        <container label="Box" type="Box"> 178 (Oversize)</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00335" level="file">
+                    <did>
+                        <unittitle>Truman</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9390-00336" level="file">
+                    <did>
+                        <unittitle>Holding the Line</unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
