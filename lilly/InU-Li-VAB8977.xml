@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAB8977">InU-Li-VAB8977</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Intercultural Publications mss., <date
+                        normal="1952/1956">1952-1956</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2010" type="publication">© 2010</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2010">© 2010</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation> XML finding aid derived from HTML version through cutting and pasting
+                    <lb/><date normal="2010" type="source">2010</date>
+                <lb/>Finding aid encoded by Matt Carruthers, Library/Archives, Indiana University,
+                    <date normal="2010-03-24">March 24, 2010</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2010-03-24"/>
+                <item>This is the first version of the encoded finding aid.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Intercultural Publications,
+                    Inc.</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Intercultural Publications
+                mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1952/1956" type="inclusive"
+                >1952-1956</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2177</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>ca. 76,000 items</extent>
+            </physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Intercultural Publications mss.,
+                1952-1956, are the papers of the publishing project Intercultural Publications, a
+                subsidiary of the Ford Foundation, headed by New Directions publisher, James
+                Laughlin, 1914-1997.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+
+            <p>Intercultural Publications, founded in 1950 by James Laughlin, was the publisher of
+                    <title render="italic">Perspectives USA,</title> a quarterly journal of American
+                arts and letters which circulated in Europe.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Financial; II.
+                Administrative; III. Miscellaneous; IV. Publications.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Intercultural Publications mss., 1952-1956, are the papers of the publishing
+                project Intercultural Publications, a subsidiary of the Ford Foundation, headed by
+                New Directions publisher, James Laughlin, 1914-1997. The collection includes
+                financial papers pertaining to Intercultural Publications; administrative papers,
+                including corporation files, Ford Foundation documents, dockets, personnel files,
+                and James Laughlin's correspondence files; miscellaneous files including copyright
+                files, project suggestions, commission reports, conference files, publicity and
+                advertising files. Personnel connected with the project included poets Hayden
+                Carruth, 1921- , as projects administrator from 1952-1953, and part-time
+                administrator in 1954; Edouard Roditi, 1910-1992, as supervisor of translators,
+                translations editor for <title render="italic">Perspectives, USA,</title> and later
+                as a free-lance contributor; and Delmore Schwartz, 1913-1966, as an editor and
+                contributor.</p>
+            <p>Also included are files pertaining to the publication <title render="italic"
+                    >Perspectives USA,</title> a literary-cultural magazine designed to teach
+                Europeans about American culture. Special sections published on the cultures of
+                India, Burma, Indonesia, Japan, the Arab World, and Greece appeared in the <title
+                    render="italic">Atlantic Monthly</title>. In addition to the <title
+                    render="italic">Perspectives USA</title> and <title render="italic">Atlantic
+                    Monthly</title> publications files, the collection also includes material
+                concerning the Magazines Abroad project, the Indian Southern Languages Book Trust,
+                and the publications <title render="italic">UNESCO Magazine,</title>
+                <title render="italic">Diogenes</title> and <title render="italic">Kultura.</title>
+                Original artwork, color transparencies, proofs, photographs and record albums
+                complete the collection.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/laughlin+james+1914-1997{su}">
+                            <persname encodinganalog="600" source="lcnaf">Laughlin, James,
+                                1914-1997--Correspondence. </persname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/intercultural+publications+inc{su}">
+                            <corpname encodinganalog="610" source="lcnaf">Intercultural
+                                Publications, Inc. </corpname>
+                        </extref>
+                    </item>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/indiana+southern+languages+book+trust{su}">
+                            <corpname encodinganalog="610" source="lcnaf">Indiana Southern Languages
+                                Book Trust. </corpname>
+                        </extref>
+                    </item>
+
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Titles</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/perspectives+usa{su}">
+                            <title encodinganalog="630" source="lcnaf">Perspectives USA. </title>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item>
+                        <extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/publishers+and+publishing+united+states{su}">
+                            <title encodinganalog="650" source="lcnaf">Publishers and
+                                publishing--United States. </title>
+                        </extref>
+                    </item>
+                </list>
+            </controlaccess>
+        </controlaccess>
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 1981</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>Intercultural Publications mss., Lilly Library, Indiana University, Bloomington,
+                    Indiana.</p>
+            </prefercite>
+
+
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAB8977-00001" level="series">
+                <did>
+                    <!-- optional -->
+                    <container label="Boxes" type="box">1-28</container>
+
+
+                    <unittitle>I. Financial</unittitle>
+
+                </did>
+                <c02 id="VAB8977-00002" level="file">
+                    <did>
+                        <unittitle>Includes vouchers; receipts; check copies; invoices.</unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAB8977-00003" level="series">
+                <did>
+                    <container label="Box" type="box">29</container>
+                    <unittitle>II. Administrative</unittitle>
+                </did>
+                <c02 id="VAB8977-00004" level="file">
+                    <did>
+                        <unittitle> Includes correspondence and other materials concerning Ford
+                            Foundation and funds. </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8977-00005" level="file">
+                    <did>
+                        <container label="Boxes" type="box">30-32</container>
+                        <unittitle> Includes corporation files; dockets; minutes; tax exemptions;
+                            contract files, personnel files; certificate of incorporation
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8977-00006" level="file">
+                    <did>
+                        <container label="Boxes" type="box">33-34</container>
+                        <unittitle> James Laughlin's correspondence files </unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAB8977-00007" level="series">
+                <did>
+                    <container label="Box" type="box">35</container>
+                    <unittitle>III. Miscellaneous</unittitle>
+                </did>
+                <c02 id="VAB8977-00008" level="file">
+                    <did>
+                        <unittitle>Includes questionnaires; Rockefeller Foundation files; minutes;
+                            communist propaganda; Mid-west Music Foundation file; essays;
+                            International Conference on Asian Problems file</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8977-00009" level="file">
+                    <did>
+                        <container label="Box" type="box">36</container>
+                        <unittitle>Includes copyright file; project suggestions; editorial ideas;
+                            publicity file; promotion material</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8977-00010" level="file">
+                    <did>
+                        <container label="Box" type="box">37</container>
+                        <unittitle>Includes correspondence, press releases and other materials
+                            concerning European Committee for Cultural Freedom; National Committee
+                            for Adequate Overseas Information program; Cox Commission: Congressional
+                            investigation, <date normal="1952">1952;</date> Reece Commission, <date
+                                normal="1954">1954;</date> American Book Publishers Council;
+                            American Commission for Cultural Freedom; Asia Foundation.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8977-00011" level="file">
+                    <did>
+                        <container label="Box" type="box">38</container>
+                        <unittitle>Accounting, business, administrative, and advertising files for
+                            Intercultural Publications Inc.; business, distribution, and exchange
+                            files for the publication <title render="italic"
+                            >Perspectives.</title></unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAB8977-00012" level="series">
+                <did>
+                    <unittitle>IV. Publications</unittitle>
+                </did>
+                <c02 id="VAB8977-00013" level="file">
+                    <did>
+                        <container label="Boxes" type="box">39-56</container>
+                        <unittitle><title render="italic">Perspectives</title> files [other
+                            countries]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8977-00014" level="file">
+                    <did>
+                        <container label="Box" type="box">57</container>
+                        <unittitle><title render="italic">Atlantic</title> supplement; miscellaneous
+                            Intercultural Publications Inc. files</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8977-00015" level="file">
+                    <did>
+                        <container label="Boxes" type="box">58-67</container>
+                        <unittitle>
+                            <title render="italic">Perspectives USA</title>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8977-00016" level="file">
+                    <did>
+                        <container label="Boxes" type="box">68-69</container>
+                        <unittitle> Indian Southern Languages Book Trust </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8977-00017" level="file">
+                    <did>
+                        <container label="Box" type="box">70</container>
+                        <unittitle><title render="italic">Diogenes;</title> Dutch anthology;
+                            Portuguese anthology; <title render="italic">Kultura</title></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8977-00018" level="file">
+                    <did>
+                        <container label="Boxes" type="box">71-72</container>
+                        <unittitle>Magazines Abroad project </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8977-00019" level="file">
+                    <did>
+                        <container label="Boxes" type="box">73-76</container>
+                        <unittitle>Art, music, and theatre projects; original art; color
+                            transparencies; photographs; proofs </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8977-00020" level="file">
+                    <did>
+                        <container label="Oversize" type="box">1</container>
+                        <unittitle>Record albums. 36 recordings of spoken word performances and
+                            author readings </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAB8977-00021" level="file">
+                    <did>
+                        <container label="Oversize" type="box">2 and 3</container>
+                        <unittitle>Original art; photographs; proofs; scrapbook </unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
