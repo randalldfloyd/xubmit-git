@@ -1,0 +1,1141 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAC9473">InU-Li-VAC9473</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Hahn mss., <date normal="1900/1991"
+                        type="inclusive">1900-1991</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2013" type="publication">© 2013</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2013">© 2013</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2013" type="source">2013</date>
+                <lb/>Finding aid encoded by Shayna Pekala, Lilly Library, Indiana University, <date
+                    normal="2013-03-19">March 19, 2013</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2013-03-19">March 19, 2013</date>
+                <item>Encoded finding aid started.</item>
+            </change>
+            <change audience="internal">
+                <date normal="2013-04-02">April 2, 2013</date>
+                <item>Encoded finding aid completed.</item>
+            </change>
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Hahn, Emily, 1905-1997.</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Hahn mss., </unittitle>
+            <unitdate encodinganalog="245$f" normal="1900/1991" type="inclusive"
+                >1900-1991</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date-bulk or inclusive-in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1438</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>7258 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">Collection consists of the
+                correspondence and writings of author Emily Hahn.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+            <p>Hahn was born in St. Louis and lived there until her family moved to Chicago during
+                her high school years. She later attended the University of Wisconsin and in 1926
+                received the first mining engineering degree awarded to a female student. Following
+                graduation, until the spring of 1927, she worked for an engineering firm in St.
+                Louis and then as a company courier for that firm in Santa Fe, New Mexico. Returning
+                to the East during the summer, she attended Columbia University for graduate work,
+                taught geology during the 1927/28 academic year, and then headed for Europe on her
+                first overseas tour. After living in Florence and London, she returned home briefly
+                in 1929 before going to the Congo and two years' residence there. In 1932 she began
+                further travels, finally settling in Shanghai in 1935 where she taught English for
+                three years.</p>
+            <p>All during this decade of travel and adventure Hahn wrote almost
+                continually--articles, stories, letters--and many of her pieces were printed in
+                    <emph render="italic">The New Yorker</emph>, as well as five full-length books
+                being published. Fortunately, as a supplement to her writings, the collection also
+                contains Hahn's letters home to her mother and family while she lived and traveled
+                in Europe, Africa, and China. This early correspondence is particularly descriptive
+                of people, places, and activities, and is most interesting for the early years of
+                Asian conflict that would later be seen as a prelude of World War II. The
+                Sino-Japanese conflict eventually caused Hahn to leave Shanghai for Hong Kong, where
+                she was later forced to remain after the Japanese took over that area in 1941. She
+                was finally repatriated in 1943 and proceeded to produce two books concerning those
+                years: <emph render="italic">China to Me</emph> and <emph render="italic">Hong Kong
+                    Holiday.</emph> In 1945 Hahn married British Major Charles Ralph Boxer,
+                1904-2000, whom she had met in Hong Kong prior to his internment as a POW, and
+                following the war they moved to his family home in England. She continued to write
+                short fiction, articles for magazine publication, particularly <emph render="italic"
+                    >The New Yorker</emph>, and a remarkable number of books. During the 1950's she
+                ventured into the juvenile field with some fiction, juvenile biographies, and
+                descriptions of some of the countries in which she had traveled or lived. Other
+                publications include biographies of Aphra Behn, James Brooke, Fanny Burney, Chiang
+                kai-shek, D.H. Lawrence, and Mabel Dodge Luhan; a description of the diamond
+                business; four books on zoos and animals; histories of China, Ireland, women; and
+                several autobiographical accounts.</p>
+        </bioghist>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>In addition to drafts of her writings, typescripts, galleys, photographs, and
+                research materials relating to many of her publications, the collection also
+                contains several unpublished fictional pieces; college notes; family memorabilia and
+                letters; photographs of various areas of the United States and Africa taken during
+                the 1930's; clippings of book reviews and articles by and about Hahn; and
+                miscellaneous clippings relating to people and places familiar to her.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/hahn+emily+1905-1997{su}">
+                            <persname encodinganalog="600" source="lcnaf">Hahn, Emily, 1905-1997
+                            --Correspondence.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/boxer+c.+r.+(charles+ralph)+1904-2000{su}">
+                            <persname encodinganalog="600" source="lcnaf">Boxer, C. R. (Charles
+                                Ralph), 1904-2000 --Correspondence.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/bruccoli+matthew+j.+(matthew+joseph)+1931-2008{su}">
+                            <persname encodinganalog="600" source="lcnaf">Bruccoli, Matthew J.
+                                (Matthew Joseph), 1931-2008 --Correspondence.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/buck+pearl+s.+(pearl+sydenstricker)+1892-1973{su}"
+                            ><persname encodinganalog="600" source="lcnaf">Buck, Pearl S. (Pearl
+                                Sydenstricker), 1892-1973--Correspondence.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/macdonald+malcolm+1901-1981{su}"
+                            ><persname encodinganalog="600" source="lcnaf">MacDonald, Malcolm,
+                            1901-1981 --Correspondence.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/oppenheimer+h.+f.+(harry+frederick)+1908-2000{su}"
+                            ><persname encodinganalog="600" source="lcnaf">Oppenheimer, H. F.
+                            (Harry Frederick), 1908-2000 --Correspondence.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/sassoon+elias+victor+1881-1961{su}"
+                            ><persname encodinganalog="600" source="lcnaf">Sassoon, Elias Victor,
+                            1881-1961 --Correspondence.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/shawn+william{su}"
+                            ><persname encodinganalog="600" source="lcnaf">Shawn, William
+                            --Correspondence.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/west+rebecca+1892-1983{su}"
+                            ><persname encodinganalog="600" source="lcnaf">West, Rebecca, 1892-1983
+                            --Correspondence.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/kennedy+margaret+1896-1967{su}"
+                            ><persname encodinganalog="600" source="lcnaf">Kennedy, Margaret,
+                            1896-1967 --Correspondence.</persname></extref></item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/authors+american+correspondence{su}"
+                            ><subject encodinganalog="650" source="lcsh">Authors, American
+                            --Correspondence.</subject></extref></item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="610" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+
+        <!-- optional, if applicable -->
+        <relatedmaterial encodinganalog="544 1">
+            <head>Related Material</head>
+            <p>Complementing this collection are the Hahn-Brandt mss. which consist of her literary
+                agent's files on her behalf, and the Bobbs-Merrill mss. containing materials related
+                to her books published by that firm.</p>
+            <p>Other related manuscripts include: Hahn mss. II, Hahn mss. III, Hahn mss. IV</p>
+        </relatedmaterial>
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 1975, 1976, 1989, 1992.</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Hahn mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+            <!--optional -->
+            <custodhist encodinganalog="561">
+                <head>Provenance</head>
+                <p>[provenance note]</p>
+            </custodhist>
+
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Staff.</p>
+                <p>Completed in <date normal="2013">2013</date></p>
+
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAC9473-00001" level="series">
+                <did>
+                    <unittitle>Correspondence</unittitle>
+                </did>
+                <note>
+                    <p>Correspondents, A-E
+                        <list>
+                            <item>Allen, Mary E. </item>
+                            <item>Alsop, Joseph Wright (1878-1953)</item>
+                            <item>Alsop, Joseph Wright (1910-1989)</item>
+                            <item>Andriola, Alfred</item>
+                            <item>Armat, Virginia</item>
+                            <item>Arthur, Josephine Edith Hahn </item>
+                            <item>Astengo, John</item>
+                            <item>Augustine, James Patrick</item>
+                            <item>Baer, Howard F.</item>
+                            <item>Bahadur, Ishwari Singh</item>
+                            <item>Balk, Robert</item>
+                            <item>Barker, Arthur</item>
+                            <item>Baron, Marcel L.</item>
+                            <item>Barrett, David Dean</item>
+                            <item>Baum, Vicki</item>
+                            <item>Baumgarten, Bernice</item>
+                            <item>Bell, Vicars Walker</item>
+                            <item>Benes, Barton Lidice</item>
+                            <item>Benét, William rose</item>
+                            <item>Billings, Katherine Stevens (Fowler)</item>
+                            <item>Blunt, Arthur G.</item>
+                            <item>Boxer, Amanda</item>
+                            <item>Boxer, Charles Ralph</item>
+                            <item>Bradford, Mary Rose</item>
+                            <item>Brandt, Carol</item>
+                            <item>Brooke, Basil Charles Barrington</item>
+                            <item>Brooke, Bertram W.D.</item>
+                            <item>Brown, Hazel Elizabeth</item>
+                            <item>Brownrigg, Philip Henry Ackerman</item>
+                            <item>Bruccoli, Matthew Joseph</item>
+                            <item>Bryant, Margaret M.</item>
+                            <item>Buck, Pearl (Sydenstricker)</item>
+                            <item>Bynner, Witter</item>
+                            <item>Calisher, Hortense</item>
+                            <item>Caniff, Milton Arthur</item>
+                            <item>Cape, Jonathan</item>
+                            <item>Chapin, James Paul</item>
+                            <item>Chapman, Chanler Armstrong</item>
+                            <item>Chapman, Charlotte D.</item>
+                            <item>Chiang, Mei-ling (Sung) (Mme. Chiang kai-shek)</item>
+                            <item>Clarke, Ken</item>
+                            <item>Cohen, Jessie</item>
+                            <item>Cole, Irene Fincher</item>
+                            <item>Comber, Elizabeth (Tang)</item>
+                            <item>Cox, Corolyn</item>
+                            <item>Crowell, Robert Leland</item>
+                            <item>Crowley, Ralph</item>
+                            <item>Cummins, James S.</item>
+                            <item>Curran, Charles</item>
+                            <item>Curtis, Lawrence</item>
+                            <item>Davis, Aubrey</item>
+                            <item>Dawson, Gregory</item>
+                            <item>Dawson, Mitchell</item>
+                            <item>Dawson, Rose Hahn</item>
+                            <item>Edmonds, Helen (Woods)</item>
+                            <item>Emmet, Jr., Christopher Temple</item>
+                        </list>
+                    </p>
+                    <p>Correspondents, F-M
+                        <list>
+                            <item>Farrar, John Chipman</item>
+                            <item>Field, Henry</item>
+                            <item>Field, Julia Rand Allen</item>
+                            <item>Fitch, Geraldine Townsend</item>
+                            <item>Ford, Matthew Cuchulain</item>
+                            <item>Foshay, Lee</item>
+                            <item>Fritz Bernardine Szold</item>
+                            <item>Gilbert, Dorothy</item>
+                            <item>Gill, Louise Mary</item>
+                            <item>Goodwin, John Blair L.</item>
+                            <item>Gorer, Geoffrey</item>
+                            <item>Gould, Randall Chase</item>
+                            <item>Gray, Adeline</item>
+                            <item>Greenstein, Milton</item>
+                            <item>Gunther, John</item>
+                            <item>Hahn, Charles</item>
+                            <item>Hahn, Emanuel</item>
+                            <item>Hahn, Emily</item>
+                            <item>Hahn, Hannah (Schoen)</item>
+                            <item>Hahn, Isaac Newton</item>
+                            <item>Hahn, Nancy Coonsman</item>
+                            <item>Haight, Gordon Sherman</item>
+                            <item>Hanson, Donald P.</item>
+                            <item>Hanson, Muriel</item>
+                            <item>Henderson, Robert</item>
+                            <item>Hohlfeld, rudy L.</item>
+                            <item>Hoke, Helen</item>
+                            <item>Horgan, Paul</item>
+                            <item>Howard, George Wren</item>
+                            <item>Hutheesing, Krishna</item>
+                            <item>Johnson, Malcolm</item>
+                            <item>Johnson, Williard</item>
+                            <item>Just, Evan</item>
+                            <item>Keedick, Robert Lee</item>
+                            <item>Keith, Agnes Newton</item>
+                            <item>Kelly, Walt</item>
+                            <item>Kennedy, Margaret</item>
+                            <item>Ker-Seymer, Barbara</item>
+                            <item>Kinney, Harrison</item>
+                            <item>Kogan, Herman</item>
+                            <item>Kross, Agnes A.</item>
+                            <item>Lackersteen, Mary</item>
+                            <item>Larsen, Dorothy Hahn</item>
+                            <item>Laurents, Arthur</item>
+                            <item>Lescher, Robert</item>
+                            <item>Lobrano, Gustav Stubbs</item>
+                            <item>Loth, David</item> 
+                            <item>Ma, Pin-ho</item>
+                            <item>McCormick, Kenneth Dale</item>
+                            <item>MacDonald, Malcolm John</item>
+                            <item>Martin, Francis Xavier</item>
+                            <item>Maxwell, William</item>
+                            <item>Mayer, Edwin Justus</item>
+                            <item>Mears, Helen</item>
+                            <item>Miller, Dorothy Raper</item>
+                            <item>Miller, Henry</item>
+                            <item>Moses, Robert</item>
+                            <item>Myers, William Allen</item>
+                        </list>
+                    </p>
+                    <p>Correspondents, N-Z
+                        <list>
+                            <item>North, Sterling</item>
+                            <item>Oda, Takio</item>
+                            <item>Ogilvie, Gordon F.</item>
+                            <item>Oppenheimer, Harry Frederick</item>
+                            <item>Parkinson, Marshall</item>
+                            <item>Pearse, richard L.</item>
+                            <item>Perry, Patrick</item>
+                            <item>Platt, Harrison Gray</item>
+                            <item>Pritchard, Alma</item>
+                            <item>Proulx, Benjamin A.</item>
+                            <item>Putnam, Patrick Tracy Lowell</item>
+                            <item>Rawson, Hugh</item>
+                            <item>Reynolds, Robert Lester</item>
+                            <item>Rosenbauer, Wallace W.</item>
+                            <item>Ross, Harold Wallace</item>
+                            <item>Ruhe, Robert W.</item>
+                            <item>Sansom, Katharine</item>
+                            <item>Sassoon, Evelyn Barnes</item>
+                            <item>Sassoon, Victor</item>
+                            <item>Schlessiger, Charles</item>
+                            <item>Schlessiger, Hilary Dawson</item>
+                            <item>Schneff, Arthur</item>
+                            <item>Schroeder, Charles Robbins</item>
+                            <item>Selwyn-Clarke, Selwyn</item>
+                            <item>Shawn, William</item>
+                            <item>Shively, George</item>
+                            <item>Smith, Helen Hahn</item>
+                            <item>Smith, Richard Rushton</item>
+                            <item>Spoelberch, Jacques de</item>
+                            <item>Stafford, Jean</item>
+                            <item>Stearn, Noel</item>
+                            <item>Streatfeild, Noel</item>
+                            <item>Swanson, Clarenc O.</item>
+                            <item>Toeg, Lorraine, Murray</item>
+                            <item>Utley, Freda</item>
+                            <item>VanWagenen, Gertrude</item>
+                            <item>Vecchio, Carola Militia</item>
+                            <item>Visser, Dorothy D.</item>
+                            <item>Wade, Clint</item>
+                            <item>Want, Suzanne C.</item>
+                            <item>Warburg, Frederic John</item>
+                            <item>Watt, Peter</item>
+                            <item>Watts, Franklin Mowry</item>
+                            <item>West, Rebecca</item>
+                            <item>Weybright, Victor</item>
+                            <item>White, Katherine Sergeant Angell</item>
+                            <item>Young, Genevieve</item>
+                            <item>Zau, Sinmay</item>
+                            <item>Zuckerman, Solly</item>
+                        </list>
+                    </p>
+                </note>
+                <c02 id="VAC9473-00002" level="otherlevel">
+                    <did>
+                        <container label="Box" type="Box">1</container>
+                        <unittitle>
+                            <unitdate normal="1900/1937" type="inclusive">1900-1937</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00003" level="otherlevel">
+                    <did>
+                        <container label="Box" type="Box">2</container>
+                        <unittitle>
+                            <unitdate normal="1938/1949" type="inclusive">1938-1949</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00004" level="otherlevel">
+                    <did>
+                        <container label="Box" type="Box">3</container>
+                        <unittitle>
+                            <unitdate normal="1950/1964-05" type="inclusive">1950-1964,
+                                May</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00005" level="otherlevel">
+                    <did>
+                        <container label="Box" type="Box">4</container>
+                        <unittitle>
+                            <unitdate normal="1964-06/1970-06" type="inclusive">1964, June-1970,
+                                June</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00006" level="otherlevel">
+                    <did>
+                        <container label="Box" type="Box">5</container>
+                        <unittitle>
+                            <unitdate normal="1970-07/1973-03" type="inclusive">1970, July-1973,
+                                Mar.</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00007" level="otherlevel">
+                    <did>
+                        <container label="Box" type="Box">6</container>
+                        <unittitle>
+                            <unitdate normal="1973-04/1991" type="inclusive">1973,
+                                Apr.-1991</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00008" level="otherlevel">
+                    <did>
+                        <container label="Box" type="Box">7</container>
+                        <unittitle>
+                            <unitdate normal="1900/1991" type="inclusive">n.d.</unitdate>
+                            A-Z</unittitle>
+                        <physdesc>(6 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00009" level="file">
+                    <did>
+                        <unittitle><title render="italic">Brooke,</title>
+                            <unitdate normal="1951/1955" type="inclusive">1951-1955</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00010" level="file">
+                    <did>
+                        <unittitle><title render="italic">Diamond,</title>
+                            <unitdate normal="1954/1956" type="inclusive">1954-1956</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00011" level="file">
+                    <did>
+                        <unittitle><title render="italic">Jill</title> libel suit, <unitdate
+                                normal="1954/1956" type="inclusive">1948-1949</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00012" level="file">
+                    <did>
+                        <unittitle><title render="italic">Soong Sisters,</title>
+                            <unitdate normal="1939/1953" type="inclusive">1939-1953</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00013" level="file">
+                    <did>
+                        <unittitle><title render="italic">Tiger House Party,</title>
+                            <unitdate normal="1957/1967" type="inclusive">1957-1967</unitdate>
+                        </unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00014" level="file">
+                    <did>
+                        <unittitle>Unidentified </unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAC9473-00015" level="series">
+                <did>
+                    <unittitle>Writings</unittitle>
+                </did>
+                <c02 id="VAC9473-00016" level="file">
+                    <did>
+                        <container label="Box" type="Box">7</container>
+                        <unittitle>Aboab</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00017" level="file">
+                    <did>
+                        <unittitle>Africa to Me</unittitle>
+                        <physdesc>(6 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00018" level="file">
+                    <did>
+                        <unittitle>Animal Gardens</unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00019" level="file">
+                    <did>
+                        <container label="Box" type="Box">8</container>
+                        <unittitle>Animal Gardens</unittitle>
+                        <physdesc>(9 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00020" level="file">
+                    <did>
+                        <unittitle>[Autobiography]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00021" level="file">
+                    <did>
+                        <unittitle>The Bearded Demoiselle</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00022" level="file">
+                    <did>
+                        <unittitle>Breath of God</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00023" level="file">
+                    <did>
+                        <unittitle>Chiang Kai-Shek</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00024" level="file">
+                    <did>
+                        <unittitle>China Only Yesterday</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00025" level="file">
+                    <did>
+                        <container label="Box" type="Box">9</container>
+                        <unittitle>China Only Yesterday</unittitle>
+                        <physdesc>(9 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00026" level="file">
+                    <did>
+                        <unittitle>China to Me</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00027" level="file">
+                    <did>
+                        <unittitle>Cooking of China</unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00028" level="file">
+                    <did>
+                        <unittitle>Diamond</unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00029" level="file">
+                    <did>
+                        <unittitle>First Book of India</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00030" level="file">
+                    <did>
+                        <unittitle>Fractured Emerald</unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00031" level="file">
+                    <did>
+                        <unittitle>Good Sports</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00032" level="file">
+                    <did>
+                        <unittitle>Homecoming</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00033" level="file">
+                    <did>
+                        <container label="Box" type="Box">10</container>
+                        <unittitle>Indo</unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00034" level="file">
+                    <did>
+                        <unittitle>The Islands</unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00035" level="file">
+                    <did>
+                        <unittitle>James Brooke</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00036" level="file">
+                    <did>
+                        <unittitle>Leonardo da Vinci</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00037" level="file">
+                    <did>
+                        <unittitle>Lorenzo</unittitle>
+                        <physdesc>(7 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00038" level="file">
+                    <did>
+                        <container label="Box" type="Box">11</container>
+                        <unittitle>Mabel</unittitle>
+                        <physdesc>(9 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00039" level="file">
+                    <did>
+                        <unittitle>Miss Jill</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00040" level="file">
+                    <did>
+                        <unittitle>Nellie Bly</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00041" level="file">
+                    <did>
+                        <unittitle>On the Side of the Apes</unittitle>
+                        <physdesc>(10 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00042" level="file">
+                    <did>
+                        <container label="Box" type="Box">12</container>
+                        <unittitle>Once Upon a Pedestal</unittitle>
+                        <physdesc>(11 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00043" level="file">
+                    <did>
+                        <unittitle>[Primates]</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00044" level="file">
+                    <did>
+                        <unittitle>Romantic Rebels</unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00045" level="file">
+                    <did>
+                        <unittitle>[Royal Society]</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00046" level="file">
+                    <did>
+                        <container label="Box" type="Box">13</container>
+                        <unittitle>Tiger House Party</unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00047" level="file">
+                    <did>
+                        <unittitle>Turkey</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00048" level="file">
+                    <did>
+                        <unittitle>Untitled memoir</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00049" level="file">
+                    <did>
+                        <unittitle>Zoos</unittitle>
+                        <physdesc>(9 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00050" level="file">
+                    <did>
+                        <unittitle>Short Prose: A-P</unittitle>
+                        <physdesc>(7 ff.)</physdesc>
+                    </did>
+                    <note>
+                        <list>
+                            <item>The Allowance</item>
+                            <item>The American Accent</item>
+                            <item>Anemones</item>
+                            <item>[Aphra Behn]</item>
+                            <item>The Assassins, by Hildegarde Tolman Teilhet. Book review</item>
+                            <item>At Mother's Knee</item>
+                            <item>Aunt Alice's Ghost</item>
+                            <item>The Austere Market</item>
+                            <item>Beauty Spot</item>
+                            <item>The Big Smoke</item>
+                            <item>The Bluebeard Room</item>
+                            <item>Bohemianism</item>
+                            <item>The Borgias</item>
+                            <item>The Cat</item>
+                            <item>China in the Sun, by Randall Gould. Book review</item>
+                            <item>Chinese Women</item>
+                            <item>Clip Boutell's Column</item>
+                            <item>Coming from an Englishman</item>
+                            <item>Confessions of a Schizoid</item>
+                            <item>Conversation Piece, 1945</item>
+                            <item>Correspondence</item>
+                            <item>The Crowded House</item>
+                            <item>The Cupboard</item>
+                            <item>The Curator</item>
+                            <item>Deep in Our Hearts Forever</item>
+                            <item>A Demand for Fans</item>
+                            <item>Dining Alone</item>
+                            <item>Doing a Juvenile</item>
+                            <item>East of the Middle</item>
+                            <item>Exmoor of the Classics</item>
+                            <item>Experiment in Finance</item>
+                            <item>Fairy-Tales</item>
+                            <item>Fish and Guests</item>
+                            <item>The Flying President</item>
+                            <item>Forts and Temples</item>
+                            <item>Four Girls</item>
+                            <item>The Genius</item>
+                            <item>Gold-digger of '26</item>
+                            <item>The Golden Ring</item>
+                            <item>Graves</item>
+                            <item>The Helping Hand</item>
+                            <item>Horses of the Dawn</item>
+                            <item>Hortense Calisher</item>
+                            <item>The Hounds</item>
+                            <item>In Confidence</item>
+                            <item>Intermezzo</item>
+                            <item>In the Forest of the "Little People"</item>
+                            <item>It Doesn't Mean a Thing</item>
+                            <item>Jappy</item>
+                            <item>Jennifer</item>
+                            <item>The Jodhpurs</item>
+                            <item>Johnny</item>
+                            <item>Just a Formality</item>
+                            <item>Kathy, Not Me</item>
+                            <item>Kimberley</item>
+                            <item>The Ladies on the Lawn</item>
+                            <item>Lepers of Shanghai</item>
+                            <item>Little America</item>
+                            <item>The Little Cad</item>
+                            <item>The Little Red Light</item>
+                            <item>Little Sister's Baby</item>
+                            <item>Living With the Tribes</item>
+                            <item>The Lost Island</item>
+                            <item>The Lost Mine</item>
+                            <item>Lysenko and the Jimshouse</item>
+                            <item>Marching Home</item>
+                            <item>The Marriage Hazard</item>
+                            <item>Michelle</item>
+                            <item>Millionaires</item>
+                            <item>Mr. Berg and the Goddess</item>
+                            <item>Mr. Crossley</item>
+                            <item>Mr. Mangaldas</item>
+                            <item>Mr. Wingcollar</item>
+                            <item>Mrs. Prentiss' Betrayal</item>
+                            <item>Monica</item>
+                            <item>Monuments</item>
+                            <item>My Greatest Adventure in Living</item>
+                            <item>Night Watch</item>
+                            <item>Not This Time</item>
+                            <item>The Obvious Course</item>
+                            <item>The Old People</item>
+                            <item>Pants</item>
+                            <item>Pater Dolorosus</item>
+                            <item>Perfectly Natural</item>
+                            <item>The Pink Cake</item>
+                            <item>The Price of Poppies</item>
+                            <item>The Primitive</item>
+                            <item>Prophets With Honor</item>
+                            <item>Publishers on Sunday</item>
+                            <item>Pygmies and Crocodiles</item>
+                        </list>
+                    </note>
+                </c02>
+                <c02 id="VAC9473-00051" level="file">
+                    <did>
+                        <container label="Box" type="Box">14</container>
+                        <unittitle>Short Prose: Q-Z</unittitle>
+                        <physdesc>(2 ff.)</physdesc>
+                    </did>
+                    <note>
+                        <list>
+                            <item>Quiet Morning</item>
+                            <item>Rice Around the World</item>
+                            <item>Sex Has No Place in Business</item>
+                            <item>Shoestrings of the Past</item>
+                            <item>Some Truths About China</item>
+                            <item>Something Forgotten</item>
+                            <item>The Spartans</item>
+                            <item>Sporting Man</item>
+                            <item>Spousery</item>
+                            <item>Sun Yat-Sen: A Portrait, by Stephen Chen and Robert Payne. Book
+                                review</item>
+                            <item>Tea With the Vicar</item>
+                            <item>Ten Eventful Years</item>
+                            <item>The Tent</item>
+                            <item>They Never Kill the Bull</item>
+                            <item>Thinking Out Loud</item>
+                            <item>The Tough Egg</item>
+                            <item>Undergraduate</item>
+                            <item>Vacation</item>
+                            <item>Walking the Dead Diamond River, by Edward Hoagland. Book
+                                review</item>
+                            <item>Weekly Boarder</item>
+                            <item>Zoo</item>
+                        </list>
+                    </note>
+                </c02>
+                <c02 id="VAC9473-00052" level="file">
+                    <did>
+                        <unittitle>Short Prose: Untitled</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00053" level="file">
+                    <did>
+                        <unittitle>Poems</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00054" level="file">
+                    <did>
+                        <unittitle>Translations</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00055" level="file">
+                    <did>
+                        <unittitle>Miscellaneous</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00056" level="file">
+                    <did>
+                        <unittitle>Miscellaneous research</unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAC9473-00057" level="series">
+                <did>
+                    <unittitle>Photographs</unittitle>
+                </did>
+                <c02 id="VAC9473-00058" level="file">
+                    <did>
+                        <container label="Box" type="Box">14</container>
+                        <unittitle>Africa</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00059" level="file">
+                    <did>
+                        <unittitle>Emily Hahn</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00060" level="file">
+                    <did>
+                        <unittitle>United States</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00061" level="file">
+                    <did>
+                        <unittitle>Zoos</unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00062" level="file">
+                    <did>
+                        <unittitle>Miscellaneous</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAC9473-00063" level="series">
+                <did>
+                    <unittitle>Printed</unittitle>
+                </did>
+                <c02 id="VAC9473-00064" level="file">
+                    <did>
+                        <container label="Box" type="Box">14</container>
+                        <unittitle><emph render="italic">New Yorker</emph> tear sheets, <unitdate
+                                normal="1929/1938" type="inclusive">1929-1938</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00065" level="file">
+                    <did>
+                        <unittitle><emph render="italic">New Yorker</emph> tear sheets, <unitdate
+                                normal="1939/1946-02" type="inclusive">1939-1946,
+                            Feb.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00066" level="file">
+                    <did>
+                        <unittitle>Short prose</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00067" level="file">
+                    <did>
+                        <unittitle>Clippings re: Hahn</unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00068" level="file">
+                    <did>
+                        <unittitle>Clippings: Reviews of Hahn's books</unittitle>
+                        <physdesc>(7 folders)</physdesc>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAC9473-00069" level="series">
+                <did>
+                    <unittitle>Memorabilia</unittitle>
+                </did>
+                <c02 id="VAC9473-00070" level="file">
+                    <did>
+                        <container label="Box" type="Box">14</container>
+                        <unittitle>College notes</unittitle>
+                        <physdesc>(4 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00071" level="file">
+                    <did>
+                        <container label="Box" type="Box">15</container>
+                        <unittitle>College notes</unittitle>
+                        <physdesc>(7 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00072" level="file">
+                    <did>
+                        <unittitle>Diary</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00073" level="file">
+                    <did>
+                        <unittitle>Hahn family</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00074" level="file">
+                    <did>
+                        <unittitle>Correspondence</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00075" level="file">
+                    <did>
+                        <unittitle>Clippings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00076" level="file">
+                    <did>
+                        <unittitle>Memoirs of Isaac Hahn</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAC9473-00077" level="series">
+                <did>
+                    <unittitle>Miscellaneous</unittitle>
+                </did>
+                <c02 id="VAC9473-00078" level="file">
+                    <did>
+                        <container label="Box" type="Box">15</container>
+                        <unittitle>Art pieces</unittitle>
+                    </did>
+                    <note>
+                        <p>(see also: <emph render="bold">Oversize</emph>)</p>
+                    </note>
+                </c02>
+                <c02 id="VAC9473-00079" level="file">
+                    <did>
+                        <unittitle>Financial</unittitle>
+                        <physdesc>(2 folders)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00080" level="file">
+                    <did>
+                        <unittitle>Notes</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00081" level="file">
+                    <did>
+                        <unittitle>Reviews</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00082" level="file">
+                    <did>
+                        <unittitle>Thurber drawings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00083" level="file">
+                    <did>
+                        <unittitle>Writings by various people.</unittitle>
+                    </did>
+                    <note>
+                        <p>Includes: Noel Stearn--poems</p>
+                    </note>
+                </c02>
+                <c02 id="VAC9473-00084" level="file">
+                    <did>
+                        <unittitle>Printed</unittitle>
+                        <physdesc>(3 folders)</physdesc>
+                    </did>
+                    <note>
+                        <p>(see also: <emph render="bold">Oversize</emph>)</p>
+                    </note>
+                </c02>
+                <c02 id="VAC9473-00085" level="file">
+                    <did>
+                        <container label="Box" type="Box">Oversize</container>
+                        <unittitle>Bachelor's degree for Josephine Edith Hahn, Northwestern
+                            University, <unitdate normal="1928">1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9473-00086" level="file">
+                    <did>
+                        <unittitle>Artwork</unittitle>
+                    </did>
+                    <note>
+                        <p>Includes: artwork for Pogo cartoon, by Walt Kelly</p>
+                    </note>
+                </c02>
+                <c02 id="VAC9473-00087" level="file">
+                    <did>
+                        <unittitle>Printed</unittitle>
+                    </did>
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
