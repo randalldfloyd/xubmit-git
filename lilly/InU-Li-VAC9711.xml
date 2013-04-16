@@ -1,0 +1,893 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader relatedencoding="dublincore" audience="external" langencoding="iso639-2b"
+        scriptencoding="iso15924" repositoryencoding="iso15511" countryencoding="iso3166-1"
+        dateencoding="iso8601" findaidstatus="edited-full-draft">
+        <eadid encodinganalog="identifier" identifier="InU-Li-VAC9711" countrycode="US"
+            mainagencycode="InU-Li">InU-Li-VAC9711</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Woods mss., <date type="inclusive"
+                        normal="1977/2004">1977-2004</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2013" type="publication">© 2013</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2013">© 2013</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2013" type="source">2013</date>
+                <lb/>Finding aid encoded by Shayna Pekala, Lilly Library, Indiana University, <date
+                    normal="2013-04-16">April 16, 2013</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2013-04-16">April 16, 2013</date>
+                <item>Encoded finding aid started.</item>
+            </change>
+            <change audience="internal">
+                <date normal="2013-04-16">April 16, 2013</date>
+                <item>Encoded finding aid completed.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc level="collection" audience="external" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository encodinganalog="852" label="Repository" id="lilly">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname source="lcnaf" encodinganalog="100">Woods, John E. (John Edwin)</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Woods mss., </unittitle>
+            <unitdate normal="1977/2004" type="inclusive" encodinganalog="245$f"
+                >1977-2004</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2269</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>1,505 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Woods mss., 1977-2004, consist of
+                correspondence and manuscripts of German works translated into English by John Edwin
+                Woods.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+            <p>John Edwin Woods (1942- ) has won numerous awards for his translations, including the
+                Helen and Kurt Wolff Translator's Prize (1996), the ALTA Translation of the Year
+                Award (1994), the Society of Authors Schlegel–Tick Prize (1991), the PEN Translation
+                Prize (1987 and 1981), and the American Book Award for Translation (1981). Woods has
+                translated all of the major novels of Nobel laureate Thomas Mann.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>This collection is organized into the following series: I. General correspondence;
+                II. Translations; III. Arno Schmidt; IV. Writings by Woods; V. Additions, 2005.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The collection includes numerous items related to his work as a translator of Arno
+                Schmidt's works. There is a large body of correspondence regarding Schmidt written
+                by Ernst Krawehl and others, as well as manuscripts of Schmidt writings translated
+                by Woods, such as Evening Edged in Gold, School for Atheists and "Lake Scenes with
+                Pocahontas." Also present are an array of published and unpublished manuscripts
+                translated from the writings of such German authors as Thomas Mann, Libuŝe Monikóvá,
+                John Rabe, Christoph Ransmayr, Jan Philip Reemstma, and Ingo Schulze. Most of the
+                manuscripts include the handwritten edits and annotations made by the
+                translator.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/schmidt+arno+1914-1979+translations+into+english{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Schmidt, Arno,
+                                1914-1979 --Translations into English.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/woods+john+e.+(john+edwin){su}"
+                                ><persname encodinganalog="600" source="lcnaf">Woods, John E. (John
+                                Edwin) --Correspondence.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/krawehl+ernst+1909-+correspondence{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Krawehl, Ernst, 1909-
+                                --Correspondence</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/krawehl+ernst+1909-{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Krawehl, Ernst,
+                                1909-</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/schmidt+arno+1914-1979{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Schmidt, Arno,
+                                1914-1979</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/mann+thomas+1875-1955{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Mann, Thomas,
+                                1875-1955.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/monikova+libuse{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Monikóvá,
+                                Libuŝe.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/rabe+john+1882-1950{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Rabe, John,
+                                1882-1950</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/ransmayr+christoph+1954-{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Ransmayr, Christoph,
+                                1954-</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/reemtsma+jan+philipp{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Reemtsma, Jan
+                                Philipp.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/schulze+ingo+1962-{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Schulze, Ingo,
+                                1962-</persname></extref></item>
+
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/german+literature+translations+into+english{su}"
+                                ><subject encodinganalog="650" source="lcsh">German literature
+                                --Translations into English.</subject></extref></item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Genres</head>
+                <list>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/translations+20th+century+{su}"
+                                ><genreform encodinganalog="655" source="lcsh">Translations --20th
+                                century.</genreform></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/translations+21st+century+{su}"
+                                ><genreform encodinganalog="655" source="lcsh">Translations --21st
+                                century.</genreform></extref></item>
+                </list>
+            </controlaccess>
+        </controlaccess>
+        <!-- <persname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+        <!-- <corpname encodinganalog="610" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+        <!--  <famname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+        <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+        <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+        <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+        <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+        <!-- <function encodinganalog="657" source="lcsh"/> -->
+        <!-- <title encodinganalog="630"> </title> -->
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 2002, 2005.</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Woods mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Staff.</p>
+                <p>Completed in <date normal="2013">2013</date></p>
+
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 level="series">
+                <did>
+                    <unittitle>General Correspondence</unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="Box">1</container>
+                        <unittitle>
+                            <unitdate type="inclusive" normal="1979/2002">1979-2002</unitdate>
+                        </unittitle>
+                        <physdesc>
+                            <extent>(34 folders)</extent>
+                        </physdesc>
+                    </did>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did>
+                    <unittitle>Translations</unittitle>
+                </did>
+                <c02 level="subseries">
+                    <did>
+                        <unittitle>Book Translations</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <container label="Box" type="Box">1</container>
+                            <unittitle>Mann, Thomas. <title render="italic">Doctor Faustus.</title>
+                                Translated by John E. Woods (New York: A.A. Knopf, <unitdate
+                                    normal="1997">1997)</unitdate></unittitle>
+                            <physdesc>T.D., edited <extent>(6 folders)</extent></physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Mann. <title render="italic">The Magic Mountain.</title>
+                                Translated by John E. Woods (New York: A.A. Knopf, <unitdate
+                                    normal="1995">1995)</unitdate>
+                            </unittitle>
+                            <physdesc>T.D., copy-edited <extent>(6 folders)</extent></physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container label="Box" type="Box">2</container>
+                            <unittitle>Mann, Thomas. <title render="italic">The Magic
+                                    Mountain,</title> cont.</unittitle>
+                            <physdesc><extent>(4 folders)</extent></physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Monikóvá. Libuše. <title render="italic">Drift Ice.</title>
+                                Translated by John E. Woods. Unpublished manuscript.</unittitle>
+                            <physdesc>T.D., edited <extent>(2 folders)</extent></physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Monikóvá. <title render="italic">Impairment</title>
+                                (Schädigung). Unpublished manuscript.</unittitle>
+                            <physdesc>T.D., edited <extent>(1 folder)</extent></physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Monikóvá. <title render="italic">Pavane for a Dead
+                                    Princess.</title> Translated by John E. Woods. <unitdate
+                                    normal="1991">1991.</unitdate> Unpublished
+                                manuscript.</unittitle>
+                            <physdesc>T.D., edited <extent>(1 folder)</extent></physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Rabe, John. <title render="italic">The Good Man of Nanking:
+                                    the Diaries of John Rabe.</title> Edited by Erwin Wickert.
+                                Translated by John E. Woods (New York: A. A. Knopf, <unitdate
+                                    normal="1998">1998).</unitdate>Notes (faxes) of Wickert.
+                                    <unitdate normal="1997">1997</unitdate></unittitle>
+                            <physdesc><extent>(1 folder)</extent></physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Rabe. <title render="italic">The Good Man of Nanking.</title>
+                                Correspondence from Erwin Wickert, <unitdate normal="1998"
+                                    >1998</unitdate></unittitle>
+                            <physdesc><extent>(1 folder)</extent></physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Rabe. <title render="italic">The Good Man of Nanking.</title>
+                                Manuscript titled: <emph render="doublequote">The Good German of
+                                    Nanking.</emph></unittitle>
+                            <physdesc>T.D., edited <extent>(3 folders)</extent></physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Rabe. <title render="italic">The Good Man of Nanking.</title>
+                                Manuscript.</unittitle>
+                            <physdesc>T.D., edited <extent>(3 folders)</extent></physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Ransmayr, Christoph. <title render="italic">The Dog
+                                    King.</title> Translated by John E. Woods (New York: A.A. Knopf,
+                                    <unitdate normal="1997">1997).</unitdate>Manuscript titled:
+                                    <emph render="doublequote">The Kitahara
+                                Syndrome.</emph></unittitle>
+                            <physdesc>T.D., edited <extent>(3 folders)</extent></physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Ransmayr. <title render="doublequote">Fatehpur.</title>
+                                Speech. <unitdate type="inclusive" normal="1996-11-10/1996-11-11"
+                                    >Nov. 10-11, 1996.</unitdate></unittitle>
+                            <physdesc>T.D. <extent>(1 folder)</extent>
+                            </physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Ransmayr. <title render="doublequote">The
+                                Unborn.</title></unittitle>
+                            <physdesc>T.D. Accompanied by original German story; 2 sets of edited
+                                proofs <extent>(1 folder)</extent></physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container label="Box" type="Box">3</container>
+                            <unittitle>Reemstma, Jan Philipp. <title render="doublequote">And So for
+                                    the Reason Noted,</title> c.<unitdate normal="1990"
+                                    >1990.</unitdate>Speech.</unittitle>
+                            <physdesc>T.D., edited <extent>(1 folder)</extent>
+                            </physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Reemstma. <title render="doublequote">In Honor of Daniel
+                                    Goldberg, On the Occasion of His Being Awarded the Democracy
+                                    Prize,</title>
+                                <unitdate normal="1997-03-17">Mar. 17,
+                                1997.</unitdate>Speech.</unittitle>
+                            <physdesc>T.D., edited <extent>(1 folder)</extent>
+                            </physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Reemstma. <title render="italic">More Than a Champion: The
+                                    Style of Muhammad Ali.</title> Translated by John E. Woods (New
+                                York: A.A. Knopf, <unitdate normal="1998">1998).</unitdate>
+                            </unittitle>
+                            <physdesc>T.D., edited <extent>(1 folder)</extent>
+                            </physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Reemstma. <title render="doublequote">The Political Semantics
+                                    of the Concept of 'Torture,'</title>
+                                <unitdate certainty="circa" normal="1990">ca.
+                                1990.</unitdate></unittitle>
+                            <physdesc>T.D., edited <extent>(1 folder)</extent>
+                            </physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Reemstma. <title render="doublequote">State Terror</title>
+                                <unitdate certainty="circa" normal="1990">ca.
+                                1990.</unitdate></unittitle>
+                            <physdesc>T.D., edited <extent>(1 folder)</extent>
+                            </physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Reemstma. <title render="doublequote">Survivor
+                                    Memoirs</title>
+                                <unitdate certainty="circa" normal="1998">ca.
+                                1998.</unitdate></unittitle>
+                            <physdesc>T.D., edited <extent>(1 folder)</extent>
+                            </physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Reemstma. <title render="doublequote">Terroratio I</title>
+                                <unitdate certainty="circa" normal="1990">ca.
+                                1990.</unitdate></unittitle>
+                            <physdesc>T.D., edited <extent>(1 folder)</extent>
+                            </physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Reemstma. <title render="doublequote">Terroratio II</title>
+                                <unitdate certainty="circa" normal="1990">ca.
+                                1990.</unitdate></unittitle>
+                            <physdesc>T.D., edited <extent>(1 folder)</extent>
+                            </physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Reemstma. <title render="doublequote">Toward a Psychoanalytic
+                                    Understanding of Human Cruelty</title>
+                                <unitdate certainty="circa" normal="1990">ca.
+                                1990.</unitdate></unittitle>
+                            <physdesc>T.D., edited <extent>(1 folder)</extent></physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Schulze, Ingo. <title render="italic">33 Moments of
+                                    Happiness: St. Petersburg Stories.</title> Translated by John E.
+                                Woods (New York: A.A. Knopf, <unitdate normal="1998"
+                                    >1998)</unitdate></unittitle>
+                            <physdesc>T.D., edited <extent>(2 folders)</extent></physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Schulze. <title render="italic">33 Moments of
+                                    Happiness.</title></unittitle>
+                            <physdesc>T.D., copy-edited <extent>(2 folders)</extent></physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Schulze. <title render="italic">Simple Stories</title>
+                                Translated by John E. Woods (New York: A.A. Knopf, <unitdate
+                                    normal="2000">2000)</unitdate></unittitle>
+                            <physdesc>T.D., edited <extent>(2 folders)</extent></physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Wagner, Richard. <title render="italic">Tannhäuser: In Full
+                                    Score.</title> German, with English interlinear translations by
+                                John E. Woods (New York: Dover Publications, <unitdate normal="1984"
+                                    >1984)</unitdate></unittitle>
+                            <physdesc>(bound volume)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Wagner. <title render="italic">Tannhäuser and the Tournament
+                                    of Song at Wartburg.</title> Edited and translated by Natalia
+                                Macfarren. (New York: G. Schirmer, <unitdate type="inclusive"
+                                    certainty="circa" normal="1990/1995">ca. 1990-1995?)</unitdate>
+                                Annotated for surtitles by John E. Woods</unittitle>
+                            <physdesc>(bound volume)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Wagner. Lyric Opera of Chicago <title render="italic"
+                                    >Tannhäuser</title> production folder, <unitdate
+                                    type="inclusive" normal="1998/1999"
+                                >1998-1999.</unitdate></unittitle>
+                            <physdesc>T.D., <extent>46pp.</extent>
+                                <extent>(1 folder)</extent></physdesc>
+                        </did>
+                        <scopecontent>
+                            <p>Includes surtitles program.</p>
+                        </scopecontent>
+                    </c03>
+                </c02>
+                <c02 level="subseries">
+                    <did>
+                        <unittitle>Other Translations</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <container label="Box" type="Box">3</container>
+                            <unittitle>Döblin, Alfred. <title render="italic">Mountain Seas and
+                                    Giants,</title>
+                                <unitdate certainty="circa" normal="1981">ca.
+                                1981.</unitdate>Unpublished sample.</unittitle>
+                            <physdesc>T.D., <extent>18pp.</extent>
+                                <extent>(1 folder)</extent></physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Enzensberger, Hans Magnus. <title render="doublequote"
+                                    >Hitler's Wraith [Wrath],</title>
+                                <unitdate certainty="circa" normal="1995">ca.
+                                1995.</unitdate>Translated by John E. Woods.</unittitle>
+                            <physdesc>T.D., <extent>9pp.</extent>
+                                <extent>(1 folder)</extent></physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Enzensberger. <title render="doublequote">Inserts for Bosnia
+                                    - Uganda,</title>
+                                <unitdate certainty="circa" normal="1995">ca. 1995.</unitdate>
+                            </unittitle>
+                            <physdesc>T.D., <extent>1p.</extent>
+                                <extent>(1 folder)</extent>
+                            </physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Enzensberger. <title render="doublequote">Manhunting in
+                                    Germany,</title>
+                                <unitdate certainty="circa" normal="1995">ca.
+                                1995.</unitdate>Translated by John E. Woods. </unittitle>
+                            <physdesc>T.D., <extent>6pp.</extent>
+                                <extent>(1 folder)</extent></physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Fleischhauer, Jan. <title render="doublequote">Victory or
+                                    Siberia,</title>
+                                <unitdate certainty="circa" normal="1999">ca.
+                                1999.</unitdate>Translated by John E. Woods. </unittitle>
+                            <physdesc>T.D., <extent>24pp.</extent></physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Ganzfried, Daniel. <title render="doublequote">The Borrowed
+                                    Holocaust Biography,</title>
+                                <unitdate normal="1998-08-27">27 Aug. 1998.</unitdate>Translated by
+                                John E. Woods.</unittitle>
+                            <physdesc>T.D., <extent>15pp.</extent></physdesc>
+                            <physdesc>Accompanied by <title render="doublequote">After Auschwitz,
+                                    Facts Don't Count,</title>
+                                <date normal="1998-09-11">11 Sept. 1998.</date> T.D.,
+                                    <extent>10pp.</extent></physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Glotz, Peter. <title render="doublequote">Forward to Europe:
+                                    A Manifesto for a New European Left,</title>
+                                <unitdate certainty="circa" normal="1985">ca. 1985.</unitdate>
+                                Translated by John E. Woods. T.D.</unittitle>
+                            <physdesc>Accompanied by copy of German text</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Pross, Harry. <title render="doublequote">The Grand
+                                    Reconciliation: Kitsch as a Social Product,</title>
+                                <unitdate normal="1985-03">Mar. 1985.</unitdate> Translated by John
+                                E. Woods. T.D.</unittitle>
+                            <physdesc>Accompanied by a photocopy of German text</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Süskind, Patrick. <title render="italic">Perfume,</title>
+                                <unitdate normal="1985">Fall 1985.</unitdate>Unpublished sample. </unittitle>
+                            <physdesc>T.D., edited, <extent>[14]pp.</extent>
+                            </physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Assorted published reviews, <unitdate type="inclusive"
+                                    normal="1983/2001">1983-2001</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did>
+                    <unittitle>Arno Schmidt</unittitle>
+                </did>
+                <c02 level="subseries">
+                    <did>
+                        <unittitle>Correspondence, <unitdate type="inclusive" normal="1977/1987"
+                                >1977-1987</unitdate></unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <container label="Box" type="Box">3</container>
+                            <unittitle>Ernst Krawehl and John Woods concerning translations of Arno
+                                Schmidt.</unittitle>
+                            <langmaterial>Mostly in <language>German</language></langmaterial>
+                            <physdesc><extent>(17 folders)</extent></physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="subseries">
+                    <did>
+                        <unittitle>Correspondence, <unitdate type="inclusive" normal="1978/2002"
+                                >1978-2002</unitdate></unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <container label="Box" type="Box">4</container>
+                            <unittitle>Concerning Arno Schmidt</unittitle>
+                            <physdesc><extent>(19 folders)</extent></physdesc>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="subseries">
+                    <did>
+                        <unittitle>Translations of Works by Arno Schmidt</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <container label="Box" type="Box">4</container>
+                            <unittitle><title render="italic">Evening Edged in Gold.</title>
+                                Translated by John E. Woods (New York: Harcourt Brace Jovanovich,
+                                    c.<unitdate normal="1980">1980)</unitdate></unittitle>
+                            <physdesc>Includes: Manuscript, <date normal="1977">1977</date>. T.D.,
+                                edited, <extent>[83]pp.</extent>; Notes &amp; Queries, <date
+                                    type="inclusive" normal="1978/1979">1978-1979</date>; Plot
+                                summary, <date normal="1980">1980</date>. T.D.; Ott, Peter F.,
+                                    <title render="doublequote">Comments on the Occasion of the
+                                    Publication of Evening Edged in Gold by Arno Schmidt,</title>
+                                <date normal="1981">1981</date>. T.D., <extent>14pp.</extent>
+                                (photocopied) <extent>(4 folders)</extent></physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container label="Box" type="Box">5</container>
+                            <unittitle><title render="doublequote">Great Cain.</title> Two drafts of
+                                manuscript. </unittitle>
+                            <physdesc>T.D., edited, <extent>18pp.</extent></physdesc>
+                            <physdesc>Accompanied by queries and answers, <extent>2pp.</extent>
+                            </physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle><title render="doublequote">Lake Scenes With
+                                    Pocahontas</title> in <emph render="italic">Collected
+                                    Novellas,</emph>
+                                <unitdate certainty="circa" normal="1981">ca.
+                                1981.</unitdate>Translated by John E. Woods (Normal, IL: Dalkey
+                                Archive Press, <unitdate normal="1994">1994)</unitdate>
+                                Manuscript.</unittitle>
+                            <physdesc>T.D., edited, <extent>16pp.</extent>
+                            </physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle><title render="italic">Scenes from the Life of a Faun: A
+                                    Short Novel,</title>
+                                <unitdate certainty="circa" normal="1980">ca. 1980.</unitdate>
+                                Translated by John E. Woods (London; New York: M. Boyars, <unitdate
+                                    normal="1983">1983)</unitdate> Manuscript.</unittitle>
+                            <physdesc>T.D, edited, <extent>156pp.</extent>
+                                <extent>(2 folders)</extent></physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle><title render="italic">School for Atheists: A Novella-Comedy
+                                    in Six Acts,</title>
+                                <unitdate certainty="circa" normal="1999">ca. 1999.</unitdate>
+                                Translated by John E. Woods (København; Los Angeles: Green Integer,
+                                    <unitdate normal="2001">2001).</unitdate> Manuscript. Second
+                                version, first draft.</unittitle>
+                            <physdesc>T.D., edited, <extent>301pp.</extent>
+                                <extent>(4 folders)</extent></physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle><title render="italic">School for Atheists,</title>
+                                <unitdate normal="1999-04"> Apr. 1999.</unitdate> Manuscript. Second
+                                version, second draft.</unittitle>
+                            <physdesc>T.D., edited, <extent>301pp.</extent>
+                                <extent>(4 folders)</extent></physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle><title render="doublequote">Tall Grete</title> in <emph
+                                    render="italic">The Collected Stories of Arno Schmidt.</emph>
+                                Translated by John E. Woods (Normal, IL: Dalkey Archive Press,
+                                    <unitdate normal="1996">1996).</unitdate>
+                                Manuscript.</unittitle>
+                            <physdesc>T.D., edited, <extent>3pp.</extent></physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <container label="Box" type="Box">Oversize</container>
+                            <unittitle><title render="italic">Evening Edged in Gold,</title>
+                                <unitdate certainty="circa" normal="1979">ca. 1979.</unitdate>
+                                Prepared by S. Fischer for presentation at Frankfurt Book
+                                Fair.</unittitle>
+                            <physdesc>T.D., <extent>54pp.</extent>
+                                <extent>(bound and photocopied)</extent></physdesc>
+                        </did>
+                    </c03>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did>
+                    <unittitle>Writings by Woods</unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="Box">4</container>
+                        <unittitle><title render="doublequote">On Translating the Unconventional
+                                Prose of Arno Schmidt,</title>
+                            <unitdate certainty="circa" normal="1981">ca.
+                            1981.</unitdate></unittitle>
+                        <physdesc>T.D., <extent>6pp.,</extent> edited. (photocopied)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><title render="doublequote">Of Bicycles and Violins,</title>
+                            <unitdate certainty="circa" normal="1994">ca. 1994.</unitdate>
+                            Speech.</unittitle>
+                        <physdesc>T.D., edited, <extent>8pp.</extent></physdesc>
+                    </did>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did>
+                    <unittitle>Additions, <unitdate normal="2005">2005</unitdate></unittitle>
+                </did>
+                <c02 level="subseries">
+                    <did>
+                        <unittitle>Book Translations</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <container label="Box" type="Box">4</container>
+                            <unittitle>Mann, Thomas. <title render="italic">Joseph and his
+                                    Brothers.</title> Translated by John E. Woods (New York:
+                                Everyman's Library, <unitdate normal="2005">2005)</unitdate> Books I
+                                &amp; II.</unittitle>
+                            <physdesc>T.D., edited <extent>(4 folders)</extent></physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container label="Box" type="Box">5</container>
+                            <unittitle>Mann, Thomas. <title render="italic">Joseph and his Brothers,
+                                    cont.</title> Books III &amp; IV.</unittitle>
+                            <physdesc>T.D., corrected draft <extent>(8 folders)</extent></physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Mann. Books I-III. Copy-edited ms.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container label="Box" type="Box">6</container>
+                            <unittitle>Mann, Thomas. <title render="italic">Joseph and his Brothers,
+                                cont.</title> Book IV. Copy-edited ms.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Mann. Books I-IV. Proofs: First pass, <unitdate
+                                    normal="2004-04-15">Apr. 15, 2004.</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Mann. Books I-III. Proofs: Author's set, <unitdate
+                                    normal="2004-04-23">Apr. 23, 2004.</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <container label="Box" type="Box">7</container>
+                            <unittitle>Mann, Thomas. Joseph and His Brothers, cont. Book IV. Proofs,
+                                Author's set</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Mann. Books I-IV. Proofs: second pass, <unitdate
+                                    normal="2004-07-19">July 19, 2004.</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
