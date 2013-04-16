@@ -1,17 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Indiana University EAD template draft: 2003-Jan-2, 
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
     revised 2004-09-15 JLR; 
     revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
     added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
--->
-<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
-    <eadheader relatedencoding="dublincore" audience="external" langencoding="iso639-2b"
-        scriptencoding="iso15924" repositoryencoding="iso15511" countryencoding="iso3166-1"
-        dateencoding="iso8601" findaidstatus="edited-full-draft">
-        <eadid encodinganalog="identifier" identifier="InU-Li-VAC9711" countrycode="US"
-            mainagencycode="InU-Li">InU-Li-VAC9711</eadid>
+--><ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external" countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924" relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li" identifier="InU-Li-VAC9711">InU-Li-VAC9711</eadid>
         <!-- The value of eadid should follow the pattern of archive or library code, and then a 
 unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
         <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
@@ -25,8 +18,7 @@ original finding aid or the collection -->
 Papers of John Doe, 1919-1965" to eliminate 
                 potential confusion about the meaning of the dates -->
             <titlestmt>
-                <titleproper encodinganalog="title">Woods mss., <date type="inclusive"
-                        normal="1977/2004">1977-2004</date></titleproper>
+                <titleproper encodinganalog="title">Woods mss., <date normal="1977/2004" type="inclusive">1977-2004</date></titleproper>
 
             </titlestmt>
             <publicationstmt>
@@ -48,12 +40,10 @@ Papers of John Doe, 1919-1965" to eliminate
         <profiledesc>
             <creation>XML finding aid derived from HTML version through cutting and pasting and
                 through folder analysis. <date normal="2013" type="source">2013</date>
-                <lb/>Finding aid encoded by Shayna Pekala, Lilly Library, Indiana University, <date
-                    normal="2013-04-16">April 16, 2013</date>
+                <lb></lb>Finding aid encoded by Shayna Pekala, Lilly Library, Indiana University, <date normal="2013-04-16">April 16, 2013</date>
             </creation>
 
-            <langusage>Description is in <language encodinganalog="language" langcode="eng"
-                    >English.</language></langusage>
+            <langusage>Description is in <language encodinganalog="language" langcode="eng">English.</language></langusage>
         </profiledesc>
 
         <!-- revisiondesc is required -->
@@ -74,13 +64,12 @@ listed below the first -->
     </eadheader>
 
 
-    <archdesc level="collection" audience="external" type="inventory" relatedencoding="marc21">
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
         <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
         <did>
             <head>Summary Information</head>
-            <repository encodinganalog="852" label="Repository" id="lilly">
-                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
-                    >Lilly Library (Indiana University, Bloomington)</corpname>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
                 <address> 
                     <addressline>Lilly Library</addressline> 
                     <addressline>Indiana University</addressline> 
@@ -93,13 +82,12 @@ listed below the first -->
             </repository>
             <origination label="Creator">
                 <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
-                <persname source="lcnaf" encodinganalog="100">Woods, John E. (John Edwin)</persname>
+                <persname encodinganalog="100" source="lcnaf">Woods, John E. (John Edwin)</persname>
             </origination>
             <!-- per RLG guidelines recommendation, do not nest unitdate element within
 unittitle element -->
             <unittitle encodinganalog="245$a" label="Title">Woods mss., </unittitle>
-            <unitdate normal="1977/2004" type="inclusive" encodinganalog="245$f"
-                >1977-2004</unitdate>
+            <unitdate encodinganalog="245$f" normal="1977/2004" type="inclusive">1977-2004</unitdate>
 
             <!-- do not include separating punctuation between the unit title and the unit
 date.  The stylesheets will supply a comma where appropriate. -->
@@ -116,8 +104,7 @@ date.  The stylesheets will supply a comma where appropriate. -->
 
             <!-- if collection includes signinficant non-english material add code to
 langmaterial element -->
-            <langmaterial encodinganalog="546" label="Language">Materials are in <language
-                    langcode="eng">English.</language>
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language langcode="eng">English.</language>
             </langmaterial>
 
             <abstract encodinganalog="520" label="Abstract">The Woods mss., 1977-2004, consist of
@@ -174,49 +161,27 @@ langmaterial element -->
             <controlaccess>
                 <head>Names</head>
                 <list>
-                    <item><extref
-                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/schmidt+arno+1914-1979+translations+into+english{su}"
-                                ><persname encodinganalog="600" source="lcnaf">Schmidt, Arno,
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/schmidt+arno+1914-1979+translations+into+english{su}"><persname encodinganalog="600" source="lcnaf">Schmidt, Arno,
                                 1914-1979 --Translations into English.</persname></extref></item>
-                    <item><extref
-                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/woods+john+e.+(john+edwin){su}"
-                                ><persname encodinganalog="600" source="lcnaf">Woods, John E. (John
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/woods+john+e.+(john+edwin){su}"><persname encodinganalog="600" source="lcnaf">Woods, John E. (John
                                 Edwin) --Correspondence.</persname></extref></item>
-                    <item><extref
-                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/krawehl+ernst+1909-+correspondence{su}"
-                                ><persname encodinganalog="600" source="lcnaf">Krawehl, Ernst, 1909-
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/krawehl+ernst+1909-+correspondence{su}"><persname encodinganalog="600" source="lcnaf">Krawehl, Ernst, 1909-
                                 --Correspondence</persname></extref></item>
-                    <item><extref
-                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/krawehl+ernst+1909-{su}"
-                                ><persname encodinganalog="600" source="lcnaf">Krawehl, Ernst,
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/krawehl+ernst+1909-{su}"><persname encodinganalog="600" source="lcnaf">Krawehl, Ernst,
                                 1909-</persname></extref></item>
-                    <item><extref
-                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/schmidt+arno+1914-1979{su}"
-                                ><persname encodinganalog="600" source="lcnaf">Schmidt, Arno,
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/schmidt+arno+1914-1979{su}"><persname encodinganalog="600" source="lcnaf">Schmidt, Arno,
                                 1914-1979</persname></extref></item>
-                    <item><extref
-                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/mann+thomas+1875-1955{su}"
-                                ><persname encodinganalog="600" source="lcnaf">Mann, Thomas,
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/mann+thomas+1875-1955{su}"><persname encodinganalog="600" source="lcnaf">Mann, Thomas,
                                 1875-1955.</persname></extref></item>
-                    <item><extref
-                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/monikova+libuse{su}"
-                                ><persname encodinganalog="600" source="lcnaf">Monikóvá,
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/monikova+libuse{su}"><persname encodinganalog="600" source="lcnaf">Monikóvá,
                                 Libuŝe.</persname></extref></item>
-                    <item><extref
-                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/rabe+john+1882-1950{su}"
-                                ><persname encodinganalog="600" source="lcnaf">Rabe, John,
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/rabe+john+1882-1950{su}"><persname encodinganalog="600" source="lcnaf">Rabe, John,
                                 1882-1950</persname></extref></item>
-                    <item><extref
-                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/ransmayr+christoph+1954-{su}"
-                                ><persname encodinganalog="600" source="lcnaf">Ransmayr, Christoph,
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/ransmayr+christoph+1954-{su}"><persname encodinganalog="600" source="lcnaf">Ransmayr, Christoph,
                                 1954-</persname></extref></item>
-                    <item><extref
-                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/reemtsma+jan+philipp{su}"
-                                ><persname encodinganalog="600" source="lcnaf">Reemtsma, Jan
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/reemtsma+jan+philipp{su}"><persname encodinganalog="600" source="lcnaf">Reemtsma, Jan
                                 Philipp.</persname></extref></item>
-                    <item><extref
-                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/schulze+ingo+1962-{su}"
-                                ><persname encodinganalog="600" source="lcnaf">Schulze, Ingo,
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/schulze+ingo+1962-{su}"><persname encodinganalog="600" source="lcnaf">Schulze, Ingo,
                                 1962-</persname></extref></item>
 
                 </list>
@@ -224,22 +189,16 @@ langmaterial element -->
             <controlaccess>
                 <head>Topics</head>
                 <list>
-                    <item><extref
-                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/german+literature+translations+into+english{su}"
-                                ><subject encodinganalog="650" source="lcsh">German literature
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/german+literature+translations+into+english{su}"><subject encodinganalog="650" source="lcsh">German literature
                                 --Translations into English.</subject></extref></item>
                 </list>
             </controlaccess>
             <controlaccess>
                 <head>Genres</head>
                 <list>
-                    <item><extref
-                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/translations+20th+century+{su}"
-                                ><genreform encodinganalog="655" source="lcsh">Translations --20th
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/translations+20th+century+{su}"><genreform encodinganalog="655" source="lcsh">Translations --20th
                                 century.</genreform></extref></item>
-                    <item><extref
-                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/translations+21st+century+{su}"
-                                ><genreform encodinganalog="655" source="lcsh">Translations --21st
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/translations+21st+century+{su}"><genreform encodinganalog="655" source="lcsh">Translations --21st
                                 century.</genreform></extref></item>
                 </list>
             </controlaccess>
@@ -291,15 +250,15 @@ langmaterial element -->
             <!-- unittitle is the only required element within component -->
             <!-- possible values for @level include: class, collection, file, fonds, item,
                 otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
-            <c01 level="series">
+            <c01 id="VAC9711-00001" level="series">
                 <did>
                     <unittitle>General Correspondence</unittitle>
                 </did>
-                <c02 level="file">
+                <c02 id="VAC9711-00002" level="file">
                     <did>
                         <container label="Box" type="Box">1</container>
                         <unittitle>
-                            <unitdate type="inclusive" normal="1979/2002">1979-2002</unitdate>
+                            <unitdate normal="1979/2002" type="inclusive">1979-2002</unitdate>
                         </unittitle>
                         <physdesc>
                             <extent>(34 folders)</extent>
@@ -307,33 +266,31 @@ langmaterial element -->
                     </did>
                 </c02>
             </c01>
-            <c01 level="series">
+            <c01 id="VAC9711-00003" level="series">
                 <did>
                     <unittitle>Translations</unittitle>
                 </did>
-                <c02 level="subseries">
+                <c02 id="VAC9711-00004" level="subseries">
                     <did>
                         <unittitle>Book Translations</unittitle>
                     </did>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00005" level="file">
                         <did>
                             <container label="Box" type="Box">1</container>
                             <unittitle>Mann, Thomas. <title render="italic">Doctor Faustus.</title>
-                                Translated by John E. Woods (New York: A.A. Knopf, <unitdate
-                                    normal="1997">1997)</unitdate></unittitle>
+                                Translated by John E. Woods (New York: A.A. Knopf, <unitdate normal="1997">1997)</unitdate></unittitle>
                             <physdesc>T.D., edited <extent>(6 folders)</extent></physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00006" level="file">
                         <did>
                             <unittitle>Mann. <title render="italic">The Magic Mountain.</title>
-                                Translated by John E. Woods (New York: A.A. Knopf, <unitdate
-                                    normal="1995">1995)</unitdate>
+                                Translated by John E. Woods (New York: A.A. Knopf, <unitdate normal="1995">1995)</unitdate>
                             </unittitle>
                             <physdesc>T.D., copy-edited <extent>(6 folders)</extent></physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00007" level="file">
                         <did>
                             <container label="Box" type="Box">2</container>
                             <unittitle>Mann, Thomas. <title render="italic">The Magic
@@ -341,48 +298,45 @@ langmaterial element -->
                             <physdesc><extent>(4 folders)</extent></physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00008" level="file">
                         <did>
                             <unittitle>Monikóvá. Libuše. <title render="italic">Drift Ice.</title>
                                 Translated by John E. Woods. Unpublished manuscript.</unittitle>
                             <physdesc>T.D., edited <extent>(2 folders)</extent></physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00009" level="file">
                         <did>
                             <unittitle>Monikóvá. <title render="italic">Impairment</title>
                                 (Schädigung). Unpublished manuscript.</unittitle>
                             <physdesc>T.D., edited <extent>(1 folder)</extent></physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00010" level="file">
                         <did>
                             <unittitle>Monikóvá. <title render="italic">Pavane for a Dead
-                                    Princess.</title> Translated by John E. Woods. <unitdate
-                                    normal="1991">1991.</unitdate> Unpublished
+                                    Princess.</title> Translated by John E. Woods. <unitdate normal="1991">1991.</unitdate> Unpublished
                                 manuscript.</unittitle>
                             <physdesc>T.D., edited <extent>(1 folder)</extent></physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00011" level="file">
                         <did>
                             <unittitle>Rabe, John. <title render="italic">The Good Man of Nanking:
                                     the Diaries of John Rabe.</title> Edited by Erwin Wickert.
-                                Translated by John E. Woods (New York: A. A. Knopf, <unitdate
-                                    normal="1998">1998).</unitdate>Notes (faxes) of Wickert.
+                                Translated by John E. Woods (New York: A. A. Knopf, <unitdate normal="1998">1998).</unitdate>Notes (faxes) of Wickert.
                                     <unitdate normal="1997">1997</unitdate></unittitle>
                             <physdesc><extent>(1 folder)</extent></physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00012" level="file">
                         <did>
                             <unittitle>Rabe. <title render="italic">The Good Man of Nanking.</title>
-                                Correspondence from Erwin Wickert, <unitdate normal="1998"
-                                    >1998</unitdate></unittitle>
+                                Correspondence from Erwin Wickert, <unitdate normal="1998">1998</unitdate></unittitle>
                             <physdesc><extent>(1 folder)</extent></physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00013" level="file">
                         <did>
                             <unittitle>Rabe. <title render="italic">The Good Man of Nanking.</title>
                                 Manuscript titled: <emph render="doublequote">The Good German of
@@ -390,14 +344,14 @@ langmaterial element -->
                             <physdesc>T.D., edited <extent>(3 folders)</extent></physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00014" level="file">
                         <did>
                             <unittitle>Rabe. <title render="italic">The Good Man of Nanking.</title>
                                 Manuscript.</unittitle>
                             <physdesc>T.D., edited <extent>(3 folders)</extent></physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00015" level="file">
                         <did>
                             <unittitle>Ransmayr, Christoph. <title render="italic">The Dog
                                     King.</title> Translated by John E. Woods (New York: A.A. Knopf,
@@ -407,16 +361,15 @@ langmaterial element -->
                             <physdesc>T.D., edited <extent>(3 folders)</extent></physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00016" level="file">
                         <did>
                             <unittitle>Ransmayr. <title render="doublequote">Fatehpur.</title>
-                                Speech. <unitdate type="inclusive" normal="1996-11-10/1996-11-11"
-                                    >Nov. 10-11, 1996.</unitdate></unittitle>
+                                Speech. <unitdate normal="1996-11-10/1996-11-11" type="inclusive">Nov. 10-11, 1996.</unitdate></unittitle>
                             <physdesc>T.D. <extent>(1 folder)</extent>
                             </physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00017" level="file">
                         <did>
                             <unittitle>Ransmayr. <title render="doublequote">The
                                 Unborn.</title></unittitle>
@@ -424,17 +377,16 @@ langmaterial element -->
                                 proofs <extent>(1 folder)</extent></physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00018" level="file">
                         <did>
                             <container label="Box" type="Box">3</container>
                             <unittitle>Reemstma, Jan Philipp. <title render="doublequote">And So for
-                                    the Reason Noted,</title> c.<unitdate normal="1990"
-                                    >1990.</unitdate>Speech.</unittitle>
+                                    the Reason Noted,</title> c.<unitdate normal="1990">1990.</unitdate>Speech.</unittitle>
                             <physdesc>T.D., edited <extent>(1 folder)</extent>
                             </physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00019" level="file">
                         <did>
                             <unittitle>Reemstma. <title render="doublequote">In Honor of Daniel
                                     Goldberg, On the Occasion of His Being Awarded the Democracy
@@ -445,7 +397,7 @@ langmaterial element -->
                             </physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00020" level="file">
                         <did>
                             <unittitle>Reemstma. <title render="italic">More Than a Champion: The
                                     Style of Muhammad Ali.</title> Translated by John E. Woods (New
@@ -455,7 +407,7 @@ langmaterial element -->
                             </physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00021" level="file">
                         <did>
                             <unittitle>Reemstma. <title render="doublequote">The Political Semantics
                                     of the Concept of 'Torture,'</title>
@@ -465,7 +417,7 @@ langmaterial element -->
                             </physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00022" level="file">
                         <did>
                             <unittitle>Reemstma. <title render="doublequote">State Terror</title>
                                 <unitdate certainty="circa" normal="1990">ca.
@@ -474,7 +426,7 @@ langmaterial element -->
                             </physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00023" level="file">
                         <did>
                             <unittitle>Reemstma. <title render="doublequote">Survivor
                                     Memoirs</title>
@@ -484,7 +436,7 @@ langmaterial element -->
                             </physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00024" level="file">
                         <did>
                             <unittitle>Reemstma. <title render="doublequote">Terroratio I</title>
                                 <unitdate certainty="circa" normal="1990">ca.
@@ -493,7 +445,7 @@ langmaterial element -->
                             </physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00025" level="file">
                         <did>
                             <unittitle>Reemstma. <title render="doublequote">Terroratio II</title>
                                 <unitdate certainty="circa" normal="1990">ca.
@@ -502,7 +454,7 @@ langmaterial element -->
                             </physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00026" level="file">
                         <did>
                             <unittitle>Reemstma. <title render="doublequote">Toward a Psychoanalytic
                                     Understanding of Human Cruelty</title>
@@ -511,55 +463,48 @@ langmaterial element -->
                             <physdesc>T.D., edited <extent>(1 folder)</extent></physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00027" level="file">
                         <did>
                             <unittitle>Schulze, Ingo. <title render="italic">33 Moments of
                                     Happiness: St. Petersburg Stories.</title> Translated by John E.
-                                Woods (New York: A.A. Knopf, <unitdate normal="1998"
-                                    >1998)</unitdate></unittitle>
+                                Woods (New York: A.A. Knopf, <unitdate normal="1998">1998)</unitdate></unittitle>
                             <physdesc>T.D., edited <extent>(2 folders)</extent></physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00028" level="file">
                         <did>
                             <unittitle>Schulze. <title render="italic">33 Moments of
                                     Happiness.</title></unittitle>
                             <physdesc>T.D., copy-edited <extent>(2 folders)</extent></physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00029" level="file">
                         <did>
                             <unittitle>Schulze. <title render="italic">Simple Stories</title>
-                                Translated by John E. Woods (New York: A.A. Knopf, <unitdate
-                                    normal="2000">2000)</unitdate></unittitle>
+                                Translated by John E. Woods (New York: A.A. Knopf, <unitdate normal="2000">2000)</unitdate></unittitle>
                             <physdesc>T.D., edited <extent>(2 folders)</extent></physdesc>
                         </did>
                     </c03>
-                    <c03 level="item">
+                    <c03 id="VAC9711-00030" level="item">
                         <did>
                             <unittitle>Wagner, Richard. <title render="italic">Tannhäuser: In Full
                                     Score.</title> German, with English interlinear translations by
-                                John E. Woods (New York: Dover Publications, <unitdate normal="1984"
-                                    >1984)</unitdate></unittitle>
+                                John E. Woods (New York: Dover Publications, <unitdate normal="1984">1984)</unitdate></unittitle>
                             <physdesc>(bound volume)</physdesc>
                         </did>
                     </c03>
-                    <c03 level="item">
+                    <c03 id="VAC9711-00031" level="item">
                         <did>
                             <unittitle>Wagner. <title render="italic">Tannhäuser and the Tournament
                                     of Song at Wartburg.</title> Edited and translated by Natalia
-                                Macfarren. (New York: G. Schirmer, <unitdate type="inclusive"
-                                    certainty="circa" normal="1990/1995">ca. 1990-1995?)</unitdate>
+                                Macfarren. (New York: G. Schirmer, <unitdate certainty="circa" normal="1990/1995" type="inclusive">ca. 1990-1995?)</unitdate>
                                 Annotated for surtitles by John E. Woods</unittitle>
                             <physdesc>(bound volume)</physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00032" level="file">
                         <did>
-                            <unittitle>Wagner. Lyric Opera of Chicago <title render="italic"
-                                    >Tannhäuser</title> production folder, <unitdate
-                                    type="inclusive" normal="1998/1999"
-                                >1998-1999.</unitdate></unittitle>
+                            <unittitle>Wagner. Lyric Opera of Chicago <title render="italic">Tannhäuser</title> production folder, <unitdate normal="1998/1999" type="inclusive">1998-1999.</unitdate></unittitle>
                             <physdesc>T.D., <extent>46pp.</extent>
                                 <extent>(1 folder)</extent></physdesc>
                         </did>
@@ -568,11 +513,11 @@ langmaterial element -->
                         </scopecontent>
                     </c03>
                 </c02>
-                <c02 level="subseries">
+                <c02 id="VAC9711-00033" level="subseries">
                     <did>
                         <unittitle>Other Translations</unittitle>
                     </did>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00034" level="file">
                         <did>
                             <container label="Box" type="Box">3</container>
                             <unittitle>Döblin, Alfred. <title render="italic">Mountain Seas and
@@ -583,17 +528,16 @@ langmaterial element -->
                                 <extent>(1 folder)</extent></physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00035" level="file">
                         <did>
-                            <unittitle>Enzensberger, Hans Magnus. <title render="doublequote"
-                                    >Hitler's Wraith [Wrath],</title>
+                            <unittitle>Enzensberger, Hans Magnus. <title render="doublequote">Hitler's Wraith [Wrath],</title>
                                 <unitdate certainty="circa" normal="1995">ca.
                                 1995.</unitdate>Translated by John E. Woods.</unittitle>
                             <physdesc>T.D., <extent>9pp.</extent>
                                 <extent>(1 folder)</extent></physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00036" level="file">
                         <did>
                             <unittitle>Enzensberger. <title render="doublequote">Inserts for Bosnia
                                     - Uganda,</title>
@@ -604,7 +548,7 @@ langmaterial element -->
                             </physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00037" level="file">
                         <did>
                             <unittitle>Enzensberger. <title render="doublequote">Manhunting in
                                     Germany,</title>
@@ -614,7 +558,7 @@ langmaterial element -->
                                 <extent>(1 folder)</extent></physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00038" level="file">
                         <did>
                             <unittitle>Fleischhauer, Jan. <title render="doublequote">Victory or
                                     Siberia,</title>
@@ -623,7 +567,7 @@ langmaterial element -->
                             <physdesc>T.D., <extent>24pp.</extent></physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00039" level="file">
                         <did>
                             <unittitle>Ganzfried, Daniel. <title render="doublequote">The Borrowed
                                     Holocaust Biography,</title>
@@ -636,7 +580,7 @@ langmaterial element -->
                                     <extent>10pp.</extent></physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00040" level="file">
                         <did>
                             <unittitle>Glotz, Peter. <title render="doublequote">Forward to Europe:
                                     A Manifesto for a New European Left,</title>
@@ -645,7 +589,7 @@ langmaterial element -->
                             <physdesc>Accompanied by copy of German text</physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00041" level="file">
                         <did>
                             <unittitle>Pross, Harry. <title render="doublequote">The Grand
                                     Reconciliation: Kitsch as a Social Product,</title>
@@ -654,7 +598,7 @@ langmaterial element -->
                             <physdesc>Accompanied by a photocopy of German text</physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00042" level="file">
                         <did>
                             <unittitle>Süskind, Patrick. <title render="italic">Perfume,</title>
                                 <unitdate normal="1985">Fall 1985.</unitdate>Unpublished sample. </unittitle>
@@ -662,24 +606,22 @@ langmaterial element -->
                             </physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00043" level="file">
                         <did>
-                            <unittitle>Assorted published reviews, <unitdate type="inclusive"
-                                    normal="1983/2001">1983-2001</unitdate></unittitle>
+                            <unittitle>Assorted published reviews, <unitdate normal="1983/2001" type="inclusive">1983-2001</unitdate></unittitle>
                         </did>
                     </c03>
                 </c02>
             </c01>
-            <c01 level="series">
+            <c01 id="VAC9711-00044" level="series">
                 <did>
                     <unittitle>Arno Schmidt</unittitle>
                 </did>
-                <c02 level="subseries">
+                <c02 id="VAC9711-00045" level="subseries">
                     <did>
-                        <unittitle>Correspondence, <unitdate type="inclusive" normal="1977/1987"
-                                >1977-1987</unitdate></unittitle>
+                        <unittitle>Correspondence, <unitdate normal="1977/1987" type="inclusive">1977-1987</unitdate></unittitle>
                     </did>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00046" level="file">
                         <did>
                             <container label="Box" type="Box">3</container>
                             <unittitle>Ernst Krawehl and John Woods concerning translations of Arno
@@ -689,12 +631,11 @@ langmaterial element -->
                         </did>
                     </c03>
                 </c02>
-                <c02 level="subseries">
+                <c02 id="VAC9711-00047" level="subseries">
                     <did>
-                        <unittitle>Correspondence, <unitdate type="inclusive" normal="1978/2002"
-                                >1978-2002</unitdate></unittitle>
+                        <unittitle>Correspondence, <unitdate normal="1978/2002" type="inclusive">1978-2002</unitdate></unittitle>
                     </did>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00048" level="file">
                         <did>
                             <container label="Box" type="Box">4</container>
                             <unittitle>Concerning Arno Schmidt</unittitle>
@@ -702,19 +643,18 @@ langmaterial element -->
                         </did>
                     </c03>
                 </c02>
-                <c02 level="subseries">
+                <c02 id="VAC9711-00049" level="subseries">
                     <did>
                         <unittitle>Translations of Works by Arno Schmidt</unittitle>
                     </did>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00050" level="file">
                         <did>
                             <container label="Box" type="Box">4</container>
                             <unittitle><title render="italic">Evening Edged in Gold.</title>
                                 Translated by John E. Woods (New York: Harcourt Brace Jovanovich,
                                     c.<unitdate normal="1980">1980)</unitdate></unittitle>
                             <physdesc>Includes: Manuscript, <date normal="1977">1977</date>. T.D.,
-                                edited, <extent>[83]pp.</extent>; Notes &amp; Queries, <date
-                                    type="inclusive" normal="1978/1979">1978-1979</date>; Plot
+                                edited, <extent>[83]pp.</extent>; Notes &amp; Queries, <date normal="1978/1979" type="inclusive">1978-1979</date>; Plot
                                 summary, <date normal="1980">1980</date>. T.D.; Ott, Peter F.,
                                     <title render="doublequote">Comments on the Occasion of the
                                     Publication of Evening Edged in Gold by Arno Schmidt,</title>
@@ -722,7 +662,7 @@ langmaterial element -->
                                 (photocopied) <extent>(4 folders)</extent></physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00051" level="file">
                         <did>
                             <container label="Box" type="Box">5</container>
                             <unittitle><title render="doublequote">Great Cain.</title> Two drafts of
@@ -732,7 +672,7 @@ langmaterial element -->
                             </physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00052" level="file">
                         <did>
                             <unittitle><title render="doublequote">Lake Scenes With
                                     Pocahontas</title> in <emph render="italic">Collected
@@ -745,18 +685,17 @@ langmaterial element -->
                             </physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00053" level="file">
                         <did>
                             <unittitle><title render="italic">Scenes from the Life of a Faun: A
                                     Short Novel,</title>
                                 <unitdate certainty="circa" normal="1980">ca. 1980.</unitdate>
-                                Translated by John E. Woods (London; New York: M. Boyars, <unitdate
-                                    normal="1983">1983)</unitdate> Manuscript.</unittitle>
+                                Translated by John E. Woods (London; New York: M. Boyars, <unitdate normal="1983">1983)</unitdate> Manuscript.</unittitle>
                             <physdesc>T.D, edited, <extent>156pp.</extent>
                                 <extent>(2 folders)</extent></physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00054" level="file">
                         <did>
                             <unittitle><title render="italic">School for Atheists: A Novella-Comedy
                                     in Six Acts,</title>
@@ -768,7 +707,7 @@ langmaterial element -->
                                 <extent>(4 folders)</extent></physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00055" level="file">
                         <did>
                             <unittitle><title render="italic">School for Atheists,</title>
                                 <unitdate normal="1999-04"> Apr. 1999.</unitdate> Manuscript. Second
@@ -777,17 +716,16 @@ langmaterial element -->
                                 <extent>(4 folders)</extent></physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00056" level="file">
                         <did>
-                            <unittitle><title render="doublequote">Tall Grete</title> in <emph
-                                    render="italic">The Collected Stories of Arno Schmidt.</emph>
+                            <unittitle><title render="doublequote">Tall Grete</title> in <emph render="italic">The Collected Stories of Arno Schmidt.</emph>
                                 Translated by John E. Woods (Normal, IL: Dalkey Archive Press,
                                     <unitdate normal="1996">1996).</unitdate>
                                 Manuscript.</unittitle>
                             <physdesc>T.D., edited, <extent>3pp.</extent></physdesc>
                         </did>
                     </c03>
-                    <c03 level="item">
+                    <c03 id="VAC9711-00057" level="item">
                         <did>
                             <container label="Box" type="Box">Oversize</container>
                             <unittitle><title render="italic">Evening Edged in Gold,</title>
@@ -800,11 +738,11 @@ langmaterial element -->
                     </c03>
                 </c02>
             </c01>
-            <c01 level="series">
+            <c01 id="VAC9711-00058" level="series">
                 <did>
                     <unittitle>Writings by Woods</unittitle>
                 </did>
-                <c02 level="file">
+                <c02 id="VAC9711-00059" level="file">
                     <did>
                         <container label="Box" type="Box">4</container>
                         <unittitle><title render="doublequote">On Translating the Unconventional
@@ -814,7 +752,7 @@ langmaterial element -->
                         <physdesc>T.D., <extent>6pp.,</extent> edited. (photocopied)</physdesc>
                     </did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAC9711-00060" level="file">
                     <did>
                         <unittitle><title render="doublequote">Of Bicycles and Violins,</title>
                             <unitdate certainty="circa" normal="1994">ca. 1994.</unitdate>
@@ -823,15 +761,15 @@ langmaterial element -->
                     </did>
                 </c02>
             </c01>
-            <c01 level="series">
+            <c01 id="VAC9711-00061" level="series">
                 <did>
                     <unittitle>Additions, <unitdate normal="2005">2005</unitdate></unittitle>
                 </did>
-                <c02 level="subseries">
+                <c02 id="VAC9711-00062" level="subseries">
                     <did>
                         <unittitle>Book Translations</unittitle>
                     </did>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00063" level="file">
                         <did>
                             <container label="Box" type="Box">4</container>
                             <unittitle>Mann, Thomas. <title render="italic">Joseph and his
@@ -841,7 +779,7 @@ langmaterial element -->
                             <physdesc>T.D., edited <extent>(4 folders)</extent></physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00064" level="file">
                         <did>
                             <container label="Box" type="Box">5</container>
                             <unittitle>Mann, Thomas. <title render="italic">Joseph and his Brothers,
@@ -849,41 +787,38 @@ langmaterial element -->
                             <physdesc>T.D., corrected draft <extent>(8 folders)</extent></physdesc>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00065" level="file">
                         <did>
                             <unittitle>Mann. Books I-III. Copy-edited ms.</unittitle>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00066" level="file">
                         <did>
                             <container label="Box" type="Box">6</container>
                             <unittitle>Mann, Thomas. <title render="italic">Joseph and his Brothers,
                                 cont.</title> Book IV. Copy-edited ms.</unittitle>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00067" level="file">
                         <did>
-                            <unittitle>Mann. Books I-IV. Proofs: First pass, <unitdate
-                                    normal="2004-04-15">Apr. 15, 2004.</unitdate></unittitle>
+                            <unittitle>Mann. Books I-IV. Proofs: First pass, <unitdate normal="2004-04-15">Apr. 15, 2004.</unitdate></unittitle>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00068" level="file">
                         <did>
-                            <unittitle>Mann. Books I-III. Proofs: Author's set, <unitdate
-                                    normal="2004-04-23">Apr. 23, 2004.</unitdate></unittitle>
+                            <unittitle>Mann. Books I-III. Proofs: Author's set, <unitdate normal="2004-04-23">Apr. 23, 2004.</unitdate></unittitle>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00069" level="file">
                         <did>
                             <container label="Box" type="Box">7</container>
                             <unittitle>Mann, Thomas. Joseph and His Brothers, cont. Book IV. Proofs,
                                 Author's set</unittitle>
                         </did>
                     </c03>
-                    <c03 level="file">
+                    <c03 id="VAC9711-00070" level="file">
                         <did>
-                            <unittitle>Mann. Books I-IV. Proofs: second pass, <unitdate
-                                    normal="2004-07-19">July 19, 2004.</unitdate></unittitle>
+                            <unittitle>Mann. Books I-IV. Proofs: second pass, <unitdate normal="2004-07-19">July 19, 2004.</unitdate></unittitle>
                         </did>
                     </c03>
                 </c02>
