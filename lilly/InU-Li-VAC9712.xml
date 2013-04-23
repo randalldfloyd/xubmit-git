@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAC9712">InU-Li-VAC9712</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">West, R. mss.<date normal="1907/1984"
+                        type="inclusive">1907-1984</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2013" type="publication">© 2013</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2013">© 2013</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2013" type="source">2013</date>
+                <lb/>Finding aid encoded by Shayna Pekala, Lilly Library, Indiana University, <date
+                    normal="2013-04-16">April 16, 2013</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2013-04-16">April 16, 2013</date>
+                <item>Encoded finding aid started.</item>
+            </change>
+            <change audience="internal">
+                <date normal="2013-04-23">April 23, 2013</date>
+                <item>Encoded finding aid completed.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">West, Rebecca, 1892-1983</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">West, R. mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1907/1984" type="inclusive"
+                >1907-1984</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2070</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>530 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The West, R. mss., 1907-1984, consist
+                primarily of letters from Rebecca West, 1892-1983, to members of her family,
+                particularly her two sisters, Dr. Letitia Denny Fairfield and Winifred Alice
+                Fairfield Macleod.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+            <p>Born December 21, 1892 in Westbourne Park, London, Dame Rebecca was the youngest of
+                three children, all girls. Christened Cicely [subsequently spelled Cicily] Isabel
+                Fairfield, she demonstrated an early aptitude for writing but was determined to be
+                an actress. After studying at the Royal Academy of Art she worked on stage for about
+                a year, and in 1911 began writing for the feminist magazine <emph render="italic"
+                    >Freewoman.</emph> In order to save her family embarrassment regarding this
+                latter employment she adopted as a pseudonym the name of one of the roles she
+                portrayed on stage, that of the rebellious heroine in Ibsen's Rosmersholm: Rebecca
+                West. West met H.G. Wells in 1912 and bore his son, Anthony Panther West in August
+                1914. She remained one of Wells's mistresses for ten years. She continued to write
+                both fiction and non-fiction: short stories, novels, feminist and socialist essays,
+                biography and literary criticism. West married a banker, Henry Maxwell Andrews in
+                1930, was made Commander of the British Empire in 1949, and Dame Commander in 1959.
+                She died in London on the morning of March 15, 1983.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>Arranged alphabetically by recipient.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>This collection of letters spans about eight decades of West's life. The very
+                earliest few to her sister Letitia, although undated, almost certainly were written
+                before 1900. The major recipients are her mother, Isabella Campbell (Mackenzie)
+                Fairfield (1854-1921); her oldest sister, Dr. Letitia Denny Fairfield (1885-1978);
+                her other sister, Winifred Alice (Fairfield) Macleod, (1887-1960); and her niece,
+                Alison Flora (Macleod) Selford (b. 1920). There is also a folder of letters from
+                West to other members of the family--brother-in-law, nephews, grand nieces, etc.,
+                and one of copies of letters from niece Alison to her aunt Rebecca. West mainly
+                discusses family matters, but sometimes includes commentary on politics, history,
+                social issues, aspects of her work, and notable personalities. A file of
+                miscellaneous correspondence involves non-family members and family members writing
+                to each other exclusive of West. A file of miscellaneous items that includes a poem
+                by Cicily Isabel Fairfield and an undated, torn photograph of two young women, and
+                another one of newspaper clippings complete the collection.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/west+rebecca+1892-1983{su}"
+                                ><persname encodinganalog="600" source="lcnaf">West, Rebecca,
+                                1892-1983 --Correspondence.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/fairfield+letitia{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Fairfield,
+                                Letitia.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/macleod+winifred+alice+1887-1960{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Macleod, Winifred
+                                Alice, 1887-1960.</persname></extref></item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/authors+english+correspondence{su}"
+                                ><subject encodinganalog="650" source="lcsh">Authors, English
+                                --Correspondence.</subject></extref></item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="610" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 1997</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], West, R. mss., Lilly Library, Indiana University, Bloomington,
+                    Indiana.</p>
+            </prefercite>
+
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Staff.</p>
+                <p>Completed in <date normal="2013">2013</date></p>
+                
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAC9712-00001" level="collection">
+                <did>
+                    <unittitle>West, R. mss., <unitdate normal="1907/1984" type="inclusive"
+                            >1907-1984</unitdate></unittitle>
+                </did>
+                <scopecontent>
+                    <p>All of this material was previously in the possession of Dame Rebecca's
+                        niece, Alison Selford. Many of the letters have dates or date periods
+                        written across the top of the first page, sometimes in pencil, often in red,
+                        green or blue ink. Unless content or some conflicting biographical
+                        information determined otherwise, the letters have been placed as of the
+                        supplied dates. If a variant date or period has been determined in the
+                        course of cataloging the collection, then the letter was placed in that
+                        location and the date indicated in pencil within square brackets at the top
+                        of each page. Many of the date annotations include the word <emph
+                            render="doublequote">postmark</emph> or <emph render="doublequote"
+                            >postmarked.</emph> There were, however, no envelopes with the
+                        collection when acquired by the Lilly Library, hence there is no present
+                        documentation for those statements.</p>
+                </scopecontent>
+                <c02 id="VAC9712-00002" level="file">
+                    <did>
+                        <container label="Box" type="Box">1</container>
+                        <container label="Folder" type="Folder">1</container>
+                        <unittitle>Letters, <unitdate normal="1920/1921" type="inclusive"
+                                >1920-1921,</unitdate>from Rebecca West to her mother, Isabella
+                            Campbell (Mackenzie) Fairfield.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9712-00003" level="file">
+                    <did>
+                        <container label="Folders" type="Folder">2-10</container>
+                        <unittitle>Letters and postcards, <unitdate normal="1907/1977"
+                                type="inclusive">1907-1977,</unitdate>from Rebecca West to her
+                            sister, Dr. Letitia Denny Fairfield.</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9712-00004" level="file">
+                    <did>
+                        <container label="Box" type="Box">2</container>
+                        <container label="Folders" type="Folder">1-5</container>
+                        <unittitle>Letters, <unitdate normal="1915/1959" type="inclusive"
+                                >1915-1959,</unitdate>from Rebecca West to her sister, Winifred
+                            Alice (Fairfield) Macleod</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9712-00005" level="file">
+                    <did>
+                        <container label="Folders" type="Folder">6-9</container>
+                        <unittitle>Letters, <unitdate normal="1963/1983" type="inclusive"
+                                >1936-1983,</unitdate>from Rebecca West to her niece, Alison Flora
+                            (Macleod) Selford</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9712-00006" level="file">
+                    <did>
+                        <container label="Folder" type="Folder">10</container>
+                        <unittitle>Letters, <unitdate certainty="approximate" normal="1930/1969"
+                                type="inclusive">1930s-1969,</unitdate>from Rebecca West to other
+                            members of her family (brother-in-law, nephews, grand nieces,
+                            etc.)</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAC9712-00007" level="file">
+                    <did>
+                        <container label="Folder" type="Folder">11</container>
+                        <unittitle>Selford, Alison Flora (Macleod) to her aunt, <emph
+                                render="doublequote">Cissie,</emph>
+                            <unitdate normal="1961/1981" type="inclusive"
+                            >1961-1981</unitdate></unittitle>
+                        <physdesc>(carbon copies)</physdesc>
+                    </did>
+                </c02>
+                <c02 id="VAC9712-00008" level="file">
+                    <did>
+                        <container label="Folder" type="Folder">12</container>
+                        <unittitle>Miscellaneous correspondence, <unitdate normal="1923/1984"
+                                type="inclusive">1923-1984</unitdate></unittitle>
+                    </did>
+                    <scopecontent>
+                        <p>(includes a few from West to other people)</p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAC9712-00009" level="file">
+                    <did>
+                        <container label="Folder" type="Folder">13</container>
+                        <unittitle>Miscellaneous items:</unittitle>
+                    </did>
+                    <scopecontent>
+                        <p>a poem: <title render="doublequote">The Call by Pan</title> by
+                            Cicily Isabel Fairfield [Rebecca West] (T.D.S.); a Fairfield family tree
+                            and <emph render="doublequote">The Mackenzie tree,</emph> both in West's
+                            hand; <emph render="doublequote">EXTRACT from The Third Volume of the
+                                HISTORY OF THE TIMES, pp.237-38</emph>; and an undated, torn
+                            photograph of two unidentified young women</p>
+                    </scopecontent>
+                </c02>
+                <c02 id="VAC9712-00010" level="file">
+                    <did>
+                        <container label="Folder" type="Folder">14</container>
+                        <unittitle>Newspaper clippings:</unittitle>
+                    </did>
+                    <scopecontent>
+                        <p>letter to the editor by Cicily Isabel Fairfield [R. West], <date
+                                normal="1907-10-16">Oct. 16, 1907</date>; two letters to the editor
+                            by Anthony West, <date normal="1907/1984" type="inclusive"
+                                >undated</date> and <date normal="1984-04-30">Apr. 30, 1984</date>;
+                                <emph render="doublequote">extracted from the History of Mr. Wells
+                                by Michael Foot, ... and Rebecca West, A Saga of the Century, by
+                                Carl Rollyson,</emph>
+                            <date normal="1995-10-28">Oct. 28, 1995</date></p>
+                    </scopecontent>
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
