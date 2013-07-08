@@ -1,0 +1,3831 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader relatedencoding="dublincore" audience="external" langencoding="iso639-2b"
+        scriptencoding="iso15924" repositoryencoding="iso15511" countryencoding="iso3166-1"
+        dateencoding="iso8601" findaidstatus="edited-full-draft">
+        <eadid encodinganalog="identifier" identifier="InU-Li-VAD0220" countrycode="US"
+            mainagencycode="InU-Li">InU-Li-VAD0220</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Elder, Robert K. mss., <date type="inclusive"
+                        normal="1970/2012">1970-2012</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2013" type="publication">© 2013</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2013">© 2013</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2013" type="source">2013</date>
+                <lb/>Finding aid encoded by Shayna Pekala, Lilly Library, Indiana University, <date
+                    normal="2013-07-01">July 7, 2013</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2013-07-01">July 1, 2013</date>
+                <item>Encoded finding aid started.</item>
+            </change>
+            <change audience="internal">
+                <date normal="2013-07-08">July 08, 2013</date>
+                <item>Encoded finding aid completed.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc level="collection" audience="external" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository encodinganalog="852" label="Repository" id="lilly">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname source="lcnaf" encodinganalog="100">Elder, Robert K.</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Elder, Robert K. mss., </unittitle>
+            <unitdate normal="1970/2012" type="inclusive" encodinganalog="245$f"
+                >1970-2012</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2711</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>31,500 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Elder, Robert K. mss., 1970-2012,
+                consist of the papers of journalist, author, and film critic Rob Elder, 1976-
+                .</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+            <p>Elder grew up in Montana and graduated from the University of Oregon. While in Eugene
+                he edited the campus newspaper, <emph render="italic">The Oregon Voice</emph>, and
+                archived the papers of Ken Kesey, housed at the university's Knight Library.</p>
+            <p>Elder's work has appeared in <emph render="italic">The New York Times</emph>, <emph
+                    render="italic">The Los Angeles Times</emph>, <emph render="italic">The Boston
+                    Globe</emph>, <emph render="italic">The Oregonian</emph>, <emph render="italic"
+                    >MSNBC.com</emph>, <emph render="italic">Salon.com</emph>, and many other
+                publications. For more than a decade, he served as a staff writer at the <emph
+                    render="italic">Chicago Tribune</emph>, and from 2010 to 2012 he worked as a
+                regional editor for the AOL Huffington Post Media Group's hyperlocal news
+                initiative, <emph render="italic">Patch.com.</emph> In 2012, Elder served as the
+                founding managing editor of <emph render="italic">DNAinfo Chicago</emph> before
+                joining the <emph render="italic">Chicago Sun-Times</emph> in 2013. Elder is also
+                the founder of Odd Hours Media LLC, which specializes in crowdsourcing, social media
+                and TV production. He is the editor of <emph render="italic">John Woo:
+                    Interviews</emph> (2005), <emph render="italic">Last Words of the
+                    Executed</emph> (2010), <emph render="italic">The Film That Changed My
+                    Life</emph> (2011), and <emph render="italic">It Was Over When...</emph>
+                (2011).</p>
+
+        </bioghist>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The collection includes correspondence, original drafts of writings, research
+                materials, promotional materials, newspaper clippings, and transcripts of interviews
+                conducted by Elder for the book <emph render="italic">The Movie That Changed My
+                    Life.</emph></p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/elder+robert+k.{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Elder, Robert K.
+                                --Correspondence.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/chabon+michael{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Chabon, Michael
+                                --Correspondence.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/eggers+dave{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Eggers, Dave
+                                --Correspondence.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/gaiman+neil{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Gaiman, Neil
+                                --Correspondence.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/lee+stan+1922{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Lee, Stan, 1922
+                                --Correspondence.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/waters+john{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Waters, John
+                                --Correspondence.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/woo+john{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Woo, John
+                                --Correspondence.</persname></extref></item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="610" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 2010-2013</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Elder, Robert K. mss., Lilly Library, Indiana University, Bloomington,
+                    Indiana.</p>
+            </prefercite>
+
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Craig Simpson.</p>
+                <p>Completed in <date normal="2013">2013</date></p>
+
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 level="collection">
+                <did>
+                    <unittitle>Elder, Robert K. mss., <unitdate type="inclusive" normal="1970/2012"
+                            >1970-2012</unitdate></unittitle>
+                </did>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">1</container>
+                        <unittitle><emph render="italic">John Woo: Interviews</emph>, page proofs
+                            with handwritten annotations</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">John Woo: Interviews</emph>, page proofs,
+                            research materials, correspondence, statement of accounts </unittitle>
+                        <physdesc><extent>(11 folders)</extent></physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>John Woo, autographed program cards, Gene Siskel Film Center
+                            Annual Gala</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words of the Executed</emph>, author's
+                            proof </unittitle>
+                        <physdesc><extent>(2 folders)</extent></physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Rob Elder articles for various books</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Rob Elder correspondence</unittitle>
+                        <physdesc>(email)</physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">2</container>
+                        <unittitle><emph render="italic">Last Words</emph>, correspondence with Dave
+                            Eggers</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, correspondence and
+                            research materials</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, sample copy</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, research
+                            stats</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, research materials </unittitle>
+                        <physdesc><extent>(10 folders)</extent></physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, 1st draft and copy with
+                            corrections</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, drafts and corrections </unittitle>
+                        <physdesc><extent>(3 folders)</extent></physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, bios</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Bronc Express</emph>, newsclips</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">The Killer</emph>, handbills, book release
+                            party, Gene Siskel Center</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Miscellaneous articles and newsclips</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">3</container>
+                        <unittitle>University of Oregon cultural forum materials</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Milwaukee Sentinel</emph> contact
+                            list</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="doublequote">It Was Over When</emph> and <emph
+                                render="doublequote">I Knew It Was Love When</emph>
+                            materials</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Interviews at artists' studios in Chicago</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Letters of Recommendation</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="doublequote">Old Portfolio</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Court case research</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Pedagogical tools</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Important contacts</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="doublequote">2ndHand Reader</emph> magazine, with
+                            letter from Todd Dills</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Personal letters and invitations</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Email correspondences (including Michael Chabon, Neil
+                            Gaiman)</unittitle>
+                        <physdesc><extent>(6 folders)</extent></physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Chicago Film Critic Association materials</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Handwritten correspondences</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Typed correspondences</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Chicago Tribune</emph> expenses</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Doc Films promotional press kit</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Nip/Tuck</emph> promotional press
+                            kit</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">The Express</emph> promotional press
+                            kit</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">4</container>
+                        <unittitle>John Woo articles</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Columbia College invitation and materials</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Press passes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Flux</emph> magazine
+                            information</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Billings Gazette</emph>, with bylines for
+                            Robert K. Elder, <unitdate normal="1993">1993</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Bronc Express</emph>, with bylines for
+                            Robert K. Elder, <unitdate normal="1992">1992</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Redmond Spokesman</emph>, with bylines for
+                            Robert K. Elder, <unitdate normal="1997">1997</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Pandemonium</emph>, with bylines for Robert
+                            K. Elder, <unitdate normal="1996">1996</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Oregon Voice</emph>, with bylines for
+                            Robert K. Elder, <unitdate normal="1997">1997</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">The Oregonian</emph>, with bylines for
+                            Robert K. Elder, <unitdate normal="1999">1999</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Oregon Daily Emerald</emph>, with bylines
+                            for Robert K. Elder, <unitdate normal="1997">1997</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Milwaukee Journal Sentinel</emph>, with
+                            bylines for Robert K. Elder, <unitdate normal="1998"
+                            >1998</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Dallas Morning News</emph>, with bylines
+                            for Robert K. Elder, <unitdate normal="2000/2001" type="inclusive"
+                                >2000-2001</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Ink Fish</emph>, with bylines for Robert K.
+                            Elder, <unitdate type="inclusive" normal="1996/1997"
+                                >1996-1997</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">San Jose Mercury News</emph>, with bylines
+                            for Robert K. Elder, <unitdate normal="1999">1999</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">5</container>
+                        <unittitle><emph render="italic">Chicago Tribune</emph> newspapers. All have
+                            bylines for Robert K. Elder, <unitdate type="inclusive"
+                                normal="2000/2009">2000-2009</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">6</container>
+                        <unittitle><emph render="italic">Last Words of the Executed</emph>, page
+                            proofs, indexing set</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words of the Executed</emph>, reviews
+                            and other documents</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Elder article, <emph render="italic">Time Out Chicago</emph>,
+                                <unitdate type="inclusive" normal="2010-04-22/2010-04-28">April
+                                22-28, 2010</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Elder articles, <emph render="italic">Wizard</emph>, <unitdate
+                                type="inclusive" normal="2010-06/2010-07">Jun.-Jul.,
+                            2010</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Elder online articles, <unitdate normal="2010"
+                            >2010</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Elder article, <emph render="doublequote">Accidental
+                                Pornographer,</emph> with corrections</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Elder magazine articles </unittitle>
+                        <physdesc><extent>(2 folders)</extent></physdesc>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <container type="Box" label="Box">7</container>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            corrected draft, ed. by Joey Kahn, <unitdate normal="2010-07-19">Jul. 19, 2010</unitdate></unittitle>
+                        <physdesc><extent>(3 folders)</extent></physdesc>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            corrected draft, ed. by Jessica Galliart, <unitdate normal="2010-07-20"
+                                >Jul. 20, 2010</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            corrected draft, ed. by Sofia Resnick, <unitdate normal="2010-07-20"
+                                >Jul. 20, 2010</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            miscellaneous chapters</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            correspondence, copy of catalog excerpt</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">American Werewolf in London</emph>,
+                            research notes (for <emph render="italic">The Film That Changed My
+                                Life)</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Evil Dead 2</emph>, research notes <emph
+                                render="italic">(The Film That Changed My Life)</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Kings of the Road</emph>, research notes
+                                <emph render="italic">(The Film That Changed My
+                            Life)</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Mystery Organism</emph>, research notes
+                                <emph render="italic">(The Film That Changed My
+                            Life)</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Raising Arizona</emph>, research notes
+                                <emph render="italic">(The Film That Changed My
+                            Life)</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Who Can Kill A Child</emph>, research notes
+                                <emph render="italic">(The Film That Changed My
+                            Life)</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Letters to Directors</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Chicago Review Press, catalog, <unitdate normal="2010"
+                                >2010</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <container type="Box" label="Box">8</container>
+                        <unittitle><emph render="italic">Last Words of the Executed</emph>, draft
+                            with highlights and notes, loose-bound binder</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">Last Words of the Executed</emph>, compiled
+                            research and stories </unittitle>
+                        <physdesc><extent>(2 binders)</extent></physdesc>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">Last Words of the Executed</emph>, <emph
+                                render="doublequote">Combined,</emph> compilation of stories of
+                            executed, <unitdate normal="2005">2005,</unitdate> loose-bound
+                            binder</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">Last Words of the Executed</emph>, <emph
+                                render="doublequote">Sheila's list,</emph> compilation of stories of
+                            executed, <unitdate normal="2005">2005,</unitdate> loose-bound
+                            binder</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words of the Executed</emph>,
+                            correspondence and manuscript, <unitdate normal="2009"
+                            >2009</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">Last Words of the Executed</emph>,
+                            draft</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words of the Executed</emph>,
+                            correspondence and draft</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words of the Executed</emph>, research
+                            materials </unittitle>
+                        <physdesc><extent>(2 folders)</extent></physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words of the Executed</emph>, articles
+                            and clippings</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words of the Executed</emph>, reviews
+                            and other clippings</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">Last Words of the Executed</emph>, research
+                            binder <emph render="doublequote">A</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <container type="Box" label="Box">9</container>
+                        <unittitle><emph render="italic">Last Words of the Executed</emph>, research
+                            binder <emph render="doublequote">B</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">Last Words of the Executed</emph>, research
+                            binder <emph render="doublequote">C</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">Last Words of the Executed</emph>, research
+                            binder <emph render="doublequote">D-E</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">Last Words of the Executed</emph>, research
+                            binder <emph render="doublequote">F-G</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">Last Words of the Executed</emph>, research
+                            binder <emph render="doublequote">H-J</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">Last Words of the Executed</emph>, research
+                            binder <emph render="doublequote">K-L-M</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <container type="Box" label="Box">10</container>
+                        <unittitle><emph render="italic">Last Words of the Executed</emph>, research
+                            binder <emph render="doublequote">M-N-O-P-Q</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">Last Words of the Executed</emph>, research
+                            binder <emph render="doublequote">R-S</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">Last Words of the Executed</emph>, research
+                            binder <emph render="doublequote">S-T-U-V</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">Last Words of the Executed</emph>, research
+                            binder <emph render="doublequote">W-X-Y-Z</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">Last Words of the Executed</emph>, research
+                            binder <emph render="doublequote">Gas Chamber</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">Last Words of the Executed</emph>, research
+                            binder <emph render="doublequote">Hanging</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">Last Words of the Executed</emph>, research
+                            binder <emph render="doublequote">Electric Chair</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">Last Words of the Executed</emph>, research
+                            binder <emph render="doublequote">Firing Squad</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">Last Words of the Executed</emph>, research
+                            binder <emph render="doublequote">Lethal Injection</emph></unittitle>
+                        <physdesc><extent>(3 folders)</extent></physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">11</container>
+                        <unittitle>Elder interviews <emph render="italic">It Was Love
+                            When...,</emph> website research </unittitle>
+                        <physdesc><extent>(2 folders)</extent></physdesc>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">It Was Love When...,</emph> draft,
+                                <unitdate normal="2011-01-26">Jan. 26, 2011</unitdate></unittitle>
+                        <physdesc><extent>(2 folders)</extent></physdesc>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">It Was Love When...,</emph> draft,
+                                <unitdate normal="2011-07-18">Jul. 18, 2011</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">It Was Over When...,</emph>
+                            draft</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">It Was Over When...,</emph> <unitdate
+                                normal="2010-05-29">May 29, 2010</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">It Was Over When...,</emph> <unitdate
+                                normal="2010-10-24">Oct. 24, 2010</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">It Was Over When...,</emph>
+                            other</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">It Was Over When...,</emph> publicity and
+                            media</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">It Was Over When...,</emph> website
+                            posts</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">It Was Love When/It Was Over
+                            When...,</emph> photo releases</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">It Was Love When/It Was Over
+                            When...,</emph> drafts, <unitdate type="inclusive" normal="2009/2010"
+                                >2009-2010</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Correspondence re: John Woo book</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>John Woo, financial</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>John Woo, research</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>John Woo, photographs</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>John Woo, publicity, drafts </unittitle>
+                        <physdesc><extent>(3 folders)</extent></physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">12</container>
+                        <unittitle><emph render="italic">Last Words</emph>,
+                            correspondence</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, correspondence, Stan
+                            Lee</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, drafts, foreword by
+                            Studs Terkel</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, drafts, <emph
+                                render="doublequote">The Electric Chair</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, drafts,
+                            other</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, drafts, <emph
+                                render="doublequote">Lethal Injection</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, drafts, <emph
+                                render="doublequote">The Firing Squad</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, drafts, <emph
+                                render="doublequote">The Gas Chamber</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, drafts, <emph
+                                render="doublequote">The Noose</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, drafts, <emph
+                                render="doublequote">The Pitch</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, drafts, <emph
+                                render="doublequote">Spared by Lincoln</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, drafts, miscellaneous
+                            (additional articles, essays, interviews, etc.)</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, draft,
+                            undated</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, draft, March
+                            2008</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            contracts</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            contracts, book releases</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            correspondence</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">Best Film You've Never Seen</emph>, draft,
+                                <unitdate normal="2012-06-12">Jun. 12, 2012</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">The Best Movies You've Never Seen</emph>,
+                            pitch, drafts </unittitle>
+                        <physdesc><extent>(2 folders)</extent></physdesc>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            draft, <unitdate normal="2012-05">May 2012</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            correspondence</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            editing notes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <container type="Box" label="Box">13</container>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Peter Bogdanovich</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Danny Boyle</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Bruce Campbell</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Antonio Campos</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Gurinder Chadha</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Austin Chick</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Bill Condon</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Richard Curtis</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, John Dahl</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Guillermo del Toro</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Peter Doctor</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Jay Duplass and Mark Duplass</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Sean Durkin</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Atom Egoyan</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Vincent Gallo</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Alex Gibney</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Michel Gondry</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Peter Greenaway</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Todd Hayes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Brian Herzlinger</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Arthur Hiller</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Henry Jaglom</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Steve James</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Jim Jarmusch</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Rian Johnson</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Richard Kelly</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Neil LaBute</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, John Landis</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Ang Lee</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Stan Lee</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Richard Linklater</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Gordon Liu</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Phil Lord</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Guy Maddin</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, John McNaughton</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Frank Oz</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Kimberly Peirce</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Gene Phillips</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Michael Polish</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Alex Proyas</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Stephen Quay and Timothy Quay</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, George A. Romero</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Kevin Smith</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Todd Solondz</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Joe Swanberg</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Ondi Timonen</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, John Waters</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, John Woo</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The Film That Changed My Life</emph>,
+                            interview, Edgar Wright</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">14</container>
+                        <unittitle>Research for <emph render="italic">The Film That Changed My
+                                Life</emph> and <emph render="italic">The Best Film You've Never
+                                Seen</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Notes and Miscellany</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Publicity and Media</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Publicity and Media</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Publicity, <emph render="italic">Last Call with Carson
+                                Daly</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Publicity and Media, Music Box</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Research, Peter Bogdanovich</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Research, Danny Boyle</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Research, Charlie Chaplin</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Research, David Cronenberg</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Research, W.C. Fields</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Research, Vincent Gallow</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Research, Peter Greenaway</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Research, Groucho and the Marx Brothers</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Research, Stanley Kubrick</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Research, John Landis and Ray Harryhausen</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Research, Guy Maddin</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Research, Chris Marker</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Research, Kevin Smith</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Research, George Stevens</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Research, Quentin Tarantino</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Research, Jacques Tati</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Research, Peter Weir</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Research, Orson Welles, Douglas Kirk, Stanley Kubrick</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Research, various</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Research, movie, <emph render="italic">10 Rillington
+                            Place</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Research, movie, <emph render="italic"
+                            >Adaptation</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Research, movie, <emph render="italic">L'Age
+                            d'or</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">15</container>
+                        <unittitle>Research for <emph render="italic">The Film That Changed My
+                                Life</emph> and The Best Film You've Never Seen and Last Words of
+                            the Executed</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, research, movie, <emph
+                                render="italic">Beginning of the End</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, research, movie, <emph
+                                render="italic">Blume in Love and Paul Mazursky</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, research, movie, <emph
+                                render="italic">Brazil</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, research, movie, <emph
+                                render="italic">The Chase</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, research, movie, <emph
+                                render="italic">Cocksucker Blues</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, research, movie, <emph
+                                render="italic">Dog Soldiers</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, research, movie, <emph
+                                render="italic">E.T.</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, research, movie, <emph
+                                render="italic">Eureka</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, research, movie, <emph
+                                render="italic">Harlan County, USA</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, research, movie, <emph
+                                render="italic">Institute Benjamenta</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, research, movie, <emph
+                                render="italic">Killer Klowns from Outer Space</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, research, movie, <emph
+                                render="italic">King Kong</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, research, movie, <emph
+                                render="italic">A Man for All Seasons</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, research, movie, <emph
+                                render="italic">Mulholland Drive</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, research, movie, <emph
+                                render="italic">Murder by Contract</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, research, movie, <emph
+                                render="italic">North by Northwest</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, research, movie, <emph
+                                render="italic">Once Upon a Time in America</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, research, movie, other
+                            films</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, research, movie, <emph
+                                render="italic">Over the Edge</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, research, movie, <emph
+                                render="italic">La Peau Douce</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, research, movie, <emph
+                                render="italic">Peter Pan</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, research, movie, <emph
+                                render="italic">Raging Bull</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, research, movie, <emph
+                                render="italic">Slacker</emph> and Richard Linklater</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, research, movie, <emph
+                                render="italic">Some Came Running</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, research, movie, <emph
+                                render="italic">Someone to Love</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, research, movie, <emph
+                                render="italic">The Swimmer</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, research, movie, <emph
+                                render="italic">Tales of Hoffman</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, research, movie, <emph
+                                render="italic">Who'll Stop the Rain</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, self-copyright</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, draft, corrected,
+                                <unitdate normal="2009-04">April 2009</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, interview with Reverend
+                            Pickett</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, notes and
+                            fact-checking</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, page proofs, <unitdate
+                                normal="2009-10">October 2009</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, drafts,
+                            undated</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, publicity, Centuries and
+                            Sleuths Bookstore</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">16</container>
+                        <unittitle><emph render="italic">Last Words</emph>, flyers for
+                            events</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, publicity, reading at
+                            Blackstone Library</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, publicity, reading at
+                            The Parlor</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, publicity, reviews,
+                            announcements</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, publicity, reviews,
+                            announcements</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, publicity, reviews,
+                            announcements</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, research</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, research</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, research/drafts,
+                            compilations</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, Mankato, New York Times
+                            story</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, research,
+                            Mankato</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, research,
+                            Mankato</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, research,
+                            Mankato</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, responses to
+                            readers</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, University of Chicago
+                            Press, correspondence</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, uncorrected page
+                            proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, uncorrected page
+                            proofs</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <container type="Box" label="Box">17</container>
+                        <unittitle>AOL/Patch, poster, <emph render="doublequote">Our Family of
+                                Brands</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>AOL/Patch, articles about the company, misc. papers and trend
+                            reports</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>AOL/Patch, employee correspondence</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>AOL/Patch, travel expenses</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>AOL/Patch, local editor interviews</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>AOL/Patch, employment documents and reviews</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>AOL/Patch, company information</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>AOL/Patch, company information</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Chicago Tribune</emph>,
+                            correspondence</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Chicago Tribune</emph>, articles about the
+                            company/miscellaneous flyers</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Chicago Tribune</emph>, Elder articles and
+                            edits of drafts</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Chicago Tribune</emph>, employment
+                            documents/company information</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Clips/Misc. writing and drafts, edits and revisions</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Miscellaneous, freelance letters, paystubs, and more</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">18</container>
+                        <unittitle>Interns, contracts</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Interns, correspondence</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Interns, letters of recommendation</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Interns, other</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Interns, resumes, AOL/Patch, 2011</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Teaching, class rosters and grades</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Teaching, Columbia</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Teaching, Columbia, student evaluations</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Teaching, facets</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Teaching, facets, evaluations</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Teaching, Northwestern, correspondence</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Teaching, Northwestern, general university
+                            information</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Teaching, Northwestern, multimedia class</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Teaching, Northwestern, multimedia class</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Teaching, Northwestern, multimedia storytelling class</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Teaching, students, papers</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">19</container>
+                        <unittitle>Holiday Cards <unitdate normal="2001">2001</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Holiday Cards <unitdate normal="2002">2002</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Holiday Cards <unitdate normal="2003">2003</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Holiday Cards <unitdate normal="2004">2004</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Holiday Cards <unitdate normal="2005">2005</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Holiday Cards <unitdate normal="2007/2009" type="inclusive"
+                                >2007-2009</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Holiday Cards <unitdate normal="2009">2009</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Holiday Cards <unitdate normal="2009">2009</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Holiday Cards <unitdate normal="2010">2010</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Holiday Cards <unitdate normal="2011">2011</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Birthday Cards</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>New house, correspondence</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Envelopes with no cards</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">20</container>
+                        <unittitle>Bob Hamer materials</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Contribution to <emph render="italic">Time Out Chicago</emph>,
+                                <unitdate normal="2010">2010</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Timberline</emph>, journal articles,
+                                <unitdate normal="1995">1995,</unitdate><unitdate normal="1998"
+                                >1998</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Magazines</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">On Eleven</emph>, <emph
+                                render="doublequote">Faith No More</emph> article, <unitdate
+                                normal="1995">1995</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">Chicago Tribune</emph> magazine,
+                            2009</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">Chicago Reader</emph>, 2011</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph>, publicity</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, publicity, <emph
+                                render="italic">Time Out Chicago</emph>, pp. 24-25</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, publicity, Marc Maron of
+                            WTF</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film, Chicago Free Press</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, contracts, book
+                            releases</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">It Was Love When…</emph>, publicity, <emph
+                                render="italic">Daily Northwestern</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Chicago Tribune</emph>, Elder articles and
+                            edits of drafts</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>AOL/Patch</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">The Oregon Voice</emph>, Vol. 20, issues
+                            1-5</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Bertagnoli article, <emph render="doublequote">You c_nt say that
+                                (or can you?)</emph><emph render="italic">Chicago Tribune.</emph>
+                                <unitdate normal="2004-10-27">Oct. 27, 2004</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Interview with Robert Carlyle by Robert K. Elder, <emph
+                                render="italic">Heritage Magazine</emph>, Winter <unitdate
+                                normal="2009/2010" type="inclusive">2009-2010</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Interview with Erica Watson by Robert K. Elder, DEMO 11, Columbia
+                            College Chicago, Winter/Spring <unitdate normal="2010"
+                            >2010</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">DEMO 10</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">Wizard</emph>, <unitdate normal="2009"
+                                >2009</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="underline">Zines</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">Tri-State Crime Spree.</emph> Issues 1 and
+                            2.</unittitle>
+                    </did>
+                    <note>
+                        <p>Note: Contribution by Jeff Faerber.</p>
+                    </note>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The2ndHand.</emph> Installment 10, Winter
+                                <unitdate normal="2003">2003.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The2ndHand.</emph> Installment 12, Fall
+                                <unitdate normal="2003">2003.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The2ndHand.</emph> Installment 12.5, Fall
+                                <unitdate normal="2003">2003.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The2ndHand.</emph> Installment 14, Summer
+                                <unitdate normal="2004">2004.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The2ndHand.</emph> Installment 15, Fall
+                                <unitdate normal="2004">2004.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">The2ndHand.</emph> Installment 8, Spring
+                                <unitdate normal="2002">2002.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">A Day Called Zero.</emph> Portland,
+                            OR.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Calvary, Marc. <emph render="italic">Cherrypepper</emph> 5,
+                                <unitdate normal="2012">2012.</unitdate></unittitle>
+                    </did>
+                    <note>
+                        <p>Note: friend and correspondent.</p>
+                    </note>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Cometbus, Aaron. <emph render="italic">Cometbus</emph> 45.
+                            Berkeley, CA.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Cometbus, Aaron. <emph render="italic">Cometbus</emph> 46.
+                            Berkeley, CA.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Cometbus, Aaron. <emph render="italic">Cometbus</emph> 47.
+                            Berkeley, CA.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Cometbus, Aaron. <emph render="italic">Cometbus</emph> 48.
+                            Berkeley, CA.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Cometbus, Aaron. <emph render="italic">Cometbus</emph> 50.
+                            Berkeley, CA.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Cometbus, Aaron. <emph render="italic">Mixed Reviews.</emph> Port
+                            Louis, Mauritius: Internationalist Publishers, Ltd., <unitdate
+                                normal="2005">2005.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">Fa!ce.</emph> Issue 3.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Gold, A.K. <emph render="italic">Anecdotal Evidence</emph> 1
+                            (Winter 2001/2002).</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Granton, Shawn. <emph render="italic">3.05 Metres: A Ten Foot
+                                Rule Primer.</emph> Portland, OR: Independent Publishing Resource
+                            Center, <unitdate normal="2001">2001.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Halpern, Julie and Liz Saidel. <emph render="italic"
+                                >Cul-de-sac</emph> 4. Buffalo Grove, IL: <unitdate normal="1999-01"
+                                >January 1999.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Jen. <emph render="italic">Spitshine the Eye.</emph> Pensacola,
+                            FL.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Johnson, John. <emph render="italic">Why I Am Not a Mormon:
+                                Fallacies of the Mormon Faith.</emph> Tucson, AZ: See Sharp Press,
+                                <unitdate normal="2001">2001.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Krohs, Martin and Brian Meacham. <emph render="italic">Fotomost:
+                                Photobooth Space Bridge Moscow-Chicago.</emph> Los Angeles.
+                                <unitdate normal="2009-04">April 2009.</unitdate> #44 of
+                            100.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Meyer, Christopher. <emph render="italic">Twenty-eight Pages
+                                Lovingly Bound with Twine.</emph> Issue 5. <unitdate
+                                normal="2002-10">October 2002.</unitdate>1st printing: #275 of
+                            432.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Meyer, Christopher. <emph render="italic">What God Has Revealed
+                                to Man.</emph> 1st printing: #126 of 756.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Miles, Scott Neil. <emph render="italic">Idylls of the
+                                Infirmary.</emph> Gary, Indiana: Uncle Julio's All Night Publishing
+                            Headquarters, <unitdate normal="2002">2002.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Morris, Hugh. <emph render="italic">The Art of Kissing.</emph>
+                                <unitdate normal="1936">1936.</unitdate> Reprinted 1988.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Naramore, Suzanna. A Start on the Other Side Production,
+                                <unitdate normal="2003">2003.</unitdate></unittitle>
+                    </did>
+                    <note>
+                        <p>Note: friend and correspondent.</p>
+                    </note>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Picard, Caroline. <emph render="italic">The Archive: News from
+                                the Green Lantern</emph> 2(5). Chicago, IL.</unittitle>
+                    </did>
+                    <note>
+                        <p>Note: former assistant.</p>
+                    </note>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Picard, Caroline. <emph render="italic">Sketches: Organizing
+                                Arts.</emph> Chicago, IL: Green Lantern Press, <unitdate
+                                normal="2007">2007.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle><emph render="italic">Proof I Exist.</emph> Issue 1. <unitdate
+                                normal="2002-01">January 2002.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Raz, Kat. <emph render="italic">Retail Whore</emph> 6. Evanston,
+                            IL. <unitdate normal="2002">2002.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Raz, Kat. <emph render="italic">Retail Whore</emph> 7. Evanston,
+                            IL.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Raz, Kat. <emph render="italic">Retail Whore</emph> 8. Evanston,
+                            IL.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Roche, Dave. <emph render="italic">On Subbing.</emph> Portland,
+                            OR.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Rosson, Keith. <emph render="italic">AVOW</emph> 11. Portland,
+                            OR.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Walker, Ed. <emph render="italic">Brad Pitt vs. Will
+                            Smith.</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="otherlevel">
+                    <did>
+                        <container type="Box" label="Box">21</container>
+                        <unittitle>Writings</unittitle>
+                    </did>
+                    <c03 level="item">
+                        <did>
+                            <unittitle><emph render="doublequote">A Friendly Game of
+                                Poker</emph></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle><emph render="doublequote">At Home Film School</emph> book
+                                proposal</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle><emph render="doublequote">The Agency,</emph> a script by
+                                Robert K. Elder</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle><emph render="doublequote">Blackmail Yourself into
+                                    Success,</emph> drafts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Daniel Wu Interview, University of Oregon</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle><emph render="doublequote">Interviewing Celebrities,</emph>
+                                drafts, <unitdate normal="2006">2006</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Kaczynski articles, <unitdate normal="2008"
+                                >2008</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle><title render="doublequote">Magic, Cherry Tomatoes and
+                                    Shakespeare,</title>
+                                <emph render="italic">Merlyn's Pen</emph>, 1994</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle><emph render="italic">Oregonian</emph>, articles by
+                                Elder</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Pitch on Joe Sacco article, <unitdate normal="2000"
+                                    >2000</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle><title render="doublequote">Portland Sex
+                                Industry,</title></unittitle>
+                        </did>
+                        <scopecontent>
+                            <p>includes research, drafts, and article</p>
+                        </scopecontent>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Steven Corey, interview drafts</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>VOD Script, <unitdate normal="2009/2010" type="inclusive"
+                                    >2009-2010</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Wizard Magazine,</unittitle>
+                        </did>
+                        <scopecontent>
+                            <p>includes research, drafts, and article</p>
+                        </scopecontent>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>MSNBC articles, <title render="doublequote">'Twilight Saga'
+                                    is the Jonas Brothers of Movies,</title>
+                                <unitdate normal="2010">2010;</unitdate><title render="doublequote"
+                                    >Dear Iron Man: Please don't blow it in sequel,</title>
+                                <unitdate normal="2010">2010</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="otherlevel">
+                    <did>
+                        <unittitle>Affiliations, Jobs, Professional Development</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Chicago Film Critics Association</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Chicago Headline Club</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>ChicagoSide</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Columbia College Chicago, Class, Dreamweaver, <unitdate
+                                    normal="2007">2007</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Dallas Morning News</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>DNA info</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Drive-In Festival</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>East Coast Trip</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Gear Magazine</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Guggenheim Applications</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Mr. Skin</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Odd Hours Media</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Poetry Foundation</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Stop Smiling</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Total Movie Magazine, includes correspondence and drafts of
+                                articles</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="otherlevel">
+                    <did>
+                        <unittitle>Biographical</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Resumes and Cover Letters</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Interviews with Robert K. Elder</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="otherlevel">
+                    <did>
+                        <unittitle>Trips: Business and Vacation</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Alaska, <unitdate normal="2007">2007</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Chain-O-Lakes, <unitdate normal="2005"
+                                >2005</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Graceland</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Indiana, <unitdate normal="2004">2004</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Ireland, <unitdate normal="2004">2004</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Montana, <unitdate normal="2005">2005</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Timber Ridge, <unitdate normal="2012"
+                                >2012</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Travel Brochures</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Travel Brochures, <unitdate normal="2011"
+                                >2011</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="otherlevel">
+                    <did>
+                        <unittitle>By Subject: Research and General Information</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Chicago Real Estate</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Herman Sanchez</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle><title render="doublequote">A Separation,</title> Iranian
+                                film, <unitdate normal="2011">2011</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Sundance Institute</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="otherlevel">
+                    <did>
+                        <unittitle>Research for Chicago Tribune articles</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle><emph render="doublequote">Big Trouble,</emph> postponement
+                                of the release of the movie</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle><emph render="doublequote">Birth of the Republican Party and
+                                    the Laura Ingalls Wilder Highway,</emph> road trip <unitdate
+                                    normal="2006">2006;</unitdate>Itinerary and
+                                research</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Charlton Heston and Lydia Clarke Heston</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Daniel Clowes</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Del Close Skull</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Lillian Ross and William Shawn</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Photobooths</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>State Prisons and Prisoners</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Gary Sinise</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Quaid and Ditka</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Kaczynski, Ted, Dave Kaczynski</unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="otherlevel">
+                    <did>
+                        <container type="Box" label="Box">22</container>
+                        <unittitle>Media Materials and Press Packets</unittitle>
+                    </did>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Ephemera from live performances</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Press Materials, comics, <unitdate type="inclusive"
+                                    normal="1990/1999">1990-1999</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Press Materials, comics, <unitdate type="inclusive"
+                                    normal="2000/2010">2000-2010</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Press Materials, comics, undated</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Press Materials, comics, <title render="doublequote">The Dark
+                                    Tower</title> Marvel advance first issue</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Press Materials, comics, <title render="doublequote">Who
+                                    Wants to Be a Superhero?</title></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Press Materials, music, Ani diFranco</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Press Materials, music, Pearl Jam</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Press Materials, <unitdate type="inclusive"
+                                    normal="1990/1999">1990-1999</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Press Materials, <unitdate type="inclusive"
+                                    normal="2000/2012">2000-2012</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Press Materials, undated</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Press Materials, photographs, music bands</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Press Materials, photographs, movie stills</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Paper Bags</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Media, paper bags</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Magazines- Inc. and Entrepreneur</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="file">
+                        <did>
+                            <unittitle>Satellite News newsletter (Vol. 5.1, Summer <unitdate
+                                    normal="1993">1993;</unitdate>Vol. 6.1, Spring <unitdate
+                                    normal="1994">1994;</unitdate><unitdate normal="1996-03">March
+                                    1996)</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="otherlevel">
+                    <did>
+                        <unittitle>Others' Writings</unittitle>
+                    </did>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Book Proposal by Billy Elle</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle><title render="doublequote">Demands of the Dead</title>
+                                manuscript by Katy Ryan, <unitdate normal="2011"
+                                >2011</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle><title render="doublequote">Balancing Life</title> manuscript
+                                by David Kaczynski, <unitdate normal="2010"
+                                >2010</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle><title render="doublequote">What Would Sarah Palin
+                                    Do?</title> manuscript by William Kirk II, <unitdate
+                                    normal="2010">2010</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle><title render="doublequote">The Good Wife</title> pilot
+                                outline</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle><title render="doublequote">Sweet Science</title> screenplay
+                                by Bennett M. Cohen, <unitdate normal="2002"
+                                >2002</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle><title render="doublequote">Now Hiring: White House
+                                    Dog</title> proof by Gina Bayer, <unitdate normal="2009"
+                                    >2009</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle><title render="doublequote">The Sandman: Endless
+                                    Nights,</title> by Neil Gaiman, Uncorrected Galley Proof,
+                                    <unitdate normal="2003">2003</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">23</container>
+                        <unittitle>Professional Engagements</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Professional Engagements, <unitdate normal="2011"
+                            >2011</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Professional Engagements, Illinois Journalism Education
+                            Association, <unitdate normal="2010">2010</unitdate>
+                            Conference</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Professional Engagements, Hall of Achievement, <unitdate
+                                normal="2010">2010</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Professional Engagements, Commencement <unitdate normal="2010"
+                                >2010</unitdate> Speech, University of Oregon</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Short Film Contest, scoring sheets</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Correspondence from Readers at <emph render="italic">Chicago
+                                Tribune</emph>
+                        </unittitle>
+                        <physdesc><extent>(2 folders)</extent></physdesc>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Correspondence, holiday cards, while at <emph render="italic"
+                                >Chicago Tribune</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Tribune</emph>, writing/drafts</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Tribune</emph>, correspondence</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Tribune</emph>, legal,
+                            bankruptcy</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>AOL/Patch</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Columbia College</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Northwestern</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph>, publishers</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Best Film</emph>,
+                            correspondence</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Film</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Last Words</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">John Woo: Interviews</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle><emph render="italic">Love</emph></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Correspondence, John Waters</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Correspondence, John Woo</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Don DeLillo</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Ray Manzarek, The Doors</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Research, Daniel Clowes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Chicago Headline Club</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Merlyn's Pen</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Drive-In Theaters</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Found Magazine</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Ten Club</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Articles, others'</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Cover Letters/Resumes (Rob's)</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Resumes (Others')</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Intern Resumes</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Intern Contracts</unittitle>
+                    </did>
+                </c02>
+                <c02 level="item">
+                    <did>
+                        <unittitle>Galley Proof, <unitdate normal="2003">2003</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Second Life</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Others' articles and excerpts</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">24</container>
+                        <unittitle>Ticket Stubs, entertainment</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Travel, tickets/receipts</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Travel, other/miscellaneous</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Travel, Texas Book Festival</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Travel, Michigan, <unitdate normal="2002"
+                            >2002</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Travel, Montana, <unitdate normal="2007"
+                            >2007</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Travel, Montana, <unitdate normal="2008"
+                            >2008</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Travel, New York, <unitdate normal="2006"
+                            >2006</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Travel, New York, <unitdate normal="2007"
+                            >2007</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Travel, Arbor House, Madison, WI, <unitdate normal="2007"
+                                >2007</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Travel, Bay Area with Kaczynski, <unitdate normal="2008"
+                                >2008</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Travel, West Coast Book Tour, <unitdate normal="2010"
+                                >2010</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Travel, Alaska, <unitdate normal="2007"
+                            >2007</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Travel, Henry Rollins, New Pornographers, and Western Illinois
+                            University Asian Film Festival, <unitdate normal="2007"
+                            >2007</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Business Cards, others' <unitdate type="inclusive"
+                                certainty="circa" normal="1992/1998">ca. 1992-ca.
+                            1998</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Web/Tech Development</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Tech Manuals</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Media Materials/Promotionals</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Media Materials/Promotionals, <unitdate type="inclusive"
+                                normal="1992/1998">1992-1998</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Miscellaneous</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Miscellaneous, <unitdate certainty="circa" normal="2002">circa
+                                2002</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Miscellaneous, <unitdate type="inclusive" certainty="circa"
+                                normal="2003/2004">circa 2003-2004</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Miscellaneous, <unitdate type="inclusive" certainty="circa"
+                                normal="2005/2009">circa 2005-2009</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Miscellaneous, <unitdate type="inclusive" certainty="circa"
+                                normal="2010/2012">circa 2010-2012</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container type="Box" label="Box">25</container>
+                        <unittitle>Notes, <unitdate type="inclusive" certainty="circa"
+                                normal="1992/1998">ca. 1992-ca. 1998</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Notes, undated</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Notes, <unitdate type="inclusive" certainty="circa"
+                                normal="2007/2008">ca. 2007- ca. 2008</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Correspondence, invitations</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Correspondence, miscellaneous, undated</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Correspondence, miscellaneous, <unitdate type="inclusive"
+                                normal="1990/1996">1990-1996</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Correspondence, miscellaneous, <unitdate type="inclusive"
+                                certainty="circa" normal="1994/2000">ca. 1994- ca.
+                            2000</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Correspondence, miscellaneous, <unitdate normal="2001"
+                                >2001</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Correspondence, miscellaneous, <unitdate normal="2002"
+                                >2002</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Correspondence, miscellaneous, <unitdate type="inclusive"
+                                normal="2003/2004">2003-2004</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Correspondence, miscellaneous, <unitdate type="inclusive"
+                                normal="2005/2006">2005-2006</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Correspondence, miscellaneous, <unitdate type="inclusive"
+                                normal="2007/2010">2007-2010</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Correspondence, miscellaneous, <unitdate normal="2011"
+                                >2011</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Correspondence, miscellaneous- Incomplete Letters</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Correspondence, miscellaneous, unsent
+                            mail/undeliverable</unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Identification and Membership cards, <unitdate type="inclusive"
+                                normal="1991/2000">1991-2000</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Souvenirs as an extra from filming of <emph render="italic"
+                                >Without Limits</emph>, directed by Robert Towne: Green hat, black
+                            fanny pack, white tee shirt. <emph render="doublequote">Movie Extra
+                                Warner Bros. 'PRE' Hayward Field, University of Oregon, August
+                                1996</emph></unittitle>
+                    </did>
+                    <note>
+                        <p>Note: Rob was the production assistant for Robert Towne.</p>
+                    </note>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <unittitle>Deck of cards from book <emph render="italic">A Friendly Game of
+                                Poker: 52 Takes on the Neighborhood Game.</emph> Edited by Jake
+                            Austen. Book contributed to by Rob Elder.</unittitle>
+                    </did>
+                </c02>
+                <c02 level="otherlevel">
+                    <did>
+                        <container type="Box" label="Box">26</container>
+                        <unittitle>Audio-Visual Materials</unittitle>
+                    </did>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>2-disc DVD edition, <title render="italic">Do the Right
+                                    Thing,</title> signed by director Spike Lee, Criterion
+                                Collection, <unitdate normal="2001">2001</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>DVD, <title render="italic">Indiana Jones and the Kingdom of
+                                    the Crystal Skull</title></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>DVD, <title render="italic">Iron Man</title></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>DVD, <title render="italic">Ghost Town</title></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>DVD, <title render="italic">The Lucky
+                                Ones</title></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>DVD, <title render="italic">Eagle Eye</title></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>DVD, <title render="italic">Delgo</title></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>DVD, <title render="italic">Tropic
+                                Thunder</title></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>DVD, <title render="italic">Star Dust</title></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>DVD, <title render="italic">Spider-Man 3</title></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>DVD, John Waters. Wizard of Oz. <unitdate normal="2011-06-11"
+                                    >June 11, 2011.</unitdate>Jason Brown/Insight
+                                Images.</unittitle>
+                        </did>
+                        <note>
+                            <p>Note: this was used for research for The Film That Changed My
+                                Life.</p>
+                        </note>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>DVD, <title render="italic">The Transforming Power of God: A
+                                    Message and Gospel Hymns</title></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>DVD, <title render="italic">The First Breath of Tengan
+                                    Rei</title> (Chicago director)</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>DVD, <title render="italic">Aren't You Even Gonna Kiss My
+                                    Goodbye?</title> rare director's cut of the River Phoenix film
+                                    <emph render="italic">A Night in the Life of Jimmy
+                                    Reardon,</emph><unitdate normal="2008">2008,</unitdate>
+                                directed by William Richert</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>DVD, <title render="italic">Heavens Fall</title>. Directed by
+                                Terry Green. <unitdate normal="2006">2006;</unitdate>Woodland
+                                Hills, CA: Allumination Fireworks LLC, <unitdate normal="2007"
+                                    >2007.</unitdate></unittitle>
+                        </did>
+                        <note>
+                            <p>Note: this was used for the <emph render="italic">Chicago
+                                    Tribune.</emph></p>
+                        </note>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>DVD, The 2010 Hall of Achievement; Friday, <unitdate
+                                    normal="2010-11-05">November 5, 2010;</unitdate>School of
+                                Journalism and Communication; University of Oregon.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned DVD, <emph render="doublequote">Hall of Achievement
+                                    Speech 2010.</emph></unittitle>
+                        </did>
+                        <note>
+                            <p>Note: this is from the University of Oregon Hall of Achievement
+                                induction.</p>
+                        </note>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned DVD: <emph render="doublequote">Tanker Rescue. Told
+                                    and Filmed by Ken. Starring Bruce.</emph>
+                                <unitdate normal="2011-05-30">5-30-11</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned DVD, <emph render="doublequote">30 Films That Changed
+                                    My Life! Carson Daly Spot, C-SPAN 1.</emph></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned DVD-R, <emph render="doublequote">1994-2000 docs and
+                                    Books</emph>
+                                <emph render="italic">300</emph></unittitle>
+                            <physdesc>(booklet only)</physdesc>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>VHS, <emph render="doublequote">Mom, Jack and Bobby</emph>
+                                <unitdate normal="2002-11-07">11-7-02</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>VHS, <emph render="doublequote">Christine Whitmer Coming Home
+                                    from Iraq</emph></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Promotional CD-ROM, <emph render="italic">At the Death House
+                                    Door.</emph> IFC.</unittitle>
+                        </did>
+                        <note>
+                            <p>Note: this was used as research for <emph render="italic">The Last
+                                    Words of the Executed.</emph></p>
+                        </note>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>CD-ROM, <emph render="italic">Last Words of the
+                                    Executed.</emph> C-SPAN. 2010. Capital Punishment in America.
+                                C-SPAN. <unitdate normal="2010">2010.</unitdate></unittitle>
+                        </did>
+                        <note>
+                            <p>Note: this was used as research for <emph render="italic">The Last
+                                    Words of the Executed.</emph></p>
+                        </note>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>CD-ROM, <title render="italic">When Evil Struck America: A
+                                    Chicago Tribune Time Capsule of 10 Historic Days</title>.
+                                Chicago: Chicago Tribune.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>CD-ROM, <title render="italic">Monitor This!</title>
+                                <unitdate type="inclusive" normal="2008-06/2008-07">June/July
+                                    08</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>CD-ROM, <title render="doublequote">White Stripes.</title>
+                                Guitar World. <unitdate normal="2007-08">August 2007</unitdate>
+                                <emph render="doublequote">Last Words.</emph>
+                                <emph render="italic">This American Life.</emph> Serial 114.
+                                CD-ROM.</unittitle>
+                        </did>
+                        <note>
+                            <p>Note: this was used as research for <emph render="italic">The Last
+                                    Words of the Executed.</emph></p>
+                        </note>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>CD-ROM, <title render="doublequote">Zell-O-Dome Home of the
+                                    Chicago Cubs.</title>
+                                <emph render="italic">Chicago Tribune.</emph> Undated.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned CD-ROM, <emph render="doublequote">CSPAN
+                                2</emph></unittitle>
+                        </did>
+                        <note>
+                            <p>Note: this was used as research for <emph render="italic">The Last
+                                    Words of the Executed.</emph></p>
+                        </note>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned CD-ROM, <emph render="doublequote">CSPAN
+                                2</emph></unittitle>
+                            <physdesc>(container holds 2 DVDS- one is unlabeled)</physdesc>
+                        </did>
+                        <note>
+                            <p>Note: this was used as research for <emph render="italic">The Last
+                                    Words of the Executed.</emph></p>
+                        </note>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned CD-ROM, <emph render="doublequote"
+                                >Graphix</emph></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned CD-ROM, <emph render="doublequote">Book Research Back
+                                    Up</emph>
+                                <unitdate normal="2010-03-19">March 19, 2010.</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned CD-ROM, <emph render="doublequote">Master March 2005
+                                    Words Only</emph></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned CD-ROM, <emph render="doublequote">March 2005 Words
+                                    Master</emph></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned CD-ROM, <emph render="doublequote">March 2005 Photo 1
+                                    Master</emph></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned CD-ROM, Warren Skalski Photography. September 2008.
+                                Photographs of Mike Ditka and Dennis Quaid.</unittitle>
+                        </did>
+                        <note>
+                            <p>Note: these are photographs used for the <emph render="italic"
+                                    >Chicago Tribune</emph> profile.</p>
+                        </note>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned CD-ROM, <emph render="doublequote">Gene D. Phillips
+                                    #2</emph></unittitle>
+                        </did>
+                        <note>
+                            <p>Note: Gene D. Phillips is the foremost Stanley Kubrick and Francis
+                                Ford Coppola biographer. This was used for the Kubrick book.</p>
+                        </note>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned CD-ROM, <emph render="doublequote">Master Disc 1991 -
+                                    May 25, 2000. ISO.</emph></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned CD-ROM, <emph render="doublequote">Master Disc
+                                    1991-May 25, 2000. Hybrid.</emph></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned CD-ROM, <emph render="doublequote">Master Disc
+                                    1994-June 9, 2000. ISO</emph></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned CD-ROM, <emph render="doublequote">with the
+                                99</emph></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>CD, Devine, Denis. WHYY, Radio Times with Marty Moss-Coane,
+                                    <unitdate normal="2010-06-08">6/8/2010,</unitdate> Robert K.
+                                Elder, <emph render="italic">Last Words of the
+                                Executed.</emph></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned CD, <emph render="doublequote">Cats Tour, 6/24/1992,
+                                    Growl Tiger, One to Three</emph></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned CD, <emph render="doublequote">Jonah Hex Set Visit
+                                    Interviews, 5/27/09.</emph></unittitle>
+                        </did>
+                        <note>
+                            <p>Note: this was used for the movie books. This was also used for the
+                                Josh Brolin interview for <emph render="italic">Wizard
+                                    Magazine.</emph></p>
+                        </note>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned CD, <emph render="doublequote">Jay Duplass, Joe vs.
+                                    the Volcano, Raising Arizona, Nov. 10, 2008.</emph></unittitle>
+                        </did>
+                        <note>
+                            <p>Note: this was used for the movie books</p>
+                        </note>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned CD, <emph render="doublequote">Joe Swanberg, 10.31.08,
+                                    Raising Arizona, IVANSXTC</emph></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned CD, <emph render="doublequote">U. of Chicago
+                                    Press/ELDER, Last Words of the Executed, 1st-Pass Page Proof
+                                    PDF</emph></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned CD, <emph render="doublequote">PDF Selected March
+                                    2009</emph></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned CD, <emph render="doublequote">Gene D. Phillips
+                                    #1</emph></unittitle>
+                        </did>
+                        <note>
+                            <p>Note: this was used for the Kubrick book.</p>
+                        </note>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned CD, <emph render="doublequote">Jinna Yun
+                                    Writer/Producer, jinna.yun@gmail.com,
+                                773-490-0780</emph></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned CD, <emph render="doublequote">2009 Chicago Trib PDFs
+                                    Websites</emph></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned CD, <emph render="doublequote">RKE</emph></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned CD, <emph render="doublequote"
+                                    >www.robelder.com.</emph></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned CD, <emph render="doublequote">U of Chicago Press
+                                    Elder- Last Words- Promo PDF</emph></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>McClintock, Walter. <title render="italic">Old Indian
+                                    Trails.</title> Scholar eBooks, <unitdate normal="2005"
+                                    >2005.</unitdate>CD-ROM.</unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned CD, <emph render="doublequote">Sioux War Trials and
+                                    related documents.</emph></unittitle>
+                        </did>
+                        <note>
+                            <p>Note: research for Mankato</p>
+                        </note>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned CD, <emph render="doublequote">Kaczynski
+                                Photos</emph></unittitle>
+                        </did>
+                    </c03>
+                    <c03 level="item">
+                        <did>
+                            <unittitle>Burned CD, <emph render="doublequote">Pictures from Trip to
+                                    Minno. Original trials plaques, Mankato</emph></unittitle>
+                        </did>
+                    </c03>
+
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
