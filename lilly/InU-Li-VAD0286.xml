@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+--><ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external" countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924" relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li" identifier="InU-Li-VAD0286">InU-Li-VAD0286</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Harding, J.L. mss., <date normal="1861/1864" type="inclusive">1861-1864</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2013" type="publication">© 2013</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2013">© 2013</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2013" type="source">2013</date>
+                <lb></lb>Finding aid encoded by Shayna Pekala, Lilly Library, Indiana University, <date normal="2013-07-08">July 8, 2013</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng">English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2013-07-08">July 8, 2013</date>
+                <item>Encoded finding aid started.</item>
+            </change>
+            <change audience="internal">
+                <date normal="2013-07-08">July 08, 2013</date>
+                <item>Encoded finding aid completed.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Harding, John Lucas,
+                    1841-1865</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Harding, J.L. mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1861/1864" type="inclusive">1861-1864</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1461</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>83 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Harding, J.L. mss., 1861-1864, are
+                Civil War letters of John Lucas Harding, 1841-1865, who served in the Indiana
+                infantry, Seventh Regiment, Company I, which fought first with the Army of Virginia
+                and later with the Army of the Potomac.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+            <p>John Lucas Harding was born March 5, 1841, in Wayne Township, Marion County, Indiana,
+                the son of Laban and Jemima (McCrary) Harding. He was mustered into the infantry at
+                Indianapolis on September 3, 1861, for three years' service, appointed corporal and
+                later sergeant in the ranks, and mustered out on September 20, 1864. He participated
+                in the engagements at Port Republic, South Mountain (Antietam), Fredericksburg,
+                Chancellorsville, Gettysburg, Spotsylvania Courthouse, and the Battle of the
+                Wilderness.</p>
+            <p>In the letters to his family Harding disclaimed having received any serious injury
+                and did not mention having been wounded at Chancellorsville. In Pictoral and
+                Biographical Memoirs; Indianapolis and Marion County, Indiana (Goodspeed, Chicago,
+                l893) pages 365-366 it is stated, however, that he was wounded by a shell at
+                Chancellorsville and that he died from the effects of the same at his home in
+                November, 1865. He was single.</p>
+
+        </bioghist>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The letters in this collection were written by John Lucas Harding to his parents,
+                Laban and Jemima, to his sisters, Almira, Mary, and Nancy, and to his brothers,
+                Samuel and William Newton, and by members of his family, Samuel, Laban, and Almira,
+                to John Lucas. The collection includes one letter written by a lieutenant in
+                Harding's company, William Pugh, to Laban Harding.</p>
+            <p>The letters contain comments about the heavy boots of <emph render="doublequote">french kip</emph> requested from home, a new variety of Virginia wheat, a
+                military hospital at Claryville, Maryland, the Emancipation Proclamation, desertion
+                from the army, the behavior of certain officers as well as reports of the battles in
+                which he participated. In addition he frequently included references to other
+                soldiers in his company, their daily routines, and state of health. He gave details
+                about the death of Joseph A. Craig, killed accidentally near Baltimore in l863.
+                After the war he planned to become a sutler (trader or storekeeper) and/or perhaps
+                attend college at Greencastle on a scholarship.</p>
+            <p>Occasionally in his letters he referred to brother <emph render="doublequote">Nute</emph> or <emph render="doublequote">Nuit</emph> and addressed one letter
+                to him. This was William Newton Harding, born in 1852, who graduated from Hanover
+                College, became a law partner of Alfred P. Hovey in 1880, served as prosecuting
+                attorney of Marion County, 1884-1886, and was candidate for mayor of Indianapolis on
+                the Republican ticket in 1897 but was defeated. He married Mary E. McConnell in
+                1882, and died Mar. 8, 1924.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/harding+john+lucas+1841-1865{su}"><persname encodinganalog="600" source="lcnaf">Harding, John Lucas,
+                                1841-1865 --Correspondence.</persname></extref></item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/united+states+history+civil+war+1861-1865{su}"><subject encodinganalog="650" source="lcsh">United States --History
+                            --Civil War, 1861-1865 --Correspondence.</subject></extref></item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="610" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 2002</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Harding, J.L. mss., Lilly Library, Indiana University, Bloomington,
+                    Indiana.</p>
+            </prefercite>
+
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Staff.</p>
+                <p>Completed in <date normal="2013">2013</date></p>
+
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAD0286-00001" level="collection">
+                <did>
+                    <unittitle>Harding, J.L. mss., <unitdate normal="1861/1864" type="inclusive">1861-1864</unitdate></unittitle>
+                </did>
+                <c02 id="VAD0286-00002" level="file">
+                    <did>
+                        <container label="Box" type="Box">1</container>
+                        <unittitle>Correspondence, <unitdate normal="1861-09/1861-12" type="inclusive">1861, Sept.-Dec.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0286-00003" level="file">
+                    <did>
+                        <unittitle>Correspondence, <unitdate normal="1862-03/1962-05" type="inclusive">1862, Mar.-May</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0286-00004" level="file">
+                    <did>
+                        <unittitle>Correspondence, <unitdate normal="1862-06/1962-12" type="inclusive">1862, Jun.-Dec</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0286-00005" level="file">
+                    <did>
+                        <unittitle>Correspondence, <unitdate normal="1863-01/1963-03" type="inclusive">1863, Jan.-Mar.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0286-00006" level="file">
+                    <did>
+                        <unittitle>Correspondence, <unitdate normal="1863-04/1963-07" type="inclusive">1863, Apr.-Jul.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0286-00007" level="file">
+                    <did>
+                        <unittitle>Correspondence, <unitdate normal="1863-08/1963-09" type="inclusive">1863, Aug.-Sept.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0286-00008" level="file">
+                    <did>
+                        <unittitle>Correspondence, <unitdate normal="1863-10/1963-12" type="inclusive">1863, Oct.-Dec.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0286-00009" level="file">
+                    <did>
+                        <unittitle>Correspondence, <unitdate normal="1864-01/1964-06" type="inclusive">1864, Jan.-Jun.</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0286-00010" level="file">
+                    <did>
+                        <unittitle>Discharge certificate for John Lucas Harding, <unitdate normal="1864-09-20">1864, Sept. 20</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
