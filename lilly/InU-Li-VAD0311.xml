@@ -1,0 +1,2144 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external"
+        countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924"
+        relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li"
+            identifier="InU-Li-VAD0311">InU-Li-VAD0311</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Woodburn mss. II, <date certainty="circa"
+                        normal="1911/1974" type="inclusive">ca. 1911-1974</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2013" type="publication">© 2013</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2013">© 2013</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2013" type="source">2013</date>
+                <lb/>Finding aid encoded by Shayna Pekala, Lilly Library, Indiana University, <date
+                    normal="2013-07-15">July 15, 2013</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2013-07-15">July 15, 2013</date>
+                <item>Encoded finding aid started.</item>
+            </change>
+            <change audience="internal">
+                <date normal="2013-07-22">July 22, 2013</date>
+                <item>Encoded finding aid completed.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100">Woodburn family.</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Woodburn mss. II, </unittitle>
+            <unitdate encodinganalog="245$f" certainty="circa" normal="1911/1974" type="inclusive"
+                >ca. 1911-1974</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2206</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>750 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Woodburn mss. II, ca. 1911-1974,
+                consist of letters and papers of the Woodburn family. The majority of the collection
+                belongs to James Albert Woodburn, 1856-1943, and his son, James Gelston Woodburn,
+                1894-1980.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+            <p>James Albert Woodburn, 1856-1943, was born in Bloomington, Indiana, and received his
+                A.B. from Indiana University in 1876, his A.M. in 1885, and his Ph.D. from Johns
+                Hopkins University in 1890. He taught in the public schools of Grayville, Illinois,
+                and in the Preparatory Department of Indiana University before becoming Professor of
+                American History at Indiana University in 1890, a position which he held until his
+                retirement in 1924. Outside of his career as a historian, he worked to further
+                efforts of the League of Nations by promoting their world peace programs.</p>
+            <p>James Gelston Woodburn, 1894-1980, was born in Bloomington, Indiana to James Albert
+                Woodburn and Caroline Louise Gelston. He received college degrees from Indiana
+                University and Purdue University before earning his Ph.D. from the University of
+                Michigan in 1929. Over the course of his career as a civil engineer, he held faculty
+                positions at Wisconsin State College and the University of Wisconsin before serving
+                as the chair of his department from 1949-1958.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>The collection is organized into the following series: I. Correspondence; II.
+                Ephemera; III. Legal Documents; IV. Personal; V. Professional; VI. Photographs; VII.
+                Print Materials and VIII. Realia.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>Biographical and genealogical information on members of the Woodburn family may be
+                found in James Albert <emph render="italic">Woodburn's Woodburn History: Some
+                    Generations of a Family,</emph> 1936. Keepsake letters and notes for James
+                Albert Woodburn's fiftieth wedding anniversary to Caroline Louise Gelston are also
+                included in the collection.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/woodburn+james+albert+1856-1943{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Woodburn, James
+                                Albert, 1856-1943.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/woodburn+james+albert+1856-1943+correspondence{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Woodburn, James
+                                Albert, 1856-1943 --Correspondence.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/woodburn+james+gelston+1894-{su}"
+                                ><persname encodinganalog="600">Woodburns, James Gelston,
+                                1894-</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/woodburn+james+gelston+1894-+correspondence{su}"
+                                ><persname encodinganalog="600">Woodburns, James Gelston, 1894-
+                                --Correspondence</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/woodburn+caroline+louise+gelston+1866-1943{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Woodburn, Caroline
+                                Louise Gelston, 1866-1943</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/biddle+ward+gray+1891-1946{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Biddle, Ward Gray,
+                                1891-1946 --Correspondence.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/bryan+enoch+albert+1855-1941{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Bryan, Enoch Albert,
+                                1855-1941 --Correspondence.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/march+peyton+conway+1864-1955{su}"
+                                ><persname encodinganalog="600" source="lcnaf">March, Peyton Conway,
+                                1864-1955 --Correspondence.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/randall+david+a.+correspondence{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Randall, David A.
+                                --Correspondence.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/van+tyne+claude+halstead+1869-1930{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Van Tyne, Claude
+                                Halstead, 1869-1930 --Correspondence.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/wells+herman+b{su}"
+                                ><persname encodinganalog="600" source="lcnaf">Wells, Herman B.
+                                --Correspondence.</persname></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/indiana+university{su}"
+                                ><corpname encodinganalog="610" source="lcnaf">Indiana
+                                University.</corpname></extref></item>
+
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/college+teachers+correspondence{su}"
+                                ><subject encodinganalog="650" source="lcsh">College teachers
+                                --Correspondence.</subject></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/college+teachers+biography{su}"
+                                ><subject encodinganalog="650" source="lcsh">College teachers
+                                --Biography.</subject></extref></item>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/bloomington+(ind.){su}"
+                                ><geogname encodinganalog="651" source="aacr2">Bloomington
+                                (Ind.).</geogname></extref></item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="610" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+        <!-- optional, if applicable -->
+        <relatedmaterial encodinganalog="544 1">
+            <head>Related Material</head>
+            <p>Woodburn mss.; also located at the Lilly Library, Indiana University, Bloomington,
+                Indiana</p>
+        </relatedmaterial>
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 2012</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Woodburn mss. II, Lilly Library, Indiana University, Bloomington,
+                    Indiana.</p>
+            </prefercite>
+
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Casey Blackmore and Susan Bogner.</p>
+                <p>Completed in <date normal="2013">2013</date></p>
+
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAD0311-00001" level="series">
+                <did>
+                    <!-- add type="bulk" or type="inclusive" to unitdate if appropriate -->
+                    <unittitle>Correspondence</unittitle>
+                </did>
+                <c02 id="VAD0311-00002" level="otherlevel">
+                    <did>
+                        <unittitle>A1, <unitdate normal="1915/1934" type="inclusive"
+                                >1915-1934</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAD0311-00003" level="file">
+                        <did>
+                            <container label="Box" type="Box">1</container>
+                            <unittitle>Actuary (Postal Life Insurance Company). <unitdate
+                                    normal="1915">1915</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00004" level="file">
+                        <did>
+                            <unittitle>Appleby, J.F.R. <unitdate normal="1934"
+                                >1934</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAD0311-00005" level="otherlevel">
+                    <did>
+                        <unittitle>B1, <unitdate normal="1891/1974" type="inclusive"
+                                >1891-1974</unitdate>and <unitdate certainty="circa"
+                                normal="1911/1974">undated</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAD0311-00006" level="file">
+                        <did>
+                            <unittitle>Bailey, Margaret Dickinson (Christian Endeavor). <unitdate
+                                    certainty="circa" normal="1911/1974"
+                                >Undated</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00007" level="file">
+                        <did>
+                            <unittitle>Ballantine, W.G. <unitdate normal="1891"
+                                >1891</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00008" level="file">
+                        <did>
+                            <unittitle>Barney, Harlow. <unitdate normal="1934"
+                                >1934</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00009" level="file">
+                        <did>
+                            <unittitle>Barrett, Wendree (?). <unitdate normal="1918"
+                                >1918</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00010" level="file">
+                        <did>
+                            <unittitle>Beck, J.W. (The Scarbough Company). <unitdate normal="1913"
+                                    >1913</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00011" level="file">
+                        <did>
+                            <unittitle>Biddle, F. W. (Beta Eta). <unitdate normal="1923"
+                                    >1923</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00012" level="file">
+                        <did>
+                            <unittitle>Biddle, Donna. <unitdate normal="1962">1962</unitdate>and
+                                    <unitdate certainty="circa" normal="1911/1974"
+                                    >undated</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00013" level="file">
+                        <did>
+                            <unittitle>Biddle, Ward G. <unitdate normal="1915/1946" type="inclusive"
+                                    >1915-1946</unitdate>and <unitdate certainty="circa"
+                                    normal="1911/1974">undated</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00014" level="file">
+                        <did>
+                            <unittitle>Bloomington High School. <unitdate normal="1911"
+                                    >1911</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00015" level="file">
+                        <did>
+                            <unittitle>Bowman, Catherine. <unitdate normal="1913"
+                                >1913</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00016" level="file">
+                        <did>
+                            <unittitle>Brewer, J.L. <unitdate normal="1917"
+                                >1917</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00017" level="file">
+                        <did>
+                            <unittitle>Bryan, Grace. <unitdate certainty="circa" normal="1911/1974"
+                                    >Undated</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00018" level="file">
+                        <did>
+                            <unittitle>Bryan, Lowe Charlotte. <unitdate normal="1949"
+                                    >1949</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00019" level="file">
+                        <did>
+                            <unittitle>Bryan, Lowe Enoch. <unitdate normal="1924"
+                                >1924</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00020" level="file">
+                        <did>
+                            <unittitle>Bryan, Lowe William. <unitdate normal="1882/1951"
+                                    type="inclusive">1882-1951</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00021" level="file">
+                        <did>
+                            <unittitle>Bucher, Clum C. <unitdate normal="1974"
+                                >1974</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00022" level="file">
+                        <did>
+                            <unittitle>Burlingame, H. J. <unitdate normal="1917"
+                                >1917</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAD0311-00023" level="otherlevel">
+                    <did>
+                        <unittitle>C1, <unitdate normal="1911/1974" type="inclusive"
+                                >1911-1974</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAD0311-00024" level="file">
+                        <did>
+                            <unittitle>Carney, Margarita. <unitdate normal="1947"
+                                >1947</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00025" level="file">
+                        <did>
+                            <unittitle>Chambers, Geo C. <unitdate normal="1915"
+                                >1915</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00026" level="file">
+                        <did>
+                            <unittitle>Chenoweth, Wilson. <unitdate normal="1911/1913"
+                                    type="inclusive">1911-1913</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00027" level="file">
+                        <did>
+                            <unittitle>Collins, Dorothy. <unitdate normal="1971/1974"
+                                    type="inclusive">1971-1974</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00028" level="file">
+                        <did>
+                            <unittitle>Cosgrove, Dorthea. <unitdate certainty="circa"
+                                    normal="1911/1974">Undated</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00029" level="file">
+                        <did>
+                            <unittitle>Culver, Harold E. <unitdate normal="1928"
+                                >1928</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00030" level="file">
+                        <did>
+                            <unittitle>Culver Military Academy. <unitdate normal="1917"
+                                    >1917</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00031" level="file">
+                        <did>
+                            <unittitle>Curry, Mae Orpha. <unitdate normal="1946"
+                                >1946</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAD0311-00032" level="otherlevel">
+                    <did>
+                        <unittitle>D1 and E1, <unitdate normal="1912/1931" type="inclusive"
+                                >1912-1931</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAD0311-00033" level="file">
+                        <did>
+                            <unittitle>David, Dorothy. <unitdate normal="1915/1930" type="inclusive"
+                                    >1915-1930</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00034" level="file">
+                        <did>
+                            <unittitle>Davis, Edward Hatton. <unitdate normal="1917"
+                                >1917</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00035" level="file">
+                        <did>
+                            <unittitle>Davisson, Schuyler C. <unitdate normal="1924"
+                                >1924</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00036" level="file">
+                        <did>
+                            <unittitle>Dickerman, Minerva. <unitdate normal="1912"
+                                >1912</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00037" level="file">
+                        <did>
+                            <unittitle>E, Simon (?). <unitdate normal="1915/1918" type="inclusive"
+                                    >1915-1918</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00038" level="file">
+                        <did>
+                            <unittitle>Engle, C. W. <unitdate normal="1919"
+                                >1919</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00039" level="file">
+                        <did>
+                            <unittitle>Engles, Hubert. <unitdate normal="1931"
+                                >1931</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAD0311-00040" level="otherlevel">
+                    <did>
+                        <unittitle>F1 and G1, <unitdate normal="1903/1986" type="inclusive"
+                                >1903-1986</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAD0311-00041" level="file">
+                        <did>
+                            <unittitle>F., J.B. <unitdate normal="1912">1912</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00042" level="file">
+                        <did>
+                            <unittitle>Fantoli, Gaudenrio. <unitdate normal="1931"
+                                >1931</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00043" level="file">
+                        <did>
+                            <unittitle>Fisher, L.L. <unitdate normal="1942"
+                                >1942</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00044" level="file">
+                        <did>
+                            <unittitle>Foot, R. <unitdate normal="1931">1931</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00045" level="file">
+                        <did>
+                            <unittitle>Foote, W.W. <unitdate normal="1945"
+                                >1945</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00046" level="file">
+                        <did>
+                            <unittitle>The Forrest Club. <unitdate normal="1918"
+                                >1918</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00047" level="file">
+                        <did>
+                            <unittitle>Fraenkel, Peter. <unitdate normal="1959"
+                                >1959</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00048" level="file">
+                        <did>
+                            <unittitle>Franklin, J.A. <unitdate normal="1968"
+                                >1968</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00049" level="file">
+                        <did>
+                            <unittitle>Freeman, John R. <unitdate normal="1929"
+                                >1929</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00050" level="file">
+                        <did>
+                            <unittitle>G. H. R. <unitdate normal="1917">1917</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00051" level="file">
+                        <did>
+                            <unittitle>Gabrielle, Hugh P. (Pendennis Club). <unitdate normal="1918"
+                                    >1918</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00052" level="file">
+                        <did>
+                            <unittitle>Galbraith, Mary Lee. <unitdate normal="1914/1918"
+                                    type="inclusive">1914-1918</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00053" level="file">
+                        <did>
+                            <unittitle>Gasser-Fox Agency. <unitdate normal="1925"
+                                >1925</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00054" level="file">
+                        <did>
+                            <unittitle>Gelston, Anna (?). <unitdate normal="1900/1924"
+                                    type="inclusive">1900-1924</unitdate>and <unitdate
+                                    certainty="circa" normal="1911/1974"
+                                >undated</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00055" level="file">
+                        <did>
+                            <unittitle>Gibbons, W.H. <unitdate normal="1925"
+                                >1925</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00056" level="file">
+                        <did>
+                            <unittitle>Givan, George N. <unitdate normal="1922"
+                                >1922</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00057" level="file">
+                        <did>
+                            <unittitle>The Globe Department Store. <unitdate normal="1918"
+                                    >1918</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00058" level="file">
+                        <did>
+                            <unittitle>Gray, Harry. <unitdate normal="1943"
+                                >1943</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00059" level="file">
+                        <did>
+                            <unittitle>Gray, Lucile Charman. <unitdate certainty="circa"
+                                    normal="1911/1974">Undated</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAD0311-00060" level="otherlevel">
+                    <did>
+                        <unittitle>H1, <unitdate normal="1911/1949" type="inclusive"
+                                >1911-1949</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAD0311-00061" level="file">
+                        <did>
+                            <unittitle>H, C.H. <unitdate normal="1913">1913</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00062" level="file">
+                        <did>
+                            <unittitle>H, F.H. <unitdate normal="1913">1913</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00063" level="file">
+                        <did>
+                            <unittitle>Hanna, Jr. Thomas H. <unitdate normal="1911/1914"
+                                    type="inclusive">1911-1914</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00064" level="file">
+                        <did>
+                            <unittitle>Haskell, Howard H. <unitdate normal="1927"
+                                >1927</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00065" level="file">
+                        <did>
+                            <unittitle>Hatt, W.K. <unitdate normal="1917"
+                                >1917</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00066" level="file">
+                        <did>
+                            <unittitle>Heighway, George F. <unitdate normal="1945"
+                                >1945</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00067" level="file">
+                        <did>
+                            <unittitle>Hepburn, Sam. <unitdate normal="1911/1917" type="inclusive"
+                                    >1911-1917</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00068" level="file">
+                        <did>
+                            <unittitle>Hershey, Amos S. <unitdate normal="1911"
+                                >1911</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00069" level="file">
+                        <did>
+                            <unittitle>Hildretd (?), Barbara. <unitdate normal="1924"
+                                    >1924</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00070" level="file">
+                        <did>
+                            <unittitle>Holland, E.O. <unitdate normal="1924/1946" type="inclusive"
+                                    >1924-1946</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00071" level="file">
+                        <did>
+                            <unittitle>Holter, M.L. <unitdate normal="1933"
+                                >1933</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00072" level="file">
+                        <did>
+                            <unittitle>Houghton, Woodburn Mary. <unitdate normal="1911/1928"
+                                    type="inclusive">1911-1928</unitdate>and <unitdate
+                                    certainty="circa" normal="1911/1974"
+                                >undated</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00073" level="file">
+                        <did>
+                            <unittitle>Huber, Carl G. <unitdate normal="1929"
+                                >1929</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00074" level="file">
+                        <did>
+                            <unittitle>Hunter, Paul F. <unitdate normal="1949"
+                                >1949</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAD0311-00075" level="otherlevel">
+                    <did>
+                        <unittitle>I1 and J1, <unitdate normal="1915/1926" type="inclusive"
+                                >1915-1926</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAD0311-00076" level="file">
+                        <did>
+                            <unittitle>Indiana University. <unitdate normal="1915"
+                                >1915</unitdate></unittitle>
+                        </did>
+                        <scopecontent>
+                            <p>(includes correspondence from President Bryan)</p>
+                        </scopecontent>
+                    </c03>
+                    <c03 id="VAD0311-00077" level="file">
+                        <did>
+                            <unittitle>Institut Tilly (Berlin). <unitdate normal="1911"
+                                    >1911</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00078" level="file">
+                        <did>
+                            <unittitle>Isaacs, C. A. <unitdate normal="1924"
+                                >1924</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00079" level="file">
+                        <did>
+                            <unittitle>Jameson, Arthur W. <unitdate normal="1926"
+                                >1926</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAD0311-00080" level="otherlevel">
+                    <did>
+                        <unittitle>K1, <unitdate normal="1916/1933" type="inclusive"
+                                >1916-1933</unitdate>and <unitdate certainty="circa"
+                                normal="1911/1974">undated</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAD0311-00081" level="file">
+                        <did>
+                            <unittitle>Kelley, F.L. <unitdate normal="1928"
+                                >1928</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00082" level="file">
+                        <did>
+                            <unittitle>Kenyon, H.M. <unitdate normal="1916/1917" type="inclusive"
+                                    >1916-1917</unitdate>and <unitdate certainty="circa"
+                                    normal="1911/1974">undated</unitdate></unittitle>
+                        </did>
+                        <scopecontent>
+                            <p>(Includes additional correspondence)</p>
+                        </scopecontent>
+                    </c03>
+                    <c03 id="VAD0311-00083" level="file">
+                        <did>
+                            <unittitle>King, Horace W. <unitdate normal="1927/1933" type="inclusive"
+                                    >1927-1933</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00084" level="file">
+                        <did>
+                            <unittitle>Knapp, Robert and Pearl. <unitdate certainty="circa"
+                                    normal="1911/1974">Undated</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00085" level="file">
+                        <did>
+                            <unittitle>Koehler, Arthur. <unitdate normal="1928"
+                                >1928</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00086" level="file">
+                        <did>
+                            <unittitle>Kruegel, J. <unitdate normal="1929"
+                                >1929</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00087" level="file">
+                        <did>
+                            <unittitle>Kuck, Cecil E. <unitdate normal="1931"
+                                >1931</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAD0311-00088" level="otherlevel">
+                    <did>
+                        <unittitle>L1, <unitdate normal="1911/1948" type="inclusive"
+                                >1911-1948</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAD0311-00089" level="file">
+                        <did>
+                            <unittitle>Longmans, Green and Co, Inc. <unitdate normal="1948"
+                                    >1948</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00090" level="file">
+                        <did>
+                            <unittitle>Looss (?), Helena. <unitdate normal="1911/1912"
+                                    type="inclusive">1911-1912</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAD0311-00091" level="otherlevel">
+                    <did>
+                        <unittitle>M1, <unitdate normal="1898/1911" type="inclusive"
+                                >1898-1911</unitdate>and <unitdate certainty="circa"
+                                normal="1911/1974">undated</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAD0311-00092" level="file">
+                        <did>
+                            <unittitle>All correspondence from <emph render="doublequote"
+                                    >mother</emph> to James Woodburn.<unitdate normal="1898/1911"
+                                    type="inclusive">1898-1911</unitdate>and <unitdate
+                                    certainty="circa" normal="1911/1974"
+                                >undated</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAD0311-00093" level="otherlevel">
+                    <did>
+                        <unittitle>M2, <unitdate normal="1911">1911</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAD0311-00094" level="file">
+                        <did>
+                            <unittitle>All correspondence from <emph render="doublequote"
+                                    >mother</emph> to James Woodburn. <unitdate normal="1911"
+                                    >1911</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAD0311-00095" level="otherlevel">
+                    <did>
+                        <unittitle>M3, <unitdate normal="1913">1913</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAD0311-00096" level="file">
+                        <did>
+                            <unittitle>All correspondence from <emph render="doublequote"
+                                    >mother</emph> to James Woodburn. <unitdate normal="1913"
+                                    >1913</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAD0311-00097" level="otherlevel">
+                    <did>
+                        <unittitle>M4, <unitdate normal="1915/1918" type="inclusive"
+                                >1915-1918</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAD0311-00098" level="file">
+                        <did>
+                            <unittitle>All correspondence from <emph render="doublequote"
+                                    >mother</emph> to James Woodburn and additional family members.
+                                    <unitdate normal="1915/1918" type="inclusive"
+                                    >1915-1918</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAD0311-00099" level="otherlevel">
+                    <did>
+                        <unittitle>M5, <unitdate normal="1919/1945" type="inclusive"
+                                >1919-1945</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAD0311-00100" level="file">
+                        <did>
+                            <unittitle>All correspondence from <emph render="doublequote"
+                                    >mother</emph> to James Woodburn.<unitdate normal="1919/1943"
+                                    type="inclusive">1919-1943</unitdate>and <unitdate
+                                    certainty="circa" normal="1911/1974"
+                                >undated</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00101" level="file">
+                        <did>
+                            <unittitle>Masow, Ida Lora. <unitdate normal="1908">1908</unitdate>and
+                                    <unitdate certainty="circa" normal="1911/1974"
+                                    >undated</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00102" level="file">
+                        <did>
+                            <unittitle>McDowell, "Mac" M. E. <unitdate normal="1917"
+                                >1917</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00103" level="file">
+                        <did>
+                            <unittitle>Mead, Daniel W. <unitdate normal="1945"
+                                >1945</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00104" level="file">
+                        <did>
+                            <unittitle>Miller, E.B. <unitdate normal="1924"
+                                >1924</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00105" level="file">
+                        <did>
+                            <unittitle>Mitchara (?), S. (The Psychological Laboratory at Cornell
+                                University) <unitdate normal="1918">1918</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00106" level="file">
+                        <did>
+                            <unittitle>Misay (?), R. <unitdate normal="1929"
+                                >1929</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00107" level="file">
+                        <did>
+                            <unittitle>Myers, Burton D. <unitdate normal="1943"
+                                >1943</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAD0311-00108" level="otherlevel">
+                    <did>
+                        <unittitle>N1, <unitdate normal="1971/1974" type="inclusive"
+                                >1971-1974</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAD0311-00109" level="file">
+                        <did>
+                            <unittitle>Nottingham, Nan. <unitdate normal="1971"
+                                >1971</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00110" level="file">
+                        <did>
+                            <unittitle>Nugent, W.T.K. <unitdate normal="1974"
+                                >1974</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAD0311-00111" level="otherlevel">
+                    <did>
+                        <unittitle>P1, <unitdate normal="1899/1915" type="inclusive"
+                                >1899-1915</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAD0311-00112" level="file">
+                        <did>
+                            <unittitle>All correspondence from <emph render="doublequote"
+                                    >papa/father</emph> to James Woodburn. <unitdate
+                                    normal="1899/1915" type="inclusive"
+                                >1899-1915</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAD0311-00113" level="otherlevel">
+                    <did>
+                        <unittitle>P2, <unitdate normal="1917/1918" type="inclusive"
+                                >1917-1918</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAD0311-00114" level="file">
+                        <did>
+                            <unittitle>All correspondence from <emph render="doublequote"
+                                    >papa/father</emph> to James Woodburn. <unitdate
+                                    normal="1917/1918" type="inclusive"
+                                >1917-1918</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAD0311-00115" level="otherlevel">
+                    <did>
+                        <unittitle>P3, <unitdate normal="1919/1928" type="inclusive"
+                                >1919-1928</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAD0311-00116" level="file">
+                        <did>
+                            <container label="Box" type="Box">2</container>
+                            <unittitle>All correspondence from <emph render="doublequote"
+                                    >papa/father</emph> to James Woodburn and other family members.
+                                    <unitdate normal="1919/1928" type="inclusive"
+                                    >1919-1928</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAD0311-00117" level="otherlevel">
+                    <did>
+                        <unittitle>P4, <unitdate normal="1929/1943" type="inclusive"
+                                >1929-1943</unitdate>and <unitdate certainty="circa"
+                                normal="1911/1974">undated</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAD0311-00118" level="file">
+                        <did>
+                            <unittitle>All correspondence from <emph render="doublequote"
+                                    >papa/father</emph> to James Woodburn and other family members.
+                                    <unitdate normal="1929/1943" type="inclusive"
+                                    >1929-1943</unitdate>and <unitdate certainty="circa"
+                                    normal="1911/1974">undated</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAD0311-00119" level="otherlevel">
+                    <did>
+                        <unittitle>P5, <unitdate normal="1917/1934" type="inclusive"
+                                >1917-1934</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAD0311-00120" level="file">
+                        <did>
+                            <unittitle>Parker, Glenn L. <unitdate normal="1934"
+                                >1934</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00121" level="file">
+                        <did>
+                            <unittitle>Penrod, Anna A. <unitdate normal="1943"
+                                >1943</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00122" level="file">
+                        <did>
+                            <unittitle>Penington, C.A. <unitdate normal="1923"
+                                >1923</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00123" level="file">
+                        <did>
+                            <unittitle>Piper, Arthur M. <unitdate normal="1934"
+                                >1934</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00124" level="file">
+                        <did>
+                            <unittitle>Pullman, George. <unitdate normal="1930"
+                                >1930</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00125" level="file">
+                        <did>
+                            <unittitle>Purdue University (various correspondents). <unitdate
+                                    normal="1917/1971" type="inclusive"
+                                >1917-1971</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAD0311-00126" level="otherlevel">
+                    <did>
+                        <unittitle>R1, <unitdate normal="1907/1974" type="inclusive"
+                                >1907-1974</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAD0311-00127" level="file">
+                        <did>
+                            <unittitle>Randall, David A. <unitdate normal="1974"
+                                >1974</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00128" level="file">
+                        <did>
+                            <unittitle>Rawson, J.R. <unitdate normal="1919"
+                                >1919</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00129" level="file">
+                        <did>
+                            <unittitle>Rich, Claude. <unitdate normal="1949"
+                                >1949</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00130" level="file">
+                        <did>
+                            <unittitle>Richards, H. <unitdate normal="1912"
+                                >1912</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00131" level="file">
+                        <did>
+                            <unittitle>Riley, Lucille. <unitdate normal="1917/1918" type="inclusive"
+                                    >1917-1918</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00132" level="file">
+                        <did>
+                            <unittitle>Rinder, Herbert G. <unitdate normal="1926"
+                                >1926</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00133" level="file">
+                        <did>
+                            <unittitle>Rinne, William. <unitdate normal="1965"
+                                >1965</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00134" level="file">
+                        <did>
+                            <unittitle>Roberts, Kitchel Arthur. <unitdate normal="1906/1914"
+                                    type="inclusive">1906-1914</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00135" level="file">
+                        <did>
+                            <unittitle>Roberts, Carl. <unitdate normal="1928"
+                                >1928</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00136" level="file">
+                        <did>
+                            <unittitle>Rounds, Fred G. <unitdate normal="1927"
+                                >1927</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00137" level="file">
+                        <did>
+                            <unittitle>Ryan, John W. <unitdate normal="1971"
+                                >1971</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAD0311-00138" level="otherlevel">
+                    <did>
+                        <unittitle>S1, <unitdate normal="1911/1971" type="inclusive"
+                                >1911-1971</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAD0311-00139" level="file">
+                        <did>
+                            <unittitle>Scarborough Company. <unitdate normal="1914"
+                                >1914</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00140" level="file">
+                        <did>
+                            <unittitle>Schmid, Erwin E. <unitdate normal="1930"
+                                >1930</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00141" level="file">
+                        <did>
+                            <unittitle>Schumacher Hardware Company. <unitdate normal="1914"
+                                    >1914</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00142" level="file">
+                        <did>
+                            <unittitle>Scobie, James R. <unitdate normal="1971"
+                                >1971</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00143" level="file">
+                        <did>
+                            <unittitle>Seabury, George T. <unitdate normal="1929"
+                                >1929</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00144" level="file">
+                        <did>
+                            <unittitle>Seward, Austin. <unitdate normal="1911"
+                                >1911</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00145" level="file">
+                        <did>
+                            <unittitle>Sheldon, H.D. <unitdate normal="1911"
+                                >1911</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00146" level="file">
+                        <did>
+                            <unittitle>Sigma Nu Fraternity. <unitdate normal="1916"
+                                >1916</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00147" level="file">
+                        <did>
+                            <unittitle>Slagle, Robert L.<unitdate normal="1916"
+                                >1916</unitdate></unittitle>
+                        </did>
+                        <scopecontent>
+                            <p>(Includes additional correspondence)</p>
+                        </scopecontent>
+                    </c03>
+                    <c03 id="VAD0311-00148" level="file">
+                        <did>
+                            <unittitle>Sloan, Anna. <unitdate normal="1918"
+                                >1918</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00149" level="file">
+                        <did>
+                            <unittitle>Smith, Julia. <unitdate normal="1913"
+                                >1913</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00150" level="file">
+                        <did>
+                            <unittitle>Smith, Paul. <unitdate normal="1911/1913" type="inclusive"
+                                    >1911-1913</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00151" level="file">
+                        <did>
+                            <unittitle>Smith, Shirley W. <unitdate normal="1927/1928"
+                                    type="inclusive">1927-1928</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00152" level="file">
+                        <did>
+                            <unittitle>Snyder, M.K. <unitdate normal="1923/1930" type="inclusive"
+                                    >1923-1930</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00153" level="file">
+                        <did>
+                            <unittitle>Spaets (?), Nelson J. <unitdate normal="1921"
+                                >1921</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00154" level="file">
+                        <did>
+                            <unittitle>Stahr Jr, Elvis J. <unitdate normal="1963/1966"
+                                    type="inclusive">1963-1966</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00155" level="file">
+                        <did>
+                            <unittitle>Stanley, W. E. <unitdate normal="1917"
+                                >1917</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00156" level="file">
+                        <did>
+                            <unittitle>Suthe (?), Carl E. <unitdate normal="1928"
+                                >1928</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00157" level="file">
+                        <did>
+                            <unittitle>Sutton, L. Joseph. <unitdate normal="1970"
+                                >1970</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAD0311-00158" level="otherlevel">
+                    <did>
+                        <unittitle>T1, <unitdate normal="1914/1960" type="inclusive"
+                                >1914-1960</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAD0311-00159" level="file">
+                        <did>
+                            <unittitle>Taylor, Emma. <unitdate normal="1914"
+                                >1914</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00160" level="file">
+                        <did>
+                            <unittitle>Taylor, R.N. <unitdate normal="1914"
+                                >1914</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00161" level="file">
+                        <did>
+                            <unittitle>Thoma, Dichu. <unitdate normal="1931"
+                                >1931</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00162" level="file">
+                        <did>
+                            <unittitle>Thomas, Rolla K. <unitdate normal="1916"
+                                >1916</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00163" level="file">
+                        <did>
+                            <unittitle>Tiffany, R.K. <unitdate normal="1934"
+                                >1934</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00164" level="file">
+                        <did>
+                            <unittitle>Tilden, F. W. <unitdate normal="1914"
+                                >1914</unitdate></unittitle>
+                        </did>
+                        <scopecontent>
+                            <p>(Includes additional correspondence)</p>
+                        </scopecontent>
+                    </c03>
+                    <c03 id="VAD0311-00165" level="file">
+                        <did>
+                            <unittitle>Tierney, Jo. <unitdate normal="1960"
+                                >1960</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00166" level="file">
+                        <did>
+                            <unittitle>Titus, J. <unitdate normal="1919/1922" type="inclusive"
+                                    >1919-1922</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00167" level="file">
+                        <did>
+                            <unittitle>Turring (?), Simon. (The <emph render="italic"
+                                    >Sentinel-Tribune</emph>) <unitdate normal="1914"
+                                >1914</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAD0311-00168" level="otherlevel">
+                    <did>
+                        <unittitle>U1, <unitdate normal="1879/1964" type="inclusive"
+                                >1879-1964</unitdate>and <unitdate certainty="circa"
+                                normal="1911/1974">undated</unitdate> - V1, <unitdate normal="1918"
+                                >1918</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAD0311-00169" level="file">
+                        <did>
+                            <unittitle>All unidentified correspondence and blank envelopes in back
+                                of folder</unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00170" level="file">
+                        <did>
+                            <unittitle>United States Department of Agriculture. <unitdate
+                                    normal="1921/1923" type="inclusive"
+                                >1921-1923</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00171" level="file">
+                        <did>
+                            <unittitle>Upham, J.S. <unitdate normal="1917"
+                                >1917</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00172" level="file">
+                        <did>
+                            <unittitle>Van Tyne, Claude H. <unitdate normal="1918"
+                                >1918</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAD0311-00173" level="otherlevel">
+                    <did>
+                        <unittitle>W1, <unitdate normal="1911/1993" type="inclusive"
+                                >1911-1993</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAD0311-00174" level="file">
+                        <did>
+                            <unittitle>Waller, O. L. <unitdate normal="1924/1929" type="inclusive"
+                                    >1924-1929</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00175" level="file">
+                        <did>
+                            <unittitle>War Department. (Various correspondents and enclosed forms)
+                                    <unitdate normal="1918/1920" type="inclusive"
+                                    >1918-1920</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00176" level="file">
+                        <did>
+                            <unittitle>Wells, Herman B. <unitdate normal="1937/1993"
+                                    type="inclusive">1937-1993</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00177" level="file">
+                        <did>
+                            <unittitle>Wicks, Lewis W. <unitdate normal="1918"
+                                >1918</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00178" level="file">
+                        <did>
+                            <unittitle>Wiecking, Janet Woodburn. <unitdate normal="1907/1970"
+                                    type="inclusive">1907-1970</unitdate>and <unitdate
+                                    certainty="circa" normal="1911/1974"
+                                >undated</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00179" level="file">
+                        <did>
+                            <unittitle>Wilson, Francis I. <unitdate normal="1941"
+                                >1941</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00180" level="file">
+                        <did>
+                            <unittitle>Winslow, Charles. <unitdate normal="1920"
+                                >1920</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAD0311-00181" level="otherlevel">
+                    <did>
+                        <unittitle>W2, <unitdate normal="1890/1941" type="inclusive"
+                                >1890-1941</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAD0311-00182" level="file">
+                        <did>
+                            <unittitle>Woodburn, Robert (Bobby). <unitdate normal="1906/1941"
+                                    type="inclusive">1906-1941</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00183" level="file">
+                        <did>
+                            <unittitle>Woodburn, Caroline Gelston. <unitdate normal="1890/1931"
+                                    type="inclusive">1890-1931</unitdate>and <unitdate
+                                    certainty="circa" normal="1911/1974"
+                                >undated</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00184" level="file">
+                        <did>
+                            <unittitle>Woodburn, Delma Gelston. <unitdate normal="1923/1939"
+                                    type="inclusive">1923-1939</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAD0311-00185" level="otherlevel">
+                    <did>
+                        <unittitle>W3, <unitdate normal="1890/1941" type="inclusive"
+                                >1891-1941</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAD0311-00186" level="file">
+                        <did>
+                            <unittitle>Woodburn, Donnie. <unitdate normal="1935/1941"
+                                    type="inclusive">1935-1941</unitdate>and <unitdate
+                                    certainty="circa" normal="1911/1974"
+                                >undated</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00187" level="file">
+                        <did>
+                            <unittitle>Woodburn, James Albert.<unitdate normal="1891/1930"
+                                    type="inclusive">1891-1930</unitdate>and <unitdate
+                                    certainty="circa" normal="1911/1974"
+                                >undated</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAD0311-00188" level="otherlevel">
+                    <did>
+                        <unittitle>W4, <unitdate normal="1917/1938" type="inclusive"
+                                >1917-1938</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAD0311-00189" level="file">
+                        <did>
+                            <unittitle>Woodburn, James Albert. <unitdate normal="1917/1938"
+                                    type="inclusive">1917-1938</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAD0311-00190" level="otherlevel">
+                    <did>
+                        <unittitle>W5, <unitdate normal="1899/1937" type="inclusive"
+                                >1899-1937</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAD0311-00191" level="file">
+                        <did>
+                            <unittitle>Woodburn, James Gelston. <unitdate normal="1899/1937"
+                                    type="inclusive">1899-1937</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="VAD0311-00192" level="otherlevel">
+                    <did>
+                        <unittitle>W6, <unitdate normal="1937/1968" type="inclusive"
+                                >1937-1968</unitdate>- Y, <unitdate normal="1919/1923"
+                                type="inclusive">1919-1923</unitdate></unittitle>
+                    </did>
+                    <c03 id="VAD0311-00193" level="file">
+                        <did>
+                            <unittitle>Woodburn, James Gelston.<unitdate normal="1899/1968"
+                                    type="inclusive">1899-1968</unitdate>and <unitdate
+                                    certainty="circa" normal="1911/1974"
+                                >undated</unitdate></unittitle>
+                        </did>
+                    </c03>
+                    <c03 id="VAD0311-00194" level="file">
+                        <did>
+                            <unittitle>Woodburn family. <unitdate normal="1912/1934" type="inclusive"
+                                    >1912-1934</unitdate></unittitle>
+                        </did>
+                        <note>
+                            <p>(Various correspondents in one letter)</p>
+                        </note>
+                    </c03>
+                    <c03 id="VAD0311-00195" level="file">
+                        <did>
+                            <unittitle>Yeoman, R. C. <unitdate normal="1919/1923" type="inclusive"
+                                    >1919-1923</unitdate></unittitle>
+                        </did>
+                    </c03>
+                </c02>
+            </c01>
+            <c01 id="VAD0311-00196" level="series">
+                <did>
+                    <unittitle>Ephemera</unittitle>
+                </did>
+                <c02 id="VAD0311-00197" level="file">
+                    <did>
+                        <container label="Box" type="Box">2</container>
+                        <unittitle>Flyers for the orchestra, receipts, newspaper clippings,
+                            materials related to education, and ticket stubs, <unitdate
+                                normal="1911/1918" type="inclusive">1911-1918</unitdate>and
+                                <unitdate certainty="circa" normal="1911/1974"
+                            >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00198" level="file">
+                    <did>
+                        <unittitle>Items relating to education, the Sigma Nu fraternity, and
+                            newspaper clippings and a Purdue University pin, <unitdate
+                                normal="1913/1919" type="inclusive">1913-1919</unitdate> and
+                                <unitdate certainty="circa" normal="1911/1974"
+                            >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00199" level="file">
+                    <did>
+                        <unittitle>Receipts, flyers and bulletins, drawings, and a university
+                            instructor pamphlet, <unitdate normal="1925/1930" type="inclusive"
+                                >1925-1930</unitdate>and <unitdate certainty="circa"
+                                normal="1911/1974">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAD0311-00200" level="series">
+                <did>
+                    <unittitle>Legal Documents</unittitle>
+                </did>
+                <c02 id="VAD0311-00201" level="file">
+                    <did>
+                        <container label="Box" type="Box">2</container>
+                        <unittitle>Probate Court documents including the last will and testament of
+                            Mary C. Gelston, <unitdate normal="1910/1940" type="inclusive"
+                                >1910-1940</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00202" level="file">
+                    <did>
+                        <unittitle>Warranty deeds created by Gelston family members, <unitdate
+                                normal="1909/1927" type="inclusive">1909-1927</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAD0311-00203" level="series">
+                <did>
+                    <unittitle>Personal Items</unittitle>
+                </did>
+                <c02 id="VAD0311-00204" level="file">
+                    <did>
+                        <container label="Box" type="Box">3</container>
+                        <unittitle>Awards given to James Gelston Woodburn, <unitdate
+                                normal="1927/1965" type="inclusive">1927-1965</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00205" level="file">
+                    <did>
+                        <unittitle>Finances of James Albert Woodburn, <unitdate normal="1929/1946"
+                                type="inclusive">1929-1946</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00206" level="file">
+                    <did>
+                        <unittitle>Foreign materials, including written accounts of trips, <unitdate
+                                normal="1955">1955</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00207" level="file">
+                    <did>
+                        <unittitle>Forest Hill Cemetery memorial fund certificate, <unitdate
+                                normal="1905">1905</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00208" level="file">
+                    <did>
+                        <unittitle>Funeral service receipts, <unitdate normal="1903/1926"
+                                type="inclusive">1903-1926</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00209" level="file">
+                    <did>
+                        <unittitle>Gelston farming materials, <unitdate normal="1940/1979"
+                                type="inclusive">1940-1979</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00210" level="file">
+                    <did>
+                        <unittitle>Report cards for James Gelston Woodburn and James Albert
+                            Woodburn, various schools, <unitdate normal="1907/1918" type="inclusive"
+                                >1907-1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00211" level="file">
+                    <did>
+                        <unittitle><title render="italic">Woodburn History: Some Generations of a
+                                Family</title> by James Albert Woodburn, (Folder 1)<unitdate
+                                normal="1936">1936</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00212" level="file">
+                    <did>
+                        <unittitle><title render="italic">Woodburn History: Some Generations of a
+                                Family</title> by James Albert Woodburn (Folder 2)<unitdate
+                                normal="1936">1936</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00213" level="file">
+                    <did>
+                        <unittitle>Coasters from various establishments, <unitdate normal="1911"
+                                >1911</unitdate>and <unitdate certainty="circa" normal="1911/1974"
+                                >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00214" level="item">
+                    <did>
+                        <unittitle>Journal of James Gelston Woodburn, <unitdate normal="1907"
+                                >1907</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00215" level="file">
+                    <did>
+                        <unittitle>Journals of James Gelston Woodburn dated from <unitdate
+                                normal="1906/1912" type="inclusive">1906 to 1912</unitdate>and two
+                                <unitdate certainty="circa" normal="1911/1974">undated</unitdate>
+                            journals attached together</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00216" level="file">
+                    <did>
+                        <unittitle>Journals of James Gelston Woodburn, six in total and written in
+                            German (?), <unitdate certainty="circa" normal="1911/1974"
+                                >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00217" level="file">
+                    <did>
+                        <unittitle>Journals of James Gelston Woodburn, six in total and seem to be
+                            used for academic work, <unitdate normal="1914">1914</unitdate>and
+                                <unitdate certainty="circa" normal="1911/1974"
+                            >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00218" level="file">
+                    <did>
+                        <unittitle>Journal of James Gelston Woodburn, diary of JGW's travel to
+                            Germany, enclosed letter from Herman B Wells, <unitdate normal="1911"
+                                >1911</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00219" level="file">
+                    <did>
+                        <unittitle>Junior Movies pamphlet, Indiana University junior class pamphlet
+                            discussing sports, fraternities and sororities, and literary works
+                            created by students, <unitdate normal="1915">1915</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00220" level="file">
+                    <did>
+                        <unittitle>Keepsake notes given to James Albert Woodburn on his fiftieth
+                            wedding anniversary, <unitdate normal="1943">1943</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00221" level="file">
+                    <did>
+                        <unittitle>School essays, written by James Gelston Woodburn, <unitdate
+                                normal="1913/1914" type="inclusive">1913-1914</unitdate>and
+                                <unitdate certainty="circa" normal="1911/1974"
+                            >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00222" level="file">
+                    <did>
+                        <unittitle>School work by James Gelston Woodburn, <unitdate normal="1909"
+                                >1909</unitdate>and <unitdate certainty="circa" normal="1911/1974"
+                                >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00223" level="item">
+                    <did>
+                        <unittitle>Travel booklet by James Gelston Woodburn, <unitdate normal="1932"
+                                >1932</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00224" level="file">
+                    <did>
+                        <unittitle>Various articles and newspaper clippings saved by James Gelston
+                            and James Albert, <unitdate normal="1923/1930" type="inclusive"
+                                >1923-1930</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00225" level="file">
+                    <did>
+                        <unittitle>Various awards and condolences in regards to James Gelston
+                            Woodburn, <unitdate normal="1980">1980</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00226" level="file">
+                    <did>
+                        <container label="Box" type="Box">4</container>
+                        <unittitle>Memorial articles and papers for James Gelston Woodburn,
+                                <unitdate normal="1981">1981</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00227" level="file">
+                    <did>
+                        <unittitle>Miscellaneous items pertaining to James Gelston Woodburn,
+                                <unitdate normal="1912/1971" type="inclusive"
+                            >1912-1971</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00228" level="file">
+                    <did>
+                        <unittitle>Miscellaneous items pertaining to James Gelston Woodburn,
+                                <unitdate normal="1893/1912" type="inclusive">1893-1912
+                            </unitdate>and <unitdate certainty="circa" normal="1911/1974"
+                                >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00229" level="file">
+                    <did>
+                        <unittitle>Miscellaneous items pertaining to James Gelston Woodburn,
+                                <unitdate normal="1912/1914" type="inclusive">1912-1914
+                            </unitdate>and <unitdate certainty="circa" normal="1911/1974"
+                                >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00230" level="file">
+                    <did>
+                        <unittitle>Obituaries for James Gelston Woodburn, photocopies of news paper
+                            entries, <unitdate normal="1980">1980</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00231" level="file">
+                    <did>
+                        <unittitle>Purdue materials, pertaining to James Gelston Woodburn, includes
+                            awards, alumni magazines, and articles, <unitdate normal="1945/1969"
+                                type="inclusive">1945-1969</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00232" level="file">
+                    <did>
+                        <unittitle>Sale of 12 Geddes Heights house located in Ann Arbor Michigan,
+                                <unitdate normal="1950">1950</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00233" level="file">
+                    <did>
+                        <unittitle>Sympathy and condolence letters/telegrams, sent to James Albert
+                            Woodburn and family, <unitdate normal="1943/1953" type="inclusive"
+                                >1943-1953</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAD0311-00234" level="series">
+                <did>
+                    <unittitle>Professional</unittitle>
+                </did>
+                <c02 id="VAD0311-00235" level="file">
+                    <did>
+                        <container label="Box" type="Box">4</container>
+                        <unittitle>Materials pertaining to Indiana University and both James Gelston
+                            and James Albert, <unitdate normal="1962/1969" type="inclusive"
+                                >1962-1969</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00236" level="file">
+                    <did>
+                        <unittitle>Materials pertaining to Indiana University and both James Gelston
+                            and James Albert, <unitdate normal="1970">1970</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00237" level="file">
+                    <did>
+                        <unittitle>Materials pertaining to Indiana University, <unitdate
+                                normal="1938/1959" type="inclusive">1938-1959</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00238" level="file">
+                    <did>
+                        <unittitle>James Gelston Woodburn lecture on Columbia power plant, <unitdate
+                                normal="1943/1974" type="inclusive">1943-1974</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00239" level="file">
+                    <did>
+                        <unittitle>Materials pertaining to the Woodburn Fellowship, includes
+                            correspondence, <unitdate normal="1973/1993" type="inclusive"
+                                >1973-1993</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00240" level="file">
+                    <did>
+                        <unittitle>Miscellaneous materials, <unitdate normal="1929/1994"
+                                type="inclusive">1929-1994</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAD0311-00241" level="series">
+                <did>
+                    <unittitle>Photographs</unittitle>
+                </did>
+                <c02 id="VAD0311-00242" level="file">
+                    <did>
+                        <container label="Box" type="Box">4</container>
+                        <unittitle>Cardboard photographs of various Woodburn family members,
+                                <unitdate normal="1874">1874</unitdate>and <unitdate
+                                certainty="circa" normal="1911/1974">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00243" level="file">
+                    <did>
+                        <unittitle>Engineering Society, <unitdate normal="1925"
+                            >1925</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00244" level="file">
+                    <did>
+                        <unittitle>Woodburn family members, <unitdate normal="1867/1890"
+                                type="inclusive">1867-1890</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00245" level="file">
+                    <did>
+                        <unittitle>Woodburn office at IU, <unitdate certainty="circa"
+                                normal="1911/1974">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00246" level="file">
+                    <did>
+                        <unittitle>James Albert Woodburn, <unitdate normal="1895/1912"
+                                type="inclusive">1895-1912 </unitdate>and <unitdate
+                                certainty="circa" normal="1911/1974">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00247" level="item">
+                    <did>
+                        <unittitle>James Albert Woodburn passport photo, <unitdate certainty="circa"
+                                normal="1911/1974">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00248" level="file">
+                    <did>
+                        <unittitle>Laboratory class, <unitdate normal="1931"
+                            >1931</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00249" level="item">
+                    <did>
+                        <unittitle>Lincoln's Gettysburg Address, photocopy, <unitdate
+                                certainty="circa" normal="1911/1974">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00250" level="item">
+                    <did>
+                        <unittitle>Photo album that goes with James Gelston Woodburn's diary of his
+                            trip to Germany, <unitdate normal="1912">1912</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00251" level="item">
+                    <did>
+                        <unittitle>Photo album, unidentified subjects, <unitdate normal="1911"
+                                >1911</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00252" level="file">
+                    <did>
+                        <unittitle>Woodburn family, <unitdate certainty="circa" normal="1911/1974"
+                                >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00253" level="file">
+                    <did>
+                        <unittitle>Indiana University, faculty and campus photos, <unitdate
+                                normal="1916/1962" type="inclusive">1916-1962 </unitdate>and
+                                <unitdate certainty="circa" normal="1911/1974"
+                            >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00254" level="file">
+                    <did>
+                        <unittitle>Miscellaneous photographs, unidentified subjects, <unitdate
+                                certainty="circa" normal="1911/1974">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00255" level="file">
+                    <did>
+                        <unittitle>Negatives 91-102, unidentified subjects and locations, <unitdate
+                                certainty="circa" normal="1911/1974">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00256" level="file">
+                    <did>
+                        <unittitle>Negatives, group titled "Coble,"<unitdate certainty="circa"
+                                normal="1911/1974">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00257" level="file">
+                    <did>
+                        <unittitle>Negatives, Ithaca and Ann Arbor, <unitdate certainty="circa"
+                                normal="1911/1974">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00258" level="file">
+                    <did>
+                        <unittitle>Negatives, James Woodburn, <unitdate certainty="circa"
+                                normal="1911/1974">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00259" level="file">
+                    <did>
+                        <unittitle>Negatives, travels to England, <unitdate certainty="circa"
+                                normal="1911/1974">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00260" level="file">
+                    <did>
+                        <unittitle>Negatives, travels to Berlin and Potsdam, <unitdate
+                                certainty="circa" normal="1911/1974">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00261" level="file">
+                    <did>
+                        <unittitle>Negatives, miscellaneous, unidentified subjects and locations,
+                                <unitdate certainty="circa" normal="1911/1974"
+                            >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00262" level="file">
+                    <did>
+                        <unittitle>Unidentified group photo, <unitdate normal="1932/1933"
+                                type="inclusive">1932-1933</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00263" level="file">
+                    <did>
+                        <container label="Box" type="Box">9 (Oversize)</container>
+                        <unittitle>Photograph album, photos of various trips including Germany,
+                            England, Ithaca, and Indiana University campus, <unitdate normal="1911"
+                                >1911</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00264" level="file">
+                    <did>
+                        <container label="Box" type="Box">10 (Oversize)</container>
+                        <unittitle>Chi Epsilon fraternity of University of Wisconsin photograph,
+                                <unitdate normal="1929">1929</unitdate></unittitle>
+                    </did>
+                </c02>
+
+            </c01>
+            <c01 id="VAD0311-00265" level="series">
+                <did>
+                    <unittitle>Print Materials</unittitle>
+                </did>
+                <c02 id="VAD0311-00266" level="file">
+                    <did>
+                        <container label="Box" type="Box">5</container>
+                        <unittitle>Curry and Woodburn House, <unitdate normal="1983/1984"
+                                type="inclusive">1983-1984 </unitdate>and <unitdate
+                                certainty="circa" normal="1911/1974">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00267" level="file">
+                    <did>
+                        <unittitle>German items, possibly from Woodburn's trip in 1912, <unitdate
+                                normal="1911/1912" type="inclusive">1911-1912</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00268" level="file">
+                    <did>
+                        <unittitle>Map of water works system in Madison, Wisconsin, <unitdate
+                                certainty="circa" normal="1911/1974">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00269" level="file">
+                    <did>
+                        <unittitle>New paper clippings, <unitdate normal="1911/1971"
+                                type="inclusive">1911-1971 </unitdate>and <unitdate
+                                certainty="circa" normal="1911/1974">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00270" level="file">
+                    <did>
+                        <unittitle>Newspaper clippings, most from Madison, Wisconsin newspapers,
+                                <unitdate normal="1943/1979" type="inclusive"
+                            >1943-1979</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00271" level="file">
+                    <did>
+                        <unittitle>Political newspaper clippings, <unitdate normal="1911"
+                                >1911</unitdate>and <unitdate certainty="circa" normal="1911/1974"
+                                >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00272" level="file">
+                    <did>
+                        <unittitle>Education materials pertaining to James Gelston and Indiana
+                            University, <unitdate normal="1908/1940" type="inclusive"
+                                >1908-1940</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00273" level="file">
+                    <did>
+                        <unittitle>Indiana University and general interest materials, <unitdate
+                                normal="1914/1917" type="inclusive">1914-1917 </unitdate>and
+                                <unitdate certainty="circa" normal="1911/1974"
+                            >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00274" level="file">
+                    <did>
+                        <unittitle>Indiana University materials, <unitdate normal="1903/1950"
+                                type="inclusive">1903-1950</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00275" level="file">
+                    <did>
+                        <unittitle>Congressional record, remarks of Honorable Knute Hill, <unitdate
+                                normal="1940">1940</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00276" level="file">
+                    <did>
+                        <unittitle>Congressional records, second and third session, includes
+                            enclosed handwritten note, <unitdate normal="1914"
+                            >1914</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00277" level="file">
+                    <did>
+                        <unittitle>Congressional records, third and first sessions, <unitdate
+                                normal="1914/1916" type="inclusive">1914-1916</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00278" level="file">
+                    <did>
+                        <unittitle>Congressional records, second and first sessions, <unitdate
+                                normal="1927/1928" type="inclusive">1927-1928</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00279" level="file">
+                    <did>
+                        <unittitle>Congressional records, second session, <unitdate normal="1930"
+                                >1930</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00280" level="file">
+                    <did>
+                        <unittitle>Newspaper clippings on taxes, <unitdate normal="1972/1980"
+                                type="inclusive">1972-1980</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00281" level="file">
+                    <did>
+                        <unittitle>Newspaper clippings on historical events, <unitdate
+                                normal="1915/1976" type="inclusive">1915-1976</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00282" level="file">
+                    <did>
+                        <unittitle>Sesquicentennial Observance, <unitdate normal="1950"
+                                >1950</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAD0311-00283" level="series">
+                <did>
+                    <unittitle>Realia</unittitle>
+                </did>
+                <c02 id="VAD0311-00284" level="item">
+                    <did>
+                        <container label="Box" type="Box">6 (Oversize)</container>
+                        <unittitle>Correspondence case</unittitle>
+                    </did>
+                    <note>
+                        <p>(actual letters moved to Correspondence series)</p>
+                    </note>
+                </c02>
+                <c02 id="VAD0311-00285" level="file">
+                    <did>
+                        <container label="Box" type="Box">7 (Oversize)</container>
+                        <unittitle>Diploma collection, <unitdate normal="1855/1918" type="inclusive"
+                                >1855-1918</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00286" level="item">
+                    <did>
+                        <container label="Box" type="Box">8 (Oversize)</container>
+                        <unittitle>Decorative gift box, <unitdate certainty="circa"
+                                normal="1911/1974">undated</unitdate></unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD0311-00287" level="item">
+                    <did>
+                        <container label="Box" type="Box">11 (Oversize)</container>
+                        <unittitle>Metal trunk, <unitdate certainty="circa" normal="1911/1974"
+                                >undated</unitdate></unittitle>
+                    </did>
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
