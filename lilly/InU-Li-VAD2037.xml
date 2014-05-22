@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+-->
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader relatedencoding="dublincore" audience="external" langencoding="iso639-2b"
+        scriptencoding="iso15924" repositoryencoding="iso15511" countryencoding="iso3166-1"
+        dateencoding="iso8601" findaidstatus="edited-full-draft">
+        <eadid encodinganalog="identifier" identifier="InU-Li-VAD2037" countrycode="US"
+            mainagencycode="InU-Li">InU-Li-VAD2037</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Cumback mss.,<date type="inclusive"
+                        normal="1835/1904">1835-1904</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2014" type="publication">© 2014</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2014">© 2014</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2014" type="source">2014</date>
+                <lb/>Finding aid encoded by Tiffany Saulter, Lilly Library, Indiana University,
+                    <date normal="2014-04-29">April 29, 2014</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng"
+                    >English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2014-04-29">April 29, 2014</date>
+                <item>Encoded finding aid started.</item>
+            </change>
+            <change audience="internal">
+                <date normal="2014-04-30">April 30, 2014</date>
+                <item>Encoded finding aid completed.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc level="collection" audience="external" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository encodinganalog="852" label="Repository" id="lilly">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
+                    >Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname source="lcnaf" encodinganalog="100">Cumback, Will, 1829-1905. </persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Cumback mss.</unittitle>
+            <unitdate normal="1835/1904" type="inclusive" encodinganalog="245$f"
+                >1835-1904</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1239</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>72 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language
+                    langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Cumback mss., 1835-1904, consist
+                chiefly of correspondence with prominent political figures, army officers, lawyers,
+                poets, journalists, and personal friends.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+            <p>William Cumback, 1829-1905, was a lawyer and congressman from Indiana.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>Materials are arranged chronologically.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p> The letters deal with national and state politics, 1854-1897; elections, 1856, 1860,
+                1880, 1884, 1896; army finances, 1864; slavery question as it related to Kansas,
+                1855; governorship of Montana, 1864; governorship of Idaho, 1870; minister resident
+                to Portugal, 1870; position as a member of the cabinet or a Mexican mission, 1897;
+                and efforts of friends to nominate John Addison Porter for governor of Connecticut,
+                1898. Included are also land grants, 1835-1856; commission as a lieutenant-colonel,
+                1865; certification of election to Congress, 1854; certificate of election to the
+                Indiana Academy of Science, 1889; resolutions favoring prohibition and opposing the
+                further extension of slavery by the Decatur County Democratic party; and a book of
+                autographs of President Franklin Pierce, members of his cabinet, members of the
+                Senate, and members of the House of Representatives of the 34th Congress, 1856.</p>
+            <p>
+                Among the correspondents are Timothy Patrick Andrews, Benjamin William Brice, Samuel
+                Bryan, Will Carleton, Cassius Marcellus Clay, Howell Cobb, John Coburn, Schuyler
+                Colfax, Neal Dow, Hamilton Fish, James Glover, Jr., Horace Greeley, Benjamin
+                Harrison, Rutherford Birchard Hayes, William Steele Holman, Joe D. Howland, Samuel
+                Porter Jones, Abraham Lincoln, John Uri Lloyd, William McKinley, John McLean, Louis
+                Theodore Michener, J.D. Mooney, Oliver Perry Morton, Meredith Nicholson, Godlove
+                Stein Orth, Alfred Pleasonton, John Addison Porter, John Sherman, William Tecumseh
+                Sherman, Edwin McMasters Stanton, Alexander Hamilton Stephens, Thomas DeWitt
+                Talmage, James Maurice Thompson, John Palmer Usher, and Lewis Wallace. </p>
+            <p>In addition, the collection contains printed speeches by William Cumback.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item><extref
+                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/cumback+will+william+1829-1905{su}"
+                        ><persname encodinganalog="600" source="lcnaf">Cumback, Will. (William), 1829-1905.</persname></extref></item>
+                    <item><extref
+                        xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/cumback+will+william+1829-1905+correspondence{su}"
+                        ><persname encodinganalog="600" source="lcnaf">Cumback, Will. (William), 1829-1905 --Correspondence.</persname></extref></item>
+                    <item><extref
+                        xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/lincoln+abraham+1809-1865{su}"
+                        ><persname encodinganalog="600" source="lcnaf">Lincoln, Abraham, 1809-1865 --Correspondence.</persname></extref></item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item><extref
+                        xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/legislators+united+states{su}"
+                        ><subject encodinganalog="650" source="lcsh">Legislators --United States.</subject></extref></item>
+                    <item><extref
+                        xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/legislators+united+states+correspondence{su}"
+                        ><subject encodinganalog="650" source="lcsh">Legislators --United States --Correspondence.</subject></extref></item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="610" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+        <!-- required, if appropriate -->
+        <descgrp>
+            <head>Administrative Information</head>
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 1952</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Cumback mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+            <!--optional -->
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Craig Simpson.</p>
+                <p>Completed in <date normal="2014">2014</date></p>
+
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 level="series">
+                <did><container type="Box" label="Box">1</container>
+                    <unittitle><emph render="italic">Kansas Election Contested.</emph>
+                    Includes speech by Will Cumback, <unitdate normal="1856">1856</unitdate></unittitle>
+                    <physdesc>(printed, bound)</physdesc>
+                </did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle>Book of Autographs. Congress, 
+                    <unitdate normal="1856">1856</unitdate></unittitle>
+                <physdesc>(bound)</physdesc></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle>Biographical Material</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1850-04-17">1850, Apr. 17.</unitdate>
+                <title render="italic">Western Christian Advocate.</title> Clipping.</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1851-02-04">1851, Feb. 4.</unitdate>
+                    Glover, James, Jr. to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1854-08-21">1854, Aug. 21.</unitdate>
+                    Holman, William Steele to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1854-10-27">1854, Oct. 27.</unitdate>
+                    Colfax, Schuyler to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1854-11-27">1854, Nov. 27.</unitdate>
+                    Wright, Joseph A. Certificate of election of Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1855-04-16">1855, Apr. 16.</unitdate>
+                    Colfax, Schuyler to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1855-04-14">1855, Apr. 14.</unitdate>
+                    Orth, Godlove Stein to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1855-12-07">1855, Dec. 7.</unitdate>
+                    Bryan, Samuel to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1855-12-12">1855, Dec. 12.</unitdate>
+                    Cumback, William to Shombre [?], Henry J.</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1856-03-15">1856, Mar. 15.</unitdate>
+                    Bryan, Samuel to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1856-06-07">1856, Jun. 7.</unitdate>
+                    Howland, Joe D. to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1856-07-14">1856, Jul. 14.</unitdate>
+                    Mooney J. D. to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1856">1856.</unitdate>
+                    Printed. Cumback, William. Speech..<title render="italic">On the Politics of the Country...</title>
+                Washington, <unitdate normal="1856">1856</unitdate></unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1857-06-08">1857, Jun. [8?].</unitdate>
+                    McLean, John to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1857-07-29">1857, Jul. 29.</unitdate>
+                    Cobb, Howell to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1857">1857</unitdate>
+                    Printed. Cumback, William. <title render="italic">Politics of the Country...</title>
+                Washington, <unitdate normal="1857">1857</unitdate></unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1860-06-15">1860, Jun. 15.</unitdate>
+                    Clay, Cassius Marcellus to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1860-06-15">1860, Jun. 15.</unitdate>
+                    Lincoln, Abraham to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1860-10-24">1860, Oct. 24</unitdate>
+                    Greeley, Horace to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1863-05-27">1863, May 27.</unitdate>
+                    Andrews, Timothy Patrick to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1864-04-05">1864, Apr. 5.</unitdate>
+                    Usher, John Palmer to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1864-04-06">1864, Apr. 6.</unitdate>
+                    Andrews, Timothy P. to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1864-11-03">1864, Nov. 3.</unitdate>
+                    Cumback, William. Check to William Cumback</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1865-01-10">1865, Jan. 10.</unitdate>
+                    Cumback, William to Brodhead, John M.</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1865-03-24">1865, Mar. 24.</unitdate>
+                    Brice, Benjamin W. to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1865-06-05">1865, Jun. 5.</unitdate>
+                    Cumback, William to Brice, Benjamin</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1865-07-07">1865, Jul. 7.</unitdate>
+                    Stanton, Edwin McMasters to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1865-07-06">1865, Jul. 6.</unitdate>
+                    Adjutant General&apos;s office. Copy of discharge of William Cumback</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1870-01-03">1870, Jan. 3.</unitdate>
+                    Morton, Oliver Perry to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1870-02-07">1870, Feb. 7.</unitdate>
+                    Fish, Hamilton to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1740-04-17/1881-09-20" type="inclusive">1740, Apr. 17 – 1881, Sept. 20.</unitdate>
+                    Newspaper facsimiles</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><container type="Box" label="Box">2</container>
+                    <unittitle><unitdate normal="1871-02-18">1871, Feb. 18.</unitdate>
+                        Morton, Oliver Perry to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1871-02-20">1871, Feb. 20.</unitdate>
+                    Colfax, Schuyler to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1871-02-21">1871, Feb. 21.</unitdate>
+                    Morton, Oliver Perry to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1871-02-24">1871, Feb. 24.</unitdate>
+                    Morton, Oliver Perry to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1871-02-25">1871, Feb. 25</unitdate>
+                    Morton, Oliver Perry to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1871-02-25">1871, Feb. 25</unitdate>
+                    Morton, Oliver Perry to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1871-04-01">1871, Apr. 1.</unitdate>
+                    Pleasanton, Alfred to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1871">1871.</unitdate>
+                    Colfax, Schuyler to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1871">1871.</unitdate>
+                    Morton, Oliver Perry to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1874">1874</unitdate>
+                    Printed. Cumback, William. <title render="italic">Temperance and the Ballot-Box...</title>
+                Cincinnati, <unitdate normal="1874">1874</unitdate></unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1879-11-11">1879, Nov. 11.</unitdate>
+                    Sherman, John to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1881-03-15">1881, Mar. 15.</unitdate>
+                    Harrison, Benjamin to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1882-11-23">1882, Nov. 23.</unitdate>
+                    Stephens, Alexander H. to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1883-06-14">1883, Jun. 14.</unitdate>
+                    Hayes, Rutherford B. to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1884-03-05">1884, Mar. 5.</unitdate>
+                    Harrison, Benjamin to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1884-10-17">1884, Oct. 17.</unitdate>
+                    Michener, Louis Theodore to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1884-11-11">1884, Nov. 11.</unitdate>
+                    Sherman, William Tecumseh to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1885-05-13">1885, May 13.</unitdate>
+                    Dow, Neal to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1886-04-17">1886, Apr. 17.</unitdate>
+                    Jones, Sam P. to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1886-04-30">1886, Apr. 30.</unitdate>
+                    Harrison, Benjamin to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1887-02-15">1887, Feb. 15.</unitdate>
+                    Sherman, John to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1887-03-14">1887, Mar. 14.</unitdate>
+                    Hayes, Rutherford B. to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1887-04-16">1887, Apr. 16.</unitdate>
+                    Sherman, John to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1889-05-14">1889, May 14.</unitdate>
+                    Indiana Academy of Science. Certificate of election of William Cumback</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1887-06-08">1887, Jun. 8.</unitdate>
+                    Sherman, John to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1892-01-12">1892, Jan. 12.</unitdate>
+                    Carleton, Will to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1893-12-13">1893, Dec. 13.</unitdate>
+                    Wallace, Lewis to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1896-01-22">1896, Jan. 22.</unitdate>
+                    McKinley, William to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1896-06-29">1896, Jun. 29.</unitdate>
+                    McKinley, William to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1897-01-13">1897, Jan. 13.</unitdate>
+                    Sherman, John to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1897-02-26">1897, Feb. 26.</unitdate>
+                    Sherman, John to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1897-10-06">1897, Oct. 6.</unitdate>
+                    Porter, John Addison to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1898-02-05">1898, Feb. 5.</unitdate>
+                    Porter, John Addison to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1898-03-25">1898, Mar. 25.</unitdate>
+                    Thompson, James Maurice to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1903-01-18">1903, Jan. 18.</unitdate>
+                    Wallace, Lewis to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1903-07-27">1903, Jul. 27.</unitdate>
+                    Coburn, John to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1903-10-26">1903, Oct. 26.</unitdate>
+                    Lloyd, John Url to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1904-04-30">1904, Apr. 30.</unitdate>
+                    Cumback, William. <title render="italic">The Divine Right of Kings</title></unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1904-08-23">1904, Aug. 23.</unitdate>
+                    Nicholson, Meredith to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><unitdate normal="1835/1904" type="inclusive">Undated.</unitdate>
+                    Talmage, Thomas DeWitt to Cumback, William</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle><emph render="doublequote">Rebel Terms of Peace!</emph>
+                Print of broadside</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><container type="Box" label="Box">3</container>
+                    <unittitle>Jackson, Andrew. Grant of land... to William Ryans</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle>Pierce, Franklin. Grant of land... to Jane Coates</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle>Democratic Party, Indiana. Decatur County. Washington Township. Resolutions</unittitle></did>
+            </c01>
+            <c01 level="file">
+                <did><unittitle>Pierce, Franklin. Grant of land... to Samuel Galloway</unittitle></did>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
