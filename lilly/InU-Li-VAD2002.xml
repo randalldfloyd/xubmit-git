@@ -1,0 +1,932 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+--><ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external" countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924" relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li" identifier="InU-Li-VAD2002">InU-Li-VAD2002</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Hayes, Joseph Arnold mss.,<date normal="1941/1977" type="inclusive">1941-1977</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2014" type="publication">© 2014</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2014">© 2014</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2014" type="source">2014</date>
+                <lb></lb>Finding aid encoded by Tiffany Saulter, Lilly Library, Indiana University,
+                    <date normal="2014-04-16">April 16, 2014</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng">English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2014-04-16">April 16, 2014</date>
+                <item>Encoded finding aid started.</item>
+            </change>
+            <change audience="internal">
+                <date normal="2014-04-16">April 23, 2014</date>
+                <item>Encoded finding aid completed.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Hayes, Joseph, 1918-2006.</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Hayes, Joseph Arnold mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1941/1977" type="inclusive">1941-1977</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2828</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>24,000 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract"> Hayes, Joseph Arnold mss., ca.
+                1941-1977, consist of the writings, correspondence, and papers of author,
+                playwright, and screenwriter Joseph Hayes. Hayes was born in Indianapolis on August
+                2, 1918. </abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+            <p>Hayes was born in Indianapolis on August 2, 1918. He briefly entered a Benedictine
+                monastery at the age of 13 and later earned an undergraduate degree from Indiana
+                University. He moved to New York City after graduating in 1941, where he wrote for
+                radio and television before earning the 1948 Charles H. Sergel Drama Prize from the
+                University of Chicago for his play <title render="italic">Leaf and Bough</title>,
+                which was produced on Broadway in 1949. His most successful novel, <title render="italic">The Desperate Hours</title>, was written in 1954 and was adapted
+                into a Broadway play and a feature film, starring Humphrey Bogart and directed by
+                William Wyler, in 1955. The work in all its iterations received multiple awards,
+                including the 1955 Indiana Authors' Day Award in fiction, the 1955 Tony Award
+                for Best Play, and the Edgar Award from the Mystery Writers of America for Best
+                Motion Picture Screenplay in 1956.</p>
+            <p>Hayes penned various books and plays, mostly crime fiction, before writing <title render="italic">Calculated
+                Risk</title> in 1962, which would be his final Broadway play. The same year he co-authored
+                Bon Voyage!, an Academy Award-nominated Disney movie, with his wife Marrijane
+                Johnson, whom he had married in 1938. His later works included the novels <title render="italic">Ways of
+                    Darkness</title>, <title render="italic">No Escape,</title> <title render="italic">Winner's Circle, Island on Fire, Missing...and Presumed Dead,
+                        The Long Dark Night,</title> <title render="italic">Like Any Other Fugitive,</title> <title render="italic">The Deep End,</title>
+                <title render="italic">The Third Day,</title> <title render="italic">Don't Go
+                    Away Mad,</title> and <title render="italic">The Hours After Midnight,</title> as well as several plays. Hayes passed away
+                on September 11, 2006, in St. Augustine, Florida, at the age of 88.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>Organized into the following series: I. Writings; II. Correspondence; III. Newspaper
+                Clippings; IV. Other Manuscripts; V. Photographs; VI. Legal; VII. Miscellaneous.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>Writings include drafts, proofs, and accompanying materials for Hayes's novels,
+                plays, and films. Other Manuscripts contain more drafts of his work, including
+                forays into writing for television. Photographs include stills for The Desperate
+                Hours. The Legal series features records of the Hill v. Hayes court case.
+                Miscellaneous includes movie posters, a scrapbook, a 1954 IU Writers' Conference
+                citation, and a certificate from the National Register of Prominent Americans.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/hayes+joseph+1918-2006{su}"><persname encodinganalog="600" source="lcnaf">Hayes, Joseph, 1918-2006.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/hayes+joseph+1918-2006+correspondence{su}"><persname encodinganalog="600" source="lcnaf">Hayes, Joseph, 1918-2006 --Correspondence.</persname></extref></item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/authors+american+20th+century{su}"><subject encodinganalog="650" source="lcsh">Authors, American --20th century.</subject></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/authors+american+20th+century+correspondence{su}"><subject encodinganalog="650" source="lcsh">Authors, American --20th century --Correspondence.</subject></extref></item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="610" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+        <!-- required, if appropriate -->
+        <descgrp>
+            <head>Administrative Information</head>
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 1967.</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Hayes, Joseph Arnold mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+            <!--optional -->
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Craig Simpson.</p>
+                <p>Completed in <date normal="2014">2014</date></p>
+
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAD2002-00001" level="series">
+                <did><container label="Box" type="Box">1</container>
+                    <unittitle>I. Writings.</unittitle>
+                </did>
+                <c02 id="VAD2002-00002" level="file">
+                    <did><unittitle><title render="italic">The Desperate Hours.</title>
+                        Drafts of play script</unittitle><physdesc>(4 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00003" level="file">
+                    <did><unittitle><title render="italic">The Desperate Hours.</title>
+                        Drafts of film script</unittitle><physdesc>(5 folders)s</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00004" level="file">
+                    <did><unittitle><title render="italic">The Desperate Hours.</title>
+                        Photographs</unittitle><physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00005" level="file">
+                    <did><unittitle><title render="italic">The Desperate Hours.</title>
+                    Set design</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00006" level="file">
+                    <did><unittitle><title render="italic">The Desperate Hours.</title>
+                        Correspondence, notes</unittitle><physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00007" level="file">
+                    <did><unittitle><title render="italic">The Desperate Hours.</title>
+                        Reviews of novel</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00008" level="file">
+                    <did><unittitle><title render="italic">The Desperate Hours.</title>
+                    Playbill</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00009" level="file">
+                    <did><unittitle><title render="italic">The Desperate Hours.</title>
+                        Publicity materials</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00010" level="file">
+                    <did><unittitle><title render="italic">The Desperate Hours.</title>
+                        Film materials, biographies of actors</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00011" level="file">
+                    <did><unittitle><title render="italic">The Desperate Hours.</title>
+                        Programs and clippings</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00012" level="file">
+                    <did><unittitle><title render="italic">The Desperate Hours.</title>
+                        Reviews, scene design</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00013" level="file">
+                    <did><unittitle><title render="italic">The Desperate Hours.</title>
+                        and Joseph Hayes article</unittitle><physdesc>(laminated, mounted)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00014" level="file">
+                    <did><unittitle><title render="italic">The Desperate Hours.</title>
+                        Serialized in magazines</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00015" level="file">
+                    <did><unittitle><title render="italic">The Desperate Hours.</title>
+                    Sheet music</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00016" level="file">
+                    <did><unittitle><title render="italic">The Desperate Hours.</title>
+                    Posters</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00017" level="file">
+                    <did><unittitle><title render="italic">The Desperate Hours.</title>
+                    Clippings</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00018" level="file">
+                    <did><unittitle><title render="italic">Desperate Hours.</title>
+                        Drafts of play. Dutch translation</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00019" level="file">
+                    <did><unittitle><title render="italic">Calculated Risk.</title>
+                        Drafts of play script</unittitle><physdesc>(6 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00020" level="file">
+                    <did><unittitle><title render="italic">Calculated Risk.</title>
+                        Correspondence and contracts</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00021" level="file">
+                    <did><unittitle><title render="italic">Calculated Risk.</title>
+                    Clippings</unittitle><physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00022" level="file">
+                    <did><unittitle><title render="italic">Calculated Risk.</title>
+                        Playbills</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00023" level="file">
+                    <did><unittitle><title render="italic">Calculated Risk.</title>
+                        Miscellaneous data (early)</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00024" level="file">
+                    <did><unittitle><title render="italic">Bon Voyage.</title>
+                    Novel, first draft, <unitdate normal="1957">1957</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00025" level="file">
+                    <did><unittitle><title render="italic">Bon Voyage.</title>
+                    Novel, draft</unittitle><physdesc>(4 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00026" level="file">
+                    <did><container label="Box" type="Box">3</container>
+                        <unittitle><title render="italic">Bon Voyage.</title> Foreword</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00027" level="file">
+                    <did><unittitle><title render="italic">Bon Voyage.</title> Notes on future chapters and revisions</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00028" level="file">
+                    <did><unittitle><title render="italic">Bon Voyage.</title> 1st draft screenplay</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00029" level="file">
+                    <did><unittitle><title render="italic">Bon Voyage.</title> Clippings</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00030" level="file">
+                    <did><unittitle><title render="italic">The Deep End.</title> Original 1st Manuscript of Novel.
+                    <unitdate normal="1966-04">April 1966</unitdate></unittitle><physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00031" level="file">
+                    <did><unittitle><title render="italic">The Deep End.</title> Drafts of novel</unittitle>
+                    <physdesc>(7 foldes)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00032" level="file">
+                    <did><unittitle><title render="italic">The Deep End.</title> Galley of novel used for play</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00033" level="file">
+                    <did><container label="Box" type="Box">4</container>
+                        <unittitle><title render="italic">The Deep End.</title> Play script, adaptation of novel</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00034" level="file">
+                    <did><unittitle><title render="italic">The Deep End.</title> Outline for screenplay</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00035" level="file">
+                    <did><unittitle><title render="italic">The Deep End.</title> Film treatment</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00036" level="file">
+                    <did><unittitle><title render="italic">The Deep End.</title> Film screenplay</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00037" level="file">
+                    <did><unittitle><title render="italic">The Deep End.</title> Clippings</unittitle>
+                    <physdesc>(3 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00038" level="file">
+                    <did><unittitle><title render="italic">The Deep End.</title> Publicity</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00039" level="file">
+                    <did><unittitle><title render="italic">The Deep End.</title> Miscellaneous</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00040" level="file">
+                    <did><unittitle><title render="italic">The Midnight Sun.</title> Play script</unittitle>
+                    <physdesc>(6 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00041" level="file">
+                    <did><container label="Box" type="Box">5</container>
+                        <unittitle><title render="italic">The Midnight Sun.</title> Play script</unittitle>
+                    <physdesc>(6 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00042" level="file">
+                    <did><unittitle><title render="italic">The Long Dark Night.</title> Novel, draft, parts 1-6</unittitle>
+                    <physdesc>(5 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00043" level="file">
+                    <did><unittitle><title render="italic">The Long Dark Night.</title> Novel, as submitted, then edited</unittitle>
+                    <physdesc>(4 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00044" level="file">
+                    <did><unittitle><title render="italic">The Long Dark Night.</title> Revision notes, dedication, galleys, changes, quotes, frontispiece</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00045" level="file">
+                    <did><unittitle><title render="italic">The Long Dark Night</title> Reviews</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00046" level="file">
+                    <did><container label="Box" type="Box">6</container>
+                        <unittitle><title render="italic">The Long Dark Night.</title> Film screenplay</unittitle>
+                    <physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00047" level="file">
+                    <did><unittitle><title render="italic">The Long Dark Night.</title> Miscellaneous</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00048" level="file">
+                    <did><unittitle><title render="italic">Outrageousageous Fortunes of BC Chadwicke III.</title> Research</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00049" level="file">
+                    <did><unittitle><title render="italic">Outrageousageous Fortunes of BC Chadwicke III.</title> Novel</unittitle>
+                    <physdesc>(6 novels)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00050" level="file">
+                    <did><unittitle><title render="italic">Outrageousageous Fortunes of BC Chadwicke III.</title> Galley proof</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00051" level="file">
+                    <did><unittitle><title render="italic">Outrageousageous Fortunes of BC Chadwicke III.</title> Manuscript, research notes</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00052" level="file">
+                    <did><unittitle><title render="italic">Outrageousageous Fortunes of BC Chadwicke III.</title> Notes, correspondence</unittitle>
+                    <physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00053" level="file">
+                    <did><container label="Box" type="Box">7</container>
+                        <unittitle><title render="italic">Outrageousageous Fortunes of BC Chadwicke III.</title> Treatment, opening sequence</unittitle>
+                    <physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00054" level="file">
+                    <did><unittitle><title render="italic">Outrageousageous Fortunes of BC Chadwicke III.</title> Screenplay</unittitle>
+                    <physdesc>(6 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00055" level="file">
+                    <did><unittitle><title render="italic">Outrageousageous Fortunes of BC Chadwicke III.</title> Clippings</unittitle>
+                    <physdesc>(6 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00056" level="file">
+                    <did><unittitle><title render="italic">Like Any Other Fugitive</title> (originally titled <title render="italic">The Outrageous Fortunes of BC Chadwicke III</title>).
+                     Novel. Original manuscript.</unittitle><physdesc>(3 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00057" level="file">
+                    <did><unittitle><title render="italic">Like Any Other Fugitive.</title> Novel. Drafts</unittitle>
+                    <physdesc>(6 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00058" level="file">
+                    <did><container label="Box" type="Box">8</container>
+                        <unittitle><title render="italic">Like Any Other Fugitive.</title> Novel. Drafts</unittitle>
+                    <physdesc>(3 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00059" level="file">
+                    <did><unittitle><title render="italic">The Happiest Millionaire.</title> Play. Original manuscript</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00060" level="file">
+                    <did><unittitle><title render="italic">The Happiest Millionaire.</title> Play scripts</unittitle>
+                    <physdesc>(2 folders)</physdesc></did>
+                </c02>
+                
+                <c02 id="VAD2002-00061" level="file">
+                    <did><unittitle><title render="italic">The Happiest Millionaire.</title> Playbill</unittitle>
+                    <physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00062" level="file">
+                    <did><unittitle><title render="italic">The Happiest Millionaire.</title> Pilot script, comments, correspondence, program of play</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00063" level="file">
+                    <did><unittitle><title render="italic">The Happiest Millionaire.</title> Draft, correspondence</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00064" level="file">
+                    <did><unittitle><title render="italic">The Third Day.</title> Treatment</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00065" level="file">
+                    <did><unittitle><title render="italic">The Third Day.</title> Screenplay. 1st draft</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00066" level="file">
+                    <did><unittitle><title render="italic">The Third Day.</title> Screenplay</unittitle><physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00067" level="file">
+                    <did><unittitle><title render="italic">The Third Day.</title> Uncorrected proof</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00068" level="file">
+                    <did><unittitle><title render="italic">Don't Go Away Mad.</title> Correspondence</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00069" level="file">
+                    <did><unittitle><title render="italic">Don't Go Away Mad.</title> Clippings</unittitle>
+                    <physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00070" level="file">
+                    <did><unittitle><title render="italic">Don't Go Away Mad.</title> Screenplay</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00071" level="file">
+                    <did><unittitle><title render="italic">Don't Go Away Mad.</title> Galleys</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00072" level="file">
+                    <did><container label="Box" type="Box">9</container>
+                        <unittitle><title render="italic">Don't Go Away Mad.</title> Galleys</unittitle>
+                    <physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00073" level="file">
+                    <did><unittitle><title render="italic">Leaf and Bough.</title>
+                    Play scripts</unittitle><physdesc>(4 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00074" level="file">
+                    <did><unittitle><title render="italic">Leaf and Bough.</title>
+                    Miscellaneous, reviews</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00075" level="file">
+                    <did><unittitle><title render="italic">The Hours After Midnight.</title>
+                    Novel</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00076" level="file">
+                    <did><unittitle><title render="italic">The Hours After Midnight.</title> Clippings</unittitle>
+                    </did>
+                </c02>
+                <c02 id="VAD2002-00077" level="file">
+                    <did><unittitle><title render="italic">The Hours After Midnight.</title>
+                    Publicity in <title render="italic">Good Housekeeping</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00078" level="file">
+                    <did><unittitle><title render="italic">Here Today, Gone Tomorrow.</title> Teleplay</unittitle>
+                    <physdesc>(5 folders)</physdesc></did>
+                </c02>
+            </c01>
+            <c01 id="VAD2002-00079" level="series">
+                <did><container label="Box" type="Box">10</container>
+                    <unittitle>II. Correspondence.</unittitle></did>
+                <c02 id="VAD2002-00080" level="file">
+                    <did><unittitle>Joseph Hayes correspondence, telegrams, notes. 
+                        <unitdate normal="1950/1979" type="inclusive">1950s-1970s</unitdate></unittitle>
+                    <physdesc>(14 folders)</physdesc></did>
+                </c02>
+            </c01>
+            <c01 id="VAD2002-00081" level="series">
+                <did><container label="Box" type="Box">10</container>
+                    <unittitle>III. Newspaper Clippings.</unittitle></did>
+                <c02 id="VAD2002-00082" level="file">
+                    <did><unittitle>Press Clippings <title render="italic">(Desperate Hours).</title>
+                    <unitdate normal="1955-01/1955-02" type="inclusive">Jan-Feb. 1955</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00083" level="file">
+                    <did><unittitle>Clippings</unittitle><physdesc>(4 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00084" level="file">
+                    <did><container label="Box" type="Box">11</container>
+                        <unittitle>Clippings</unittitle><physdesc>(18 folders)</physdesc></did>
+                </c02>
+            </c01>
+            <c01 id="VAD2002-00085" level="series">
+                <did><container label="Box" type="Box">12</container>
+                    <unittitle>IV. Other Manuscripts.</unittitle></did>
+                <c02 id="VAD2002-00086" level="file">
+                    <did><unittitle><title render="italic">Deadfall [Is Anyone Listening?].</title> Script</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00087" level="file">
+                    <did><unittitle><title render="italic">Is Anyone Listening?</title> Production notes</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00088" level="file">
+                    <did><unittitle><title render="italic">The Young Doctors.</title> Script</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00089" level="file">
+                    <did><unittitle><title render="italic">The Young Doctors.</title> Clippings and reviews</unittitle>
+                    <physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00090" level="file">
+                    <did><unittitle><title render="italic">The Girl from Boston.</title> Scripts</unittitle>
+                    <physdesc>(4 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00091" level="file">
+                    <did><unittitle><title render="italic">The Thompsons.</title> Scripts</unittitle>
+                    <physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00092" level="file">
+                    <did><unittitle><title render="italic">Opening Night.</title> Scripts</unittitle>
+                    <physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00093" level="file">
+                    <did><unittitle><title render="italic">Kirkwood and Goodman.</title> Scripts</unittitle>
+                    <physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00094" level="file">
+                    <did><unittitle><title render="italic">The Tiger's Eye.</title> Sample section of novel plus one 
+                    complete story; play</unittitle><physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00095" level="file">
+                    <did><unittitle><title render="doublequote">Nobody Ever Tells Me Anything.</title> Story</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00096" level="file">
+                    <did><unittitle><title render="doublequote">Looking for an Indian.</title> Story</unittitle>
+                    <physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00097" level="file">
+                    <did><unittitle><title render="doublequote">Compassion, Contempt, and Corrpution.</title> Essay</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00098" level="file">
+                    <did><unittitle><title render="doublequote">Thank You, Mark Caldwell.</title> Story</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00099" level="file">
+                    <did><container label="Box" type="Box">13</container>
+                        <unittitle><title render="italic"></title></unittitle></did>
+                    <note><p>(This box includes primarily drafts of teleplays, TV sketches and revues)</p></note>
+                </c02>
+                <c02 id="VAD2002-00100" level="file">
+                    <did><unittitle><title render="italic">The Way of Women.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00101" level="file">
+                    <did><unittitle><title render="italic">It Could Be You.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00102" level="file">
+                    <did><unittitle><title render="italic">There's Always Tomorrow.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00103" level="file">
+                    <did><unittitle><title render="italic">The Snap of the Turtle.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00104" level="file">
+                    <did><unittitle><title render="italic">Rick's Riviera.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00105" level="file">
+                    <did><unittitle><title render="italic">The Murderer.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00106" level="file">
+                    <did><unittitle><title render="italic">The Underprep.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00107" level="file">
+                    <did><unittitle><title render="italic">On the Way Home.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00108" level="file">
+                    <did><unittitle><title render="italic">The Man Named Peters.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00109" level="file">
+                    <did><unittitle><title render="italic">So Long at the Fair.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00110" level="file">
+                    <did><unittitle><title render="italic">The Other Charles.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00111" level="file">
+                    <did><unittitle><title render="italic">Fortune and Folly.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00112" level="file">
+                    <did><unittitle><title render="italic">All the Best Years.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00113" level="file">
+                    <did><unittitle><title render="italic">The Man Who Was Sorry.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00114" level="file">
+                    <did><unittitle><title render="italic">An Old Flame of Mine.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00115" level="file">
+                    <did><unittitle><title render="italic">Weep Not for Love.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00116" level="file">
+                    <did><unittitle><title render="italic">His Father's Music.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00117" level="file">
+                    <did><unittitle><title render="italic">They Won't Believe Me.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00118" level="file">
+                    <did><unittitle><title render="italic">The Intruder.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00119" level="file">
+                    <did><unittitle><title render="italic">Her Name is Evil.</title></unittitle>
+                    <physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00120" level="file">
+                    <did><unittitle><title render="italic">The Closed Heart.</title></unittitle>
+                    <physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00121" level="file">
+                    <did><unittitle><title render="italic">Thursday's Child.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00122" level="file">
+                    <did><unittitle><title render="italic">Vassar Girl</title>
+                    (2nd version).</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00123" level="file">
+                    <did><unittitle><title render="italic">Apartment Hunters.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00124" level="file">
+                    <did><unittitle><title render="italic">No Time for Chivalry.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00125" level="file">
+                    <did><unittitle><title render="italic">The Moon for Linda.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00126" level="file">
+                    <did><unittitle><title render="italic">We Were Very Merry.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00127" level="file">
+                    <did><unittitle><title render="italic">An Act of Bravery.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00128" level="file">
+                    <did><unittitle><title render="italic">Verna.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00129" level="file">
+                    <did><unittitle><title render="italic">Two White Horses.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00130" level="file">
+                    <did><unittitle><title render="italic">The Witch of Woonsapucket.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00131" level="file">
+                    <did><unittitle><title render="italic">The Girl from Boston.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00132" level="file">
+                    <did><unittitle><title render="italic">All Else is Confusion.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00133" level="file">
+                    <did><unittitle><title render="italic">Weekend in Connecticut.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00134" level="file">
+                    <did><unittitle><title render="italic">A Cold in the Head.</title> Story</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00135" level="file">
+                    <did><unittitle><title render="italic">Dial M for Murder:</title>
+                     <title render="doublequote">Blow Out the Candles.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00136" level="file">
+                    <did><unittitle><title render="italic">The Adventurer</title> and <title render="italic">Be a Sport.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00137" level="file">
+                    <did><unittitle>Copenhagen.</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00138" level="file">
+                    <did><unittitle>They're None of Them Perfect.</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00139" level="file">
+                    <did><container label="Box" type="Box">14</container>
+                        <unittitle><title render="doublequote">Distorted Views.</title>
+                        <title render="italic">New York Times</title> articled by Joseph Hayes, 
+                        with reply letters</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00140" level="file">
+                    <did><unittitle><title render="italic">The Curtain Rises.</title> 
+                    Script of play</unittitle><physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00141" level="file">
+                    <did><unittitle><title render="doublequote">Voice of Yesterday.</title>
+                    Story, outline of TV adaptation</unittitle><physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00142" level="file">
+                    <did><unittitle><title render="italic">Two White Horses.</title>
+                    Script of play</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00143" level="file">
+                    <did><unittitle><title render="italic">No Safe Haven.</title>
+                    Outline of novel</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00144" level="file">
+                    <did><unittitle><title render="italic">One Man's Mate.</title>
+                    Script of play</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00145" level="file">
+                    <did><unittitle><title render="italic">When the Wind Blows.</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00146" level="file">
+                    <did><unittitle><title render="doublequote">The Intruder.</title> Story</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00147" level="file">
+                    <did><unittitle><title render="italic">As for Me Tomorrow.</title>
+                    Script of play</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00148" level="file">
+                    <did><unittitle><title render="doublequote">All-American Heel.</title> 
+                    Article</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00149" level="file">
+                    <did><unittitle><title render="italic">Any Other Business.</title> 
+                    Draft</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00150" level="file">
+                    <did><unittitle><title render="italic">Walking Tall.</title>
+                    Screenplay</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00151" level="file">
+                    <did><unittitle><title render="doublequote">The Bell of Cadiz.</title>
+                    Story</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00152" level="file">
+                    <did><unittitle><title render="italic">The Wild Drums.</title>
+                    Treatment for film</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00153" level="file">
+                    <did><unittitle><title render="italic">Dark Victory.</title>
+                    Screenplay by Casey Robinson</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00154" level="file">
+                    <did><unittitle><title render="italic">Summer Flight.</title>
+                    <emph render="doublequote">An outline, screenplay, novel</emph></unittitle>
+                    <physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00155" level="file">
+                    <did><unittitle><title render="italic">Brandy for Heroes.</title>
+                    Play</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00156" level="file">
+                    <did><unittitle><title render="italic">Yesterday and Tomorrow.</title>
+                    Parts I-IV, Prologue, Epilogue, Miscellaneous Revision Notes</unittitle>
+                    <physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00157" level="file">
+                    <did><unittitle><title render="italic">The Wallet.</title>
+                    Teleplay</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00158" level="file">
+                    <did><unittitle><title render="italic">The Harness.</title>
+                    Play</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00159" level="file">
+                    <did><unittitle><title render="italic">The Long View.</title>
+                    TV sketch</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00160" level="file">
+                    <did><unittitle><title render="italic">The Face of a Woman (It Could Be You).</title>
+                    TV sketchs</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00161" level="file">
+                    <did><unittitle><title render="italic">The Life and Times of Bugsy Siegel.</title>
+                    Screen concept</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00162" level="file">
+                    <did><container label="Box" type="Box">15</container>
+                        <unittitle>New play, two acts</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00163" level="file">
+                    <did><unittitle>Miscellaneous TV sketches</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00164" level="file">
+                    <did><unittitle>Unidentified story, <emph render="doublequote">as sold to Redboko.</emph>
+                    Jan. 1950</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00165" level="file">
+                    <did><unittitle>Unidentified screenplays and notes</unittitle>
+                    <physdesc>(4 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00166" level="file">
+                    <did><unittitle>Unidentified manuscripts</unittitle>
+                    <physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00167" level="file">
+                    <did><unittitle>A list of plays by Hayes</unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD2002-00168" level="series">
+                <did><container label="Box" type="Box">15</container>
+                    <unittitle>V. Photographs.</unittitle></did>
+                <c02 id="VAD2002-00169" level="file">
+                    <did><unittitle>Photos, including <title render="italic">The Desperate Hours</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00170" level="file">
+                    <did><unittitle>Photos, miscellaneous</unittitle><physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00171" level="file">
+                    <did><unittitle>Photos, prints of Hayes' Indiana University Distinguished Alumni Service Award</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00172" level="file">
+                    <did><unittitle>Photos, slides</unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD2002-00173" level="series">
+                <did><container label="Box" type="Box">15</container>
+                <unittitle>VI. Legal.</unittitle></did>
+                <c02 id="VAD2002-00174" level="file">
+                    <did><unittitle>Supreme Court of New York legal records. 
+                        <emph render="italic">Hill et al. vs. Hayes et. al.</emph>
+                    <unitdate normal="1957-06">Jun. 1957</unitdate></unittitle>
+                    <physdesc>(3 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00175" level="file">
+                    <did><unittitle><emph render="italic">Hill v. Hayes.</emph>
+                    Court record</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00176" level="file">
+                    <did><unittitle>McGraw-Hill Book Co. Agreement</unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD2002-00177" level="series">
+                <did><container label="Box" type="Box">16</container>
+                    <unittitle>VII. Miscellaneous.</unittitle></did>
+                <c02 id="VAD2002-00178" level="file">
+                    <did><unittitle>Certificate, Joseph Hayes, National Register of Prominent Americans</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00179" level="file">
+                    <did><unittitle><title render="italic">Life Magazine.</title>
+                    <unitdate normal="1955">1955</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00180" level="file">
+                    <did><unittitle>New Haven Register, featuring Joseph Hayes.
+                    <unitdate normal="1966">1966</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00181" level="file">
+                    <did><unittitle>Publications, including
+                    <title render="italic">Me Naiset</title></unittitle>
+                    <physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00182" level="file">
+                    <did><unittitle>Notes</unittitle>
+                    <physdesc>(4 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2002-00183" level="file">
+                    <did><unittitle>Mountain States Telephone Directory. 
+                    <unitdate normal="1967-06">June 1967</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00184" level="file">
+                    <did><unittitle>Travel material and maps</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00185" level="file">
+                    <did><unittitle>Posters</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00186" level="file">
+                    <did><unittitle>Writers' Conference Portfolio
+                    <unitdate normal="1966">(1966)</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00187" level="file">
+                    <did><unittitle>IU <unitdate normal="1954">1954</unitdate>
+                    Writers' Conference citation</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00188" level="file">
+                    <did><unittitle>Scrapbook</unittitle></did>
+                </c02>
+                <c02 id="VAD2002-00189" level="file">
+                    <did><unittitle>Miscellaneous</unittitle>
+                    <physdesc>(3 folders)</physdesc></did>
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
