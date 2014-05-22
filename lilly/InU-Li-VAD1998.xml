@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+--><ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external" countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924" relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li" identifier="InU-Li-VAD1998">InU-Li-VAD1998</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Orbón mss.,<date normal="1930/2000" type="inclusive">1930-2000</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2014" type="publication">© 2014</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2014">© 2014</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2014" type="source">2014</date>
+                <lb></lb>Finding aid encoded by Tiffany Saulter, Lilly Library, Indiana University,
+                    <date normal="2014-04-16">April 16, 2014</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng">English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2014-04-16">April 16, 2014</date>
+                <item>Encoded finding aid started.</item>
+            </change>
+            <change audience="internal">
+                <date normal="2014-04-16">April 16, 2014</date>
+                <item>Encoded finding aid started.</item>
+            </change>
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Orbón, Julián, 1925-1991. </persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Orbón mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1930/2000" type="inclusive">1930-2000</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2651</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>800 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Orbón mss., 1930-2000, consist of
+                the correspondence, musical manuscripts, photographs, and printed music of Spanish
+                composer, Julián Orbón (August 7, 1925-May 20, 1991)</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+            <p>Born on August 7, 1925, in Aviles, Spain, Orbón lived in Cuba from 1940 to 1960,
+                following which he moved to Mexico. In 1935, he studied at the National Conservatory
+                of Oviedo in Spain. He then moved to Havana and began composing at an early age
+                under the direction of Jose Ardevol. He was a member of the Grupo de Renovacion
+                Musical during 1942-1949. In 1946, Orbón was awarded a grant to study at the
+                Tanglewood Music Center with Aaron Copland. From 1946-1960, he was the director of
+                the Orbón Conservatory, Havana, which was founded by his father, Benjamin. In 1954,
+                he won the Juan de Landaeta Prize at the International Festival of Caracas
+                (Venezuela) for his work. <title render="italic">Tres versiones sinfónicas</title>
+                followed in 1958, along with one of his most important compositions, <title render="italic">Concerto grosso for string quartet and orchestra.</title> In
+                1955, the Fromm Foundation commissioned a work which was given its premiere in the
+                Tanglewood Festival by a chamber group from the Boston Symphony Orchestra. In 1958,
+                he received a scholarship from the John Simon Guggenheim Foundation; during that
+                same year, he was given a commission to write a symphonic work by the Serge
+                Koussevitzki Music Foundation. The original manuscript now constitutes part of the
+                20th century music collection of the Library of Congress in Washington</p>
+            <p>In 1959, George Balanchine selected Orbón to choreograph his Symphonic Dances as part
+                of the Ballet Panamerica, which consisted of an evening of music from the more
+                prominent composers of Latin America. In 1963, his Concerto Grosso was selected to
+                represent Latin American music in the Baden-Baden Festival in Germany. He also
+                collaborated with Pete Seeger on the musical adaptation of the famous <emph render="italic">Guantanamera</emph> tune and adapted the lyrics of the song
+                based on a poem by Cuban poet, José Martí. He later became a lecturer at the
+                University of Washington, the University of Miami, and at Princeton University.
+                Orbón has given several lectures at institutions such as the University of Havana,
+                Barnard College, the Spanish Institute of Columbia University in New York City, the
+                Conservatory of Music in Mexico City, Washington University in St. Louis, and
+                Rutgers University. He has also published important articles in both American and
+                European artistic, literary, and musical magazines and journals.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>Organized into the following series: I. Correspondence; II.
+                Photographs; III. Writings; IV. Course Materials; V. Music; VI. Programs; VII.
+                Articles and Clippings; VIII. Awards and Honors.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>Correspondents include: Carlos Chavez; Aaron Copland; Fina Garciá-Marruz; Ernesto
+                Halffter; José Lezama-Lima; Eduardo Mata; Juan Orrego-Salas; Hector Quintinar; Pete
+                Seeger; Hector Tosar; Enrique Ubieta; Heitor Villa-Lobos. Photographs are organized
+                alphabetically by the last name of the individual and then by date. Individuals
+                pictured include: Juan José Castro; Carlos Chavez; Aaron Copland; Heitor
+                Villa-Lobos; and Julián Orbón.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/orbon+julian+1925-1991+photographs{su}"><persname encodinganalog="600" source="lcnaf">Orbón, Julián, 1925-1991 --Photographs.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/chavez+carlos+1899-1978+correspondence{su}"><persname encodinganalog="600" source="lcnaf">Chávez, Carlos, 1899-1978 --Correspondence.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/chaves+carlos+1899-1978+photographs{su}"><persname encodinganalog="600" source="lcnaf">Chávez, Carlos, 1899-1978 --Photographs.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/castro+juan+jose+1895-1968+photographs{su}"><persname encodinganalog="600" source="lcnaf">Castro, Juan José, 1895-1968 --Photographs.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/copland+aaron+1900-1990+correspondence{su}"><persname encodinganalog="600" source="lcnaf">Copland, Aaron, 1900-1990 --Correspondence.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/copland+aaron+1900-1990+photographs{su}"><persname encodinganalog="600" source="lcnaf">Copland, Aaron, 1900-1990--Photographs.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/garcia+marruz+fina+1923{su}"><persname encodinganalog="600" source="lcnaf">García Marruz, Fina, 1923 ---Correspondence.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/halffter+ernesto+1905-1989+correspondence{su}"><persname encodinganalog="600" source="lcnaf">Halffter, Ernesto, 1905-1989 --Correspondence.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/lezama+lima+jose+correspondence{su}"><persname encodinganalog="600" source="lcnaf">Lezama Lima, José --Correspondence.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/mata+eduardo+correspondence{su}"><persname encodinganalog="600" source="lcnaf">Mata, Eduardo --Correspondence.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/orrego+salas+juan+1919+correspondence{su}"><persname encodinganalog="600" source="lcnaf">Orrego-Salas, Juan, 1919 ---Correspondence.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/seegar+pete+1919-2014{su}"><persname encodinganalog="600" source="lcnaf">Seeger, Pete, 1919-2014</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/tosar+errecart+hector+a++(hector+alberto)+1923-2002+correspondence{su}"><persname encodinganalog="600" source="lcnaf">Tosar Errecart, Héctor A. (Héctor Alberto), 1923-2002 --Correspondence.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/ubieta+enrique+correspondence{su}"><persname encodinganalog="600" source="lcnaf">Ubieta, Enrique --Correspondence.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/villa+lobos+heitor+correspondence{su}"><persname encodinganalog="600" source="lcnaf">Villa-Lobos, Heitor --Correspondence.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/villa+lobos+heitor+photographs{su}"><persname encodinganalog="600" source="lcnaf">Villa-Lobos, Heitor --Photographs.</persname></extref></item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="610" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+        
+        <descgrp>
+            <head>Administrative Information</head>
+            
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 2006</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Orbón mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+            <!--optional -->
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Kristin Leaman.</p>
+                <p>Completed in <date normal="2014">2014</date></p>
+
+            </processinfo>
+        </descgrp>
+        <dsc type="combined">
+            <c01 id="VAD1998-00001" level="series">
+                <did><container label="Box" type="Box">1</container>
+                    <unittitle>I. Correspondence.</unittitle>
+                </did>
+                <c02 id="VAD1998-00002" level="file">
+                    <did><unittitle>Cabrera-Infante, Guillermo, 
+                        <unitdate normal="1983/1993" type="inclusive">1983-1993</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00003" level="file">
+                    <did><unittitle>Cáceras, Germán, 
+                        <unitdate normal="1981/1986" type="inclusive">1981-1986</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00004" level="file">
+                    <did><unittitle>Camacho, Jorge, 
+                        <unitdate normal="1976/1986" type="inclusive">1976-1986</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00005" level="file">
+                    <did><unittitle>Castro, Juan José, 
+                        <unitdate normal="1962">1962</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00006" level="file">
+                    <did><unittitle>Chavez, Carlos, 
+                        <unitdate normal="1957/1977" type="inclusive">1957-1977</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00007" level="file">
+                    <did><unittitle>Copland, Aaron, 
+                        <unitdate normal="1956/1984" type="inclusive">1956-1984</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00008" level="file">
+                    <did><unittitle>Cordero, Roque et al, 
+                        <unitdate normal="1964">1964</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00009" level="file">
+                    <did><unittitle>Cuevas, José Luis, 
+                        <unitdate normal="1930/2000" type="inclusive">undated</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00010" level="file">
+                    <did><unittitle>Diego, Eliseo &amp; Garcia-Marruz, Bella, 
+                        <unitdate normal="1959/1991" type="inclusive">1959-1991</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00011" level="file">
+                    <did><unittitle>Dorati, Antal, 
+                        <unitdate normal="1957/1979" type="inclusive">1957-1979</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00012" level="file">
+                    <did><unittitle>Durán, Gustavo, 
+                        <unitdate normal="1967/1968" type="inclusive">1967-1968</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00013" level="file">
+                    <did><unittitle>Estrada, Julio, 
+                        <unitdate normal="1983">1983</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00014" level="file">
+                    <did><unittitle>Foss, Lukas, 
+                        <unitdate normal="1956/1990" type="inclusive">1956-1990</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00015" level="file">
+                    <did><unittitle>Galán, Natalio &amp; Martin, Edgardo, 
+                        <unitdate normal="1981">1981</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00016" level="file">
+                    <did><unittitle>Garciá-Marruz, Fina, 
+                        <unitdate normal="1959/1978" type="inclusive">1959-1978</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00017" level="file">
+                    <did><unittitle>Gaztelu, Angel, 
+                        <unitdate normal="1950/1956" type="inclusive">1950-1956</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00018" level="file">
+                    <did><unittitle>Ginastera, Alberto, 
+                        <unitdate normal="1956">195</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00019" level="file">
+                    <did><unittitle>Halffter, Ernesto, 
+                        <unitdate normal="1967/1978" type="inclusive">1967-1978</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00020" level="file">
+                    <did><unittitle>Lavista, Mario, 
+                        <unitdate normal="1986/1987" type="inclusive">1986-1987</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00021" level="file">
+                    <did><unittitle>Markevitch, Igor, 
+                        <unitdate normal="1958">1958</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00022" level="file">
+                    <did><unittitle>Nin-Culmell, Joaquin, 
+                        <unitdate normal="1969/1991" type="inclusive">1969-1991</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00023" level="file">
+                    <did><unittitle>Orbon, Julian, 
+                        <unitdate normal="1959">1959</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00024" level="file">
+                    <did><unittitle>Orrego-Salas, Juan A., 
+                        <unitdate normal="1964/1984" type="inclusive">1964-1984</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00025" level="file">
+                    <did><unittitle>Putman, Ivan, <unitdate normal="1970">1970</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00026" level="file">
+                    <did><unittitle>Puyana, Rafael, 
+                        <unitdate normal="1960/1979" type="inclusive">1960-1979</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00027" level="file">
+                    <did><unittitle>Quintinar, Hector, 
+                        <unitdate normal="1963/1971" type="inclusive">1963-1971</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00028" level="file">
+                    <did><unittitle>Rodriguez, José Miguel, 
+                        <unitdate normal="1977/1998" type="inclusive">1977-1998</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00029" level="file">
+                    <did><unittitle>Segovia, Andrés, 
+                        <unitdate normal="1959/1984" type="inclusive">1959-1984</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00030" level="file">
+                    <did><unittitle>Rorem, Ned, 
+                        <unitdate normal="1930/2000" type="inclusive">undated</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00031" level="file">
+                    <did><unittitle>Stakowski, Leopold, <unitdate normal="1965">1965</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00032" level="file">
+                    <did><unittitle>Texidor, Fernando, 
+                        <unitdate normal="1976/1980" type="inclusive">1976-1980</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00033" level="file">
+                    <did><unittitle>Tosar, Hector, 
+                        <unitdate normal="1957/1964" type="inclusive">1957-1964</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00034" level="file">
+                    <did><unittitle>Ubieta, Enrique, 
+                        <unitdate normal="1972/1975" type="inclusive">1972-1975</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00035" level="file">
+                    <did><unittitle>Vega, Aurelio de le, <unitdate normal="1999">1999</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00036" level="file">
+                    <did><unittitle>Villa-Lobos, Heitor, 
+                        <unitdate normal="1955/1958" type="inclusive">1955-1958</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00037" level="file">
+                    <did><unittitle>Vitier, Cintio, <unitdate normal="1961/1989" type="inclusive">1961-1989</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00038" level="file">
+                    <did><unittitle>Zambrano, Maria, 
+                        <unitdate normal="1979/1999" type="inclusive">1979-1999</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00039" level="file">
+                    <did><unittitle>Various Cultural Organizations [In English], 
+                        <unitdate normal="1956/1993" type="inclusive">1956-1993</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00040" level="file">
+                    <did><unittitle>Various Cultural Organizations [In Spanish], 
+                        <unitdate normal="1964/1999" type="inclusive">1964-1999</unitdate></unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1998-00041" level="series">
+                <did><container label="Box" type="Box">1</container>
+                    <unittitle>II. Photographs.</unittitle></did>
+                <c02 id="VAD1998-00042" level="file">
+                    <did><unittitle>Chavez, Carlos, 
+                        <unitdate normal="1930/2000" type="inclusive">undated</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00043" level="file">
+                    <did><unittitle>Orbon et al, 
+                        <unitdate normal="1930/2000" type="inclusive">undated</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00044" level="file">
+                    <did><unittitle>Villa-Lobos, Heiter, 
+                        <unitdate normal="1954/1957" type="inclusive">1954-1957</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00045" level="file">
+                    <did><unittitle>Photographs, 
+                        <unitdate normal="1949/1960" type="inclusive">1949-1960</unitdate></unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1998-00046" level="series">
+                <did><container label="Box" type="Box">1</container>
+                    <unittitle>III. Writings.</unittitle></did>
+                <c02 id="VAD1998-00047" level="file">
+                    <did><unittitle>Signature Manuel de Falla, 
+                        <unitdate normal="1928">1928</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00048" level="file">
+                    <did><unittitle><title render="doublequote">Tarsis, Isaias, Colon,</title>
+                        <unitdate normal="1957">1957</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00049" level="file">
+                    <did><unittitle><title render="doublequote">Tradicion y Originalidaden la musica hispanoamerica,</title>
+                        <unitdate normal="1968/1969" type="inclusive">1968-1969</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00050" level="file">
+                    <did><unittitle>Iconographia Antonio Estevez, 
+                        <unitdate normal="1982">1982</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00051" level="file">
+                    <did><unittitle>Orbon's articles in <title render="italic">Pauta,</title> 
+                        <unitdate normal="1987">1987</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00052" level="file">
+                    <did><unittitle>Velia Yedra's book announcement, 
+                        <unitdate normal="1991">1991</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00053" level="file">
+                    <did><unittitle>An analysis of Las Sinfonias, 
+                        <unitdate normal="1930/2000" type="inclusive">undated</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00054" level="file">
+                    <did><container label="Box" type="Box">2</container>
+                        <unittitle>An Analysis of Las Sinfonias, 
+                            <unitdate normal="1930/2000" type="inclusive">undated</unitdate></unittitle>
+                    <physdesc>(3 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD1998-00055" level="file">
+                    <did><unittitle>Conference lectures by Orbon, 
+                        <unitdate normal="1930/2000" type="inclusive">undated</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00056" level="file">
+                    <did><unittitle>Orbon on his relationship with Carlos Chavez, 
+                        <unitdate normal="1930/2000" type="inclusive">undated</unitdate></unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1998-00057" level="series">
+                <did><container label="Box" type="Box">2</container>
+                    <unittitle>IV. Course Materials.</unittitle></did>
+                <c02 id="VAD1998-00058" level="file">
+                    <did><unittitle>Modal Analysis, notebooks, 
+                        <unitdate normal="1974">1974;</unitdate>
+                        <unitdate normal="1930/2000" type="inclusive">undated</unitdate>
+                    </unittitle><physdesc>(3 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD1998-00059" level="file">
+                    <did><unittitle>Modal Analysis, lesson plans, 
+                        <unitdate normal="1930/2000" type="inclusive">undated</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00060" level="file">
+                    <did><unittitle>Modal Analysis, music, 
+                        <unitdate normal="1930/2000" type="inclusive">undated</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00061" level="file">
+                    <did><unittitle>Modal Analysis, miscellaneous, 
+                        <unitdate normal="1930/2000">undated</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00062" level="file">
+                    <did><unittitle>Music in the Spanish Civilization, music, 
+                        <unitdate normal="1947/1948" type="inclusive">1947-1948</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00063" level="file">
+                    <did><unittitle>Music in the Spanish Civilization, notes, 
+                        <unitdate normal="1930/2000" type="inclusive">undated</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00064" level="file">
+                    <did><unittitle>Music in the Spanish Civilization, course outline, 
+                        <unitdate normal="1930/2000" type="inclusive">undated</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00065" level="file">
+                    <did><unittitle>Music in the Spanish Civilization, Téchnica de la Variacion notes, 
+                        <unitdate normal="1930/2000" type="inclusive">undated</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00066" level="file">
+                    <did><unittitle>Music in the Spanish Civilization, Téchnica de la Variacion notes, 
+                        <unitdate normal="1930/2000" type="inclusive">undated</unitdate></unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1998-00067" level="series">
+                <did><container label="Box" type="Box">2</container>
+                    <unittitle>V. Music.</unittitle></did>
+                <c02 id="VAD1998-00068" level="file">
+                    <did><unittitle>Music notebooks, 
+                        <unitdate normal="1930/2000" type="inclusive">undated</unitdate></unittitle>
+                    <physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD1998-00069" level="file">
+                    <did><unittitle>Notes on Orbon's compositions, 
+                        <unitdate normal="1930/2000" type="inclusive">undated</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00070" level="file">
+                    <did><unittitle>Orbon's exercise notebooks, 
+                        <unitdate normal="1930/2000" type="inclusive">undated</unitdate></unittitle>
+                    <physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD1998-00071" level="file">
+                    <did><container label="Box" type="Box">5 (Oversize)</container>
+                        <unittitle><title render="italic">Concerto Grosso for String Quartet &amp; Orchestra,</title>
+                            <unitdate normal="1957/1958" type="inclusive">1957-1958</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00072" level="file">
+                    <did><unittitle><title render="italic">Concerto Grosso for String Quartet &amp; Orchestra,</title>
+                        <unitdate normal="1930/2000" type="inclusive">undated</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00073" level="file">
+                    <did><container label="Box" type="Box">6 (Oversize)</container>
+                        <unittitle><title render="italic">Concerto Grosso for String Quartet &amp; Orchestra,</title>
+                            <unitdate normal="1930/2000" type="inclusive">undated</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00074" level="file">
+                    <did><unittitle><title render="italic">Partita No. 3,</title>
+                        <unitdate normal="1930/2000">undated</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00075" level="file">
+                    <did><unittitle><title render="italic">Partita No. 4,</title>
+                        <unitdate normal="1982/1985" type="inclusive">1982-1985</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00076" level="file">
+                    <did><unittitle><title render="italic">Partita No. 4,</title>
+                        <unitdate normal="1930/2000" type="inclusive">undated</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00077" level="file">
+                    <did><unittitle>Notas y Apuntes de <title render="italic">Partita No. 4,</title>
+                        <unitdate normal="1930/2000" type="inclusive">undated</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00078" level="file">
+                    <did><container label="Box" type="Box">7 (Oversize)</container>
+                        <unittitle><title render="italic">Preludio y Fantasia Tiento for Organ,</title>
+                            <unitdate normal="1975">1975</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00079" level="file">
+                    <did><unittitle><title render="italic">Costellanos que Bueno Baila Usted,</title>
+                        <unitdate normal="1930/2000" type="inclusive">undated</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00080" level="file">
+                    <did><unittitle><title render="italic">Dos Conciones Folkloricas,
+                    </title><unitdate normal="1930/2000" type="inclusive">undated</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00081" level="file">
+                    <did><unittitle>Introito for Chorus &amp; Orchestra,
+                        <unitdate normal="1930/2000" type="inclusive">undated</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00082" level="file">
+                    <did><unittitle>Libro de Contares,
+                        <unitdate normal="1930/2000" type="inclusive">undated</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00083" level="file">
+                    <did><unittitle>Punto Guacanayara,
+                        <unitdate normal="1930/2000" type="inclusive">undated</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00084" level="file">
+                    <did><unittitle>Punto Guacanayara, 
+                        <unitdate normal="1930/2000" type="inclusive">undated</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00085" level="file">
+                    <did><unittitle>Verso Aleluyático y for two choruses, 
+                        <unitdate normal="1930/2000" type="inclusive">undated</unitdate></unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1998-00086" level="series">
+                <did><container label="Box" type="Box">2</container>
+                    <unittitle>VI. Programs.</unittitle></did>
+                <c02 id="VAD1998-00087" level="file">
+                    <did><unittitle>Programs of Orbon's music,
+                        <unitdate normal="1957/1969" type="inclusive">1957-1969</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00088" level="file">
+                    <did><unittitle>Programs of Orbon's music,
+                        <unitdate normal="1973/1979" type="inclusive">1973-1979</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00089" level="file">
+                    <did><unittitle>Programs of Orbon's music,
+                        <unitdate normal="1981/1990" type="inclusive">1981-1990</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00090" level="file">
+                    <did><unittitle>Programs of Orbon's music,
+                        <unitdate normal="1930/2000" type="inclusive">undated</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00091" level="file">
+                    <did><container label="Box" type="Box">3</container>
+                        <unittitle>Programs, 
+                            <unitdate normal="1952/1960" type="inclusive">1952-1960</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00092" level="file">
+                    <did><unittitle>Programs, 
+                        <unitdate normal="1960/1966" type="inclusive">1960-1966</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00093" level="file">
+                    <did><unittitle>Programs, 
+                        <unitdate normal="1967/1969" type="inclusive">1967-1969</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00094" level="file">
+                    <did><unittitle>Programs, 
+                        <unitdate normal="1970/1975" type="inclusive">1970-1975</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00095" level="file">
+                    <did><unittitle>Programs, 
+                        <unitdate normal="1976/1979" type="inclusive">1976-1979</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00096" level="file">
+                    <did><unittitle>Programs, 
+                        <unitdate normal="1984/1989" type="inclusive">1984-1989</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00097" level="file">
+                    <did><unittitle>Programs, 
+                        <unitdate normal="1990/1999" type="inclusive">1990-1999</unitdate></unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1998-00098" level="series">
+                <did><container label="Box" type="Box">4</container>
+                    <unittitle>VII. Articles and Clippings.</unittitle></did>
+                <c02 id="VAD1998-00099" level="file">
+                    <did><unittitle>Articles, 
+                        <unitdate normal="1954/2000" type="inclusive">1954-2000</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00100" level="file">
+                    <did><unittitle>Newspaper clippings, 
+                        <unitdate normal="1967/2000" type="inclusive">1967-2000</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1998-00101" level="file">
+                    <did><unittitle>Collection of articles on Orbon from the Conservatory Municipal, 
+                        <unitdate normal="1991/1992" type="inclusive">1991-1992</unitdate></unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1998-00102" level="series">
+                <did><container label="Box" type="Box">4</container>
+                    <unittitle>VIII. Awards and Honors.</unittitle></did>
+                <c02 id="VAD1998-00103" level="file">
+                    <did><unittitle>Awards and Honors, 
+                        <unitdate normal="1946/2000" type="inclusive">1946-2000</unitdate></unittitle></did>
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
