@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+--><ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external" countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924" relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li" identifier="InU-Li-VAD0996">InU-Li-VAD0996</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Wordsworth mss., <date normal="1805/1948" type="inclusive">1805-1948</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2013" type="publication">© 2013</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2013">© 2013</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting. <date normal="2013" type="source">2013</date>
+                <lb></lb>Finding aid encoded by Tiffany Saulter, Lilly Library, Indiana University,
+                    <date normal="2013-10-15">October 15, 2013</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng">English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2013-10-15">October 15, 2013</date>
+                <item>Encoded finding aid started.</item>
+            </change>
+            <change audience="internal">
+                <date normal="2013-10-15">October 15, 2013</date>
+                <item>Encoded finding aid completed.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Wordsworth, William,
+                    1770-1850</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Wordsworth mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1805/1948" type="inclusive">1805-1948</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2094</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>57 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Wordsworth mss., 1805-1948 consist of primarily correspondence
+                from William Wordsworth, 1770-1850, to family members, friends, and colleagues.
+                </abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+            <p>Poet and author William Wordsworth was born on April 7, 1770 in Cockermouth,
+                Cumberland, England. He began attending St. John's College, Cambridge the same
+                year he published his first poem, in 1787, and he earned his B.A. in 1791. Along
+                with Samuel Taylor Coleridge, Wordsworth is credited with originating the Romantic
+                Age of English Literature with the joint publication <title render="italic">Lyrical Ballads</title> (1798). He was
+                England's Poet Laureate from 1843 until his death in 1850. Wordsworth's
+                most famous work, <title render="italic">The Prelude,</title> was published posthumously in 1850.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>Items are arranged chronologically. </p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>Correspondents in the collection include: Beck, J. V. A.; Keble, John; Rix, Herbert;
+                Wordsworth, Christopher; Wordsworth, Elizabeth; Wordsworth, Priscilla; Wordsworth,
+                Susanna.</p>
+            <p>Also included in the collection are poems by William Wordsworth, a poem by his
+                sister Dorothy Wordsworth, poems as tributes to Wordsworth, a memorandum book,
+                notebooks, an anthology compiled by Sarah Hutchinson, and a photograph of
+                Wordsworth's home at Rydal Mount</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/Wordsworth+William+1770-1850+Correspondence{su}"><persname encodinganalog="600" source="lcsh">Wordsworth, William, 1770-1850 --Correspondence.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/Keble+John+1792-1866{su}"><persname encodinganalog="600" source="lcsh">Keble, John, 1792-1866 --Correspondence.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/wordsworth+christopher+1807-1885+correspondence{su}"><persname encodinganalog="600" source="lcsh">Wordsworth, Christopher, 1807-1885 --Correspondence.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/wordsworth+dorothy+1771-1855{su}"><persname encodinganalog="600" source="lcsh">Wordsworth, Dorothy, 1771-1855.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/wordsworth+elizabeth+dame+1840-1932{su}"><persname encodinganalog="600" source="lcsh">Wordsworth, Elizabeth Dame, 1840-1932--Correspondence.</persname></extref></item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/poets+english+19th+century+biography"><subject encodinganalog="650" source="lcsh">Poets, English --19th century --Biography.</subject></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/poets+english+20th+century+biography"><subject encodinganalog="650" source="lcsh">Poets, English--20th century--Biography.</subject></extref></item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="610" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+        <!-- required, if appropriate -->
+        <!-- optional, if applicable -->
+        <relatedmaterial encodinganalog="544 1">
+            <head>Related Material</head>
+            <p><extref xlink:href="http://www.indiana.edu/~liblilly/lilly/mss/index.php?p=wordswo2">Wordsworth mss. II</extref> and <extref xlink:href="http://www.indiana.edu/~liblilly/lilly/mss/index.php?p=wordswo3">Wordsworth mss. III</extref> also located at the Lilly Library, Indiana University, Bloomington, Indiana.</p>
+        </relatedmaterial>
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+            <!-- include if appropriate -->
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 1943-1986.</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Wordsworth mss., Lilly Library, Indiana University, Bloomington, Indiana. </p>
+            </prefercite>
+
+            <!--optional -->
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Staff.</p>
+                <p>Completed in <date normal="2013">2013</date></p>
+
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+            <c01 id="VAD0996-00001" level="series">
+                <did>
+                    <unittitle>Wordsworth Mss.</unittitle>
+                </did>
+                <c02 id="VAD0996-00002" level="file">
+                    <did><container label="Box" type="Box">1</container>
+                        <unittitle>Wordsworth, William to Clarkson, Thomas. 
+                            <unitdate normal="1805-02-16">Feb. 16, 1805</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00003" level="file">
+                    <did><unittitle>Wordsworth, William to Scott, John. 
+                        <unitdate normal="1816-02-22">Feb. 22, 1816</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00004" level="file">
+                    <did><unittitle>Wordsworth, William to Chantry, F. L. 
+                        <unitdate normal="1820-11-08">Nov. 8, 1820</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00005" level="file">
+                    <did><unittitle>Wordsworth, William. <title render="doublequote">Elegiac musings...</title> Poem. 
+                        <unitdate normal="1830-11">Nov. 1830</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00006" level="file">
+                    <did><unittitle>Wordsworth, William to Macdonald, Lawrence. 
+                        <unitdate normal="1831-04-16">Apr. 16, 1831</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00007" level="file">
+                    <did><unittitle>Wordsworth, William to Quillinan, E. 
+                        <unitdate normal="1831-08-23">Aug. 23, 1831</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00008" level="file">
+                    <did><unittitle>Wordsworth, William to Milton, M. I. 
+                        <unitdate normal="1831">1831</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00009" level="file">
+                    <did><unittitle>Wordsworth, William to Southey, Robert. 
+                        <unitdate normal="1832-03">[Mar. 1832]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00010" level="file">
+                    <did><unittitle>Wordsworth, William to "My dear Madam."
+                        <unitdate normal="1832-11-28">Nov. 28, 1832</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00011" level="file">
+                    <did><unittitle>Wordsworth, William to Graves, R. P. 
+                        <unitdate normal="1834-01-30">Jan. 30, 1834</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00012" level="file">
+                    <did><unittitle>Wordsworth, William. <title render="doublequote">Oftentimes and long.</title> Poem.
+                        <unitdate normal="1835">1835</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00013" level="file">
+                    <did><unittitle>Wordsworth, William to Davy, John. 
+                        <unitdate normal="1835">1835</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00014" level="file">
+                    <did><unittitle>Wordsworth, William to Davy, John. 
+                        <unitdate normal="1836-06-16">Jun. 16, 1836</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00015" level="file">
+                    <did><unittitle>Wordsworth, William to Lloyd, Francis. 
+                        <unitdate normal="1836-09-14">Sept. 14, 1836</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00016" level="file">
+                    <did><unittitle>Wordsworth, William to Lloyd, Francis. 
+                        <unitdate normal="1836-09-26">Sept. 26, 1836</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00017" level="file">
+                    <did><unittitle>Wordsworth, Mrs. Mary to Lloyd, Francis. 
+                        <unitdate normal="1836-09">Sept. 1836</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00018" level="file">
+                    <did><unittitle>Wordsworth, William to Howley, Mrs. 
+                        <unitdate normal="1837-11-20">Nov. 20, 1837</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00019" level="file">
+                    <did><unittitle>Wordsworth, William to Lloyd, Francis. 
+                        <unitdate normal="1838-04-02">Apr. 2, 1838</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00020" level="file">
+                    <did><unittitle>Wordsworth, William to Lloyd, Francis. 
+                        <unitdate normal="1838-11-26">Nov. 26, 1838</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00021" level="file">
+                    <did><unittitle>[Wordsworth, William] to Kenyon, [John]. 
+                        <unitdate normal="1838">[1838]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00022" level="file">
+                    <did><unittitle>Wordsworth, William to Kenyon, John. 
+                        <unitdate normal="1839-02-26">Feb. 26, 1839</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00023" level="file">
+                    <did><unittitle>Southey, Robert. <emph render="doublequote">The curse of Kehama.</emph>
+                        <unitdate normal="1839-06-25">Jun. 25, 1839</unitdate></unittitle><physdesc>(2 lines)</physdesc></did>
+                </c02>
+                <c02 id="VAD0996-00024" level="file">
+                    <did><unittitle>Wordsworth, William to Howley, Mrs. 
+                        <unitdate normal="1839">1839</unitdate></unittitle><physdesc>(copy)</physdesc></did>
+                </c02>
+                <c02 id="VAD0996-00025" level="file">
+                    <did><unittitle>Wordsworth, William. <title render="doublequote">Lines...suggested...St. Georges chapel.</title> Poem.
+                        <unitdate normal="1841-07-20">Jul. 20, 1841</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00026" level="file">
+                    <did><unittitle>Wordsworth, William to Powell, Thomas. 
+                        <unitdate normal="1841-08-19">Aug. 19, 1841</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00027" level="file">
+                    <did><unittitle>Wordsworth, William to Howley, Mrs. 
+                        <unitdate normal="1841-08-23">Aug. 23, 1841</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00028" level="file">
+                    <did><unittitle>Wordsworth, William to Lee [?]. 
+                        <unitdate normal="1843-10-23">Oct. 23, [1843]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00029" level="file">
+                    <did><unittitle>Wordsworth, William. <title render="doublequote">Suggested upon Loughrigg Fell.</title>
+                         Poem. <unitdate normal="1844-08">Aug. 1844</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00030" level="file">
+                    <did><unittitle>"For Mrs. Wright." Engraving, autographed by Wordsworth.
+                        <unitdate normal="1844">1844</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00031" level="file">
+                    <did><unittitle>Wordsworth, William to Herschel, Sir John Frederick William. 
+                        <unitdate normal="1846-02-23">Feb. 3, 1846</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00032" level="file">
+                    <did><unittitle>Wordsworth, William to Graves, R. P. 
+                        <unitdate normal="1850-02-09">Feb. 9, 1850</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00033" level="file">
+                    <did><unittitle>Keble, John to "Dear Sir."
+                        <unitdate normal="1851-10-14">Oct. 14, 1851</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00034" level="file">
+                    <did><unittitle>Wright, Mrs. Sarah to Sutton, R. 
+                        <unitdate normal="1857-06-10">Jun. 10, 1857</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00035" level="file">
+                    <did><unittitle>Wordsworth, Priscilla to Lloyd, Mrs. 
+                        <unitdate normal="1860-10-03">Oct. 3, 1860</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00036" level="file">
+                    <did><unittitle>Wordsworth, Elizabeth to "My dear cousin." 
+                        <unitdate normal="1860-10-23">Oct. 23, 1860</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00037" level="file">
+                    <did><unittitle>Wordsworth, Mrs. Susanna to "My dear cousin."
+                        <unitdate normal="1863-04-13">Apr. 13, 1863</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00038" level="file">
+                    <did><unittitle>Wordsworth, Christopher to "My dear Cousins."
+                        <unitdate normal="1863-06-10">Jun. 10, 1863</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00039" level="file">
+                    <did><unittitle>Wordsworth, Christopher to "My dear Cousin."
+                        <unitdate normal="1863-06-20">Jun. 20, 1863</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00040" level="file">
+                    <did><unittitle>Philpot, Henry to Lloyd, I. 
+                        <unitdate normal="1863-06-02">Jul. 2, 1863</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00041" level="file">
+                    <did><unittitle>Rix, Herbert to Tomlinson, Charles. 
+                        <unitdate normal="1882-09-23">Sept. 23, 1882</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00042" level="file">
+                    <did><unittitle>Beck, J. V. A. to Cowper, H. S. 
+                        <unitdate normal="1898-03-20">Mar. 20, 1898</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00043" level="file">
+                    <did><unittitle>Adams, Mary M. <title render="doublequote">Sonnet on Wordsworth.</title> Poem. 
+                        <unitdate normal="1805/1948" type="inclusive">undated.</unitdate></unittitle>
+                        <note><p>(Includes correspondence from Wood, Harry H. to Watkins, O. L. Oct. 13, 1931.)</p></note></did>
+                </c02>
+                <c02 id="VAD0996-00044" level="file">
+                    <did><unittitle>Wordsworth, William. <title render="doublequote">Suggested upon Loughrigg Fell.</title> Poem.
+                        <unitdate normal="1805/1948" type="inclusive">undated.</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00045" level="file">
+                    <did><unittitle>[Bowles, W. L.] <title render="doublequote">Wordsworth.</title> Poem. 
+                        <unitdate normal="1805/1948" type="inclusive">undated.</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00046" level="file">
+                    <did><unittitle>Photograph of Wordsworth's home, Rydal Mount. 
+                        <unitdate normal="1805/1948" type="inclusive">undated.                          
+                        </unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00047" level="file">
+                    <did><unittitle>Wordsworth, Dorothy. <title render="doublequote">The worship of this Sabbath morn.</title> Poem. 
+                        <unitdate normal="1805/1948" type="inclusive">undated.</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00048" level="file">
+                    <did><unittitle>Wordsworth, Mrs. Mary to Fletcher, Miss. 
+                        <unitdate normal="1805/1948" type="inclusive">undated.</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00049" level="file">
+                    <did><unittitle>Wordsworth, William. <title render="doublequote">Life, I repeat is energy of love...</title> Poem. 
+                        <unitdate normal="1805/1948" type="inclusive">undated.</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00050" level="file">
+                    <did><unittitle>Wordsworth, William to Graves, R. P. 
+                        <unitdate normal="1805/1948" type="inclusive">undated.</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00051" level="file">
+                    <did><unittitle>Wordsworth, William to Howitt, William. 
+                        <unitdate normal="1805/1948" type="inclusive">undated.</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00052" level="file">
+                    <did><unittitle>Wordsworth, William to Moxon, Mrs. 
+                        <unitdate normal="1805/1948" type="inclusive">undated.</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00053" level="file">
+                    <did><unittitle>Wordsworth, William to Powell, Thomas. 
+                        <unitdate normal="1805/1948" type="inclusive">undated.</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00054" level="file">
+                    <did><container label="Box" type="Box">2</container><unittitle><emph render="doublequote">Wordsworth.</emph> Notebook with handwritten prose. 
+                        <unitdate normal="1805/1948" type="inclusive">undated.</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00055" level="file">
+                    <did><unittitle><emph render="doublequote">Paraphrase of Spenser&apos;s <title render="italic">Fairy Queen</title> by William Wordsworth.</emph>
+                        <unitdate normal="1835-09-16/1835-09-30" type="inclusive">Sept. 16-30, 1835</unitdate></unittitle>
+                        <physdesc>Notebook. (Not in Wordsworth's hand.)</physdesc></did>
+                </c02>
+                <c02 id="VAD0996-00056" level="file">
+                    <did><unittitle>Memorandum book: <emph render="doublequote">O. L. Watkins, Indianapolis, Ind. U.S.A.</emph>
+                        <unitdate normal="1805/1948" type="inclusive">undated.</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00057" level="file">
+                    <did><unittitle>Notebook containing <emph render="doublequote">The Lyrical Ballads: 1798,</emph> a lecture by Alfred Ainger.
+                        <unitdate normal="1888">1888</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00058" level="file">
+                    <did><unittitle><title render="italic">A Study of Poetic Tributes to William Wordsworth</title> by William Renner Feik. 
+                        <unitdate normal="1948-08">Aug. 1948.</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD0996-00059" level="file">
+                    <did><container label="Bound Materials" type="bound">(No Box)</container>
+                        <unittitle><emph render="italic">MS Poetry. WW.</emph><unitdate normal="1826"><emph render="italic">1826.</emph></unitdate>
+                        Sarah Hutchinson's Poetical Anthology compiled at Wordsworth's Direction.</unittitle></did>
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>

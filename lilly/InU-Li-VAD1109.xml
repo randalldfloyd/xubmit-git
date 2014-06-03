@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+--><ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external" countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924" relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li" identifier="InU-Li-VAD1109">InU-Li-VAD1109</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Adams, R. mss.<date normal="1968/1984" type="inclusive">1968-1984</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2013" type="publication">© 2013</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2013">© 2013</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2013" type="source">2013</date>
+                <lb></lb>Finding aid encoded by Tiffany Saulter, Lilly Library, Indiana University,
+                    <date normal="2013-11-11">November 11, 2013</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng">English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2013-11-11">November 11, 2013</date>
+                <item>Encoded finding aid started.</item>
+            </change>
+            <change audience="internal">
+                <date normal="2013-11-11">November 11, 2013</date>
+                <item>Encoding finding aid completed.</item>
+            </change>
+            
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf"> Adams, Richard, 1920-</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Adams, R. mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1968/1984" type="inclusive">1968-1984</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1006</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>2000 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Adams, R. mss., 1968-1984, collection consists of the papers of
+                publishing firm Rex Collings Ltd. relating to the publication of several novels by
+                author Richard Adams, primarily <title render="italic">Watership Down.</title></abstract>
+        </did>
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+        
+        
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+            
+            <p>Richard Adams is an English writer best known for the novel <title render="italic">Watership Down</title> (1972).</p>
+            
+        </bioghist>
+        
+        <scopecontent encodinganalog="520">
+            <head>Scope and Content Note</head>
+            <p>Most of the papers concern the bestselling children's
+                classic <title render="italic">Watership Down</title> (1972), including correspondence, contracts, publicity and
+                production materials, royalty statements, clippings, a radio script, and materials
+                regarding the illustrated edition and the film. There also is a press release and
+                clipping for his <title render="italic">The Girl in a Swing</title> (1980); a contract with Penguin Books for 
+                <title render="italic">The Plague Dogs</title> (1977); and production materials, a press release, and contract
+                materials with Penguin Books for <title render="italic">Shardik</title> (1974), as well as correspondence relating
+                to all three of these titles: in particular is a letter from Adams to Rex Collings
+                dated Apr. 29, 1977 concerning a perceived attack on civil servants and
+                parliamentarians in <title render="italic">The Plague Dogs.</title> In a July 3, 1973 letter to Collings, Adams
+                discusses the concept and imagery behind the story of <title render="italic">Shardik.</title></p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/adams+richard+1920+watership+down{su}"><persname encodinganalog="600" source="lcnaf">Adams, Richard, 1920- Watership down.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/adams+richard+1920+correspondence{su}"><persname encodinganalog="600" source="lcnaf">Adams, Richard, 1920 ---Correspondence. </persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/collings+rex+correspondence{su}"><persname encodinganalog="600" source="lcnaf">Collings, Rex --Correspondence. </persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/collings+rex{su}">
+                        <persname encodinganalog="700" source="lcnaf">Collings, Rex.</persname></extref></item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="610" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+        <!-- required, if appropriate -->
+        <descgrp>
+            <head>Administrative Information</head>
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 1991</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Adams, R. mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+            <!--optional -->
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Staff.</p>
+                <p>Completed in <date normal="2013">2013</date></p>
+            </processinfo>
+        </descgrp>
+        
+        <dsc type="combined">
+            <c01 id="VAD1109-00001" level="recordgrp">
+                <did><unittitle>Correspondence: <unitdate normal="1968/1984" type="inclusive">1968-1984</unitdate>
+                </unittitle><physdesc>(32 folders)</physdesc>
+                </did><scopecontent><p>Bulk of correspondence pertains to <title render="italic">Watership Down.</title>
+                    Also includes correspondence regarding <title render="italic">The Ship's Cat,</title>
+                    <title render="italic">Shardik,</title> and <title render="italic">The Plague Dogs.</title></p></scopecontent>
+            <c02 id="VAD1109-00002" level="otherlevel">
+                <did><unittitle><title render="italic">The Girl in a Swing</title></unittitle></did>
+                <c03 id="VAD1109-00003" level="file">
+                    <did><unittitle>Press release and clipping.</unittitle></did>
+                </c03>
+            </c02>
+                <c02 id="VAD1109-00004" level="otherlevel">
+                    <did><unittitle><title render="italic">The Plague Dogs</title></unittitle></did>
+                    <c03 id="VAD1109-00005" level="file">
+                        <did><unittitle>Copy of contract with Penguin Books.</unittitle></did>
+                    </c03>
+                </c02>
+                <c02 id="VAD1109-00006" level="otherlevel">
+                    <did><unittitle><title render="italic">Shardik</title></unittitle></did>
+                    <c03 id="VAD1109-00007" level="file">
+                        <did><unittitle>Production material; press release; contract materials with Penguin Books;
+                            <title render="underline">Theoria to theory,</title> v. 10, no. 1 <unitdate normal="1976">(1976),</unitdate> containing two articles about Shardik</unittitle></did>
+                    </c03>
+                </c02>
+                <c02 id="VAD1109-00008" level="otherlevel">
+                    <did><unittitle><title render="italic">Watership Down</title></unittitle></did>
+                    <c03 id="VAD1109-00009" level="file">
+                        <did><unittitle>Agreements and contracts</unittitle>
+                        <physdesc>(4 folders)</physdesc></did>
+                    </c03>
+                    <c03 id="VAD1109-00010" level="file">
+                        <did><unittitle>Illustrated edition</unittitle></did>
+                    </c03>
+                    <c03 id="VAD1109-00011" level="file">
+                        <did><unittitle>Production materials</unittitle></did>
+                    </c03>
+                    <c03 id="VAD1109-00012" level="file">
+                        <did><unittitle>Publicity and sales</unittitle></did>
+                    </c03>
+                </c02>
+                <c02 id="VAD1109-00013" level="otherlevel">
+                    <did><unittitle><emph render="italic">Watership Down (continued)</emph></unittitle></did>
+                    <c03 id="VAD1109-00014" level="file">
+                        <did><unittitle>Radio script</unittitle></did>
+                    </c03>
+                    <c03 id="VAD1109-00015" level="file">
+                        <did><unittitle>Royalties</unittitle><physdesc>(7 folders)</physdesc></did>
+                    </c03>
+                    <c03 id="VAD1109-00016" level="file">
+                        <did><unittitle>Clippings</unittitle></did>
+                    </c03>
+                    <c03 id="VAD1109-00017" level="file">
+                        <did><unittitle>Miscellaneous</unittitle></did>
+                    </c03>
+                </c02>
+                <c02 id="VAD1109-00018" level="file">
+                    <did><unittitle>Richard Adams, miscellaneous materials</unittitle></did>
+                </c02>
+                <c02 id="VAD1109-00019" level="file">
+                    <did><unittitle>Rex Collings, Ltd., miscellaneous materials</unittitle></did>
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>

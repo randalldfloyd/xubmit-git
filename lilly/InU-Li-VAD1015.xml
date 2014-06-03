@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+--><ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external" countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924" relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li" identifier="InU-Li-VAD1015">InU-Li-VAD1015</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Yeats mss.,<date normal="1889/1954" type="inclusive">1889-1954</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2013" type="publication">© 2013</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2013">© 2013</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2013" type="source">2013</date>
+                <lb></lb>Finding aid encoded by Tiffany Saulter, Lilly Library, Indiana University,
+                    <date normal="2013-10-22">October 22, 2013</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng">English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2013-10-22">October 22, 2013</date>
+                <item>Encoded finding aid started.</item>
+            </change>
+            <change audience="internal">
+                <date normal="2013-10-28">October 28, 2013</date>
+                <item>Encoded finding aid completed.</item>
+            </change>
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Yeats, W. B., 1865-1939</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Yeats mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1865/1939" type="inclusive">1889-1954</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2105</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>109 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Yeats mss., 1889-1954, consists of
+                letters and writings of William Butler Yeats, 1865-1939, and materials about him,
+                collected by Allan Wade, 1881-1955, compiler of <title render="italic">A
+                    Bibliography of the Writings of W. B. Yeats...</title> (London, 1951), and
+                editor of <title render="italic">The Letters of W. B. Yeats...</title> (New York,
+                1955).</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+            <p>William Butler Yeats, 1865-1939, was a poet and author.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>Items are arranged chronologically.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>Included are letters from Yeats to Wade, 1902-1922; typescripts of letters from Yeats
+                to various persons, 1889-1939; photostats of Yeats letters, 1909, 1920, and undated,
+                and of newspaper articles by and about Yeats; letters April 3-July 7, 1952, to Allan
+                Wade from Gerald Yorke with enclosures relating to the Hermetic Order of the Golden
+                Dawn in the Outer; a letter from Mrs. Dorothy (Paget) Rhodes to Wade, November 3,
+                1954; two letters May 27, 1908, from Thomas William Hazen Rolleston to Allan Wade; a
+                letter, June 10, 1908, from Mrs. Katharine (Tynan) Hinkson to [Allan Wade]; a letter
+                of Ursula Bridge to [Allan Wade], August 13, 1953; bookplates of William Butler
+                Yeats and Lily Yeats; and a square of cloth printed with various portraits and
+                quotations from W. B. Yeats and A. Gregory "Sold by the Irish Players at $1.00
+                towards a building to save Sir Hugh Lane's great gift of pictures for Ireland, Apr.
+                1913."</p>
+            <p>The typescripts and photostats of letters written by Yeats include letters to Sir
+                George Reginald Barnes, Mrs. Stella (Campbell) Beech, Harry Bergholz, Frederick
+                Edwin Smith, 1st earl of Birkenhead, Arthur Henry Bullen, Victor Clinton
+                Clinton-Baddeley, Sir Sydney Carlyle Cockerell, Arnold Dolmetsch, Katherine Harris
+                Bradley, Edith Emma Cooper, Edward Garnett, Sir Edmund William Gosse, Lady Gregory,
+                Sir Herbert John Clifford Grierson, Agnes Hall, Mrs. Katharine (Tynan) Hinkson,
+                William Thomas Horton, E. M. Lister, Eric Robert Dalrymple Maclagan, John
+                O'Leary, Herbert Edward Palmer, William Lyon Phelps, Ernest Rhys, Sir William
+                Rothenstein, George William Russell, William Sharp, Leonard Alfred George Strong,
+                and Lily Yeats.</p>
+            <p>The following letters in this collection have been published in <title render="italic">The Letters of W. B. Yeats,</title>edited by Allan Wade (New
+                York, 1955): to George William Russell (AE), February 8, [1889] (typescript), pp.
+                111-112; to John O'Leary, [December 26, 1889] (typescript), printed in abridged
+                form, pp. 146-147; to Allan Wade [January 15, 1909], pp. 523-524; to Lady Gregory,
+                [November 26, 1909] (photostat), pp. 538-539; to William Lyon Phelps, February 12,
+                1920 (photostat), p. 660; and to Allan Wade, July 10, [1921], p. 671, October 18,
+                [1921], pp. 674-675, and February 13, 1922, pp. 676-677.</p>
+            <p>The photostats of newspaper articles by and about Yeats are in a folio folder.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/Yeats+W+B+William+Butler+1865+1939+Correspondence{su}"><persname encodinganalog="600" source="lcnaf">Yeats, W. B. (William Butler), 1865-1939 --Correspondence.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/Wade+Allan+1881+1955+Correspondence{su}"><persname encodinganalog="600" source="lcnaf">Wade, Allan, 1881-1955 --Correspondence.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/Wade+Allan+1881+1955+Bibliography+of+the+writings+of+W+B+Yeats{su}"><persname encodinganalog="600" source="lcnaf">Wade, Allan, 1881-1955. Bibliography of the writings of W. B. Yeats.</persname></extref></item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/poets+irish+19th+century+biography{su}"><subject encodinganalog="650" source="lcsh">Poets, Irish --19th century --Biography.</subject></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/poets+irish+19th+century+correspondence{su}"><subject encodinganalog="650" source="lcsh">Poets, Irish --19th century --Correspondence.</subject></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/poets+irish+20th+century+biography{su}"><subject encodinganalog="650" source="lcsh">Poets, Irish --20th century --Biography.</subject></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/poets+irish+20th+century+correspondence{su}"><subject encodinganalog="650" source="lcsh">Poets, Irish --20th century --Correspondence.</subject></extref></item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="610" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 1956</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Yeats mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+            <!--optional -->
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Staff.</p>
+                <p>Completed in <date normal="2013">2013</date></p>
+
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAD1015-00001" level="file">
+                <did><container label="Box" type="Box">1</container>
+                    <unittitle><emph render="bold">Folder 1:</emph>
+                        <unitdate normal="1889/1899" type="inclusive"><emph render="bold">1889-1899</emph>
+                        </unitdate></unittitle>
+                </did>
+                <c02 id="VAD1015-00002" level="file">
+                    <did><unittitle>Yeats, W. B. to Tynan, Katharine. 
+                        <unitdate normal="1889-01-16">Jan. 16, [1889]</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00003" level="file">
+                    <did><unittitle>Yeats, W. B. to O'Leary, John. 
+                        <unitdate normal="1889-10">[Oct. 1889]</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00004" level="file">
+                    <did><unittitle>Yeats, W. B. to Russell, George. 
+                        <unitdate normal="1889-02-08">Feb. 8, [1889]</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00005" level="file">
+                    <did><unittitle>Yeats, W. B. to O'Leary, John. 
+                        <unitdate normal="1889-12-26">[Dec. 26, 1889]</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00006" level="file">
+                    <did><unittitle>Yeats, W. B. to O'Leary, John.
+                        <unitdate normal="1892-10">[Oct. 1892]</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00007" level="file">
+                    <did><unittitle>Yeats, W. B. to Garnett, Edward. 
+                        <unitdate normal="1892-11">[Nov. 1892]</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00008" level="file">
+                    <did><unittitle>Yeats, W. B. to Garnett, Edward. 
+                        <unitdate normal="1892-11">[Nov. 1892]</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00009" level="file">
+                    <did><unittitle>Yeats, W. B. to O'Leary, John.
+                        <unitdate normal="1892-11">[Nov. 1892]</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00010" level="file">
+                    <did><unittitle>Yeats, W. B. to Sharp, William. 
+                        <unitdate normal="1899-03-04">Mar. 4, [1899]</unitdate>
+                    </unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1015-00011" level="file">
+                <did><unittitle><emph render="bold">Folder 2:</emph>
+                <unitdate normal="1900/1903" type="inclusive"><emph render="bold">1900-1903</emph></unitdate>
+                    <emph render="bold">(Note: photocopies of correspondence between W. B. Yeats and Allan Wade included in back of folder)</emph></unittitle></did>
+                <c02 id="VAD1015-00012" level="file">
+                    <did><unittitle>List of Documents Without Prejudice. 
+                        ("Copies...circulated amongst members of the 'R.R. et A.C.' in <unitdate normal="1900">1900.")</unitdate>
+                        </unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00013" level="file">
+                    <did><unittitle>Yeats, W. B. to Maclagan, Eric. 
+                        <unitdate normal="1902-06-03">Jun. 3, 1902</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00014" level="file">
+                    <did><unittitle>Yeats, W. B. to Wade, Allan. 
+                        <unitdate normal="1902-06-12">Jun. 12, 1902</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00015" level="file">
+                    <did><unittitle>Yeats, W. B. to Rothenstein, William. 
+                        <unitdate normal="1902-10-17">Oct. 17, [1902]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00016" level="file">
+                    <did><unittitle>Yeats, W. B. to Wade, Allan. 
+                        <unitdate normal="1903-05-22">May 22, 1903</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00017" level="file">
+                    <did><unittitle>Yeats, W. B. to Field, Michael. 
+                        <unitdate normal="1903-06-11">Jun. 11 [1903]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00018" level="file">
+                    <did><unittitle>Yeats, W. B. to Wade, Allan. 
+                        <unitdate normal="1903-10-17">[Oct. 17, 1903]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00019" level="file">
+                    <did><unittitle>Yeats, W. B. to Maclagan, Eric. 
+                        <unitdate normal="1903-11-05">Nov. 5, 1903</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00020" level="file">
+                    <did><unittitle>"Letters from W. B. Yeats to Allan Wade, copied from the originals."
+                        <unitdate normal="1902/1922" type="inclusive">1902-1922</unitdate></unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1015-00021" level="file">
+                <did><unittitle><emph render="bold">Folder 3:</emph>
+                <unitdate normal="1904/1909" type="inclusive"><emph render="bold">1904-1909</emph></unitdate>
+                </unittitle></did>
+                <c02 id="VAD1015-00022" level="item">
+                    <did><unittitle>Yeats, W. B. to Yeats, Lily. 
+                        <unitdate normal="1904-02-08">[Feb. 8, 1904]</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00023" level="item">
+                    <did><unittitle>Yeats, W. B. to Cockerell, Sydney. 
+                        <unitdate normal="1905-07-06">[Jul. 6, 1905]</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00024" level="item">
+                    <did><unittitle>Yeats, W. B. to Gosse, Edmund. 
+                        <unitdate normal="1905-11-20">[Nov. 20, 1905]</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00025" level="item">
+                    <did><unittitle>Yeats, W. B. to Gosse, Edmund. 
+                        <unitdate normal="1906-12-28">Dec. 28, 1906</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00026" level="item">
+                    <did><unittitle>Yeats, W. B. to Grierson, H.J.C. 
+                        <unitdate normal="1907-06-28">Jun. 28, 1907</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00027" level="item">
+                    <did><unittitle>Book order, Allan Wade, Esq., 
+                        <unitdate normal="1907-08-27">Aug. 27, 1907</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00028" level="item">
+                    <did><unittitle>Yeats, W. B. to Lister, E.M. 
+                        <unitdate normal="1908-03-16">Mar. 16, 1908</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00029" level="item">
+                    <did><unittitle>Yeats, W. B. to Lister, E.M. 
+                        <unitdate normal="1908-03">[Mar. 1908]</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00030" level="item">
+                    <did><unittitle>Yeats, W. B. to Lister, E.M. 
+                        <unitdate normal="1908-04-16">[Apr. 16, 1908]</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00031" level="item">
+                    <did><unittitle>Yeats, W. B. to Lady Gregory. 
+                        <unitdate normal="1889-04-17/1954-04-17" type="inclusive">Apr. 17, [Postmark 1908]</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00032" level="item">
+                    <did><unittitle>Yeats, W. B. to Lister, E.M. 
+                        <unitdate normal="1908-05-24">[May 24, 1908]</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00033" level="item">
+                    <did><unittitle>Rolleston, T.W. to Wade, Allan. 
+                        <unitdate normal="1908-05-27">[May 27, 1908] </unitdate>
+                    </unittitle><physdesc>(2 letters)</physdesc></did>
+                </c02>
+                <c02 id="VAD1015-00034" level="item">
+                    <did><unittitle>Hinkson, Katharine [Tynan] to [Wade, Allan]. 
+                        <unitdate normal="1908-06-10">Jun. 10, 1908</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00035" level="item">
+                    <did><unittitle>Yeats, W. B. to Hall, Agnes. 
+                        <unitdate normal="1908-12-18">Dec. 18, 1908</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00036" level="item">
+                    <did><unittitle>Yeats, W. B. to Wade, Allan. 
+                        <unitdate normal="1909-01-09">Jan. 9, 1909</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00037" level="item">
+                    <did><unittitle>Yeats, W. B. to Wade, Allan. 
+                        <unitdate normal="1909-01-15">[Jan. 15, 1909]</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00038" level="item">
+                    <did><unittitle>Yeats, W. B. to Lister, E.M. 
+                        <unitdate normal="1909-03-02">Mar. 2, [1909]</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00039" level="item">
+                    <did><unittitle>Yeats, W. B. to Wade, Allan. 
+                        <unitdate normal="1909-06-04">Jun. 4, [1909]</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00040" level="item">
+                    <did><unittitle>Yeats, W. B. to Wade, Allan. 
+                        <unitdate normal="1909-06-07">Jun. 7, 1909</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00041" level="item">
+                    <did><unittitle>Yeats, W. B. to Campbell, Stella. 
+                        <unitdate normal="1909-07">[Jul. 1909]</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00042" level="item">
+                    <did><unittitle>Yeats, W. B. to Bullen, A.H. Sept. 21, 
+                        <unitdate normal="1909">[1909]</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00043" level="item">
+                    <did><unittitle>Photostat of letter from W.B. Yeats. 
+                        <unitdate normal="1909">[1909?]</unitdate>
+                    </unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1015-00044" level="file">
+                <did><unittitle><emph render="bold">Folder 4:</emph>
+                <unitdate normal="1910/1919" type="inclusive"><emph render="bold">1910-1919</emph></unitdate>
+                </unittitle></did>
+                <c02 id="VAD1015-00045" level="item">
+                    <did><unittitle>Yeats, W. B. to Wade, Allan. 
+                        <unitdate normal="1910-01-05">[Jan. 5, 1910]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00046" level="item">
+                    <did><unittitle>Yeats, W. B. to Wade, Allan. 
+                        <unitdate normal="1910-02-03">Feb. 3, 1910</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00047" level="item">
+                    <did><unittitle>Yeats, W. B. to Wade, Allan. 
+                        <unitdate normal="1910-06-16">[Jun. 16, 1910]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00048" level="item">
+                    <did><unittitle>"W. Wynn Westcott on Early G.D. History." 
+                        W. Wynn Westcott to F.L. Gardner.
+                        <unitdate normal="2012-04-05">Apr. 5, 1912</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00049" level="item">
+                    <did><unittitle>Yeats, W. B. to Rhys, Ernest. 
+                        <unitdate normal="1912-11-17">Nov. 17, 1912</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00050" level="item">
+                    <did><unittitle>Yeats, W. B. to Bullen, A.H. 
+                        <unitdate normal="1913">[1913]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00051" level="item">
+                    <did><unittitle>Yeats, W. B. to Wade, Allan. 
+                        <unitdate normal="1914">[1914]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00052" level="item">
+                    <did><unittitle>Yeats, W. B. to Wade, Allan. Telegram. 
+                        <unitdate normal="1914">[1914?]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00053" level="item">
+                    <did><unittitle>Yeats, W. B. to Wade, Allan. 
+                        <unitdate normal="1915">[1915]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00054" level="item">
+                    <did><unittitle>Yeats, W. B. to Wade, Allan. 
+                        <unitdate normal="1915-03-30">Mar. 30, 1915</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00055" level="item">
+                    <did><unittitle>Yeats, W. B. to Wade, Allan. 
+                        <unitdate normal="1915-04-13">Apr. 13, 1915</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00056" level="item">
+                    <did><unittitle>Yeats, W. B. to Wade, Allan. 
+                        <unitdate normal="1915-05-10">May 10, 1915</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00057" level="item">
+                    <did><unittitle>Yeats, W. B. to Gosse, Edmund. 
+                        <unitdate normal="1915-07-29">Jul. 29, [1915]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00058" level="item">
+                    <did><unittitle>Yeats, W. B. to Wade, Allan. 
+                        <unitdate normal="1915">[1915]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00059" level="item">
+                    <did><unittitle>Yeats, W. B. to Wade, Allan. 
+                        <unitdate normal="1915">[1915?]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00060" level="item">
+                    <did><unittitle>Yeats, W. B. to Wade, Allan. 
+                        <unitdate normal="1916">[1916]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00061" level="item">
+                    <did><unittitle>Yeats, W. B. to Wade, Allan. 
+                        <unitdate normal="1916-03-12">Mar. 12, [1916]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00062" level="item">
+                    <did><unittitle>Yeats, W. B. to Wade, Allan. 
+                        <unitdate normal="1916-03">[Mar. 1916]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00063" level="item">
+                    <did><unittitle>Yeats, W. B. to Wade, Allan. 
+                        <unitdate normal="1916-04-01">[Apr. 1, 1916]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00064" level="item">
+                    <did><unittitle>Yeats, W. B. to Wade, Allan. 
+                        <unitdate normal="1916-06-17">[Jun. 17, 1916]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00065" level="item">
+                    <did><unittitle>Yeats, W. B. to Horton, W.T. 
+                        <unitdate normal="1917-07-17">Jul. 17 [1917]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00066" level="item">
+                    <did><unittitle>Yeats, W. B. to Wade, Allan. 
+                        <unitdate normal="1917-10-27">Oct. 27, 1917</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00067" level="item">
+                    <did><unittitle>Yeats, W. B. to Horton. W.T. 
+                        <unitdate normal="1917-08/1917-11" type="inclusive">[Autumn 1917]</unitdate></unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1015-00068" level="file">
+                <did><unittitle><emph render="bold">Folder 5:</emph>
+                <unitdate normal="1920/1939" type="inclusive"><emph render="bold">1920-1939</emph></unitdate></unittitle></did>
+                <c02 id="VAD1015-00069" level="item">
+                    <did><unittitle>Yeats, W. B. to Phelps, William Lyon. Photostat. 
+                        <unitdate normal="1920-02-12">Feb. 12, 1920</unitdate></unittitle></did>
+               </c02>
+                <c02 id="VAD1015-00070" level="item">
+                    <did><unittitle>Yeats, W. B. to Miss Fredman. 
+                        <unitdate normal="1921-02-05">Feb. 5, [1921]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00071" level="item">
+                    <did><unittitle>Yeats, W. B. to Wade, Allan. 
+                        <unitdate normal="1921-07-10">Jul. 10, [1921]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00072" level="item">
+                    <did><unittitle>Yeats, W. B. to Wade, Allan. 
+                        <unitdate normal="1921-10-18">Oct. 18, [1921]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00073" level="item">
+                    <did><unittitle>Yeats, W. B. to Wade, Allan. 
+                        <unitdate normal="1921-10-27">Oct. 27, 1921</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00074" level="item">
+                    <did><unittitle>Yeats, W. B. to Wade, Allan. 
+                        <unitdate normal="1921">[1921]</unitdate></unittitle></did>
+                    <note><p>(1 enclosure)</p></note>
+                </c02>
+                <c02 id="VAD1015-00075" level="item">
+                    <did><unittitle>Enclosure [?], no letter.
+                        <unitdate normal="1889/1954" type="inclusive">undated</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00076" level="item">
+                    <did><unittitle>Yeats, W. B. to Wade, Allan. 
+                        <unitdate normal="1922-02-13">Feb. 13, 1922</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00077" level="item">
+                    <did><unittitle>Yeats, W. B. to Palmer, Herbert. 
+                        <unitdate normal="1922-09-10">Sept. 10, [1922]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00078" level="item">
+                    <did><unittitle>Yeats, W. B. to Strong, L.A.G. 
+                        <unitdate normal="1924-07-07">Jul. 7, [1924]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00079" level="item">
+                    <did><unittitle>Yeats, W. B. to Lord Birkenhead. 
+                        <unitdate normal="1925-05-01">May 1, [1925]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00080" level="item">
+                    <did><unittitle>Yeats, W. B. to Strong, L.A.G. 
+                        <unitdate normal="1926-07-18">Jul. 18, [1926]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00081" level="item">
+                    <did><unittitle>Yeats, W. B. to Strong, L.A.G. 
+                        <unitdate normal="1927-08-20">Aug. 20, 1927</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00082" level="item">
+                    <did><unittitle>Yeats, W. B. to Mr. Wells. Photostat. 
+                        <unitdate normal="1927-09-16">Sept. 16, 1927</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00083" level="item">
+                    <did><unittitle>Yeats, W. B. to Strong, L.A.G. 
+                        <unitdate normal="1930-04-18">Apr. 18, [1930]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00084" level="item">
+                    <did><unittitle>Yeats, W. B. to Strong, L.A.G. 
+                        <unitdate normal="1931-06-10">Jun. 10, [1931]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00085" level="item">
+                    <did><unittitle>Yeats, W. B. to Bergholz, Harry. 
+                        <unitdate normal="1931-12-13">Dec. 13, 1931</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00086" level="item">
+                    <did><unittitle>Yeats, W. B. to Dolmetsch, Arnold. 
+                        <unitdate normal="1934-11-21">Nov. 21, 1934</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00087" level="item">
+                    <did><unittitle>Yeats, W. B. to Dolmetsch, Arnold. 
+                        <unitdate normal="1935-03-18">Mar. 18, 1935</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00088" level="item">
+                    <did><unittitle>Yeats, W. B. to Barnes, George. 
+                        <unitdate normal="1937-03-28">[Mar. 28, 1937]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00089" level="item">
+                    <did><unittitle>Yeats, W. B. to Moyra. 
+                        <unitdate normal="1937-06-02">Jun. 2, [1937]</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00090" level="item">
+                    <did><unittitle>Yeats, W. B. to Clinton-Baddeley, V.C. 
+                        <unitdate normal="1939-01-23">Jan. 23, 1939</unitdate></unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1015-00091" level="file">
+                <did><unittitle><emph render="bold">Folder 6:</emph>
+                <unitdate normal="1940/1954" type="inclusive"><emph render="bold">1940-1954</emph></unitdate>
+                </unittitle></did>
+                <c02 id="VAD1015-00092" level="item">
+                    <did><unittitle>Alspach, Russell to Wade, Allan. 
+                        <unitdate normal="1950-05-29">May 29, 1950</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00093" level="item">
+                    <did><unittitle>Yorke, Gerald to Wade, Allan.
+                        <unitdate normal="1952-04-03">Apr. 3, 1952</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00094" level="item">
+                    <did><unittitle>Yorke, Gerald to Wade, Allan. 
+                        <unitdate normal="1952-05-01">May 1, 1952</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00095" level="item">
+                    <did><unittitle>Yorke, Gerald to Wade, Allan. 
+                        <unitdate normal="1954-06-14">Jun. 14, 1952</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00096" level="item">
+                    <did><unittitle>Yorke, Gerald to Wade, Allan. 
+                        <unitdate normal="1952-07-03">Jul. 3, 1952</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00097" level="item">
+                    <did><unittitle>Yorke, Gerald to Wade, Allan. 
+                        <unitdate normal="1952-07-07">Jul. 7, 1952</unitdate></unittitle></did>
+                    <note><p>(1 enclosure)</p></note>
+                </c02>
+                <c02 id="VAD1015-00098" level="item">
+                    <did><unittitle>Bridge, Ursula to Wade, Allan. 
+                        <unitdate normal="1953-08-13">Aug. 13, 1953</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00099" level="item">
+                    <did><unittitle>Unidentified to Wade, Allan. 
+                        <unitdate normal="1954-04-08">Apr. 8, 1954</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00100" level="item">
+                    <did><unittitle>Rhodes, Dorothy to Wade, Allan. 
+                        <unitdate normal="1954-11-03">Nov. 3, 1954</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00101" level="item">
+                    <did><unittitle>Allt, Peter to Wade, Allan. 
+                        <unitdate normal="1889/1954" type="inclusive">undated</unitdate></unittitle></did>
+                    <note><p>(1 enclosure)</p></note>
+                </c02>
+            </c01>
+            <c01 id="VAD1015-00102" level="file">
+                <did><unittitle><emph render="bold">Folder 7:</emph>
+                    <unitdate normal="1889/1954" type="inclusive"><emph render="bold">undated</emph></unitdate>
+                </unittitle></did>
+               <c02 id="VAD1015-00103" level="item">
+                   <did><unittitle><emph render="doublequote">Rejected Poems by W. B. Yeats,</emph>
+                   </unittitle><physdesc>bound volume</physdesc></did>
+               </c02>
+                <c02 id="VAD1015-00104" level="item">
+                    <did><unittitle><title render="doublequote">Magic and the Golden Dawn,</title>
+                    </unittitle><physdesc>typescript</physdesc></did>
+                </c02>
+                <c02 id="VAD1015-00105" level="item">
+                    <did><unittitle><title render="doublequote">Ordinances of the First Order of the G.D. in the Outer,</title>
+                    </unittitle><physdesc>typescript</physdesc></did>
+                </c02>
+                <c02 id="VAD1015-00106" level="item">
+                    <did><unittitle><title render="doublequote">Bye-Laws,</title>
+                    </unittitle><physdesc>printed</physdesc></did>
+                </c02>
+                <c02 id="VAD1015-00107" level="item">
+                    <did><unittitle>List,</unittitle><physdesc>handwritten</physdesc></did>
+                </c02>
+                <c02 id="VAD1015-00108" level="item">
+                    <did><unittitle>Details of deliveries for 
+                        <title render="italic">Collected Works of W. B. Yeats</title></unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00109" level="item">
+                    <did><unittitle>"Concert in Aid of the Social Institutes' Union," program</unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00110" level="item">
+                    <did><unittitle>Photostat of letter and enclosure from W. B. Yeats</unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1015-00111" level="file">
+                <did><unittitle><emph render="bold">Folder 8: Bookplates and Square of Cloth</emph></unittitle></did>
+                <c02 id="VAD1015-00112" level="item">
+                    <did><unittitle>Bookplates of William Butler Yeats and Lily Yeats</unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00113" level="item">
+                    <did><unittitle>Square of cloth printed with various portraits and quotations from W. B. Yeats and A. Gregory:
+                        "Sold by the Irish Players at $1.00 towards a building to save Sir Hugh Lane's great gift of pictures for Ireland, 
+                        <unitdate normal="1913-04">Apr. 1913"</unitdate>
+                        </unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1015-00114" level="file">
+                <did><unittitle><emph render="bold">Folder 9: The Cradles of Gold</emph></unittitle></did>
+                <c02 id="VAD1015-00115" level="item">
+                    <did><unittitle><title>The Cradles of Gold,</title> by W.B. Yeats, handwritten story. 
+                        <unitdate normal="1896-11">[Nov. 1896</unitdate>
+                       </unittitle></did>
+                </c02>
+                <c02 id="VAD1015-00116" level="item">
+                    <did><unittitle><title render="italic">The Well of Immortality</title> by W. B. Yeats, one-act play.
+                        <unitdate normal="1889/1954" type="inclusive">1889-1954</unitdate></unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1015-00117" level="file">
+                <did><container label="Box" type="Box">2 (Oversize)</container>
+                    <unittitle>Newspaper articles, by and about Yeats. Photostats. 
+                    <unitdate normal="1912">1912;</unitdate><unitdate normal="1889/1954" type="inclusive">1889-1954</unitdate></unittitle></did>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
