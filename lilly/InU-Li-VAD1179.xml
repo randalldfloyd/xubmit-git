@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+--><ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external" countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924" relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li" identifier="InU-Li-VAD1179">InU-Li-VAD1179</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Civilian Conservation Corps mss.<date normal="1965/2002" type="inclusive">1965-2002</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2013" type="publication">© 2013</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2013">© 2013</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2013" type="source">2013</date>
+                <lb></lb>Finding aid encoded by Tiffany Saulter, Lilly Library, Indiana University,
+                    <date normal="2013-11-19">November 19, 2013</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng">English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2013-11-19">November 19, 2013</date>
+                <item>Encoded finding aid started.</item>
+            </change>
+            <change audience="internal">
+                <date normal="2013-11-19">November 19, 2013</date>
+                <item>Encoded finding aid completed.</item>
+            </change>
+            
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <corpname encodinganalog="110" source="lcnaf">Civilian Conservation Corps (U.S.)
+                </corpname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Civilian Conservation Corps
+                mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1965/2002" type="inclusive">1965-2002</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 1188</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>480 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract"> The Civilian Conservation Corps mss.,
+                1939-1942, consist of records and correspondence relating to the CCC.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+            <p>The Corps was a public work relief program that operated from 1933-1942 during the
+                presidency of Franklin D. Roosevelt. In the Corps, unemployed, unmarried men between
+                the ages of 18-25 were provided manual labor jobs related to the conservation and
+                development of natural resources in rural lands owned by federal, state, and local
+                governments. It became the most popular of all the New Deal programs that originated
+                during the Great Depression. </p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>Collection is arranged alphabetically by name of applicant.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The collection includes records and correspondence of eighty-three Monroe County, IN
+                applicants for service in the Corps.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/civilian+conservation+corps+U+S{su}"><corpname encodinganalog="610" source="lcnaf">Civilian Conservation Corps (U.S.).</corpname></extref></item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/depressions+1929{su}"><subject encodinganalog="650" source="lcsh">Depressions --1929.</subject></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/united+states+history+20th+century{su}"><geogname encodinganalog="651" source="aacr2">United States --History --20th century. </geogname></extref></item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="610" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+        <descgrp>
+            <head>Administrative Information</head>
+
+            <!-- include if appropriate -->
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 1949</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Civilian Conservation Corps mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+            <!--optional -->
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Staff.</p>
+                <p>Completed in <date normal="2013">2013</date></p>
+
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAD1179-00001" level="file">
+                <did><container label="Box" type="Box">1: A-L</container>
+                    <unittitle>Alexander, James Edward. 
+                        <unitdate normal="1939-09-06/1940-12-04" type="inclusive">1939, Sept. 6 - 1940, Dec. 4</unitdate></unittitle>
+                </did>
+            </c01>
+            <c01 id="VAD1179-00002" level="file">
+                <did><unittitle>Allen, Maurice. 
+                    <unitdate normal="1939-12-11/1940-06-25" type="inclusive">1939, Dec. 11 - 1940, Jun. 25</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00003" level="file">
+                <did><unittitle>Allgood, Charles Austin. 
+                    <unitdate normal="1939-12-14/1940-12-20" type="inclusive">1939, Dec. 14 - 1940, Dec. 20</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00004" level="file">
+                <did><unittitle>Andis, Curtis Napolian. 
+                    <unitdate normal="1939-01-18/1941-06-17" type="inclusive">1939, Jan. 18 - 1941, Jun. 17</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00005" level="file">
+                <did><unittitle>Andis, Ray Alvan. 
+                    <unitdate normal="1939-12-18/1940-12-20" type="inclusive">1939, Dec. 18 - 1940, Dec. 20</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00006" level="file">
+                <did><unittitle>Arnett, Austin Ellsworth. 
+                    <unitdate normal="1939-12-11/1940-06-25" type="inclusive">1939, Dec. 11 - 1940, Jun. 25</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00007" level="file">
+                <did><unittitle>Baker, Lloyd Philip. 
+                    <unitdate normal="1940-02-15">1940, Feb. 15</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00008" level="file">
+                <did><unittitle>Bell, Ralph. 
+                    <unitdate normal="1941-07-17/1941-12-14" type="inclusive">1941, Jul. 17 - Dec. 14</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00009" level="file">
+                <did><unittitle>Boltinghouse, Robert Earl. 
+                    <unitdate normal="1940-03-25/1940-08-01" type="inclusive">1940, Mar. 25 - Aug. 1</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00010" level="file">
+                <did><unittitle>Boshears, Homer Lewis. 
+                    <unitdate normal="1941-04-01">1941, Apr. 1</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00011" level="file">
+                <did><unittitle>Brown, Cecil Henry. 
+                    <unitdate normal="1940-03-14/1940-12-23" type="inclusive">1940, Mar. 14 - Dec. 23</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00012" level="file">
+                <did><unittitle>Burton, Robert Eugene. 
+                    <unitdate normal="1941-03-24/1942-04-26" type="inclusive">1941, Mar. 24 - 1942, Apr. 26</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00013" level="file">
+                <did><unittitle>Carter, Merrle Eugene. 
+                    <unitdate normal="1939-09-05/1940-09-18" type="inclusive">1939, Sept. 5 - 1940, Sept. 18</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00014" level="file">
+                <did><unittitle>Chambers, Don Wilburn. 
+                    <unitdate normal="1939-12-18/1940-03-15" type="inclusive">1939, Dec. 18 - 1940, Mar. 15</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00015" level="file">
+                <did><unittitle>Christy, Harold. 
+                    <unitdate normal="1941-06-02/1942-01-16" type="inclusive">1941, Jun. 2 - 1942, Jan. 16</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00016" level="file">
+                <did><unittitle>Crane, Russell Kenneth. 
+                    <unitdate normal="1941-04-01/1941-05-14" type="inclusive">1941, Apr. 1 - May 14</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00017" level="file">
+                <did><unittitle>Crouch, Robert Edward. 
+                    <unitdate normal="1939-09-07/1940-09-18" type="inclusive">1939, Sept. 7 - 1940, Sept. 18</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00018" level="file">
+                <did><unittitle>Davis, George Oliver. 
+                    <unitdate normal="1939-12-18/1941-07-08" type="inclusive">1939, Dec. 18 - 1941, Jul. 8 </unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00019" level="file">
+                <did><unittitle>Deckard, Junior Curtis. 
+                    <unitdate normal="1941-07-15/1941-07-26" type="inclusive">1941, Jul. 15-26 </unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00020" level="file">
+                <did><unittitle>Deckard, Winfred Ernest. 
+                    <unitdate normal="1940-01-06">1940, Jan. 6</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00021" level="file">
+                <did><unittitle>Drake, John Jefferson. 
+                    <unitdate normal="1939-09-15/1941-12-08" type="inclusive">1939, Sept. 15 - 1941, Dec. 8</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00022" level="file">
+                <did><unittitle>Dugans, Robert. 
+                    <unitdate normal="1941-08-28/1941-11-17" type="inclusive">1941, Aug. 28 - Nov. 17</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00023" level="file">
+                <did><unittitle>Eads, Robert Wayne. 
+                    <unitdate normal="1941-05-05/1942-01-17" type="inclusive">1941, May 5 - 1942, Jan. 17</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00024" level="file">
+                <did><unittitle>Fender, Harold Lloyd. 
+                    <unitdate normal="1941-10-07/1941-10-09" type="inclusive">1941, Oct. 7-9</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00025" level="file">
+                <did><unittitle>Fleener, Vernal Eugene. 
+                    <unitdate normal="1941-05-09">1941, May 9</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00026" level="file">
+                <did><unittitle>Games, Warren Eugene. 
+                    <unitdate normal="1939-12-15/1940-02-10" type="inclusive">1939, Dec. 15 - 1940, Feb. 10</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00027" level="file">
+                <did><unittitle>Gillaspy, Edward. 
+                    <unitdate normal="1940-01-04/1940-06-25" type="inclusive">1940, Jan. 4 - Jun. 25</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00028" level="file">
+                <did><unittitle>Gillespie, Donald Shelburn. 
+                    <unitdate normal="1940-03-30/1942-01-20" type="inclusive">1940, Mar. 30 - 1942, Jan. 20</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00029" level="file">
+                <did><unittitle>Gillispie, Glenn Spencer. 
+                    <unitdate normal="1939-12-04/1940-06-25" type="inclusive">1939, Dec. 4 - 1940, Jun. 25</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00030" level="file">
+                <did><unittitle>Graves, Allen Lloyd. 
+                    <unitdate normal="1940-02-15/1941-04-29" type="inclusive">1940, Feb. 15 - 1941, Apr. 29</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00031" level="file">
+                <did><unittitle>Green, Jerry Arnold. 
+                    <unitdate normal="1939-12-15/1940-01-08" type="inclusive">1939, Dec. 15 - 1940, Jan. 8</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00032" level="file">
+                <did><unittitle>Hall, Shermon Theodore. 
+                    <unitdate normal="1939-01-08/1942-03-24" type="inclusive">1939, Jan. 8 - 1942, Mar. 24</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00033" level="file">
+                <did><unittitle>Hawkins, Carl Veantly. 
+                    <unitdate normal="1939-12-06/1940-01-19" type="inclusive">1939, Dec. 6 - 1940, Jan. 19</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00034" level="file">
+                <did><unittitle>Hawkins, Oscar Garold. 
+                    <unitdate normal="1939-12-15">1939, Dec. 15</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00035" level="file">
+                <did><unittitle>Hawkins, Paul Glenn. 
+                    <unitdate normal="1941-06-08/1941-06-11" type="inclusive">1941, Jul. 8-11</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00036" level="file">
+                <did><unittitle>Hines, Charles McAuley. 
+                    <unitdate normal="1940-01-02/1940-01-03" type="inclusive">1940, Jan. 2-3</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00037" level="file">
+                <did><unittitle>Hite, Earl. 
+                    <unitdate normal="1939-12-04/1939-12-07" type="inclusive">1939, Dec. 4-7</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00038" level="file">
+                <did><unittitle>Hoy, Fremont Romain. 
+                    <unitdate normal="1940-03-18/1940-04-11" type="inclusive">1940, Mar. 18 - Apr. 11</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00039" level="file">
+                <did><unittitle>Jones, Charles Quincy. 
+                    <unitdate normal="1940-03-26/1940-09-27" type="inclusive">1940, Mar. 26 - Sept. 27</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00040" level="file">
+                <did><unittitle>Kulmes, Kenneth Keith. 
+                    <unitdate normal="1941-05-08">1941, May 8</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00041" level="file">
+                <did><unittitle>Langley, Kenneth Leon. 
+                    <unitdate normal="1940-03-23/1941-05-29" type="inclusive">1940, Mar. 23 - 1941, May 29</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00042" level="file">
+                <did><unittitle>Lawrence, Hervey Franklin. 
+                    <unitdate normal="1941-04-01/1941-05-08" type="inclusive">1941, Apr. 1 - May 8</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00043" level="file">
+                <did><unittitle>Lester, Herbert Columbus. 
+                    <unitdate normal="1940-03-23/1941-08-18" type="inclusive">1940, Mar. 23 - 1941, Aug. 18</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00044" level="file">
+                <did><unittitle>Lester, Uless. 
+                    <unitdate normal="1939-12-12/1941-07-11" type="inclusive">1939, Dec. 12 - 1941, Jul. 11</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00045" level="file">
+                <did><container label="Box" type="Box">2: M-Z</container>
+                    <unittitle>May, William Wayne. 
+                        <unitdate normal="1940-01-09/1940-12-20" type="inclusive">1940, Jan. 9 - Dec. 20</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00046" level="file">
+                <did><unittitle>Medley, Robert Ellsworth. 
+                    <unitdate normal="1939-09-05/1941-12-23" type="inclusive">1939, Sept. 5 - 1941, Dec. 23</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00047" level="file">
+                <did><unittitle>Melton, Walter Wright. 
+                    <unitdate normal="1941-09-22/1941-10-28" type="inclusive">1941, Sept. 22 - Oct. 28</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00048" level="file">
+                <did><unittitle>Miller, Claude Morris. 
+                    <unitdate normal="1939-09-01/1939-10-07" type="inclusive">1939, Sept. 1 - Oct. 7</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00049" level="file">
+                <did><unittitle>Olmstead, Ivan Ray. 
+                    <unitdate normal="1940-03-14/1940-03-28" type="inclusive">1940, Mar. 14-28</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00050" level="file">
+                <did><unittitle>Parr, William Morris. 
+                    <unitdate normal="1940-03-30/1940-09-21" type="inclusive">1940, Mar. 30 - Sept. 21</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00051" level="file">
+                <did><unittitle>Pennington, Alfred Gordon. 
+                    <unitdate normal="1939-09-02/1939-10-07" type="inclusive">1939, Sept. 2 - Oct. 7</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00052" level="file">
+                <did><unittitle>Peregrine, Marion Lee. 
+                    <unitdate normal="1941-04-21">1941, Apr. 21</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00053" level="file">
+                <did><unittitle>Petmecky, George Robert. 
+                    <unitdate normal="1941-07-18/1942-05-05" type="inclusive">1941, Jul. 18 - 1942, May 5</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00054" level="file">
+                <did><unittitle>Porter, Harvey Edward. 
+                    <unitdate normal="1939-09-09/1939-09-25" type="inclusive">1939, Sept. 7-25</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00055" level="file">
+                <did><unittitle>Porter, Lester. 
+                    <unitdate normal="1941-09-16/1941-12-17" type="inclusive">1941, Sept. 16 - Dec. 17</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00056" level="file">
+                <did><unittitle>Prince, Ancel Wayne. 
+                    <unitdate normal="1941-09-23/1942-02-17" type="inclusive">1941, Sept. 23 - 1942, Feb. 17</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00057" level="file">
+                <did><unittitle>Pryor, Donald Franklin. 
+                    <unitdate normal="1939-12-11/1941-06-27" type="inclusive">1939, Dec. 11 - 1941, Jun. 27</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00058" level="file">
+                <did><unittitle>Quillen, John Wesley. 
+                    <unitdate normal="1939-09-30/1940-10-14" type="inclusive">1939, Sept. 30 - 1940, Oct. 14</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00059" level="file">
+                <did><unittitle>Richardson, Harry Eugene. 
+                    <unitdate normal="1941-05-09">1941, May 9</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00060" level="file">
+                <did><unittitle>Richardson, Howard Franklin. 
+                    <unitdate normal="1940-03-26/1940-07-12" type="inclusive">1940, Mar. 26 - Jul. 12</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00061" level="file">
+                <did><unittitle>Riggins, Clarence Trumen. 
+                    <unitdate normal="1941-07-14/1941-09-26" type="inclusive">1941, Jul. 14 - Sept. 26</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00062" level="file">
+                <did><unittitle>Robertson, Robert Eugene. 
+                    <unitdate normal="1939-09-05/1940-10-11" type="inclusive">1939, Sept. 5 - 1940, Oct. 11</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00063" level="file">
+                <did><unittitle>Robertson, Warren Eugene. 
+                    <unitdate normal="1940-03-23/1941-03-28" type="inclusive">1940, Mar. 23 - 1941, Mar. 28</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00064" level="file">
+                <did><unittitle>Rogers, Clovis Wesley. 
+                    <unitdate normal="1941-11-06/1942-08-19" type="inclusive">1941, Nov. 6 - 1942, Aug. 19</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00065" level="file">
+                <did><unittitle>Rush, Warren Edward. 
+                    <unitdate normal="1940-01-02/1940-03-17" type="inclusive">1940, Jan. 2 - Mar. 17</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00066" level="file">
+                <did><unittitle>Scott, William James. 
+                    <unitdate normal="1940-03-23/1941-04-17" type="inclusive">1940, Mar. 23 - 1941, Apr. 17</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00067" level="file">
+                <did><unittitle>Sims, Lloyd Robert. 
+                    <unitdate normal="1940-03-19/1940-10-14" type="inclusive">1940, Mar. 19 - Oct. 14</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00068" level="file">
+                <did><unittitle>Smith, Bassil. 
+                    <unitdate normal="1941-07-10/1941-07-25" type="inclusive">1941, Jul. 10-25</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00069" level="file">
+                <did><unittitle>Smith, Donald Burl. 
+                    <unitdate normal="1940-03-28/1940-12-07" type="inclusive">1940, Mar. 28 - Dec. 7</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00070" level="file">
+                <did><unittitle>Snow, Roger Lee. 
+                    <unitdate normal="1941-03-26/1941-05-29" type="inclusive">1941, Mar. 26 - May 29</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00071" level="file">
+                <did><unittitle>Sowders, Russell. 
+                    <unitdate normal="1940-04-05/1940-07-03" type="inclusive">1940, Apr. 5 - Jul. 3</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00072" level="file">
+                <did><unittitle>Spears, Garnet Lucion. 
+                    <unitdate normal="1940-02-09/1940-11-25" type="inclusive">1940, Feb. 9 - Nov. 25</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00073" level="file">
+                <did><unittitle>Steffey, Raymond Charles. 
+                    <unitdate normal="1939-12-15/1940-01-08" type="inclusive">1939, Dec. 15 - 1940, Jan. 8</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00074" level="file">
+                <did><unittitle>Stevens, Ward Edward. 
+                    <unitdate normal="1939-12-04/1941-10-09" type="inclusive">1939, Dec. 4 - 1941, Oct. 9</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00075" level="file">
+                <did><unittitle>Stewart, Olin. 
+                    <unitdate normal="1940-03-16/1941-09-09" type="inclusive">1940, Mar. 16 - 1941, Sept. 9</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00076" level="file">
+                <did><unittitle>Stultz, Roy Edward. 
+                    <unitdate normal="1939-09-05/1942-03-25" type="inclusive">1939, Sept. 5 - 1942, Mar. 25</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00077" level="file">
+                <did><unittitle>Swafford, John William. 
+                    <unitdate normal="1939-12-21/1941-06-25" type="inclusive">1939, Dec. 21 - 1941, Jun. 25</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00078" level="file">
+                <did><unittitle>Terrell, Charles Emory. 
+                    <unitdate normal="1940-03-14/1940-10-26" type="inclusive">1940, Mar. 14 - Oct. 26 </unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00079" level="file">
+                <did><unittitle>Vilbert, Ellis Allen. 
+                    <unitdate normal="1941-08-25">1941, Aug. 25</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00080" level="file">
+                <did><unittitle>Wampler, William Jackson. 
+                    <unitdate normal="1940-01-05/1940-09-27" type="inclusive">1940, Jan. 5 - Sept. 27</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00081" level="file">
+                <did><unittitle>Weaver, Earl Edward. 
+                    <unitdate normal="1940-01-04/1940-06-10" type="inclusive">1940, Jan. 4 - 1941, Jun. 10</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00082" level="file">
+                <did><unittitle>Whitaker, Gerald Junior. 
+                    <unitdate normal="1941-03-21/1941-06-13" type="inclusive">1941, Mar. 21 - Jun. 13</unitdate></unittitle></did>
+            </c01>
+            <c01 id="VAD1179-00083" level="file">
+                <did><unittitle>Wright, James Franklin. 
+                    <unitdate normal="1940-01-03/1940-03-16" type="inclusive">1940, Jan. 3 - Mar. 16</unitdate></unittitle></did>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>

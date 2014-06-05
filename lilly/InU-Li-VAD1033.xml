@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+--><ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external" countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924" relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li" identifier="InU-Li-VAD1033">InU-Li-VAD1033</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Weissberger mss.,<date normal="1938/1949" type="inclusive">1938-1949</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2013" type="publication">© 2013</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2013">© 2013</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2013" type="source">2013</date>
+                <lb></lb>Finding aid encoded by Tiffany Saulter, Lilly Library, Indiana University,
+                    <date normal="2013-10-28">October 28, 2013</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng">English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2013-10-28">October 28, 2013</date>
+                <item>Encoded finding aid started.</item>
+            </change>
+            <change altrender="internal">
+                <date normal="2013-10-29">October 29, 2013</date>
+                <item>Encoded finding aid completed</item>
+            </change>
+            
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Weissberger, L. Arnold</persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Weissberger mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1938/1949" type="inclusive">1938-1949</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2067</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>1,100 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Weissberger mss., 1938-1949, consist
+                primarily of correspondence and legal papers pertaining to the financial affairs of
+                Orson Welles and Mercury Theatre, Inc., as handled by Welles's personal
+                attorney, L. Arnold Weissberger, 1907-1981.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+            <p>Personal attorney to Orson Welles, Weissberger was born in New York City and educated
+                at the Ethical Culture School. He graduated from Harvard University in 1927 and
+                received an LL.B. from Harvard Law School in 1930. He was admitted to the New York
+                State bar that year and went on to become an American theatrical lawyer whose
+                clientele featured numerous celebrities from the stage and screen, including Welles.
+                He was chairman of the board of Friends of the Theater and Music Collection of the
+                Museum of the City of New York, chairman of the New Dramatists Inc., and president
+                of the Martha Graham Center of Contemporary Dance before his death in 1981. Orson
+                Welles delivered a eulogy at Weissberger's memorial service.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>Organized by the following series: I. Correspondence; II. Contracts, Agreements,
+                Legal Papers; III. Photographs; IV. Printed; V. Miscellaneous. </p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>Correspondence includes primarily financial matters of Orson Welles and Mercury
+                Theatre, Inc., including detailed accounts of Welles's tax difficulties with
+                the IRS; as well as correspondence concerning the release of <title render="italic">Citizen Kane</title> and to the threatened lawsuit by William Randolph Hearst.
+                The Contracts, Agreements, Legal Papers series includes more records concerning
+                Welles's tax problems; copies of contracts and agreements between Welles and
+                RKO; other legal documents pertaining to Mercury Theatre; insurance policies for
+                both Orson and Virginia Welles; and copies of Welles's birth certificate.</p>
+            <p>Correspondents include: Aaron Copland; Herbert Drake; John Houseman; Carlos L.
+                Israels; Ruth Krauser; Jack Moss; Fleta Preston; George Schaefer; Augusta
+                Weissberger; L. Arnold Weissberger; Orson Welles; S. P. Williams.</p>
+            <p>Photographs consist of primarily theater productions and performers, as well as
+                stills from the recently discovered (in 2013) early Welles film <title render="italic">Too Much Johnson.</title> The Printed series includes newspaper
+                clippings mainly about Welles. Miscellaneous materials include an oversize folio
+                containing summary film earnings for <title render="italic">Citizen Kane,</title>
+                Sept. 1941-Jan. 1942. </p>
+
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/welles+orson+1915-1985{su}"><persname encodinganalog="600" source="lcnaf">Welles, Orson,
+                                1915-1985.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/welles+orson+1915-1985{su}"><persname encodinganalog="600" source="lcnaf">Welles, Orson,
+                                1915-1985 --Correspondence. </persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/welles+virginia{su}"><persname encodinganalog="600" source="lcnaf">Welles,
+                                Virginia.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/mercury+theatre{su}">
+                            <corpname encodinganalog="610" source="lcnaf">Mercury
+                                theatre.</corpname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/mercury+theatre+correspondence{su}">
+                            <corpname encodinganalog="610" source="lcnaf">Mercury Theatre
+                                --Correspondence.</corpname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/rko+radio+pictures{su}">
+                            <corpname encodinganalog="610" source="lcnaf">RKO Radio
+                                Pictures.</corpname></extref></item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/citizen+kane+motion+picture{su}">
+                            <title encodinganalog="630">Citizen Kane (Motion
+                            picture).</title></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/motion+picture+producers+and+directors+united+states{su}">
+                            <subject encodinganalog="650" source="lcsh">Motion picture producers and
+                                directors --United States.</subject></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/motion+picture+industry+united+states{su}">
+                            <subject encodinganalog="650" source="lcsh">Motion picture industry
+                                --United States.</subject></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/motion+picture+actors+and+actresses+united+states{su}">
+                            <subject encodinganalog="650" source="lcsh">Motion picture actors and
+                                actresses --United States.</subject></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/lawyers+united+states+history+20th+century{su}">
+                            <subject encodinganalog="650" source="lcsh">Lawyers --United States
+                                --History --20th century.</subject></extref></item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="610" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+        <!-- optional, if applicable -->
+        <descgrp>
+            <head>Administrative Information</head>
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 1996</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Weissberger mss., Lilly Library, Indiana University, Bloomington,
+                    Indiana.</p>
+            </prefercite>
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Staff.</p>
+                <p>Completed in <date normal="2013">2013</date></p>
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAD1033-00001" level="series">
+                <did><container label="Box" type="Box">1</container>
+                    <unittitle>Correspondence</unittitle>
+                </did>
+                <c02 id="VAD1033-00002" level="otherlevel">
+                    <did>
+                        <unittitle>Correspondence, <unitdate normal="1939/1949" type="inclusive">1939-1949;</unitdate>
+                            <unitdate normal="1938/1949" type="inclusive">1938-1949;</unitdate> 
+                            Primarily financial matters of Orson Welles and Mercury Theatre,
+                            Inc.</unittitle>
+                        <physdesc>(26 folders)</physdesc>
+                        <note>
+                            <p>Includes two folders <unitdate normal="1941-01">(1941, Jan. </unitdate><unitdate normal="1941">and 1941)</unitdate>
+                                pertaining to the release
+                                of <title render="italic">Citizen Kane</title> and William Randolph Hearst's threatened
+                                lawsuit.</p>
+                        </note>
+                    </did>
+                </c02>
+            </c01>
+            <c01 id="VAD1033-00003" level="series">
+                <did><container label="Box" type="Box">2</container>
+                    <unittitle>Contracts, Agreements, Legal Papers</unittitle></did>
+                <c02 id="VAD1033-00004" level="file">
+                    <did>
+                        <unittitle>Folder 1: AFRA and CBS. 
+                        <unitdate normal="1938-07-12">1938, Jul. 12</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1033-00005" level="file">
+                    <did><unittitle>Folder 2: Housman, John. Assignments to L. Arnold Weissberger, 
+                    <unitdate normal="1938-10-04/1949-10-04" type="inclusive">4 Oct.</unitdate> and
+                    <unitdate normal="1938-10-28">28 Oct. 1938;</unitdate></unittitle></did>
+                    <note><p>agreement re: production of <title render="italic">Five Kings,</title>
+                        <unitdate normal="1939-01-27">(Jan. 27, 1939)</unitdate></p></note>
+                </c02>
+                <c02 id="VAD1033-00006" level="file">
+                    <did><unittitle>Folder 3: Welles and Columbia Artists, agreements and correspondence. 
+                    <unitdate normal="1938/1940" type="inclusive">1938-1940</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1033-00007" level="file">
+                    <did><unittitle>Folder 4: Columbia Phonograph Co., Mercury Theatre, Inc. and Orson Welles, 
+                    <unitdate normal="1939-05">May 1939</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1033-00008" level="file">
+                    <did><unittitle>Folder 5: Orson Welles and RKO agreements, 
+                    <unitdate normal="1939-07/1941" type="inclusive">1939 Jul.-1941</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1033-00009" level="file">
+                    <did><unittitle>Folder 6: RKO and Orson Welles agreement, 
+                    <unitdate normal="1941-07-07">Jul. 7, 1941</unitdate></unittitle>
+                        <note><p>[photocopy of photostat]</p></note></did>
+                </c02>
+                <c02 id="VAD1033-00010" level="file">
+                    <did><unittitle>Folder 7: Welles' insurance policies [a few are for Virginia Welles]</unittitle></did>
+                </c02>
+                <c02 id="VAD1033-00011" level="file">
+                    <did><unittitle>Folder 8: Welles' birth certificate (2 copies)</unittitle></did>
+                </c02>
+                <c02 id="VAD1033-00012" level="file">
+                    <did><unittitle>Folder 9: Welles' tax problems</unittitle></did>
+                </c02>
+                <c02 id="VAD1033-00013" level="file">
+                    <did><container label="Box" type="Box">3</container>
+                        <unittitle>Orson Welles and RKO: photocopy of 
+                            <unitdate normal="1939">1939</unitdate> contract and photostat of revised 
+                            <unitdate normal="1941">1941</unitdate> contract</unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1033-00014" level="series">
+                <did><container label="Box" type="Box">2 (continued)</container>
+                    <unittitle>Photographs</unittitle></did>
+                <c02 id="VAD1033-00015" level="file">
+                    <did><unittitle>Folder 10: Actors [incl. one of Mark Blitzstein] (15)</unittitle></did>
+                </c02>
+                <c02 id="VAD1033-00016" level="file">
+                    <did><unittitle>Folder 11: Actresses (6)</unittitle></did>
+                </c02>
+                <c02 id="VAD1033-00017" level="file">
+                    <did><unittitle>Folder 12: <title render="italic">Doctor Faustus</title> (2)</unittitle></did>
+                </c02>
+                <c02 id="VAD1033-00018" level="file">
+                    <did><unittitle>Folder 13: <title render="italic">Horse Eats Hat</title> (2)</unittitle></did>
+                </c02>
+                <c02 id="VAD1033-00019" level="file">
+                    <did><unittitle>Folder 14: <title render="italic">Julius Caesar</title> (2)</unittitle></did>
+                </c02>
+                <c02 id="VAD1033-00020" level="file">
+                    <did><unittitle>Folder 15: <title render="italic">Shoemaker's Holiday</title> (2)</unittitle></did>
+                </c02>
+                <c02 id="VAD1033-00021" level="file">
+                    <did><unittitle>Folder 16: <title render="italic">Too Much Johnson</title> (16)</unittitle></did>
+                </c02>
+                <c02 id="VAD1033-00022" level="file">
+                    <did><unittitle>Folder 17: Welles, Orson (5)</unittitle></did>
+                </c02>
+                <c02 id="VAD1033-00023" level="file">
+                    <did><unittitle>Folder 18: Miscellaneous (3)</unittitle></did>
+                </c02>
+                <c02 id="VAD1033-00024" level="file">
+                    <did><unittitle>Folder 19: Postcard Photographs</unittitle></did>
+                </c02>
+                <c02 id="VAD1033-00025" level="file">
+                    <did><container label="Box" type="Box">5 (Oversize)</container>
+                        <unittitle>Orson and Virginia Welles wedding photo</unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1033-00026" level="series">
+                <did><container label="Box" type="Box">2</container>
+                    <unittitle>Printed</unittitle></did>
+                <c02 id="VAD1033-00027" level="file">
+                    <did>
+                        <unittitle>Folders 20-21: clippings re: <title render="italic">Citizen Kane</title> and
+                     <title render="italic">Macbeth</title></unittitle></did>
+                </c02>
+                <c02 id="VAD1033-00028" level="file">
+                    <did><container label="Box" type="Box">6 (Oversize)</container>
+                        <unittitle>Printed: clippings, chiefly re: Welles</unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1033-00029" level="series">
+                <did><container label="Box" type="Box">2</container>
+                    <unittitle>MISCELLANEOUS</unittitle></did>
+                <c02 id="VAD1033-00030" level="file">
+                    <did>
+                        <unittitle>Folder 23: 
+                        <title render="doublequote">Alva Johnston's Second Installment,</title> 
+                        written piece on the young Orson Welles</unittitle></did>
+                </c02>
+                <c02 id="VAD1033-00031" level="file">
+                    <did><unittitle>Folder 24: Train tickets; calling cards; reply brief: 
+                        <emph render="italic">Helen Twelvetrees v. RKO</emph></unittitle></did>
+                </c02>
+                <c02 id="VAD1033-00032" level="file">
+                    <did><unittitle>Folder 25: Personal</unittitle></did>
+                </c02>
+                <c02 id="VAD1033-00033" level="file">
+                    <did><unittitle>Folder 26: Clippings re: Weissberger</unittitle></did>
+                </c02>
+                <c02 id="VAD1033-00034" level="file">
+                    <did><container label="Box" type="Box">4 (Oversize)</container>
+                        <unittitle>Summary earnings sheets for 
+                        <title render="italic">Citizen Kane,</title>
+                        <unitdate normal="1941-09/1942-01" type="inclusive">Sept. 1941-Jan. 1942</unitdate></unittitle></did>
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
