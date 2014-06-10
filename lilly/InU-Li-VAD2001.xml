@@ -1,17 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Indiana University EAD template draft: 2003-Jan-2, 
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
     revised 2004-09-15 JLR; 
     revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
     added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
--->
-<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
-    <eadheader relatedencoding="dublincore" audience="external" langencoding="iso639-2b"
-        scriptencoding="iso15924" repositoryencoding="iso15511" countryencoding="iso3166-1"
-        dateencoding="iso8601" findaidstatus="edited-full-draft">
-        <eadid encodinganalog="identifier" identifier="InU-Li-VAD2001" countrycode="US"
-            mainagencycode="InU-Li">InU-Li-VAD2001</eadid>
+--><ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external" countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924" relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li" identifier="InU-Li-VAD2001">InU-Li-VAD2001</eadid>
         <!-- The value of eadid should follow the pattern of archive or library code, and then a 
 unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
         <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
@@ -25,8 +18,7 @@ original finding aid or the collection -->
 Papers of John Doe, 1919-1965" to eliminate 
                 potential confusion about the meaning of the dates -->
             <titlestmt>
-                <titleproper encodinganalog="title">Smith, Annette mss.,<date type="inclusive"
-                        normal="1964/2004">1964-2004</date></titleproper>
+                <titleproper encodinganalog="title">Smith, Annette mss.,<date normal="1964/2004" type="inclusive">1964-2004</date></titleproper>
 
             </titlestmt>
             <publicationstmt>
@@ -48,12 +40,11 @@ Papers of John Doe, 1919-1965" to eliminate
         <profiledesc>
             <creation>XML finding aid derived from HTML version through cutting and pasting and
                 through folder analysis. <date normal="2014" type="source">2014</date>
-                <lb/>Finding aid encoded by Tiffany Saulter, Lilly Library, Indiana University,
+                <lb></lb>Finding aid encoded by Tiffany Saulter, Lilly Library, Indiana University,
                     <date normal="2014-04-16">April 16, 2014</date>
             </creation>
 
-            <langusage>Description is in <language encodinganalog="language" langcode="eng"
-                    >English.</language></langusage>
+            <langusage>Description is in <language encodinganalog="language" langcode="eng">English.</language></langusage>
         </profiledesc>
 
         <!-- revisiondesc is required -->
@@ -70,13 +61,12 @@ listed below the first -->
     </eadheader>
 
 
-    <archdesc level="collection" audience="external" type="inventory" relatedencoding="marc21">
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
         <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
         <did>
             <head>Summary Information</head>
-            <repository encodinganalog="852" label="Repository" id="lilly">
-                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)"
-                    >Lilly Library (Indiana University, Bloomington)</corpname>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
                 <address> 
                     <addressline>Lilly Library</addressline> 
                     <addressline>Indiana University</addressline> 
@@ -89,13 +79,12 @@ listed below the first -->
             </repository>
             <origination label="Creator">
                 <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
-                <persname source="lcnaf" encodinganalog="100">Smith, Annette. </persname>
+                <persname encodinganalog="100" source="lcnaf">Smith, Annette. </persname>
             </origination>
             <!-- per RLG guidelines recommendation, do not nest unitdate element within
 unittitle element -->
             <unittitle encodinganalog="245$a" label="Title">Smith, Annette mss.</unittitle>
-            <unitdate normal="1964/2004" type="inclusive" encodinganalog="245$f"
-                >1964-2004</unitdate>
+            <unitdate encodinganalog="245$f" normal="1964/2004" type="inclusive">1964-2004</unitdate>
 
             <!-- do not include separating punctuation between the unit title and the unit
 date.  The stylesheets will supply a comma where appropriate. -->
@@ -112,8 +101,7 @@ date.  The stylesheets will supply a comma where appropriate. -->
 
             <!-- if collection includes signinficant non-english material add code to
 langmaterial element -->
-            <langmaterial encodinganalog="546" label="Language">Materials are in <language
-                    langcode="eng">English.</language>
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language langcode="eng">English.</language>
             </langmaterial>
 
             <abstract encodinganalog="520" label="Abstract"> The Smith, Annette mss. 1964-2004,
@@ -156,12 +144,12 @@ langmaterial element -->
 
             <head>Scope and Content Note</head>
             <p>Translation Notes and Drafts include drafts, proofs and notes for many Aimé Césaire
-                poems. Research Materials include extensive research for <title render="italic">Gobineau et l&apos;Histoire
-                Naturelle</title> and <title render="italic">Aimé Césaire&apos;s Collected Poetry.</title> Correspondence is organized
-                alphabetically and includes letters from Smith&apos;s translating partner Clayton
+                poems. Research Materials include extensive research for <title render="italic">Gobineau et l'Histoire
+                Naturelle</title> and <title render="italic">Aimé Césaire's Collected Poetry.</title> Correspondence is organized
+                alphabetically and includes letters from Smith's translating partner Clayton
                 Eshleman. Critiques include peer reviews and newspaper clippings, and Presentation
                 Materials include drafts of several public talks. The Family series contains a
-                memoir from the Andersonville Civil War Prison, as well as Smith&apos;s father&apos;s World
+                memoir from the Andersonville Civil War Prison, as well as Smith's father's World
                 War I diaries. Audio-Visual materials include computer diskettes, microcassettes,
                 and DVDs.</p>
         </scopecontent>
@@ -173,9 +161,7 @@ langmaterial element -->
             <controlaccess>
                 <head>Names</head>
                 <list>
-                    <item><extref
-                            xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/Smith+Annette+Annette+J.{su}"
-                        ><persname encodinganalog="600" source="lcnaf">Smith, Annette (Annette J.)</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/Smith+Annette+Annette+J.{su}"><persname encodinganalog="600" source="lcnaf">Smith, Annette (Annette J.)</persname></extref></item>
                 </list>
             </controlaccess>
             <!-- <persname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
@@ -230,229 +216,229 @@ langmaterial element -->
             <!-- unittitle is the only required element within component -->
             <!-- possible values for @level include: class, collection, file, fonds, item,
                 otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
-            <c01 level="series">
-                <did><container type="Box" label="Box">1</container>
+            <c01 id="VAD2001-00001" level="series">
+                <did><container label="Box" type="Box">1</container>
                     <unittitle>I. Translations and Drafts.</unittitle></did>
-                <c02 level="file">
+                <c02 id="VAD2001-00002" level="file">
                     <did><unittitle><title render="italic">Africana</title>
                     Journal Introduction</unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00003" level="file">
                     <did><unittitle><title render="doublequote">And the Dogs Were Silent</title>
                     </unittitle><physdesc>(3 folders)</physdesc></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00004" level="file">
                     <did><unittitle><title render="italic">Les Armes Miraculeuses/The Miraculous Weapons</title></unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00005" level="file">
                     <did><unittitle><title render="italic">Cadastre</title></unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00006" level="file">
                     <did><unittitle>
-                        <title render="italic">Cahier d&apos;un retour au pays natal/Notebook of a Return to the Native Land</title>
+                        <title render="italic">Cahier d'un retour au pays natal/Notebook of a Return to the Native Land</title>
                     <unitdate normal="1995/2001" type="inclusive">1995-2001</unitdate></unittitle>
                     <physdesc>(4 folders)</physdesc></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00007" level="file">
                     <did><unittitle><title render="doublequote">Césaire au Féminin</title></unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00008" level="file">
                     <did><unittitle><title render="italic">Césaire,</title>
                     Translated by Clayton Eshleman</unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00009" level="file">
                     <did><unittitle><title render="italic">Collected Poetry</title>
                     Introduction</unittitle><physdesc>(5 folders)s</physdesc></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00010" level="file">
                     <did><unittitle><title render="doublequote">Configurations</title>
                     </unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00011" level="file">
                     <did><unittitle><title render="italic">Corps Perdu/Lost Body</title></unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00012" level="file">
                     <did><unittitle><title render="doublequote">Dérisoire/Laughable</title></unittitle></did>
                 </c02>
-                <c02 level="file">
-                    <did><unittitle>&quot;Le Diagnostic du Docteur <emph render="italic">Gobineau</emph>&quot;</unittitle></did>
+                <c02 id="VAD2001-00013" level="file">
+                    <did><unittitle>"Le Diagnostic du Docteur <emph render="italic">Gobineau</emph>"</unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00014" level="file">
                     <did><unittitle><title render="italic">Ferrements/Ironwork</title></unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00015" level="file">
                     <did><unittitle><title render="doublequote">De Frederick Douglass à Madame Gasparin</title></unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00016" level="file">
                     <did><unittitle>
-                        <title render="italic">Gobineau et l&apos;Histoire Naturelle/Gobineau and Natural History</title>
+                        <title render="italic">Gobineau et l'Histoire Naturelle/Gobineau and Natural History</title>
                     </unittitle><physdesc>(2 folders)</physdesc></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00017" level="file">
                     <did><unittitle><title render="doublequote">A Great Black Poet</title></unittitle></did>
                 </c02>
-                <c02 level="file">
-                    <did><container type="Box" label="Box">2</container>
+                <c02 id="VAD2001-00018" level="file">
+                    <did><container label="Box" type="Box">2</container>
                         <unittitle><title render="italic">Lyric and Dramatic Poetry</title></unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00019" level="file">
                     <did><unittitle><title render="italic">Mademoiselle Irnois and Other Stories</title></unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00020" level="file">
                     <did><unittitle><title render="italic">Moi, Luminaire/I, Laminaria</title></unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00021" level="file">
                     <did><unittitle><title render="italic">Montemora</title></unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00022" level="file">
                     <did><unittitle>National Endowment for the Humanities Application</unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00023" level="file">
                     <did><unittitle><title render="doublequote">Noria</title></unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00024" level="file">
                     <did><unittitle><title render="doublequote">Speak Now</title></unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00025" level="file">
                     <did><unittitle><title render="italic">Soleil Cou-Coupé/Sun Slashed Throat</title></unittitle></did>
                 </c02>
             </c01>
-            <c01 level="series">
-                <did><container type="Box" label="Box">2</container>
+            <c01 id="VAD2001-00026" level="series">
+                <did><container label="Box" type="Box">2</container>
                     <unittitle>II. Research.</unittitle></did>
-                <c02 level="file">
+                <c02 id="VAD2001-00027" level="file">
                     <did><unittitle>
                         <title render="italic">Angola and the River Congo</title>
                     </unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00028" level="file">
                     <did><unittitle>Bibliographic Materials</unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00029" level="file">
                     <did><unittitle>Bibliographies</unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00030" level="file">
                     <did><unittitle>Biographies of Aimé Césaire</unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00031" level="file">
                     <did><unittitle>
-                        <title render="italic">Cahier d&apos;un retour au pays natal/Notebook of a Return to the Native Land</title>
+                        <title render="italic">Cahier d'un retour au pays natal/Notebook of a Return to the Native Land</title>
                     </unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00032" level="file">
                     <did><unittitle>Caribbean Flora</unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00033" level="file">
                     <did><unittitle><title render="italic">Collected Poetry</title></unittitle>
                     <physdesc>(2 folders)</physdesc></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00034" level="file">
                     <did><unittitle><title render="italic">Collected Poetry</title> Introduction</unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00035" level="file">
                     <did><unittitle><title render="italic">Collected Poetry</title> Introduction - Cannibalism</unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00036" level="file">
                     <did><unittitle><title render="italic">Collected Poetry</title> Introduction - Negritude</unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00037" level="file">
                     <did><unittitle><title render="doublequote">De Frederick Douglass à Madame Gasparin</title></unittitle></did>
                 </c02>
-                <c02 level="file">
-                    <did><unittitle><title render="italic">Gobineau et l&apos;Histoire Naturelle/Gobineau and Natural History</title>
+                <c02 id="VAD2001-00038" level="file">
+                    <did><unittitle><title render="italic">Gobineau et l'Histoire Naturelle/Gobineau and Natural History</title>
                     </unittitle><physdesc>(3 folders)</physdesc></did>
                 </c02>
-                <c02 level="file">
-                    <did><container type="Box" label="Box">3</container>
+                <c02 id="VAD2001-00039" level="file">
+                    <did><container label="Box" type="Box">3</container>
                         <unittitle><title render="italic">Gobineau,</title> Bibliography
                     </unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00040" level="file">
                     <did><unittitle><title render="italic">Gobineau,</title> Biophilosophy and Ethologie
                     </unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00041" level="file">
                     <did><unittitle><title render="italic">Gobineau</title> Chapters 1-10
                     </unittitle><physdesc>(9 folders)</physdesc></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00042" level="file">
                     <did><unittitle><title render="italic">Gobineau</title> Conclusion
                     </unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00043" level="file">
                     <did><unittitle><title render="italic">Gobineau</title> Correspondence
                     </unittitle><physdesc>(3 folders)</physdesc></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00044" level="file">
                     <did><unittitle><title render="italic">Gobineau,</title> Ecology
                     </unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00045" level="file">
                     <did><unittitle><title render="italic">Gobineau,</title> Etudes Critiques
                     </unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00046" level="file">
                     <did><unittitle><title render="italic">Gobineau,</title> Fiction
                     </unittitle></did>
                 </c02>
-                <c02 level="file">
-                    <did><container type="Box" label="Box">4</container>
+                <c02 id="VAD2001-00047" level="file">
+                    <did><container label="Box" type="Box">4</container>
                         <unittitle><title render="italic">Gobineau, Fiction</title>
                     </unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00048" level="file">
                     <did><unittitle><title render="italic">Gobineau,</title> Folklore
                     </unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00049" level="file">
                     <did><unittitle><title render="italic">Gobineau,</title> History and Philosophy
                     </unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00050" level="file">
                     <did><unittitle><title render="italic">Gobineau,</title> Ibn Khaldun and Asia
                     </unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00051" level="file">
                     <did><unittitle><title render="italic">Gobineau</title> Introduction
                     </unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00052" level="file">
                     <did><unittitle><title render="italic">Gobineau,</title> Poetry
                     </unittitle><physdesc>(2 folders)</physdesc></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00053" level="file">
                     <did><unittitle><title render="italic">Gobineau,</title> Style
                     </unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00054" level="file">
                     <did><unittitle><title render="italic">Gobineau,</title> Theater
                     </unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00055" level="file">
                     <did><unittitle><title render="italic">Gobineau</title> Themes
                     </unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00056" level="file">
                     <did><unittitle>Islamic Medicine</unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00057" level="file">
                     <did><unittitle>Nietzsche</unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00058" level="file">
                     <did><unittitle><emph render="doublequote">Non-Vicious Circle</emph></unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00059" level="file">
                     <did><unittitle>On Translating</unittitle><physdesc>(3 folders)</physdesc></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00060" level="file">
                     <did><unittitle>Reading Guide</unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00061" level="file">
                     <did><unittitle>Questions for Aimé Césaire</unittitle></did>
                 </c02>
             </c01>
-            <c01 level="series">
-                <did><container type="Box" label="Box">5</container>
+            <c01 id="VAD2001-00062" level="series">
+                <did><container label="Box" type="Box">5</container>
                     <unittitle>III. Correspondence.</unittitle></did>
                 <note><p>Note: Professional correspondence is organized by the name of the organization, not the 
                 personal name (i.e. UC Press). Some correspondencne can be found in other series in order to provide context for
@@ -476,102 +462,102 @@ langmaterial element -->
                     <item>Unidentified</item>
                 </list></note>
             </c01>
-            <c01 level="series">
-                <did><container type="Box" label="Box">5</container>
+            <c01 id="VAD2001-00063" level="series">
+                <did><container label="Box" type="Box">5</container>
                     <unittitle>IV. Presentation Materials.</unittitle></did>
-                <c02 level="file">
+                <c02 id="VAD2001-00064" level="file">
                     <did><unittitle>Athaeneum</unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00065" level="file">
                     <did><unittitle>Boston University
                     <unitdate normal="1992/1995" type="inclusive">1992-1995</unitdate></unittitle>
                     <physdesc>(2 folders)</physdesc></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00066" level="file">
                     <did><unittitle>California Librarians Black Caucus</unittitle></did>
                 </c02>
-                <c02 level="file">
-                    <did><unittitle>Eshleman&apos;s talk on Co-translating</unittitle></did>
+                <c02 id="VAD2001-00067" level="file">
+                    <did><unittitle>Eshleman's talk on Co-translating</unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00068" level="file">
                     <did><unittitle>Internatioal Colloquium</unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00069" level="file">
                     <did><unittitle>Paris Colloquium</unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00070" level="file">
                     <did><unittitle>UCLA CAAS</unittitle></did>
                 </c02>
             </c01>
-            <c01 level="series">
-                <did><container type="Box" label="Box">15</container>
+            <c01 id="VAD2001-00071" level="series">
+                <did><container label="Box" type="Box">15</container>
                     <unittitle>V. Critiques.</unittitle></did>
-                <c02 level="file">
+                <c02 id="VAD2001-00072" level="file">
                     <did><unittitle><title render="italic">César Vallejo </title></unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00073" level="file">
                     <did><unittitle><title render="italic">Collected Poetry,</title>
                     Press</unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00074" level="file">
                     <did><unittitle><title render="italic">Collected Poetry</title> Reviews</unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00075" level="file">
                     <did><unittitle><title render="doublequote">Modernism and Negritude</title></unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00076" level="file">
                     <did><unittitle>Peer Reviews</unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00077" level="file">
                     <did><unittitle>Readers Reports</unittitle></did>
                 </c02>
             </c01>
-            <c01 level="series">
-                <did><container type="Box" label="Box">6</container>
+            <c01 id="VAD2001-00078" level="series">
+                <did><container label="Box" type="Box">6</container>
                     <unittitle>VI. Family.</unittitle></did>
-                <c02 level="file">
+                <c02 id="VAD2001-00079" level="file">
                     <did><unittitle>Aslakson, Bjorn, Civil War Memoir</unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00080" level="file">
                     <did><unittitle>Climent/Dachot Families</unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00081" level="file">
                     <did><unittitle>LeBlanc, Ely Diaries</unittitle>
                     <physdesc>(2 folders)</physdesc></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00082" level="file">
                     <did><unittitle>LeBlanc, Ely, Medical Career</unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00083" level="file">
                     <did><unittitle>LeBlanc, Ely, Memoir</unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00084" level="file">
                     <did><unittitle>LeBlanc, Ely, Records</unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00085" level="file">
                     <did><unittitle>LeBlanc, Jean, Interview</unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00086" level="file">
                     <did><unittitle>Prom/Aslakson Families</unittitle></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00087" level="file">
                     <did><unittitle>Smith, Annette, Oral History</unittitle></did>
                 </c02>
             </c01>
-            <c01 level="series">
-                <did><container type="Box" label="Box">6</container>
+            <c01 id="VAD2001-00088" level="series">
+                <did><container label="Box" type="Box">6</container>
                     <unittitle>VII. Audio-Visual Materials.</unittitle></did>
-                <c02 level="file">
+                <c02 id="VAD2001-00089" level="file">
                     <did><unittitle>
                         <title render="italic">Mademoiselle Irnois and Other Stories</title>
                     (3 boxes of computer diskettes)</unittitle></did>
                 </c02>
-                <c02 level="file">
-                    <did><container type="Box" label="Box">7</container>
+                <c02 id="VAD2001-00090" level="file">
+                    <did><container label="Box" type="Box">7</container>
                         <unittitle>LeBlanc, Jean Interview</unittitle>
                     <physdesc>(5 Microcassettes and Recorder)</physdesc></did>
                 </c02>
-                <c02 level="file">
+                <c02 id="VAD2001-00091" level="file">
                     <did><unittitle>LeBlanc, Jean Interview</unittitle>
                     <physdesc>(6 DVDs)</physdesc></did>
                 </c02>
