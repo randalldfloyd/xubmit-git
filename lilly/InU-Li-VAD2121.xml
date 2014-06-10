@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+--><ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external" countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924" relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li" identifier="InU-Li-VAD2121">InU-Li-VAD2121</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Phillips, J. mss.,<date normal="1916/2013" type="inclusive">1916-2013</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2014" type="publication">© 2014</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2014">© 2014</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2014" type="source">2014</date>
+                <lb></lb>Finding aid encoded by Tiffany Saulter, Lilly Library, Indiana University,
+                    <date normal="2014-05-13">May 13, 2014</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng">English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2014-05-13">May 13, 2014</date>
+                <item>Encoded finding aid started.</item>
+            </change>
+            <change audience="internal">
+                <date normal="2014-06-01">May 27, 2014</date>
+                <item>Encoded finding aid completed.</item>
+            </change>
+            
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Phillips, John </persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Phillips, J. mss. </unittitle>
+            <unitdate encodinganalog="245$f" normal="1916/2013" type="inclusive">1916-2013</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2470</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>2,250 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Phillips, J. mss., 1916-2013,
+                consists of the papers of John Nova Phillips, 1926 - .</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+            <p>The Phillips, J. mss., 1916-2013, consists of the papers of John Nova Phillips, 1926
+                - . Phillips first traveled to Europe in 1951 for a Grand Tour. After receiving an
+                M.A. in 18th Century English Literature at Duke University, he returned to Europe in
+                1955 to teach English in Laval, France and at Le Rosey, a prestigious school in
+                Rolle, Switzerland. After moving to Florence in 1958, he became acquainted with
+                Violet Trefusis, who became his close companion. Trefusis was an English writer and
+                socialite, known for her affair with the poet Vita Sackville-West. After
+                Trefusis' death in 1972, Phillips became her literary executor and inherited
+                her medieval home, St. Loup-de-Naud.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>Organized into the following series: I. Diaries; II. Writings; III. Scrapbooks; IV.
+                Photographs; V. Correspondence; VI. Business; VII. Publications; VIII. Clippings.
+            </p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>Diaries include handwritten volumes spanning 1952-1999, as well as books of
+                inventories and quotations. Writings include essays based off of diary entries that
+                Phillips later turned into his unpublished autobiography, <title render="italic">A Romantic in Europe</title>, and
+                several essays by Violet Trefusis. The Scrapbooks are binders created by Phillips,
+                consisting of a mixture of photographs, clippings, correspondence and other
+                materials. Photographs consist of photographs, slides, albums and frames of
+                Phillips' numerous acquaintances, friends and travels. Notable people featured in
+                this series include Andy Warhol and Gore Vidal. Correspondence is organized
+                alphabetically, and includes letters from Camilla Parker-Bowles, James Lees-Milne
+                and Francois Mitterand. Correspondence also includes letters from Violet Trefusis,
+                with John Phillips' notes. (The originals of these letters can be found at Yale.)
+                Business consists of documents relating to Trefusis' estate, as well as Phillips'
+                own literary career. Publications contains books and magazines. Clippings consists
+                of book reviews and articles cut out from newspapers or printed from the
+                Internet.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/phillips+john+john+nova{su}"><persname encodinganalog="600" source="lcnaf">
+                            Phillips, John (John Nova)</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/phillips+john+john+nova+correspondece{su}"><persname encodinganalog="600" source="lcnaf">Phillips, John (John Nova) --Correspondence. </persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/trefusis+violet+1894-1972+correspondence{su}"><persname encodinganalog="600" source="lcnaf">Trefusis, Violet, 1894-1972 --Correspondence. </persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/warhol+andy+1928+1987{su}"><persname encodinganalog="600" source="lcnaf">Warhol, Andy, 1928-1987.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/vidal+gore+1925-2012{su}"><persname encodinganalog="600" source="lcnaf">Vidal, Gore, 1925-2012.</persname></extref></item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/authors+american+20th+century{su}"><subject encodinganalog="650" source="lcnaf">Authors, American --20th century. </subject></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/authors+american+20th+century+correspondence{su}"><subject encodinganalog="650" source="lcnaf">Authors, American --20th century --Correspondence. </subject></extref></item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="610" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+        <!-- required, if appropriate -->
+        <!-- optional, if applicable -->
+        <descgrp>
+            <head>Administrative Information</head>
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 2004, 2012.</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Phillips, J. mss., Lilly Library, Indiana University, Bloomington, Indiana..</p>
+            </prefercite>
+
+            <!--optional -->
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Claire Horton.</p>
+                <p>Completed in <date normal="2014">2014</date></p>
+
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAD2121-00001" level="series">
+                <did><container label="Box" type="Box">1</container>
+                    <unittitle>I. Diaries.</unittitle>
+                </did>
+                <c02 id="VAD2121-00002" level="file">
+                    <did><unittitle>
+                        <unitdate normal="1952/1956" type="inclusive">1952-1956</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00003" level="file">
+                    <did><unittitle>
+                        <unitdate normal="1971">1971</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00004" level="file">
+                    <did><unittitle><unitdate normal="1972">1972</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00005" level="file">
+                    <did><unittitle><unitdate normal="1973">1973</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00006" level="file">
+                    <did><unittitle><unitdate normal="1974">1974</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00007" level="file">
+                    <did><unittitle><unitdate normal="1975">1975</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00008" level="file">
+                    <did><unittitle><unitdate normal="1976">1976</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00009" level="file">
+                    <did><unittitle><unitdate normal="1977">1977</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00010" level="file">
+                    <did><unittitle><unitdate normal="1976">1976</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00011" level="file">
+                    <did><unittitle><unitdate normal="1977">1977</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00012" level="file">
+                    <did><unittitle><unitdate normal="1978">1978</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00013" level="file">
+                    <did><unittitle><unitdate normal="1979">1979</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00014" level="file">
+                    <did><unittitle><unitdate normal="1980">1980</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00015" level="file">
+                    <did><container label="Box" type="Box">2</container>
+                        <unittitle><unitdate normal="1981">1981</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00016" level="file">
+                    <did><unittitle><unitdate normal="1982">1982</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00017" level="file">
+                    <did><unittitle><unitdate normal="1983">1983</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00018" level="file">
+                    <did><unittitle><unitdate normal="1984">1984</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00019" level="file">
+                    <did><unittitle><unitdate normal="1985">1985</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00020" level="file">
+                    <did><unittitle><unitdate normal="1986">1986</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00021" level="file">
+                    <did><unittitle><unitdate normal="1987">1987</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00022" level="file">
+                    <did><unittitle><unitdate normal="1988">1988</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00023" level="file">
+                    <did><container label="Box" type="Box">3</container>
+                        <unittitle><unitdate normal="1989">1989</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00024" level="file">
+                    <did><unittitle><unitdate normal="1990">1990</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00025" level="file">
+                    <did><unittitle><unitdate normal="1991">1991</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00026" level="file">
+                    <did><unittitle><unitdate normal="1992">1992</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00027" level="file">
+                    <did><unittitle><unitdate normal="1993">1993</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00028" level="file">
+                    <did><unittitle><unitdate normal="1994">1994</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00029" level="file">
+                    <did><unittitle><unitdate normal="1995">1995</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00030" level="file">
+                    <did><unittitle><unitdate normal="1996">1996</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00031" level="file">
+                    <did><unittitle><unitdate normal="1997">1997</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00032" level="file">
+                    <did><unittitle>
+                        <unitdate normal="1998/1999" type="inclusive">1998-1999</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00033" level="file">
+                    <did><container label="Box" type="Box">4</container>
+                        <unittitle>Accounts</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00034" level="file">
+                    <did><unittitle>Books</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00035" level="file">
+                    <did><unittitle>
+                        <emph render="doublequote">Books I Have Read</emph></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00036" level="file">
+                    <did><unittitle>Inventory (St. Loup)</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00037" level="file">
+                    <did><unittitle>Notes</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00038" level="file">
+                    <did><unittitle>Notes and Quotations</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00039" level="file">
+                    <did><unittitle>Photocopies</unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD2121-00040" level="series">
+                <did><container label="Box" type="Box">4</container>
+                    <unittitle>II. Writings.</unittitle></did>
+                <c02 id="VAD2121-00041" level="file">
+                    <did><unittitle>
+                        <emph render="doublequote">Aftermath</emph>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00042" level="file">
+                    <did><unittitle>
+                        <emph render="doublequote">American Interlude</emph>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00043" level="file">
+                    <did><unittitle>
+                        <emph render="doublequote">Avon Old Farms</emph>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00044" level="file">
+                    <did><unittitle>By Others
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00045" level="file">
+                    <did><unittitle>By Violet Trefusis
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00046" level="file">
+                    <did><unittitle>
+                        <emph render="doublequote">Contini-Bonacossi Collection</emph>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00047" level="file">
+                    <did><unittitle>
+                        <emph render="doublequote">The Count of Liechtenstein</emph>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00048" level="file">
+                    <did><unittitle>
+                        Francois Mitterand
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00049" level="file">
+                    <did><unittitle>
+                        <emph render="doublequote">Grand Tour</emph>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00050" level="file">
+                    <did><unittitle>
+                        <emph render="doublequote">Henry James, Theodate Pope,
+                        and Mary Cassatt</emph>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00051" level="file">
+                    <did><unittitle>
+                        <emph render="doublequote">Kandilli</emph>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00052" level="file">
+                    <did><unittitle>
+                        <emph render="doublequote">Karen Blixen</emph>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00053" level="file">
+                    <did><unittitle>
+                        <emph render="doublequote">Peggy and Violet</emph>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00054" level="file">
+                    <did><unittitle>
+                        <title render="italic">Return to Europe</title>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00055" level="file">
+                    <did><unittitle>
+                        <title render="italic">A Romantic in Europe: A Selection</title>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00056" level="file">
+                    <did><unittitle>
+                        <title render="italic">A Romantic in Europe: Part Two</title>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00057" level="file">
+                    <did><unittitle>
+                        <title render="doublequote">Le Rosey</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00058" level="file">
+                    <did><unittitle>
+                        <title render="italic">A Study of Richard West</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00059" level="file">
+                    <did><unittitle>Tahiti</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00060" level="file">
+                    <did><unittitle>
+                        <title render="doublequote">Tante Noelle</title></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00061" level="file">
+                    <did><unittitle>Miscellaneous</unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD2121-00062" level="series">
+                <did><container label="Box" type="Box">4</container>
+                    <unittitle>III. Scrapbooks</unittitle></did>
+                <c02 id="VAD2121-00063" level="file">
+                    <did><unittitle></unittitle>
+                    <physdesc><extent>3 folders</extent></physdesc></did>
+                </c02>
+                <c02 id="VAD2121-00064" level="file">
+                    <did><container label="Box" type="Box">5</container>
+                    <unittitle></unittitle>
+                    <physdesc><extent>7 folders</extent></physdesc></did>
+                </c02>
+            </c01>
+            <c01 id="VAD2121-00065" level="series">
+                <did><container label="Box" type="Box">5</container>
+                    <unittitle>IV. Photographs.</unittitle></did>
+                <c02 id="VAD2121-00066" level="file">
+                    <did><unittitle>Amable</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00067" level="file">
+                    <did><unittitle>Bali</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00068" level="file">
+                    <did><unittitle>Clark, Kimberly</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00069" level="file">
+                    <did><unittitle>Contini-Bonacossi Collection</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00070" level="file">
+                    <did><unittitle>Cooper, Diana</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00071" level="file">
+                    <did><unittitle>Fiji</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00072" level="file">
+                    <did><unittitle>France</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00073" level="file">
+                    <did><unittitle>Grand Tour</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00074" level="file">
+                    <did><unittitle>Hawaii</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00075" level="file">
+                    <did><unittitle>Hill, Marion</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00076" level="file">
+                    <did><unittitle>Italy</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00077" level="file">
+                    <did><unittitle>Last Edwardians</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00078" level="file">
+                    <did><unittitle>McBride, Tim</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00079" level="file">
+                    <did><unittitle>Slides</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00080" level="file">
+                    <did><unittitle>Spain</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00081" level="file">
+                    <did><unittitle>St. Loup</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00082" level="file">
+                    <did><container label="Box" type="Box">6</container>
+                        <unittitle>Switzerland</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00083" level="file">
+                    <did><unittitle>Tahiti/Moorea</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00084" level="file">
+                    <did><unittitle>Thailand</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00085" level="file">
+                    <did><unittitle>Trefusis, Violet</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00086" level="file">
+                    <did><unittitle>Phillips, John</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00087" level="file">
+                    <did><unittitle>Vidal, Gore</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00088" level="file">
+                    <did><unittitle>Vincenzo</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00089" level="file">
+                    <did><unittitle>Warhol, Andy</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00090" level="file">
+                    <did><unittitle>Miscellaneous</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00091" level="file">
+                    <did><unittitle>Frames</unittitle>
+                    <physdesc><extent>(5)</extent></physdesc></did>
+                </c02>
+                <c02 id="VAD2121-00092" level="file">
+                    <did><unittitle>Albums</unittitle>
+                    <physdesc><extent>(6)</extent></physdesc></did>
+                </c02>
+            </c01>
+            <c01 id="VAD2121-00093" level="series">
+                <did><container label="Box" type="Box">7</container>
+                    <unittitle>V. Correspondence.</unittitle></did>
+                <c02 id="VAD2121-00094" level="file">
+                    <did><unittitle>A-E</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00095" level="file">
+                    <did><unittitle>de Cossart, Michael</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00096" level="file">
+                    <did><unittitle>F-J</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00097" level="file">
+                    <did><unittitle>Harcourt, Francois</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00098" level="file">
+                    <did><unittitle>Holroyd, Michael</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00099" level="file">
+                    <did><unittitle>Invitations</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00100" level="file">
+                    <did><unittitle>K-N</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00101" level="file">
+                    <did><unittitle>LaMarche, Stanislas</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00102" level="file">
+                    <did><unittitle>Lees-Milne, James</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00103" level="file">
+                    <did><unittitle>McCann, Charles</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00104" level="file">
+                    <did><unittitle>Mitterand, Francois</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00105" level="file">
+                    <did><unittitle>Nicolson, Nigel</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00106" level="file">
+                    <did><unittitle>Norwich, John Julius</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00107" level="file">
+                    <did><unittitle>O-P</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00108" level="file">
+                    <did><unittitle>Parker-Bowles, Camilla</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00109" level="file">
+                    <did><unittitle>Q-Z</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00110" level="file">
+                    <did><unittitle>Reynolds, Michael
+                    <unitdate normal="1994/2003" type="inclusive">1994-2003</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00111" level="file">
+                    <did><unittitle>Reynolds, Michael
+                    <unitdate normal="2004/2013" type="inclusive">2004-2013,</unitdate>
+                    <unitdate normal="1916/2013" type="inclusive">n.d.</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00112" level="file">
+                    <did><unittitle>Trefusis, Violet</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00113" level="file">
+                    <did><unittitle>Trefusis, Violet, To Others</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00114" level="file">
+                    <did><unittitle>Villiers, Miranda</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00115" level="file">
+                    <did><unittitle>Wajsbrot, Cécile</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00116" level="file">
+                    <did><unittitle>Wallace, Lorraine</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00117" level="file">
+                    <did><unittitle>Welch, Ruth</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00118" level="file">
+                    <did><unittitle>de Wurstemberger, Jacques </unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00119" level="file">
+                    <did><unittitle>Unidentified</unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD2121-00120" level="series">
+                <did><container label="Box" type="Box">7</container>
+                    <unittitle>VI. Business.</unittitle></did>
+                <c02 id="VAD2121-00121" level="file">
+                    <did><unittitle>Contini-Bonacossi Collection</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00122" level="file">
+                    <did><unittitle>Contracts</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00123" level="file">
+                    <did><unittitle>Henry James Letters</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00124" level="file">
+                    <did><unittitle>Phillips' Publications</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00125" level="file">
+                    <did><unittitle>Royalty Statements</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00126" level="file">
+                    <did><unittitle>St. Loup</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00127" level="file">
+                    <did><unittitle>Trefusis, Violet</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00128" level="file">
+                    <did><unittitle>Trefusis, Violet's Letters</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00129" level="file">
+                    <did><unittitle>Trefusis, Violet's Literary Estate</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00130" level="file">
+                    <did><unittitle>Miscellaneous</unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD2121-00131" level="series">
+                <did><container label="Box" type="Box">8</container>
+                    <unittitle>VII. Publications.</unittitle></did>
+                <c02 id="VAD2121-00132" level="file">
+                    <did><unittitle>Christie's Catalogs</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00133" level="file">
+                    <did><unittitle>
+                        <title render="italic">Connaissance des Arts,</title>
+                    <unitdate normal="1969">1969</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00134" level="file">
+                    <did><unittitle>
+                        <title render="italic">Connaissance des Arts,</title>
+                        <unitdate normal="1970">1970</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00135" level="file">
+                    <did><unittitle>
+                        <title render="italic">The Cornhill Magazine,</title>
+                        <unitdate normal="1953-03/1953-05" type="inclusive">Spring 1953</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00136" level="file">
+                    <did><unittitle>Harold Stevenson</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00137" level="file">
+                    <did><unittitle>
+                        <title render="italic">Plaisir de France</title>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00138" level="file">
+                    <did><unittitle>
+                        <title render="italic">Poems From the Fifties</title>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00139" level="file">
+                    <did><unittitle>
+                        <title render="italic">La Revue de Paris</title>
+                    </unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD2121-00140" level="series">
+                <did><container label="Box" type="Box">8</container>
+                    <unittitle>VIII. Clippings.</unittitle></did>
+                <c02 id="VAD2121-00141" level="file">
+                    <did><unittitle>Art</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00142" level="file">
+                    <did><unittitle>Book Reviews</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00143" level="file">
+                    <did><unittitle>Correspondence</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00144" level="file">
+                    <did><unittitle>Mitterand, Francoiss</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00145" level="file">
+                    <did><unittitle>Obituaries</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00146" level="file">
+                    <did><unittitle>Phillips, John</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00147" level="file">
+                    <did><unittitle>Royal Family</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00148" level="file">
+                    <did><unittitle>Trefusis, Violet</unittitle></did>
+                </c02>
+                <c02 id="VAD2121-00149" level="file">
+                    <did><unittitle>Miscellaneous</unittitle></did>
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>

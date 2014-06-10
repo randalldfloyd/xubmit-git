@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+--><ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external" countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924" relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li" identifier="InU-Li-VAD1997">InU-Li-VAD1997</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Cookery mss.,<date certainty="circa" normal="1660/1890" type="inclusive">circa 1660-circa
+                    1890</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2014" type="publication">© 2014</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2014">© 2014</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2014" type="source">2014</date>
+                <lb></lb>Finding aid encoded by Tiffany Saulter, Lilly Library, Indiana University,
+                    <date normal="2014-04-15">April 15, 2014</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng">English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2014-04-15">April 15, 2014</date>
+                <item>Encoded finding aid started.</item>
+            </change>
+            <change audience="internal">
+                <date normal="2014-04-15">April 15, 2014</date>
+                <item>Encoded finding aid completed.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf"> </persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Cookery mss.</unittitle>
+            <unitdate encodinganalog="245$f" certainty="circa" normal="1660/1890" type="inclusive">circa 1660-circa 1890</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2435</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>61 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Cookery mss., circa 1660–circa 1890,
+                consists of bound and individual writings, often on the topic of cookery, of persons
+                involved with cooking by practice or trade.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+            <p></p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>Organized into the following series: I. Chesbrough; II. Additional Receipt Books.
+            </p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The Chesbrough series consists of items donated by Mary Mott Chesbrough, an editor of
+                the <title render="italic">Chicago Record Cook Book</title>, originally published in
+                1896. The Additional Receipt Books series contains an array of receipt books and
+                related materials. Early American cookery is represented in receipt books by Mary
+                Hudson, Mary (Joyce) Lewis, and Edward Bradford, among others. Mexican cookery of
+                the same era is found in two receipt books by Maria Nicolasa Maldonado and Maria F.
+                Seventeenth century French receipts may be found in works by Jacques Vontent and
+                Pierre Petit. French recipes or instruction books from later periods by various
+                persons are also included. A number of English and American receipt books and
+                individual recipes, ranging from the 18th to 19th centuries are available, by a
+                variety of persons. A 19th century German receipt book by Christiane Schmiedling is
+                included. Works produced in the context of the cookery trade include those by Edward
+                Kidder the pastry maker, C. Underwood the butcher, the Cheesemakers' Guild,
+                Corcellet the food merchant, and Alexis Benôit Soyer, a celebrated chef.</p>
+            <p>In the Additional Receipt Books series, the majority of the items are receipt books
+                in which a cook records his or her instructions for preparing food and occasionally
+                medicine. Menus are sometimes included within the receipt books, though this
+                collection also contains a book of menus for dinners attended and given by Lt.
+                General Sir Hope Grant. On occasion, individual receipts and menus are found. While
+                the majority of the receipt books are authored by one cook, some are compilations
+                written by several cooks. Statutes, purchasing records, and receipts produced by
+                those involved in the cookery trade are incorporated. The visiting book of Alexis
+                Benôit Soyer, is another part of the collection, as well as a receipt book from the
+                library of Henry Frederick, Prince of Wales.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/cookbooks{su}"><subject encodinganalog="650" source="lcsh">Cookbooks</subject></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/cooking{su}"><subject encodinganalog="650" source="lcsh">Cooking</subject></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/carving+(meat+etc)+early+works+to+1800{su}"><subject encodinganalog="650" source="lcsh">Carving (Meat, etc.) --Early works to 1800. </subject></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/home+economics+accounting{su}"><subject encodinganalog="650" source="lcsh">Home economics --Accounting. </subject></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/medicine+early+works+to+1800{su}"><subject encodinganalog="650" source="lcsh">Medicine --Early works to 1800. </subject></extref></item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="610" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+        <!-- required, if appropriate -->
+        <!-- optional, if applicable -->
+        <descgrp>
+            <head>Administrative Information</head>
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 1987-2011.</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Cookery mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+            <!--optional -->
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Ariadne Rehbein.</p>
+                <p>Completed in <date normal="2014">2014</date></p>
+            </processinfo>
+        </descgrp>
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAD1997-00001" level="series">
+                <did><container label="Box" type="Box">1</container>
+                    <unittitle>I. Chesbrough.</unittitle>
+                </did>
+                <c02 id="VAD1997-00002" level="file">
+                    <did><unittitle><unitdate normal="1835">1835.</unitdate>
+                        Recipes of Minnie Bennett</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00003" level="file">
+                    <did><unittitle><unitdate normal="1888/1900" type="inclusive">1888-1900.</unitdate>
+                    Recipes and menus</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00004" level="file">
+                    <did><unittitle><unitdate normal="1893/1903" type="inclusive">1893 - 1902-3.</unitdate>
+                    Recipes and menu</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00005" level="file">
+                    <did><unittitle><unitdate normal="1896-12-17">1896, Dec. 17.</unitdate>
+                        Recipes of Ella (Brainerd) Whitlock</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00006" level="file">
+                    <did><unittitle>
+                        <unitdate normal="1896/1917" type="inclusive">1896 - 1917.</unitdate>
+                    Recipes and menus</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00007" level="file">
+                    <did><container label="Box" type="Box">2</container>
+                        <unittitle><unitdate normal="1660/1890" type="inclusive">Undated.</unitdate>
+                        Recipes and menus</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00008" level="file">
+                    <did><unittitle><unitdate normal="1660/1890" type="inclusive">Undated.</unitdate>
+                    Recipes and menus</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00009" level="file">
+                    <did><unittitle>Printed. Clippings of columns by M.M. Chesbrough</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00010" level="file">
+                    <did><unittitle>Printed. Miscellaneous clippings</unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1997-00011" level="series">
+                <did><container label="Box" type="Box">3</container>
+                    <unittitle>II. Additional Receipt Books.</unittitle></did>
+                <note><p>Includes both bound and unbound materials.</p></note>
+                <c02 id="VAD1997-00012" level="file">
+                    <did><unittitle>
+                        <unitdate normal="1776/1826" type="inclusive">1776-1826.</unitdate> 
+                    Joyce, Mary (Lewis). Receipt book</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00013" level="file">
+                    <did><unittitle>
+                        <unitdate normal="1779/1838" type="inclusive">1779-1838</unitdate>
+                        Hudson, Mary. Receipt book (separate leaves)
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00014" level="file">
+                    <did><unittitle>
+                        <unitdate normal="1776/1826" type="inclusive">1776-1826.</unitdate>
+                    Joyce, Mary (Lewis). Receipt book (paid laid on)</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00015" level="file">
+                    <did><container label="Box" type="Box">4</container>
+                        <unittitle><unitdate normal="1800/1899" type="inclusive">19th century.</unitdate>
+                        Neilson, Lockhart</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00016" level="file">
+                    <did><unittitle><unitdate normal="1700/1799" type="inclusive">18th century.</unitdate>
+                    Receipt book</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00017" level="file">
+                    <did><unittitle><unitdate normal="1800/1899" type="inclusive">19th century.</unitdate>
+                    Receipt book</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00018" level="file">
+                    <did><unittitle><unitdate normal="1700/1899" type="inclusive">18th-19th centuries.</unitdate>
+                    Bradford, Edward. Cookery and household receipts</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00019" level="file">
+                    <did><unittitle><unitdate normal="1800/1899" type="inclusive">19th century.</unitdate>
+                    Receipt book</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00020" level="file">
+                    <did><container label="No Box" type="Box"></container>
+                        <unittitle><unitdate certainty="circa" normal="1580">Circa 1580.</unitdate>
+                            Memorie de ce que jay fourni pour Monsieru Ferrier (An account of the food supplied for the wedding of M. de Ferrier)
+                        </unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00021" level="file">
+                    <did><unittitle><unitdate certainty="circa" normal="1610">Circa 1610.</unitdate>
+                        Frederick, Henry, Prince of Wales. Receipts (bound)</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00022" level="file">
+                    <did><unittitle><unitdate normal="1650">1650.</unitdate>
+                    Petit, Pierre</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00023" level="file">
+                    <did><unittitle><unitdate normal="1650">1650.</unitdate>
+                    Vontet, Jacques</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00024" level="file">
+                    <did><unittitle><unitdate normal="1688/1713" type="inclusive">1688-1713.</unitdate>
+                    Powell, Elizabeth; Andrew, Tomasine</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00025" level="file">
+                    <did><unittitle><unitdate normal="1660/1690" type="inclusive">1690 (1660).</unitdate>
+                        Lady Anderson</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00026" level="file">
+                    <did><unittitle><unitdate normal="1691">1691.</unitdate>
+                    Macies Book</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00027" level="file">
+                    <did><unittitle><unitdate normal="1696">1696.</unitdate>
+                    Christening feast</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00028" level="file">
+                    <did><unittitle><unitdate normal="1696">1696.</unitdate>
+                    Maynard, Elizabeth</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00029" level="file">
+                    <did><unittitle><unitdate normal="1718">1718.</unitdate>
+                        Dashwood, Dorothea (Read). Receipts, Confectionary, etc.</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00030" level="file">
+                    <did><unittitle><unitdate certainty="circa" normal="1725">Circa 1725.</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00031" level="file">
+                    <did><unittitle><unitdate normal="1761">1761.</unitdate>
+                        Interrogazioni da farsi alli Putti che vorrano essere ascritti Confratelli Nell'Arte nostra de formaggieri (Statutes of the Cheesemakers' Guild) (bound)
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00032" level="file">
+                    <did><unittitle><unitdate normal="1767-02-27">1767, Feb 27.</unitdate>
+                    Gerry, Samuel. Songbook and receipt book</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00033" level="file">
+                    <did><unittitle><unitdate normal="1770">Circa 1770.</unitdate>
+                        F, Maria. [Mexican Cookbook].</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00034" level="file">
+                    <did><unittitle><unitdate normal="1770/1812" type="inclusive">1770 - 1812.</unitdate>
+                    Early American Receipt book</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00035" level="file">
+                    <did><unittitle><unitdate normal="1773">1773.</unitdate>
+                    Etat et Mena General de la Dispense</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00036" level="file">
+                    <did><unittitle><unitdate normal="1779">1779.</unitdate>Lady Bradshaigh &amp; others</unittitle></did>
+                </c02> 
+                <c02 id="VAD1997-00037" level="file">
+                    <did><unittitle><unitdate normal="1779/1838" type="inclusive">1779-1838.</unitdate>
+                    Hudson, Mary. Receipt book</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00038" level="file">
+                    <did><unittitle><unitdate normal="1786">1786.</unitdate> Seward, Anna. Receipt book</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00039" level="file">
+                    <did><unittitle><unitdate normal="1789/1809" type="inclusive">1789-1809.</unitdate>
+                    Receipt book</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00040" level="file">
+                    <did><unittitle><unitdate normal="1794">1794.</unitdate>
+                    Maldonado, Maria Nicolasa</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00041" level="file">
+                    <did><unittitle><unitdate normal="1799/1800" type="inclusive">1799-1800.</unitdate>
+                    <title render="doublequote">Clothing Worsted Stocking Feet Spinning School</title> Receipt book</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00042" level="file">
+                    <did><unittitle><unitdate normal="1700/1799" type="inclusive">18th century.</unitdate>
+                    Reciepts [sic]</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00043" level="file">
+                    <did><unittitle><unitdate normal="1700/1799" type="inclusive">18th century.</unitdate>
+                        Sistême Complet de Distillation</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00044" level="file">
+                    <did><unittitle><unitdate normal="1700/1799" type="inclusive">18th century.</unitdate>
+                        Receipt book (bound)</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00045" level="file">
+                    <did><unittitle><unitdate normal="1700/1799" type="inclusive">18th century.</unitdate>
+                        Complete transcription in unknown hand of François Marin, <title render="italic">Les Dons de Comus ou les Délices de la Table,</title></unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00046" level="file">
+                    <did><unittitle><unitdate normal="1800/1899" type="inclusive">19th century.</unitdate>
+                    Receipts (bound)</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00047" level="file">
+                    <did><unittitle><unitdate normal="1800/1899" type="inclusive">19th century.</unitdate>
+                    Receipts (bound)</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00048" level="file">
+                    <did><unittitle><unitdate normal="1806">1806.</unitdate>
+                    Miss Tyndale, Her book</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00049" level="file">
+                    <did><unittitle><unitdate normal="1826-05-30">1826 May, 30.</unitdate>
+                        Chartsworth, Mary Ann</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00050" level="file">
+                    <did><unittitle><unitdate normal="1831-02-28">1831, Feb. 28.</unitdate>
+                        Corcellet, food merchant. Bill for food items supplied to the Countess de Volager </unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00051" level="file">
+                    <did><unittitle><unitdate normal="1841/1857" type="inclusive">1841-1857.</unitdate>
+                        Alexis Benôit Soyer, cook, author. Visiting book.</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00052" level="file">
+                    <did><unittitle><unitdate normal="1845">1845.</unitdate>
+                    Schmiedling, Christiane</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00053" level="file">
+                    <did><unittitle>
+                        <unitdate normal="1859-12-21/1863-10-24" type="inclusive">1859, Dec. 21-1863, Oct. 24</unitdate>
+                        Underwood, C, butcher. Butcher's receipt book
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00054" level="file">
+                    <did><unittitle><unitdate normal="1864">1864</unitdate>
+                        Receipt book, including recipes for food, drink, medicine, and cosmetics. From Kovaszna Transylvnia. In Latin, German, and Hungarian</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00055" level="file">
+                    <did><unittitle>
+                        <unitdate normal="1874-06-26/1877-07-05" type="inclusive">1874, June 26-1877 July 5.</unitdate>
+                        Grant, Lt. Gen. Sir James Hope. Menu book
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00056" level="file">
+                    <did><unittitle><unitdate normal="1887-10-29">1877, Oct. 29. </unitdate>
+                    Recipe for Boston sausages</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00057" level="file">
+                    <did><unittitle><unitdate normal="1918">1918.</unitdate>
+                        <title render="italic">Les dix Livres d'Apicius Coelius de la Chose Culinaire</title>
+                        translated by Guégan</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00058" level="file">
+                    <did><unittitle><unitdate certainty="circa" normal="1660/1890" type="inclusive">Undated.</unitdate>
+                    Calley, Isabella. Her Resaite Book</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00059" level="file">
+                    <did><unittitle><unitdate certainty="circa" normal="1660/1890" type="inclusive">Undated.</unitdate>
+                        Receipts (bound)</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00060" level="file">
+                    <did><unittitle><unitdate certainty="circa" normal="1660/1890" type="inclusive">Undated.</unitdate>
+                        Receipt book</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00061" level="file">
+                    <did><unittitle><unitdate certainty="circa" normal="1660/1890" type="inclusive">Undated.</unitdate>
+                        Recipes for "Le Progres" and "Profiteralles au chocolat"</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00062" level="file">
+                    <did><unittitle><unitdate certainty="circa" normal="1660/1890" type="inclusive">Undated.</unitdate>
+                    Letter from <emph render="doublequote">Aunt Bell</emph> to <emph render="doublequote">My dear Sale</emph>,
+                    includes recipe for India relish</unittitle></did>
+                </c02>
+                <c02 id="VAD1997-00063" level="file">
+                    <did><unittitle><unitdate certainty="circa" normal="1660/1890" type="inclusive">Undated.</unitdate>
+                        3 Receipts: <unitdate normal="1829-07-17">1829, July 17</unitdate>. To make 8 Gallons Small Beer; Undated. To take off Sun Burn; Undated. Currant Wine</unittitle></did>
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
