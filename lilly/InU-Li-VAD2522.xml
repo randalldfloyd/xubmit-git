@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+--><ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external" countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924" relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li" identifier="InU-Li-VAD2522">InU-Li-VAD2522</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Franzen, Cola mss.,<date normal="1982/2010" type="inclusive">1982-2010</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2014" type="publication">© 2014</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2014">© 2014</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2014" type="source">2014</date>
+                <lb></lb>Finding aid encoded by Tiffany Saulter, Lilly Library, Indiana University,
+                    <date normal="2014-06-17">June 17, 2014</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng">English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2014-06-17">June 17, 2014</date>
+                <item>Encoded finding aid started.</item>
+            </change>
+            <change audience="internal">
+                <date normal="2014-06-17">June 17, 2014</date>
+                <item>Encoded finding aid completed.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Franzen, Cola. </persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Franzen, Cola mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1982/2010" type="inclusive">1982-2010</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2615</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>3,500 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Franzen, Cola mss., 1982-2010,
+                consist of the papers of Cola Franzen, 1923-.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+            <p>Born in Hart County, Georgia, Franzen (née Wakefield) has published over twenty books
+                of literary translations from the Spanish. She primarily translates the work of
+                contemporary Latin American poets, including Saul Yurkievich (Argentina), Antonio
+                José Ponte (Cuba) and Juan Cameron (Chile), as well as Spanish poets like Jorge
+                Guillén and Frederico García Lorca. She has also translated work on photography and
+                art.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>Collection is organized into the following series: I. Correspondence; II.
+                Translations; III. Presentations; IV. Critiques; V. Clippings; VI. Publications;
+                VII. Audio-Visual Materials; VIII. Realia.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>Correspondents include: Aurora Bernárdez; Catherine Mayo; Guillermo Núñez; Nancy Peters; Reina María Rodriguez; Robert Wechsler; Rachel Weiss; Saul Yurkievich.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/franzen+cola+correspondence{su}"><persname encodinganalog="600" source="lcnaf">Franzen, Cola --Correspondence.</persname></extref></item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/translators+biography{su}"><subject encodinganalog="650" source="lcsh">Translators --Biography.</subject></extref></item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="610" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+        <!-- required, if appropriate -->
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+            <!-- include if appropriate -->
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 2006-2010</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Franzen, Cola mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+            <!--optional -->
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Claire Horton.</p>
+                <p>Completed in <date normal="2014">2014</date></p>
+
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAD2522-00001" level="series">
+                <did><container label="Box" type="Box">1</container>
+                    <unittitle>I. Correspondence</unittitle></did>
+                <c02 id="VAD2522-00002" level="file">
+                    <did><unittitle>A</unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00003" level="file">
+                    <did><unittitle>Ba-Bi</unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00004" level="file">
+                    <did><unittitle>Bernárdez, Aurora</unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00005" level="file">
+                    <did><unittitle>Bl-Bu</unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00006" level="file">
+                    <did><unittitle>C</unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00007" level="file">
+                    <did><unittitle>D-E</unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00008" level="file">
+                    <did><unittitle>F</unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00009" level="file">
+                    <did><unittitle>G</unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00010" level="file">
+                    <did><unittitle>H</unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00011" level="file">
+                    <did><unittitle>Harvard University Press
+                    <unitdate normal="1986/1989" type="inclusive">1986-1989</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00012" level="file">
+                    <did><unittitle>Hardvard University Press
+                    <unitdate normal="1990/1994" type="inclusive">1990-1994</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00013" level="file">
+                    <did><unittitle>I-K</unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00014" level="file">
+                    <did><unittitle>L</unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00015" level="file">
+                    <did><unittitle>Mah-May</unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00016" level="file">
+                    <did><unittitle>Mayo, Catherine</unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00017" level="file">
+                    <did><unittitle>Mc-Mu</unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00018" level="file">
+                    <did><unittitle>Núñez, Guillermo
+                    <unitdate normal="1983/1986" type="inclusive">1983-1986</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00019" level="file">
+                    <did><unittitle>Núñez, Guillermo
+                    <unitdate normal="1987/2010" type="inclusive">1987-2010,</unitdate>
+                        <unitdate normal="1982/2010" type="inclusive">undated</unitdate>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00020" level="file">
+                    <did><unittitle>O-Q</unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00021" level="file">
+                    <did><unittitle>Peters, Nancy</unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00022" level="file">
+                    <did><unittitle>R</unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00023" level="file">
+                    <did><unittitle>Rodriguez, Reina María</unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00024" level="file">
+                    <did><unittitle>S-T</unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00025" level="file">
+                    <did><unittitle>U-V</unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00026" level="file">
+                    <did><unittitle>W</unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00027" level="file">
+                    <did><unittitle>Wechsler, Robert</unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00028" level="file">
+                    <did><container label="Box" type="Box">2</container>
+                        <unittitle>Weiss, Rachel</unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00029" level="file">
+                    <did><unittitle>Yurkievich, Saul
+                    <unitdate normal="1982/2005" type="inclusive">1982-2005</unitdate></unittitle>
+                    <physdesc>(24 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2522-00030" level="file">
+                    <did><unittitle>Z</unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00031" level="file">
+                    <did><unittitle>Unknown</unittitle></did>
+                </c02>
+            </c01>
+                <c01 id="VAD2522-00032" level="series">
+                    <did><container label="Box" type="Box">3</container>
+                        <unittitle>II. Translations.</unittitle></did>
+                    <c02 id="VAD2522-00033" level="file">
+                        <did><unittitle>Alvarez Bravo, Manuel</unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00034" level="file">
+                        <did><unittitle>Aresti, Carlos</unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00035" level="file">
+                        <did><unittitle>Cameron, Juan</unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00036" level="file">
+                        <did><unittitle>Casado, Alberto</unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00037" level="file">
+                        <did><unittitle>Cortázar, Julio</unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00038" level="file">
+                        <did><unittitle>Estorino, Abelardo</unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00039" level="file">
+                        <did><unittitle>Grandmothers of the Plaza de Mayo</unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00040" level="file">
+                        <did><unittitle>García Lorca, Frederico</unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00041" level="file">
+                        <did><unittitle>Guillén, Jorge</unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00042" level="file">
+                        <did><unittitle>Hernández, Orlando</unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00043" level="file">
+                        <did><unittitle>Huidobro, Vincente</unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00044" level="file">
+                        <did><unittitle>Iturbide, Graciela</unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00045" level="file">
+                        <did><unittitle>Jiménez, Ariel</unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00046" level="file">
+                        <did><unittitle>Del Llano, Eduardo</unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00047" level="file">
+                        <did><unittitle>Manjarrez Cuéllar, Graciela</unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00048" level="file">
+                        <did><unittitle>Marco, Tomás</unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00049" level="file">
+                        <did><unittitle>Medina, Cuauhtémac</unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00050" level="file">
+                        <did><unittitle>Molina, Juan Antonio</unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00051" level="file">
+                        <did><unittitle>Moréjon, Nancy</unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00052" level="file">
+                        <did><unittitle>Mosquero, Geraldo,
+                        <title render="doublequote">Africa in the Art of Latin America</title></unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00053" level="file">
+                        <did><unittitle>Mosquero, Geraldo,
+                            <title render="doublequote">Art and Religion in Elso</title></unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00054" level="file">
+                        <did><unittitle>Mosquero, Geraldo,
+                            <title render="doublequote">Fresh Cream</title></unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00055" level="file">
+                        <did><unittitle>Mosquero, Geraldo,
+                        <title render="doublequote">New Cuban Art</title></unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00056" level="file">
+                        <did><unittitle>Núnez, Guillermo</unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00057" level="file">
+                        <did><unittitle>Notes</unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00058" level="file">
+                        <did><unittitle>Pérez-Oramas, Luis Enrique</unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00059" level="file">
+                        <did><container label="Box" type="Box">4</container>
+                            <unittitle>Ponte, Antonio José</unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00060" level="file">
+                        <did><unittitle>Puebla, Javier</unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00061" level="file">
+                        <did><unittitle>Rodriquez, Eduardo Luis</unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00062" level="file">
+                        <did><unittitle>Valdés Figueroa, Eugenio</unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00063" level="file">
+                        <did><unittitle>Various Authors,
+                        <title render="italic">Art Cuba</title></unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00064" level="file">
+                        <did><unittitle>Various Authors,
+                        <title render="italic">Art Nexus</title></unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00065" level="file">
+                        <did><unittitle>Various Authors, Artists' Statements</unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00066" level="file">
+                        <did><unittitle>Various Authors, Cisneros Foundation</unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00067" level="file">
+                        <did><unittitle>Wellesley College</unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00068" level="file">
+                        <did><unittitle>Yurkievich, Saul,
+                            <title render="italic">Confluencia</title></unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00069" level="file">
+                        <did><unittitle>Yurkievich, Saul,
+                            <title render="italic">Background Noise</title></unittitle>
+                        <physdesc>(3 folders)</physdesc></did>
+                    </c02>
+                    <c02 id="VAD2522-00070" level="file">
+                        <did><unittitle>Yurkievich, Saul,
+                            <title render="italic">In the Image and the Likeness</title></unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00071" level="file">
+                        <did><unittitle>Yurkievich, Saul,
+                            <title render="doublequote">Late He Knew It</title></unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00072" level="file">
+                        <did><unittitle>Yurkievich, Saul, Various</unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00073" level="file">
+                        <did><unittitle>Zóbel, Fernando</unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00074" level="file">
+                        <did><unittitle>Zaid, Gabriel</unittitle></did>
+                    </c02>
+                </c01>
+            <c01 id="VAD2522-00075" level="series">
+                <did><container label="Box" type="Box">4</container>
+                    <unittitle>III. Presentations.</unittitle></did>
+                <c02 id="VAD2522-00076" level="file">
+                    <did><unittitle>List of Readings</unittitle></did>
+                </c02>
+                    <c02 id="VAD2522-00077" level="file">
+                        <did><unittitle>
+                            <unitdate normal="1984/1985" type="inclusive">1984-1985</unitdate></unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00078" level="file">
+                        <did><unittitle>
+                            <unitdate normal="1986">1986</unitdate></unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00079" level="file">
+                        <did><unittitle>
+                            <unitdate normal="1987">1987</unitdate></unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00080" level="file">
+                        <did><unittitle>
+                            <unitdate normal="1988">1988</unitdate></unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00081" level="file">
+                        <did><unittitle>
+                            <unitdate normal="1989/1990" type="inclusive">1989-1990</unitdate></unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00082" level="file">
+                        <did><unittitle>
+                            <unitdate normal="1991">1991</unitdate></unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00083" level="file">
+                        <did><unittitle>
+                            <unitdate normal="1992/1993" type="inclusive">1992-1993</unitdate></unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00084" level="file">
+                        <did><unittitle>
+                            <unitdate normal="1994">1994</unitdate></unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00085" level="file">
+                        <did><container label="Box" type="Box">5</container><unittitle>
+                            <unitdate normal="1995">1995</unitdate></unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00086" level="file">
+                        <did><unittitle>
+                            <unitdate normal="1996">1996</unitdate></unittitle></did>
+                    </c02>
+                    <c02 id="VAD2522-00087" level="file">
+                        <did><unittitle>
+                            <unitdate normal="1997/1998" type="inclusive">1997-1998</unitdate></unittitle></did>
+                    </c02>
+                <c02 id="VAD2522-00088" level="file">
+                    <did><unittitle>
+                        <unitdate normal="1999">1999</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00089" level="file">
+                    <did><unittitle>
+                        <unitdate normal="2000">2000</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00090" level="file">
+                    <did><unittitle>
+                        <unitdate normal="2001/2002" type="inclusive">2001-2002</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00091" level="file">
+                    <did><unittitle>
+                        <unitdate normal="2003">2003</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00092" level="file">
+                    <did><unittitle>
+                        <unitdate normal="2004">2004</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00093" level="file">
+                    <did><unittitle>
+                        <unitdate normal="2005/2006" type="inclusive">2005-2006</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00094" level="file">
+                    <did><unittitle>
+                        <unitdate normal="2007/2008" type="inclusive">2007-2008</unitdate>
+                    <unitdate normal="1982/2010" type="inclusive">undated</unitdate></unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD2522-00095" level="series">
+                <did><container label="Box" type="Box">5</container>
+                    <unittitle>IV. Critiques.</unittitle></did>
+                <c02 id="VAD2522-00096" level="file">
+                    <did><unittitle>Reviews</unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00097" level="file">
+                    <did><unittitle>Readers' Reports</unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD2522-00098" level="series">
+                <did><container label="Box" type="Box">5</container>
+                    <unittitle>V. Clippings.</unittitle></did>
+                <c02 id="VAD2522-00099" level="file">
+                    <did><unittitle>Academy of American Poets</unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00100" level="file">
+                    <did><unittitle>Chipasula, Frank</unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00101" level="file">
+                    <did><unittitle>General</unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00102" level="file">
+                    <did><unittitle>Newsletters</unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD2522-00103" level="series">
+                <did><container label="Box" type="Box">5</container>
+                    <unittitle>VI. Publications.</unittitle></did>
+                <c02 id="VAD2522-00104" level="file">
+                    <did><unittitle>A
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00105" level="file">
+                    <did><unittitle>
+                        <title render="italic">Aperture</title>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00106" level="file">
+                    <did><unittitle>C-D
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00107" level="file">
+                    <did><unittitle>
+                        <title render="italic">Graham House Review</title>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00108" level="file">
+                    <did><unittitle>
+                        <title render="italic">Grand Street</title>
+                    </unittitle><physdesc>(3 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2522-00109" level="file">
+                    <did><container label="Box" type="Box">6</container><unittitle>
+                        <title render="italic">Harvard Review</title>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00110" level="file">
+                    <did><unittitle>M-N
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00111" level="file">
+                    <did><unittitle>
+                        <title render="italic">New Orleans Review</title>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00112" level="file">
+                    <did><unittitle>
+                        <title render="italic">O.ARS</title>
+                    </unittitle><physdesc>(2 folders)</physdesc></did>
+                </c02>
+                <c02 id="VAD2522-00113" level="file">
+                    <did><unittitle>P-R
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00114" level="file">
+                    <did><unittitle>
+                        <title render="italic">Rethinking Marxism</title>
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD2522-00115" level="file">
+                    <did><unittitle>S-T
+                    </unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD2522-00116" level="series">
+                <did><container label="Box" type="Box">6</container>
+                    <unittitle>VII. Audio-Visual Materials.</unittitle></did>
+                <c02 id="VAD2522-00117" level="file">
+                    <did><unittitle>Yurkievich, Saul Poems
+                    </unittitle><physdesc>(1 tape)</physdesc></did>
+                </c02>
+            </c01>
+            <c01 id="VAD2522-00118" level="series">
+                <did><container label="Box" type="Box">6</container>
+                    <unittitle>VIII. Realia.</unittitle></did>
+                <c02 id="VAD2522-00119" level="file">
+                    <did><unittitle>Huidobro Presentation Sweatshirt</unittitle></did>
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
