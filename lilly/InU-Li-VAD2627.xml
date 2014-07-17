@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+--><ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external" countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924" relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li" identifier="InU-Li-VAD2627">InU-Li-VAD2627</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Naremore, James mss.,<date normal="1956/2000" type="inclusive">1956-2000</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2014" type="publication">© 2014</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2014">© 2014</date> Trustees of Indiana University. All rights
+                        reserved.</p>
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2014" type="source">2014</date>
+                <lb></lb>Finding aid encoded by Tiffany Saulter, Lilly Library, Indiana University,
+                    <date normal="2014-07-15">July 15, 2014</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng">English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2014-07-15">July 15, 2014</date>
+                <item>Encoded finding aid started.</item>
+            </change>
+            <change audience="internal">
+                <date normal="2014-07-15">July 15, 2014</date>
+                <item>Encoded finding aid completed.</item>
+            </change>
+
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Naremore, James. </persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Naremore, James mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1956/2000" type="inclusive">1956-2000</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2786</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>6 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are in <language langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Naremore, James mss., 1956-2000,
+                consist of the papers of James Naremore, Emeritus Chancellors' Professor of
+                Communication and Culture, English, and Comparative Literature at Indiana
+                University.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+
+            <p> Naremore has lectured widely in the United States and Europe and has taught as a
+                visitor at the University of Hamburg, the University of Chicago, and the Art
+                Institute of Chicago; in 2013 he was a Guest Professor at UCLA. His books have
+                been translated into eight languages, and his honors and awards include a Guggenheim
+                Fellowship, a National Gallery of Art Fellowship, and the Tracy M. Sonneborn Award
+                for Teaching and Research at Indiana University. He received an International
+                Kraszna-Krausz Moving-Image Book Award and a Society for Cinema and Media Studies
+                commendation for <title render="italic">More than Night: Film Noir in Its
+                    Contexts</title> (California, 1998, rev. ed. 2008). His other books include
+                    <title render="italic">The World without a Self: Virginia Woolf and the
+                    Novel</title> (Yale, 1974), <title render="italic">Filmguide to Psycho</title>
+                (Indiana, 1973), <title render="italic">The Magic World of Orson Welles</title>
+                (Oxford, 1978, rev.ed. 1988), <title render="italic">Acting in the Cinema</title>
+                (California, 1988), <title render="italic">The Films of Vincente Minnelli</title>
+                (Cambridge, 1993), <title render="italic">On Kubrick</title> (British Film
+                Institute, 2007), and <title render="italic">Sweet Smell of Success</title> (British
+                Film Institute, 2010). He is currently a Writer-at-Large for <title render="italic">Film Quarterly</title> and the series editor of <title render="italic">Contemporary Film Directors</title> for University of Illinois Press.</p>
+
+        </bioghist>
+
+        <!--optional -->
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>The collection includes a 1990 letter from Charlton Heston to James Naremore, two
+                early scripts for Stanley Kubrick's <title render="italic">Paths of
+                    Glory,</title> the final shooting script for <title render="italic">Full Metal
+                    Jacket,</title> a copy of the unproduced screenplay for Kubrick's <title render="italic">Napoleon</title>, a two-volume French language dissertation on
+                the oeuvre of Orson Welles, and a VHS recording of the American Film Institute (AFI)
+                Lifetime Achievement Award given to Orson Welles in 1975.</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/naremore+james+correspondence{su}"><persname encodinganalog="600" source="lcnaf">Naremore, James
+                                --Correspondence.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/heston+charlton+correspondence{su}"><persname encodinganalog="600" source="lcnaf">Heston, Charlton
+                                --Correspondence.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/welles+orson+1915-1985{su}"><persname encodinganalog="600" source="lcnaf">Welles, Orson,
+                                1915-1985.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/kubrick+stanley{su}"><persname encodinganalog="600" source="lcnaf">Kubrick,
+                                Stanley.</persname></extref></item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="610" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+
+        <descgrp>
+            <head>Administrative Information</head>
+
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired: 2011</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Naremore, James mss., Lilly Library, Indiana University, Bloomington,
+                    Indiana.</p>
+            </prefercite>
+
+            <!--optional -->
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Alessandro Meregaglia.</p>
+                <p>Completed in <date normal="2014">2014</date></p>
+
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAD2627-00001" level="file">
+                <did>
+                    <container label="Box" type="Box">1</container>
+                    <unittitle>Correspondence: Heston, Charlton to Naremore, James, <unitdate normal="1990">1990</unitdate></unittitle>
+                </did>
+            </c01>
+            <c01 id="VAD2627-00002" level="file">
+                <did>
+                    <unittitle><title render="italic">The American Film Institute Life Achievement
+                            Awards: Orson Welles</title></unittitle>
+                    <physdesc>(VHS tape)</physdesc>
+                </did>
+            </c01>
+            <c01 id="VAD2627-00003" level="file">
+                <did>
+                    <unittitle><title render="italic">Full Metal Jacket</title> script</unittitle>
+                </did>
+            </c01>
+            <c01 id="VAD2627-00004" level="file">
+                <did>
+                    <unittitle><title render="italic">Paths of Glory</title> script</unittitle>
+                </did>
+            </c01>
+            <c01 id="VAD2627-00005" level="file">
+                <did>
+                    <unittitle><title render="italic">Paths of Glory</title> script (second
+                        draft)</unittitle>
+                </did>
+            </c01>
+            <c01 id="VAD2627-00006" level="file">
+                <did>
+                    <unittitle><title render="italic">Napoleon</title> screenplay</unittitle>
+                </did>
+            </c01>
+            <c01 id="VAD2627-00007" level="file">
+                <did>
+                    <unittitle><title render="italic">La Composition Sonore dans le Cinema D'orson
+                            Welles et Ses Rapports avec son Oeuvre Adiophonique et
+                            Theatrale</title> (French language doctoral dissertation by Francois Thomas)</unittitle>
+                </did>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
