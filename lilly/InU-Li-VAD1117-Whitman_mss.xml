@@ -1,0 +1,1339 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Indiana University EAD template draft: 2003-Jan-2, 
+    revised 2004-09-15 JLR; 
+    revised fall 2006 and spring/summer 2007 JLR w/ EAD Working Group
+    added repository code to /ead/archdesc/did/repository/@id, 4/1/09 JLR
+--><ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+    <eadheader repositoryencoding="iso15511" langencoding="iso639-2b" audience="external" countryencoding="iso3166-1" dateencoding="iso8601" scriptencoding="iso15924" relatedencoding="dublincore" findaidstatus="edited-full-draft">
+        <eadid countrycode="US" encodinganalog="identifier" mainagencycode="InU-Li" identifier="InU-Li-VAD1117">InU-Li-VAD1117</eadid>
+        <!-- The value of eadid should follow the pattern of archive or library code, and then a 
+unique number for the collection, e.g. InU-Li-VAA1234. Put this full identifier both in the identifier attribute and in the value of the eadid element. -->
+        <!-- Generate a unique number for the collection at http://www.dlib.indiana.edu/cgi-bin/testtrackedit/filename.pl -->
+
+
+        <filedesc>
+            <!-- This is a description of the electronic finding aid, not the 
+original finding aid or the collection -->
+
+            <!-- Make title "The John Doe Papers, 1919-1965" rather than "The 
+Papers of John Doe, 1919-1965" to eliminate 
+                potential confusion about the meaning of the dates -->
+            <titlestmt>
+                <titleproper encodinganalog="title">Whitman mss.<date normal="1846/1878" type="inclusive">1846-1878</date></titleproper>
+
+            </titlestmt>
+            <publicationstmt>
+
+                <publisher encodinganalog="publisher">Indiana University Digital Library
+                    Program</publisher>
+                <date encodinganalog="date" normal="2013" type="publication">© 2013</date>
+            </publicationstmt>
+            <notestmt>
+
+                <!-- Change date to date of first publication, change rights statement if other entity claims rights over the finding aid (not the collection)-->
+                <note encodinganalog="rights">
+                    <p><date normal="2013">© 2013</date> Trustees of Indiana University. All rights
+                        reserved.</p> 
+                </note>
+
+            </notestmt>
+        </filedesc>
+        <profiledesc>
+            <creation>XML finding aid derived from HTML version through cutting and pasting and
+                through folder analysis. <date normal="2013" type="source">2013</date>
+                <lb></lb>Finding aid encoded by Tiffany Saulter, Lilly Library, Indiana University,
+                    <date normal="2013-11-12">November 12, 2013</date>
+            </creation>
+
+            <langusage>Description is in <language encodinganalog="language" langcode="eng">English.</language></langusage>
+        </profiledesc>
+
+        <!-- revisiondesc is required -->
+        <!-- record when the finding aid is completed in first change element, 
+with subsequent changes
+listed below the first -->
+        <revisiondesc>
+            <change audience="internal">
+                <date normal="2013-11-12">November 12, 2013</date>
+                <item>Encoded finding aid started.</item>
+            </change>
+            <change audience="internal">
+                <date normal="2013-11-19">November 19, 2013</date>
+                <item>Encoded finding aid completed.s</item>
+            </change>
+            
+        </revisiondesc>
+    </eadheader>
+
+
+    <archdesc audience="external" level="collection" type="inventory" relatedencoding="marc21">
+        <!-- The TYPE attribute can be used to categorize the finding aid as an inventory, register, or other format. -->
+        <did>
+            <head>Summary Information</head>
+            <repository id="lilly" encodinganalog="852" label="Repository">
+                <corpname source="lcnaf" normal="Lilly Library (Indiana University, Bloomington)">Lilly Library (Indiana University, Bloomington)</corpname>
+                <address> 
+                    <addressline>Lilly Library</addressline> 
+                    <addressline>Indiana University</addressline> 
+                    <addressline>1200 E. Seventh St.</addressline> 
+                    <addressline>Bloomington, IN 47405-5500</addressline> 
+                    <addressline>Phone: 812-855-2452</addressline> 
+                    <addressline>Fax: 812-855-3143</addressline> 
+                    <addressline>Email: liblilly@indiana.edu</addressline> 
+                </address>
+            </repository>
+            <origination label="Creator">
+                <!-- Or <corpname encodinganalog="110">, <meeting encodinganalog="111">, with source="lcnaf" if appropriate -->
+                <persname encodinganalog="100" source="lcnaf">Whitman, Sarah Helen, 1803-1878
+                </persname>
+            </origination>
+            <!-- per RLG guidelines recommendation, do not nest unitdate element within
+unittitle element -->
+            <unittitle encodinganalog="245$a" label="Title">Whitman mss.</unittitle>
+            <unitdate encodinganalog="245$f" normal="1846/1878" type="inclusive">1846-1878</unitdate>
+
+            <!-- do not include separating punctuation between the unit title and the unit
+date.  The stylesheets will supply a comma where appropriate. -->
+            <!-- unitdate may be repeated if both bulk and inclusive dates are recorded -->
+            <!-- record the type of date - bulk or inclusive - in the type attribute. if date is bulk, change encodinganalog to 245$g -->
+            <!-- recommended -->
+
+            <unitid encodinganalog="099" label="Collection No.">LMC 2440</unitid>
+
+            <physdesc encodinganalog="300" label="Extent">
+                <extent>255 items</extent></physdesc>
+            <!-- if both linear feet and number of items included, repeat extent-->
+
+
+            <!-- if collection includes signinficant non-english material add code to
+langmaterial element -->
+            <langmaterial encodinganalog="546" label="Language">Materials are mostly in <language langcode="eng">English.</language>
+            </langmaterial>
+
+            <abstract encodinganalog="520" label="Abstract">The Whitman mss., 1846-1878, consist of
+                correspondence of Mrs. Sarah Helen (Power) Whitman, 1803-1878.</abstract>
+        </did>
+
+        <!-- required even if unrestricted -->
+
+        <accessrestrict encodinganalog="506">
+            <head>Access Restrictions</head>
+            <p>This collection is open for research.</p>
+        </accessrestrict>
+
+
+        <!-- required; can be short -->
+        <bioghist encodinganalog="545">
+            <head>Biographical Note</head>
+            <p>Whitman was born in Providence, Rhode Island and became a poet, transcendentalist,
+                and Spiritualist. She was an admirer of Ralph Waldo Emerson and frequenter of the
+                intellectual social circles of her era, like that of her friend Margaret Fuller. It
+                was in this environment that Whitman met the poet and author Edgar Allan Poe, with
+                whom she had a controversial love affair. Whitman and Poe were engaged to be married
+                in 1848, but the relationship dissolved. Poe died not long after, in 1849. Whitman
+                went on to publish a collection of poems, <title render="italic">Hours of Life,</title> in 1853, as well as a
+                defense of Poe, <title render="italic">Edgar Allan Poe and His Critics,</title> in 1860. Nearly all of the
+                correspondence in the collection concerns Whitman's relationship with Poe.</p>
+        </bioghist>
+
+        <!--optional -->
+        <arrangement encodinganalog="351">
+            <head>Arrangement</head>
+            <p>Materials are arranged chronologically.</p>
+        </arrangement>
+
+        <!-- required for collection level; optional for lower levels -->
+        <scopecontent encodinganalog="520">
+
+            <head>Scope and Content Note</head>
+            <p>Correspondents include: Mrs. Anne Charlotte (Lynch) Botta, William Hand Browne,
+                Joseph Rhodes Buchanan, Franklin Burdge, Mrs. Maria (Poe) Clemm, George William
+                Curtis, James Wood Davidson, Eugene Lemoine Didier, George Washington Eveleth, James
+                Thomas Fields, William Fearing Gill, Rufus Wilmot Griswold, Mrs. Mary Elizabeth
+                (Moore) Hewitt, Marie L. Houghten, John Henry Ingram, Thomas Carstairs Latto, Edgar
+                M. Levan, W. J. McClellan, John Neal, John Owen, Sara Sigourney Rice, Sarah
+                Elizabeth Robins, Mrs. Elizabeth Oakes (Prince) Smith, Richard Henry Stoddard, John
+                William Weidemeyer. Two letters of the collection, Mrs. Sarah Helen Whitman to John
+                Neal, November 11, 1874, and Neal's reply, November 13, 1874, about L'Affaire
+                "Musiad" have been published by David Randall in The J. K. Lilly Collection of Edgar
+                A. Poe, Bloomington, Indiana, 1964, pages 49 and 50 (see: Lilly PS2628 .R187).</p>
+        </scopecontent>
+
+        <!-- recommended; this information would be included for marc amc record -->
+        <!-- should include all personal and corporate names, and subject headings -->
+        <controlaccess>
+            <head>Indexing Terms</head>
+            <controlaccess>
+                <head>Names</head>
+                <list>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/whitman+sarah+helen+1803-1878{su}"><persname encodinganalog="600" source="lcnaf">Whitman, Sarah Helen, 1803-1878.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/whitman+sarah+helen+1803-1878{su}"><persname encodinganalog="600" source="lcnaf">Whitman, Sarah Helen, 1803-1878 --Correspondence.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/poe+edgar+allan+1809-1849+correspondence{su}"><persname encodinganalog="600" source="lcnaf">Poe, Edgar Allan, 1809-1849 --Correspondence.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/griswold+rufus+w+rufus+wilmot+1815-1857+correspondence{su}"><persname encodinganalog="600" source="lcnaf">Griswold, Rufus W. (Rufus Wilmot), 1815-1857 --Correspondence.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/didier+eugene+lemoine+1838-1913+correspondence{su}"><persname encodinganalog="600" source="lcnaf">Didier, Eugene Lemoine, 1838-1913 --Correspondence.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/gill+william+fearing+1844-1917+correspondence{su}"><persname encodinganalog="600" source="lcnaf">Gill, William Fearing, 1844-1917 --Correspondence.</persname></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/lilly+josiah+kirby+1893-1966+former+owner{su}"><persname encodinganalog="700" source="lcnaf">Lilly, Josiah Kirby, 1893-1966, former owner.</persname></extref></item>
+                </list>
+            </controlaccess>
+            <controlaccess>
+                <head>Topics</head>
+                <list>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/poets+american+correspondence{su}"><subject encodinganalog="650" source="lcsh">Poets, American --Correspondence.</subject></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/spiritualism{su}"><subject encodinganalog="650" source="lcsh">Spiritualism.</subject></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/spiritualism+american+influences{su}"><subject encodinganalog="650" source="lcsh">Spiritualism --American influences.</subject></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/transcendentalism{su}"><subject encodinganalog="650" source="lcsh">Transcendentalism.</subject></extref></item>
+                    <item><extref xlink:href="http://purl.dlib.indiana.edu/iudl/iucat/transcendentalism+new+england{su}"><subject encodinganalog="650" source="lcsh">Transcendentalism (New England).</subject></extref></item>
+                </list>
+            </controlaccess>
+            <!-- <persname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file] </persname> -->
+            <!-- <corpname encodinganalog="610" source="lcnaf">[remove source attribute if name does not come from an authority file]</corpname> -->
+            <!--  <famname encodinganalog="600" source="lcnaf">[remove source attribute if name does not come from an authority file]</famname> -->
+            <!--  <subject encodinganalog="650" source="lcsh"> </subject> -->
+            <!--  <occupation encodinganalog="656" source="lcsh"> </occupation> -->
+            <!--  <geogname encodinganalog="651" source="aacr2"> </geogname> -->
+
+            <!-- <genreform encodinganalog="655" source="lcsh"> </genreform> -->
+            <!-- <function encodinganalog="657" source="lcsh"/> -->
+            <!-- <title encodinganalog="630"> </title> -->
+        </controlaccess>
+        <!-- optional, if applicable -->
+        <relatedmaterial encodinganalog="544 1">
+            <head>Related Material</head>
+            <p><extref xlink:href="http://www.indiana.edu/~liblilly/lilly/mss/index.php?p=poe">Poe mss.</extref>, also located at the Lilly Library, Indiana University, Bloomington, Indiana</p>
+        </relatedmaterial>
+
+
+        <descgrp>
+            <head>Administrative Information</head>
+            <!-- required -->
+            <acqinfo encodinganalog="541">
+                <head>Acquisition Information</head>
+                <p>Acquired from the library of Josiah Kirby Lilly, Jr., Indianapolis, Indiana.</p>
+            </acqinfo>
+            <!-- required even if unrestricted -->
+            <userestrict encodinganalog="540">
+                <head>Usage Restrictions</head>
+                <p>Prior arrangements are not necessary before coming to the Library, however,
+                    patrons from out of town are encouraged to communicate with the Library in
+                    advance of their visits to ascertain availability of materials.</p>
+                <p>Photocopying permitted only with permission of the Curator of Manuscripts, Lilly
+                    Library.</p>
+            </userestrict>
+            <!-- required -->
+            <prefercite encodinganalog="524">
+                <head>Preferred Citation</head>
+                <p>[Item], Whitman mss., Lilly Library, Indiana University, Bloomington, Indiana.</p>
+            </prefercite>
+
+            <!--optional -->
+            <!--required by Archives, optional for Lilly -->
+            <processinfo encodinganalog="583">
+                <head>Processing Information</head>
+                <p>Processed by Staff.</p>
+                <p>Completed in <date normal="2013">2013</date></p>
+
+            </processinfo>
+        </descgrp>
+
+        <dsc type="combined">
+            <!-- unittitle is the only required element within component -->
+            <!-- possible values for @level include: class, collection, file, fonds, item,
+                otherlevel, recordgrp, series, subfonds, subgrp, subseries -->
+            <c01 id="VAD1117-00001" level="file">
+                <did><container label="Box" type="Box">1: 1846-1865</container>
+                    <!-- add type="bulk" or type="inclusive" to unitdate if appropriate -->
+                    <unittitle><emph render="bold">Folder 1: </emph><unitdate normal="1846-01-01/1856" type="inclusive"><emph render="bold">1846, Jan. 1 - 1856</emph></unitdate></unittitle>
+                </did>
+                <c02 id="VAD1117-00002" level="item">
+                    <did><unittitle>Curtis, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1846-01-20">1846, Jan. 20</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00003" level="item">
+                    <did><unittitle>Griswold, Rufus W to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1849-12-17">1849, Dec. 17</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00004" level="item">
+                    <did><unittitle>Clemm, Maria to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1852-05-06">1852, May 6</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00005" level="item">
+                    <did><unittitle>Clemm, Maria to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1852-06-07">1852, Jun. 7</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00006" level="item">
+                    <did><unittitle>Whitman, Sarah Helen to Hewitt, Mrs. Mary. 
+                        <unitdate normal="1852-06-10">1852, Jun. 10</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00007" level="item">
+                    <did><unittitle>Clemm, Maria to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1852-11-07">1852, Nov. 7</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00008" level="item">
+                    <did><unittitle>Clemm, Maria to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1853-06-03">1853, Jun. 3</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00009" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1853-12-19">1853, Dec. 19</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00010" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1854-04-15">1854, Apr. 15</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00011" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1854-05-12">1854, May 12</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00012" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1854-11-09">1854, Nov. 9</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00013" level="item">
+                    <did><unittitle>Griswold, Rufus W to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1855-06-22">1855, Jun. 22</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00014" level="item">
+                    <did><unittitle>Griswold, Rufus W to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1855-07-26">1855, Jul. 26</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00015" level="item">
+                    <did><unittitle>Griswold, Rufus W to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1855-07-26">1855, Jul. 26</unitdate></unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1117-00016" level="file">
+                <did><unittitle><emph render="bold">Folder 2: </emph>
+                    <unitdate normal="1857-01-01/1858-12-31" type="inclusive">
+                        <emph render="bold">1857, Jan. 1 - 1858, Dec. 31</emph></unitdate></unittitle></did>
+                <c02 id="VAD1117-00017" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1857-01-20">1857, Jan. 20</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00018" level="item">
+                    <did><unittitle>Clemm, Maria to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1857-02-09">1857, Feb. 9</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00019" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1857-02-28">1857, Feb. 28</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00020" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1857-11-03">1857, Nov. 3</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00021" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1857-12-25">1857, Dec. 25</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00022" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1858-01-30">1858, Jan. 30</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00023" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1858-03-25">1858, Mar. 25</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00024" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1858-03-29">1858, Mar. 29</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00025" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1858-04-23">1858, Apr. 23</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00026" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1858-05-22">1858, May 22</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00027" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1858-07-05">1858, Jul. 5</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00028" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1858-07-21">1858, Jul. 21</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00029" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1858-08-02">1858, Aug. 2</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00030" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1858-09-01">1858, Sept. 1</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00031" level="item">
+                    <did><unittitle>Clemm, Maria to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1858-11-08">1858, Nov. 8</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00032" level="item">
+                    <did><unittitle>"Two Letters," from James Wood Davidson. 
+                        <unitdate normal="1858">1858</unitdate></unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1117-00033" level="file">
+                <did><unittitle><emph render="bold">Folder 3: </emph>
+                    <unitdate normal="1859-01-01/1859-09-30" type="inclusive">
+                        <emph render="bold">1859, Jan. 1 - Sept. 30</emph></unitdate></unittitle></did>
+                <c02 id="VAD1117-00034" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1859-01-11">1859, Jan. 11</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00035" level="item">
+                    <did><unittitle>Clemm, Maria to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1859-04-14">1859, Apr. 14</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00036" level="item">
+                    <did><unittitle>Clemm, Maria to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1859-04-22">1859, Apr. 22</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00037" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1859-05-10">1859, May 10</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00038" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1859-05-25">1859, May 25</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00039" level="item">
+                    <did><unittitle>Curtis, G. W. C. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1859-07-12">1859, Jul. 12</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00040" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1859-07-17">1859, Jul. 17 </unitdate></unittitle></did>
+                    <scopecontent><p>
+                        (enclosure: clipping on "Notes and Queries" with letter to the editor, pinned on letter)
+                    </p></scopecontent>
+                </c02>
+                <c02 id="VAD1117-00041" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1859-08-16">1859, Aug. 16</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00042" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1859-08-17">1859, Aug. 17</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00043" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1859-08-24">1859, Aug. 24</unitdate></unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1117-00044" level="file">
+                <did><unittitle><emph render="bold">Folder 4: </emph>
+                <unitdate normal="1859-10-01/1860-10-31" type="inclusive">
+                    <emph render="bold">1859, Oct. 1 - 1860, Oct.31</emph></unitdate></unittitle></did>
+                <c02 id="VAD1117-00045" level="item">
+                    <did><unittitle>Curtis, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1859-10-11">1859, Oct. 11</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00046" level="item">
+                    <did><unittitle>Clemm, Maria to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1859-11-23">1859, Nov. 23</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00047" level="item">
+                    <did><unittitle>Clemm, Maria to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1859-12-23">1859, Dec. 23</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00048" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1860-03-11">1860, Mar. 11</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00049" level="item">
+                    <did><unittitle>Clemm, Maria to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1860-03-17">1860, Mar. 17</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00050" level="item">
+                    <did><unittitle>Robins, Sarah Elizabeth to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1860-04-05">1860, Apr. 5</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00051" level="item">
+                    <did><unittitle>Robins, Sarah Elizabeth to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1860-04-20">1860, Apr. 20</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00052" level="item">
+                    <did><unittitle>Clemm, Maria to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1860-05-20">1860, May 20</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00053" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1860-07-22">1860, Jul. 22</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00054" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1860-08-17">1860, Aug. 17</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00055" level="item">
+                    <did><unittitle>Robins, Sarah Elizabeth to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1860-09-03">1860, Sept. 3</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00056" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1860-09-28">1860, Sept. 28</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00057" level="item">
+                    <did><unittitle>Robins, Sarah Elizabeth to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1860-10-06">1860, Oct. 6</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00058" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1860-10-14">1860, Oct. 14</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00059" level="item">
+                    <did><unittitle>Robins, Sarah Elizabeth to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1860-10-26">1860, Oct. 26</unitdate></unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1117-00060" level="file">
+                <did><unittitle><emph render="bold">Folder 5: </emph>
+                <unitdate normal="1860-11-01/1863-12-31" type="inclusive">
+                    <emph render="bold">1860, Nov.1 - 1863, Dec.31</emph></unitdate></unittitle></did>
+                <c02 id="VAD1117-00061" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1864-10-13">1864, Oct. 13</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00062" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1864-10-25">1864, Oct. 25</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00063" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1864-12-26">1864, Dec. 26</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00064" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1865-01-12">1865, Jan. 12</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00065" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1865-02-04">1865, Feb. 4</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00066" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1865-03-04">1865, Mar. 4</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00067" level="item">
+                    <did><unittitle>Whitman, Mrs. Sarah Helen to Eveleth, G. W. 
+                        <unitdate normal="1865-03-10">1865, Mar. 10</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00068" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1865-03-16">1865, Mar. 16</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00069" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1865-04-09">1865, Apr. 9</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00070" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1865-04-19">1865, Apr. 19</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00071" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1865-06">1865, Jun.</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00072" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1865-09-24">1865, Sept. 24</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00073" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1865-11-08">1865, Nov. 8</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00074" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1865-12-16">1865, Dec. 16</unitdate></unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1117-00075" level="file">
+                <did><container label="Box" type="Box">2: 1866-1874</container>
+                    <unittitle><emph render="bold">Folder 1: </emph>
+                <unitdate normal="1866-01-01/1869-12-31" type="inclusive">
+                    <emph render="bold">1866, Jan.1 - 1869, Dec. 31</emph></unitdate></unittitle></did>
+                <c02 id="VAD1117-00076" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1866-04-08">1866, Apr. 8</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00077" level="item">
+                    <did><unittitle>Davidson, J. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1866-05-01">1866, May 1</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00078" level="item">
+                    <did><unittitle>Davidson, J. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1866-06-02">1866, Jun. 2</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00079" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1866-06-03">1866, Jun. 3</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00080" level="item">
+                    <did><unittitle>Davidson, J. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1866-06-18">1866, Jun. 18</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00081" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1866-07-04">1866, Jul. 4</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00082" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1866-08-15">1866, Aug. 15</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00083" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1866-09-30">1866, Sept. 30</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00084" level="item">
+                    <did><unittitle>Davidson, J. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1866-10-03">1866, Oct. 3</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00085" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1866-11-04">1866, Nov. 4</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00086" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1867-02-03">1867, Feb. 3</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00087" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1867-04-21">1867, Apr. 21</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00088" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1867-07-07">1867, Jul. 7</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00089" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1867-09-18">1867, Sept. 18</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00090" level="item">
+                    <did><unittitle>Whitman, Mrs. Sarah Helen to Montclair, Mr. 
+                        <unitdate normal="1867-12-27">1867, Dec. 27</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00091" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1868-01-12">1868, Jan. 12</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00092" level="item">
+                    <did><unittitle>Davidson, J. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1868-01-13">1868, Jan. 13</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00093" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1869-02-28">1869, Feb. 28</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00094" level="item">
+                    <did><unittitle>Davidson, J. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1869-03-28">1869, March 28</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00095" level="item">
+                    <did><unittitle>Davidson, J. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1869-09-14">1869, Sept. 14</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00096" level="item">
+                    <did><unittitle>Clemm, Maria to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1869-10-29">1869, Oct. 29</unitdate></unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1117-00097" level="file">
+                <did><unittitle><emph render="bold">Folder 2: </emph>
+                <unitdate normal="1870-01-01/1870-09-15" type="inclusive"><emph render="bold">1870, Jan.1 - Sept.15</emph></unitdate></unittitle></did>
+                <c02 id="VAD1117-00098" level="item">
+                    <did><unittitle>Davidson, J. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1870-03-06">1870, Mar. 6</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00099" level="item">
+                    <did><unittitle>Latto, Thomas C. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1870-07-02">1870, Jul. 2</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00100" level="item">
+                    <did><unittitle>Latto, Thomas C. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1870-07-16">1870, Jul. 16</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00101" level="item">
+                    <did><unittitle>Latto, Thomas C. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1870-07-24">1870, Jul. 24</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00102" level="item">
+                    <did><unittitle>Latto, Thomas C. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1870-08-05">1870, Aug. 5</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00103" level="item">
+                    <did><unittitle>Latto, Thomas C. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1870-08-08">1870, Aug. 8</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00104" level="item">
+                    <did><unittitle>Latto, Thomas C. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1870-08-31">1870, Aug. 31</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00105" level="item">
+                    <did><unittitle>Latto, Thomas C. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1870-09-06">1870, Sept. 6</unitdate></unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1117-00106" level="file">
+                <did><unittitle><emph render="bold">Folder 3: </emph>
+                    <unitdate normal="1870-09-16/1870-12-31" type="inclusive"><emph render="bold">1870, Sept. 16 - Dec. 31</emph>
+                    </unitdate></unittitle></did>
+                <c02 id="VAD1117-00107" level="item">
+                    <did><unittitle>Latto, Thomas C. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1870-09-16">1870, Sept. 16</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00108" level="item">
+                    <did><unittitle>Latto, Thomas C. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1870-09-23">1870, Sept. 23</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00109" level="item">
+                    <did><unittitle>Latto, Thomas C. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1870-09-24">1870, Sept. 24</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00110" level="item">
+                    <did><unittitle>Latto, Thomas C. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1870-09-29">1870, Sept. 29</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00111" level="item">
+                    <did><unittitle>Latto, Thomas C. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1870-10-04">1870, Oct. 4</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00112" level="item">
+                    <did><unittitle>Latto, Thomas C. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1870-10-10">1870, Oct. 10</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00113" level="item">
+                    <did><unittitle>Latto, Thomas C. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1870-10-12">1870, Oct. 12</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00114" level="item">
+                    <did><unittitle>Latto, Thomas C. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1870-10-13">1870, Oct. 13</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00115" level="item">
+                    <did><unittitle>Latto, Thomas C. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1870-10-31">1870, Oct. 21</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00116" level="item">
+                    <did><unittitle>Latto, Thomas C. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1870-11-03">1870, Nov. 3</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00117" level="item">
+                    <did><unittitle>Latto, Thomas C. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1870-11-05">1870, Nov. 5</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00118" level="item">
+                    <did><unittitle>Davidson, J. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1870-12-06">1870, Dec. 6</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00119" level="item">
+                    <did><unittitle>Latto, Thomas C. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1870-12-13">1870, Dec. 13</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00120" level="item">
+                    <did><unittitle>Latto, Thomas C. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1870-12-19">1870, Dec. 19</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00121" level="item">
+                    <did><unittitle>Latto, Thomas C. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1870-12-23">1870, Dec. 23</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00122" level="item">
+                    <did><unittitle>Latto, Thomas C. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1870-12-31">1870, Dec. 31</unitdate></unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1117-00123" level="file">
+                <did><unittitle><emph render="bold">Folder 4: </emph>
+                    <unitdate normal="1871-01-01/1872-12-31" type="inclusive">
+                        <emph render="bold">1871, Jan. 1 - 1872, Dec. 31</emph></unitdate></unittitle></did>
+                <c02 id="VAD1117-00124" level="item">
+                    <did><unittitle>Latto, Thomas C. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1871-01-18">1871, Jan. 18</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00125" level="item">
+                    <did><unittitle>Latto, Thomas C. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1871-02-28">1871, Feb. 28</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00126" level="item">
+                    <did><unittitle>Latto, Thomas C. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1871-03-27">1871, Mar. 27</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00127" level="item">
+                    <did><unittitle>Latto, Thomas C. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1871-10-08">1871, Oct. 8</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00128" level="item">
+                    <did><unittitle>Whitman, Mrs. Sarah Helen to Stoddard, Mr. R. H. 
+                        <unitdate normal="1872-09-18">1872, Sept. 18</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00129" level="item">
+                    <did><unittitle>Stoddard, R. H. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1872-09-19">1872, Sept. 19</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00130" level="item">
+                    <did><unittitle>Whitman, Mrs. Sarah Helen to Stoddard, R. H. 
+                        <unitdate normal="1872-09-21">1872, Sept. 21</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00131" level="item">
+                    <did><unittitle>Botta, Mrs. Anne L. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1872-09-21">1872, Sept. 21</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00132" level="item">
+                    <did><unittitle>Stoddard, R. H. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1872-10-28">1872, Oct. 28</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00133" level="item">
+                    <did><unittitle>Davidson, J. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1872-11-29">1872, Nov. 29</unitdate></unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1117-00134" level="file">
+                <did><unittitle><emph render="bold">Folder 5: </emph>
+                    <unitdate normal="1874-06-01/1874-12-31" type="inclusive"><emph render="bold">1874, Jun. 1 - Dec. 31</emph></unitdate></unittitle></did>
+                <c02 id="VAD1117-00135" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1874-06-16">1874, Jun. 16</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00136" level="item">
+                    <did><unittitle>Davidson, J. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1874-06-28">1874, Jun. 28</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00137" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1874-08-02">1874, Aug. 2</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00138" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1874-08-23">1874, Aug. 23</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00139" level="item">
+                    <did><unittitle>Owen, J. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1874-09-10">1874, Sept. 10</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00140" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1874-09-16">1874, Sept. 16</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00141" level="item">
+                    <did><unittitle>Owen, J. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1874-09-22">1874, Sept. 22</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00142" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1874-09-30">1874, Sept. 30</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00143" level="item">
+                    <did><unittitle>Owen, J. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1874-10-04">1874, Oct. 4</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00144" level="item">
+                    <did><unittitle>Whitman, Mrs. Sarah Helen to Neal, Mr. John. 
+                        <unitdate normal="1874-11-11">1874, Nov. 11</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00145" level="item">
+                    <did><unittitle>Neal, John to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1874-11-13">1874, Nov. 13</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00146" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1874-12-21">1874, Dec. 21</unitdate></unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1117-00147" level="file">
+                <did><container label="Box" type="Box">3: 1875-1878</container>
+                    <unittitle><emph render="bold">Folder 1: </emph>
+                    <unitdate normal="1875-01-01/1875-12-31" type="inclusive">
+                        <emph render="bold">1875, Jan. 1 - Dec. 31</emph></unitdate></unittitle></did>
+                <c02 id="VAD1117-00148" level="item">
+                    <did><unittitle>Davidson, J. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1875-01-03">1875, Jan. 3</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00149" level="item">
+                    <did><unittitle>Browne, W. Hand to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1875-10-01">1875, Oct. 1</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00150" level="item">
+                    <did><unittitle>Whitman, Mrs. Sarah Helen to Gill, William F. 
+                        <unitdate normal="1875-10-07">1875, Oct. 7</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00151" level="item">
+                    <did><unittitle>Browne, W. Hand to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1875-10-09">1875, Oct. 9</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00152" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1875-10-18">1875, Oct. 18</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00153" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1875-10-21">1875, Oct. 21</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00154" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1875-10-23">1875, Oct. 23</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00155" level="item">
+                    <did><unittitle>Browne, W. Hand to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1875-10-25">1875, Oct. 25</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00156" level="item">
+                    <did><unittitle>Rice, Sara S. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1875-10-28">1875, Oct. 28</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00157" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1875-11-02">1875, Nov. 2</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00158" level="item">
+                    <did><unittitle>Buchanan, J. R. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1875-11-06">1875, Nov. 6</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00159" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1875-11-09">1875, Nov. 9</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00160" level="item">
+                    <did><unittitle>Rice, Sara S. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1875-11-09">1875, Nov. 9</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00161" level="item">
+                    <did><unittitle>Whitman, Mrs. Sarah Helen to Gill, Mr. William F. 
+                        <unitdate normal="1875-11-10">1875, Nov. 10</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00162" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1875-11-19">1875, Nov. 19</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00163" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1875-11-21">1875, Nov. 21</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00164" level="item">
+                    <did><unittitle>Rice, Sara S. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1875-12-24">1875, Dec. 24</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00165" level="item">
+                    <did><unittitle>Rice, Sara S. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1875-12-31">1875, Dec. 31</unitdate></unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1117-00166" level="file">
+                <did><unittitle><emph render="bold">Folder 2: </emph>
+                    <unitdate normal="1876-01-01/1876-05-31" type="inclusive"><emph render="bold">1876, Jan. 1 - May 31</emph>
+                    </unitdate></unittitle></did>
+                <c02 id="VAD1117-00167" level="item">
+                    <did><unittitle>Gill, W. F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-01-09">1876, Jan. 9</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00168" level="item">
+                    <did><unittitle>Rice, Sara S. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-02-02">1876, Feb. 2</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00169" level="item">
+                    <did><unittitle>Eveleth, G. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876">1876, Washington's Birth-Day</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00170" level="item">
+                    <did><unittitle>Rice, Sara S. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-03-01">1876, Mar. 1</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00171" level="item">
+                    <did><unittitle>Rice, Sara S. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-03-18">1876, Mar. 18</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00172" level="item">
+                    <did><unittitle>Latto, Thomas C. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-03-24">1876, Mar. 24</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00173" level="item">
+                    <did><unittitle>Latto, Thomas C. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-04-13">1876, Apr. 13</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00174" level="item">
+                    <did><unittitle>Didier, Eugene L. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-04-21">1876, Apr. 21</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00175" level="item">
+                    <did><unittitle>Didier, Eugene L. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-04-29">1876, Apr. 29</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00176" level="item">
+                    <did><unittitle>Houghten, Marie L. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-05-20">1876, May 20</unitdate></unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1117-00177" level="file">
+                <did><unittitle><emph render="bold">Folder 3: </emph>
+                    <unitdate normal="1876-06-01/1876-10-31" type="inclusive"><emph render="bold">1876, Jun. 1-Oct. 31</emph>
+                    </unitdate></unittitle></did>
+                <c02 id="VAD1117-00178" level="item">
+                    <did><unittitle>Didier, Eugene L. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-06-05">1876, Jun. 5</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00179" level="item">
+                    <did><unittitle>Didier, Eugene L. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-06-14">1876, Jun. 14</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00180" level="item">
+                    <did><unittitle>Didier, Eugene L. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-06-26">1876, Jun. 26</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00181" level="item">
+                    <did><unittitle>Didier, Eugene L. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-07-05">1876, Jul. 5</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00182" level="item">
+                    <did><unittitle>Didier, Eugene L. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-07-21">[1876], Jul. 21</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00183" level="item">
+                    <did><unittitle>Didier, Eugene L. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-07-29">1876, Jul. 29</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00184" level="item">
+                    <did><unittitle>Didier, Eugene L. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-08-05">1876, Aug. 5</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00185" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-08-29">1876, Aug. 29</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00186" level="item">
+                    <did><unittitle>Rice, Sara S. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-09-16">1876, Sept. 16</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00187" level="item">
+                    <did><unittitle>Didier, Eugene L. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-09-18">1876, Sept. 18</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00188" level="item">
+                    <did><unittitle>Didier, Eugene L. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-10-02">1876, Oct. 2</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00189" level="item">
+                    <did><unittitle>Didier, Eugene L. to Whitman, Mrs. Sarah Helen.
+                        <unitdate normal="1876-10-24">1876, Oct. 24</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00190" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-10-26">1876, Oct. 26</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00191" level="item">
+                    <did><unittitle>Whitman, Mrs. Sarah Helen to Gill, William F. 
+                        <unitdate normal="1876-10-26">1876, Oct. 26</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00192" level="item">
+                    <did><unittitle>Whitman, Mrs. Sarah Helen to Gill, William F. 
+                        <unitdate normal="1876-10-28">1876, Oct. 28</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00193" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-10-31">1876, Oct. 31</unitdate></unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1117-00194" level="file">
+                <did><unittitle><emph render="bold">Folder 4: </emph>
+                    <unitdate normal="1876-11-01/1877-02-28" type="inclusive">
+                        <emph render="bold">1876, Nov. 1 - 1877, Feb. 28</emph></unitdate></unittitle></did>
+                <c02 id="VAD1117-00195" level="item">
+                    <did><unittitle>Rice, Sara S. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-11-18">1876, Nov. 18</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00196" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-11-19">1876, Nov. 19</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00197" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-11-20">1876, Nov. 20</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00198" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-11-21">1876, Nov. 21</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00199" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-12-08">1876, Dec. 8</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00200" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-12-09">1876, Dec. 9</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00201" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-12-14">1876, Dec. 14</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00202" level="item">
+                    <did><unittitle>Whitman, Mrs. Sarah Helen to Rice, Sara S. 
+                        <unitdate normal="1876-12-15">1876, Dec. 15</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00203" level="item">
+                    <did><unittitle>Didier, Eugene L. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-12-16">1876, Dec. 16</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00204" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-12-18">1876, Dec. 18</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00205" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-12-21">1876, Dec. 21</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00206" level="item">
+                    <did><unittitle>Whitman, Mrs. Sarah Helen to Didier, Eugene L. 
+                        <unitdate normal="1876-12-25">1876, Dec. 25</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00207" level="item">
+                    <did><unittitle>Didier, Eugene L. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1876-12-26">1876, Dec. 26</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00208" level="item">
+                    <did><unittitle>Davidson, J. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1877-02-19">1877, Feb. 19</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00209" level="item">
+                    <did><unittitle>Davidson, J. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1877-02-22">1877, Feb. 22</unitdate></unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1117-00210" level="file">
+                <did><unittitle><emph render="bold">Folder 5: </emph>
+                    <unitdate normal="1877-03-01/1877-08-31" type="inclusive"><emph render="bold">1877, Mar. 1 - Aug. 31</emph>
+                    </unitdate></unittitle></did>
+                <c02 id="VAD1117-00211" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1877-03-25">1877, Mar. 25</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00212" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1877-03-30">1877, Mar. 30</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00213" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1877-04-02">1877, Apr. 2</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00214" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1877-05-10">1877, May 10</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00215" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1877-05-17">1877, May 17</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00216" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1877-05-26">1877, May 26</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00217" level="item">
+                    <did><unittitle>Davidson, J. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1877-05-28">1877, May 28</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00218" level="item">
+                    <did><unittitle>Latto, Thomas C. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1877-06-05">1877, Jun. 5</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00219" level="item">
+                    <did><unittitle>Davidson, J. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1877-06-13">1877, Jun. 13</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00220" level="item">
+                    <did><unittitle>Davidson, J. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1877-06-14">1877, Jun. 14</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00221" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1877-06-28">1877, Jun. 28</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00222" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1877-07-05">1877. Jul. 5</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00223" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1877-07-14">1877, Jul. 14</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00224" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1877-08-02">1877, Aug. 2 </unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00225" level="item">
+                    <did><unittitle>Davidson, J. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1877-08-09">1877, Aug. 9</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00226" level="item">
+                    <did><unittitle>Owen, J. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1877-08-30">1877, Aug. 30</unitdate></unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1117-00227" level="file">
+                <did><unittitle><emph render="bold">folder 6:</emph>
+                    <unitdate normal="1877-09-01/1877-12-31" type="inclusive"><emph render="bold">1877, Sept.1-Dec. 31</emph></unitdate></unittitle></did>
+            <c02 id="VAD1117-00228" level="item">
+                <did><unittitle>Owen, J. to Whitman, Mrs. Sarah Helen. 
+                    <unitdate normal="1877-09-07">1877, Sept. 7</unitdate></unittitle></did>
+            </c02>
+                <c02 id="VAD1117-00229" level="item">
+                    <did><unittitle>Owen, J. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1877-09-12">1877, Sept. 12</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00230" level="item">
+                    <did><unittitle>Davidson, J. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1877-09-25">1877, Sept. 25</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00231" level="item">
+                    <did><unittitle>Didier, Eugene L. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1877-09-26">1877, Sept. 26</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00232" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1877-09-30">1877, Sept. 30</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00233" level="item">
+                    <did><unittitle>Owen, J. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1877-10-04">1877, Oct. 4</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00234" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1877-10-11">1877, Oct. 11</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00235" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1877-10-13">1877, Oct. 13</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00236" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1877-10-16">1877, Oct. 16</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00237" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1877-10-26">1877, Oct. 26</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00238" level="item">
+                    <did><unittitle>Gill, William F. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1877-10-28">1877, Oct. 28</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00239" level="item">
+                    <did><unittitle>Note on envelope of William F. Gill &amp; Co. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1877-11-21">1877, Nov. 21</unitdate></unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1117-00240" level="file">
+                <did><unittitle><emph render="bold">Folder 7:</emph> 
+                    <unitdate normal="1878-01-01/1878-12-31" type="inclusive"><emph render="bold">1878, Jan.1-Dec.31</emph></unitdate></unittitle></did>
+                <c02 id="VAD1117-00241" level="item">
+                    <did><unittitle>Davidson, J. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1878-01-04">1878, Jan. 4</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00242" level="item">
+                    <did><unittitle>Levan, Edgar M. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1878-03-04">1878, Mar. 4</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00243" level="item">
+                    <did><unittitle>Rice, Sara S. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1878-03-05">1878, Mar. 5</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00244" level="item">
+                    <did><unittitle>Levan, Edgar M. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1878-03-13">1878, Mar. 13</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00245" level="item">
+                    <did><unittitle>Levan, Edgar M. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1878-03-22">1878, Mar. 22</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00246" level="item">
+                    <did><unittitle>Davidson, J. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1878-05-07">1878, May 7</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00247" level="item">
+                    <did><unittitle>Latto, Thomas C. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1878-06-20">1878, Jun. 20</unitdate></unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1117-00248" level="file">
+                <did><unittitle><emph render="bold">Folder 8: </emph>
+                    <unitdate normal="1846/1878" type="inclusive"><emph render="bold">Undated</emph></unitdate></unittitle></did>
+            <c02 id="VAD1117-00249" level="item">
+                <did><unittitle>Buchanan, Joseph R. to Whitman, Mrs. Sarah Helen. 
+                    <unitdate normal="1846-04-30/1878-04-30" type="inclusive">April 30</unitdate></unittitle></did>
+            </c02>
+                <c02 id="VAD1117-00250" level="item">
+                    <did><unittitle>Burdge, Fr. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1846-08-08/1878-08-08" type="inclusive">Aug. 8</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00251" level="item">
+                    <did><unittitle>Davidson, J. W. to Whitman, Mrs. Sarah Helen. 
+                        <unitdate normal="1846-08-28/1878-08-28" type="inclusive">Aug. 28</unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00252" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen. 
+                        </unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00253" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen.
+                    </unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00254" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen.</unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00255" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen.</unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00256" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen.</unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00257" level="item">
+                    <did><unittitle>Davidson, J. Wood to Whitman, Mrs. Sarah Helen.</unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00258" level="item">
+                    <did><unittitle>Eveleth, C. W. to Whitman, Mrs. Sarah Helen.</unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00259" level="item">
+                    <did><unittitle>Houghten, Marie L. to Whitman, Mrs. Sarah Helen.</unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00260" level="item">
+                    <did><unittitle>Latto, Thomas C. to Whitman, Mrs. Sarah Helen.</unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00261" level="item">
+                    <did><unittitle>Owen, J. to Whitman, Mrs. Sarah Helen.</unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00262" level="item">
+                    <did><unittitle>Rice, Sara S. to Whitman, Mrs. Sarah Helen.</unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00263" level="item">
+                    <did><unittitle>Rice, Sara S. to Whitman, Mrs. Sarah Helen.</unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00264" level="item">
+                    <did><unittitle>Rice, Sara S. to Whitman, Mrs. Sarah Helen.</unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00265" level="item">
+                    <did><unittitle>Rice, Sara S. to Whitman, Mrs. Sarah Helen.</unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00266" level="item">
+                    <did><unittitle>Smith, Mrs. Oakes to Whitman, Mrs. Sarah Helen.</unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00267" level="item">
+                    <did><unittitle>Whitman, Mrs. Sarah Helen to Fields, James T. 
+                        <unitdate normal="1846-09-14/1878-09-14" type="inclusive"></unitdate></unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00268" level="item">
+                    <did><unittitle>Whitman, Mrs. Sarah Helen to Fields, James T.</unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00269" level="item">
+                    <did><unittitle>Whitman, Mrs. Sarah Helen to Gill, William F.</unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00270" level="item">
+                    <did><unittitle>Whitman, Mrs. Sarah Helen to Rice, Sara S.</unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00271" level="item">
+                    <did><unittitle>Whitman, Mrs. Sarah Helen to Stoddard, R. H.</unittitle></did>
+                </c02>
+                <c02 id="VAD1117-00272" level="item">
+                    <did><unittitle>Whitman, Mrs. Sarah Helen to [?].</unittitle></did>
+                </c02>
+            </c01>
+            <c01 id="VAD1117-00273" level="file">
+                <did><unittitle><emph render="bold">Folder 9: </emph>
+                    <unitdate normal="1846/1878" type="inclusive"><emph render="bold">Undated (Other)</emph></unitdate></unittitle></did>
+            <c02 id="VAD1117-00274" level="item">
+                <did><unittitle>Davidson genealogy notes and other materials</unittitle></did>
+            </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
